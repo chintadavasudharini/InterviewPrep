@@ -1160,6 +1160,68 @@ export const interviewData = {
     "questions": []
   },
   {
+    "id": "class-vs-object-properties",
+    "title": "Class Properties vs Object Properties in Python",
+    "category": "OOP Basics",
+    "definition": "Class properties are shared by all instances of a class, while object (instance) properties are unique to each individual object.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "1. Class Property\n• Defined directly inside the class but outside methods.\n• Shared by all objects of the class.\n• Changes affect all objects.\n\n2. Object (Instance) Property\n• Defined inside __init__() using self.\n• Separate copy for each object.\n• Different objects can have different values."
+      },
+      {
+        "type": "code",
+        "value": "class Person:\n    lastname = \"\"   # class property\n\n    def __init__(self, name):\n        self.name = name   # object property\n\n    def show_name(self):\n        print(f\"Hello, I'm {self.name} {self.lastname}\")\n\np1 = Person(\"Vasu\")\np2 = Person(\"Vasudha\")\n\nPerson.lastname = \"Chintada\"\n\nprint(p1.lastname)\nprint(p2.lastname)\n\np1.show_name()"
+      },
+      {
+        "type": "output",
+        "value": "Chintada\nChintada\nHello, I'm Vasu Chintada"
+      },
+      {
+        "type": "text",
+        "value": "Step-by-Step Execution:\n\nStep 1: Class Created\nPython creates the class Person.\n\nStep 2: Class Property Created\nlastname = \"\" is created for the whole class.\n\nStep 3: Objects Created\np1 = Person(\"Vasu\")\np2 = Person(\"Vasudha\")\nConstructor runs: p1.name = \"Vasu\", p2.name = \"Vasudha\".\nBoth share lastname = \"\".\n\nStep 4: Change Class Property\nPerson.lastname = \"Chintada\" changes the shared property.\n\nStep 5: Printing\np1.lastname and p2.lastname both show \"Chintada\".\n\nStep 6: Method Call\np1.show_name() uses self.name (Vasu) and self.lastname (Chintada)."
+      },
+      {
+        "type": "table",
+        "headers": ["Feature", "Class Variable", "Instance Variable"],
+        "rows": [
+          ["Definition", "Shared by all objects", "Separate for each object"],
+          ["Memory", "Memory efficient", "Unique data for objects"],
+          ["Access", "ClassName.variable", "self.variable"]
+        ]
+      },
+      {
+        "type": "text",
+        "value": "Another Example:"
+      },
+      {
+        "type": "code",
+        "value": "class Student:\n    school = \"KL University\"   # class property\n\n    def __init__(self, name):\n        self.name = name       # object property\n\ns1 = Student(\"Ram\")\ns2 = Student(\"Sita\")\n\nprint(s1.school)\nprint(s2.school)\nprint(s1.name)\nprint(s2.name)"
+      },
+      {
+        "type": "output",
+        "value": "KL University\nKL University\nRam\nSita"
+      },
+      {
+        "type": "text",
+        "value": "🔹 1. What is a class property?\nA variable defined inside a class but outside methods, shared by all instances."
+      },
+      {
+        "type": "text",
+        "value": "🔹 2. What is an instance property?\nA variable defined inside __init__ using self, unique to each instance."
+      },
+      {
+        "type": "text",
+        "value": "🔹 3. How do you access a class property?\nUsing ClassName.property or object.property."
+      },
+      {
+        "type": "text",
+        "value": "Quick Revision:\n• Class Prop: Shared, defined in class\n• Instance Prop: Unique, defined in __init__\n• Person.lastname: Class Access"
+      }
+    ],
+    "questions": []
+  },
+  {
     "id": "calling-methods-self",
     "title": "Calling Methods with self",
     "category": "OOP Basics",
