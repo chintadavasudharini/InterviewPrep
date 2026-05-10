@@ -608,30 +608,42 @@ export const interviewData = {
         "value": "Advantages of Polymorphism:\n• Code Reusability: Same method reused\n• Flexibility: Works with different objects\n• Easy Maintenance: Cleaner code structure\n• Cleaner Code: Less duplicate code\n• Dynamic Behavior: Methods behave differently"
       },
       {
-        "type": "text",
-        "value": ". What is Polymorphism?\nPolymorphism means \"many forms\". In Python, the same method, function, or operator can behave differently for different objects or classes."
+        "type": "table",
+        "headers": ["Method Overloading", "Method Overriding"],
+        "rows": [
+          ["Same method name with different arguments", "Same method in parent and child"],
+          ["Achieved using default arguments", "Achieved using inheritance"],
+          ["Happens inside same class", "Happens between parent and child class"]
+        ]
       },
       {
         "type": "text",
-        "value": "Quick Revision Table:\n• Method Overriding: Child changes parent method\n• Method Overloading: Same method with different arguments\n• Operator Overloading: Operators behave differently\n• Duck Typing: Behavior matters, not type"
+        "value": "🔹 1. What is Polymorphism?\n\nPolymorphism means one method, function, or operator can perform different behaviors."
       },
       {
         "type": "text",
-        "value": "🔹 1. What is polymorphism?\nThe ability of a single interface to represent different underlying forms."
+        "value": "🔹 2. What are the Types of Polymorphism?\nMethod Overriding\nMethod Overloading\nOperator Overloading\nDuck Typing"
       },
       {
         "type": "text",
-        "value": "🔹 2. Does Python support method overloading?\nNot directly like Java, but it can be achieved using default arguments."
+        "value": "🔹 3. What is Method Overriding?\n\nMethod overriding occurs when a child class redefines the method of the parent class."
       },
       {
         "type": "text",
-        "value": "🔹 3. What is duck typing?\nA concept where an object's suitability is determined by its methods and behavior, not its type."
+        "value": "🔹 4. Does Python Support Method Overloading?\n\nPython does not support true method overloading directly like Java.\nbut it can be achieved using default arguments."
+      },
+      {
+        "type": "text",
+        "value": "🔹 5. What is Operator Overloading?\n\nOperator overloading means changing the behavior of operators using magic methods."
+      },
+      {
+        "type": "text",
+        "value": "🔹 6. What is Duck Typing?\n\nA concept where an object's suitability is determined by its methods and behavior, not its type."
       },
       {
         "type": "text",
         "value": "Quick Revision:\n• Overriding: Child changes Parent\n• Overloading: Multiple args\n• Duck Typing: Behavior over Type"
-      }
-    ],
+      }],
     "questions": []
   },
   {
