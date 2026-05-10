@@ -1,6 +1,6 @@
 # 🏆 Premium Interview Prep Portfolio
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Live-gold?style=for-the-badge)](https://portfolio-lime-tau-36.vercel.app/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Live-gold?style=for-the-badge)](https://interviewprep-gqfk.onrender.com/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
