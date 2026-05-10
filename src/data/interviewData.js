@@ -1283,7 +1283,7 @@ export const interviewData = {
           ]
         ]
       },
-{
+  {
   "id": "class-vs-object-properties",
   "title": "Class Properties vs Object Properties",
   "category": "OOP Basics",
