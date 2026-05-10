@@ -1,4 +1,4 @@
-# 🏆 Premium Python OOP Interview Prep Portfolio
+# 🏆 Premium nterview Prep Portfolio
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Live-gold?style=for-the-badge)](https://portfolio-lime-tau-36.vercel.app/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
