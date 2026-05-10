@@ -17,7 +17,7 @@ const QuestionAccordion = ({ questions }) => {
               onClick={() => setActiveIndex(activeIndex === index ? null : index)}
               style={{ transition: 'all 0.3s ease' }}
             >
-              <span className="fw-bold text-dark pe-3">Q{index + 1}: {q.question}</span>
+              <span className="fw-bold text-dark pe-3">🔹 Q{index + 1}: {q.question}</span>
               <motion.span
                 animate={{ rotate: activeIndex === index ? 180 : 0 }}
                 className="fs-5 text-muted"

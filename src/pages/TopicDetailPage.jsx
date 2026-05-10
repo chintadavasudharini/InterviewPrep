@@ -52,15 +52,38 @@ const TopicDetailPage = () => {
               </div>
               <h1 className="display-4 brand-font mb-4 fw-bold">{topic.title}</h1>
               <div className="premium-quote-box">
+                <h5 className="text-accent mb-2 small text-uppercase letter-spacing-2 fw-bold">Core Concept:</h5>
                 <p className="lead text-muted mb-0">{topic.definition}</p>
               </div>
             </header>
 
             {topic.sections && topic.sections.map((section, index) => (
-              <section key={index} className="mb-5">
+              <section key={index} className="mb-4">
                 {section.type === 'text' && (
                   <div className="explanation-text">
                     <p className="text-muted" style={{ lineHeight: '1.8', fontSize: '1.1rem' }}>{section.value}</p>
+                  </div>
+                )}
+                {section.type === 'table' && (
+                  <div className="premium-table-container">
+                    <table className="premium-table">
+                      <thead>
+                        <tr>
+                          {section.headers.map((header, i) => (
+                            <th key={i}>{header}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {section.rows.map((row, i) => (
+                          <tr key={i}>
+                            {row.map((cell, j) => (
+                              <td key={j}>{cell}</td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
                   </div>
                 )}
                 {section.type === 'code' && (
