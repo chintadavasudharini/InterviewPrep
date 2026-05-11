@@ -5991,6 +5991,54 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-database-relationships",
+      "title": "Types of Relationships in DBMS",
+      "category": "Basic",
+      "definition": "Database relationships are the connections established between tables that define how data in one table relates to data in another.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. One-to-One Relationship (1:1)\nOne record in Table A is connected to only one record in Table B.\n\nReal-Time Example: Person ↔ Passport\n• One person has one passport\n• One passport belongs to one person\n\nOther examples: Employee ↔ Locker, User ↔ Aadhaar Card\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. One-to-Many Relationship (1:M)\nOne record in one table can relate to many records in another table.\n\nReal-Time Example: Department → Employees\n• One department has many employees\n• Each employee belongs to one department\n\nOther examples: Teacher → Students, Customer → Orders, Company → Employees\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. Many-to-One Relationship (M:1)\nMany records in one table relate to one record in another table (inverse of One-to-Many).\n\nReal-Time Example: Employees → Manager\n• Many employees work under one manager\n\nOther examples: Many students belong to one college, Many products belong to one category\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. Many-to-Many Relationship (M:N)\nMany records in one table relate to many records in another table. This usually requires a Junction Table.\n\nReal-Time Example: Students ↔ Courses\n• One student can join many courses\n• One course can have many students\n\nOther examples: Doctors ↔ Patients, Actors ↔ Movies, Authors ↔ Books\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Relationship", "Meaning", "Example"],
+          "rows": [
+            ["One-to-One", "One record ↔ One record", "Person ↔ Passport"],
+            ["One-to-Many", "One record ↔ Many records", "Department → Employees"],
+            ["Many-to-One", "Many records ↔ One record", "Employees → Manager"],
+            ["Many-to-Many", "Many records ↔ Many records", "Students ↔ Courses"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is a Junction Table and when is it used?",
+          "answer": "A Junction Table (or associative table) is used to implement a Many-to-Many relationship. It contains foreign keys from both related tables."
+        },
+        {
+          "question": "How do you implement a One-to-Many relationship in SQL?",
+          "answer": "By placing a Foreign Key in the 'Many' side table that refers to the Primary Key of the 'One' side table."
+        },
+        {
+          "question": "Give a real-world example of a One-to-One relationship.",
+          "answer": "A common example is a Person and their Passport or a User and their unique Aadhaar Card."
+        }
+      ]
+    },
+    {
       "id": "sql-command-types",
       "title": "SQL Command Types",
       "category": "Basic",
