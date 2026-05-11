@@ -6319,6 +6319,44 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-cardinality-relation",
+      "title": "Cardinality of a Relation in DBMS",
+      "category": "Basic",
+      "definition": "Cardinality refers to the total number of tuples (rows) present in a table at a given time.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Empty Relation\nA relation that contains no rows (tuples) is called an Empty Relation.\n• Row Count = 0\n• Example: A newly created table where no data has been inserted yet.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. Non-empty Relation\nA relation that contains at least one row (tuple) is called a Non-empty Relation.\n• Row Count > 0\n• Example: A table containing one or more student records.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Relation Type", "Description"],
+          "rows": [
+            ["Empty Relation", "Contains no rows (Cardinality = 0)"],
+            ["Non-empty Relation", "Contains one or more rows (Cardinality > 0)"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is 'Cardinality' in DBMS?",
+          "answer": "Cardinality refers to the number of rows or tuples in a table."
+        },
+        {
+          "question": "Does the number of columns affect the cardinality of a relation?",
+          "answer": "No. The number of columns is called 'Degree'. Cardinality only refers to the number of rows."
+        },
+        {
+          "question": "When is a table considered an Empty Relation?",
+          "answer": "A table is an Empty Relation when it has been defined (schema exists) but contains zero records."
+        }
+      ]
+    },
+    {
       "id": "sql-command-types",
       "title": "SQL Command Types",
       "category": "Basic",
