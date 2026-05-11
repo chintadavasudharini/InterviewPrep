@@ -6092,6 +6092,44 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-strong-weak-relations",
+      "title": "Strong vs Weak Relations in DBMS",
+      "category": "Basic",
+      "definition": "Relations are classified as Strong or Weak based on their independence and whether they possess a primary key that can uniquely identify records without external dependency.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Strong (Regular) Relation\nA relation that has its own Primary Key and can exist independently is called a Strong Relation.\n\nFeatures:\n• Has a primary key\n• Independent table\n• Does not depend on another table\n\nExample Table: Student\n• Student_ID (PK) is the Primary Key\n• The table can exist independently\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. Weak Relation\nA relation that does not have a sufficient primary key and depends on another relation (the strong relation) for its existence is called a Weak Relation.\n\nFeatures:\n• Depends on a strong relation\n• Uses foreign key relationship\n• Cannot exist independently\n\nExample Table: Dependent\n• This table depends on the Student table\n• Student_ID acts as a Foreign Key\n• Without the Student table, this table has no meaning.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Relation Type", "Description"],
+          "rows": [
+            ["Strong Relation", "Has primary key and exists independently"],
+            ["Weak Relation", "Depends on another relation for existence"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Can a Weak relation have its own primary key?",
+          "answer": "A Weak relation typically does not have a complete primary key that can uniquely identify its records on its own. It often uses a 'Partial Key' combined with the Primary Key of its parent strong relation."
+        },
+        {
+          "question": "What happens to a Weak relation if its parent Strong relation is deleted?",
+          "answer": "Since the Weak relation depends on the Strong relation, deleting the Strong relation usually results in the deletion of the associated records in the Weak relation (often handled via 'ON DELETE CASCADE')."
+        },
+        {
+          "question": "How is a Weak relation identified in an ER diagram?",
+          "answer": "In an Entity-Relationship (ER) diagram, a weak entity is usually represented by a double rectangle."
+        }
+      ]
+    },
+    {
       "id": "sql-command-types",
       "title": "SQL Command Types",
       "category": "Basic",
