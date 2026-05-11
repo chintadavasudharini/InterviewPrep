@@ -5918,6 +5918,64 @@ export const interviewData = {
       ]
     },
     {
+      "id": "sql-filtering-concepts",
+      "title": "SQL Filtering Concepts",
+      "category": "Basic",
+      "definition": "Filtering data means retrieving only the required records from a table using conditions. This module covers the conceptual definitions of various filtering operators.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. WHERE Clause\nThe WHERE clause is used to filter records based on a condition.\n• Returns only matching rows\n• Used with SELECT, UPDATE, and DELETE\n• Helps retrieve specific data from a table\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. AND Operator\nThe AND operator is used to combine multiple conditions.\n• All conditions must be TRUE\n• Returns records only if every condition matches\n• Used for more specific filtering\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. OR Operator\nThe OR operator is used to combine multiple conditions.\n• At least one condition must be TRUE\n• Returns records if any condition matches\n• Used for alternative filtering conditions\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. NOT Operator\nThe NOT operator is used to exclude records that match a condition.\n• Reverses the condition\n• Returns records that do not satisfy the condition\n• Used for negative filtering\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "5. BETWEEN Operator\nThe BETWEEN operator is used to filter data within a range.\n• Includes both starting and ending values\n• Works with numbers, dates, and text\n• Useful for ranges like marks, salary, age, dates\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "6. IN Operator\nThe IN operator is used to match multiple values in a condition.\n• Simplifies multiple OR conditions\n• Checks whether a value exists in a list\n• Makes queries shorter and cleaner\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "7. LIKE Operator\nThe LIKE operator is used for pattern matching.\n• Searches for specific patterns in text\n• Mostly used with character/string data\n• Works together with wildcards\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "8. Wildcards\nWildcards are special symbols used with the LIKE operator for pattern searching.\nCommon wildcards:\n• % → Represents zero, one, or many characters\n• _ → Represents a single character\n\nUsed to search names, find partial matches, and filter text patterns.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "9. LIMIT Clause\nThe LIMIT clause is used to restrict the number of rows returned.\n• Returns only a specific number of records\n• Useful for large datasets\n• Commonly used for pagination and top results"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the primary purpose of the WHERE clause?",
+          "answer": "To filter records in a database table based on specific conditions.\n\n-----------------"
+        },
+        {
+          "question": "Which wildcard represents a single character in a LIKE pattern?",
+          "answer": "The underscore (_) wildcard represents a single character.\n\n-----------------"
+        },
+        {
+          "question": "When would you use the BETWEEN operator?",
+          "answer": "When you need to filter data within a specific range, such as a range of salaries or dates."
+        }
+      ]
+    },
+    {
       "id": "sql-joins",
       "title": "SQL Joins",
       "category": "Queries",
