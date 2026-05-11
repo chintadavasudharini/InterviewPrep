@@ -5976,6 +5976,44 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-data-types",
+      "title": "Data Types in MySQL",
+      "category": "Basic",
+      "definition": "MySQL data types define the kind of values that can be stored in a table column, ensuring data integrity and optimizing storage.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Numeric Types\nUsed to store whole or decimal numbers.\n\n• INT: Stores whole numbers\n• FLOAT: Stores decimal numbers (approximate precision)\n• DOUBLE: Stores large decimal numbers (higher precision)\n• DECIMAL(total, decimal): Stores exact decimal values (e.g., money)\n\nExample:\nCREATE TABLE finance ( salary DECIMAL(10,2) );\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. String Types\nUsed to store text values of various lengths.\n\n• CHAR(size): Fixed-length string\n• VARCHAR(size): Variable-length string\n• TEXT: Large amounts of text\n\nExample:\nCREATE TABLE users ( name VARCHAR(50) );\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. Date & Time Types\nUsed to store chronological information.\n\n• DATE: YYYY-MM-DD\n• TIME: HH:MM:SS\n• DATETIME: YYYY-MM-DD HH:MM:SS\n• TIMESTAMP: Automatic tracking of time changes\n\nExample:\nCREATE TABLE logs ( created_at DATETIME );\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. Boolean Type\nUsed to store TRUE or FALSE values.\n\n• BOOLEAN: Internally stored as TINYINT(1) (0 for FALSE, 1 for TRUE)\n\nExample:\nCREATE TABLE status ( is_active BOOLEAN );"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between CHAR and VARCHAR?",
+          "answer": "CHAR is fixed-length (pads with spaces), while VARCHAR is variable-length (uses only necessary space). CHAR is slightly faster for fixed-size data, while VARCHAR saves space for varying data.\n\n-----------------"
+        },
+        {
+          "question": "Why use DECIMAL instead of FLOAT for financial data?",
+          "answer": "DECIMAL stores exact values, avoiding the rounding errors associated with floating-point types like FLOAT or DOUBLE.\n\n-----------------"
+        },
+        {
+          "question": "What is the difference between DATETIME and TIMESTAMP?",
+          "answer": "TIMESTAMP is time-zone dependent and has a smaller range (up to 2038), while DATETIME is independent of time zone and covers a much larger range (up to year 9999)."
+        }
+      ]
+    },
+    {
       "id": "sql-joins",
       "title": "SQL Joins",
       "category": "Queries",
