@@ -8,10 +8,17 @@ const ContactPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus('loading');
-
+    
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
+
+    // Custom validation: Either message or suggestions must be present
+    if (!data.message.trim() && !data.suggestions.trim()) {
+      setStatus('validation-error');
+      return;
+    }
+
+    setStatus('loading');
 
     try {
       const response = await fetch("https://formsubmit.co/ajax/connect.interviewprep@gmail.com", {
@@ -96,7 +103,6 @@ const ContactPage = () => {
                 <label className="form-label small text-muted text-uppercase fw-bold">Message</label>
                 <textarea 
                   name="message"
-                  required
                   className="form-control bg-light border-0 py-3 rounded-3" 
                   rows="3" 
                   placeholder="How can I help you?"
@@ -127,6 +133,12 @@ const ContactPage = () => {
                   'Send Message'
                 )}
               </button>
+
+              {status === 'validation-error' && (
+                <div className="mt-3 text-danger small text-center fw-bold">
+                  Please provide either a Message or a Suggestion.
+                </div>
+              )}
 
               {status === 'error' && (
                 <div className="mt-3 text-danger small text-center">

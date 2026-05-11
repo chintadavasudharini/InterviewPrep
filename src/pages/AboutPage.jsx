@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { BsEnvelope } from 'react-icons/bs';
 
 const AboutPage = () => {
@@ -31,6 +32,11 @@ const AboutPage = () => {
                 and DSA, every module is curated to ensure learners are not just prepared, but confident 
                 in their technical abilities.
               </p>
+            </div>
+            <div className="mt-4">
+              <Link to="/contact" className="btn btn-premium px-5 py-3 shadow">
+                Get in Touch
+              </Link>
             </div>
           </motion.div>
 
