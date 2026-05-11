@@ -23,7 +23,7 @@ const TopicsPage = ({ searchTerm }) => {
     return acc;
   }, {});
 
-  const categoryOrder = ['Basic', 'Loops', 'OOP', 'OOP Core', 'OOP Basics', 'OOP Practice'];
+  const categoryOrder = ['Basic', 'Loops', 'Functions', 'OOP', 'OOP Basics', 'OOP Core', 'OOP Practice', 'Python Libraries'];
   
   const sortedCategories = Object.keys(groupedTopics).sort((a, b) => {
     const indexA = categoryOrder.indexOf(a);

@@ -7,11 +7,11 @@ const paths = [
   {
     id: 'python',
     title: 'Python Master',
-    description: 'Master OOP, decorators, generators, and advanced Python interview patterns.',
+    description: 'Master Python OOP, Basic, Functions and Libraries for interviews.',
     icon: <BsCodeSquare size={30} />,
     color: '#FFD700',
     link: '/python',
-    topics: ['Core OOP', 'Dunder Methods', 'Decorators', 'Concurrency']
+    topics: ['Basic', 'Functions', 'OOP', 'Libraries']
   },
   {
     id: 'mysql',
@@ -92,8 +92,8 @@ const PreparationPathsPage = () => {
         </h6>
         <h1 className="display-4 brand-font mb-4">Preparation <span style={{ color: 'var(--accent-color)' }}>Paths</span></h1>
         <p className="text-muted mx-auto" style={{ maxWidth: '600px' }}>
-          Select a specialized path to focus your learning. Each path is curated with 
-          interview-ready content and logical progression.
+          Select a specialized path to focus your learning. <br />
+          Each path is curated with interview-ready content and logical progression.
         </p>
       </div>
 
