@@ -5663,7 +5663,7 @@ export const interviewData = {
     {
       "id": "mysql-database-ops",
       "title": "MySQL Database Operations",
-      "category": "Basic",
+      "category": "Sub Commands",
       "definition": "Essential commands for managing databases in MySQL, including creation, listing, selection, and deletion.",
       "sections": [
         {
@@ -5779,7 +5779,7 @@ export const interviewData = {
     {
       "id": "mysql-crud-operations",
       "title": "CRUD Operations in MySQL",
-      "category": "Basic",
+      "category": "Sub Commands",
       "definition": "CRUD stands for Create, Read, Update, and Delete. These are the four basic actions performed on data in a database.",
       "sections": [
         {
@@ -6363,9 +6363,9 @@ export const interviewData = {
     },
     {
       "id": "sql-command-types",
-      "title": "SQL Command Types (Sub Commands)",
-      "category": "Basic",
-      "definition": "SQL has different sub-languages or categories of commands (Sub Commands) based on the type of operation performed on the database.",
+      "title": "SQL Command Types",
+      "category": "Sub Commands",
+      "definition": "SQL has different sub-languages (categories of commands) based on the type of operation performed on the database.",
       "sections": [
         {
           "type": "text",
@@ -6417,7 +6417,7 @@ export const interviewData = {
     {
       "id": "sql-delete-truncate-drop",
       "title": "DELETE vs TRUNCATE vs DROP",
-      "category": "Basic",
+      "category": "Sub Commands",
       "definition": "In SQL, DELETE, TRUNCATE, and DROP are all used to remove data or structures, but they differ significantly in their impact and behavior.",
       "sections": [
         {
@@ -6473,7 +6473,7 @@ export const interviewData = {
     {
       "id": "sql-ddl-commands-practical",
       "title": "SQL DDL Commands with Employee Table",
-      "category": "Basic",
+      "category": "Sub Commands",
       "definition": "A complete step-by-step guide to SQL DDL commands using an Employee table example.",
       "sections": [
         {
@@ -6569,7 +6569,7 @@ export const interviewData = {
     {
       "id": "sql-alter-table-syntax",
       "title": "ALTER TABLE Commands Syntax",
-      "category": "Basic",
+      "category": "Sub Commands",
       "definition": "The ALTER TABLE statement is used to add, delete, or modify columns in an existing table, as well as to rename columns or the table itself.",
       "sections": [
         {
@@ -6622,7 +6622,7 @@ export const interviewData = {
     {
       "id": "sql-dql-select",
       "title": "DQL (Data Query Language) - SELECT",
-      "category": "Basic",
+      "category": "Sub Commands",
       "definition": "DQL is used to retrieve/fetch data from database tables. The primary command used in DQL is SELECT.",
       "sections": [
         {
