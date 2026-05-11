@@ -5488,6 +5488,40 @@ export const interviewData = {
   ],
   "mysql": [
     {
+      "id": "mysql-database-ops",
+      "title": "MySQL Database Operations",
+      "category": "Basic",
+      "definition": "Essential commands for managing databases in MySQL, including creation, listing, selection, and deletion.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Create Database\nUsed to create a new database.\n\nCommand: CREATE DATABASE college;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. Show Databases\nLists all the databases available in the MySQL server.\n\nCommand: SHOW DATABASES;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. Use Database\nSelects a specific database to start performing operations on its tables.\n\nCommand: USE college;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. Drop Database\nRemoves an existing database along with all its tables and data permanently.\n\nCommand: DROP DATABASE college;"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What happens when you drop a database?",
+          "answer": "The database, all its tables, and all the data contained within them are permanently deleted and cannot be recovered unless you have a backup."
+        },
+        {
+          "question": "How do you verify if a database was created successfully?",
+          "answer": "You can use the 'SHOW DATABASES;' command to list all databases and check if your new database appears in the list."
+        }
+      ]
+    },
+    {
       "id": "sql-command-types",
       "title": "SQL Command Types",
       "category": "Basic",
