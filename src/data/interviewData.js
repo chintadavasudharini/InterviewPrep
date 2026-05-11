@@ -5491,31 +5491,38 @@ export const interviewData = {
       "id": "sql-command-types",
       "title": "SQL Command Types",
       "category": "Basic",
-      "definition": "SQL (Structured Query Language) commands are broadly divided into five main types, each serving a different purpose in managing databases.",
+      "definition": "SQL has different sub-languages (categories of commands) based on the type of operation performed on the database.",
       "sections": [
         {
           "type": "text",
-          "value": "1. DDL (Data Definition Language)\nThese commands define or modify the structure of database objects like tables.\n• CREATE – Creates a new table or database\n• ALTER – Modifies an existing table (add/delete columns)\n• DROP – Deletes a table or database\n• TRUNCATE – Removes all records from a table (faster than DELETE)\n• RENAME – Renames a database object"
+          "value": "Types (Sub-Languages) of SQL:\n\n1. DDL – Data Definition Language\nUsed to define or modify database structure (tables, schema).\nCommands:\n• CREATE → creates database/table\n• ALTER → modifies table structure\n• DROP → deletes table/database completely\n• TRUNCATE → removes all rows from table\n• RENAME → renames table"
         },
         {
           "type": "text",
-          "value": "2. DML (Data Manipulation Language)\nUsed to manipulate data stored in tables.\n• INSERT – Adds new records\n• UPDATE – Modifies existing records\n• DELETE – Removes records"
+          "value": "2. DML – Data Manipulation Language\nUsed to insert, update, or delete data in tables.\nCommands:\n• INSERT\n• UPDATE\n• DELETE"
         },
         {
           "type": "text",
-          "value": "3. DQL (Data Query Language)\nUsed to retrieve data from the database.\n• SELECT – Fetches data from one or more tables"
+          "value": "3. DQL – Data Query Language\nUsed to retrieve data from database.\nCommand:\n• SELECT"
         },
         {
           "type": "text",
-          "value": "4. DCL (Data Control Language)\nControls access and permissions in the database.\n• GRANT – Gives user access privileges\n• REVOKE – Removes user access privileges"
+          "value": "4. DCL – Data Control Language\nUsed to control permissions and access.\nCommands:\n• GRANT\n• REVOKE"
         },
         {
           "type": "text",
-          "value": "5. TCL (Transaction Control Language)\nManages transactions in a database.\n• COMMIT – Saves changes permanently\n• ROLLBACK – Undoes changes\n• SAVEPOINT – Sets a point to roll back to"
+          "value": "5. TCL – Transaction Control Language\nUsed to manage transactions in database.\nCommands:\n• COMMIT\n• ROLLBACK\n• SAVEPOINT"
         },
         {
-          "type": "text",
-          "value": "Quick Summary:\n• DDL → Structure (tables)\n• DML → Data changes\n• DQL → Data retrieval\n• DCL → Permissions\n• TCL → Transactions"
+          "type": "table",
+          "headers": ["Sub-language", "Full Form", "Purpose"],
+          "rows": [
+            ["DDL", "Data Definition Language", "Structure of database"],
+            ["DML", "Data Manipulation Language", "Insert/update/delete data"],
+            ["DQL", "Data Query Language", "Retrieve data"],
+            ["DCL", "Data Control Language", "Permissions/security"],
+            ["TCL", "Transaction Control Language", "Manage transactions"]
+          ]
         }
       ],
       "questions": [
