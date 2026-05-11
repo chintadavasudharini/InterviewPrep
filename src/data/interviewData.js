@@ -5918,6 +5918,79 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-constraints-practical",
+      "title": "MySQL Constraints Practical Example",
+      "category": "Basic",
+      "definition": "A hands-on demonstration of all MySQL constraints working together across multiple tables to ensure data integrity.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Table 1: Departments\n\nCREATE TABLE departments (\n    dept_id INT AUTO_INCREMENT PRIMARY KEY,\n    dept_name VARCHAR(50) NOT NULL UNIQUE,\n    location VARCHAR(50) DEFAULT 'Hyderabad'\n);\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Table 2: Employees\n\nCREATE TABLE employees (\n    emp_id INT AUTO_INCREMENT PRIMARY KEY,\n    emp_name VARCHAR(100) NOT NULL,\n    email VARCHAR(100) UNIQUE,\n    age INT CHECK (age >= 18),\n    salary DECIMAL(10,2) CHECK (salary > 10000),\n    gender VARCHAR(10) DEFAULT 'Not Specified',\n    dept_id INT,\n    FOREIGN KEY (dept_id) REFERENCES departments(dept_id)\n);\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Constraint", "Used In"],
+          "rows": [
+            ["NOT NULL", "emp_name, dept_name"],
+            ["UNIQUE", "email, dept_name"],
+            ["PRIMARY KEY", "emp_id, dept_id"],
+            ["FOREIGN KEY", "dept_id"],
+            ["DEFAULT", "gender, location"],
+            ["CHECK", "age, salary"],
+            ["AUTO_INCREMENT", "emp_id, dept_id"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Insert Data into Departments:\n\nINSERT INTO departments (dept_name, location) VALUES\n('HR', 'Vijayawada'),\n('IT', 'Hyderabad'),\n('Finance', 'Bangalore');\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["dept_id", "dept_name", "location"],
+          "rows": [
+            ["1", "HR", "Vijayawada"],
+            ["2", "IT", "Hyderabad"],
+            ["3", "Finance", "Bangalore"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Insert Data into Employees:\n\nINSERT INTO employees(emp_name, email, age, salary, gender, dept_id) VALUES\n('Asha', 'asha@gmail.com', 22, 35000, 'Female', 1),\n('Rahul', 'rahul@gmail.com', 25, 50000, 'Male', 2),\n('Kiran', 'kiran@gmail.com', 28, 45000, DEFAULT, 3);\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["emp_id", "emp_name", "email", "age", "salary", "gender", "dept_id"],
+          "rows": [
+            ["1", "Asha", "asha@gmail.com", "22", "35000", "Female", "1"],
+            ["2", "Rahul", "rahul@gmail.com", "25", "50000", "Male", "2"],
+            ["3", "Kiran", "kiran@gmail.com", "28", "45000", "Not Specified", "3"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Constraint Error Examples:\n\n1. NOT NULL Error\nINSERT INTO employees(emp_name, age, salary) VALUES(NULL, 22, 30000);\nOutput: ERROR: emp_name cannot be NULL\n\n2. UNIQUE Error\nINSERT INTO employees(emp_name, email, age, salary) VALUES('Sai', 'asha@gmail.com', 23, 30000);\nOutput: ERROR: Duplicate entry for UNIQUE column 'email'\n\n3. CHECK Error\nINSERT INTO employees(emp_name, age, salary) VALUES('Ravi', 15, 20000);\nOutput: ERROR: CHECK constraint failed\n\n4. FOREIGN KEY Error\nINSERT INTO employees(emp_name, age, salary, dept_id) VALUES('Priya', 24, 40000, 10);\nOutput: ERROR: Cannot add or update child row: Foreign key constraint fails"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What happens if you try to insert a duplicate value into a column with a UNIQUE constraint?",
+          "answer": "MySQL will return an error (e.g., 'Duplicate entry for UNIQUE column') and the record will not be inserted."
+        },
+        {
+          "question": "In the example, why did the gender for 'Kiran' become 'Not Specified'?",
+          "answer": "Because the 'DEFAULT' keyword was used in the INSERT statement, which tells MySQL to use the default value defined in the table structure."
+        },
+        {
+          "question": "What is the requirement for a value inserted into the dept_id column of the Employees table?",
+          "answer": "Due to the FOREIGN KEY constraint, any value inserted into Employees.dept_id must already exist in the Departments.dept_id column."
+        }
+      ]
+    },
+    {
       "id": "sql-command-types",
       "title": "SQL Command Types",
       "category": "Basic",
