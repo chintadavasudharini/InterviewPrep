@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { BsEnvelope } from 'react-icons/bs';
 
 const AboutPage = () => {
   return (
@@ -7,42 +8,77 @@ const AboutPage = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="container py-5"
+      className="container py-5 mt-4"
     >
       <div className="row justify-content-center">
-        <div className="col-lg-8 text-center">
-          <h1 className="display-3 brand-font mb-4">About <span style={{ color: 'var(--accent-color)' }}>Vasudharini</span></h1>
-          <div className="premium-card text-start mb-5">
-            <p className="lead" style={{ lineHeight: '2' }}>
-              I am Chintada Vasudharini, a Python Full Stack Developer specializing in AWS and AI-ML. 
-              Currently pursuing my studies in CSE at KL University, I am dedicated to mastering technical interview concepts.
-            </p>
-            <p className="text-muted">
-              This portfolio is a curated learning path designed to bridge the gap between academic theory 
-              and practical interview performance. It showcases my journey in mastering Python's 
-              Object-Oriented Programming and other core technologies.
-            </p>
-          </div>
-          <div className="row g-4 mt-2">
-            <div className="col-md-4">
-              <div className="p-4 bg-white rounded-4 shadow-sm border">
-                <h4 className="brand-font">20+</h4>
-                <p className="small text-muted mb-0">OOP Topics</p>
+        <div className="col-lg-8">
+          
+          {/* Section 1: About Interview Prep */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-5 text-center"
+          >
+            <h2 className="display-4 brand-font mb-4">About <span style={{ color: 'var(--accent-color)' }}>Interview Prep</span></h2>
+            <div className="premium-card text-start shadow-sm">
+              <p className="lead" style={{ lineHeight: '1.8' }}>
+                Interview Prep is a specialized platform designed to bridge the gap between technical theory 
+                and professional interview performance. Our mission is to provide structured, high-quality 
+                learning paths that focus on the core concepts essential for success in modern software engineering roles.
+              </p>
+              <p className="text-muted">
+                From mastering Python's Object-Oriented Programming to deep-diving into Cloud Architecture 
+                and DSA, every module is curated to ensure learners are not just prepared, but confident 
+                in their technical abilities.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Section 2: About Vasudharini */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="mb-5 text-center"
+          >
+            <h2 className="display-4 brand-font mb-4">About <span style={{ color: 'var(--accent-color)' }}>Vasudharini</span></h2>
+            <div className="premium-card text-start shadow-sm">
+              <p className="lead" style={{ lineHeight: '1.8' }}>
+                HellOoo, I am Chintada Vasudharini, a Python Full Stack Developer specializing in AWS and AIML. 
+                I completed my B.Tech in Computer Science and Engineering from KL University, 
+                and I am dedicated to building efficient, scalable solutions and mastering the art of technical problem-solving.
+              </p>
+              <p className="text-muted">
+                Through this platform, I aim to share my journey and consolidated knowledge base, 
+                helping fellow developers navigate the complexities of technical interviews with ease.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Section 3: Connect with Vasudharini */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-center"
+          >
+            <h2 className="display-4 brand-font mb-4">Connect with <span style={{ color: 'var(--accent-color)' }}>Vasudharini</span></h2>
+            <div className="premium-card shadow-sm py-4">
+              <div className="d-flex align-items-center justify-content-center gap-3">
+                 <div className="rounded-circle p-3 d-flex align-items-center justify-content-center" style={{ background: 'var(--accent-color)15', color: 'var(--accent-color)' }}>
+                   <BsEnvelope size={24} />
+                 </div>
+                 <a 
+                   href="mailto:chintadavasudharini@gmail.com" 
+                   className="text-decoration-none h4 mb-0 brand-font hover-accent" 
+                   style={{ color: 'var(--text-color)' }}
+                 >
+                   chintadavasudharini@gmail.com
+                 </a>
               </div>
             </div>
-            <div className="col-md-4">
-              <div className="p-4 bg-white rounded-4 shadow-sm border">
-                <h4 className="brand-font">50+</h4>
-                <p className="small text-muted mb-0">Q&A Pairs</p>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="p-4 bg-white rounded-4 shadow-sm border">
-                <h4 className="brand-font">Pure</h4>
-                <p className="small text-muted mb-0">ReactJS Code</p>
-              </div>
-            </div>
-          </div>
+          </motion.div>
+
         </div>
       </div>
     </motion.div>

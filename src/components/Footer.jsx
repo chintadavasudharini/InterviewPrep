@@ -16,18 +16,11 @@ const Footer = () => {
             <h6 className="text-uppercase small fw-bold mb-3 tracking-widest">Platform</h6>
             <ul className="list-unstyled small">
               <li className="mb-2"><Link to="/" className="text-decoration-none text-muted">Home</Link></li>
-              <li className="mb-2"><Link to="/topics" className="text-decoration-none text-muted">Curriculum</Link></li>
+              <li className="mb-2"><Link to="/prep-paths" className="text-decoration-none text-muted">Start Prep</Link></li>
               <li className="mb-2"><Link to="/about" className="text-decoration-none text-muted">About</Link></li>
             </ul>
           </div>
-          <div className="col-lg-2">
-            <h6 className="text-uppercase small fw-bold mb-3 tracking-widest">Resources</h6>
-            <ul className="list-unstyled small">
-              <li className="mb-2"><a href="#" className="text-decoration-none text-muted">UML Guide</a></li>
-              <li className="mb-2"><a href="#" className="text-decoration-none text-muted">Design Patterns</a></li>
-              <li className="mb-2"><a href="#" className="text-decoration-none text-muted">Mentorship</a></li>
-            </ul>
-          </div>
+
           <div className="col-lg-2">
             <h6 className="text-uppercase small fw-bold mb-3 tracking-widest">Social</h6>
             <ul className="list-unstyled small">

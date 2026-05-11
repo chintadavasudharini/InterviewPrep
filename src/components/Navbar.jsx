@@ -32,7 +32,7 @@ const Navbar = ({ searchTerm, setSearchTerm }) => {
               <NavLink className="nav-link mx-2" to="/prep-paths">Start Prep</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link mx-2" to="/about">About Me</NavLink>
+              <NavLink className="nav-link mx-2" to="/about">About</NavLink>
             </li>
           </ul>
           

@@ -13,18 +13,18 @@ const HeroSection = () => {
             transition={{ duration: 0.8 }}
           >
             <h6 className="text-uppercase tracking-wider mb-3" style={{ letterSpacing: '3px', color: 'var(--text-muted)' }}>
-              Python Full Stack Developer · AWS · AI-ML
+              Python Full Stack Developer · AWS · AIML
             </h6>
             <h1 className="display-2 mb-4">
               Vasudharini's <span style={{ color: 'var(--accent-color)' }}>Learning</span> Portfolio
             </h1>
             <p className="lead text-muted mb-5 pe-lg-5" style={{ lineHeight: '1.8' }}>
-              Hi, I'm Chintada Vasudharini. This is my structured repository for mastering Python, MySQL, DSA, and Cloud Architecture. 
+              HellOoo, I am Chintada Vasudharini. This is my structured repository for mastering Python, MySQL, DSA, and Cloud Architecture. 
               Designed for professional excellence and interview success.
             </p>
             <div className="d-flex gap-3">
               <Link to="/prep-paths" className="btn btn-premium shadow-lg">Start Prep</Link>
-              <Link to="/about" className="btn btn-outline-dark rounded-pill px-4" style={{ border: '2px solid' }}>Explore Me</Link>
+              <Link to="/about" className="btn btn-outline-dark rounded-pill px-4" style={{ border: '2px solid' }}>Explore</Link>
             </div>
           </motion.div>
         </div>

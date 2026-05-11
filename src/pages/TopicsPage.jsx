@@ -14,6 +14,26 @@ const TopicsPage = ({ searchTerm }) => {
     topic.definition.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const groupedTopics = filteredTopics.reduce((acc, topic) => {
+    const category = topic.category || 'Other';
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(topic);
+    return acc;
+  }, {});
+
+  const categoryOrder = ['Basic', 'Loops', 'OOP', 'OOP Core', 'OOP Basics', 'OOP Practice'];
+  
+  const sortedCategories = Object.keys(groupedTopics).sort((a, b) => {
+    const indexA = categoryOrder.indexOf(a);
+    const indexB = categoryOrder.indexOf(b);
+    if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+    if (indexA !== -1) return -1;
+    if (indexB !== -1) return 1;
+    return a.localeCompare(b);
+  });
+
   if (!tech) {
     return <div className="container py-5 text-center"><h2>Technology Not Found</h2></div>;
   }
@@ -32,17 +52,33 @@ const TopicsPage = ({ searchTerm }) => {
         </p>
       </div>
 
-      <div className="row g-4">
-        {filteredTopics.length > 0 ? (
-          filteredTopics.map((topic, index) => (
-            <TopicCard key={topic.id} topic={topic} index={index} techId={techId} />
-          ))
-        ) : (
-          <div className="text-center py-5">
-            <h3 className="text-muted">No topics found matching "{searchTerm}"</h3>
-          </div>
-        )}
-      </div>
+      {sortedCategories.length > 0 ? (
+        sortedCategories.map((category, catIndex) => {
+          const categoryTopics = groupedTopics[category];
+          return (
+            <div key={category} className="mb-5">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: catIndex * 0.1 }}
+                className="d-flex align-items-center mb-4"
+              >
+                <div className="category-divider me-3"></div>
+                <h2 className="brand-font h3 mb-0" style={{ color: 'var(--text-color)' }}>{category}</h2>
+              </motion.div>
+              <div className="row g-4">
+                {categoryTopics.map((topic, index) => (
+                  <TopicCard key={topic.id} topic={topic} index={index} techId={techId} />
+                ))}
+              </div>
+            </div>
+          );
+        })
+      ) : (
+        <div className="text-center py-5">
+          <h3 className="text-muted">No topics found matching "{searchTerm}"</h3>
+        </div>
+      )}
     </motion.div>
   );
 };
