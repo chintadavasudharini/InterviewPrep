@@ -5599,6 +5599,68 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-table-concepts",
+      "title": "Database Table Concepts",
+      "category": "Basic",
+      "definition": "Fundamental structural elements of a relational database, including the components of a table and the primary mechanisms for identifying and linking records.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Tables\nA table is a collection of related data stored in rows and columns in a database. It is similar to an Excel sheet, where each table stores data about one specific topic.\n\nExample Table: Student\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Student_ID", "Name", "Course"],
+          "rows": [
+            ["101", "Ravi", "Python"],
+            ["102", "Anu", "Java"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "2. Rows & Records\nA row (or record) represents a single horizontal data entry in a table, containing complete information about one item.\n\nExample Row:\n101 | Ravi | Python\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. Columns\nA column represents a vertical field or attribute in a table, defining the type of data stored.\n\nExample Columns:\nStudent_ID, Name, Course\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. Primary Key\nA Primary Key is a column that uniquely identifies each record in a table.\n\nFeatures:\n• Cannot contain duplicate values\n• Cannot contain NULL values\n• Each table usually has one primary key\n\nExample: Student_ID is a Primary Key.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "5. Foreign Key\nA Foreign Key is a column that links one table to another table by referring to the primary key of the related table.\n\nExample:\n• Students Table: Student_ID (PK)\n• Courses Table: Student_ID (FK) refers to Students Table.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Term", "Meaning"],
+          "rows": [
+            ["Table", "Collection of data"],
+            ["Row", "Single horizontal data entry"],
+            ["Column", "Vertical field/attribute"],
+            ["Record", "Another name for row"],
+            ["Primary Key", "Unique identifier"],
+            ["Foreign Key", "Connects two tables"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between a row and a record?",
+          "answer": "In database terms, 'row' and 'record' are used interchangeably. They both refer to a single horizontal set of data in a table."
+        },
+        {
+          "question": "Can a Primary Key be NULL?",
+          "answer": "No, a Primary Key must contain a unique value for each row and cannot be NULL."
+        },
+        {
+          "question": "What is the purpose of a Foreign Key?",
+          "answer": "A Foreign Key is used to create a relationship between two tables by linking a column in one table to the Primary Key of another."
+        }
+      ]
+    },
+    {
       "id": "mysql-database-ops",
       "title": "MySQL Database Operations",
       "category": "Basic",
