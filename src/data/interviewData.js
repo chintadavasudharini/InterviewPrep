@@ -6271,6 +6271,54 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-degree-relation",
+      "title": "Degree of a Relation in DBMS",
+      "category": "Basic",
+      "definition": "The degree of a relation refers to the total number of attributes (columns) present in a table.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Unary Relation\nA relation that has only one attribute (column) is called a Unary Relation.\n• Example: A simple list of Student Names.\n• Degree = 1\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. Binary Relation\nA relation that has two attributes (columns) is called a Binary Relation.\n• Example: A table with Student_ID and Student_Name.\n• Degree = 2\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. Ternary Relation\nA relation that has three attributes (columns) is called a Ternary Relation.\n• Example: A table with Student_ID, Student_Name, and Course.\n• Degree = 3\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. n-ary Relation\nA relation that has 'n' number of attributes (columns) is called an n-ary Relation.\n• Example: A complex table with ID, Name, Course, Phone, and City.\n• Degree = n\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Relation Type", "Number of Columns (Degree)"],
+          "rows": [
+            ["Unary Relation", "1"],
+            ["Binary Relation", "2"],
+            ["Ternary Relation", "3"],
+            ["n-ary Relation", "n"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the 'Degree' of a relation?",
+          "answer": "Degree refers to the number of attributes (columns) in a table."
+        },
+        {
+          "question": "If a table has 5 columns, what is its degree?",
+          "answer": "The degree is 5 (it is a 5-ary or n-ary relation)."
+        },
+        {
+          "question": "Does the number of rows affect the degree of a relation?",
+          "answer": "No. The number of rows is called 'Cardinality'. Degree only refers to the number of columns."
+        }
+      ]
+    },
+    {
       "id": "sql-command-types",
       "title": "SQL Command Types",
       "category": "Basic",
