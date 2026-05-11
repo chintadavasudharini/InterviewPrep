@@ -6363,9 +6363,9 @@ export const interviewData = {
     },
     {
       "id": "sql-command-types",
-      "title": "SQL Command Types",
+      "title": "SQL Command Types (Sub Commands)",
       "category": "Basic",
-      "definition": "SQL has different sub-languages (categories of commands) based on the type of operation performed on the database.",
+      "definition": "SQL has different sub-languages or categories of commands (Sub Commands) based on the type of operation performed on the database.",
       "sections": [
         {
           "type": "text",
