@@ -5661,6 +5661,59 @@ export const interviewData = {
       ]
     },
     {
+      "id": "sql-alter-table-syntax",
+      "title": "ALTER TABLE Commands Syntax",
+      "category": "Basic",
+      "definition": "The ALTER TABLE statement is used to add, delete, or modify columns in an existing table, as well as to rename columns or the table itself.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. ADD\nUsed to add a new column to a table.\n\nSyntax:\nALTER TABLE table_name\nADD COLUMN column_name datatype;\n\nExample:\nALTER TABLE employee\nADD COLUMN email VARCHAR(50);\n\n-----------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. DROP\nUsed to delete a column from a table.\n\nSyntax:\nALTER TABLE table_name\nDROP COLUMN column_name;\n\nExample:\nALTER TABLE employee\nDROP COLUMN email;\n\n-----------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. RENAME\nUsed to rename an existing column.\n\nSyntax:\nALTER TABLE table_name\nRENAME COLUMN old_column_name TO new_column_name;\n\nExample:\nALTER TABLE employee\nRENAME COLUMN emp_name TO employee_name;\n\n-----------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. MODIFY\nUsed to change datatype/size of a column.\n\nSyntax:\nALTER TABLE table_name\nMODIFY COLUMN column_name new_datatype;\n\nExample:\nALTER TABLE employee\nMODIFY COLUMN emp_name VARCHAR(100);\n\n-----------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "5. CHANGE\nUsed to rename a column and change its datatype at the same time.\n\nSyntax:\nALTER TABLE table_name\nCHANGE current_column_name new_column_name datatype;\n\nExample:\nALTER TABLE employee\nCHANGE emp_name employee_name VARCHAR(100);"
+        },
+        {
+          "type": "table",
+          "headers": ["Command", "Purpose"],
+          "rows": [
+            ["ADD", "Add new column"],
+            ["DROP", "Delete column"],
+            ["RENAME", "Rename column only"],
+            ["MODIFY", "Change datatype only"],
+            ["CHANGE", "Rename + datatype change"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the key difference between MODIFY and CHANGE in MySQL?",
+          "answer": "MODIFY allows you to change the data type of a column without renaming it. CHANGE requires you to specify a new column name, effectively allowing you to rename and modify the type simultaneously."
+        },
+        {
+          "question": "How do you add multiple columns in a single ALTER TABLE statement?",
+          "answer": "You can use commas to separate multiple ADD clauses: ALTER TABLE table_name ADD col1 type, ADD col2 type;"
+        },
+        {
+          "question": "Is the COLUMN keyword mandatory in ALTER TABLE DROP?",
+          "answer": "In most SQL dialects like MySQL, you can use 'DROP column_name' or 'DROP COLUMN column_name' interchangeably."
+        }
+      ]
+    },
+    {
       "id": "sql-joins",
       "title": "SQL Joins",
       "category": "Queries",
