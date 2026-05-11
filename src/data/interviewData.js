@@ -5597,6 +5597,70 @@ export const interviewData = {
       ]
     },
     {
+      "id": "sql-ddl-commands-practical",
+      "title": "SQL DDL Commands (Practical Guide)",
+      "category": "Basic",
+      "definition": "A practical walkthrough of DDL (Data Definition Language) commands using a sample Employee table to understand database and table management.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Create and Use Database\nFirst, we create a database and select it for use.\n\nCREATE DATABASE company_db;\nUSE company_db;\n\n-----------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. Create Employee Table\nDefining the structure of the employee table.\n\nCREATE TABLE employee(\n    emp_id INT,\n    emp_name VARCHAR(50),\n    salary DECIMAL(10,2),\n    department VARCHAR(30)\n);\n\n-----------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. Insert and View Data\nAdding sample records and verifying them.\n\nINSERT INTO employee VALUES\n(101, 'Ravi', 45000, 'HR'),\n(102, 'Sita', 55000, 'IT'),\n(103, 'Kiran', 60000, 'Finance');\n\nSELECT * FROM employee;"
+        },
+        {
+          "type": "output",
+          "value": "emp_id  emp_name  salary    department\n101     Ravi      45000     HR\n102     Sita      55000     IT\n103     Kiran     60000     Finance\n\n-----------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. ALTER TABLE Commands\n\n• ADD Column: ALTER TABLE employee ADD email VARCHAR(50);\n• DROP Column: ALTER TABLE employee DROP COLUMN email;\n• MODIFY Column: ALTER TABLE employee MODIFY emp_name VARCHAR(100);\n• CHANGE Column: ALTER TABLE employee CHANGE emp_name employee_name VARCHAR(100);\n• RENAME Table: RENAME TABLE employee TO employee_details;\n\n-----------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "5. Cleanup Commands\n\n• TRUNCATE: Deletes all rows but structure remains.\n  TRUNCATE TABLE employee_details;\n\n• DROP TABLE: Deletes complete table with data permanently.\n  DROP TABLE employee_details;\n\n• DROP DATABASE: Deletes complete database.\n  DROP DATABASE company_db;"
+        },
+        {
+          "type": "table",
+          "headers": ["Command", "Purpose"],
+          "rows": [
+            ["CREATE DATABASE", "Create database"],
+            ["CREATE TABLE", "Create table"],
+            ["INSERT", "Insert records"],
+            ["SELECT", "View data"],
+            ["ALTER ADD", "Add column"],
+            ["ALTER DROP", "Delete column"],
+            ["ALTER MODIFY", "Modify datatype"],
+            ["ALTER CHANGE", "Rename/change column"],
+            ["RENAME TABLE", "Rename table"],
+            ["TRUNCATE", "Delete all rows only"],
+            ["DROP TABLE", "Delete table completely"],
+            ["DROP DATABASE", "Delete database completely"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between ALTER MODIFY and ALTER CHANGE?",
+          "answer": "MODIFY is used to change the data type or size of an existing column, while CHANGE is used to rename a column and can optionally change its data type at the same time."
+        },
+        {
+          "question": "How do you rename a table in SQL?",
+          "answer": "Using 'RENAME TABLE old_name TO new_name;' or 'ALTER TABLE old_name RENAME TO new_name;'."
+        },
+        {
+          "question": "Does TRUNCATE remove the table from the database?",
+          "answer": "No, TRUNCATE only removes the data (rows) inside the table. The table structure (schema) remains intact."
+        }
+      ]
+    },
+    {
       "id": "sql-joins",
       "title": "SQL Joins",
       "category": "Queries",
