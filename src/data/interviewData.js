@@ -6039,6 +6039,59 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-classification-relations",
+      "title": "Classification of Relations in DBMS",
+      "category": "Basic",
+      "definition": "In DBMS, a relation is a table. Relations are classified based on their structural properties, data volume, and their interaction with other tables.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Based on Degree (Number of Attributes)\n• Unary Relation: Has only one column\n• Binary Relation: Has two columns\n• Ternary Relation: Has three columns\n• n-ary Relation: Has n columns\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. Based on Number of Tuples (Rows)\n• Empty Relation: Contains no rows\n• Non-empty Relation: Contains at least one row\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. Based on Key Constraints\n• Strong (Regular) Relation: Has a primary key and exists independently.\n• Weak Relation: Does not have a primary key; depends on a strong entity for existence.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. Based on Normalization\n• Normalized Relations: Follow strict normal forms (1NF, 2NF, 3NF) to reduce redundancy.\n• Denormalized Relations: Intentionally include redundancy to improve query performance.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "5. Based on Participation in Relationship\n• Total Participation: Every record in the table must be associated with at least one record in the related table.\n• Partial Participation: Records in the table may or may not be associated with records in the related table.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Classification", "Key Property", "Example/Detail"],
+          "rows": [
+            ["Degree", "Number of columns", "Binary (2), Ternary (3)"],
+            ["Cardinality", "Number of rows", "Empty vs Non-empty"],
+            ["Keys", "Primary Key presence", "Strong vs Weak"],
+            ["Normalization", "Design quality", "1NF, 2NF, 3NF"],
+            ["Participation", "Requirement of association", "Total vs Partial"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between a Strong and a Weak relation?",
+          "answer": "A Strong relation has its own primary key and exists independently, while a Weak relation depends on a Strong relation and usually doesn't have a primary key that can uniquely identify its records on its own."
+        },
+        {
+          "question": "What does the 'Degree' of a relation mean?",
+          "answer": "Degree refers to the total number of attributes (columns) present in a table."
+        },
+        {
+          "question": "When would you use a Denormalized relation?",
+          "answer": "Denormalization is used when data retrieval speed is more important than saving storage space, often in read-heavy analytical databases."
+        }
+      ]
+    },
+    {
       "id": "sql-command-types",
       "title": "SQL Command Types",
       "category": "Basic",
