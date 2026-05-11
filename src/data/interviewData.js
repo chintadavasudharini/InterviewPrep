@@ -6228,6 +6228,49 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-normal-forms",
+      "title": "Normal Forms in DBMS (1NF, 2NF, 3NF)",
+      "category": "Basic",
+      "definition": "Normal Forms are a series of rules used to eliminate data redundancy and ensure logical data dependencies in a relational database.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1NF (First Normal Form)\nA table is in 1NF if each column contains atomic (single) values and there are no repeating groups.\n\n• Before 1NF: Student_ID (101), Name (Ravi), Subjects (Python, Java)\n• After 1NF: Split into separate rows for each subject.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2NF (Second Normal Form)\nA table is in 2NF if it is in 1NF and no partial dependency exists. All non-key attributes must depend on the entire primary key, not just a part of it.\n\n• Partial Dependency: When a column depends only on one part of a composite key.\n• Solution: Split into separate tables (e.g., Student, Course, and Enrollment).\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3NF (Third Normal Form)\nA table is in 3NF if it is in 2NF and no transitive dependency exists. Non-key columns must not depend on other non-key columns.\n\n• Transitive Dependency: Emp_ID → Dept_ID → Dept_Name (where Dept_Name depends on Dept_ID).\n• Solution: Move Dept_Name to a separate Department table linked by Dept_ID.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Normal Form", "Rule", "Removes"],
+          "rows": [
+            ["1NF", "Atomic values only", "Repeating groups"],
+            ["2NF", "Remove partial dependency", "Partial functional dependency"],
+            ["3NF", "Remove transitive dependency", "Transitive dependency"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is 'Atomic Value' in 1NF?",
+          "answer": "An atomic value is a single, indivisible value in a cell. For example, 'Java' is atomic, but 'Java, Python' is not."
+        },
+        {
+          "question": "Explain Partial Dependency with an example.",
+          "answer": "Partial Dependency occurs when a non-key attribute depends on only part of a composite primary key. Example: If (ID, CourseID) is the PK, but StudentName only depends on ID, it's a partial dependency."
+        },
+        {
+          "question": "What is Transitive Dependency?",
+          "answer": "Transitive Dependency occurs when a non-key attribute depends on another non-key attribute instead of the primary key. Example: ID → DeptID → DeptName."
+        }
+      ]
+    },
+    {
       "id": "sql-command-types",
       "title": "SQL Command Types",
       "category": "Basic",
