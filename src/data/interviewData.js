@@ -5541,6 +5541,62 @@ export const interviewData = {
       ]
     },
     {
+      "id": "sql-delete-truncate-drop",
+      "title": "DELETE vs TRUNCATE vs DROP",
+      "category": "Basic",
+      "definition": "In SQL, DELETE, TRUNCATE, and DROP are all used to remove data or structures, but they differ significantly in their impact and behavior.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. DELETE\nUsed to delete records (rows) from a table.\n• Table structure remains the same.\n• Can delete all rows or specific rows using a condition.\n\nSyntax:\nDELETE FROM table_name;\nDELETE FROM table_name WHERE condition;"
+        },
+        {
+          "type": "text",
+          "value": "2. TRUNCATE\nRemoves all rows from a table.\n• Table structure remains.\n• Faster than DELETE.\n• Cannot use WHERE condition.\n\nSyntax:\nTRUNCATE TABLE table_name;"
+        },
+        {
+          "type": "text",
+          "value": "3. DROP\nDeletes the entire table permanently.\n• Removes both data and table structure.\n\nSyntax:\nDROP TABLE table_name;"
+        },
+        {
+          "type": "text",
+          "value": "4. ALTER DROP COLUMN\nRemoves a specific column from a table.\n• Remaining table and data stay unchanged.\n\nSyntax:\nALTER TABLE table_name DROP COLUMN column_name;"
+        },
+        {
+          "type": "table",
+          "headers": ["Feature", "DELETE", "TRUNCATE", "DROP"],
+          "rows": [
+            ["Purpose", "Deletes rows", "Removes all rows", "Deletes entire table"],
+            ["Table Structure", "Remains", "Remains", "Removed"],
+            ["Data Removed", "Selected or all rows", "All rows only", "Entire table + data"],
+            ["WHERE Condition", "Allowed", "Not allowed", "Not allowed"],
+            ["Speed", "Slower", "Faster", "Fastest"],
+            ["Rollback Possible", "Yes (in transactions)", "Usually No", "No"],
+            ["Auto Increment Reset", "No", "Yes", "Table removed completely"],
+            ["Command Type", "DML", "DDL", "DDL"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Which command is used to remove a specific column from a table?",
+          "answer": "ALTER TABLE table_name DROP COLUMN column_name;"
+        },
+        {
+          "question": "Can you rollback a DELETE command?",
+          "answer": "Yes, DELETE is a DML command and its operations are logged, so they can be rolled back if they were part of a transaction."
+        },
+        {
+          "question": "Why is TRUNCATE faster than DELETE?",
+          "answer": "TRUNCATE is a DDL operation that deallocates the entire data pages rather than deleting rows one by one and logging each deletion, making it much faster for large tables."
+        },
+        {
+          "question": "Does TRUNCATE reset identity/auto-increment values?",
+          "answer": "Yes, TRUNCATE resets the auto-increment counter to its seed value, whereas DELETE does not."
+        }
+      ]
+    },
+    {
       "id": "sql-joins",
       "title": "SQL Joins",
       "category": "Queries",
