@@ -5488,6 +5488,117 @@ export const interviewData = {
   ],
   "mysql": [
     {
+      "id": "mysql-intro-basics",
+      "title": "MySQL Introduction & Basics",
+      "category": "Basic",
+      "definition": "MySQL is an open-source relational database management system (RDBMS) used to store, organize, and retrieve structured data efficiently.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "🔑 Key Features:\n• Uses SQL (Structured Query Language) for querying data\n• Stores data in tables (rows and columns)\n• Supports relationships between tables\n• Fast, reliable, and widely supported\n• Works well with languages like PHP, Python, Java, and Node.js\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "📦 What MySQL is Used For:\n• Websites and web apps (e.g., user accounts, posts, transactions)\n• Data warehousing and analytics\n• E-commerce platforms\n• Content management systems like WordPress\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "⚙️ Who Develops It?\nMySQL is owned by Oracle Corporation, though it started as an independent open-source project.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "🔄 MySQL vs Others:\n• MySQL – fast, easy, widely used\n• PostgreSQL – more advanced features, stricter standards\n• SQLite – lightweight, file-based\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Database & MySQL Basics:\n\n1. What is Database?\nA Database is an organized collection of data that is stored electronically and can be easily accessed, managed, and updated. A database helps store information in a structured format.\n\nExamples:\n• Student records\n• Bank account details\n• Employee information\n• Online shopping orders\n• Hospital patient records\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["ID", "Name", "Course"],
+          "rows": [
+            ["1", "Ravi", "CSE"],
+            ["2", "Priya", "ECE"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "2. DBMS vs RDBMS:\n\n• DBMS: A software used to store and manage data as files (no relationships).\n• RDBMS: An advanced DBMS where data is stored in related tables using rows and columns.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Feature", "DBMS", "RDBMS"],
+          "rows": [
+            ["Full Form", "Database Management System", "Relational Database Management System"],
+            ["Data Storage", "Stores data as files", "Stores data in tables"],
+            ["Relationship", "No relation between data", "Supports relationships"],
+            ["Security", "Less security", "More security"],
+            ["Normalization", "Not supported fully", "Supports normalization"],
+            ["Data Redundancy", "More", "Less"],
+            ["Examples", "XML, File System", "MySQL, Oracle, PostgreSQL"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "3. What is MySQL?\nMySQL is an open-source Relational Database Management System (RDBMS) used to store and manage data using SQL.\n\nDeveloped By: Oracle Corporation\n\nUses:\n• Web applications\n• Banking systems\n• E-commerce websites\n• College management systems\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. Features of MySQL:\n\n• Open Source: MySQL is free to use.\n• Fast Performance: Processes queries quickly.\n• Secure: Provides user authentication and access control.\n• Scalable: Can handle small and large applications.\n• Multi-user Support: Many users can access the database at the same time.\n• Cross Platform: Works on Windows, Linux, and macOS.\n• SQL Support: Uses SQL language for database operations.\n• Backup & Recovery: Supports data backup and restoration.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "5. Advantages of MySQL:\n\n• Easy to Learn: Simple syntax and easy commands.\n• High Speed: Performs operations quickly.\n• Reliable: Widely used in real-world applications.\n• Cost Effective: Free community edition available.\n• Supports Large Databases: Can manage huge amounts of data.\n• Flexible: Works with Python, Java, PHP, Node.js.\n• Strong Community Support: Large developer community and documentation.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "6. Real-World Uses of Databases:\n\n• Banking System: Account details, Transactions, ATM records.\n• College Management: Student details, Marks, Attendance.\n• Hospital Management: Patient records, Doctor info, Appointments.\n• E-Commerce Websites: Product details, Orders, Payments.\n• Social Media Applications: User profiles, Messages, Photos.\n• Railway/Airline Reservation: Ticket bookings, Passenger info.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "7. SQL Overview:\nStructured Query Language (SQL) is used to Create, Insert, Update, Delete, and Retrieve data.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Type", "Purpose"],
+          "rows": [
+            ["DDL", "Defines database structure"],
+            ["DML", "Manipulates data"],
+            ["DQL", "Retrieves data"],
+            ["DCL", "Controls permissions"],
+            ["TCL", "Manages transactions"]
+          ]
+        },
+        {
+          "type": "table",
+          "headers": ["Command", "Purpose"],
+          "rows": [
+            ["CREATE", "Create database/table"],
+            ["INSERT", "Add records"],
+            ["SELECT", "Retrieve records"],
+            ["UPDATE", "Modify records"],
+            ["DELETE", "Remove records"],
+            ["DROP", "Delete database/table"],
+            ["ALTER", "Modify table structure"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between DBMS and RDBMS?",
+          "answer": "DBMS stores data as files and does not support relationships between data, while RDBMS stores data in tables and supports relationships, normalization, and higher security."
+        },
+        {
+          "question": "Who owns and develops MySQL?",
+          "answer": "MySQL is owned and developed by Oracle Corporation."
+        },
+        {
+          "question": "What are some key advantages of using MySQL?",
+          "answer": "Key advantages include being open-source, high performance, reliability, ease of learning, and strong flexibility with various programming languages."
+        }
+      ]
+    },
+    {
       "id": "mysql-database-ops",
       "title": "MySQL Database Operations",
       "category": "Basic",
