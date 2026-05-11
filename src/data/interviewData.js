@@ -6179,6 +6179,55 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-normalized-denormalized",
+      "title": "Normalized vs Denormalized Relations",
+      "category": "Basic",
+      "definition": "Normalization is the process of organizing data to reduce redundancy, while Denormalization is the intentional addition of redundant data to optimize read performance.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Normalized Relations\nNormalized relations follow rules (1NF, 2NF, 3NF) to minimize duplicate data and improve consistency.\n\nExample: Separating Student and Department data into two tables linked by Dept_ID.\n• Advantages: Reduces redundancy, saves space, avoids inconsistency.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. Denormalized Relations\nDenormalization combines data into fewer tables to reduce the need for complex joins and speed up read operations.\n\nExample: Storing Dept_Name directly in the Student table.\n• Advantages: Faster retrieval, fewer joins.\n• Disadvantages: More redundancy, possible inconsistency.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Normalized Relation", "Denormalized Relation"],
+          "rows": [
+            ["Reduces redundancy", "Adds redundancy"],
+            ["Uses multiple related tables", "Combines data into fewer tables"],
+            ["Slower queries due to joins", "Faster queries"],
+            ["Better consistency", "Better performance"]
+          ]
+        },
+        {
+          "type": "table",
+          "headers": ["Used In", "Type"],
+          "rows": [
+            ["Banking Systems (OLTP)", "Normalized"],
+            ["Data Warehouses (OLAP)", "Denormalized"],
+            ["Reporting Systems", "Denormalized"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the main goal of Normalization?",
+          "answer": "The primary goal is to reduce data redundancy and ensure data consistency across the database."
+        },
+        {
+          "question": "Why would a developer choose to denormalize a database?",
+          "answer": "Denormalization is chosen when query performance and read speed are prioritized over storage efficiency and strict consistency, common in reporting or analytical systems."
+        },
+        {
+          "question": "Give an example of an OLTP system vs an OLAP system regarding normalization.",
+          "answer": "OLTP systems (like ATM transactions) are usually Normalized for high consistency, whereas OLAP systems (like annual sales reports) are Denormalized for high-speed analysis."
+        }
+      ]
+    },
+    {
       "id": "sql-command-types",
       "title": "SQL Command Types",
       "category": "Basic",
