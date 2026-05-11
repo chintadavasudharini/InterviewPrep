@@ -5854,70 +5854,66 @@ export const interviewData = {
       "id": "mysql-constraints",
       "title": "Constraints in MySQL",
       "category": "Basic",
-      "definition": "Constraints are rules applied to table columns to maintain accuracy, validity, and integrity of data in the database.",
+      "definition": "Constraints are rules applied on table columns to control the type of data that can be stored and maintain data integrity.",
       "sections": [
         {
+          "type": "text",
+          "value": "1. DEFAULT\nStores a default value when the user does not specify any value.\nExample: salary INT DEFAULT 10000\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. NOT NULL\nThe column does not accept NULL values.\nExample: name VARCHAR(50) NOT NULL\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. UNIQUE KEY\n• Allows only unique values\n• NULL values are allowed\n• A table can have multiple UNIQUE keys\nExample: email VARCHAR(100) UNIQUE\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. PRIMARY KEY\n• Allows only unique values\n• Does not allow NULL\n• Used to uniquely identify each record\n• Only one PRIMARY KEY can be used in a table\n• PRIMARY KEY can use AUTO_INCREMENT\nExample: id INT PRIMARY KEY AUTO_INCREMENT\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "5. AUTO_INCREMENT\nAutomatically increases the value for each new record. Usually used with PRIMARY KEY.\nExample: id INT AUTO_INCREMENT\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "6. CHECK\nUsed to apply a specific condition on a column.\nExample: age TINYINT CHECK(age >= 18)\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "7. FOREIGN KEY\nA FOREIGN KEY is a column in the child table that refers to the PRIMARY KEY of the parent table.\n\nImportant Points:\n• A table can have multiple foreign keys\n• One PRIMARY KEY can be referenced in multiple tables\n• FOREIGN KEY allows NULL values\n• FOREIGN KEY accepts duplicate values\n• Used to define relationships between tables\nExample: FOREIGN KEY (dept_id) REFERENCES department(id)\n\n------------------------------------------------"
+        },
+        {
           "type": "table",
-          "headers": ["Constraint", "Purpose"],
+          "headers": ["Constraint", "Allows NULL", "Allows Duplicates", "Purpose"],
           "rows": [
-            ["NOT NULL", "Prevents NULL values"],
-            ["UNIQUE", "Prevents duplicate values"],
-            ["PRIMARY KEY", "Uniquely identifies each row"],
-            ["FOREIGN KEY", "Links two tables"],
-            ["DEFAULT", "Sets default value"],
-            ["CHECK", "Restricts values based on condition"],
-            ["AUTO_INCREMENT", "Automatically generates numbers"]
+            ["DEFAULT", "Yes", "Yes", "Stores default value"],
+            ["NOT NULL", "No", "Yes", "Prevents NULL values"],
+            ["UNIQUE", "Yes", "No", "Stores unique values"],
+            ["PRIMARY KEY", "No", "No", "Uniquely identifies rows"],
+            ["AUTO_INCREMENT", "No", "No", "Automatically increments values"],
+            ["CHECK", "Depends", "Depends", "Applies conditions"],
+            ["FOREIGN KEY", "Yes", "Yes", "Creates relationship between tables"]
           ]
-        },
-        {
-          "type": "text",
-          "value": "1. NOT NULL Constraint\nThe NOT NULL constraint ensures that a column cannot have empty or NULL values.\n\nSyntax: column_name datatype NOT NULL\nExample: CREATE TABLE students ( id INT, name VARCHAR(50) NOT NULL);\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "2. UNIQUE Constraint\nThe UNIQUE constraint ensures that all values in a column are different.\n\nSyntax: column_name datatype UNIQUE\nExample: CREATE TABLE users ( id INT, email VARCHAR(100) UNIQUE);\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "3. PRIMARY KEY Constraint\nThe PRIMARY KEY uniquely identifies each record in a table.\n\nFeatures:\n• Cannot contain NULL values\n• Must contain unique values\n• A table can have only one primary key\n\nSyntax: column_name datatype PRIMARY KEY\nExample: CREATE TABLE employees ( emp_id INT PRIMARY KEY, name VARCHAR(50));\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "4. FOREIGN KEY Constraint\nThe FOREIGN KEY creates a relationship between two tables.\n\nSyntax:\nFOREIGN KEY (column_name) REFERENCES parent_table(parent_column)\n\nExample:\nCREATE TABLE departments ( dept_id INT PRIMARY KEY, dept_name VARCHAR(50));\nCREATE TABLE staff ( staff_id INT PRIMARY KEY, name VARCHAR(50), dept_id INT, FOREIGN KEY (dept_id) REFERENCES departments(dept_id));\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "5. DEFAULT Constraint\nThe DEFAULT constraint assigns a default value if no value is provided.\n\nSyntax: column_name datatype DEFAULT value\nExample: CREATE TABLE products ( id INT, status VARCHAR(20) DEFAULT 'Available');\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "6. CHECK Constraint\nThe CHECK constraint limits values based on a condition.\n\nSyntax: CHECK (condition)\nExample: CREATE TABLE students ( id INT, age INT CHECK (age >= 18));\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "7. AUTO_INCREMENT Constraint\nThe AUTO_INCREMENT automatically generates sequential numbers.\n\nSyntax: column_name INT AUTO_INCREMENT\nExample: CREATE TABLE customers ( customer_id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(50));\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Combined Example:\n\nCREATE TABLE employee (\n    id INT AUTO_INCREMENT PRIMARY KEY,\n    name VARCHAR(50) NOT NULL,\n    email VARCHAR(100) UNIQUE,\n    age INT CHECK(age >= 18),\n    country VARCHAR(30) DEFAULT 'India'\n);"
         }
       ],
       "questions": [
         {
-          "question": "What is the difference between PRIMARY KEY and UNIQUE?",
-          "answer": "PRIMARY KEY cannot contain NULL values and you can only have one per table. UNIQUE can contain one NULL value (in some dialects) and you can have multiple UNIQUE constraints in one table.\n\n-----------------"
+          "question": "What is the difference between PRIMARY KEY and UNIQUE KEY?",
+          "answer": "PRIMARY KEY does not allow NULL values and only one is allowed per table. UNIQUE KEY allows NULL values and multiple unique keys can exist in a single table.\n\n-----------------"
         },
         {
           "question": "Can a table have multiple FOREIGN KEY constraints?",
           "answer": "Yes, a table can have multiple foreign keys referencing different parent tables.\n\n-----------------"
         },
         {
-          "question": "What is the use of AUTO_INCREMENT?",
-          "answer": "It automatically generates sequential numeric values for a column, typically used for primary keys.\n\n-----------------"
+          "question": "Does a FOREIGN KEY allow NULL and duplicate values?",
+          "answer": "Yes, a foreign key can accept both NULL values and duplicate values, unlike a primary key.\n\n-----------------"
         },
         {
-          "question": "Why is the CHECK constraint used?",
-          "answer": "It is used to ensure that all values in a column satisfy a specific condition (e.g., age >= 18)."
+          "question": "What is the primary use of the AUTO_INCREMENT constraint?",
+          "answer": "It is used to automatically generate a unique numeric value for each new record, typically for primary key columns."
         }
       ]
     },
