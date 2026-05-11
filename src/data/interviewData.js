@@ -5983,33 +5983,47 @@ export const interviewData = {
       "sections": [
         {
           "type": "text",
-          "value": "1. Numeric Types\nUsed to store whole or decimal numbers.\n\n• INT: Stores whole numbers\n• FLOAT: Stores decimal numbers (approximate precision)\n• DOUBLE: Stores large decimal numbers (higher precision)\n• DECIMAL(total, decimal): Stores exact decimal values (e.g., money)\n\nExample:\nCREATE TABLE finance ( salary DECIMAL(10,2) );\n\n------------------------------------------------"
+          "value": "1. Numeric Types\nUsed to store numbers.\n\n• INT: Stores whole numbers\n• FLOAT: Stores decimal numbers with approximate precision\n• DOUBLE: Stores large decimal numbers with higher precision\n• DECIMAL: Stores exact decimal values (e.g., money)\n\nExample:\nCREATE TABLE salary (amount DECIMAL(10,2));\n\n------------------------------------------------"
         },
         {
           "type": "text",
-          "value": "2. String Types\nUsed to store text values of various lengths.\n\n• CHAR(size): Fixed-length string\n• VARCHAR(size): Variable-length string\n• TEXT: Large amounts of text\n\nExample:\nCREATE TABLE users ( name VARCHAR(50) );\n\n------------------------------------------------"
+          "value": "2. String Types\nUsed to store text values.\n\n• CHAR: Fixed-length string (CHAR(3))\n• VARCHAR: Variable-length string (VARCHAR(50))\n• TEXT: Stores large amounts of text\n\nExample:\nCREATE TABLE users (name VARCHAR(50));\n\n------------------------------------------------"
         },
         {
           "type": "text",
-          "value": "3. Date & Time Types\nUsed to store chronological information.\n\n• DATE: YYYY-MM-DD\n• TIME: HH:MM:SS\n• DATETIME: YYYY-MM-DD HH:MM:SS\n• TIMESTAMP: Automatic tracking of time changes\n\nExample:\nCREATE TABLE logs ( created_at DATETIME );\n\n------------------------------------------------"
+          "value": "3. Date & Time Types\nUsed to store date and time values.\n\n• DATE: Stores only date (YYYY-MM-DD)\n• TIME: Stores only time (HH:MM:SS)\n• DATETIME: Stores both date and time\n• TIMESTAMP: Stores date and time with automatic tracking\n\nExample:\nCREATE TABLE logs (created_at DATETIME);\n\n------------------------------------------------"
         },
         {
           "type": "text",
-          "value": "4. Boolean Type\nUsed to store TRUE or FALSE values.\n\n• BOOLEAN: Internally stored as TINYINT(1) (0 for FALSE, 1 for TRUE)\n\nExample:\nCREATE TABLE status ( is_active BOOLEAN );"
+          "value": "4. Boolean Type\nUsed to store TRUE or FALSE values.\n\n• BOOLEAN: Syntax: column_name BOOLEAN;\n\nExample:\nCREATE TABLE users (is_active BOOLEAN);"
+        },
+        {
+          "type": "table",
+          "headers": ["Data Type", "Description"],
+          "rows": [
+            ["INT", "Whole numbers"],
+            ["FLOAT", "Approximate decimals"],
+            ["DECIMAL", "Exact decimals (money)"],
+            ["CHAR", "Fixed-length string"],
+            ["VARCHAR", "Variable-length string"],
+            ["DATE", "Date only"],
+            ["DATETIME", "Date and time"],
+            ["BOOLEAN", "True or False"]
+          ]
         }
       ],
       "questions": [
         {
           "question": "What is the difference between CHAR and VARCHAR?",
-          "answer": "CHAR is fixed-length (pads with spaces), while VARCHAR is variable-length (uses only necessary space). CHAR is slightly faster for fixed-size data, while VARCHAR saves space for varying data.\n\n-----------------"
+          "answer": "CHAR is a fixed-length string where unused space is padded with spaces, whereas VARCHAR is a variable-length string that only uses as much space as the data requires.\n\n-----------------"
         },
         {
-          "question": "Why use DECIMAL instead of FLOAT for financial data?",
-          "answer": "DECIMAL stores exact values, avoiding the rounding errors associated with floating-point types like FLOAT or DOUBLE.\n\n-----------------"
+          "question": "When should you use DECIMAL instead of FLOAT?",
+          "answer": "DECIMAL should be used for exact numerical values where precision is critical, such as financial data and currency calculations.\n\n-----------------"
         },
         {
-          "question": "What is the difference between DATETIME and TIMESTAMP?",
-          "answer": "TIMESTAMP is time-zone dependent and has a smaller range (up to 2038), while DATETIME is independent of time zone and covers a much larger range (up to year 9999)."
+          "question": "What does DECIMAL(10,2) mean?",
+          "answer": "It means the number can have up to 10 digits in total, with 2 of those digits being after the decimal point."
         }
       ]
     },
