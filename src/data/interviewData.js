@@ -5991,54 +5991,6 @@ export const interviewData = {
       ]
     },
     {
-      "id": "mysql-database-relationships",
-      "title": "Types of Relationships in DBMS",
-      "category": "Basic",
-      "definition": "Database relationships are the connections established between tables that define how data in one table relates to data in another.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. One-to-One Relationship (1:1)\nOne record in Table A is connected to only one record in Table B.\n\nReal-Time Example: Person ↔ Passport\n• One person has one passport\n• One passport belongs to one person\n\nOther examples: Employee ↔ Locker, User ↔ Aadhaar Card\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "2. One-to-Many Relationship (1:M)\nOne record in one table can relate to many records in another table.\n\nReal-Time Example: Department → Employees\n• One department has many employees\n• Each employee belongs to one department\n\nOther examples: Teacher → Students, Customer → Orders, Company → Employees\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "3. Many-to-One Relationship (M:1)\nMany records in one table relate to one record in another table (inverse of One-to-Many).\n\nReal-Time Example: Employees → Manager\n• Many employees work under one manager\n\nOther examples: Many students belong to one college, Many products belong to one category\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "4. Many-to-Many Relationship (M:N)\nMany records in one table relate to many records in another table. This usually requires a Junction Table.\n\nReal-Time Example: Students ↔ Courses\n• One student can join many courses\n• One course can have many students\n\nOther examples: Doctors ↔ Patients, Actors ↔ Movies, Authors ↔ Books\n\n------------------------------------------------"
-        },
-        {
-          "type": "table",
-          "headers": ["Relationship", "Meaning", "Example"],
-          "rows": [
-            ["One-to-One", "One record ↔ One record", "Person ↔ Passport"],
-            ["One-to-Many", "One record ↔ Many records", "Department → Employees"],
-            ["Many-to-One", "Many records ↔ One record", "Employees → Manager"],
-            ["Many-to-Many", "Many records ↔ Many records", "Students ↔ Courses"]
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is a Junction Table and when is it used?",
-          "answer": "A Junction Table (or associative table) is used to implement a Many-to-Many relationship. It contains foreign keys from both related tables."
-        },
-        {
-          "question": "How do you implement a One-to-Many relationship in SQL?",
-          "answer": "By placing a Foreign Key in the 'Many' side table that refers to the Primary Key of the 'One' side table."
-        },
-        {
-          "question": "Give a real-world example of a One-to-One relationship.",
-          "answer": "A common example is a Person and their Passport or a User and their unique Aadhaar Card."
-        }
-      ]
-    },
-    {
       "id": "mysql-classification-relations",
       "title": "Classification of Relations in DBMS",
       "category": "Basic",
@@ -6097,6 +6049,140 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-degree-relation",
+      "title": "Degree of a Relation in DBMS",
+      "category": "Basic",
+      "definition": "The degree of a relation refers to the total number of attributes (columns) present in a table.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Unary Relation\nA relation that has only one attribute (column) is called a Unary Relation.\n• Example: A simple list of Student Names.\n• Degree = 1\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. Binary Relation\nA relation that has two attributes (columns) is called a Binary Relation.\n• Example: A table with Student_ID and Student_Name.\n• Degree = 2\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. Ternary Relation\nA relation that has three attributes (columns) is called a Ternary Relation.\n• Example: A table with Student_ID, Student_Name, and Course.\n• Degree = 3\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. n-ary Relation\nA relation that has 'n' number of attributes (columns) is called an n-ary Relation.\n• Example: A complex table with ID, Name, Course, Phone, and City.\n• Degree = n\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Relation Type", "Number of Columns (Degree)"],
+          "rows": [
+            ["Unary Relation", "1"],
+            ["Binary Relation", "2"],
+            ["Ternary Relation", "3"],
+            ["n-ary Relation", "n"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the 'Degree' of a relation?",
+          "answer": "Degree refers to the number of attributes (columns) in a table."
+        },
+        {
+          "question": "If a table has 5 columns, what is its degree?",
+          "answer": "The degree is 5 (it is a 5-ary or n-ary relation)."
+        },
+        {
+          "question": "Does the number of rows affect the degree of a relation?",
+          "answer": "No. The number of rows is called 'Cardinality'. Degree only refers to the number of columns."
+        }
+      ]
+    },
+    {
+      "id": "mysql-cardinality-relation",
+      "title": "Cardinality of a Relation in DBMS",
+      "category": "Basic",
+      "definition": "Cardinality refers to the total number of tuples (rows) present in a table at a given time.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Empty Relation\nA relation that contains no rows (tuples) is called an Empty Relation.\n• Row Count = 0\n• Example: A newly created table where no data has been inserted yet.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. Non-empty Relation\nA relation that contains at least one row (tuple) is called a Non-empty Relation.\n• Row Count > 0\n• Example: A table containing one or more student records.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Relation Type", "Description"],
+          "rows": [
+            ["Empty Relation", "Contains no rows (Cardinality = 0)"],
+            ["Non-empty Relation", "Contains one or more rows (Cardinality > 0)"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is 'Cardinality' in DBMS?",
+          "answer": "Cardinality refers to the number of rows or tuples in a table."
+        },
+        {
+          "question": "Does the number of columns affect the cardinality of a relation?",
+          "answer": "No. The number of columns is called 'Degree'. Cardinality only refers to the number of rows."
+        },
+        {
+          "question": "When is a table considered an Empty Relation?",
+          "answer": "A table is an Empty Relation when it has been defined (schema exists) but contains zero records."
+        }
+      ]
+    },
+    {
+      "id": "mysql-database-relationships",
+      "title": "Types of Relationships in DBMS",
+      "category": "Basic",
+      "definition": "Database relationships are the connections established between tables that define how data in one table relates to data in another.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. One-to-One Relationship (1:1)\nOne record in Table A is connected to only one record in Table B.\n\nReal-Time Example: Person ↔ Passport\n• One person has one passport\n• One passport belongs to one person\n\nOther examples: Employee ↔ Locker, User ↔ Aadhaar Card\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. One-to-Many Relationship (1:M)\nOne record in one table can relate to many records in another table.\n\nReal-Time Example: Department → Employees\n• One department has many employees\n• Each employee belongs to one department\n\nOther examples: Teacher → Students, Customer → Orders, Company → Employees\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. Many-to-One Relationship (M:1)\nMany records in one table relate to one record in another table (inverse of One-to-Many).\n\nReal-Time Example: Employees → Manager\n• Many employees work under one manager\n\nOther examples: Many students belong to one college, Many products belong to one category\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. Many-to-Many Relationship (M:N)\nMany records in one table relate to many records in another table. This usually requires a Junction Table.\n\nReal-Time Example: Students ↔ Courses\n• One student can join many courses\n• One course can have many students\n\nOther examples: Doctors ↔ Patients, Actors ↔ Movies, Authors ↔ Books\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Relationship", "Meaning", "Example"],
+          "rows": [
+            ["One-to-One", "One record ↔ One record", "Person ↔ Passport"],
+            ["One-to-Many", "One record ↔ Many records", "Department → Employees"],
+            ["Many-to-One", "Many records ↔ One record", "Employees → Manager"],
+            ["Many-to-Many", "Many records ↔ Many records", "Students ↔ Courses"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is a Junction Table and when is it used?",
+          "answer": "A Junction Table (or associative table) is used to implement a Many-to-Many relationship. It contains foreign keys from both related tables."
+        },
+        {
+          "question": "How do you implement a One-to-Many relationship in SQL?",
+          "answer": "By placing a Foreign Key in the 'Many' side table that refers to the Primary Key of the 'One' side table."
+        },
+        {
+          "question": "Give a real-world example of a One-to-One relationship.",
+          "answer": "A common example is a Person and their Passport or a User and their unique Aadhaar Card."
+        }
+      ]
+    },
+    {
       "id": "mysql-strong-weak-relations",
       "title": "Strong vs Weak Relations in DBMS",
       "category": "Basic",
@@ -6131,55 +6217,6 @@ export const interviewData = {
         {
           "question": "How is a Weak relation identified in an ER diagram?",
           "answer": "In an Entity-Relationship (ER) diagram, a weak entity is usually represented by a double rectangle."
-        }
-      ]
-    },
-    {
-      "id": "mysql-participation-relationship",
-      "title": "Total vs Partial Participation in DBMS",
-      "category": "Basic",
-      "definition": "Participation defines whether all records in an entity must participate in a relationship or if it is optional for some records.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Total Participation\nEvery record in the table must be associated with at least one record in another table. This is also called Mandatory Participation.\n\nExample: Employee → Department\n• Every employee must belong to a department.\n• No employee can exist without a Dept_ID.\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "2. Partial Participation\nSome records may or may not participate in the relationship. This is also called Optional Participation.\n\nExample: Employee → Parking Slot\n• Some employees have parking slots assigned.\n• Others (like new or remote staff) may not have one.\n\n------------------------------------------------"
-        },
-        {
-          "type": "table",
-          "headers": ["Total Participation", "Partial Participation"],
-          "rows": [
-            ["Participation is compulsory", "Participation is optional"],
-            ["Every record must participate", "Some records may not participate"],
-            ["Mandatory relationship", "Optional relationship"]
-          ]
-        },
-        {
-          "type": "table",
-          "headers": ["Relationship", "Participation Type"],
-          "rows": [
-            ["Employee → Department", "Total Participation"],
-            ["Customer → Loan", "Partial Participation"],
-            ["Student → Course", "Partial Participation"],
-            ["Citizen → Aadhaar", "Total Participation"]
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": "How is Total Participation represented in an ER diagram?",
-          "answer": "Total Participation is usually represented by a double line connecting the entity to the relationship diamond."
-        },
-        {
-          "question": "What is another name for Total and Partial participation?",
-          "answer": "Total Participation is called Mandatory Participation, and Partial Participation is called Optional Participation."
-        },
-        {
-          "question": "Why is 'Citizen → Aadhaar' considered Total Participation?",
-          "answer": "Because in the context of the system, every valid citizen is expected to be registered and associated with a unique Aadhaar record."
         }
       ]
     },
@@ -6276,88 +6313,51 @@ export const interviewData = {
       ]
     },
     {
-      "id": "mysql-degree-relation",
-      "title": "Degree of a Relation in DBMS",
+      "id": "mysql-participation-relationship",
+      "title": "Total vs Partial Participation in DBMS",
       "category": "Basic",
-      "definition": "The degree of a relation refers to the total number of attributes (columns) present in a table.",
+      "definition": "Participation defines whether all records in an entity must participate in a relationship or if it is optional for some records.",
       "sections": [
         {
           "type": "text",
-          "value": "1. Unary Relation\nA relation that has only one attribute (column) is called a Unary Relation.\n• Example: A simple list of Student Names.\n• Degree = 1\n\n------------------------------------------------"
+          "value": "1. Total Participation\nEvery record in the table must be associated with at least one record in another table. This is also called Mandatory Participation.\n\nExample: Employee → Department\n• Every employee must belong to a department.\n• No employee can exist without a Dept_ID.\n\n------------------------------------------------"
         },
         {
           "type": "text",
-          "value": "2. Binary Relation\nA relation that has two attributes (columns) is called a Binary Relation.\n• Example: A table with Student_ID and Student_Name.\n• Degree = 2\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "3. Ternary Relation\nA relation that has three attributes (columns) is called a Ternary Relation.\n• Example: A table with Student_ID, Student_Name, and Course.\n• Degree = 3\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "4. n-ary Relation\nA relation that has 'n' number of attributes (columns) is called an n-ary Relation.\n• Example: A complex table with ID, Name, Course, Phone, and City.\n• Degree = n\n\n------------------------------------------------"
+          "value": "2. Partial Participation\nSome records may or may not participate in the relationship. This is also called Optional Participation.\n\nExample: Employee → Parking Slot\n• Some employees have parking slots assigned.\n• Others (like new or remote staff) may not have one.\n\n------------------------------------------------"
         },
         {
           "type": "table",
-          "headers": ["Relation Type", "Number of Columns (Degree)"],
+          "headers": ["Total Participation", "Partial Participation"],
           "rows": [
-            ["Unary Relation", "1"],
-            ["Binary Relation", "2"],
-            ["Ternary Relation", "3"],
-            ["n-ary Relation", "n"]
+            ["Participation is compulsory", "Participation is optional"],
+            ["Every record must participate", "Some records may not participate"],
+            ["Mandatory relationship", "Optional relationship"]
+          ]
+        },
+        {
+          "type": "table",
+          "headers": ["Relationship", "Participation Type"],
+          "rows": [
+            ["Employee → Department", "Total Participation"],
+            ["Customer → Loan", "Partial Participation"],
+            ["Student → Course", "Partial Participation"],
+            ["Citizen → Aadhaar", "Total Participation"]
           ]
         }
       ],
       "questions": [
         {
-          "question": "What is the 'Degree' of a relation?",
-          "answer": "Degree refers to the number of attributes (columns) in a table."
+          "question": "How is Total Participation represented in an ER diagram?",
+          "answer": "Total Participation is usually represented by a double line connecting the entity to the relationship diamond."
         },
         {
-          "question": "If a table has 5 columns, what is its degree?",
-          "answer": "The degree is 5 (it is a 5-ary or n-ary relation)."
+          "question": "What is another name for Total and Partial participation?",
+          "answer": "Total Participation is called Mandatory Participation, and Partial Participation is called Optional Participation."
         },
         {
-          "question": "Does the number of rows affect the degree of a relation?",
-          "answer": "No. The number of rows is called 'Cardinality'. Degree only refers to the number of columns."
-        }
-      ]
-    },
-    {
-      "id": "mysql-cardinality-relation",
-      "title": "Cardinality of a Relation in DBMS",
-      "category": "Basic",
-      "definition": "Cardinality refers to the total number of tuples (rows) present in a table at a given time.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Empty Relation\nA relation that contains no rows (tuples) is called an Empty Relation.\n• Row Count = 0\n• Example: A newly created table where no data has been inserted yet.\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "2. Non-empty Relation\nA relation that contains at least one row (tuple) is called a Non-empty Relation.\n• Row Count > 0\n• Example: A table containing one or more student records.\n\n------------------------------------------------"
-        },
-        {
-          "type": "table",
-          "headers": ["Relation Type", "Description"],
-          "rows": [
-            ["Empty Relation", "Contains no rows (Cardinality = 0)"],
-            ["Non-empty Relation", "Contains one or more rows (Cardinality > 0)"]
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is 'Cardinality' in DBMS?",
-          "answer": "Cardinality refers to the number of rows or tuples in a table."
-        },
-        {
-          "question": "Does the number of columns affect the cardinality of a relation?",
-          "answer": "No. The number of columns is called 'Degree'. Cardinality only refers to the number of rows."
-        },
-        {
-          "question": "When is a table considered an Empty Relation?",
-          "answer": "A table is an Empty Relation when it has been defined (schema exists) but contains zero records."
+          "question": "Why is 'Citizen → Aadhaar' considered Total Participation?",
+          "answer": "Because in the context of the system, every valid citizen is expected to be registered and associated with a unique Aadhaar record."
         }
       ]
     },
