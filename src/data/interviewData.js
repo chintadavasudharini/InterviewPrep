@@ -6130,6 +6130,55 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-participation-relationship",
+      "title": "Total vs Partial Participation in DBMS",
+      "category": "Basic",
+      "definition": "Participation defines whether all records in an entity must participate in a relationship or if it is optional for some records.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Total Participation\nEvery record in the table must be associated with at least one record in another table. This is also called Mandatory Participation.\n\nExample: Employee → Department\n• Every employee must belong to a department.\n• No employee can exist without a Dept_ID.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. Partial Participation\nSome records may or may not participate in the relationship. This is also called Optional Participation.\n\nExample: Employee → Parking Slot\n• Some employees have parking slots assigned.\n• Others (like new or remote staff) may not have one.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Total Participation", "Partial Participation"],
+          "rows": [
+            ["Participation is compulsory", "Participation is optional"],
+            ["Every record must participate", "Some records may not participate"],
+            ["Mandatory relationship", "Optional relationship"]
+          ]
+        },
+        {
+          "type": "table",
+          "headers": ["Relationship", "Participation Type"],
+          "rows": [
+            ["Employee → Department", "Total Participation"],
+            ["Customer → Loan", "Partial Participation"],
+            ["Student → Course", "Partial Participation"],
+            ["Citizen → Aadhaar", "Total Participation"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "How is Total Participation represented in an ER diagram?",
+          "answer": "Total Participation is usually represented by a double line connecting the entity to the relationship diamond."
+        },
+        {
+          "question": "What is another name for Total and Partial participation?",
+          "answer": "Total Participation is called Mandatory Participation, and Partial Participation is called Optional Participation."
+        },
+        {
+          "question": "Why is 'Citizen → Aadhaar' considered Total Participation?",
+          "answer": "Because in the context of the system, every valid citizen is expected to be registered and associated with a unique Aadhaar record."
+        }
+      ]
+    },
+    {
       "id": "sql-command-types",
       "title": "SQL Command Types",
       "category": "Basic",
