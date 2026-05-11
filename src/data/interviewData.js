@@ -5824,6 +5824,64 @@ export const interviewData = {
       ]
     },
     {
+      "id": "sql-filtering-data",
+      "title": "Filtering Data in SQL",
+      "category": "Queries",
+      "definition": "Filtering data means retrieving only the required records from a table using conditions to narrow down results.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. WHERE Clause\nThe WHERE clause is used to filter records based on a condition.\n• Returns only matching rows\n• Used with SELECT, UPDATE, and DELETE\n• Helps retrieve specific data from a table\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. AND Operator\nThe AND operator is used to combine multiple conditions.\n• All conditions must be TRUE\n• Returns records only if every condition matches\n• Used for more specific filtering\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. OR Operator\nThe OR operator is used to combine multiple conditions.\n• At least one condition must be TRUE\n• Returns records if any condition matches\n• Used for alternative filtering conditions\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. NOT Operator\nThe NOT operator is used to exclude records that match a condition.\n• Reverses the condition\n• Returns records that do not satisfy the condition\n• Used for negative filtering\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "5. BETWEEN Operator\nThe BETWEEN operator is used to filter data within a range.\n• Includes both starting and ending values\n• Works with numbers, dates, and text\n• Useful for ranges like marks, salary, age, dates\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "6. IN Operator\nThe IN operator is used to match multiple values in a condition.\n• Simplifies multiple OR conditions\n• Checks whether a value exists in a list\n• Makes queries shorter and cleaner\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "7. LIKE Operator & Wildcards\nThe LIKE operator is used for pattern matching, mostly with character/string data.\n\nWildcards used with LIKE:\n• % → Represents zero, one, or many characters\n• _ → Represents a single character\n\nUsed to search names, find partial matches, and filter text patterns.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "8. LIMIT Clause\nThe LIMIT clause is used to restrict the number of rows returned.\n• Returns only a specific number of records\n• Useful for large datasets\n• Commonly used for pagination and top results"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between AND and OR operators?",
+          "answer": "The AND operator requires all conditions to be true to return a record, whereas the OR operator returns a record if at least one of the conditions is true."
+        },
+        {
+          "question": "How do you search for a name starting with 'A' using LIKE?",
+          "answer": "Using the query: SELECT * FROM table WHERE name LIKE 'A%';"
+        },
+        {
+          "question": "Is the range in the BETWEEN operator inclusive?",
+          "answer": "Yes, the BETWEEN operator includes both the start and end values in the range."
+        },
+        {
+          "question": "How do you fetch only the first 5 records of a table?",
+          "answer": "By using the LIMIT clause: SELECT * FROM table LIMIT 5;"
+        }
+      ]
+    },
+    {
       "id": "sql-joins",
       "title": "SQL Joins",
       "category": "Queries",
