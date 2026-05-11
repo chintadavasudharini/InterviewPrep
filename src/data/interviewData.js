@@ -5548,15 +5548,15 @@ export const interviewData = {
       "sections": [
         {
           "type": "text",
-          "value": "1. DELETE\nUsed to delete records (rows) from a table.\n• Table structure remains the same.\n• Can delete all rows or specific rows using a condition.\n\nSyntax:\nDELETE FROM table_name;\nDELETE FROM table_name WHERE condition;"
+          "value": "1. DELETE\nUsed to delete records (rows) from a table.\n• Table structure remains the same.\n• Can delete all rows or specific rows using a condition.\n\nSyntax:\nDELETE FROM table_name;\nDELETE FROM table_name WHERE condition;\n\n-----------------------------------------------"
         },
         {
           "type": "text",
-          "value": "2. TRUNCATE\nRemoves all rows from a table.\n• Table structure remains.\n• Faster than DELETE.\n• Cannot use WHERE condition.\n\nSyntax:\nTRUNCATE TABLE table_name;"
+          "value": "2. TRUNCATE\nRemoves all rows from a table.\n• Table structure remains.\n• Faster than DELETE.\n• Cannot use WHERE condition.\n\nSyntax:\nTRUNCATE TABLE table_name;\n\n-----------------------------------------------"
         },
         {
           "type": "text",
-          "value": "3. DROP\nDeletes the entire table permanently.\n• Removes both data and table structure.\n\nSyntax:\nDROP TABLE table_name;"
+          "value": "3. DROP\nDeletes the entire table permanently.\n• Removes both data and table structure.\n\nSyntax:\nDROP TABLE table_name;\n\n-----------------------------------------------"
         },
         {
           "type": "text",
