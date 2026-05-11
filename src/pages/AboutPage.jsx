@@ -61,22 +61,26 @@ const AboutPage = () => {
             </div>
           </motion.div>
 
-          {/* Section 3: Connect with Vasudharini */}
+          {/* Section 3: Social & Contact */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="text-center"
           >
-            <h2 className="display-4 brand-font mb-4">Connect with <span style={{ color: 'var(--accent-color)' }}>Vasudharini</span></h2>
             <div className="premium-card shadow-sm py-4">
-              <div className="d-flex align-items-center justify-content-center gap-3">
-                 <div className="rounded-circle p-3 d-flex align-items-center justify-content-center" style={{ background: 'var(--accent-color)15', color: 'var(--accent-color)' }}>
-                   <BsEnvelope size={24} />
+              <div className="mb-3">
+                <a href="https://portfolio-lime-tau-36.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-muted hover-accent px-2 border-end">Personal Portfolio</a>
+                <a href="https://www.linkedin.com/in/chintada-vasudharini-nov21/" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-muted hover-accent px-2 border-end">LinkedIn</a>
+                <a href="https://github.com/chintadavasudharini" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-muted hover-accent px-2">GitHub</a>
+              </div>
+              <div className="d-flex align-items-center justify-content-center gap-3 mt-3">
+                 <div className="rounded-circle p-2 d-flex align-items-center justify-content-center" style={{ background: 'var(--accent-color)15', color: 'var(--accent-color)' }}>
+                   <BsEnvelope size={20} />
                  </div>
                  <a 
                    href="mailto:chintadavasudharini@gmail.com" 
-                   className="text-decoration-none h4 mb-0 brand-font hover-accent" 
+                   className="text-decoration-none h5 mb-0 brand-font hover-accent" 
                    style={{ color: 'var(--text-color)' }}
                  >
                    chintadavasudharini@gmail.com

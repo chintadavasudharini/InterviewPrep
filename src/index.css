@@ -317,4 +317,30 @@ h1, h2, h3, .brand-font {
   background: rgba(0,0,0,0.02);
 }
 
+/* Accordion Premium Styles */
+.accordion-item-premium {
+  border: 1px solid rgba(230, 213, 184, 0.3);
+  background: white;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+}
+
+.accordion-item-premium:hover {
+  transform: translateX(10px);
+  border-color: #bfa57d;
+  box-shadow: 0 10px 30px rgba(191, 165, 125, 0.1);
+}
+
+.accordion-item-premium.active {
+  background: linear-gradient(to right, #fff, rgba(230, 213, 184, 0.05));
+  border-color: #bfa57d;
+}
+
+.accordion-answer {
+  border-left: 3px solid #bfa57d;
+  background-color: rgba(230, 213, 184, 0.05);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
 

@@ -53,10 +53,10 @@ const HeroSection = () => {
               <div className="display-1 mb-3" style={{ color: 'var(--accent-color)' }}>20+</div>
               <h4 className="fw-light text-muted">Advanced Topics</h4>
               <hr className="w-25 mx-auto my-4" />
-              <div className="d-flex justify-content-around small text-muted">
-                <div>Classes</div>
-                <div>Inheritance</div>
-                <div>Abstraction</div>
+              <div className="d-flex justify-content-center gap-2 flex-wrap">
+                <span className="badge rounded-pill bg-light text-muted border px-3 py-2 fw-normal">Classes</span>
+                <span className="badge rounded-pill bg-light text-muted border px-3 py-2 fw-normal">Inheritance</span>
+                <span className="badge rounded-pill bg-light text-muted border px-3 py-2 fw-normal">Abstraction</span>
               </div>
             </div>
           </motion.div>

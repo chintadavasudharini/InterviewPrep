@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { BsLightningCharge, BsDatabase, BsCodeSquare, BsCloud } from 'react-icons/bs';
+import { BsLightningCharge, BsDatabase, BsCodeSquare, BsCloud, BsCpu, BsFileEarmarkCode, BsShare, BsTerminal } from 'react-icons/bs';
 
 const paths = [
   {
@@ -37,8 +37,44 @@ const paths = [
     description: 'Master AWS services, serverless architecture, and cloud security patterns.',
     icon: <BsCloud size={30} />,
     color: '#232f3e',
-    link: '/topics/cloud',
+    link: '/aws',
     topics: ['IAM & Security', 'Serverless', 'EC2/S3', 'Microservices']
+  },
+  {
+    id: 'ml',
+    title: 'ML Engineer',
+    description: 'Learn supervised & unsupervised learning, model evaluation, and deployment strategies.',
+    icon: <BsCpu size={30} />,
+    color: '#6f42c1',
+    link: '/ml',
+    topics: ['Regression', 'Classification', 'NLP', 'Model Deployment']
+  },
+  {
+    id: 'flask',
+    title: 'Flask Master',
+    description: 'Build scalable web applications with Python & Flask, covering routing, templates, and DB integration.',
+    icon: <BsFileEarmarkCode size={30} />,
+    color: '#000000',
+    link: '/flask',
+    topics: ['Routing', 'Jinja2', 'SQLAlchemy', 'Blueprints']
+  },
+  {
+    id: 'api',
+    title: 'API Developer',
+    description: 'Master RESTful API design, authentication, documentation, and testing practices.',
+    icon: <BsShare size={30} />,
+    color: '#28a745',
+    link: '/api',
+    topics: ['REST', 'JWT Auth', 'Swagger/OpenAPI', 'Postman']
+  },
+  {
+    id: 'coding',
+    title: 'Coding Patterns',
+    description: 'Crack the code with essential patterns like Sliding Window, Two Pointers, and Dynamic Programming.',
+    icon: <BsTerminal size={30} />,
+    color: '#dc3545',
+    link: '/coding',
+    topics: ['Sliding Window', 'Two Pointers', 'Backtracking', 'Heaps']
   }
 ];
 

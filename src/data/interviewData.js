@@ -32,303 +32,65 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. Who created Python and when?\nGuido van Rossum in 1991."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. Why is Python called an interpreted language?\nBecause it executes code line by line rather than compiling the whole program at once."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Nature: Interpreted & OOP\n• Benefit: Beginner Friendly\n• Usage: AI, Data Science, Web\n• Key: Simple Syntax"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "Who created Python and when?",
+          "answer": "Guido van Rossum in 1991."
+        },
+        {
+          "question": "Why is Python called an interpreted language?",
+          "answer": "Because it executes code line by line rather than compiling the whole program at once."
+        }
+      ]
     },
     {
       "id": "python-syntax-basics",
       "title": "Python Syntax Basics",
       "category": "Basic",
-      "definition": "The fundamental building blocks of Python syntax including variables, user input, and code organization.",
+      "definition": "The fundamental building blocks of Python syntax including indentation, execution, and comments.",
       "sections": [
         {
           "type": "text",
-          "value": "1. Variables\n. Variables are used to store data values."
+          "value": "Python syntax is the set of rules that define how Python programs are written and interpreted.\nPython is simple and easy to read because it uses clear English-like statements."
         },
         {
           "type": "code",
-          "value": "name = \"Vasudha\"\nage = 23\nprint(name)\nprint(age)"
+          "value": "print(\"Hello, World!\")"
         },
         {
           "type": "output",
-          "value": "Vasudha\n23"
+          "value": "Hello, World!"
         },
         {
           "type": "text",
-          "value": "2. Input from User\n. Used to take data from the user during execution."
+          "value": "Execute Python Syntax\n\nPython code can be executed in different ways:\n\n1. Using Command Line\nType directly in terminal or command prompt:"
         },
         {
           "type": "code",
-          "value": "name = input(\"Enter your name: \")\nprint(\"Welcome\", name)"
+          "value": "print(\"Welcome to Python\")"
         },
         {
           "type": "output",
-          "value": "Enter your name: Vasudha\nWelcome Vasudha"
+          "value": "Welcome to Python"
         },
         {
           "type": "text",
-          "value": "3. Comments\n. Used to explain code and make it more readable."
+          "value": "2. Using Python File\nSave the file with .py extension.\n• Example: app.py\nprint(\"Python Program\")\n• Run the file using:\npython app.py"
+        },
+        {
+          "type": "text",
+          "value": "Semicolons in Python:\nSemicolons (;) are optional in Python.\nYou can write multiple statements on a single line by separating them with semicolons."
+        },
+        {
+          "type": "text",
+          "value": "Example"
         },
         {
           "type": "code",
-          "value": "# This is single line comment\n\"\"\"This is\nmulti-line comment\"\"\""
-        },
-        {
-          "type": "text",
-          "value": "4. Python Keywords\n. Keywords are reserved words that have special meanings in Python.\n. Examples: if, else, for, while, break, continue, class, def, return, try, except, import."
-        },
-        {
-          "type": "text",
-          "value": "🔹 1. How do you take user input in Python?\nUsing the input() function."
-        },
-        {
-          "type": "text",
-          "value": "Quick Revision:\n• name = \"Vasu\": Variable\n• input(): User data\n• #: Single line comment\n• \"\"\": Multi-line comment"
-        }
-      ],
-      "questions": []
-    },
-    {
-      "id": "python-data-types",
-      "title": "Python Data Types & Casting",
-      "category": "Basic",
-      "definition": "Data types define the type of value a variable can hold. Type casting is used to convert one type to another.",
-      "sections": [
-        {
-          "type": "table",
-          "headers": ["Data Type", "Example", "Description"],
-          "rows": [
-            ["int", "10", "Whole numbers"],
-            ["float", "10.5", "Decimal numbers"],
-            ["str", "\"Hello\"", "Text data"],
-            ["bool", "True", "Logical values"],
-            ["list", "[1, 2, 3]", "Ordered mutable collection"],
-            ["tuple", "(1, 2, 3)", "Ordered immutable collection"],
-            ["set", "{1, 2, 3}", "Unordered unique collection"],
-            ["dict", "{\"name\":\"Ram\"}", "Key-value pairs"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "Example of Checking Types:"
-        },
-        {
-          "type": "code",
-          "value": "a = 10\nb = 10.5\nc = \"Python\"\nd = True\n\nprint(type(a))\nprint(type(b))\nprint(type(c))\nprint(type(d))"
-        },
-        {
-          "type": "output",
-          "value": "<class 'int'>\n<class 'float'>\n<class 'str'>\n<class 'bool'>"
-        },
-        {
-          "type": "text",
-          "value": "Type Casting:\n. Converting one data type to another."
-        },
-        {
-          "type": "code",
-          "value": "a = \"10\"\nb = int(a)\nprint(b)\nprint(type(b))"
-        },
-        {
-          "type": "output",
-          "value": "10\n<class 'int'>"
-        },
-        {
-          "type": "text",
-          "value": "🔹 1. What is dynamic typing?\nIt means you don't need to declare the type of a variable; Python determines it at runtime."
-        },
-        {
-          "type": "text",
-          "value": "Quick Revision:\n• int/float: Numbers\n• str: Text\n• bool: True/False\n• type(): Check data type"
-        }
-      ],
-      "questions": []
-    },
-    {
-      "id": "python-control-flow",
-      "title": "Operators & Conditional Statements",
-      "category": "Basic",
-      "definition": "Operators perform actions on variables, and conditional statements allow for decision-making in code.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Arithmetic Operators\n. Used for mathematical operations."
-        },
-        {
-          "type": "code",
-          "value": "a = 10\nb = 5\nprint(a + b)\nprint(a - b)\nprint(a * b)\nprint(a / b)"
-        },
-        {
-          "type": "output",
-          "value": "15\n5\n50\n2.0"
-        },
-        {
-          "type": "text",
-          "value": "2. Conditional Statements\n. used to execute code based on specific conditions."
-        },
-        {
-          "type": "text",
-          "value": "if statement:"
-        },
-        {
-          "type": "code",
-          "value": "age = 18\nif age >= 18:\n    print(\"Eligible to vote\")"
-        },
-        {
-          "type": "output",
-          "value": "Eligible to vote"
-        },
-        {
-          "type": "text",
-          "value": "if-else statement:"
-        },
-        {
-          "type": "code",
-          "value": "num = 5\nif num % 2 == 0:\n    print(\"Even\")\nelse:\n    print(\"Odd\")"
-        },
-        {
-          "type": "output",
-          "value": "Odd"
-        },
-        {
-          "type": "text",
-          "value": "🔹 1. What does the modulo operator (%) do?\nIt returns the remainder of a division."
-        },
-        {
-          "type": "text",
-          "value": "Quick Revision:\n• +,-,*,/: Arithmetic\n• if: Single condition\n• else: Alternative path"
-        }
-      ],
-      "questions": []
-    },
-    {
-      "id": "python-loops",
-      "title": "Python Loops",
-      "category": "Loops",
-      "definition": "Loops allow you to repeat a block of code multiple times, either for a fixed sequence or until a condition is met.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. for Loop\n. Iterates over a sequence (like range, list, or string)."
-        },
-        {
-          "type": "code",
-          "value": "for i in range(1, 6):\n    print(i)"
-        },
-        {
-          "type": "output",
-          "value": "1\n2\n3\n4\n5"
-        },
-        {
-          "type": "text",
-          "value": "2. while Loop\n. Repeats code as long as a condition is True."
-        },
-        {
-          "type": "code",
-          "value": "i = 1\nwhile i <= 5:\n    print(i)\n    i += 1"
-        },
-        {
-          "type": "output",
-          "value": "1\n2\n3\n4\n5"
-        },
-        {
-          "type": "text",
-          "value": "🔹 1. How do you stop an infinite loop?\nBy ensuring the loop condition eventually becomes False or using a 'break' statement."
-        },
-        {
-          "type": "text",
-          "value": "Quick Revision:\n• for: Sequence iteration\n• while: Condition iteration\n• range(): Generate numbers"
-        }
-      ],
-      "questions": []
-    },
-    {
-      "id": "python-collections",
-      "title": "Python Collections (Lists, Tuples, Sets, Dicts)",
-      "category": "Basic",
-      "definition": "Collections are used to store multiple items in a single variable.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Lists\n. Ordered, mutable, and allows duplicates."
-        },
-        {
-          "type": "code",
-          "value": "fruits = [\"apple\", \"banana\", \"mango\"]\nprint(fruits)\nprint(fruits[0])"
-        },
-        {
-          "type": "output",
-          "value": "['apple', 'banana', 'mango']\napple"
-        },
-        {
-          "type": "text",
-          "value": "2. Tuples\n. Ordered, immutable (cannot change)."
-        },
-        {
-          "type": "code",
-          "value": "colors = (\"red\", \"blue\", \"green\")\nprint(colors)"
-        },
-        {
-          "type": "output",
-          "value": "('red', 'blue', 'green')"
-        },
-        {
-          "type": "text",
-          "value": "3. Sets\n. Unordered, unique values only."
-        },
-        {
-          "type": "code",
-          "value": "nums = {1, 2, 3, 2, 1}\nprint(nums)"
-        },
-        {
-          "type": "output",
-          "value": "{1, 2, 3}"
-        },
-        {
-          "type": "text",
-          "value": "4. Dictionaries\n. Key-value pairs, unordered, mutable."
-        },
-        {
-          "type": "code",
-          "value": "student = {\n    \"name\": \"Vasu\",\n    \"age\": 23\n}\nprint(student[\"name\"])"
-        },
-        {
-          "type": "output",
-          "value": "Vasu"
-        },
-        {
-          "type": "text",
-          "value": "🔹 1. Which collection is immutable?\nTuple."
-        },
-        {
-          "type": "text",
-          "value": "Quick Revision:\n• List: [ ] Mutable\n• Tuple: ( ) Immutable\n• Set: { } Unique\n• Dict: { k:v } Pairs"
-        }
-      ],
-      "questions": []
-    },
-    {
-      "id": "python-functions-modules",
-      "title": "Functions & Modules",
-      "category": "Basic",
-      "definition": "Functions are reusable blocks of code, and modules are files containing Python code that can be imported.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Functions\n. Reusable blocks of code defined using 'def'."
-        },
-        {
-          "type": "code",
-          "value": "def add(a, b):\n    return a + b\n\nresult = add(10, 20)\nprint(result)"
+          "value": "x = 10; y = 20; print(x + y)"
         },
         {
           "type": "output",
@@ -336,64 +98,3583 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "2. Modules\n. Built-in or external files that can be imported to use their functionality."
+          "value": "Usually, Python programs are written with one statement per line for better readability."
+        },
+        {
+          "type": "text",
+          "value": "Recommended Style"
         },
         {
           "type": "code",
-          "value": "import math\nprint(math.sqrt(25))"
+          "value": "x = 10\ny = 20\nprint(x + y)"
+        },
+        {
+          "type": "text",
+          "value": "Print Without a New Line:\nBy default, the print() function ends with a new line.\nIf you want to print multiple outputs on the same line, use the end parameter."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "print(\"Hello World!\", end=\" \")\nprint(\"I will print on the same line.\")"
         },
         {
           "type": "output",
-          "value": "5.0"
+          "value": "Hello World! I will print on the same line."
         },
         {
           "type": "text",
-          "value": "🔹 1. What is the benefit of using functions?\nCode reusability and better organization."
+          "value": "Here:\n• end=\" \" replaces the default new line with a space.\n• This helps print the next statement on the same line."
         },
         {
           "type": "text",
-          "value": "Quick Revision:\n• def: Define function\n• return: Give back value\n• import: Use modules"
+          "value": "Mix Text and Numbers:\nYou can combine text and numbers in a single print() statement by separating them with commas."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "print(\"I am\", 35, \"years old.\")"
+        },
+        {
+          "type": "output",
+          "value": "I am 35 years old."
+        },
+        {
+          "type": "text",
+          "value": "Here:\n• \"I am\" → text (string)\n• 35 → number (integer)\n• Python automatically adds spaces between values separated by commas."
+        },
+        {
+          "type": "text",
+          "value": "Python Indentation:\nIndentation refers to the spaces at the beginning of a code line.\nIn Python, indentation is very important because it defines a block of code.\nOther programming languages use braces { }, but Python uses indentation."
+        },
+        {
+          "type": "text",
+          "value": "Correct Example"
+        },
+        {
+          "type": "code",
+          "value": "if 5 > 2:\n    print(\"Five is greater than two\")"
+        },
+        {
+          "type": "output",
+          "value": "Five is greater than two"
+        },
+        {
+          "type": "text",
+          "value": "Incorrect Example"
+        },
+        {
+          "type": "code",
+          "value": "if 5 > 2:\nprint(\"Five is greater than two\")"
+        },
+        {
+          "type": "output",
+          "value": "IndentationError: expected an indented block"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What is indentation in Python?",
+          "answer": "Indentation refers to the spaces at the beginning of a code line used to define code blocks."
+        },
+        {
+          "question": "How to print on the same line without a new line?",
+          "answer": "Use the 'end' parameter in the print() function, e.g., print('Hello', end=' ')."
+        }
+      ]
     },
     {
-      "id": "python-advanced-basics",
-      "title": "Strings, Exceptions & Files",
+      "id": "python-variables",
+      "title": "Python Variables",
       "category": "Basic",
-      "definition": "Advanced basic concepts including string methods, error handling, and file operations.",
+      "definition": "Variables are containers for storing data values. Python has no command for declaring a variable; it is created when you assign a value to it.",
       "sections": [
         {
           "type": "text",
-          "value": "1. String Methods\n. Functions to manipulate text."
-        },
-        {
-          "type": "code",
-          "value": "text = \"Python\"\nprint(text.upper())\nprint(text.lower())\nprint(len(text))"
-        },
-        {
-          "type": "output",
-          "value": "PYTHON\npython\n6"
+          "value": "Python Variables:\nVariables are containers for storing data values."
         },
         {
           "type": "text",
-          "value": "2. Exception Handling\n. Used to handle errors gracefully without crashing the program."
-        },
-        {
-          "type": "code",
-          "value": "try:\n    a = 10 / 0\nexcept ZeroDivisionError:\n    print(\"Cannot divide by zero\")"
-        },
-        {
-          "type": "output",
-          "value": "Cannot divide by zero"
+          "value": "Creating Variables\nPython has no command for declaring a variable.\nA variable is created when you assign a value to it."
         },
         {
           "type": "text",
-          "value": "3. File Handling\n. Reading from and writing to files."
+          "value": "Example"
         },
         {
           "type": "code",
-          "value": "# Writing\nfile = open(\"demo.txt\", \"w\")\nfile.write(\"Hello Python\")\nfile.close()\n\n# Reading\nfile = open(\"demo.txt\", \"r\")\nprint(file.read())\nfile.close()"
+          "value": "name = \"Vasu\"\nage = 23\nprint(name)\nprint(age)"
+        },
+        {
+          "type": "output",
+          "value": "Vasu\n23"
+        },
+        {
+          "type": "text",
+          "value": "Variables Can Change Type\nVariables do not need a fixed type.\nThe type can change after assignment."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "name = \"Sudha\"\nprint(name)\nname = 100\nprint(name)"
+        },
+        {
+          "type": "output",
+          "value": "Sudha\n100"
+        },
+        {
+          "type": "text",
+          "value": "Casting\nCasting is used to specify the data type of a variable."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "x = str(10)\ny = int(25)\nz = float(5)\nprint(x)\nprint(y)\nprint(z)"
+        },
+        {
+          "type": "output",
+          "value": "10\n25\n5.0"
+        },
+        {
+          "type": "text",
+          "value": "Get the Type\nUse the type() function to check the data type."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "name = \"Vasudha\"\nage = 23\nprint(type(name))\nprint(type(age))"
+        },
+        {
+          "type": "output",
+          "value": "<class 'str'>\n<class 'int'>"
+        },
+        {
+          "type": "text",
+          "value": "Single or Double Quotes\nStrings can be written using single quotes or double quotes."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "name1 = 'Vasu'\nname2 = \"Sudha\"\nprint(name1)\nprint(name2)"
+        },
+        {
+          "type": "output",
+          "value": "Vasu\nSudha"
+        },
+        {
+          "type": "text",
+          "value": "Case-Sensitive Variables\nVariable names are case-sensitive."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "name = \"Vasu\"\nName = \"Sudha\"\nNAME = \"Vasudha\"\nprint(name)\nprint(Name)\nprint(NAME)"
+        },
+        {
+          "type": "output",
+          "value": "Vasu\nSudha\nVasudha"
+        },
+        {
+          "type": "text",
+          "value": "Variable Names\nVariable names can be short or descriptive.\n\nValid Variable Names:\nx = \"Vasu\"\nage = 23\nstudent_name = \"Sudha\"\n_total = 500"
+        },
+        {
+          "type": "text",
+          "value": "Rules for Variable Names\n\n✅ Allowed:\n• Must start with a letter or _\n• Can contain letters, numbers, and _\n• Variable names are case-sensitive\n\n❌ Not Allowed:\n• Cannot start with a number\n• Cannot contain spaces or special symbols\n• Cannot use Python keywords"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "my_name = \"Vasu\"\n# invalid examples\n# 1name = \"Sudha\"\n# my-name = \"Vasudha\""
+        },
+        {
+          "type": "text",
+          "value": "Multi Word Variable Names\n\nCamel Case:\nEach word starts with a capital letter except the first word.\nmyVariableName = \"Vasu\"\n\nPascal Case:\nEach word starts with a capital letter.\nMyVariableName = \"Sudha\"\n\nSnake Case:\nEach word is separated using _.\nmy_variable_name = \"Vasudharini\""
+        },
+        {
+          "type": "text",
+          "value": "Many Values to Multiple Variables\nPython allows assigning multiple values in one line."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "x, y, z = \"Vasu\", \"Sudha\", \"Vasudha\"\nprint(x)\nprint(y)\nprint(z)"
+        },
+        {
+          "type": "output",
+          "value": "Vasu\nSudha\nVasudha"
+        },
+        {
+          "type": "text",
+          "value": "Note: Number of variables and values must match."
+        },
+        {
+          "type": "text",
+          "value": "One Value to Multiple Variables\nYou can assign the same value to multiple variables."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "x = y = z = \"Vasudharini\"\nprint(x)\nprint(y)\nprint(z)"
+        },
+        {
+          "type": "output",
+          "value": "Vasudharini\nVasudharini\nVasudharini"
+        },
+        {
+          "type": "text",
+          "value": "Output Variables\nThe print() function is used to display variables."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "x = \"Python is awesome\"\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "Python is awesome"
+        },
+        {
+          "type": "text",
+          "value": "Output Multiple Variables Using Comma"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "x = \"Python\"\ny = \"is\"\nz = \"awesome\"\nprint(x, y, z)"
+        },
+        {
+          "type": "output",
+          "value": "Python is awesome"
+        },
+        {
+          "type": "text",
+          "value": "Output Multiple Variables Using +"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "x = \"Python \"\ny = \"is \"\nz = \"awesome\"\nprint(x + y + z)"
+        },
+        {
+          "type": "output",
+          "value": "Python is awesome"
+        },
+        {
+          "type": "text",
+          "value": "Note: Spaces are added after \"Python \" and \"is \" for correct formatting."
+        },
+        {
+          "type": "text",
+          "value": "Using + With Numbers\nFor numbers, + works as a mathematical operator."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "x = 5\ny = 10\nprint(x + y)"
+        },
+        {
+          "type": "output",
+          "value": "15"
+        },
+        {
+          "type": "text",
+          "value": "Error When Combining String and Number Using +\nExample:\nx = 5\ny = \"Vasu\"\n# print(x + y)"
+        },
+        {
+          "type": "output",
+          "value": "TypeError: unsupported operand type(s)"
+        },
+        {
+          "type": "text",
+          "value": "Python gives an error because string and integer cannot be added using +."
+        },
+        {
+          "type": "text",
+          "value": "Correct Way Using Comma\nUse commas to print different data types together."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "x = 5\ny = \"Vasu\"\nprint(x, y)"
+        },
+        {
+          "type": "output",
+          "value": "5 Vasu"
+        },
+        {
+          "type": "text",
+          "value": "Variable Quick Revision:\n• Variables → Store data values\n• Assignment → Creates variables\n• Casting → Specify data type\n• type() → Check variable type\n• Quotes → Single or double quotes for strings\n• Case-Sensitive → name and Name are different\n• Multi Variables → Assign many values in one line\n• Output → Use print() to display variables"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Does Python require a command for declaring variables?",
+          "answer": "No, a variable is created the moment you first assign a value to it."
+        },
+        {
+          "question": "Are Python variable names case-sensitive?",
+          "answer": "Yes, 'age' and 'Age' are treated as two different variables."
+        }
+      ]
+    },
+    {
+      "id": "python-variable-scope",
+      "title": "Global & Local Variables",
+      "category": "Basic",
+      "definition": "Understanding the scope of variables in Python, including global variables accessible everywhere and local variables restricted to functions.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Global Variables and Local Variables in Python\n\nVariables in Python can be divided into:\n• Global Variables\n• Local Variables"
+        },
+        {
+          "type": "text",
+          "value": "Global Variables\nA global variable is created outside a function.\nIt can be used both inside and outside the function."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "name = \"Vasudha\"   # global variable\n\ndef show():\n    print(\"Inside function:\", name)\n\nshow()\n\nprint(\"Outside function:\", name)"
+        },
+        {
+          "type": "output",
+          "value": "Inside function: Vasudha\nOutside function: Vasudha"
+        },
+        {
+          "type": "text",
+          "value": "Local Variables\nA local variable is created inside a function.\nIt can only be used inside that function."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "def student():\n    name = \"Vasu\"   # local variable\n    print(name)\n\nstudent()"
+        },
+        {
+          "type": "output",
+          "value": "Vasu"
+        },
+        {
+          "type": "text",
+          "value": "Local Variable Cannot Be Accessed Outside\nExample:"
+        },
+        {
+          "type": "code",
+          "value": "def student():\n    name = \"Sudha\"\n\nstudent()\n\n# print(name)"
+        },
+        {
+          "type": "output",
+          "value": "NameError: name 'name' is not defined"
+        },
+        {
+          "type": "text",
+          "value": "Using Global Variable Inside Function\nExample:"
+        },
+        {
+          "type": "code",
+          "value": "course = \"Python\"\n\ndef display():\n    print(\"Learning\", course)\n\ndisplay()"
+        },
+        {
+          "type": "output",
+          "value": "Learning Python"
+        },
+        {
+          "type": "text",
+          "value": "Global Keyword\nUse the global keyword if you want to modify a global variable inside a function."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "name = \"Vasu\"\n\ndef change():\n    global name\n    name = \"Vasudharini\"\n\nchange()\n\nprint(name)"
+        },
+        {
+          "type": "output",
+          "value": "Vasudharini"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between Global and Local Variables"
+        },
+        {
+          "type": "table",
+          "headers": ["Feature", "Global Variable", "Local Variable"],
+          "rows": [
+            ["Declaration", "Outside function", "Inside function"],
+            ["Accessibility", "Everywhere", "Only inside function"],
+            ["Execution Life", "Program duration", "Function duration"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Variable Scope Quick Revision:\n• Global Variable → Created outside function\n• Local Variable → Created inside function\n• Global variables can be used anywhere\n• Local variables work only inside function\n• global keyword → Modify global variable inside function"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between global and local variables?",
+          "answer": "Global variables are created outside functions and can be used everywhere, while local variables are created inside functions and only exist within them."
+        },
+        {
+          "question": "How to modify a global variable inside a function?",
+          "answer": "Use the 'global' keyword before the variable name inside the function."
+        }
+      ]
+    },
+    {
+      "id": "python-comments",
+      "title": "Comments & Practice",
+      "category": "Basic",
+      "definition": "Understanding how to document code with comments and a complete practice example of Python basics.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Python Comments:\nComments are used to explain Python code.\nThey help make the code easier to read and understand.\nComments can also be used to prevent execution of code while testing."
+        },
+        {
+          "type": "text",
+          "value": "Single-Line Comment\nUse #"
+        },
+        {
+          "type": "code",
+          "value": "# This is a comment\nprint(\"Hello\")"
+        },
+        {
+          "type": "text",
+          "value": "Multi-Line Comment\nUse triple quotes:"
+        },
+        {
+          "type": "code",
+          "value": "\"\"\"\nThis is a\nmulti-line comment\n\"\"\"\n\nprint(\"Python\")"
+        },
+        {
+          "type": "text",
+          "value": "Complete Example"
+        },
+        {
+          "type": "code",
+          "value": "# Python Basics Example\n\nname = \"Vasudha\"\nage = 23\n\nif age > 18:\n    print(name, \"is eligible to vote\")"
+        },
+        {
+          "type": "output",
+          "value": "Vasudha is eligible to vote"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision"
+        },
+        {
+          "type": "text",
+          "value": "• Syntax → Rules of writing Python code\n• Execute → Run code using terminal or .py file\n• Indentation → Spaces used to define code blocks\n• Variables → Store values/data\n• Comments → Explain code"
+        }
+      ],
+      "questions": [
+        {
+          "question": "How do you write a single-line comment in Python?",
+          "answer": "Using the '#' symbol at the beginning of the line."
+        },
+        {
+          "question": "How to write multi-line comments?",
+          "answer": "You can use triple quotes (\"\"\" or ''') at the start and end of the comment block."
+        }
+      ]
+    },
+    {
+      "id": "python-data-types",
+      "title": "Python Data Types",
+      "category": "Basic",
+      "definition": "Data types specify the type of value a variable stores. Python automatically identifies the data type when a value is assigned.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Built-in Data Types in Python\nPython has several built-in data types:"
+        },
+        {
+          "type": "table",
+          "headers": ["Category", "Data Types"],
+          "rows": [
+            ["Text Type", "str"],
+            ["Numeric Types", "int, float, complex"],
+            ["Sequence Types", "list, tuple, range"],
+            ["Mapping Type", "dict"],
+            ["Set Types", "set, frozenset"],
+            ["Boolean Type", "bool"],
+            ["Binary Types", "bytes, bytearray, memoryview"],
+            ["None Type", "NoneType"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Text Type (str)\nUsed to store text."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "name = \"Vasu\"\nprint(name)\nprint(type(name))"
+        },
+        {
+          "type": "output",
+          "value": "Vasu\n<class 'str'>"
+        },
+        {
+          "type": "text",
+          "value": "Sequence Types\n\nList (list):\nOrdered, changeable collection."
+        },
+        {
+          "type": "code",
+          "value": "names = [\"Vasu\", \"Sudha\", \"Vasudha\"]\nprint(names)\nprint(type(names))"
+        },
+        {
+          "type": "output",
+          "value": "['Vasu', 'Sudha', 'Vasudha']\n<class 'list'>"
+        },
+        {
+          "type": "text",
+          "value": "Tuple (tuple):\nOrdered, unchangeable collection."
+        },
+        {
+          "type": "code",
+          "value": "names = (\"Vasu\", \"Sudha\")\nprint(names)\nprint(type(names))"
+        },
+        {
+          "type": "output",
+          "value": "('Vasu', 'Sudha')\n<class 'tuple'>"
+        },
+        {
+          "type": "text",
+          "value": "Range (range):\nSequence of numbers."
+        },
+        {
+          "type": "code",
+          "value": "x = range(5)\nprint(x)\nprint(type(x))"
+        },
+        {
+          "type": "output",
+          "value": "range(0, 5)\n<class 'range'>"
+        },
+        {
+          "type": "text",
+          "value": "Mapping Type (dict)\nStores data in key-value pairs."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "student = {\n    \"name\": \"Vasudharini\",\n    \"age\": 23\n}\nprint(student)\nprint(type(student))"
+        },
+        {
+          "type": "output",
+          "value": "{'name': 'Vasudharini', 'age': 23}\n<class 'dict'>"
+        },
+        {
+          "type": "text",
+          "value": "Set Types\n\nSet (set):\nUnordered collection of unique values.\nnumbers = {1, 2, 3, 4}\n\nFrozen Set (frozenset):\nUnchangeable set.\nx = frozenset({1, 2, 3})"
+        },
+        {
+          "type": "code",
+          "value": "numbers = {1, 2, 3, 4}\nprint(type(numbers))\n\nx = frozenset({1, 2, 3})\nprint(type(x))"
+        },
+        {
+          "type": "output",
+          "value": "<class 'set'>\n<class 'frozenset'>"
+        },
+        {
+          "type": "text",
+          "value": "Boolean Type (bool)\nRepresents True or False."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "is_python_easy = True\nprint(type(is_python_easy))"
+        },
+        {
+          "type": "output",
+          "value": "<class 'bool'>"
+        },
+        {
+          "type": "text",
+          "value": "Binary Types\n\nBytes (bytes):\nx = b\"Hello\"\n\nBytearray (bytearray):\nx = bytearray(5)\n\nMemoryview (memoryview):\nx = memoryview(bytes(5))"
+        },
+        {
+          "type": "code",
+          "value": "x_bytes = b\"Hello\"\nprint(type(x_bytes))\n\nx_bytearray = bytearray(5)\nprint(type(x_bytearray))\n\nx_mem = memoryview(bytes(5))\nprint(type(x_mem))"
+        },
+        {
+          "type": "output",
+          "value": "<class 'bytes'>\n<class 'bytearray'>\n<class 'memoryview'>"
+        },
+        {
+          "type": "text",
+          "value": "None Type (NoneType)\nRepresents no value."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "x = None\nprint(type(x))"
+        },
+        {
+          "type": "output",
+          "value": "<class 'NoneType'>"
+        },
+        {
+          "type": "text",
+          "value": "Get Data Type\nUse the type() function to get the data type."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "name = \"Sudha\"\nage = 23\nprint(type(name))\nprint(type(age))"
+        },
+        {
+          "type": "output",
+          "value": "<class 'str'>\n<class 'int'>"
+        },
+        {
+          "type": "text",
+          "value": "Data Type Quick Revision:\n• str → Text values\n• int → Whole numbers\n• float → Decimal numbers\n• complex → Imaginary numbers\n• list → Ordered and changeable collection\n• tuple → Ordered and unchangeable collection\n• dict → Key-value pairs\n• set → Unique unordered values\n• bool → True or False\n• NoneType → No value"
+        }
+      ],
+      "questions": [
+        {
+          "question": "How do you check the data type of a variable in Python?",
+          "answer": "Using the built-in type() function."
+        },
+        {
+          "question": "Does Python have dynamic typing?",
+          "answer": "Yes, you don't need to declare the type of a variable, and it can change during execution."
+        }
+      ]
+    },
+    {
+      "id": "python-numbers",
+      "title": "Python Numbers",
+      "category": "Basic",
+      "definition": "Python has three numeric data types: int, float, and complex. This section covers their usage and type conversion.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Python Numbers\nPython has three numeric data types:\n• int\n• float\n• complex"
+        },
+        {
+          "type": "text",
+          "value": "Integer (int)\nIntegers are whole numbers without decimal points."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "x = 10\ny = -25\n\nprint(type(x))\nprint(type(y))"
+        },
+        {
+          "type": "output",
+          "value": "<class 'int'>\n<class 'int'>"
+        },
+        {
+          "type": "text",
+          "value": "Float (float)\nFloats are numbers with decimal points."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "x = 10.5\ny = -7.8\n\nprint(type(x))\nprint(type(y))"
+        },
+        {
+          "type": "output",
+          "value": "<class 'float'>\n<class 'float'>"
+        },
+        {
+          "type": "text",
+          "value": "Complex\nComplex numbers contain an imaginary part represented by j."
+        },
+        {
+          "type": "text",
+          "value": "Example"        },
+        {
+          "type": "code",
+          "value": "x = 3+5j\ny = 5j\nz = -5j\n\nprint(type(x))\nprint(type(y))\nprint(type(z))"
+        },
+        {
+          "type": "output",
+          "value": "<class 'complex'>\n<class 'complex'>\n<class 'complex'>"
+        },
+        {
+          "type": "text",
+          "value": "Type Conversion:\nYou can convert one numeric type into another using:\n• int()\n• float()\n• complex()"
+        },
+        {
+          "type": "text",
+          "value": "Example: Convert From One Type to Another"
+        },
+        {
+          "type": "code",
+          "value": "x = 1       # int\ny = 2.8     # float\nz = 1j      # complex\n\n# convert from int to float\na = float(x)\n\n# convert from float to int\nb = int(y)\n\n# convert from int to complex\nc = complex(x)\n\nprint(a)\nprint(b)\nprint(c)\n\nprint(type(a))\nprint(type(b))\nprint(type(c))"
+        },
+        {
+          "type": "output",
+          "value": "1.0\n2\n(1+0j)\n\n<class 'float'>\n<class 'int'>\n<class 'complex'>"
+        },
+        {
+          "type": "text",
+          "value": "Important Notes\n\n• int() removes the decimal part\nprint(int(5.9))\n# Output: 5\n\n• float() converts numbers into decimal form\nprint(float(10))\n# Output: 10.0\n\n• complex() adds an imaginary part\nprint(complex(7))\n# Output: (7+0j)"
+        },
+        {
+          "type": "text",
+          "value": "Numbers Quick Revision:\n• int → Whole numbers\n• float → Decimal numbers\n• complex → Numbers with imaginary part\n• int() → Convert to integer\n• float() → Convert to float\n• complex() → Convert to complex number"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What are the three numeric types in Python?",
+          "answer": "Int, Float, and Complex."
+        },
+        {
+          "question": "How do you convert a float to an integer?",
+          "answer": "Using the int() function, which will remove the decimal part (not round it)."
+        }
+      ]
+    },
+    {
+      "id": "python-casting",
+      "title": "Python Casting",
+      "category": "Basic",
+      "definition": "Casting means converting one data type into another data type. Python uses constructor functions like int(), float(), and str() for explicit casting.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Python Casting\nCasting means converting one data type into another data type.\nSometimes, you may want to specify the type of a variable manually.\nPython uses constructor functions for casting."
+        },
+        {
+          "type": "text",
+          "value": "int()\nConverts a value into an integer.\n• Removes decimal values\n• String must contain a valid whole number"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "x = int(5)\ny = int(7.9)\nz = int(\"10\")\nprint(x)\nprint(y)\nprint(z)"
+        },
+        {
+          "type": "output",
+          "value": "5\n7\n10"
+        },
+        {
+          "type": "text",
+          "value": "float()\nConverts a value into a float number."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "x = float(5)\ny = float(7.8)\nz = float(\"25\")\nprint(x)\nprint(y)\nprint(z)"
+        },
+        {
+          "type": "output",
+          "value": "5.0\n7.8\n25.0"
+        },
+        {
+          "type": "text",
+          "value": "str()\nConverts a value into a string."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "x = str(10)\ny = str(5.5)\nz = str(\"Vasu\")\nprint(x)\nprint(y)\nprint(z)"
+        },
+        {
+          "type": "output",
+          "value": "10\n5.5\nVasu"
+        },
+        {
+          "type": "text",
+          "value": "Checking Data Types After Casting\nUse the type() function."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "x = int(5.9)\ny = float(10)\nz = str(25)\nprint(type(x))\nprint(type(y))\nprint(type(z))"
+        },
+        {
+          "type": "output",
+          "value": "<class 'int'>\n<class 'float'>\n<class 'str'>"
+        },
+        {
+          "type": "text",
+          "value": "More Examples\n\nInteger to Float:\nx = 15\nprint(float(x))\n# Output: 15.0\n\nFloat to Integer:\nx = 9.8\nprint(int(x))\n# Output: 9\n\nNumber to String:\nage = 23\nprint(str(age))\n# Output: 23"
+        },
+        {
+          "type": "text",
+          "value": "Important Notes\n• int() removes decimal values instead of rounding.\n• float() always returns a decimal value.\n• str() converts values into text format.\n• Invalid strings cannot be converted to numbers (e.g., int(\"Vasu\") raises ValueError)."
+        },
+        {
+          "type": "text",
+          "value": "Casting Quick Revision:\n• Casting → Convert one data type to another\n• int() → Convert to integer\n• float() → Convert to float\n• str() → Convert to string\n• type() → Check data type after conversion"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What functions does Python use for casting?",
+          "answer": "Python uses constructor functions: int(), float(), and str()."
+        },
+        {
+          "question": "What happens if you try to cast an invalid string (like 'abc') to an integer?",
+          "answer": "It will raise a ValueError."
+        }
+      ]
+    },
+    {
+      "id": "python-strings",
+      "title": "Python Strings",
+      "category": "Basic",
+      "definition": "In Python, a string is a sequence of characters. This section covers quoting, indexing, slicing, and string membership tests.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Python Strings\nIn Python, a string is a sequence of characters enclosed in single quotes (' ') or double quotes (\" \")."
+        },
+        {
+          "type": "code",
+          "value": "print(\"Hello\")\nprint('Hello')"
+        },
+        {
+          "type": "output",
+          "value": "Hello\nHello"
+        },
+        {
+          "type": "text",
+          "value": "Quotes Inside Quotes\nYou can use quotes inside a string if they are different from the outer quotes."
+        },
+        {
+          "type": "code",
+          "value": "print(\"It's alright\")\nprint(\"He is called 'Johnny'\")\nprint('He is called \"Johnny\"')"
+        },
+        {
+          "type": "output",
+          "value": "It's alright\nHe is called 'Johnny'\nHe is called \"Johnny\""
+        },
+        {
+          "type": "text",
+          "value": "Assign String to a Variable\nStrings can be stored in variables."
+        },
+        {
+          "type": "code",
+          "value": "a = \"Hello\"\nprint(a)"
+        },
+        {
+          "type": "output",
+          "value": "Hello"
+        },
+        {
+          "type": "text",
+          "value": "Multiline Strings\nUse triple double quotes (\"\"\" \"\"\") or triple single quotes (''' ''') for multiline strings."
+        },
+        {
+          "type": "code",
+          "value": "a = \"\"\"Lorem ipsum dolor sit amet,\nconsectetur adipiscing elit,\nsed do eiusmod tempor incididunt\nut labore et dolore magna aliqua.\"\"\"\n\nprint(a)"
+        },
+        {
+          "type": "output",
+          "value": "Lorem ipsum dolor sit amet,\nconsectetur adipiscing elit,\nsed do eiusmod tempor incididunt\nut labore et dolore magna aliqua."
+        },
+        {
+          "type": "text",
+          "value": "Strings are Arrays\nStrings behave like arrays of characters. Each character has an index position starting from 0."
+        },
+        {
+          "type": "code",
+          "value": "a = \"Hello, World!\"\nprint(a[1])"
+        },
+        {
+          "type": "output",
+          "value": "e"
+        },
+        {
+          "type": "text",
+          "value": "Python indexing starts from 0 (from the beginning), and negative indexing starts from -1 (from the end)."
+        },
+        {
+          "type": "table",
+          "headers": ["Char", "H", "e", "l", "l", "o", ",", " ", "W", "o", "r", "l", "d", "!"],
+          "rows": [
+            ["Index", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+            ["Negative", "-13", "-12", "-11", "-10", "-9", "-8", "-7", "-6", "-5", "-4", "-3", "-2", "-1"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Looping Through a String\nWe can loop through each character using a for loop."
+        },
+        {
+          "type": "code",
+          "value": "for x in \"banana\":\n    print(x)"
+        },
+        {
+          "type": "output",
+          "value": "b\na\nn\na\nn\na"
+        },
+        {
+          "type": "text",
+          "value": "String Length\nUse the len() function to find the length of a string."
+        },
+        {
+          "type": "code",
+          "value": "a = \"Hello, World!\"\nprint(len(a))"
+        },
+        {
+          "type": "output",
+          "value": "13"
+        },
+        {
+          "type": "text",
+          "value": "Check String Using in\nThe in keyword checks whether a word or character exists in a string."
+        },
+        {
+          "type": "code",
+          "value": "txt = \"The best things in life are free!\"\nprint(\"free\" in txt)"
+        },
+        {
+          "type": "output",
+          "value": "True"
+        },
+        {
+          "type": "text",
+          "value": "Using in with if"
+        },
+        {
+          "type": "code",
+          "value": "txt = \"The best things in life are free!\"\n\nif \"free\" in txt:\n    print(\"Yes, 'free' is present.\")"
+        },
+        {
+          "type": "output",
+          "value": "Yes, 'free' is present."
+        },
+        {
+          "type": "text",
+          "value": "Check String Using not in\nThe not in keyword checks whether something is NOT present in a string."
+        },
+        {
+          "type": "code",
+          "value": "txt = \"The best things in life are free!\"\nprint(\"expensive\" not in txt)"
+        },
+        {
+          "type": "output",
+          "value": "True"
+        },
+        {
+          "type": "text",
+          "value": "Using not in with if"
+        },
+        {
+          "type": "code",
+          "value": "txt = \"The best things in life are free!\"\n\nif \"expensive\" not in txt:\n    print(\"No, 'expensive' is NOT present.\")"
+        },
+        {
+          "type": "output",
+          "value": "No, 'expensive' is NOT present."
+        },
+        {
+          "type": "text",
+          "value": "Strings Quick Revision"
+        },
+        {
+          "type": "table",
+          "headers": ["Concept", "Example"],
+          "rows": [
+            ["String", "\"Hello\""],
+            ["Single Quotes", "'Python'"],
+            ["Double Quotes", "\"Python\""],
+            ["Multiline String", "\"\"\"Hello\"\"\""],
+            ["Access Character", "a[0]"],
+            ["Loop String", "for x in a"],
+            ["Length", "len(a)"],
+            ["Check Present", "\"a\" in txt"],
+            ["Check Not Present", "\"a\" not in txt"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "How do you check if a character exists in a string?",
+          "answer": "Using the 'in' keyword (e.g., 'a' in 'banana')."
+        },
+        {
+          "question": "How do you find the number of characters in a string?",
+          "answer": "Using the built-in len() function."
+        }
+      ]
+    },
+    {
+      "id": "python-string-slicing",
+      "title": "Python - Slicing Strings",
+      "category": "Basic",
+      "definition": "String slicing is used to extract a part (substring) of a string using a range of indices.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "What is String Slicing?\nString slicing is used to extract a part (substring) of a string.\n\nSyntax:\nstring[start:end]\n• start → starting index\n• end → ending index (not included)"
+        },
+        {
+          "type": "text",
+          "value": "Example 1: Basic Slicing"
+        },
+        {
+          "type": "code",
+          "value": "b = \"Hello, World!\"\nprint(b[2:5])"
+        },
+        {
+          "type": "output",
+          "value": "llo"
+        },
+        {
+          "type": "text",
+          "value": "Explanation:\nStart = 2 (l), End = 5 (stops before index 5). Result: llo"
+        },
+        {
+          "type": "text",
+          "value": "Slice From the Start\nIf start index is omitted, Python starts from index 0."
+        },
+        {
+          "type": "code",
+          "value": "b = \"Hello, World!\"\nprint(b[:5])"
+        },
+        {
+          "type": "output",
+          "value": "Hello"
+        },
+        {
+          "type": "text",
+          "value": "Slice To the End\nIf end index is omitted, slicing continues till the end."
+        },
+        {
+          "type": "code",
+          "value": "b = \"Hello, World!\"\nprint(b[2:])"
+        },
+        {
+          "type": "output",
+          "value": "llo, World!"
+        },
+        {
+          "type": "text",
+          "value": "Negative Indexing\nNegative indexes count from the end (-1 is the last character)."
+        },
+        {
+          "type": "code",
+          "value": "b = \"Hello, World!\"\nprint(b[-5:-2])"
+        },
+        {
+          "type": "output",
+          "value": "orl"
+        },
+        {
+          "type": "text",
+          "value": "Important Points"
+        },
+        {
+          "type": "table",
+          "headers": ["Slicing", "Meaning"],
+          "rows": [
+            ["s[2:5]", "index 2 to 4"],
+            ["s[:5]", "start to 4"],
+            ["s[2:]", "2 to end"],
+            ["s[-5:-2]", "negative slicing"],
+            ["s[:]", "full string copy"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "More Examples\n\nExample 1:\nname = \"Python\"\nprint(name[1:4])\n# Output: yth\n\nExample 2:\nname = \"Python\"\nprint(name[:3])\n# Output: Pyt\n\nExample 3:\nname = \"Python\"\nprint(name[3:])\n# Output: hon\n\nExample 4:\nname = \"Python\"\nprint(name[-4:-1])\n# Output: tho"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision"
+        },
+        {
+          "type": "table",
+          "headers": ["Syntax", "Result"],
+          "rows": [
+            ["s[1:5]", "start to end-1"],
+            ["s[:5]", "from beginning"],
+            ["s[2:]", "till end"],
+            ["s[-4:-1]", "negative slicing"],
+            ["s[:]", "full copy"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Does slicing include the end index?",
+          "answer": "No. The end index is excluded."
+        },
+        {
+          "question": "What is negative indexing?",
+          "answer": "Accessing characters from the end of the string using negative numbers (e.g., -1 for the last character)."
+        },
+        {
+          "question": "How to copy an entire string using slicing?",
+          "answer": "Use s[:] to copy the entire string."
+        }
+      ]
+    },
+    {
+      "id": "python-modify-strings",
+      "title": "Python - Modify Strings",
+      "category": "Basic",
+      "definition": "Python provides many built-in string methods to modify and work with strings easily.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Upper Case\nThe upper() method converts all characters in a string to uppercase."
+        },
+        {
+          "type": "code",
+          "value": "a = \"Hello, World!\"\nprint(a.upper())"
+        },
+        {
+          "type": "output",
+          "value": "HELLO, WORLD!"
+        },
+        {
+          "type": "text",
+          "value": "2. Lower Case\nThe lower() method converts all characters in a string to lowercase."
+        },
+        {
+          "type": "code",
+          "value": "a = \"Hello, World!\"\nprint(a.lower())"
+        },
+        {
+          "type": "output",
+          "value": "hello, world!"
+        },
+        {
+          "type": "text",
+          "value": "3. Remove Whitespace\nWhitespace means spaces before or after the text.\nThe strip() method removes spaces from the beginning and end of a string."
+        },
+        {
+          "type": "code",
+          "value": "a = \" Hello, World! \"\nprint(a.strip())"
+        },
+        {
+          "type": "output",
+          "value": "Hello, World!"
+        },
+        {
+          "type": "text",
+          "value": "4. Replace String\nThe replace() method replaces one string with another string."
+        },
+        {
+          "type": "code",
+          "value": "a = \"Hello, World!\"\nprint(a.replace(\"H\", \"J\"))"
+        },
+        {
+          "type": "output",
+          "value": "Jello, World!"
+        },
+        {
+          "type": "text",
+          "value": "5. Split String\nThe split() method splits a string into multiple parts and returns a list based on a separator."
+        },
+        {
+          "type": "code",
+          "value": "a = \"Hello, World!\"\nprint(a.split(\",\"))"
+        },
+        {
+          "type": "output",
+          "value": "['Hello', ' World!']"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision:\n• upper() → CAPITAL LETTERS\n• lower() → small letters\n• strip() → removes extra spaces\n• replace() → changes text\n• split() → converts string into list"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What does the upper() method do?",
+          "answer": "It converts all characters in a string to uppercase."
+        },
+        {
+          "question": "What is the purpose of the strip() method?",
+          "answer": "It removes any leading and trailing whitespace from the string."
+        },
+        {
+          "question": "How do you replace a specific part of a string with another?",
+          "answer": "Use the replace() method, e.g., string.replace('old', 'new')."
+        },
+        {
+          "question": "What does the split() method return?",
+          "answer": "It returns a list where the string has been split at each instance of the specified separator."
+        }
+      ]
+    },
+    {
+      "id": "python-string-methods-reference",
+      "title": "Python String Methods Reference",
+      "category": "Basic",
+      "definition": "Python provides a rich set of built-in string methods that return new values without modifying the original immutable string.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Note: All string methods return new values. They do NOT change the original string because strings in Python are immutable."
+        },
+        {
+          "type": "table",
+          "headers": ["Method", "Description"],
+          "rows": [
+            ["capitalize()", "Converts first character to uppercase"],
+            ["casefold()", "Converts string into lowercase"],
+            ["center()", "Returns centered string"],
+            ["count()", "Counts occurrences of a value"],
+            ["endswith()", "Checks if string ends with specified value"],
+            ["find()", "Finds position of specified value (returns -1 if not found)"],
+            ["format()", "Formats values into string"],
+            ["index()", "Returns position of specified value (raises error if not found)"],
+            ["isalnum()", "Checks if all characters are alphanumeric"],
+            ["isalpha()", "Checks if all characters are alphabets"],
+            ["isdigit()", "Checks if all characters are digits"],
+            ["islower()", "Checks if all characters are lowercase"],
+            ["isnumeric()", "Checks if all characters are numeric"],
+            ["isspace()", "Checks if all characters are whitespace"],
+            ["isupper()", "Checks if all characters are uppercase"],
+            ["join()", "Joins iterable elements into string"],
+            ["replace()", "Replaces substring"],
+            ["split()", "Splits string into a list"],
+            ["startswith()", "Checks if string starts with value"],
+            ["strip()", "Removes spaces from both sides"],
+            ["swapcase()", "Swaps upper/lower case"],
+            ["title()", "Converts first letter of each word to uppercase"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Important String Methods with Examples"
+        },
+        {
+          "type": "text",
+          "value": "1. capitalize() & title()\ncapitalize() handles the first char only, while title() handles every word."
+        },
+        {
+          "type": "code",
+          "value": "a = \"python programming language\"\nprint(a.capitalize())\nprint(a.title())"
+        },
+        {
+          "type": "output",
+          "value": "Python programming language\nPython Programming Language"
+        },
+        {
+          "type": "text",
+          "value": "2. find() vs index()\nCrucial interview point: find() returns -1 on failure, index() raises an exception."
+        },
+        {
+          "type": "code",
+          "value": "a = \"Python\"\nprint(a.find(\"x\"))\n# print(a.index(\"x\")) # This would crash"
+        },
+        {
+          "type": "output",
+          "value": "-1"
+        },
+        {
+          "type": "text",
+          "value": "3. startswith() & endswith()\nUsed for pattern checking and file extension validation."
+        },
+        {
+          "type": "code",
+          "value": "file = \"data.csv\"\nprint(file.endswith(\".csv\"))"
+        },
+        {
+          "type": "output",
+          "value": "True"
+        },
+        {
+          "type": "text",
+          "value": "Interview Concept: Immutability\nYou cannot modify a string after creation. You must create a new one."
+        },
+        {
+          "type": "code",
+          "value": "a = \"hello\"\n# a[0] = \"H\" # Raises TypeError\na = \"H\" + a[1:] # Correct way\nprint(a)"
+        },
+        {
+          "type": "output",
+          "value": "Hello"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision:\n• find() vs index(): Error handling diff\n• capitalize() vs title(): Word vs Sentence\n• Immutability: Cannot change s[i] directly\n• join(): More efficient for concatenation than +"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between find() and index()?",
+          "answer": "Both find the position of a substring, but find() returns -1 if the value is not found, while index() raises a ValueError."
+        },
+        {
+          "question": "Are Python strings mutable or immutable?",
+          "answer": "Python strings are immutable, meaning their content cannot be changed after they are created."
+        },
+        {
+          "question": "What is the difference between title() and capitalize()?",
+          "answer": "capitalize() only converts the first character of the entire string to uppercase, while title() converts the first character of every word to uppercase."
+        },
+        {
+          "question": "How do you check if a string consists only of digits?",
+          "answer": "Using the string.isdigit() method."
+        }
+      ]
+    },
+    {
+      "id": "python-string-concatenation",
+      "title": "Python String Concatenation",
+      "category": "Basic",
+      "definition": "String concatenation is the process of joining two or more strings together using operators like + or specialized methods like join() and f-strings.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "There are several ways to join strings in Python:\n1. + operator\n2. += operator\n3. join() method\n4. f-strings (Recommended)\n5. % formatting\n6. format() method"
+        },
+        {
+          "type": "text",
+          "value": "1. Using + Operator\nThe simplest way to join strings."
+        },
+        {
+          "type": "code",
+          "value": "first = \"Hello\"\nsecond = \"World\"\nresult = first + \" \" + second\nprint(result)"
+        },
+        {
+          "type": "output",
+          "value": "Hello World"
+        },
+        {
+          "type": "text",
+          "value": "2. Using join() Method\nMost efficient for joining multiple strings from a list or tuple."
+        },
+        {
+          "type": "code",
+          "value": "words = [\"I\", \"Love\", \"Python\"]\nresult = \" \".join(words)\nprint(result)"
+        },
+        {
+          "type": "output",
+          "value": "I Love Python"
+        },
+        {
+          "type": "text",
+          "value": "3. Using f-Strings (Modern Approach)\nIntroduced in Python 3.6, it is the most readable and concise way."
+        },
+        {
+          "type": "code",
+          "value": "name = \"Dhana\"\nage = 23\nresult = f\"My name is {name} and I am {age} years old.\"\nprint(result)"
+        },
+        {
+          "type": "output",
+          "value": "My name is Dhana and I am 23 years old."
+        },
+        {
+          "type": "text",
+          "value": "CRITICAL ERROR: String + Integer\nYou cannot concatenate a string with an integer directly."
+        },
+        {
+          "type": "code",
+          "value": "age = 23\n# print(\"Age is \" + age) # Raises TypeError\nprint(\"Age is \" + str(age)) # Correct way"
+        },
+        {
+          "type": "output",
+          "value": "Age is 23"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision Table"
+        },
+        {
+          "type": "table",
+          "headers": ["Method", "Example"],
+          "rows": [
+            ["+", "\"Hello\" + \"World\""],
+            ["+=", "text += \"Python\""],
+            ["join()", "\" \".join(list)"],
+            ["f-string", "f\"{name}\""],
+            ["%", "\"%s\" % name"],
+            ["format()", "\"{}\".format(name)"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the most efficient way to join a large list of strings in Python?",
+          "answer": "Using the 'join()' method is significantly more efficient than using '+' in a loop, as it calculates memory only once."
+        },
+        {
+          "question": "Can you concatenate a string and an integer using the + operator?",
+          "answer": "No, it will raise a TypeError. You must first convert the integer to a string using str() or use an f-string."
+        },
+        {
+          "question": "When were f-strings introduced and why are they preferred?",
+          "answer": "Introduced in Python 3.6, they are preferred because they are faster, more readable, and allow embedding expressions directly in the string."
+        }
+      ]
+    },
+    {
+      "id": "python-string-formatting",
+      "title": "Python String Formatting",
+      "category": "Basic",
+      "definition": "String formatting allows you to create dynamic strings by inserting and formatting values (like numbers, decimals, and padding) directly into text templates.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. f-strings (Recommended, Python 3.6+)\nf-strings are the fastest and most readable way to format strings."
+        },
+        {
+          "type": "code",
+          "value": "name = \"Alice\"\nage = 25\nprint(f\"My name is {name} and I am {age} years old.\")\n# Expressions inside f-strings\nprint(f\"Next year I will be {age + 1}\")"
+        },
+        {
+          "type": "output",
+          "value": "My name is Alice and I am 25 years old.\nNext year I will be 26"
+        },
+        {
+          "type": "text",
+          "value": "2. str.format() method\nWorks by using placeholders {} which are filled by the format() method arguments."
+        },
+        {
+          "type": "code",
+          "value": "print(\"My name is {} and I am {}\".format(\"Alice\", 25))\n# Named placeholders\nprint(\"My name is {n} and I am {a}\".format(n=\"Alice\", a=25))"
+        },
+        {
+          "type": "output",
+          "value": "My name is Alice and I am 25\nMy name is Alice and I am 25"
+        },
+        {
+          "type": "text",
+          "value": "3. Formatting Numbers (Power of f-strings)\nf-strings allow you to format numbers for decimals, padding, and alignment easily."
+        },
+        {
+          "type": "code",
+          "value": "pi = 3.14159\nprint(f\"Two decimals: {pi:.2f}\")\n\nnum = 5\nprint(f\"Padding: {num:03}\")\n\nlarge_num = 1000000\nprint(f\"Commas: {large_num:,}\")\n\nscore = 0.85\nprint(f\"Percent: {score:.0%}\")"
+        },
+        {
+          "type": "output",
+          "value": "Two decimals: 3.14\nPadding: 005\nCommas: 1,000,000\nPercent: 85%"
+        },
+        {
+          "type": "text",
+          "value": "4. Alignment with f-strings\nYou can left, right, or center align text within a specific width."
+        },
+        {
+          "type": "code",
+          "value": "text = \"Hi\"\nprint(f\"|{text:<10}|\")  # Left\nprint(f\"|{text:>10}|\")  # Right\nprint(f\"|{text:^10}|\")  # Center"
+        },
+        {
+          "type": "output",
+          "value": "|Hi        |\n|        Hi|\n|    Hi    |"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision Summary:\n• f-strings: Modern, fast, readable\n• .format(): Traditional placeholder method\n• :.2f: Format to 2 decimal places\n• :,: Add thousands separator commas"
+        }
+      ],
+      "questions": [
+        {
+          "question": "How do you limit a float to 2 decimal places using f-strings?",
+          "answer": "Use the syntax f'{value:.2f}' inside the string."
+        },
+        {
+          "question": "How can you add leading zeros to a number (e.g., convert 5 to 005)?",
+          "answer": "Using padding syntax in f-strings: f'{num:03}' where 3 is the total width."
+        },
+        {
+          "question": "What is the f-string syntax for adding thousand-separator commas to a large number?",
+          "answer": "Use the syntax f'{number:,}'."
+        },
+        {
+          "question": "What is the difference between <, >, and ^ in f-string alignment?",
+          "answer": "< is for left alignment, > is for right alignment, and ^ is for center alignment."
+        }
+      ]
+    },
+    {
+      "id": "python-placeholders-modifiers",
+      "title": "Python Placeholders & Modifiers",
+      "category": "Basic",
+      "definition": "Placeholders { } allow for dynamic insertion of variables, expressions, and function results into strings, while Modifiers : format those values for precision, alignment, and display style.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. What are Placeholders?\nIn f-strings, a placeholder is defined inside { }. It can contain variables, mathematical operations, and even function calls."
+        },
+        {
+          "type": "code",
+          "value": "name = \"python\"\nx = 10; y = 5\n# Operations and Functions inside placeholders\nprint(f\"Sum: {x + y}\")\nprint(f\"Upper: {name.upper()}\")\nprint(f\"Length: {len(name)}\")"
+        },
+        {
+          "type": "output",
+          "value": "Sum: 15\nUpper: PYTHON\nLength: 6"
+        },
+        {
+          "type": "text",
+          "value": "2. What are Modifiers?\nModifiers are used after a colon : inside the placeholder to change how the value is displayed.\nSyntax: {value:modifier}"
+        },
+        {
+          "type": "text",
+          "value": "📍 Float Precision (.2f)\nControls the number of decimal places for float numbers."
+        },
+        {
+          "type": "code",
+          "value": "price = 49.9876\nprint(f\"Price: {price:.2f}\")"
+        },
+        {
+          "type": "output",
+          "value": "Price: 49.99"
+        },
+        {
+          "type": "text",
+          "value": "📍 Zero Padding (:03)\nFills leading empty spaces with zeros until the specified width is reached."
+        },
+        {
+          "type": "code",
+          "value": "num = 5\nprint(f\"Padded: {num:03}\")"
+        },
+        {
+          "type": "output",
+          "value": "Padded: 005"
+        },
+        {
+          "type": "text",
+          "value": "📍 Comma Separator (:,)\nAutomatically adds commas to large numbers for better readability."
+        },
+        {
+          "type": "code",
+          "value": "amount = 1000000\nprint(f\"Total: {amount:,}\")"
+        },
+        {
+          "type": "output",
+          "value": "Total: 1,000,000"
+        },
+        {
+          "type": "table",
+          "headers": ["Modifier", "Meaning", "Example"],
+          "rows": [
+            [".2f", "2 decimal places", "3.14"],
+            [":03", "Zero padding", "005"],
+            [":<10", "Left align", "Text left"],
+            [":>10", "Right align", "Text right"],
+            [":^10", "Center align", "Text center"],
+            [":,", "Comma separator", "1,000"],
+            [".0%", "Percentage", "85%"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision Summary:\n• { } → Placeholder for dynamic data\n• : → Starts the modifier section\n• .2f → Two decimal precision\n• 03 → Pad with zeros up to 3 digits"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Can you perform calculations inside a placeholder?",
+          "answer": "Yes, f-strings allow mathematical operations like {x + y} directly inside the braces."
+        },
+        {
+          "question": "How do you call a string method inside an f-string?",
+          "answer": "You can call it directly, for example: f'{name.upper()}'."
+        },
+        {
+          "question": "What is the syntax for a modifier in a placeholder?",
+          "answer": "The syntax is {value:modifier}, where the colon separates the value from its formatting rule."
+        },
+        {
+          "question": "What does the modifier :^10 do?",
+          "answer": "It center-aligns the text within a field that is 10 characters wide."
+        }
+      ]
+    },
+    {
+      "id": "python-escape-characters",
+      "title": "Python Escape Characters",
+      "category": "Basic",
+      "definition": "Escape characters are special sequences that begin with a backslash (\\) and are used to represent characters that are otherwise difficult to include directly in a string.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Common Python Escape Characters Reference"
+        },
+        {
+          "type": "table",
+          "headers": ["Escape Character", "Description", "Example", "Output"],
+          "rows": [
+            ["\\'", "Single Quote", "'It\\'s OK'", "It's OK"],
+            ["\\\"", "Double Quote", "\"He said \\\"Hi\\\"\"", "He said \"Hi\""],
+            ["\\\\", "Backslash", "\"C:\\\\Users\"", "C:\\Users"],
+            ["\\n", "New Line", "\"Hello\\nWorld\"", "Hello ↵ World"],
+            ["\\t", "Tab Space", "\"Hello\\tWorld\"", "Hello    World"],
+            ["\\r", "Carriage Return", "\"Hello\\rWorld\"", "Overwrites beginning"],
+            ["\\b", "Backspace", "\"Helloo\\b\"", "Hello"],
+            ["\\f", "Form Feed", "\"Hello\\fWorld\"", "Form feed character"],
+            ["\\ooo", "Octal Value", "\"\\110\"", "H"],
+            ["\\xhh", "Hexadecimal Value", "\"\\x48\"", "H"],
+            ["\\a", "Bell/Alert Sound", "\"\\a\"", "Alert sound"],
+            ["\\v", "Vertical Tab", "\"Hello\\vWorld\"", "Vertical spacing"],
+            ["\\0", "Null Character", "\"\\0\"", "Null character"],
+            ["\\N{name}", "Unicode by Name", "\"\\N{HEART SUIT}\"", "♥"],
+            ["\\uXXXX", "Unicode 16-bit Hex", "\"\\u03A9\"", "Ω"],
+            ["\\UXXXXXXXX", "Unicode 32-bit Hex", "\"\\U0001F600\"", "😀"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1. Single Quote"
+        },
+        {
+          "type": "code",
+          "value": "txt = 'It\\'s alright.'\nprint(txt)"
+        },
+        {
+          "type": "output",
+          "value": "It's alright."
+        },
+        {
+          "type": "text",
+          "value": "2. Backslash"
+        },
+        {
+          "type": "code",
+          "value": "txt = \"This will insert one \\\\ backslash.\"\nprint(txt)"
+        },
+        {
+          "type": "output",
+          "value": "This will insert one \\ backslash."
+        },
+        {
+          "type": "text",
+          "value": "3. New Line (\\n)"
+        },
+        {
+          "type": "code",
+          "value": "txt = \"Hello\\nWorld\"\nprint(txt)"
+        },
+        {
+          "type": "output",
+          "value": "Hello\nWorld"
+        },
+        {
+          "type": "text",
+          "value": "4. Tab (\\t)"
+        },
+        {
+          "type": "code",
+          "value": "txt = \"Hello\\tWorld\"\nprint(txt)"
+        },
+        {
+          "type": "output",
+          "value": "Hello    World"
+        },
+        {
+          "type": "text",
+          "value": "5. Backspace (\\b)"
+        },
+        {
+          "type": "code",
+          "value": "txt = \"Hello\\bWorld\"\nprint(txt)"
+        },
+        {
+          "type": "output",
+          "value": "HellWorld"
+        },
+        {
+          "type": "text",
+          "value": "6. Form Feed (\\f)"
+        },
+        {
+          "type": "code",
+          "value": "txt = \"Hello\\fWorld\"\nprint(txt)"
+        },
+        {
+          "type": "output",
+          "value": "Hello\fWorld"
+        },
+        {
+          "type": "text",
+          "value": "7. Hex Value (\\xhh)"
+        },
+        {
+          "type": "code",
+          "value": "txt = \"\\x48\\x65\\x6c\\x6c\\x6f\"\nprint(txt)"
+        },
+        {
+          "type": "output",
+          "value": "Hello"
+        },
+        {
+          "type": "text",
+          "value": "📍 Raw Strings (ignore escape characters)\nPrefixing a string with 'r' tells Python to ignore escape sequences. This is essential for Windows file paths."
+        },
+        {
+          "type": "code",
+          "value": "print(r\"Hello\\nWorld\")\nprint(r\"C:\\Users\\Admin\")"
+        },
+        {
+          "type": "output",
+          "value": "Hello\\nWorld\nC:\\Users\\Admin"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision Summary:\n• \\\\ → Literal backslash\n• \\n → Move to next line\n• \\t → Insert a tab space\n• r\"...\" → Raw string (no escaping)"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the purpose of the backslash (\\) in a string?",
+          "answer": "It serves as an escape character, indicating that the character following it has a special meaning (like \\n for newline)."
+        },
+        {
+          "question": "How do you include a double quote inside a string that is already enclosed in double quotes?",
+          "answer": "By using the escape sequence \\\"."
+        },
+        {
+          "question": "What is a 'raw string' and how do you create one?",
+          "answer": "A raw string treats backslashes as literal characters rather than escape sequences. It is created by adding an 'r' prefix (e.g., r'C:\\\\path')."
+        },
+        {
+          "question": "Which escape sequence is used to represent a tab space?",
+          "answer": "The \\t escape sequence."
+        }
+      ]
+    },
+    {
+      "id": "python-booleans",
+      "title": "Python Booleans",
+      "category": "Basic",
+      "definition": "In Python, a Boolean represents one of two values: True or False. Booleans are used to test conditions.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Boolean Values"
+        },
+        {
+          "type": "code",
+          "value": "print(True)\nprint(False)"
+        },
+        {
+          "type": "output",
+          "value": "True\nFalse"
+        },
+        {
+          "type": "text",
+          "value": "Boolean Type\nUse type() to check the data type."
+        },
+        {
+          "type": "code",
+          "value": "x = True\nprint(type(x))"
+        },
+        {
+          "type": "output",
+          "value": "<class 'bool'>"
+        },
+        {
+          "type": "text",
+          "value": "Boolean from Comparisons\nPython returns True or False when comparing values."
+        },
+        {
+          "type": "text",
+          "value": "Equal To (==)"
+        },
+        {
+          "type": "code",
+          "value": "print(10 == 10)\nprint(10 == 5)"
+        },
+        {
+          "type": "output",
+          "value": "True\nFalse"
+        },
+        {
+          "type": "text",
+          "value": "Not Equal To (!=)"
+        },
+        {
+          "type": "code",
+          "value": "print(10 != 5)\nprint(10 != 10)"
+        },
+        {
+          "type": "output",
+          "value": "True\nFalse"
+        },
+        {
+          "type": "text",
+          "value": "Greater Than (>)"
+        },
+        {
+          "type": "code",
+          "value": "print(20 > 10)\nprint(5 > 10)"
+        },
+        {
+          "type": "output",
+          "value": "True\nFalse"
+        },
+        {
+          "type": "text",
+          "value": "Less Than (<)"
+        },
+        {
+          "type": "code",
+          "value": "print(5 < 10)\nprint(20 < 10)"
+        },
+        {
+          "type": "output",
+          "value": "True\nFalse"
+        },
+        {
+          "type": "text",
+          "value": "Greater Than or Equal To (>=)"
+        },
+        {
+          "type": "code",
+          "value": "print(10 >= 10)\nprint(5 >= 10)"
+        },
+        {
+          "type": "output",
+          "value": "True\nFalse"
+        },
+        {
+          "type": "text",
+          "value": "Less Than or Equal To (<=)"
+        },
+        {
+          "type": "code",
+          "value": "print(5 <= 10)\nprint(20 <= 10)"
+        },
+        {
+          "type": "output",
+          "value": "True\nFalse"
+        },
+        {
+          "type": "text",
+          "value": "The bool() Function\nThe bool() function converts values into Boolean values."
+        },
+        {
+          "type": "text",
+          "value": "Values That Return True"
+        },
+        {
+          "type": "code",
+          "value": "print(bool(\"Hello\"))\nprint(bool(100))\nprint(bool([1, 2, 3]))"
+        },
+        {
+          "type": "output",
+          "value": "True\nTrue\nTrue"
+        },
+        {
+          "type": "text",
+          "value": "Values That Return False"
+        },
+        {
+          "type": "code",
+          "value": "print(bool(\"\"))\nprint(bool(0))\nprint(bool([]))\nprint(bool(None))"
+        },
+        {
+          "type": "output",
+          "value": "False\nFalse\nFalse\nFalse"
+        },
+        {
+          "type": "text",
+          "value": "Boolean Operators"
+        },
+        {
+          "type": "table",
+          "headers": ["Operator", "Meaning", "Example"],
+          "rows": [
+            ["and", "Both conditions must be True", "5 > 2 and 10 > 5"],
+            ["or", "At least one condition must be True", "5 > 10 or 10 > 5"],
+            ["not", "Reverses the result", "not(5 > 2)"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Boolean Summary"
+        },
+        {
+          "type": "table",
+          "headers": ["Expression", "Output"],
+          "rows": [
+            ["10 > 5", "True"],
+            ["10 < 5", "False"],
+            ["10 == 10", "True"],
+            ["10 != 10", "False"],
+            ["bool(1)", "True"],
+            ["bool(0)", "False"],
+            ["bool(\"Python\")", "True"],
+            ["bool(\"\")", "False"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What are the only two possible values for a Boolean in Python?",
+          "answer": "True and False (note the capitalization)."
+        },
+        {
+          "question": "Which values evaluate to False when passed to the bool() function?",
+          "answer": "Empty strings (\"\"), the number 0, None, and empty collections like [], (), or {}."
+        },
+        {
+          "question": "What does the 'not' operator do?",
+          "answer": "It reverses the Boolean value; 'not True' becomes False, and 'not False' becomes True."
+        },
+        {
+          "question": "What is the result of '5 > 10 or 10 > 5'?",
+          "answer": "True, because the 'or' operator only requires one of the conditions to be True."
+        }
+      ]
+    },
+    {
+      "id": "python-operators",
+      "title": "Python Operators",
+      "category": "Basic",
+      "definition": "Operators are used to perform operations on variables and values.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Arithmetic Operators\nUsed for mathematical calculations."
+        },
+        {
+          "type": "table",
+          "headers": ["Operator", "Meaning", "Example"],
+          "rows": [
+            ["+", "Addition", "a + b"],
+            ["-", "Subtraction", "a - b"],
+            ["*", "Multiplication", "a * b"],
+            ["/", "Division", "a / b"],
+            ["%", "Modulus", "a % b"],
+            ["**", "Power", "a ** b"],
+            ["//", "Floor Division", "a // b"]
+          ]
+        },
+        {
+          "type": "code",
+          "value": "a = 10\nb = 3\n\nprint(a + b)\nprint(a - b)\nprint(a * b)\nprint(a / b)\nprint(a % b)\nprint(a ** b)\nprint(a // b)"
+        },
+        {
+          "type": "output",
+          "value": "13\n7\n30\n3.3333333333333335\n1\n1000\n3"
+        },
+        {
+          "type": "text",
+          "value": "2. Assignment Operators\nUsed to assign values to variables."
+        },
+        {
+          "type": "table",
+          "headers": ["Operator", "Example", "Same As"],
+          "rows": [
+            ["=", "x = 5", "Assign"],
+            ["+=", "x += 3", "x = x + 3"],
+            ["-=", "x -= 3", "x = x - 3"],
+            ["*=", "x *= 3", "x = x * 3"],
+            ["/=", "x /= 3", "x = x / 3"]
+          ]
+        },
+        {
+          "type": "code",
+          "value": "x = 5\n\nx += 3\nprint(x)\n\nx -= 2\nprint(x)\n\nx *= 4\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "8\n6\n24"
+        },
+        {
+          "type": "text",
+          "value": "3. Comparison Operators\nUsed to compare two values."
+        },
+        {
+          "type": "table",
+          "headers": ["Operator", "Meaning"],
+          "rows": [
+            ["==", "Equal"],
+            ["!=", "Not Equal"],
+            [">", "Greater Than"],
+            ["<", "Less Than"],
+            [">=", "Greater Than or Equal"],
+            ["<=", "Less Than or Equal"]
+          ]
+        },
+        {
+          "type": "code",
+          "value": "a = 10\nb = 5\n\nprint(a == b)\nprint(a != b)\nprint(a > b)\nprint(a < b)\nprint(a >= b)\nprint(a <= b)"
+        },
+        {
+          "type": "output",
+          "value": "False\nTrue\nTrue\nFalse\nTrue\nFalse"
+        },
+        {
+          "type": "text",
+          "value": "4. Logical Operators\nUsed to combine conditional statements."
+        },
+        {
+          "type": "table",
+          "headers": ["Operator", "Meaning"],
+          "rows": [
+            ["and", "Returns True if both are true"],
+            ["or", "Returns True if one is true"],
+            ["not", "Reverse the result"]
+          ]
+        },
+        {
+          "type": "code",
+          "value": "x = 5\n\nprint(x > 2 and x < 10)\nprint(x > 10 or x < 10)\nprint(not(x > 2))"
+        },
+        {
+          "type": "output",
+          "value": "True\nTrue\nFalse"
+        },
+        {
+          "type": "text",
+          "value": "5. Identity Operators\nUsed to compare object memory locations."
+        },
+        {
+          "type": "table",
+          "headers": ["Operator", "Meaning"],
+          "rows": [
+            ["is", "Same object"],
+            ["is not", "Not same object"]
+          ]
+        },
+        {
+          "type": "code",
+          "value": "a = [1, 2]\nb = a\nc = [1, 2]\n\nprint(a is b)\nprint(a is c)\nprint(a is not c)"
+        },
+        {
+          "type": "output",
+          "value": "True\nFalse\nTrue"
+        },
+        {
+          "type": "text",
+          "value": "6. Membership Operators\nUsed to test whether a value exists in a sequence."
+        },
+        {
+          "type": "table",
+          "headers": ["Operator", "Meaning"],
+          "rows": [
+            ["in", "Value exists"],
+            ["not in", "Value does not exist"]
+          ]
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\", \"mango\"]\n\nprint(\"apple\" in fruits)\nprint(\"grapes\" in fruits)\nprint(\"banana\" not in fruits)"
+        },
+        {
+          "type": "output",
+          "value": "True\nFalse\nFalse"
+        },
+        {
+          "type": "text",
+          "value": "7. Bitwise Operators\nUsed to perform operations on binary numbers."
+        },
+        {
+          "type": "table",
+          "headers": ["Operator", "Meaning"],
+          "rows": [
+            ["&", "AND"],
+            ["|", "OR"],
+            ["^", "XOR"],
+            ["~", "NOT"],
+            ["<<", "Left Shift"],
+            [">>", "Right Shift"]
+          ]
+        },
+        {
+          "type": "code",
+          "value": "a = 5\nb = 3\n\nprint(a & b)\nprint(a | b)\nprint(a ^ b)\nprint(a << 1)\nprint(a >> 1)"
+        },
+        {
+          "type": "output",
+          "value": "1\n7\n6\n10\n2"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision Summary:\n• Arithmetic: Math (+, -, *, /, %, **, //)\n• Assignment: Shorthand values (+=, -=)\n• Comparison: Equality and relative size (==, !=, >)\n• Identity: Memory check (is, is not)\n• Membership: Sequence check (in, not in)\n• Logical: Boolean combo (and, or, not)"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between '/' and '//' in Python?",
+          "answer": "'/' performs standard division and returns a float, while '//' performs floor division and returns the largest whole number (integer) less than or equal to the result."
+        },
+        {
+          "question": "What is the result of 'is' vs '=='?",
+          "answer": "'==' compares the values of two objects, while 'is' compares their identity (memory location) to see if they are the exact same object."
+        },
+        {
+          "question": "What does the modulus operator (%) do?",
+          "answer": "It returns the remainder of a division (e.g., 10 % 3 results in 1)."
+        },
+        {
+          "question": "What are membership operators used for?",
+          "answer": "They are used to check if a value exists within a sequence like a list, tuple, or string (using 'in' and 'not in')."
+        }
+      ]
+    },
+    {
+      "id": "python-control-flow",
+      "title": "Conditional Statements",
+      "category": "Basic",
+      "definition": "Conditional statements let you control the flow of your program based on true/false expressions. They are essential for decision-making in code.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1️⃣ Python if\nThe basic if statement executes a block of code only if a specified condition is True."
+        },
+        {
+          "type": "code",
+          "value": "age = 18\nif age >= 18:\n    print(\"You are eligible to vote\")"
+        },
+        {
+          "type": "output",
+          "value": "You are eligible to vote"
+        },
+        {
+          "type": "text",
+          "value": "2️⃣ Python elif\nShort for 'else if', it allows you to check multiple conditions if the previous ones were False."
+        },
+        {
+          "type": "code",
+          "value": "marks = 75\nif marks >= 90:\n    print(\"Grade A\")\nelif marks >= 60:\n    print(\"Grade B\")"
+        },
+        {
+          "type": "output",
+          "value": "Grade B"
+        },
+        {
+          "type": "text",
+          "value": "3️⃣ Python else\nThe else block captures anything that isn't caught by the preceding if/elif conditions."
+        },
+        {
+          "type": "code",
+          "value": "number = -5\nif number > 0:\n    print(\"Positive\")\nelse:\n    print(\"Negative\")"
+        },
+        {
+          "type": "output",
+          "value": "Negative"
+        },
+        {
+          "type": "text",
+          "value": "🔸 Example: Number Analysis\nA practical demonstration of three-way branching logic."
+        },
+        {
+          "type": "code",
+          "value": "x = 0\n\nif x > 0:\n    print(\"Positive number\")\nelif x < 0:\n    print(\"Negative number\")\nelse:\n    print(\"Zero\")"
+        },
+        {
+          "type": "output",
+          "value": "Zero"
+        },
+        {
+          "type": "text",
+          "value": "4️⃣ Shorthand If (Ternary Operator)\nPython allows writing simple if-else statements in a single line for cleaner code."
+        },
+        {
+          "type": "code",
+          "value": "a = 10\nif a > 5: print(\"Greater\")\n\n# Full Ternary Example\nx = 7\nprint(\"Even\") if x % 2 == 0 else print(\"Odd\")"
+        },
+        {
+          "type": "output",
+          "value": "Greater\nOdd"
+        },
+        {
+          "type": "text",
+          "value": "5️⃣ Logical Operators\nLogical operators are used to combine multiple conditional statements."
+        },
+        {
+          "type": "text",
+          "value": "1️⃣ and Operator\nReturns True only if both conditions are true."
+        },
+        {
+          "type": "code",
+          "value": "age = 25\n\nif age > 18 and age < 30:\n    print(\"Eligible\")\n\n# age > 18 (True) and age < 30 (True) → Results in True"
+        },
+        {
+          "type": "output",
+          "value": "Eligible"
+        },
+        {
+          "type": "text",
+          "value": "2️⃣ or Operator\nReturns True if at least one condition is true."
+        },
+        {
+          "type": "code",
+          "value": "day = \"Sunday\"\n\nif day == \"Saturday\" or day == \"Sunday\":\n    print(\"Weekend\")\n\n# day == \"Saturday\" (False) or day == \"Sunday\" (True) → Results in True"
+        },
+        {
+          "type": "output",
+          "value": "Weekend"
+        },
+        {
+          "type": "text",
+          "value": "3️⃣ not Operator\nReverses the condition; True becomes False, and False becomes True."
+        },
+        {
+          "type": "code",
+          "value": "x = False\n\nif not x:\n    print(\"x is False\")\n\n# x is False, so 'not x' is True → Block executes"
+        },
+        {
+          "type": "output",
+          "value": "x is False"
+        },
+        {
+          "type": "text",
+          "value": "🔹 Combined Example: Login System"
+        },
+        {
+          "type": "code",
+          "value": "username = \"admin\"\npassword = \"1234\"\n\nif username == \"admin\" and password == \"1234\":\n    print(\"Login Successful\")\nelse:\n    print(\"Invalid Login\")"
+        },
+        {
+          "type": "output",
+          "value": "Login Successful"
+        },
+        {
+          "type": "table",
+          "headers": ["Operator", "Meaning", "Example"],
+          "rows": [
+            ["and", "Both conditions must be True", "x > 1 and x < 10"],
+            ["or", "At least one condition is True", "x < 0 or x > 5"],
+            ["not", "Reverses the condition", "not x"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "6️⃣ Nested if Statements\nYou can place an if statement inside another if statement to check hierarchical conditions."
+        },
+        {
+          "type": "text",
+          "value": "🔹 Basic Example"
+        },
+        {
+          "type": "code",
+          "value": "x = 41\n\nif x > 10:\n    print(\"Above ten,\")\n    if x > 20:\n        print(\"and also above 20!\")\n    else:\n        print(\"but not above 20.\")"
+        },
+        {
+          "type": "output",
+          "value": "Above ten,\nand also above 20!"
+        },
+        {
+          "type": "text",
+          "value": "🔹 Example: Driving Eligibility"
+        },
+        {
+          "type": "code",
+          "value": "age = 25\nhas_license = True\n\nif age >= 18:\n    if has_license:\n        print(\"You can drive\")\n    else:\n        print(\"You need a license\")\nelse:\n    print(\"You are too young to drive\")"
+        },
+        {
+          "type": "output",
+          "value": "You can drive"
+        },
+        {
+          "type": "text",
+          "value": "🔹 Multiple Levels of Nesting\nYou can create many levels of nested if statements for complex decision trees."
+        },
+        {
+          "type": "code",
+          "value": "score = 85\nattendance = 90\nsubmitted = True\n\nif score >= 60:\n    if attendance >= 80:\n        if submitted:\n            print(\"Pass with good standing\")\n        else:\n            print(\"Pass but missing assignment\")\n    else:\n        print(\"Pass but low attendance\")\nelse:\n    print(\"Fail\")"
+        },
+        {
+          "type": "output",
+          "value": "Pass with good standing"
+        },
+        {
+          "type": "text",
+          "value": "🔹 Nested If vs Logical Operators\nSometimes nested if statements can be simplified using logical operators like 'and' for cleaner code."
+        },
+        {
+          "type": "code",
+          "value": "# Nested Version\nif temperature > 20:\n    if is_sunny:\n        print(\"Perfect beach weather!\")\n\n# Simplified Version using 'and'\nif temperature > 20 and is_sunny:\n    print(\"Perfect beach weather!\")"
+        },
+        {
+          "type": "table",
+          "headers": ["Feature", "Description"],
+          "rows": [
+            ["Nested If", "if inside another if"],
+            ["Purpose", "Check conditions step by step"],
+            ["Advantage", "Fine-grained decision control"],
+            ["Alternative", "Use logical operators (and/or)"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Real-Life Examples of Nested If:\n• ATM PIN verification\n• Login systems\n• Student grading systems\n• Bank loan approval"
+        },
+        {
+          "type": "text",
+          "value": "7️⃣ Pass Statement\nSince code blocks cannot be empty, use 'pass' as a placeholder to avoid indentation errors."
+        },
+        {
+          "type": "code",
+          "value": "x = 5\nif x > 0:\n    pass # Placeholder for future logic"
+        },
+        {
+          "type": "text",
+          "value": "🔹 Complete Real-World Example: Grading System"
+        },
+        {
+          "type": "code",
+          "value": "marks = 85\nif marks >= 90:\n    print(\"Grade A\")\nelif marks >= 75:\n    print(\"Grade B\")\nelif marks >= 50:\n    print(\"Grade C\")\nelse:\n    print(\"Fail\")"
+        },
+        {
+          "type": "output",
+          "value": "Grade B"
+        },
+        {
+          "type": "text",
+          "value": "📍 Important Notes:\n• Use 4 spaces for Indentation to define code blocks.\n• Comparison Operators: ==, !=, >, <, >=, <=\n• Logical Operators: and, or, not"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the importance of indentation in Python conditional statements?",
+          "answer": "Python uses indentation to define the scope and blocks of code. Incorrect indentation will lead to an IndentationError or logical bugs."
+        },
+        {
+          "question": "What is the purpose of the 'pass' statement?",
+          "answer": "The 'pass' statement is used as a placeholder in an empty block of code where the syntax requires some statement but no action is needed yet."
+        },
+        {
+          "question": "How does the 'elif' keyword differ from a sequence of multiple 'if' statements?",
+          "answer": "In an if-elif sequence, Python stops checking once it finds a True condition. In a series of 'if' statements, Python evaluates every single one, which is less efficient and can lead to multiple blocks executing."
+        },
+        {
+          "question": "Explain the Python Ternary Operator syntax.",
+          "answer": "The syntax is: [value_if_true] if [condition] else [value_if_false]. It allows for concise single-line decision making."
+        }
+      ]
+    },
+    {
+      "id": "python-match-statement",
+      "title": "Python Match Statement",
+      "category": "Basic",
+      "definition": "The match statement is used to perform different actions based on different conditions. It selects one of many code blocks to execute.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Syntax"
+        },
+        {
+          "type": "code",
+          "value": "match expression:\n    case x:\n        # code block\n    case y:\n        # code block\n    case z:\n        # code block"
+        },
+        {
+          "type": "text",
+          "value": "How Match Works\n• The match expression is evaluated once.\n• The value is compared with each case.\n• If a match is found, the corresponding code block executes.\n• If no match is found, the default case (_) can run."
+        },
+        {
+          "type": "text",
+          "value": "1. Example 1: Match Statement"
+        },
+        {
+          "type": "code",
+          "value": "day = 4\n\nmatch day:\n    case 1: print(\"Monday\")\n    case 2: print(\"Tuesday\")\n    case 3: print(\"Wednesday\")\n    case 4: print(\"Thursday\")\n    case 5: print(\"Friday\")\n    case 6: print(\"Saturday\")\n    case 7: print(\"Sunday\")"
+        },
+        {
+          "type": "output",
+          "value": "Thursday"
+        },
+        {
+          "type": "text",
+          "value": "2. Default Value (_)\nUse _ as the default case when no other cases match. It must be written last."
+        },
+        {
+          "type": "code",
+          "value": "day = 4\n\nmatch day:\n    case 6: print(\"Today is Saturday\")\n    case 7: print(\"Today is Sunday\")\n    case _: print(\"Looking forward to the Weekend\")"
+        },
+        {
+          "type": "output",
+          "value": "Looking forward to the Weekend"
+        },
+        {
+          "type": "text",
+          "value": "3. Combine Multiple Values Using |\nUse the pipe symbol | as an OR operator."
+        },
+        {
+          "type": "code",
+          "value": "day = 4\n\nmatch day:\n    case 1 | 2 | 3 | 4 | 5:\n        print(\"Today is a weekday\")\n    case 6 | 7:\n        print(\"I love weekends!\")"
+        },
+        {
+          "type": "output",
+          "value": "Today is a weekday"
+        },
+        {
+          "type": "text",
+          "value": "4. Match with If Condition (Guard)\nYou can add an if condition inside a case."
+        },
+        {
+          "type": "code",
+          "value": "month = 5\nday = 4\n\nmatch day:\n    case 1 | 2 | 3 | 4 | 5 if month == 4:\n        print(\"A weekday in April\")\n    case 1 | 2 | 3 | 4 | 5 if month == 5:\n        print(\"A weekday in May\")\n    case _:\n        print(\"No match\")"
+        },
+        {
+          "type": "output",
+          "value": "A weekday in May"
+        },
+        {
+          "type": "text",
+          "value": "5. Example 5: Match with Strings\nMatch can also be used for exact string comparison."
+        },
+        {
+          "type": "code",
+          "value": "fruit = \"apple\"\n\nmatch fruit:\n    case \"apple\":\n        print(\"Red Fruit\")\n    case \"banana\":\n        print(\"Yellow Fruit\")\n    case \"grapes\":\n        print(\"Green or Purple Fruit\")\n    case _:\n        print(\"Unknown Fruit\")"
+        },
+        {
+          "type": "output",
+          "value": "Red Fruit"
+        },
+        {
+          "type": "text",
+          "value": "📍 Common Use Cases\nThe match statement is particularly useful for:\n• Navigational menus and options\n• Command processing (CLI tools)\n• Strategic condition checking\n• Fixed-value selection logic"
+        },
+        {
+          "type": "text",
+          "value": "Match vs If-Else Summary"
+        },
+        {
+          "type": "table",
+          "headers": ["Match Statement", "If-Else Statement"],
+          "rows": [
+            ["Cleaner for many conditions", "Can become lengthy"],
+            ["Easy to read", "More repetitive"],
+            ["Good for fixed values", "Better for complex logic"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision"
+        },
+        {
+          "type": "code",
+          "value": "match variable:\n    case value1:\n        # code\n\n    case value2:\n        # code\n\n    case _:\n        # default code"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Which Python version introduced the 'match' statement?",
+          "answer": "Python 3.10 introduced the match-case statement for structural pattern matching."
+        },
+        {
+          "question": "What does the underscore (_) represent in a match statement?",
+          "answer": "It serves as the default or catch-all case, matching any value that wasn't captured by the previous patterns."
+        },
+        {
+          "question": "How do you match multiple possible values in a single 'case' block?",
+          "answer": "By using the pipe (|) symbol between values, such as 'case 1 | 2 | 3:'."
+        },
+        {
+          "question": "What is a 'guard' in a match statement?",
+          "answer": "A guard is an 'if' condition added to a case pattern that must also evaluate to True for that case to execute."
+        }
+      ]
+    },
+    {
+      "id": "python-for-loop",
+      "title": "For Loop",
+      "category": "Loops",
+      "definition": "A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string). It allows you to execute a set of statements, once for each item in a sequence.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Iterating Over a Range\nThe range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and stops before a specified number."
+        },
+        {
+          "type": "code",
+          "value": "for x in range(6):\n    print(x)\n\n# Specifying start and end\nfor x in range(2, 6):\n    print(x)"
+        },
+        {
+          "type": "output",
+          "value": "0\n1\n2\n3\n4\n5\n2\n3\n4\n5"
+        },
+        {
+          "type": "text",
+          "value": "2. The break Statement\nWith the break statement we can stop the loop before it has looped through all the items."
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\", \"cherry\"]\nfor x in fruits:\n    print(x)\n    if x == \"banana\":\n        break"
+        },
+        {
+          "type": "output",
+          "value": "apple\nbanana"
+        },
+        {
+          "type": "text",
+          "value": "3. The continue Statement\nWith the continue statement we can stop the current iteration of the loop, and continue with the next."
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\", \"cherry\"]\nfor x in fruits:\n    if x == \"banana\":\n        continue\n    print(x)"
+        },
+        {
+          "type": "output",
+          "value": "apple\ncherry"
+        },
+        {
+          "type": "text",
+          "value": "4. Else in For Loop\nThe else keyword in a for loop specifies a block of code to be executed when the loop is finished."
+        },
+        {
+          "type": "code",
+          "value": "for x in range(6):\n    print(x)\nelse:\n    print(\"Finally finished!\")"
+        },
+        {
+          "type": "output",
+          "value": "0\n1\n2\n3\n4\n5\nFinally finished!"
+        },
+        {
+          "type": "text",
+          "value": "♦ Quick Revision:\n• Range: range(start, stop, step)\n• break: Exits the loop\n• continue: Skips current iteration\n• else: Runs when loop finishes naturally"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What happens if a 'break' is executed inside a 'for' loop that has an 'else' block?",
+          "answer": "The 'else' block will NOT be executed if the loop is terminated by a 'break' statement."
+        },
+        {
+          "question": "How do you iterate over a dictionary using a for loop?",
+          "answer": "You can use .items() to get both keys and values, .keys() for keys only, or .values() for values only."
+        },
+        {
+          "question": "What is the purpose of the 'range()' function?",
+          "answer": "It generates a sequence of numbers, which is commonly used to iterate a specific number of times in a for loop."
+        }
+      ]
+    },
+    {
+      "id": "python-while-loop",
+      "title": "While Loop",
+      "category": "Loops",
+      "definition": "The while loop executes a set of statements as long as a specified condition is true.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Basic While Loop\nThe loop will continue to run as long as the condition remains True. Remember to increment the counter, or the loop will continue forever."
+        },
+        {
+          "type": "code",
+          "value": "i = 1\nwhile i < 6:\n    print(i)\n    i += 1"
+        },
+        {
+          "type": "output",
+          "value": "1\n2\n3\n4\n5"
+        },
+        {
+          "type": "text",
+          "value": "2. The break Statement\nJust like in for loops, the break statement stops the while loop even if the condition is still true."
+        },
+        {
+          "type": "code",
+          "value": "i = 1\nwhile i < 6:\n    print(i)\n    if i == 3:\n        break\n    i += 1"
+        },
+        {
+          "type": "output",
+          "value": "1\n2\n3"
+        },
+        {
+          "type": "text",
+          "value": "3. The continue Statement\nThe continue statement stops the current iteration and continues with the next condition check."
+        },
+        {
+          "type": "code",
+          "value": "i = 0\nwhile i < 6:\n    i += 1\n    if i == 3:\n        continue\n    print(i)"
+        },
+        {
+          "type": "output",
+          "value": "1\n2\n4\n5\n6"
+        },
+        {
+          "type": "text",
+          "value": "4. Else in While Loop\nWith the else statement we can run a block of code once when the condition no longer is true."
+        },
+        {
+          "type": "code",
+          "value": "i = 1\nwhile i < 6:\n    print(i)\n    i += 1\nelse:\n    print(\"i is no longer less than 6\")"
+        },
+        {
+          "type": "output",
+          "value": "1\n2\n3\n4\n5\ni is no longer less than 6"
+        },
+        {
+          "type": "text",
+          "value": "♦ Quick Revision:\n• Condition: Checked before each iteration\n• Infinity: Occurs if condition never becomes False\n• break: Force exit\n• continue: Jump to next condition check"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is an infinite loop and how do you avoid it?",
+          "answer": "An infinite loop is a loop that never ends because the condition always stays True. It can be avoided by ensuring the loop variable is updated within the block."
+        },
+        {
+          "question": "Can you use an 'else' block with a 'while' loop?",
+          "answer": "Yes, the 'else' block executes when the 'while' condition becomes False."
+        },
+        {
+          "question": "How does 'continue' work in a while loop?",
+          "answer": "It skips the remaining code in the current iteration and immediately jumps back to re-evaluate the loop's condition."
+        }
+      ]
+    },
+    {
+      "id": "python-lists",
+      "title": "Lists",
+      "category": "Basic",
+      "definition": "Lists are used to store multiple items in a single variable. They are ordered, changeable (mutable), and allow duplicate values.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Creating and Accessing Lists\nLists are defined using square brackets [ ]. Items are indexed starting from 0."
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\", \"cherry\"]\nprint(fruits)\nprint(fruits[1]) # Accessing second item"
+        },
+        {
+          "type": "output",
+          "value": "['apple', 'banana', 'cherry']\nbanana"
+        },
+        {
+          "type": "text",
+          "value": "2. Modifying Lists\nLists are mutable, meaning you can change, add, and remove items after the list has been created."
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\"]\nfruits.append(\"orange\") # Adding\nfruits[0] = \"kiwi\" # Modifying\nprint(fruits)"
+        },
+        {
+          "type": "output",
+          "value": "['kiwi', 'banana', 'orange']"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision:\n• Syntax: [ ]\n• Mutable: Can be changed\n• Ordered: Maintains sequence\n• Duplicates: Allowed"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What does it mean that a list is 'mutable'?",
+          "answer": "It means the items in the list can be changed, added, or removed after the list is created."
+        },
+        {
+          "question": "How do you add an item to the end of a list?",
+          "answer": "Using the append() method, for example: list.append(item)."
+        }
+      ]
+    },
+    {
+      "id": "python-tuples",
+      "title": "Tuples",
+      "category": "Basic",
+      "definition": "Tuples are used to store multiple items in a single variable. They are ordered and immutable (unchangeable).",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Creating Tuples\nTuples are written with round brackets ( )."
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\")\nprint(thistuple)"
+        },
+        {
+          "type": "output",
+          "value": "('apple', 'banana', 'cherry')"
+        },
+        {
+          "type": "text",
+          "value": "2. Immutability\nOnce a tuple is created, you cannot change its values. Tuples are unchangeable."
+        },
+        {
+          "type": "code",
+          "value": "x = (\"apple\", \"banana\")\n# x[0] = \"kiwi\" # This would cause an error"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision:\n• Syntax: ( )\n• Immutable: Cannot be changed\n• Ordered: Maintains sequence\n• Faster: Usually faster than lists"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Can you change an item in a tuple after it's created?",
+          "answer": "No, tuples are immutable, meaning their elements cannot be changed, added, or removed once defined."
+        },
+        {
+          "question": "When should you use a tuple instead of a list?",
+          "answer": "Use a tuple when you have a collection of items that should not change throughout the program, ensuring data integrity."
+        }
+      ]
+    },
+    {
+      "id": "python-sets",
+      "title": "Sets",
+      "category": "Basic",
+      "definition": "Sets are used to store multiple items in a single variable. They are unordered, unchangeable, and do not allow duplicate values.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Creating Sets\nSets are written with curly brackets { }. They do not maintain any specific order."
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\nprint(thisset)"
+        },
+        {
+          "type": "output",
+          "value": "{'banana', 'cherry', 'apple'}"
+        },
+        {
+          "type": "text",
+          "value": "2. No Duplicates\nSets automatically remove any duplicate items."
+        },
+        {
+          "type": "code",
+          "value": "nums = {1, 2, 2, 3, 3, 3}\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "{1, 2, 3}"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision:\n• Syntax: { }\n• Unordered: No index\n• Unique: No duplicates\n• Mutable: Can add/remove items"
+        }
+      ],
+      "questions": [
+        {
+          "question": "How do sets handle duplicate values?",
+          "answer": "Sets automatically ignore duplicate values; only unique items are stored."
+        },
+        {
+          "question": "Can you access set items using an index?",
+          "answer": "No, sets are unordered and unindexed, so you cannot access items by referring to an index."
+        }
+      ]
+    },
+    {
+      "id": "python-dicts",
+      "title": "Dictionaries",
+      "category": "Basic",
+      "definition": "Dictionaries are used to store data values in key:value pairs. They are ordered, changeable, and do not allow duplicate keys.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Creating Dictionaries\nDictionaries are written with curly brackets, and have keys and values."
+        },
+        {
+          "type": "code",
+          "value": "car = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\nprint(car[\"brand\"])"
+        },
+        {
+          "type": "output",
+          "value": "Ford"
+        },
+        {
+          "type": "text",
+          "value": "2. Modifying Dictionaries\nYou can change the value of a specific item by referring to its key name."
+        },
+        {
+          "type": "code",
+          "value": "car[\"year\"] = 2020\ncar[\"color\"] = \"red\" # Adding new key\nprint(car)"
+        },
+        {
+          "type": "output",
+          "value": "{'brand': 'Ford', 'model': 'Mustang', 'year': 2020, 'color': 'red'}"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision:\n• Syntax: { key: value }\n• Keys: Must be unique\n• Mutable: Can be changed\n• Access: Via keys, not index"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What happens if you try to add a duplicate key to a dictionary?",
+          "answer": "Dictionaries cannot have two items with the same key. If you assign a new value to an existing key, it will overwrite the old value."
+        },
+        {
+          "question": "How do you access a value in a dictionary?",
+          "answer": "By referring to its key name inside square brackets, e.g., dict['key'], or using the get() method."
+        }
+      ]
+    },
+    {
+      "id": "python-functions",
+      "title": "Functions",
+      "category": "Functions",
+      "definition": "A function is a block of code which only runs when it is called. You can pass data, known as parameters, into a function. A function can return data as a result.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Creating and Calling a Function\nIn Python, a function is defined using the 'def' keyword. To call a function, use the function name followed by parenthesis."
+        },
+        {
+          "type": "code",
+          "value": "def my_function():\n    print(\"Hello from a function!\")\n\nmy_function() # Calling the function"
+        },
+        {
+          "type": "output",
+          "value": "Hello from a function!"
+        },
+        {
+          "type": "text",
+          "value": "2. Parameters and Return Values\nParameters act as variables inside the function. Use the 'return' statement to send a value back to the caller."
+        },
+        {
+          "type": "code",
+          "value": "def add_numbers(a, b):\n    return a + b\n\nresult = add_numbers(10, 20)\nprint(f\"Sum: {result}\")"
+        },
+        {
+          "type": "output",
+          "value": "Sum: 30"
+        },
+        {
+          "type": "text",
+          "value": "♦ Quick Revision:\n• def: Function definition keyword\n• Calling: Use name with ( )\n• return: Sends value back\n• Parameters: Input variables"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the benefit of using functions in Python?",
+          "answer": "Functions promote code reusability, modularity, and readability. They allow you to define logic once and execute it multiple times."
+        },
+        {
+          "question": "What happens if a function does not have a return statement?",
+          "answer": "If no return statement is specified, the function returns 'None' by default."
+        }
+      ]
+    },
+    {
+      "id": "python-arguments",
+      "title": "Arguments",
+      "category": "Functions",
+      "definition": "Arguments are the values passed into a function when it is called. Python supports positional, keyword, and default arguments.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Positional and Keyword Arguments\nPositional arguments are passed in order. Keyword arguments are passed with the 'key = value' syntax."
+        },
+        {
+          "type": "code",
+          "value": "def greet(first, last):\n    print(f\"Hello {first} {last}\")\n\ngreet(\"John\", \"Doe\") # Positional\ngreet(last=\"Smith\", first=\"Jane\") # Keyword"
+        },
+        {
+          "type": "output",
+          "value": "Hello John Doe\nHello Jane Smith"
+        },
+        {
+          "type": "text",
+          "value": "2. Default Arguments\nYou can provide default values for parameters. If the caller doesn't provide an argument, the default is used."
+        },
+        {
+          "type": "code",
+          "value": "def power(base, exponent=2):\n    return base ** exponent\n\nprint(power(4))    # Uses default exponent 2\nprint(power(4, 3)) # Uses provided exponent 3"
+        },
+        {
+          "type": "output",
+          "value": "16\n64"
+        },
+        {
+          "type": "text",
+          "value": "♦ Quick Revision:\n• Positional: Order matters\n• Keyword: Name matters\n• Default: Optional parameters\n• Requirement: Non-default args must come before default args"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between parameters and arguments?",
+          "answer": "Parameters are the variables defined in the function signature. Arguments are the actual values passed to the function during a call."
+        },
+        {
+          "question": "Can positional arguments follow keyword arguments in a call?",
+          "answer": "No, positional arguments must always come before keyword arguments in a function call."
+        }
+      ]
+    },
+    {
+      "id": "python-args-kwargs",
+      "title": "*args / **kwargs",
+      "category": "Functions",
+      "definition": "Arbitrary arguments (*args) and Arbitrary Keyword Arguments (**kwargs) allow a function to accept any number of positional or keyword arguments.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Arbitrary Arguments (*args)\nUse *args when you don't know how many positional arguments will be passed. The function receives them as a tuple."
+        },
+        {
+          "type": "code",
+          "value": "def sum_all(*numbers):\n    return sum(numbers)\n\nprint(sum_all(1, 2, 3, 4, 5))"
+        },
+        {
+          "type": "output",
+          "value": "15"
+        },
+        {
+          "type": "text",
+          "value": "2. Arbitrary Keyword Arguments (**kwargs)\nUse **kwargs when you don't know how many keyword arguments will be passed. The function receives them as a dictionary."
+        },
+        {
+          "type": "code",
+          "value": "def profile(**info):\n    for key, value in info.items():\n        print(f\"{key}: {value}\")\n\nprofile(name=\"Vasu\", role=\"Developer\", age=22)"
+        },
+        {
+          "type": "output",
+          "value": "name: Vasu\nrole: Developer\nage: 22"
+        },
+        {
+          "type": "text",
+          "value": "♦ Quick Revision:\n• *args: Variable positional args (Tuple)\n• **kwargs: Variable keyword args (Dict)\n• Ordering: Standard args, then *args, then **kwargs"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the data type of *args inside a function?",
+          "answer": "It is a Tuple."
+        },
+        {
+          "question": "What is the data type of **kwargs inside a function?",
+          "answer": "It is a Dictionary."
+        }
+      ]
+    },
+    {
+      "id": "python-scope",
+      "title": "Scope",
+      "category": "Functions",
+      "definition": "Scope refers to the visibility of variables. Python follows the LEGB rule: Local, Enclosing, Global, and Built-in.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Local vs Global Scope\nA variable created inside a function belongs to the local scope. A variable created in the main body of the code belongs to the global scope."
+        },
+        {
+          "type": "code",
+          "value": "x = 300 # Global\n\ndef my_func():\n    x = 200 # Local\n    print(f\"Inside: {x}\")\n\nmy_func()\nprint(f\"Outside: {x}\")"
+        },
+        {
+          "type": "output",
+          "value": "Inside: 200\nOutside: 300"
+        },
+        {
+          "type": "text",
+          "value": "2. The 'global' Keyword\nTo modify a global variable inside a function, use the 'global' keyword."
+        },
+        {
+          "type": "code",
+          "value": "count = 0\n\ndef increment():\n    global count\n    count += 1\n\nincrement()\nprint(count)"
+        },
+        {
+          "type": "output",
+          "value": "1"
+        },
+        {
+          "type": "text",
+          "value": "♦ Quick Revision:\n• Local: Inside function\n• Global: Outside function\n• global keyword: Modifies global vars from local scope\n• LEGB: Order of variable resolution"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What does the 'global' keyword do?",
+          "answer": "It tells Python to use the global version of a variable rather than creating a new local one, allowing local modifications to persist globally."
+        },
+        {
+          "question": "What is the LEGB rule?",
+          "answer": "It stands for Local, Enclosing, Global, and Built-in. It is the hierarchy Python uses to look up variable names."
+        }
+      ]
+    },
+    {
+      "id": "python-decorators",
+      "title": "Decorators",
+      "category": "Functions",
+      "definition": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (functions or classes) without modifying its structure.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Basic Decorator Concept\nDecorators wrap another function to extend its behavior."
+        },
+        {
+          "type": "code",
+          "value": "def my_decorator(func):\n    def wrapper():\n        print(\"Something before the function.\")\n        func()\n        print(\"Something after the function.\")\n    return wrapper\n\n@my_decorator\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()"
+        },
+        {
+          "type": "output",
+          "value": "Something before the function.\nHello!\nSomething after the function."
+        },
+        {
+          "type": "text",
+          "value": "2. Decorators with Arguments\nTo decorate functions that take arguments, use *args and **kwargs in the wrapper."
+        },
+        {
+          "type": "code",
+          "value": "def logger(func):\n    def wrapper(*args, **kwargs):\n        print(f\"Calling {func.__name__} with {args}\")\n        return func(*args, **kwargs)\n    return wrapper\n\n@logger\ndef multiply(x, y):\n    return x * y"
+        },
+        {
+          "type": "text",
+          "value": "♦ Quick Revision:\n• Purpose: Add functionality without changing code\n• Syntax: @decorator_name\n• Mechanism: Higher-order function (returns a function)"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is a decorator in Python?",
+          "answer": "A decorator is a function that takes another function as an argument, adds some functionality, and returns a new function."
+        },
+        {
+          "question": "What is the @ symbol used for in Python?",
+          "answer": "It is syntax sugar for applying a decorator to a function."
+        }
+      ]
+    },
+    {
+      "id": "python-lambda",
+      "title": "Lambda",
+      "category": "Functions",
+      "definition": "A lambda function is a small anonymous function. A lambda function can take any number of arguments, but can only have one expression.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Lambda Syntax\nThe syntax is: lambda arguments : expression"
+        },
+        {
+          "type": "code",
+          "value": "x = lambda a, b : a * b\nprint(x(5, 6))"
+        },
+        {
+          "type": "output",
+          "value": "30"
+        },
+        {
+          "type": "text",
+          "value": "2. Using Lambda with map() and filter()\nLambda functions are often used as temporary functions inside higher-order functions."
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 2, 3, 4, 5, 6]\nevens = list(filter(lambda x: x % 2 == 0, nums))\nsquares = list(map(lambda x: x * x, nums))\n\nprint(f\"Evens: {evens}\")\nprint(f\"Squares: {squares}\")"
+        },
+        {
+          "type": "output",
+          "value": "Evens: [2, 4, 6]\nSquares: [1, 4, 9, 16, 25, 36]"
+        },
+        {
+          "type": "text",
+          "value": "♦ Quick Revision:\n• Anonymous: No name\n• Syntax: lambda args: expr\n• Single Expression: No multiple lines/statements\n• Usage: Quick, one-time logic"
+        }
+      ],
+      "questions": [
+        {
+          "question": "How many expressions can a lambda function contain?",
+          "answer": "Exactly one."
+        },
+        {
+          "question": "Why are lambda functions called anonymous?",
+          "answer": "Because they are defined without a name using the 'lambda' keyword instead of 'def'."
+        }
+      ]
+    },
+    {
+      "id": "python-recursion",
+      "title": "Recursion",
+      "category": "Functions",
+      "definition": "Recursion is the process of defining something in terms of itself. In Python, a recursive function is a function that calls itself.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Factorial Example\nA recursive function must have a 'base case' to stop the recursion."
+        },
+        {
+          "type": "code",
+          "value": "def factorial(n):\n    if n == 1:\n        return 1\n    else:\n        return n * factorial(n - 1)\n\nprint(factorial(5))"
+        },
+        {
+          "type": "output",
+          "value": "120"
+        },
+        {
+          "type": "text",
+          "value": "2. Risks of Recursion\nWithout a base case, recursion leads to a stack overflow error (RecursionError)."
+        },
+        {
+          "type": "text",
+          "value": "♦ Quick Revision:\n• Base Case: Condition to stop\n• Recursive Case: Function calls itself\n• Call Stack: Memory used for each call"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is a base case in recursion?",
+          "answer": "The base case is the condition that terminates the recursive calls, preventing an infinite loop."
+        },
+        {
+          "question": "What error occurs if recursion goes too deep?",
+          "answer": "RecursionError: maximum recursion depth exceeded."
+        }
+      ]
+    },
+    {
+      "id": "python-generators",
+      "title": "Generators",
+      "category": "Functions",
+      "definition": "Generators are functions that return an iterable set of items, one at a time, in a special way using the 'yield' keyword.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Yield vs Return\n'yield' pauses the function, saves its state, and returns a value. When called again, it resumes where it left off."
+        },
+        {
+          "type": "code",
+          "value": "def my_generator():\n    yield 1\n    yield 2\n    yield 3\n\ngen = my_generator()\nprint(next(gen))\nprint(next(gen))"
+        },
+        {
+          "type": "output",
+          "value": "1\n2"
+        },
+        {
+          "type": "text",
+          "value": "2. Memory Efficiency\nGenerators are 'lazy'—they generate items on the fly instead of storing them in memory like lists."
+        },
+        {
+          "type": "code",
+          "value": "def count_up_to(n):\n    count = 1\n    while count <= n:\n        yield count\n        count += 1"
+        },
+        {
+          "type": "text",
+          "value": "♦ Quick Revision:\n• yield: Returns value and pauses\n• Memory: Highly efficient for large datasets\n• Iteration: Can be used in for loops\n• next(): Fetches the next item"
+        }
+      ],
+      "questions": [
+        {
+          "question": "How does a generator differ from a normal function?",
+          "answer": "A normal function returns a single value and loses its local state. A generator yields a sequence of values and preserves its local state between yields."
+        },
+        {
+          "question": "What keyword is essential for creating a generator?",
+          "answer": "The 'yield' keyword."
+        }
+      ]
+    },
+    {
+      "id": "python-modules",
+      "title": "Modules",
+      "category": "Basic",
+      "definition": "A module is a file containing Python code (functions, classes, variables) that can be imported and used in other Python scripts.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. What is a Module?\nConsider a module to be a code library—a file containing a set of functions you want to include in your application."
+        },
+        {
+          "type": "text",
+          "value": "2. Built-in Modules\nPython has many built-in modules that you can import at any time."
+        },
+        {
+          "type": "code",
+          "value": "import math\nprint(math.sqrt(64))\n\nimport platform\nprint(platform.system())"
+        },
+        {
+          "type": "output",
+          "value": "8.0\nWindows"
+        },
+        {
+          "type": "text",
+          "value": "3. The 'as' Keyword (Aliasing)\nYou can create an alias when you import a module by using the 'as' keyword."
+        },
+        {
+          "type": "code",
+          "value": "import math as m\nprint(m.pi)"
+        },
+        {
+          "type": "output",
+          "value": "3.141592653589793"
+        },
+        {
+          "type": "text",
+          "value": "4. The dir() Function\nThe dir() function lists all the function names (or variable names) in a module."
+        },
+        {
+          "type": "code",
+          "value": "import math\n# print(dir(math)) # Uncomment to see all members"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision:\n• import: Load a module\n• as: Create an alias\n• from: Import specific parts\n• dir(): List module contents"
+        }
+      ],
+      "questions": [
+        {
+          "question": "How do you import only a specific part from a module?",
+          "answer": "Using the 'from' keyword, for example: 'from math import pi'."
+        },
+        {
+          "question": "What is the purpose of the dir() function?",
+          "answer": "It is used to find out which names a module defines. It returns a sorted list of strings containing the names defined by a module."
+        }
+      ]
+    },
+    {
+      "id": "python-range",
+      "title": "Range",
+      "category": "Basic",
+      "definition": "The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and stops before a specified number.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Basic Range usage\nrange(stop) generates numbers from 0 up to (but not including) stop."
+        },
+        {
+          "type": "code",
+          "value": "x = range(6)\nfor n in x:\n    print(n)"
+        },
+        {
+          "type": "output",
+          "value": "0\n1\n2\n3\n4\n5"
+        },
+        {
+          "type": "text",
+          "value": "2. Step Parameter\nYou can specify the start value, the end value, and the increment (step)."
+        },
+        {
+          "type": "code",
+          "value": "x = range(3, 20, 2)\nfor n in x:\n    print(n)"
+        },
+        {
+          "type": "output",
+          "value": "3\n5\n7\n9\n11\n13\n15\n17\n19"
+        },
+        {
+          "type": "text",
+          "value": "♦ Quick Revision:\n• Syntax: range(start, stop, step)\n• stop: Required parameter\n• start: Default is 0\n• step: Default is 1"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Does range(5) include the number 5?",
+          "answer": "No, the range function stops before the specified stop value."
+        },
+        {
+          "question": "Can range() have negative steps?",
+          "answer": "Yes, for example range(10, 0, -1) will generate numbers from 10 down to 1."
+        }
+      ]
+    },
+    {
+      "id": "python-arrays",
+      "title": "Arrays",
+      "category": "Basic",
+      "definition": "Python does not have built-in support for Arrays, but Python Lists can be used instead. For actual arrays, you can use the 'array' module or NumPy.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Using Lists as Arrays\nLists are often used as arrays because they can store multiple values in a single variable."
+        },
+        {
+          "type": "code",
+          "value": "cars = [\"Ford\", \"Volvo\", \"BMW\"]\nprint(cars[0])\ncars[0] = \"Toyota\"\nprint(len(cars))"
+        },
+        {
+          "type": "output",
+          "value": "Ford\n3"
+        },
+        {
+          "type": "text",
+          "value": "2. The array Module\nIf you need a typed array (elements of the same type), use the 'array' module."
+        },
+        {
+          "type": "code",
+          "value": "import array as arr\na = arr.array('i', [1, 2, 3]) # 'i' for integer\nprint(a)"
+        },
+        {
+          "type": "text",
+          "value": "♦ Quick Revision:\n• Lists: Most common way to handle arrays\n• NumPy: Best for mathematical arrays\n• array module: Good for memory-efficient typed arrays"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between a List and an Array in Python?",
+          "answer": "Lists can store elements of different data types, while Arrays (from the array module) are typed and can only store elements of the same data type."
+        },
+        {
+          "question": "How do you add an element to an array-like list?",
+          "answer": "Using the append() method."
+        }
+      ]
+    },
+    {
+      "id": "python-iterators",
+      "title": "Iterators",
+      "category": "Basic",
+      "definition": "An iterator is an object that contains a countable number of values. It is an object that can be iterated upon, meaning that you can traverse through all the values.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Iterator vs Iterable\nLists, tuples, dictionaries, and sets are all iterable objects. They are iterable containers which you can get an iterator from."
+        },
+        {
+          "type": "code",
+          "value": "mytuple = (\"apple\", \"banana\", \"cherry\")\nmyit = iter(mytuple)\n\nprint(next(myit))\nprint(next(myit))"
+        },
+        {
+          "type": "output",
+          "value": "apple\nbanana"
+        },
+        {
+          "type": "text",
+          "value": "2. Creating a Custom Iterator\nTo create an object/class as an iterator you have to implement the methods __iter__() and __next__() to your object."
+        },
+        {
+          "type": "code",
+          "value": "class MyNumbers:\n  def __iter__(self):\n    self.a = 1\n    return self\n\n  def __next__(self):\n    x = self.a\n    self.a += 1\n    return x"
+        },
+        {
+          "type": "text",
+          "value": "♦ Quick Revision:\n• __iter__(): Returns the iterator object\n• __next__(): Returns the next item\n• StopIteration: Raised to end the loop"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between an iterable and an iterator?",
+          "answer": "An iterable is an object which one can iterate over (like a list). An iterator is the object which actually performs the iteration (has a __next__ method)."
+        },
+        {
+          "question": "What happens when next() is called on an iterator that has no more items?",
+          "answer": "It raises a StopIteration exception."
+        }
+      ]
+    },
+    {
+      "id": "python-dates",
+      "title": "Dates",
+      "category": "Basic",
+      "definition": "A date in Python is not a data type of its own, but we can import a module named 'datetime' to work with dates as date objects.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Current Date and Time\nImport the datetime module and use the now() method to get the current date and time."
+        },
+        {
+          "type": "code",
+          "value": "import datetime\nx = datetime.datetime.now()\nprint(x)\nprint(x.year)\nprint(x.strftime(\"%A\"))"
+        },
+        {
+          "type": "output",
+          "value": "2024-05-11 17:46:33.123456\n2024\nSaturday"
+        },
+        {
+          "type": "text",
+          "value": "2. Formatting Dates (strftime)\nThe datetime object has a method for formatting date objects into readable strings."
+        },
+        {
+          "type": "table",
+          "headers": ["Directive", "Description", "Example"],
+          "rows": [
+            ["%a", "Weekday, short version", "Wed"],
+            ["%A", "Weekday, full version", "Wednesday"],
+            ["%B", "Month name, full version", "December"],
+            ["%Y", "Year, full version", "2018"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "♦ Quick Revision:\n• Module: datetime\n• strftime(): String Format Time\n• now(): Current timestamp"
+        }
+      ],
+      "questions": [
+        {
+          "question": "How do you create a specific date object?",
+          "answer": "Using the datetime.datetime(year, month, day) constructor."
+        },
+        {
+          "question": "What does the strftime() method do?",
+          "answer": "It formats a datetime object into a readable string based on provided format codes."
+        }
+      ]
+    },
+    {
+      "id": "python-math",
+      "title": "Math",
+      "category": "Basic",
+      "definition": "Python has a set of built-in math functions, including a math module, that allows you to perform mathematical tasks on numbers.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Built-in Math Functions\nFunctions like min(), max(), abs(), and pow() are available without importing anything."
+        },
+        {
+          "type": "code",
+          "value": "print(min(5, 10, 25))\nprint(abs(-7.25))\nprint(pow(4, 3))"
+        },
+        {
+          "type": "output",
+          "value": "5\n7.25\n64"
+        },
+        {
+          "type": "text",
+          "value": "2. The math Module\nFor more complex mathematical tasks, use the math module."
+        },
+        {
+          "type": "code",
+          "value": "import math\nprint(math.sqrt(64))\nprint(math.ceil(1.4))\nprint(math.floor(1.4))\nprint(math.pi)"
+        },
+        {
+          "type": "output",
+          "value": "8.0\n2\n1\n3.141592653589793"
+        },
+        {
+          "type": "text",
+          "value": "♦ Quick Revision:\n• ceil(): Rounds up\n• floor(): Rounds down\n• sqrt(): Square root\n• pi: Mathematical constant"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between math.ceil() and math.floor()?",
+          "answer": "ceil() rounds a number UP to the nearest integer, while floor() rounds a number DOWN to the nearest integer."
+        },
+        {
+          "question": "How do you get the value of PI in Python?",
+          "answer": "By using math.pi after importing the math module."
+        }
+      ]
+    },
+    {
+      "id": "python-exception-handling",
+      "title": "Exception Handling",
+      "category": "Basic",
+      "definition": "Exception handling is used to handle errors gracefully without crashing the program. It involves catching and responding to errors (exceptions) that occur during execution.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. The try...except Block\nThe 'try' block lets you test a block of code for errors. The 'except' block lets you handle the error."
+        },
+        {
+          "type": "code",
+          "value": "try:\n    print(x)\nexcept NameError:\n    print(\"Variable x is not defined\")\nexcept:\n    print(\"Something else went wrong\")"
+        },
+        {
+          "type": "output",
+          "value": "Variable x is not defined"
+        },
+        {
+          "type": "text",
+          "value": "2. Handling Specific Exceptions\nYou can specify which exception you want to catch."
+        },
+        {
+          "type": "code",
+          "value": "try:\n    num = 10 / 0\nexcept ZeroDivisionError:\n    print(\"Error: Cannot divide by zero!\")"
+        },
+        {
+          "type": "output",
+          "value": "Error: Cannot divide by zero!"
+        },
+        {
+          "type": "text",
+          "value": "3. The else and finally Blocks\n'else' runs if no error occurs. 'finally' runs regardless of whether an error occurred or not."
+        },
+        {
+          "type": "code",
+          "value": "try:\n    print(\"Hello\")\nexcept:\n    print(\"Something went wrong\")\nelse:\n    print(\"Nothing went wrong\")\nfinally:\n    print(\"The 'try except' is finished\")"
+        },
+        {
+          "type": "output",
+          "value": "Hello\nNothing went wrong\nThe 'try except' is finished"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision:\n• try: Test code\n• except: Handle error\n• else: Run if no error\n• finally: Always run"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the primary purpose of try-except in Python?",
+          "answer": "To prevent a program from crashing when an error occurs by providing a way to catch and handle exceptions."
+        },
+        {
+          "question": "What is the difference between 'else' and 'finally' in exception handling?",
+          "answer": "The 'else' block executes only if no exceptions were raised, while the 'finally' block executes regardless of whether an exception occurred or not."
+        }
+      ]
+    },
+    {
+      "id": "python-file-handling",
+      "title": "File Handling",
+      "category": "Basic",
+      "definition": "Python has several functions for creating, reading, updating, and deleting files. The key function for working with files in Python is the open() function.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Opening and Reading a File\nUse open() with the 'r' mode to read a file."
+        },
+        {
+          "type": "code",
+          "value": "# Assuming demo.txt contains 'Hello Python'\nf = open(\"demo.txt\", \"r\")\nprint(f.read())\nf.close()"
         },
         {
           "type": "output",
@@ -401,14 +3682,39 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. Why use try-except?\nTo prevent the program from crashing when an error occurs."
+          "value": "2. Writing and Appending\n'w' overwrites the file, while 'a' appends to the end."
+        },
+        {
+          "type": "code",
+          "value": "# Writing\nf = open(\"demo.txt\", \"w\")\nf.write(\"New content\")\nf.close()\n\n# Appending\nf = open(\"demo.txt\", \"a\")\nf.write(\"\\nAppended line\")\nf.close()"
         },
         {
           "type": "text",
-          "value": "Quick Revision:\n• upper()/lower(): Case change\n• try/except: Error handling\n• open()/read(): File ops"
+          "value": "3. The 'with' Statement (Recommended)\nThe 'with' statement automatically handles file closing, even if an exception occurs."
+        },
+        {
+          "type": "code",
+          "value": "with open(\"demo.txt\", \"r\") as f:\n    content = f.read()\n    print(content)"
+        },
+        {
+          "type": "output",
+          "value": "New content\nAppended line"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision:\n• 'r': Read mode\n• 'w': Write mode\n• 'a': Append mode\n• with: Auto-closing"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What is the advantage of using the 'with' statement for file operations?",
+          "answer": "It ensures that the file is properly closed after the block of code finishes, even if an error occurs, preventing memory leaks or file corruption."
+        },
+        {
+          "question": "What is the difference between 'w' and 'a' modes in open()?",
+          "answer": "'w' (write) mode overwrites the entire content of the file, while 'a' (append) mode adds new content to the end of the existing file."
+        }
+      ]
     },
     {
       "id": "intro-to-oop",
@@ -418,7 +3724,7 @@ export const interviewData = {
       "sections": [
         {
           "type": "text",
-          "value": "Why OOP is Used in Python:\n• Code Reusability: Reuse existing code using inheritance.\n• Security: Protect data using encapsulation and data hiding.\n• Scalability: Easily expand large applications.\n• Real-World Modeling: Represent real-life objects like Students, Cars, or Bank Accounts.\n• Better Organization: Code becomes clean, modular, and easier to maintain."
+          "value": "Why OOP is Used in Python:\n• Code Reusability: Reuse existing code using inheritance.\n• Security: Protect data using encapsulation and data hiding.\n• Abstraction: Hide implementation details and show only essential features.\n• Polymorphism: Allows one method to perform different behaviors.\n• Scalability: Easily expand large applications.\n• Real-World Modeling: Represent real-life objects like Students, Cars, or Bank Accounts.\n• Better Organization: Code becomes clean, modular, and easier to maintain."
         },
         {
           "type": "text",
@@ -434,26 +3740,35 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "Real-World Example: Bank Account\n• Class → BankAccount\n• Objects → Customer accounts (each can have a different balance, account number, and transactions).\nAdvantages of OOP:\n• Classes & Objects: Better code structure\n• Inheritance: Reuse code\n• Encapsulation: Data security\n• Polymorphism: Flexibility\n• Abstraction: Hide complexity\nConclusion:\nObject-Oriented Programming helps Python developers build organized, reusable, secure, and scalable real-world software applications efficiently."
+          "value": "Real-World Example: Bank Account\n• Class → BankAccount\n• Objects → Customer accounts (each can have a different balance, account number, and transactions)."
         },
         {
           "type": "text",
-          "value": "🔹 1. What is OOP?\nObject-Oriented Programming is a way to organize code using classes and objects."
+          "value": "Advantages of OOP:\n• Classes & Objects: Better code structure\n• Inheritance: Reuse code\n• Encapsulation: Data security\n• Polymorphism: Flexibility\n• Abstraction: Hide complexity"
         },
         {
           "type": "text",
-          "value": "🔹 2. Why is OOP used in Python?\nIt helps in code reusability, security, and scalability."
+          "value": "Conclusion:\nObject-Oriented Programming helps Python developers build organized, reusable, secure, and scalable real-world software applications efficiently."
         },
         {
           "type": "text",
-          "value": "🔹 3. Name the four pillars of OOP.\nInheritance, Encapsulation, Abstraction, and Polymorphism."
-        },
-        {
-          "type": "text",
-          "value": "Quick Revision:\n• Class: Blueprint\n• Object: Real Instance\n• Reusability: Inheritance\n• Security: Encapsulation"
+          "value": "Quick Revision:\n• Class: Blueprint\n• Object: Real Instance\n• Reusability: Inheritance\n• Security: Encapsulation\n• Hiding Details: Abstraction\n• Different Behaviors: Polymorphism"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What is OOP?",
+          "answer": "Object-Oriented Programming is a way to organize code using classes and objects."
+        },
+        {
+          "question": "Why is OOP used in Python?",
+          "answer": "OOP helps in code reusability, security, scalability, and hiding implementation details, making programs more organized and manageable."
+        },
+        {
+          "question": "Name the four pillars of OOP.",
+          "answer": "Inheritance, Encapsulation, Abstraction, and Polymorphism."
+        }
+      ]
     },
     {
       "id": "four-pillars-of-oop",
@@ -565,22 +3880,23 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What are the four pillars of OOP?\nInheritance, Encapsulation, Abstraction, and Polymorphism."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. Which pillar is used for data security?\nEncapsulation."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. What does polymorphism mean?\nOne method behaving differently for different objects."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Inheritance: Reusability\n• Encapsulation: Security\n• Abstraction: Hiding Complexity\n• Polymorphism: Flexibility"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What are the four pillars of OOP?",
+          "answer": "Inheritance, Encapsulation, Abstraction, and Polymorphism."
+        },
+        {
+          "question": "Which pillar is used for data security?",
+          "answer": "Encapsulation."
+        },
+        {
+          "question": "What does polymorphism mean?",
+          "answer": "One method behaving differently for different objects."
+        }
+      ]
     },
     {
       "id": "python-inheritance",
@@ -622,22 +3938,23 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What is inheritance?\nInheritance allows a class to inherit properties and methods from another class."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. What is a parent class?\nThe class being inherited from."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. What is the main benefit of inheritance?\nCode reusability."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Parent Class: Base Class\n• Child Class: Derived Class\n• Benefit: Reusability"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What is inheritance?",
+          "answer": "Inheritance allows a class to inherit properties and methods from another class."
+        },
+        {
+          "question": "What is a parent class?",
+          "answer": "The class being inherited from."
+        },
+        {
+          "question": "What is the main benefit of inheritance?",
+          "answer": "Code reusability."
+        }
+      ]
     },
     {
       "id": "python-super-function",
@@ -683,22 +4000,23 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What is the purpose of super()?\nTo call parent class constructors or methods from a child class."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. Does super() help in reducing code duplication?\nYes, it reuses the parent class constructor code."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. Where should super() be used?\nInside the child class constructor or methods."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• super(): Call Parent\n• __init__(): Constructor\n• Benefit: No duplication"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What is the purpose of super()?",
+          "answer": "To call parent class constructors or methods from a child class."
+        },
+        {
+          "question": "Does super() help in reducing code duplication?",
+          "answer": "Yes, it reuses the parent class constructor code."
+        },
+        {
+          "question": "Where should super() be used?",
+          "answer": "Inside the child class constructor or methods."
+        }
+      ]
     },
     {
       "id": "encapsulation-data-hiding",
@@ -764,22 +4082,23 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. How does OOP provide security?\nThrough encapsulation and data hiding."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. What is the difference between encapsulation and data hiding?\nEncapsulation is wrapping data+methods; Data hiding is restricting access."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. How do you create a private variable in Python?\nBy using double underscores (e.g., __balance)."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Encapsulation: Wrapping\n• Data Hiding: Restricting Access\n• Private: __variable"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "How does OOP provide security?",
+          "answer": "Through encapsulation and data hiding."
+        },
+        {
+          "question": "What is the difference between encapsulation and data hiding?",
+          "answer": "Encapsulation is wrapping data+methods; Data hiding is restricting access."
+        },
+        {
+          "question": "How do you create a private variable in Python?",
+          "answer": "By using double underscores (e.g., __balance)."
+        }
+      ]
     },
     {
       "id": "protected-private-variables",
@@ -833,22 +4152,23 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What is a protected variable?\nA variable meant for internal use, indicated by a single underscore (_)."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. Can you access a private variable directly outside the class?\nNo, it will result in an error."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. How do you indicate a private variable in Python?\nUsing double underscores (e.g., __salary)."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• _var: Protected\n• __var: Private\n• name: Public"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What is a protected variable?",
+          "answer": "A variable meant for internal use, indicated by a single underscore (_)."
+        },
+        {
+          "question": "Can you access a private variable directly outside the class?",
+          "answer": "No, it will result in an error."
+        },
+        {
+          "question": "How do you indicate a private variable in Python?",
+          "answer": "Using double underscores (e.g., __salary)."
+        }
+      ]
     },
     {
       "id": "python-abstraction",
@@ -898,22 +4218,23 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What is abstraction?\nHiding internal implementation and showing only essential features."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. How do you achieve abstraction in Python?\nUsing the \"abc\" module and @abstractmethod decorator."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. Can you create an object of an abstract class?\nNo, abstract classes cannot be instantiated."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• ABC: Abstract Base Class\n• @abstractmethod: Must be implemented by child\n• Implementation: Hidden"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What is abstraction?",
+          "answer": "Hiding internal implementation and showing only essential features."
+        },
+        {
+          "question": "How do you achieve abstraction in Python?",
+          "answer": "Using the 'abc' module and @abstractmethod decorator."
+        },
+        {
+          "question": "Can you create an object of an abstract class?",
+          "answer": "No, abstract classes cannot be instantiated."
+        }
+      ]
     },
     {
       "id": "python-polymorphism",
@@ -1002,22 +4323,6 @@ export const interviewData = {
           "value": "Cat meows\nBird chirps"
         },
         {
-          "type": "text",
-          "value": "Real-Time Bank Example:\nSame method transaction() behaves differently for different account types."
-        },
-        {
-          "type": "code",
-          "value": "class BankAccount:\n    def transaction(self):\n        print(\"Bank Transaction\")\n\nclass SavingsAccount(BankAccount):\n    def transaction(self):\n        print(\"Savings Account Transaction\")\n\nclass CurrentAccount(BankAccount):\n    def transaction(self):\n        print(\"Current Account Transaction\")\n\nobj1 = SavingsAccount()\nobj2 = CurrentAccount()\nobj1.transaction()\nobj2.transaction()"
-        },
-        {
-          "type": "output",
-          "value": "Savings Account Transaction\nCurrent Account Transaction"
-        },
-        {
-          "type": "text",
-          "value": "Advantages of Polymorphism:\n• Code Reusability: Same method reused\n• Flexibility: Works with different objects\n• Easy Maintenance: Cleaner code structure\n• Cleaner Code: Less duplicate code\n• Dynamic Behavior: Methods behave differently"
-        },
-        {
           "type": "table",
           "headers": ["Method Overloading", "Method Overriding"],
           "rows": [
@@ -1028,33 +4333,35 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What is Polymorphism?\n\nPolymorphism means one method, function, or operator can perform different behaviors."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. What are the Types of Polymorphism?\nMethod Overriding\nMethod Overloading\nOperator Overloading\nDuck Typing"
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. What is Method Overriding?\n\nMethod overriding occurs when a child class redefines the method of the parent class."
-        },
-        {
-          "type": "text",
-          "value": "🔹 4. Does Python Support Method Overloading?\n\nPython does not support true method overloading directly like Java.\nbut it can be achieved using default arguments."
-        },
-        {
-          "type": "text",
-          "value": "🔹 5. What is Operator Overloading?\n\nOperator overloading means changing the behavior of operators using magic methods."
-        },
-        {
-          "type": "text",
-          "value": "🔹 6. What is Duck Typing?\n\nA concept where an object's suitability is determined by its methods and behavior, not its type."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Overriding: Child changes Parent\n• Overloading: Multiple args\n• Duck Typing: Behavior over Type"
-        }],
-      "questions": []
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is Polymorphism?",
+          "answer": "Polymorphism means 'many forms'. In Python, it allows the same method, function, or operator to behave differently for different objects or classes."
+        },
+        {
+          "question": "What are the four types of polymorphism in Python?",
+          "answer": "Method Overriding, Method Overloading (via default arguments), Operator Overloading, and Duck Typing."
+        },
+        {
+          "question": "What is Method Overriding?",
+          "answer": "Method overriding occurs when a child class redefines a method that exists in its parent class."
+        },
+        {
+          "question": "Does Python support true Method Overloading?",
+          "answer": "No, but it can be achieved using default arguments in a single method."
+        },
+        {
+          "question": "What is Operator Overloading?",
+          "answer": "It means changing the default behavior of operators (like +) for custom objects using magic methods like __add__()."
+        },
+        {
+          "question": "What is Duck Typing?",
+          "answer": "A concept where an object's suitability is determined by its methods and behavior rather than its class type."
+        }
+      ]
     },
     {
       "id": "python-function-polymorphism",
@@ -1192,22 +4499,23 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What is Function Polymorphism?\nFunction polymorphism means the same function works with different types of objects or data."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. Give examples of function polymorphism.\nExamples: len(), print(), User-defined functions"
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. Which concept is related to function polymorphism?\nDuck Typing."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• len(): String, List, Tuple, Dictionary\n• print(): All data types\n• User-defined Function: Different objects"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What is Function Polymorphism?",
+          "answer": "Function polymorphism means the same function works with different types of objects or data."
+        },
+        {
+          "question": "Give examples of function polymorphism.",
+          "answer": "Examples: len(), print(), and User-defined functions."
+        },
+        {
+          "question": "Which concept is related to function polymorphism?",
+          "answer": "Duck Typing."
+        }
+      ]
     },
     {
       "id": "what-is-a-class",
@@ -1237,22 +4545,23 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What is a class?\nA blueprint or template for creating objects."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. How do you define a class in Python?\nUsing the \"class\" keyword followed by the class name."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. Can a class have both variables and functions?\nYes, they are called attributes and methods."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Keyword: class\n• Purpose: Blueprint\n• Components: Attributes & Methods"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What is a class?",
+          "answer": "A blueprint or template for creating objects."
+        },
+        {
+          "question": "How do you define a class in Python?",
+          "answer": "Using the 'class' keyword followed by the class name."
+        },
+        {
+          "question": "Can a class have both variables and functions?",
+          "answer": "Yes, they are called attributes and methods respectively."
+        }
+      ]
     },
     {
       "id": "the-pass-statement",
@@ -1282,22 +4591,23 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What does the pass statement do?\nIt is a null operation; nothing happens when it executes."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. Why do we use pass in a class?\nTo avoid errors when a class is empty but required by syntax."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. Is pass a reserved keyword?\nYes, it is a built-in keyword in Python."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• pass: Placeholder\n• Purpose: Avoid Syntax Error\n• Use Case: Future Code"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What does the pass statement do?",
+          "answer": "It is a null operation; nothing happens when it executes. It acts as a placeholder."
+        },
+        {
+          "question": "Why do we use pass in a class?",
+          "answer": "To avoid IndentationErrors when a class body is required by syntax but not yet implemented."
+        },
+        {
+          "question": "Is pass a reserved keyword?",
+          "answer": "Yes, it is a built-in keyword in Python."
+        }
+      ]
     },
     {
       "id": "what-is-an-object",
@@ -1327,22 +4637,23 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What is an object?\nA real instance created from a class."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. How do you create an object in Python?\nBy calling the class name followed by parentheses (e.g., s1 = Student())."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. Can multiple objects be created from one class?\nYes, you can create as many objects as needed."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Object: Instance\n• Access: dot (.) notation\n• Creation: ClassName()"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What is an object?",
+          "answer": "A real instance created from a class template."
+        },
+        {
+          "question": "How do you create an object in Python?",
+          "answer": "By calling the class name followed by parentheses, e.g., obj = ClassName()."
+        },
+        {
+          "question": "Can multiple objects be created from one class?",
+          "answer": "Yes, a single class can be used to create an unlimited number of unique object instances."
+        }
+      ]
     },
     {
       "id": "what-is-init-method",
@@ -1372,22 +4683,23 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What is the __init__ method?\nA constructor method that runs automatically when an object is created."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. Why is __init__ called a constructor?\nBecause it helps \"construct\" or initialize the object properties."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. Is the \"self\" parameter mandatory in __init__?\nYes, it must be the first parameter to refer to the current instance."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• __init__: Constructor\n• Trigger: Object Creation\n• Purpose: Initialization"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What is the __init__ method?",
+          "answer": "A special built-in method that is automatically called when an object is created from a class."
+        },
+        {
+          "question": "Why is __init__ called a constructor?",
+          "answer": "Because its primary role is to 'construct' or initialize the object's attributes with specific values."
+        },
+        {
+          "question": "Is the 'self' parameter mandatory in __init__?",
+          "answer": "Yes, it must always be the first parameter to represent the specific instance being created."
+        }
+      ]
     },
     {
       "id": "default-values-init",
@@ -1417,22 +4729,23 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What are default values in __init__?\nValues assigned to parameters in the constructor that are used if no argument is provided."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. How do you override a default value?\nBy passing a specific value when creating the object."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. Can multiple parameters have default values?\nYes, you can have as many as needed."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Optional Args: Default Values\n• Override: Passing Arg\n• Usage: Flexible Initialization"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What are default values in __init__?",
+          "answer": "Pre-assigned values in the constructor that Python uses if the user doesn't provide an argument during instantiation."
+        },
+        {
+          "question": "How do you override a default value?",
+          "answer": "By simply passing a new value for that parameter when creating the object."
+        },
+        {
+          "question": "Can multiple parameters have default values?",
+          "answer": "Yes, you can define default values for as many parameters as you like in the __init__ method."
+        }
+      ]
     },
     {
       "id": "multiple-parameters-init",
@@ -1462,22 +4775,23 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. How many parameters can __init__ have?\nAs many as needed to initialize the object attributes."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. Do all parameters need to be passed during instantiation?\nYes, unless they have default values."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. What is the role of self here?\nTo assign the incoming parameter values to the specific object instance."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Many Params: Complex Initialization\n• self: Mapping values\n• Usage: Rich Objects"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "How many parameters can __init__ have?",
+          "answer": "It can take as many parameters as required to fully initialize the object's state."
+        },
+        {
+          "question": "Do all parameters need to be passed during instantiation?",
+          "answer": "Only if they do not have default values defined in the method signature."
+        },
+        {
+          "question": "What is the role of self with multiple parameters?",
+          "answer": "It acts as the anchor that maps each incoming argument to a unique attribute of that specific object."
+        }
+      ]
     },
     {
       "id": "why-self-parameter",
@@ -1507,22 +4821,23 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What does the self parameter represent?\nIt refers to the current instance of the class."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. Why is self needed as the first parameter?\nTo allow methods to access attributes and other methods of the object."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. Can you use a name other than self?\nYes, but \"self\" is the standard convention."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• self: Current Instance\n• Role: Connecting method to data\n• Position: First parameter"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What does the self parameter represent?",
+          "answer": "It refers to the current instance of the class, allowing access to its attributes and methods."
+        },
+        {
+          "question": "Why is self needed as the first parameter?",
+          "answer": "To allow methods to access and modify the specific object's data (attributes)."
+        },
+        {
+          "question": "Can you use a name other than self?",
+          "answer": "Yes, but 'self' is the universal standard convention in the Python community."
+        }
+      ]
     },
     {
       "id": "self-naming-convention",
@@ -1552,22 +4867,23 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. Is self a keyword in Python?\nNo, it is just a naming convention."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. Can I use \"this\" instead of \"self\"?\nYes, you can use any valid identifier name."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. What is the best practice for naming the first parameter?\nAlways use \"self\" for readability and consistency."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Name: Flexible\n• Position: Mandatory 1st\n• Standard: Use \"self\""
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "Is self a keyword in Python?",
+          "answer": "No, it is just a strongly recommended naming convention for the first parameter of instance methods."
+        },
+        {
+          "question": "Can I use 'this' instead of 'self'?",
+          "answer": "Yes, any valid variable name works, but using 'this' or other names is discouraged for readability."
+        },
+        {
+          "question": "What is the best practice for naming the first parameter?",
+          "answer": "Always use 'self' to ensure your code is readable and consistent with Python's PEP 8 guidelines."
+        }
+      ]
     },
     {
       "id": "class-vs-object-properties",
@@ -1614,22 +4930,23 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What is a class property?\nA variable defined inside a class but outside methods, shared by all instances."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. What is an instance property?\nA variable defined inside __init__ using self, unique to each instance."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. How do you access a class property?\nUsing ClassName.property or object.property."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Class Prop: Shared, defined in class\n• Instance Prop: Unique, defined in __init__\n• Person.lastname: Class Access"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What is a class property?",
+          "answer": "A variable defined inside a class but outside methods, shared by all instances of that class."
+        },
+        {
+          "question": "What is an instance property?",
+          "answer": "A variable defined inside __init__ using self, which is unique to each individual object."
+        },
+        {
+          "question": "How do you access a class property?",
+          "answer": "Using the format ClassName.property or object.property."
+        }
+      ]
     },
     {
       "id": "calling-methods-self",
@@ -1659,22 +4976,23 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. How do you call one method from another?\nUsing the \"self\" parameter: self.method_name()."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. Does self refer to the current object?\nYes, it ensures the method is called on the correct instance."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. Why call methods within a class?\nTo promote code reuse and organize logic."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Syntax: self.method_name()\n• Context: Current instance\n• Usage: Reusable methods"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "How do you call one method from another?",
+          "answer": "By using the 'self' parameter followed by the method name, e.g., self.method_name()."
+        },
+        {
+          "question": "Does self refer to the current object?",
+          "answer": "Yes, it ensures that when one method calls another, it operates on the same instance's data."
+        },
+        {
+          "question": "Why call methods within a class?",
+          "answer": "To promote code reuse, simplify complex logic, and organize code into smaller, manageable pieces."
+        }
+      ]
     },
     {
       "id": "python-variable-types",
@@ -1850,30 +5168,31 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What is an instance variable?\nAn instance variable belongs to an object and is defined using self."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. What is a class variable?\nA class variable is shared by all objects of the class."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. What is a local variable?\nA local variable is created inside a method and can be used only within that method."
-        },
-        {
-          "type": "text",
-          "value": "🔹 4. Which variable is shared by all objects?\nClass variable."
-        },
-        {
-          "type": "text",
-          "value": "🔹 5. Which variable uses self keyword?\nInstance variable."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• self.variable → Instance Variable\n• class variable → Shared Variable\n• inside method only → Local Variable"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What is an instance variable?",
+          "answer": "An instance variable belongs to a specific object and is defined using 'self'."
+        },
+        {
+          "question": "What is a class variable?",
+          "answer": "A class variable is defined inside the class but outside methods and is shared by all objects."
+        },
+        {
+          "question": "What is a local variable?",
+          "answer": "A local variable is created inside a method and exists only during that method's execution."
+        },
+        {
+          "question": "Which variable is shared by all objects?",
+          "answer": "The Class variable."
+        },
+        {
+          "question": "Which variable uses the self keyword?",
+          "answer": "The Instance variable."
+        }
+      ]
     },
     {
       "id": "python-class-methods",
@@ -1980,30 +5299,31 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What is an instance method?\nAn instance method works with object variables and uses self."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. What is a class method?\nA class method works with class variables and uses cls."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. What is a static method?\nA static method is a utility method that does not use self or cls."
-        },
-        {
-          "type": "text",
-          "value": "🔹 4. Which decorator is used for class methods?\nThe @classmethod decorator."
-        },
-        {
-          "type": "text",
-          "value": "🔹 5. Which decorator is used for static methods?\nThe @staticmethod decorator."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• self → Object data (Instance)\n• cls → Class data (Class)\n• staticmethod → Utility/helper function"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What is an instance method?",
+          "answer": "An instance method works with object variables and uses 'self' as its first parameter."
+        },
+        {
+          "question": "What is a class method?",
+          "answer": "A class method works with class variables and uses 'cls' as its first parameter, marked with @classmethod."
+        },
+        {
+          "question": "What is a static method?",
+          "answer": "A static method is a utility method that doesn't use self or cls, marked with @staticmethod."
+        },
+        {
+          "question": "Which decorator is used for class methods?",
+          "answer": "The @classmethod decorator."
+        },
+        {
+          "question": "Which decorator is used for static methods?",
+          "answer": "The @staticmethod decorator."
+        }
+      ]
     },
     {
       "id": "student-class-example",
@@ -2029,18 +5349,19 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What does the display method do?\nIt prints the student details stored in the instance variables."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. Why use self.name instead of just name?\nTo store the value as an attribute of the specific object instance."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• class: Blueprint\n• self: Instance reference\n• __init__: Auto-run constructor"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What does the display method do?",
+          "answer": "It prints the student details (name and age) stored in the instance variables."
+        },
+        {
+          "question": "Why use self.name instead of just name?",
+          "answer": "To ensure the value is stored as an attribute of the specific object instance rather than a local variable."
+        }
+      ]
     },
     {
       "id": "dog-class-example",
@@ -2066,18 +5387,19 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. How is the bark method called?\nUsing the object name followed by a dot and the method name: d1.bark()."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. What is \"Buddy\" in this code?\nIt is the string value passed as the name parameter to the constructor."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Instance: d1\n• Method: bark()\n• Property: name"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "How is the bark method called?",
+          "answer": "Using the object name followed by a dot and the method name, e.g., d1.bark()."
+        },
+        {
+          "question": "What is 'Buddy' in this code?",
+          "answer": "It is the string literal passed as an argument to the constructor to initialize the dog's name."
+        }
+      ]
     },
     {
       "id": "person-class-example",
@@ -2103,18 +5425,19 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. Can we create another object p2?\nYes, for example: p2 = Person(\"Dharini\", 20)."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. What is the first parameter of greet()?\nIt is self, which refers to the current Person object."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Class Name: Person\n• Constructor: __init__\n• Greeting: greet()"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "Can we create another object p2?",
+          "answer": "Yes, you can create multiple objects like p2 = Person('Dharini', 20)."
+        },
+        {
+          "question": "What is the first parameter of greet()?",
+          "answer": "It is 'self', which refers to the current Person object instance."
+        }
+      ]
     },
     {
       "id": "car-class-example",
@@ -2140,18 +5463,19 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What happens if you don't pass \"Ford\"?\nPython gives a TypeError because brand is a required parameter."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. Is \"show\" a built-in function?\nNo, it is a user-defined method inside the Car class."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Object: c1\n• Property: brand\n• Action: show()"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What happens if you don't pass 'Ford'?",
+          "answer": "Python raises a TypeError because 'brand' is a required parameter for the constructor."
+        },
+        {
+          "question": "Is 'show' a built-in function?",
+          "answer": "No, it is a custom method defined inside the Car class."
+        }
+      ]
     }
   ],
   mysql: [
@@ -2179,25 +5503,21 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What is a SQL Join?\nA clause used to combine rows from two or more tables based on a related column."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. What is an Inner Join?\nA join that returns records that have matching values in both tables."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. What is a Left Join?\nA join that returns all records from the left table and matched records from the right."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Inner: Matching Only\n• Left: All Left + Matches\n• Right: All Right + Matches"
         }
       ],
       "questions": [
         {
+          "question": "What is a SQL Join?",
+          "answer": "A clause used to combine rows from two or more tables based on a related column between them."
+        },
+        {
+          "question": "What is an Inner Join?",
+          "answer": "An Inner Join returns only the records that have matching values in both tables."
+        },
+        {
           "question": "What is a Left Join?",
-          "answer": "A Left Join returns all records from the left table and the matched records from the right table."
+          "answer": "A Left Join returns all records from the left table, and the matched records from the right table."
         }
       ]
     }
@@ -2227,25 +5547,21 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What is a linked list?\nA linear data structure where elements are not stored at contiguous memory locations."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. What does a node contain?\nData and a reference (pointer) to the next node."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. Difference between Array and Linked List?\nArrays have fixed size/contiguous memory; Linked Lists are dynamic/non-contiguous."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Structure: Node-based\n• Memory: Non-contiguous\n• Size: Dynamic"
         }
       ],
       "questions": [
         {
+          "question": "What is a linked list?",
+          "answer": "A linear data structure where elements are not stored at contiguous memory locations."
+        },
+        {
+          "question": "What does a node contain?",
+          "answer": "A node contains data and a reference (pointer) to the next node in the sequence."
+        },
+        {
           "question": "Difference between Array and Linked List?",
-          "answer": "Arrays have fixed size and contiguous memory; Linked Lists have dynamic size and non-contiguous memory."
+          "answer": "Arrays have fixed sizes and contiguous memory; Linked Lists have dynamic sizes and use pointers to connect non-contiguous memory."
         }
       ]
     }
@@ -2275,25 +5591,21 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What is Amazon EC2?\nA web service that provides secure, resizable compute capacity in the cloud."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. What is an instance type?\nA specific configuration of CPU, memory, storage, and networking capacity."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. What is an AMI?\nAn Amazon Machine Image that provides the software configuration (OS, apps) to launch an instance."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Service: Compute (IaaS)\n• Scaling: Horizontal & Vertical\n• Pricing: Pay-as-you-go"
         }
       ],
       "questions": [
         {
+          "question": "What is Amazon EC2?",
+          "answer": "A web service that provides secure, resizable compute capacity in the cloud."
+        },
+        {
+          "question": "What is an instance type?",
+          "answer": "A specific configuration of CPU, memory, storage, and networking capacity tailored for different workloads."
+        },
+        {
           "question": "What is an AMI?",
-          "answer": "An Amazon Machine Image (AMI) provides the information required to launch an instance."
+          "answer": "An Amazon Machine Image (AMI) provides the information required to launch an instance, including OS and application software."
         }
       ]
     }
@@ -2323,22 +5635,46 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What is REST?\nAn architectural style for networked applications on the web."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. Name common HTTP methods.\nGET, POST, PUT, PATCH, and DELETE."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. Is REST stateless?\nYes, each request from client to server must contain all necessary information."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Protocol: HTTP\n• Format: JSON/XML\n• Nature: Stateless"
         }
       ],
-      "questions": []
+      "questions": [
+        {
+          "question": "What is REST?",
+          "answer": "An architectural style for providing standards between computer systems on the web, using HTTP methods."
+        },
+        {
+          "question": "Name common HTTP methods.",
+          "answer": "GET (Retrieve), POST (Create), PUT (Update), PATCH (Partial Update), and DELETE (Remove)."
+        },
+        {
+          "question": "Is REST stateless?",
+          "answer": "Yes, each request from client to server must contain all the information necessary to understand and complete the request."
+        }
+      ]
+    },
+    {
+      "id": "api-basics",
+      "title": "REST API Fundamentals",
+      "category": "Basic",
+      "definition": "REST (Representational State Transfer) is an architectural style for providing standards between computer systems on the web.",
+      "sections": [
+        { "type": "text", "value": "Key concepts: Resources, HTTP Methods (GET, POST, PUT, DELETE), and Status Codes." }
+      ],
+      "questions": [
+        {
+          "question": "What are the main HTTP methods used in REST APIs?",
+          "answer": "GET (Read), POST (Create), PUT (Update), PATCH (Partial Update), and DELETE (Delete)."
+        },
+        {
+          "question": "What does a 404 Status Code mean?",
+          "answer": "It means 'Not Found' - the server could not find the requested resource."
+        },
+        {
+          "question": "What is the difference between PUT and PATCH?",
+          "answer": "PUT is used to replace an entire resource, while PATCH is used to apply partial modifications to a resource."
+        }
+      ]
     }
   ],
   coding: [
@@ -2366,25 +5702,98 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 1. What is the time complexity of the hash map approach?\nO(n) because we traverse the list once."
-        },
-        {
-          "type": "text",
-          "value": "🔹 2. What is the space complexity?\nO(n) to store the hash map."
-        },
-        {
-          "type": "text",
-          "value": "🔹 3. Can it be solved with two pointers?\nYes, but only if the array is sorted."
-        },
-        {
-          "type": "text",
           "value": "Quick Revision:\n• Best Approach: Hash Map\n• Time: O(n)\n• Space: O(n)"
         }
       ],
       "questions": [
         {
+          "question": "What is the time complexity of the hash map approach for Two Sum?",
+          "answer": "O(n), as we only traverse the list once and hash map lookups are O(1) on average."
+        },
+        {
+          "question": "What is the space complexity?",
+          "answer": "O(n) because in the worst case, we might store every element in the hash map."
+        },
+        {
+          "question": "Can it be solved with two pointers?",
+          "answer": "Yes, but only if the array is sorted. If unsorted, sorting it first makes the complexity O(n log n)."
+        },
+        {
           "question": "Can we solve it in O(1) space?",
           "answer": "Yes, by sorting the array and using two pointers, but time complexity becomes O(n log n)."
+        }
+      ]
+    },
+    {
+      "id": "coding-patterns",
+      "title": "Essential Coding Patterns",
+      "category": "Basic",
+      "definition": "Coding patterns are reusable solutions to common algorithmic problems encountered in technical interviews.",
+      "sections": [
+        { "type": "text", "value": "Common patterns: Sliding Window, Two Pointers, Fast & Slow Pointers, Merge Intervals." }
+      ],
+      "questions": [
+        {
+          "question": "What is the Sliding Window pattern?",
+          "answer": "It is used to perform operations on a specific window size of an array or string to reduce time complexity from O(N²) to O(N)."
+        },
+        {
+          "question": "When should you use the Two Pointers approach?",
+          "answer": "It's typically used on sorted arrays or linked lists where you need to find a pair or sub-segment that meets certain criteria."
+        },
+        {
+          "question": "What is the Fast and Slow Pointers algorithm used for?",
+          "answer": "It is primarily used to detect cycles in a linked list or to find the middle element of a list."
+        }
+      ]
+    }
+  ],
+  ml: [
+    {
+      id: 'ml-intro',
+      title: 'Introduction to Machine Learning',
+      category: 'Basic',
+      definition: 'Machine Learning is a subset of AI that focuses on building systems that learn from data to make predictions or decisions.',
+      sections: [
+        { type: 'text', value: 'Machine Learning types: Supervised, Unsupervised, and Reinforcement Learning.' }
+      ],
+      questions: [
+        {
+          "question": "What are the three main types of Machine Learning?",
+          "answer": "Supervised Learning (learning from labeled data), Unsupervised Learning (finding patterns in unlabeled data), and Reinforcement Learning (learning through rewards/punishments)."
+        },
+        {
+          "question": "What is the difference between Classification and Regression?",
+          "answer": "Classification predicts a discrete label or category (e.g., Spam or Not Spam), while Regression predicts a continuous numerical value (e.g., Housing Prices)."
+        },
+        {
+          "question": "What is Overfitting?",
+          "answer": "Overfitting occurs when a model learns the training data too well, including its noise and outliers, causing it to perform poorly on new, unseen data."
+        }
+      ]
+    }
+  ],
+  flask: [
+    {
+      id: 'flask-intro',
+      title: 'Introduction to Flask',
+      category: 'Basic',
+      definition: 'Flask is a lightweight WSGI web application framework in Python, designed to make getting started quick and easy.',
+      sections: [
+        { type: 'text', value: 'Flask follows the micro-framework philosophy, providing the essentials while being highly extensible.' }
+      ],
+      questions: [
+        {
+          "question": "What is Flask?",
+          "answer": "Flask is a micro-framework for Python that provides the core essentials for web development without forcing a specific project structure."
+        },
+        {
+          "question": "How do you define a route in Flask?",
+          "answer": "Using the @app.route('/') decorator above a function to map a URL to that specific function."
+        },
+        {
+          "question": "What is the purpose of the 'render_template' function?",
+          "answer": "It is used to render HTML files using the Jinja2 engine, allowing you to pass dynamic data from Python to your web pages."
         }
       ]
     }
@@ -2433,5 +5842,19 @@ export const technologies = [
     "icon": "SiVisualstudiocode",
     "color": "#007ACC",
     "description": "Real-world coding problems and implementation best practices."
+  },
+  {
+    "id": "ml",
+    "name": "Machine Learning",
+    "icon": "SiScikitlearn",
+    "color": "#F7931E",
+    "description": "Supervised learning, classification, regression, and model tuning."
+  },
+  {
+    "id": "flask",
+    "name": "Flask",
+    "icon": "SiFlask",
+    "color": "#000000",
+    "description": "Web development with Python, routing, and RESTful service creation."
   }
 ];

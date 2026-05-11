@@ -87,7 +87,7 @@ const TopicDetailPage = () => {
                   </div>
                 )}
                 {section.type === 'code' && (
-                  <div className="mb-4">
+                  <div className="mb-2">
                     <CodeBlock code={section.value} />
                   </div>
                 )}
