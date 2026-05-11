@@ -2827,7 +2827,11 @@ export const interviewData = {
       "sections": [
         {
           "type": "text",
-          "value": "1️⃣ Python if\nThe basic if statement executes a block of code only if a specified condition is True."
+          "value": "Python supports the usual logical conditions from mathematics:\n• Equals: a == b\n• Not Equals: a != b\n• Less than: a < b\n• Less than or equal to: a <= b\n• Greater than: a > b\n• Greater than or equal to: a >= b\n\nThese conditions can be used in several ways, most commonly in 'if statements' and loops."
+        },
+        {
+          "type": "text",
+          "value": "2️⃣ Python if\nThe basic if statement executes a block of code only if a specified condition is True."
         },
         {
           "type": "code",
@@ -2839,27 +2843,27 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "2️⃣ Python elif\nShort for 'else if', it allows you to check multiple conditions if the previous ones were False."
+          "value": "3️⃣ Python elif\nShort for 'else if', it allows you to check multiple conditions if the previous ones were False."
         },
         {
           "type": "code",
-          "value": "marks = 75\nif marks >= 90:\n    print(\"Grade A\")\nelif marks >= 60:\n    print(\"Grade B\")"
+          "value": "temperature = 22\nif temperature > 45:\n    print(\"It's hot outside!\")\nelif temperature > 35:\n    print(\"It's warm outside\")\nelif temperature > 25:\n    print(\"It's normal outside\")\nelse:\n    print(\"It's cold outside!\")"
         },
         {
           "type": "output",
-          "value": "Grade B"
+          "value": "It's cold outside!"
         },
         {
           "type": "text",
-          "value": "3️⃣ Python else\nThe else block captures anything that isn't caught by the preceding if/elif conditions."
+          "value": "4️⃣ Python else\nThe else block captures anything that isn't caught by the preceding if/elif conditions."
         },
         {
           "type": "code",
-          "value": "number = -5\nif number > 0:\n    print(\"Positive\")\nelse:\n    print(\"Negative\")"
+          "value": "number = 7\nif number % 2 == 0:\n    print(\"The number is even\")\nelse:\n    print(\"The number is odd\")"
         },
         {
           "type": "output",
-          "value": "Negative"
+          "value": "The number is odd"
         },
         {
           "type": "text",
@@ -2875,7 +2879,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "4️⃣ Shorthand If (Ternary Operator)\nPython allows writing simple if-else statements in a single line for cleaner code."
+          "value": "5️⃣ Shorthand If (Ternary Operator)\nPython allows writing simple if-else statements in a single line for cleaner code."
         },
         {
           "type": "code",
@@ -2887,7 +2891,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "5️⃣ Logical Operators\nLogical operators are used to combine multiple conditional statements."
+          "value": "6️⃣ Logical Operators\nLogical operators are used to combine multiple conditional statements."
         },
         {
           "type": "text",
@@ -2927,15 +2931,15 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "🔹 Combined Example: Login System"
+          "value": "🔹 Combined Example: Outdoor Activities\nA comprehensive example using 'and', 'or', and 'not' together."
         },
         {
           "type": "code",
-          "value": "username = \"admin\"\npassword = \"1234\"\n\nif username == \"admin\" and password == \"1234\":\n    print(\"Login Successful\")\nelse:\n    print(\"Invalid Login\")"
+          "value": "temperature = 25\nis_raining = False\nis_weekend = True\n\nif (temperature > 20 and not is_raining) or is_weekend:\n    print(\"Great day for outdoor activities!\")"
         },
         {
           "type": "output",
-          "value": "Login Successful"
+          "value": "Great day for outdoor activities!"
         },
         {
           "type": "table",
@@ -2964,7 +2968,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "6️⃣ Nested if Statements\nYou can place an if statement inside another if statement to check hierarchical conditions."
+          "value": "7️⃣ Nested if Statements\nYou can place an if statement inside another if statement to check hierarchical conditions."
         },
         {
           "type": "text",
@@ -3041,7 +3045,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "7️⃣ Pass Statement\nSince code blocks cannot be empty, use 'pass' as a placeholder to avoid indentation errors."
+          "value": "8️⃣ Pass Statement\nSince code blocks cannot be empty, use 'pass' as a placeholder to avoid indentation errors."
         },
         {
           "type": "code",
@@ -3399,420 +3403,6 @@ export const interviewData = {
       ]
     },
     {
-      "id": "python-modules",
-      "title": "Modules",
-      "category": "Basic",
-      "definition": "A module is a file containing Python code (functions, classes, variables) that can be imported and used in other Python scripts.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. What is a Module?\nConsider a module to be a code library—a file containing a set of functions you want to include in your application."
-        },
-        {
-          "type": "text",
-          "value": "2. Built-in Modules\nPython has many built-in modules that you can import at any time."
-        },
-        {
-          "type": "code",
-          "value": "import math\nprint(math.sqrt(64))\n\nimport platform\nprint(platform.system())"
-        },
-        {
-          "type": "output",
-          "value": "8.0\nWindows"
-        },
-        {
-          "type": "text",
-          "value": "3. The 'as' Keyword (Aliasing)\nYou can create an alias when you import a module by using the 'as' keyword."
-        },
-        {
-          "type": "code",
-          "value": "import math as m\nprint(m.pi)"
-        },
-        {
-          "type": "output",
-          "value": "3.141592653589793"
-        },
-        {
-          "type": "text",
-          "value": "4. The dir() Function\nThe dir() function lists all the function names (or variable names) in a module."
-        },
-        {
-          "type": "code",
-          "value": "import math\n# print(dir(math)) # Uncomment to see all members"
-        },
-        {
-          "type": "text",
-          "value": "Quick Revision:\n• import: Load a module\n• as: Create an alias\n• from: Import specific parts\n• dir(): List module contents"
-        }
-      ],
-      "questions": [
-        {
-          "question": "How do you import only a specific part from a module?",
-          "answer": "Using the 'from' keyword, for example: 'from math import pi'."
-        },
-        {
-          "question": "What is the purpose of the dir() function?",
-          "answer": "It is used to find out which names a module defines. It returns a sorted list of strings containing the names defined by a module."
-        }
-      ]
-    },
-    {
-      "id": "python-range",
-      "title": "Range",
-      "category": "Basic",
-      "definition": "The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and stops before a specified number.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Basic Range usage\nrange(stop) generates numbers from 0 up to (but not including) stop."
-        },
-        {
-          "type": "code",
-          "value": "x = range(6)\nfor n in x:\n    print(n)"
-        },
-        {
-          "type": "output",
-          "value": "0\n1\n2\n3\n4\n5"
-        },
-        {
-          "type": "text",
-          "value": "2. Step Parameter\nYou can specify the start value, the end value, and the increment (step)."
-        },
-        {
-          "type": "code",
-          "value": "x = range(3, 20, 2)\nfor n in x:\n    print(n)"
-        },
-        {
-          "type": "output",
-          "value": "3\n5\n7\n9\n11\n13\n15\n17\n19"
-        },
-        {
-          "type": "text",
-          "value": "♦ Quick Revision:\n• Syntax: range(start, stop, step)\n• stop: Required parameter\n• start: Default is 0\n• step: Default is 1"
-        }
-      ],
-      "questions": [
-        {
-          "question": "Does range(5) include the number 5?",
-          "answer": "No, the range function stops before the specified stop value."
-        },
-        {
-          "question": "Can range() have negative steps?",
-          "answer": "Yes, for example range(10, 0, -1) will generate numbers from 10 down to 1."
-        }
-      ]
-    },
-    {
-      "id": "python-arrays",
-      "title": "Arrays",
-      "category": "Basic",
-      "definition": "Python does not have built-in support for Arrays, but Python Lists can be used instead. For actual arrays, you can use the 'array' module or NumPy.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Using Lists as Arrays\nLists are often used as arrays because they can store multiple values in a single variable."
-        },
-        {
-          "type": "code",
-          "value": "cars = [\"Ford\", \"Volvo\", \"BMW\"]\nprint(cars[0])\ncars[0] = \"Toyota\"\nprint(len(cars))"
-        },
-        {
-          "type": "output",
-          "value": "Ford\n3"
-        },
-        {
-          "type": "text",
-          "value": "2. The array Module\nIf you need a typed array (elements of the same type), use the 'array' module."
-        },
-        {
-          "type": "code",
-          "value": "import array as arr\na = arr.array('i', [1, 2, 3]) # 'i' for integer\nprint(a)"
-        },
-        {
-          "type": "text",
-          "value": "♦ Quick Revision:\n• Lists: Most common way to handle arrays\n• NumPy: Best for mathematical arrays\n• array module: Good for memory-efficient typed arrays"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is the difference between a List and an Array in Python?",
-          "answer": "Lists can store elements of different data types, while Arrays (from the array module) are typed and can only store elements of the same data type."
-        },
-        {
-          "question": "How do you add an element to an array-like list?",
-          "answer": "Using the append() method."
-        }
-      ]
-    },
-    {
-      "id": "python-iterators",
-      "title": "Iterators",
-      "category": "Basic",
-      "definition": "An iterator is an object that contains a countable number of values. It is an object that can be iterated upon, meaning that you can traverse through all the values.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Iterator vs Iterable\nLists, tuples, dictionaries, and sets are all iterable objects. They are iterable containers which you can get an iterator from."
-        },
-        {
-          "type": "code",
-          "value": "mytuple = (\"apple\", \"banana\", \"cherry\")\nmyit = iter(mytuple)\n\nprint(next(myit))\nprint(next(myit))"
-        },
-        {
-          "type": "output",
-          "value": "apple\nbanana"
-        },
-        {
-          "type": "text",
-          "value": "2. Creating a Custom Iterator\nTo create an object/class as an iterator you have to implement the methods __iter__() and __next__() to your object."
-        },
-        {
-          "type": "code",
-          "value": "class MyNumbers:\n  def __iter__(self):\n    self.a = 1\n    return self\n\n  def __next__(self):\n    x = self.a\n    self.a += 1\n    return x"
-        },
-        {
-          "type": "text",
-          "value": "♦ Quick Revision:\n• __iter__(): Returns the iterator object\n• __next__(): Returns the next item\n• StopIteration: Raised to end the loop"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is the difference between an iterable and an iterator?",
-          "answer": "An iterable is an object which one can iterate over (like a list). An iterator is the object which actually performs the iteration (has a __next__ method)."
-        },
-        {
-          "question": "What happens when next() is called on an iterator that has no more items?",
-          "answer": "It raises a StopIteration exception."
-        }
-      ]
-    },
-    {
-      "id": "python-dates",
-      "title": "Dates",
-      "category": "Basic",
-      "definition": "A date in Python is not a data type of its own, but we can import a module named 'datetime' to work with dates as date objects.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Current Date and Time\nImport the datetime module and use the now() method to get the current date and time."
-        },
-        {
-          "type": "code",
-          "value": "import datetime\nx = datetime.datetime.now()\nprint(x)\nprint(x.year)\nprint(x.strftime(\"%A\"))"
-        },
-        {
-          "type": "output",
-          "value": "2024-05-11 17:46:33.123456\n2024\nSaturday"
-        },
-        {
-          "type": "text",
-          "value": "2. Formatting Dates (strftime)\nThe datetime object has a method for formatting date objects into readable strings."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Directive",
-            "Description",
-            "Example"
-          ],
-          "rows": [
-            [
-              "%a",
-              "Weekday, short version",
-              "Wed"
-            ],
-            [
-              "%A",
-              "Weekday, full version",
-              "Wednesday"
-            ],
-            [
-              "%B",
-              "Month name, full version",
-              "December"
-            ],
-            [
-              "%Y",
-              "Year, full version",
-              "2018"
-            ]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "♦ Quick Revision:\n• Module: datetime\n• strftime(): String Format Time\n• now(): Current timestamp"
-        }
-      ],
-      "questions": [
-        {
-          "question": "How do you create a specific date object?",
-          "answer": "Using the datetime.datetime(year, month, day) constructor."
-        },
-        {
-          "question": "What does the strftime() method do?",
-          "answer": "It formats a datetime object into a readable string based on provided format codes."
-        }
-      ]
-    },
-    {
-      "id": "python-math",
-      "title": "Math",
-      "category": "Basic",
-      "definition": "Python has a set of built-in math functions, including a math module, that allows you to perform mathematical tasks on numbers.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Built-in Math Functions\nFunctions like min(), max(), abs(), and pow() are available without importing anything."
-        },
-        {
-          "type": "code",
-          "value": "print(min(5, 10, 25))\nprint(abs(-7.25))\nprint(pow(4, 3))"
-        },
-        {
-          "type": "output",
-          "value": "5\n7.25\n64"
-        },
-        {
-          "type": "text",
-          "value": "2. The math Module\nFor more complex mathematical tasks, use the math module."
-        },
-        {
-          "type": "code",
-          "value": "import math\nprint(math.sqrt(64))\nprint(math.ceil(1.4))\nprint(math.floor(1.4))\nprint(math.pi)"
-        },
-        {
-          "type": "output",
-          "value": "8.0\n2\n1\n3.141592653589793"
-        },
-        {
-          "type": "text",
-          "value": "♦ Quick Revision:\n• ceil(): Rounds up\n• floor(): Rounds down\n• sqrt(): Square root\n• pi: Mathematical constant"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is the difference between math.ceil() and math.floor()?",
-          "answer": "ceil() rounds a number UP to the nearest integer, while floor() rounds a number DOWN to the nearest integer."
-        },
-        {
-          "question": "How do you get the value of PI in Python?",
-          "answer": "By using math.pi after importing the math module."
-        }
-      ]
-    },
-    {
-      "id": "python-exception-handling",
-      "title": "Exception Handling",
-      "category": "Basic",
-      "definition": "Exception handling is used to handle errors gracefully without crashing the program. It involves catching and responding to errors (exceptions) that occur during execution.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. The try...except Block\nThe 'try' block lets you test a block of code for errors. The 'except' block lets you handle the error."
-        },
-        {
-          "type": "code",
-          "value": "try:\n    print(x)\nexcept NameError:\n    print(\"Variable x is not defined\")\nexcept:\n    print(\"Something else went wrong\")"
-        },
-        {
-          "type": "output",
-          "value": "Variable x is not defined"
-        },
-        {
-          "type": "text",
-          "value": "2. Handling Specific Exceptions\nYou can specify which exception you want to catch."
-        },
-        {
-          "type": "code",
-          "value": "try:\n    num = 10 / 0\nexcept ZeroDivisionError:\n    print(\"Error: Cannot divide by zero!\")"
-        },
-        {
-          "type": "output",
-          "value": "Error: Cannot divide by zero!"
-        },
-        {
-          "type": "text",
-          "value": "3. The else and finally Blocks\n'else' runs if no error occurs. 'finally' runs regardless of whether an error occurred or not."
-        },
-        {
-          "type": "code",
-          "value": "try:\n    print(\"Hello\")\nexcept:\n    print(\"Something went wrong\")\nelse:\n    print(\"Nothing went wrong\")\nfinally:\n    print(\"The 'try except' is finished\")"
-        },
-        {
-          "type": "output",
-          "value": "Hello\nNothing went wrong\nThe 'try except' is finished"
-        },
-        {
-          "type": "text",
-          "value": "Quick Revision:\n• try: Test code\n• except: Handle error\n• else: Run if no error\n• finally: Always run"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is the primary purpose of try-except in Python?",
-          "answer": "To prevent a program from crashing when an error occurs by providing a way to catch and handle exceptions."
-        },
-        {
-          "question": "What is the difference between 'else' and 'finally' in exception handling?",
-          "answer": "The 'else' block executes only if no exceptions were raised, while the 'finally' block executes regardless of whether an exception occurred or not."
-        }
-      ]
-    },
-    {
-      "id": "python-file-handling",
-      "title": "File Handling",
-      "category": "Basic",
-      "definition": "Python has several functions for creating, reading, updating, and deleting files. The key function for working with files in Python is the open() function.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Opening and Reading a File\nUse open() with the 'r' mode to read a file."
-        },
-        {
-          "type": "code",
-          "value": "# Assuming demo.txt contains 'Hello Python'\nf = open(\"demo.txt\", \"r\")\nprint(f.read())\nf.close()"
-        },
-        {
-          "type": "output",
-          "value": "Hello Python"
-        },
-        {
-          "type": "text",
-          "value": "2. Writing and Appending\n'w' overwrites the file, while 'a' appends to the end."
-        },
-        {
-          "type": "code",
-          "value": "# Writing\nf = open(\"demo.txt\", \"w\")\nf.write(\"New content\")\nf.close()\n\n# Appending\nf = open(\"demo.txt\", \"a\")\nf.write(\"\\nAppended line\")\nf.close()"
-        },
-        {
-          "type": "text",
-          "value": "3. The 'with' Statement (Recommended)\nThe 'with' statement automatically handles file closing, even if an exception occurs."
-        },
-        {
-          "type": "code",
-          "value": "with open(\"demo.txt\", \"r\") as f:\n    content = f.read()\n    print(content)"
-        },
-        {
-          "type": "output",
-          "value": "New content\nAppended line"
-        },
-        {
-          "type": "text",
-          "value": "Quick Revision:\n• 'r': Read mode\n• 'w': Write mode\n• 'a': Append mode\n• with: Auto-closing"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is the advantage of using the 'with' statement for file operations?",
-          "answer": "It ensures that the file is properly closed after the block of code finishes, even if an error occurs, preventing memory leaks or file corruption."
-        },
-        {
-          "question": "What is the difference between 'w' and 'a' modes in open()?",
-          "answer": "'w' (write) mode overwrites the entire content of the file, while 'a' (append) mode adds new content to the end of the existing file."
-        }
-      ]
-    },
-    {
       "id": "python-for-loop",
       "title": "For Loop",
       "category": "Loops",
@@ -3832,7 +3422,19 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "2. The break Statement\nWith the break statement we can stop the loop before it has looped through all the items."
+          "value": "2. Looping Through a String\nEven strings are iterable objects, they contain a sequence of characters."
+        },
+        {
+          "type": "code",
+          "value": "for x in \"banana\":\n  print(x)"
+        },
+        {
+          "type": "output",
+          "value": "b\na\nn\na\nn\na"
+        },
+        {
+          "type": "text",
+          "value": "3. The break Statement\nWith the break statement we can stop the loop before it has looped through all the items."
         },
         {
           "type": "code",
@@ -3844,7 +3446,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "3. The continue Statement\nWith the continue statement we can stop the current iteration of the loop, and continue with the next."
+          "value": "4. The continue Statement\nWith the continue statement we can stop the current iteration of the loop, and continue with the next."
         },
         {
           "type": "code",
@@ -3856,7 +3458,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "4. Else in For Loop\nThe else keyword in a for loop specifies a block of code to be executed when the loop is finished."
+          "value": "5. Else in For Loop\nThe else keyword in a for loop specifies a block of code to be executed when the loop is finished."
         },
         {
           "type": "code",
@@ -3957,358 +3559,6 @@ export const interviewData = {
         {
           "question": "How does 'continue' work in a while loop?",
           "answer": "It skips the remaining code in the current iteration and immediately jumps back to re-evaluate the loop's condition."
-        }
-      ]
-    },
-    {
-      "id": "python-functions",
-      "title": "Functions",
-      "category": "Functions",
-      "definition": "A function is a block of code which only runs when it is called. You can pass data, known as parameters, into a function. A function can return data as a result.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Creating and Calling a Function\nIn Python, a function is defined using the 'def' keyword. To call a function, use the function name followed by parenthesis."
-        },
-        {
-          "type": "code",
-          "value": "def my_function():\n    print(\"Hello from a function!\")\n\nmy_function() # Calling the function"
-        },
-        {
-          "type": "output",
-          "value": "Hello from a function!"
-        },
-        {
-          "type": "text",
-          "value": "2. Parameters and Return Values\nParameters act as variables inside the function. Use the 'return' statement to send a value back to the caller."
-        },
-        {
-          "type": "code",
-          "value": "def add_numbers(a, b):\n    return a + b\n\nresult = add_numbers(10, 20)\nprint(f\"Sum: {result}\")"
-        },
-        {
-          "type": "output",
-          "value": "Sum: 30"
-        },
-        {
-          "type": "text",
-          "value": "♦ Quick Revision:\n• def: Function definition keyword\n• Calling: Use name with ( )\n• return: Sends value back\n• Parameters: Input variables"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is the benefit of using functions in Python?",
-          "answer": "Functions promote code reusability, modularity, and readability. They allow you to define logic once and execute it multiple times."
-        },
-        {
-          "question": "What happens if a function does not have a return statement?",
-          "answer": "If no return statement is specified, the function returns 'None' by default."
-        }
-      ]
-    },
-    {
-      "id": "python-arguments",
-      "title": "Arguments",
-      "category": "Functions",
-      "definition": "Arguments are the values passed into a function when it is called. Python supports positional, keyword, and default arguments.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Positional and Keyword Arguments\nPositional arguments are passed in order. Keyword arguments are passed with the 'key = value' syntax."
-        },
-        {
-          "type": "code",
-          "value": "def greet(first, last):\n    print(f\"Hello {first} {last}\")\n\ngreet(\"John\", \"Doe\") # Positional\ngreet(last=\"Smith\", first=\"Jane\") # Keyword"
-        },
-        {
-          "type": "output",
-          "value": "Hello John Doe\nHello Jane Smith"
-        },
-        {
-          "type": "text",
-          "value": "2. Default Arguments\nYou can provide default values for parameters. If the caller doesn't provide an argument, the default is used."
-        },
-        {
-          "type": "code",
-          "value": "def power(base, exponent=2):\n    return base ** exponent\n\nprint(power(4))    # Uses default exponent 2\nprint(power(4, 3)) # Uses provided exponent 3"
-        },
-        {
-          "type": "output",
-          "value": "16\n64"
-        },
-        {
-          "type": "text",
-          "value": "♦ Quick Revision:\n• Positional: Order matters\n• Keyword: Name matters\n• Default: Optional parameters\n• Requirement: Non-default args must come before default args"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is the difference between parameters and arguments?",
-          "answer": "Parameters are the variables defined in the function signature. Arguments are the actual values passed to the function during a call."
-        },
-        {
-          "question": "Can positional arguments follow keyword arguments in a call?",
-          "answer": "No, positional arguments must always come before keyword arguments in a function call."
-        }
-      ]
-    },
-    {
-      "id": "python-args-kwargs",
-      "title": "*args / **kwargs",
-      "category": "Functions",
-      "definition": "Arbitrary arguments (*args) and Arbitrary Keyword Arguments (**kwargs) allow a function to accept any number of positional or keyword arguments.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Arbitrary Arguments (*args)\nUse *args when you don't know how many positional arguments will be passed. The function receives them as a tuple."
-        },
-        {
-          "type": "code",
-          "value": "def sum_all(*numbers):\n    return sum(numbers)\n\nprint(sum_all(1, 2, 3, 4, 5))"
-        },
-        {
-          "type": "output",
-          "value": "15"
-        },
-        {
-          "type": "text",
-          "value": "2. Arbitrary Keyword Arguments (**kwargs)\nUse **kwargs when you don't know how many keyword arguments will be passed. The function receives them as a dictionary."
-        },
-        {
-          "type": "code",
-          "value": "def profile(**info):\n    for key, value in info.items():\n        print(f\"{key}: {value}\")\n\nprofile(name=\"Vasu\", role=\"Developer\", age=22)"
-        },
-        {
-          "type": "output",
-          "value": "name: Vasu\nrole: Developer\nage: 22"
-        },
-        {
-          "type": "text",
-          "value": "♦ Quick Revision:\n• *args: Variable positional args (Tuple)\n• **kwargs: Variable keyword args (Dict)\n• Ordering: Standard args, then *args, then **kwargs"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is the data type of *args inside a function?",
-          "answer": "It is a Tuple."
-        },
-        {
-          "question": "What is the data type of **kwargs inside a function?",
-          "answer": "It is a Dictionary."
-        }
-      ]
-    },
-    {
-      "id": "python-scope",
-      "title": "Scope",
-      "category": "Functions",
-      "definition": "Scope refers to the visibility of variables. Python follows the LEGB rule: Local, Enclosing, Global, and Built-in.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Local vs Global Scope\nA variable created inside a function belongs to the local scope. A variable created in the main body of the code belongs to the global scope."
-        },
-        {
-          "type": "code",
-          "value": "x = 300 # Global\n\ndef my_func():\n    x = 200 # Local\n    print(f\"Inside: {x}\")\n\nmy_func()\nprint(f\"Outside: {x}\")"
-        },
-        {
-          "type": "output",
-          "value": "Inside: 200\nOutside: 300"
-        },
-        {
-          "type": "text",
-          "value": "2. The 'global' Keyword\nTo modify a global variable inside a function, use the 'global' keyword."
-        },
-        {
-          "type": "code",
-          "value": "count = 0\n\ndef increment():\n    global count\n    count += 1\n\nincrement()\nprint(count)"
-        },
-        {
-          "type": "output",
-          "value": "1"
-        },
-        {
-          "type": "text",
-          "value": "♦ Quick Revision:\n• Local: Inside function\n• Global: Outside function\n• global keyword: Modifies global vars from local scope\n• LEGB: Order of variable resolution"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What does the 'global' keyword do?",
-          "answer": "It tells Python to use the global version of a variable rather than creating a new local one, allowing local modifications to persist globally."
-        },
-        {
-          "question": "What is the LEGB rule?",
-          "answer": "It stands for Local, Enclosing, Global, and Built-in. It is the hierarchy Python uses to look up variable names."
-        }
-      ]
-    },
-    {
-      "id": "python-decorators",
-      "title": "Decorators",
-      "category": "Functions",
-      "definition": "A decorator is a design pattern in Python that allows a user to add new functionality to an existing object (functions or classes) without modifying its structure.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Basic Decorator Concept\nDecorators wrap another function to extend its behavior."
-        },
-        {
-          "type": "code",
-          "value": "def my_decorator(func):\n    def wrapper():\n        print(\"Something before the function.\")\n        func()\n        print(\"Something after the function.\")\n    return wrapper\n\n@my_decorator\ndef say_hello():\n    print(\"Hello!\")\n\nsay_hello()"
-        },
-        {
-          "type": "output",
-          "value": "Something before the function.\nHello!\nSomething after the function."
-        },
-        {
-          "type": "text",
-          "value": "2. Decorators with Arguments\nTo decorate functions that take arguments, use *args and **kwargs in the wrapper."
-        },
-        {
-          "type": "code",
-          "value": "def logger(func):\n    def wrapper(*args, **kwargs):\n        print(f\"Calling {func.__name__} with {args}\")\n        return func(*args, **kwargs)\n    return wrapper\n\n@logger\ndef multiply(x, y):\n    return x * y"
-        },
-        {
-          "type": "text",
-          "value": "♦ Quick Revision:\n• Purpose: Add functionality without changing code\n• Syntax: @decorator_name\n• Mechanism: Higher-order function (returns a function)"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is a decorator in Python?",
-          "answer": "A decorator is a function that takes another function as an argument, adds some functionality, and returns a new function."
-        },
-        {
-          "question": "What is the @ symbol used for in Python?",
-          "answer": "It is syntax sugar for applying a decorator to a function."
-        }
-      ]
-    },
-    {
-      "id": "python-lambda",
-      "title": "Lambda",
-      "category": "Functions",
-      "definition": "A lambda function is a small anonymous function. A lambda function can take any number of arguments, but can only have one expression.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Lambda Syntax\nThe syntax is: lambda arguments : expression"
-        },
-        {
-          "type": "code",
-          "value": "x = lambda a, b : a * b\nprint(x(5, 6))"
-        },
-        {
-          "type": "output",
-          "value": "30"
-        },
-        {
-          "type": "text",
-          "value": "2. Using Lambda with map() and filter()\nLambda functions are often used as temporary functions inside higher-order functions."
-        },
-        {
-          "type": "code",
-          "value": "nums = [1, 2, 3, 4, 5, 6]\nevens = list(filter(lambda x: x % 2 == 0, nums))\nsquares = list(map(lambda x: x * x, nums))\n\nprint(f\"Evens: {evens}\")\nprint(f\"Squares: {squares}\")"
-        },
-        {
-          "type": "output",
-          "value": "Evens: [2, 4, 6]\nSquares: [1, 4, 9, 16, 25, 36]"
-        },
-        {
-          "type": "text",
-          "value": "♦ Quick Revision:\n• Anonymous: No name\n• Syntax: lambda args: expr\n• Single Expression: No multiple lines/statements\n• Usage: Quick, one-time logic"
-        }
-      ],
-      "questions": [
-        {
-          "question": "How many expressions can a lambda function contain?",
-          "answer": "Exactly one."
-        },
-        {
-          "question": "Why are lambda functions called anonymous?",
-          "answer": "Because they are defined without a name using the 'lambda' keyword instead of 'def'."
-        }
-      ]
-    },
-    {
-      "id": "python-recursion",
-      "title": "Recursion",
-      "category": "Functions",
-      "definition": "Recursion is the process of defining something in terms of itself. In Python, a recursive function is a function that calls itself.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Factorial Example\nA recursive function must have a 'base case' to stop the recursion."
-        },
-        {
-          "type": "code",
-          "value": "def factorial(n):\n    if n == 1:\n        return 1\n    else:\n        return n * factorial(n - 1)\n\nprint(factorial(5))"
-        },
-        {
-          "type": "output",
-          "value": "120"
-        },
-        {
-          "type": "text",
-          "value": "2. Risks of Recursion\nWithout a base case, recursion leads to a stack overflow error (RecursionError)."
-        },
-        {
-          "type": "text",
-          "value": "♦ Quick Revision:\n• Base Case: Condition to stop\n• Recursive Case: Function calls itself\n• Call Stack: Memory used for each call"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is a base case in recursion?",
-          "answer": "The base case is the condition that terminates the recursive calls, preventing an infinite loop."
-        },
-        {
-          "question": "What error occurs if recursion goes too deep?",
-          "answer": "RecursionError: maximum recursion depth exceeded."
-        }
-      ]
-    },
-    {
-      "id": "python-generators",
-      "title": "Generators",
-      "category": "Functions",
-      "definition": "Generators are functions that return an iterable set of items, one at a time, in a special way using the 'yield' keyword.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Yield vs Return\n'yield' pauses the function, saves its state, and returns a value. When called again, it resumes where it left off."
-        },
-        {
-          "type": "code",
-          "value": "def my_generator():\n    yield 1\n    yield 2\n    yield 3\n\ngen = my_generator()\nprint(next(gen))\nprint(next(gen))"
-        },
-        {
-          "type": "output",
-          "value": "1\n2"
-        },
-        {
-          "type": "text",
-          "value": "2. Memory Efficiency\nGenerators are 'lazy'—they generate items on the fly instead of storing them in memory like lists."
-        },
-        {
-          "type": "code",
-          "value": "def count_up_to(n):\n    count = 1\n    while count <= n:\n        yield count\n        count += 1"
-        },
-        {
-          "type": "text",
-          "value": "♦ Quick Revision:\n• yield: Returns value and pauses\n• Memory: Highly efficient for large datasets\n• Iteration: Can be used in for loops\n• next(): Fetches the next item"
-        }
-      ],
-      "questions": [
-        {
-          "question": "How does a generator differ from a normal function?",
-          "answer": "A normal function returns a single value and loses its local state. A generator yields a sequence of values and preserves its local state between yields."
-        },
-        {
-          "question": "What keyword is essential for creating a generator?",
-          "answer": "The 'yield' keyword."
         }
       ]
     },
@@ -6234,7 +5484,7 @@ export const interviewData = {
           "answer": "Plotly"
         }
       ]
-    }
+    },
   ],
   "mysql": [
     {
@@ -6576,7 +5826,7 @@ export const technologies = [
     "name": "Python",
     "icon": "SiPython",
     "color": "#3776AB",
-    "description": "Master Python OOP, Basic, Functions and Libraries for interviews."
+    "description": "Master Python OOP, Basic, File Handling, Exception Handling and Libraries for interviews."
   },
   {
     "id": "mysql",
