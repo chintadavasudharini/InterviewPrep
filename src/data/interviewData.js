@@ -6042,7 +6042,7 @@ export const interviewData = {
       "id": "mysql-classification-relations",
       "title": "Classification of Relations in DBMS",
       "category": "Basic",
-      "definition": "In DBMS, a relation is a table. Relations are classified based on their structural properties, data volume, and their interaction with other tables.",
+      "definition": "In DBMS, a relation is a table. Relations are classified based on their structural properties, data volume, constraints, and how they interact with other tables.",
       "sections": [
         {
           "type": "text",
@@ -6054,15 +6054,19 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "3. Based on Key Constraints\n• Strong (Regular) Relation: Has a primary key and exists independently.\n• Weak Relation: Does not have a primary key; depends on a strong entity for existence.\n\n------------------------------------------------"
+          "value": "3. Based on Relationship Between Tables\n• One-to-One (1:1): One record ↔ One record (e.g., Person ↔ Passport)\n• One-to-Many (1:M): One record ↔ Many records (e.g., Department → Employees)\n• Many-to-One (M:1): Many records ↔ One record (e.g., Employees → Manager)\n• Many-to-Many (M:N): Many records ↔ Many records (e.g., Students ↔ Courses)\n\n------------------------------------------------"
         },
         {
           "type": "text",
-          "value": "4. Based on Normalization\n• Normalized Relations: Follow strict normal forms (1NF, 2NF, 3NF) to reduce redundancy.\n• Denormalized Relations: Intentionally include redundancy to improve query performance.\n\n------------------------------------------------"
+          "value": "4. Based on Key Constraints\n• Strong (Regular) Relation: Has a primary key and exists independently.\n• Weak Relation: Does not have a primary key; depends on a strong entity for existence.\n\n------------------------------------------------"
         },
         {
           "type": "text",
-          "value": "5. Based on Participation in Relationship\n• Total Participation: Every record in the table must be associated with at least one record in the related table.\n• Partial Participation: Records in the table may or may not be associated with records in the related table.\n\n------------------------------------------------"
+          "value": "5. Based on Normalization (Structure Quality)\n• Normalized Relations: Follow strict normal forms (1NF, 2NF, 3NF) to reduce redundancy.\n• Denormalized Relations: Intentionally include redundancy to improve query performance.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "6. Based on Participation in Relationship\n• Total Participation: Every record in the table must be associated with the relationship.\n• Partial Participation: Participation in the relationship is optional.\n\n------------------------------------------------"
         },
         {
           "type": "table",
@@ -6070,9 +6074,10 @@ export const interviewData = {
           "rows": [
             ["Degree", "Number of columns", "Binary (2), Ternary (3)"],
             ["Cardinality", "Number of rows", "Empty vs Non-empty"],
+            ["Relationships", "1:1, 1:M, M:1, M:N", "Person ↔ Passport"],
             ["Keys", "Primary Key presence", "Strong vs Weak"],
             ["Normalization", "Design quality", "1NF, 2NF, 3NF"],
-            ["Participation", "Requirement of association", "Total vs Partial"]
+            ["Participation", "Mandatory/Optional", "Total vs Partial"]
           ]
         }
       ],
@@ -6086,8 +6091,8 @@ export const interviewData = {
           "answer": "Degree refers to the total number of attributes (columns) present in a table."
         },
         {
-          "question": "When would you use a Denormalized relation?",
-          "answer": "Denormalization is used when data retrieval speed is more important than saving storage space, often in read-heavy analytical databases."
+          "question": "Which relationship type requires a Junction Table?",
+          "answer": "A Many-to-Many (M:N) relationship typically requires a Junction Table to be implemented effectively in a relational database."
         }
       ]
     },
