@@ -5777,6 +5777,80 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-crud-operations",
+      "title": "CRUD Operations in MySQL",
+      "category": "Basic",
+      "definition": "CRUD stands for Create, Read, Update, and Delete. These are the four basic actions performed on data in a database.",
+      "sections": [
+        {
+          "type": "table",
+          "headers": ["Operation", "Meaning", "MySQL Command"],
+          "rows": [
+            ["C", "Create", "INSERT"],
+            ["R", "Read", "SELECT"],
+            ["U", "Update", "UPDATE"],
+            ["D", "Delete", "DELETE"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1. CREATE (INSERT)\nUsed to add new records into a table.\n\nSyntax:\nINSERT INTO table_name(column1, column2) VALUES(value1, value2);\n\nExample:\nINSERT INTO students(id, name) VALUES(1, 'Ram');\n\n------------------------------------------------"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n1\tRam"
+        },
+        {
+          "type": "text",
+          "value": "2. READ (SELECT)\nUsed to retrieve data from a table.\n\nSyntax:\nSELECT * FROM table_name;\n\nExample:\nSELECT * FROM students;\n\n------------------------------------------------"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n1\tRam"
+        },
+        {
+          "type": "text",
+          "value": "3. UPDATE\nUsed to modify existing records.\n\nSyntax:\nUPDATE table_name SET column_name = value WHERE condition;\n\nExample:\nUPDATE students SET name = 'Krishna' WHERE id = 1;\n\n------------------------------------------------"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n1\tKrishna"
+        },
+        {
+          "type": "text",
+          "value": "4. DELETE\nUsed to remove records from a table.\n\nSyntax:\nDELETE FROM table_name WHERE condition;\n\nExample:\nDELETE FROM students WHERE id = 1;\n\n------------------------------------------------"
+        },
+        {
+          "type": "output",
+          "value": "Record deleted successfully"
+        },
+        {
+          "type": "table",
+          "headers": ["CRUD", "SQL Command", "Purpose"],
+          "rows": [
+            ["Create", "INSERT", "Add new data"],
+            ["Read", "SELECT", "View data"],
+            ["Update", "UPDATE", "Modify data"],
+            ["Delete", "DELETE", "Remove data"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What does CRUD stand for?",
+          "answer": "CRUD stands for Create, Read, Update, and Delete, representing the four basic functions of persistent storage."
+        },
+        {
+          "question": "Which SQL command is used for the 'Update' operation in CRUD?",
+          "answer": "The UPDATE command is used to modify existing records in a table."
+        },
+        {
+          "question": "Why is the WHERE clause important in UPDATE and DELETE operations?",
+          "answer": "The WHERE clause specifies which records should be updated or deleted. Without it, all records in the table would be affected."
+        }
+      ]
+    },
+    {
       "id": "sql-command-types",
       "title": "SQL Command Types",
       "category": "Basic",
