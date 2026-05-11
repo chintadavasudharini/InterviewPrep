@@ -6851,43 +6851,74 @@ export const interviewData = {
     },
     {
       "id": "sql-joins",
-      "title": "SQL Joins",
+      "title": "SQL JOINS",
       "category": "Queries",
-      "definition": "A JOIN clause is used to combine rows from two or more tables, based on a related column between them.",
+      "definition": "SQL Joins are used to combine data from two or more tables based on a related column between them.",
       "sections": [
         {
-          "type": "text",
-          "value": "Joins allow you to retrieve data from multiple tables in a single query by establishing relationships."
+          "type": "table",
+          "headers": ["Join Type", "Purpose"],
+          "rows": [
+            ["INNER JOIN", "Returns matching records from both tables"],
+            ["LEFT JOIN", "Returns all records from left table + matched records from right table"],
+            ["RIGHT JOIN", "Returns all records from right table + matched records from left table"],
+            ["FULL JOIN", "Returns all records when match exists in either table"],
+            ["CROSS JOIN", "Returns all combinations of rows"],
+            ["SELF JOIN", "Joins a table with itself"]
+          ]
         },
         {
           "type": "text",
-          "value": "Syntax:\nSELECT columns FROM t1 INNER JOIN t2 ON t1.id = t2.id;"
-        },
-        {
-          "type": "code",
-          "value": "SELECT Orders.OrderID, Customers.CustomerName\nFROM Orders\nINNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;"
-        },
-        {
-          "type": "output",
-          "value": "OrderID | CustomerName\n10308   | Ana Trujillo"
+          "value": "1. INNER JOIN\nReturns only matching rows from both tables.\n\nSyntax:\nSELECT columns FROM table1\nINNER JOIN table2 ON table1.column = table2.column;\n\nExample Output:\nname    course_name\nRavi    Python\nSita    Java\n\n------------------------------------------------"
         },
         {
           "type": "text",
-          "value": "Quick Revision:\n• Inner: Matching Only\n• Left: All Left + Matches\n• Right: All Right + Matches"
+          "value": "2. LEFT JOIN\nReturns all rows from left table and matching rows from right table.\n\nSyntax:\nSELECT columns FROM table1\nLEFT JOIN table2 ON table1.column = table2.column;\n\nExample Output:\nname    course_name\nRavi    Python\nSita    Java\nRam     NULL\nGeetha  NULL\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. RIGHT JOIN\nReturns all rows from right table and matching rows from left table.\n\nSyntax:\nSELECT columns FROM table1\nRIGHT JOIN table2 ON table1.column = table2.column;\n\nExample Output:\nname    course_name\nRavi    Python\nSita    Java\nNULL    MySQL\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. FULL JOIN\nReturns all rows from both tables when there is a match in either table.\n\nSyntax:\nSELECT columns FROM table1\nFULL OUTER JOIN table2 ON table1.column = table2.column;\n\nExample Output:\nname    course_name\nRavi    Python\nSita    Java\nRam     NULL\nGeetha  NULL\nNULL    MySQL\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "5. CROSS JOIN\nReturns all possible combinations of rows (Cartesian product).\n\nSyntax:\nSELECT columns FROM table1\nCROSS JOIN table2;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "6. SELF JOIN\nA table joined with itself, usually to compare rows within the same table (e.g., Employees and their Managers).\n\nExample Syntax:\nSELECT e.name AS Emp, m.name AS Manager\nFROM employees e LEFT JOIN employees m\nON e.manager_id = m.emp_id;\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Join", "Matching Rows", "Non-Matching Rows"],
+          "rows": [
+            ["INNER JOIN", "Yes", "No"],
+            ["LEFT JOIN", "Yes", "Left table only"],
+            ["RIGHT JOIN", "Yes", "Right table only"],
+            ["FULL JOIN", "Yes", "Both tables"],
+            ["CROSS JOIN", "No condition", "All combinations"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Quick Memory Trick:\n• INNER → Common data\n• LEFT → All left + matched right\n• RIGHT → All right + matched left\n• FULL → Everything\n• CROSS → Multiplication\n• SELF → Same table join"
         }
       ],
       "questions": [
         {
-          "question": "What is a SQL Join?",
-          "answer": "A clause used to combine rows from two or more tables based on a related column between them."
+          "question": "What is the primary difference between LEFT JOIN and RIGHT JOIN?",
+          "answer": "LEFT JOIN ensures all records from the first (left) table are included, while RIGHT JOIN ensures all records from the second (right) table are included, regardless of whether there is a match."
         },
         {
-          "question": "What is an Inner Join?",
-          "answer": "An Inner Join returns only the records that have matching values in both tables."
+          "question": "Does MySQL support FULL OUTER JOIN directly?",
+          "answer": "No, standard MySQL does not support FULL OUTER JOIN directly. You can achieve it by using a UNION between a LEFT JOIN and a RIGHT JOIN."
         },
         {
-          "question": "What is a Left Join?",
-          "answer": "A Left Join returns all records from the left table, and the matched records from the right table."
+          "question": "When would you use a CROSS JOIN?",
+          "answer": "CROSS JOIN is used when you need every possible combination of rows from two tables, such as generating a list of all products for all available regions."
         }
       ]
     }
