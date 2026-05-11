@@ -5831,35 +5831,71 @@ export const interviewData = {
       "sections": [
         {
           "type": "text",
-          "value": "1. WHERE Clause\nThe WHERE clause is used to filter records based on a condition.\n• Returns only matching rows\n• Used with SELECT, UPDATE, and DELETE\n• Helps retrieve specific data from a table\n\n------------------------------------------------"
+          "value": "Employee Table Preparation:\n\nCREATE TABLE employee (\n    emp_id INT,\n    emp_name VARCHAR(50),\n    department VARCHAR(30),\n    salary INT,\n    city VARCHAR(30),\n    experience INT\n);\n\nINSERT INTO employee VALUES\n(101, 'Asha', 'HR', 35000, 'Hyderabad', 2),\n(102, 'Ravi', 'IT', 50000, 'Vijayawada', 5),\n(103, 'Sneha', 'Finance', 45000, 'Chennai', 4),\n(104, 'Kiran', 'IT', 60000, 'Bangalore', 6),\n(105, 'Meena', 'HR', 30000, 'Hyderabad', 1),\n(106, 'Arjun', 'Sales', 40000, 'Mumbai', 3),\n(107, 'Divya', 'IT', 70000, 'Delhi', 8),\n(108, 'Rahul', 'Finance', 48000, 'Pune', 4),\n(109, 'Pooja', 'Sales', 38000, 'Chennai', 2),\n(110, 'Vikas', 'IT', 55000, 'Hyderabad', 5);\n\n-----------------------------------------------"
         },
         {
           "type": "text",
-          "value": "2. AND Operator\nThe AND operator is used to combine multiple conditions.\n• All conditions must be TRUE\n• Returns records only if every condition matches\n• Used for more specific filtering\n\n------------------------------------------------"
+          "value": "1. WHERE Clause\nSyntax: SELECT * FROM table_name WHERE condition;\n\nExample: SELECT * FROM employee WHERE department = 'IT';"
+        },
+        {
+          "type": "output",
+          "value": "emp_id  emp_name  department  salary  city        experience\n102     Ravi      IT          50000   Vijayawada  5\n104     Kiran     IT          60000   Bangalore   6\n107     Divya     IT          70000   Delhi       8\n110     Vikas     IT          55000   Hyderabad   5"
         },
         {
           "type": "text",
-          "value": "3. OR Operator\nThe OR operator is used to combine multiple conditions.\n• At least one condition must be TRUE\n• Returns records if any condition matches\n• Used for alternative filtering conditions\n\n------------------------------------------------"
+          "value": "2. AND Operator\nSyntax: SELECT * FROM table_name WHERE condition1 AND condition2;\n\nExample: SELECT * FROM employee WHERE department = 'IT' AND salary > 55000;"
+        },
+        {
+          "type": "output",
+          "value": "emp_id  emp_name  department  salary  city        experience\n104     Kiran     IT          60000   Bangalore   6\n107     Divya     IT          70000   Delhi       8"
         },
         {
           "type": "text",
-          "value": "4. NOT Operator\nThe NOT operator is used to exclude records that match a condition.\n• Reverses the condition\n• Returns records that do not satisfy the condition\n• Used for negative filtering\n\n------------------------------------------------"
+          "value": "3. OR Operator\nSyntax: SELECT * FROM table_name WHERE condition1 OR condition2;\n\nExample: SELECT * FROM employee WHERE city = 'Chennai' OR city = 'Mumbai';"
+        },
+        {
+          "type": "output",
+          "value": "emp_id  emp_name  department  salary  city     experience\n103     Sneha     Finance     45000   Chennai  4\n106     Arjun     Sales       40000   Mumbai   3\n109     Pooja     Sales       38000   Chennai  2"
         },
         {
           "type": "text",
-          "value": "5. BETWEEN Operator\nThe BETWEEN operator is used to filter data within a range.\n• Includes both starting and ending values\n• Works with numbers, dates, and text\n• Useful for ranges like marks, salary, age, dates\n\n------------------------------------------------"
+          "value": "4. NOT Operator\nSyntax: SELECT * FROM table_name WHERE NOT condition;\n\nExample: SELECT * FROM employee WHERE NOT department = 'HR';"
+        },
+        {
+          "type": "output",
+          "value": "emp_id  emp_name  department  salary  city        experience\n102     Ravi      IT          50000   Vijayawada  5\n103     Sneha     Finance     45000   Chennai     4\n104     Kiran     IT          60000   Bangalore   6\n106     Arjun     Sales       40000   Mumbai      3\n107     Divya     IT          70000   Delhi       8\n108     Rahul     Finance     48000   Pune        4\n109     Pooja     Sales       38000   Chennai     2\n110     Vikas     IT          55000   Hyderabad   5"
         },
         {
           "type": "text",
-          "value": "6. IN Operator\nThe IN operator is used to match multiple values in a condition.\n• Simplifies multiple OR conditions\n• Checks whether a value exists in a list\n• Makes queries shorter and cleaner\n\n------------------------------------------------"
+          "value": "5. BETWEEN Operator\nSyntax: SELECT * FROM table_name WHERE column_name BETWEEN v1 AND v2;\n\nExample: SELECT * FROM employee WHERE salary BETWEEN 40000 AND 60000;"
+        },
+        {
+          "type": "output",
+          "value": "emp_id  emp_name  department  salary  city        experience\n102     Ravi      IT          50000   Vijayawada  5\n103     Sneha     Finance     45000   Chennai     4\n104     Kiran     IT          60000   Bangalore   6\n106     Arjun     Sales       40000   Mumbai      3\n108     Rahul     Finance     48000   Pune        4\n110     Vikas     IT          55000   Hyderabad   5"
         },
         {
           "type": "text",
-          "value": "7. LIKE Operator & Wildcards\nThe LIKE operator is used for pattern matching, mostly with character/string data.\n\nWildcards used with LIKE:\n• % → Represents zero, one, or many characters\n• _ → Represents a single character\n\nUsed to search names, find partial matches, and filter text patterns.\n\n------------------------------------------------"
+          "value": "6. IN Operator\nSyntax: SELECT * FROM table_name WHERE column_name IN (v1, v2);\n\nExample: SELECT * FROM employee WHERE city IN ('Hyderabad', 'Delhi');"
+        },
+        {
+          "type": "output",
+          "value": "emp_id  emp_name  department  salary  city       experience\n101     Asha      HR          35000   Hyderabad  2\n105     Meena     HR          30000   Hyderabad  1\n107     Divya     IT          70000   Delhi      8\n110     Vikas     IT          55000   Hyderabad  5"
         },
         {
           "type": "text",
-          "value": "8. LIMIT Clause\nThe LIMIT clause is used to restrict the number of rows returned.\n• Returns only a specific number of records\n• Useful for large datasets\n• Commonly used for pagination and top results"
+          "value": "7. LIKE Operator & Wildcards\nSyntax: SELECT * FROM table_name WHERE column_name LIKE pattern;\n\nExample 1 (%): SELECT * FROM employee WHERE city LIKE '%bad';\nExample 2 (_): SELECT * FROM employee WHERE emp_name LIKE 'R%';"
+        },
+        {
+          "type": "output",
+          "value": "Result (city LIKE '%bad'):\n101 Asha, 105 Meena, 110 Vikas (Hyderabad records)\n\nResult (emp_name LIKE 'R%'):\n102 Ravi, 108 Rahul"
+        },
+        {
+          "type": "text",
+          "value": "8. LIMIT Clause\nSyntax: SELECT * FROM table_name LIMIT number;\n\nExample: SELECT * FROM employee LIMIT 5;"
+        },
+        {
+          "type": "output",
+          "value": "Returns first 5 records (emp_id 101 to 105)."
         }
       ],
       "questions": [
@@ -5868,8 +5904,8 @@ export const interviewData = {
           "answer": "The AND operator requires all conditions to be true to return a record, whereas the OR operator returns a record if at least one of the conditions is true."
         },
         {
-          "question": "How do you search for a name starting with 'A' using LIKE?",
-          "answer": "Using the query: SELECT * FROM table WHERE name LIKE 'A%';"
+          "question": "How do you search for a name starting with 'R' using LIKE?",
+          "answer": "Using the query: SELECT * FROM employee WHERE emp_name LIKE 'R%';"
         },
         {
           "question": "Is the range in the BETWEEN operator inclusive?",
@@ -5877,7 +5913,7 @@ export const interviewData = {
         },
         {
           "question": "How do you fetch only the first 5 records of a table?",
-          "answer": "By using the LIMIT clause: SELECT * FROM table LIMIT 5;"
+          "answer": "By using the LIMIT clause: SELECT * FROM employee LIMIT 5;"
         }
       ]
     },
