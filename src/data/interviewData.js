@@ -5746,6 +5746,84 @@ export const interviewData = {
       ]
     },
     {
+      "id": "sql-dql-select",
+      "title": "DQL (Data Query Language) - SELECT",
+      "category": "Basic",
+      "definition": "DQL is used to retrieve/fetch data from database tables. The primary command used in DQL is SELECT.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Command Used in DQL:\n• SELECT: Fetches data from table\n\n-----------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Employee Table Data Preparation:\n\nCREATE TABLE employee(\n    emp_id INT,\n    emp_name VARCHAR(50),\n    salary DECIMAL(10,2),\n    department VARCHAR(30)\n);\n\nINSERT INTO employee VALUES\n(101, 'Ravi', 45000, 'HR'),\n(102, 'Sita', 55000, 'IT'),\n(103, 'Kiran', 60000, 'Finance'),\n(104, 'Anu', 48000, 'Marketing'),\n(105, 'Rahul', 70000, 'IT');\n\n-----------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "SELECT Statement Syntax:\n\nSELECT column_name FROM table_name;\n\nOR\n\nSELECT * FROM table_name;\n\n-----------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Example 1: View All Data\nSELECT * FROM employee;"
+        },
+        {
+          "type": "output",
+          "value": "emp_id\temp_name\tsalary\tdepartment\n101\tRavi\t45000\tHR\n102\tSita\t55000\tIT\n103\tKiran\t60000\tFinance\n104\tAnu\t48000\tMarketing\n105\tRahul\t70000\tIT"
+        },
+        {
+          "type": "text",
+          "value": "Example 2: View Specific Columns\nSELECT emp_name, salary FROM employee;"
+        },
+        {
+          "type": "output",
+          "value": "emp_name\tsalary\nRavi\t45000\nSita\t55000\nKiran\t60000\nAnu\t48000\nRahul\t70000"
+        },
+        {
+          "type": "text",
+          "value": "Example 3: Using WHERE Condition\nSELECT * FROM employee WHERE department = 'IT';"
+        },
+        {
+          "type": "output",
+          "value": "emp_id\temp_name\tsalary\tdepartment\n102\tSita\t55000\tIT\n105\tRahul\t70000\tIT"
+        },
+        {
+          "type": "text",
+          "value": "Example 4: Salary Greater Than 50000\nSELECT emp_name, salary FROM employee WHERE salary > 50000;"
+        },
+        {
+          "type": "output",
+          "value": "emp_name\tsalary\nSita\t55000\nKiran\t60000\nRahul\t70000"
+        },
+        {
+          "type": "text",
+          "value": "Example 5: Display Only Employee Names\nSELECT emp_name FROM employee;"
+        },
+        {
+          "type": "output",
+          "value": "emp_name\nRavi\nSita\nKiran\nAnu\nRahul"
+        },
+        {
+          "type": "text",
+          "value": "Important Points:\n• SELECT * → displays all columns\n• WHERE → filters rows\n• DQL only retrieves data\n• Does not modify table data"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the purpose of DQL in SQL?",
+          "answer": "DQL (Data Query Language) is used specifically for fetching or retrieving data from the database without modifying the actual data or structure."
+        },
+        {
+          "question": "What does 'SELECT *' represent?",
+          "answer": "The asterisk (*) acts as a wildcard that tells SQL to retrieve all columns from the specified table."
+        },
+        {
+          "question": "How do you filter specific records in a SELECT query?",
+          "answer": "By using the WHERE clause followed by a condition (e.g., WHERE department = 'IT')."
+        }
+      ]
+    },
+    {
       "id": "sql-joins",
       "title": "SQL Joins",
       "category": "Queries",
