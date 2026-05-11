@@ -5976,54 +5976,84 @@ export const interviewData = {
       ]
     },
     {
-      "id": "mysql-data-types",
+      "id": "sql-data-types",
       "title": "Data Types in MySQL",
       "category": "Basic",
-      "definition": "MySQL data types define the kind of values that can be stored in a table column, ensuring data integrity and optimizing storage.",
+      "definition": "MySQL data types define the kind of values that can be stored in a table column, ensuring data integrity and efficient storage.",
       "sections": [
         {
           "type": "text",
-          "value": "1. Numeric Types\nUsed to store numbers.\n\n• INT: Stores whole numbers\n• FLOAT: Stores decimal numbers with approximate precision\n• DOUBLE: Stores large decimal numbers with higher precision\n• DECIMAL: Stores exact decimal values (e.g., money)\n\nExample:\nCREATE TABLE salary (amount DECIMAL(10,2));\n\n------------------------------------------------"
+          "value": "1. Numeric Types\nUsed to store numbers.\n\n• INT: Stores whole numbers\n• FLOAT: Stores decimal numbers with single precision\n• DOUBLE: Stores large decimal numbers with double precision\n• DECIMAL: Stores exact decimal values\n\n------------------------------------------------"
         },
         {
           "type": "text",
-          "value": "2. String Types\nUsed to store text values.\n\n• CHAR: Fixed-length string (CHAR(3))\n• VARCHAR: Variable-length string (VARCHAR(50))\n• TEXT: Stores large amounts of text\n\nExample:\nCREATE TABLE users (name VARCHAR(50));\n\n------------------------------------------------"
+          "value": "INT\nUsed for integer (whole) numbers.\nSyntax: column_name INT;\nExample: CREATE TABLE students ( id INT);\nOutput: Table created successfully.\n\n------------------------------------------------"
         },
         {
           "type": "text",
-          "value": "3. Date & Time Types\nUsed to store date and time values.\n\n• DATE: Stores only date (YYYY-MM-DD)\n• TIME: Stores only time (HH:MM:SS)\n• DATETIME: Stores both date and time\n• TIMESTAMP: Stores date and time with automatic tracking\n\nExample:\nCREATE TABLE logs (created_at DATETIME);\n\n------------------------------------------------"
+          "value": "FLOAT\nUsed for decimal values with approximate precision.\nSyntax: column_name FLOAT;\nExample: CREATE TABLE products ( price FLOAT);\nOutput: Table created successfully.\n\n------------------------------------------------"
         },
         {
           "type": "text",
-          "value": "4. Boolean Type\nUsed to store TRUE or FALSE values.\n\n• BOOLEAN: Syntax: column_name BOOLEAN;\n\nExample:\nCREATE TABLE users (is_active BOOLEAN);"
+          "value": "DOUBLE\nUsed for large decimal numbers with higher precision.\nSyntax: column_name DOUBLE;\nExample: CREATE TABLE measurements ( value DOUBLE);\nOutput: Table created successfully.\n\n------------------------------------------------"
         },
         {
-          "type": "table",
-          "headers": ["Data Type", "Description"],
-          "rows": [
-            ["INT", "Whole numbers"],
-            ["FLOAT", "Approximate decimals"],
-            ["DECIMAL", "Exact decimals (money)"],
-            ["CHAR", "Fixed-length string"],
-            ["VARCHAR", "Variable-length string"],
-            ["DATE", "Date only"],
-            ["DATETIME", "Date and time"],
-            ["BOOLEAN", "True or False"]
-          ]
+          "type": "text",
+          "value": "DECIMAL\nUsed for exact decimal values like money and financial data.\nSyntax: column_name DECIMAL(total_digits, decimal_digits);\nExample: CREATE TABLE salary ( amount DECIMAL(10,2));\nOutput: Table created successfully.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. String Types\nUsed to store text values.\n\n• CHAR: Fixed-length string\n• VARCHAR: Variable-length string\n• TEXT: Stores large text\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "CHAR\nStores fixed-length text.\nSyntax: column_name CHAR(size);\nExample: CREATE TABLE country ( code CHAR(3));\nOutput: Table created successfully.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "VARCHAR\nStores variable-length text.\nSyntax: column_name VARCHAR(size);\nExample: CREATE TABLE users ( name VARCHAR(50));\nOutput: Table created successfully.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "TEXT\nStores large amounts of text.\nSyntax: column_name TEXT;\nExample: CREATE TABLE messages ( content TEXT);\nOutput: Table created successfully.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. Date & Time Types\nUsed to store date and time values.\n\n• DATE: Stores only date\n• TIME: Stores only time\n• DATETIME: Stores both date and time\n• TIMESTAMP: Stores timestamp values\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "DATE\nStores only date.\nSyntax: column_name DATE;\nExample: CREATE TABLE events ( event_date DATE);\nOutput: Table created successfully.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "TIME\nStores only time.\nSyntax: column_name TIME;\nExample: CREATE TABLE schedule ( meeting_time TIME);\nOutput: Table created successfully.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "DATETIME\nStores both date and time.\nSyntax: column_name DATETIME;\nExample: CREATE TABLE logs ( created_at DATETIME);\nOutput: Table created successfully.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "TIMESTAMP\nStores date and time with automatic tracking.\nSyntax: column_name TIMESTAMP;\nExample: CREATE TABLE orders ( order_time TIMESTAMP);\nOutput: Table created successfully.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. Boolean Type\nUsed to store TRUE or FALSE values.\n\n• BOOLEAN: Stores true or false\n\nSyntax: column_name BOOLEAN;\nExample: CREATE TABLE users ( is_active BOOLEAN);\nOutput: Table created successfully."
         }
       ],
       "questions": [
         {
           "question": "What is the difference between CHAR and VARCHAR?",
-          "answer": "CHAR is a fixed-length string where unused space is padded with spaces, whereas VARCHAR is a variable-length string that only uses as much space as the data requires.\n\n-----------------"
+          "answer": "CHAR is fixed-length (padded with spaces if the string is shorter), whereas VARCHAR is variable-length and only uses the space needed for the string plus one or two length bytes."
         },
         {
-          "question": "When should you use DECIMAL instead of FLOAT?",
-          "answer": "DECIMAL should be used for exact numerical values where precision is critical, such as financial data and currency calculations.\n\n-----------------"
+          "question": "When should you use DECIMAL over FLOAT or DOUBLE?",
+          "answer": "DECIMAL should be used for financial data or any values where exact precision is required, as FLOAT and DOUBLE use approximate floating-point math."
         },
         {
-          "question": "What does DECIMAL(10,2) mean?",
-          "answer": "It means the number can have up to 10 digits in total, with 2 of those digits being after the decimal point."
+          "question": "What is the default format for a DATE type in MySQL?",
+          "answer": "The default format is 'YYYY-MM-DD'."
         }
       ]
     },
