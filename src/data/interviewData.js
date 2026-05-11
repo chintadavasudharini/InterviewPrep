@@ -5488,6 +5488,52 @@ export const interviewData = {
   ],
   "mysql": [
     {
+      "id": "sql-command-types",
+      "title": "SQL Command Types",
+      "category": "Basic",
+      "definition": "SQL (Structured Query Language) commands are broadly divided into five main types, each serving a different purpose in managing databases.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. DDL (Data Definition Language)\nThese commands define or modify the structure of database objects like tables.\n• CREATE – Creates a new table or database\n• ALTER – Modifies an existing table (add/delete columns)\n• DROP – Deletes a table or database\n• TRUNCATE – Removes all records from a table (faster than DELETE)\n• RENAME – Renames a database object"
+        },
+        {
+          "type": "text",
+          "value": "2. DML (Data Manipulation Language)\nUsed to manipulate data stored in tables.\n• INSERT – Adds new records\n• UPDATE – Modifies existing records\n• DELETE – Removes records"
+        },
+        {
+          "type": "text",
+          "value": "3. DQL (Data Query Language)\nUsed to retrieve data from the database.\n• SELECT – Fetches data from one or more tables"
+        },
+        {
+          "type": "text",
+          "value": "4. DCL (Data Control Language)\nControls access and permissions in the database.\n• GRANT – Gives user access privileges\n• REVOKE – Removes user access privileges"
+        },
+        {
+          "type": "text",
+          "value": "5. TCL (Transaction Control Language)\nManages transactions in a database.\n• COMMIT – Saves changes permanently\n• ROLLBACK – Undoes changes\n• SAVEPOINT – Sets a point to roll back to"
+        },
+        {
+          "type": "text",
+          "value": "Quick Summary:\n• DDL → Structure (tables)\n• DML → Data changes\n• DQL → Data retrieval\n• DCL → Permissions\n• TCL → Transactions"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between DDL and DML?",
+          "answer": "DDL (Data Definition Language) is used to define or modify the structure of the database (like tables), while DML (Data Manipulation Language) is used to manage the data within those tables (like inserting or updating records)."
+        },
+        {
+          "question": "Which command is used to remove all records from a table without deleting the table itself?",
+          "answer": "The TRUNCATE command (DDL) or DELETE command (DML). TRUNCATE is generally faster as it doesn't log individual row deletions."
+        },
+        {
+          "question": "What are TCL commands?",
+          "answer": "TCL stands for Transaction Control Language. It includes commands like COMMIT (save changes), ROLLBACK (undo changes), and SAVEPOINT (set a recovery point) to manage database transactions."
+        }
+      ]
+    },
+    {
       "id": "sql-joins",
       "title": "SQL Joins",
       "category": "Queries",
