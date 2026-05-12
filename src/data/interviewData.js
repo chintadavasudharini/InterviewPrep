@@ -6083,6 +6083,157 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-tcl-practical",
+      "title": "TCL Practical Example & Settings",
+      "category": "Sub Commands",
+      "definition": "A hands-on demonstration of TCL commands using a bank account scenario, along with detailed configurations for transaction properties and constraint checking.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "TCL Commands Example Using Bank Accounts Table\n\nStep 1 — Create Table:\nCREATE TABLE accounts (\n    acc_no INT PRIMARY KEY,\n    name VARCHAR(50),\n    balance INT\n);\n\nStep 2 — Insert Data:\nINSERT INTO accounts VALUES\n(101, 'Ravi', 10000),\n(102, 'Sita', 15000);\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Initial Table Data:"
+        },
+        {
+          "type": "table",
+          "headers": ["acc_no", "name", "balance"],
+          "rows": [
+            ["101", "Ravi", "10000"],
+            ["102", "Sita", "15000"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Scenario: Ravi transfers money to Sita.\n\nStep 3 — Start Transaction:\nSTART TRANSACTION;\n\nStep 4 — Deduct Money from Ravi:\nUPDATE accounts SET balance = balance - 5000 WHERE acc_no = 101;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Table After Deduction:"
+        },
+        {
+          "type": "table",
+          "headers": ["acc_no", "name", "balance"],
+          "rows": [
+            ["101", "Ravi", "5000"],
+            ["102", "Sita", "15000"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Step 5 — Create SAVEPOINT:\nSAVEPOINT transfer_point;\nMeaning: If something goes wrong later, we can rollback to this point.\n\nStep 6 — Add Money to Sita:\nUPDATE accounts SET balance = balance + 5000 WHERE acc_no = 102;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Table After Transfer:"
+        },
+        {
+          "type": "table",
+          "headers": ["acc_no", "name", "balance"],
+          "rows": [
+            ["101", "Ravi", "5000"],
+            ["102", "Sita", "20000"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Step 7 — Suppose Error Happens:\nNow we decide to cancel the second update.\n\nROLLBACK to SAVEPOINT:\nROLLBACK TO transfer_point;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Table After Rollback:"
+        },
+        {
+          "type": "table",
+          "headers": ["acc_no", "name", "balance"],
+          "rows": [
+            ["101", "Ravi", "5000"],
+            ["102", "Sita", "15000"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Explanation:\n• Deduction from Ravi remains\n• Addition to Sita is undone\n\nStep 8 — COMMIT Changes:\nCOMMIT;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Final Table Data:"
+        },
+        {
+          "type": "table",
+          "headers": ["acc_no", "name", "balance"],
+          "rows": [
+            ["101", "Ravi", "5000"],
+            ["102", "Sita", "15000"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Full TCL Flow Summary:\n\nSTART TRANSACTION;\nUPDATE accounts SET balance = balance - 5000 WHERE acc_no = 101;\nSAVEPOINT transfer_point;\nUPDATE accounts SET balance = balance + 5000 WHERE acc_no = 102;\nROLLBACK TO transfer_point;\nCOMMIT;\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Command", "Purpose"],
+          "rows": [
+            ["SAVEPOINT transfer_point", "Creates rollback point"],
+            ["ROLLBACK TO transfer_point", "Undoes changes after savepoint"],
+            ["COMMIT", "Saves final changes permanently"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Syntax of SET TRANSACTION:\n\n1. READ ONLY\nAllows only reading data. INSERT, UPDATE, DELETE are not allowed. Used for reports and analysis.\nExample: SET TRANSACTION READ ONLY;\n\n2. READ WRITE\nAllows both reading and modifying data. Normal transactions.\nExample: SET TRANSACTION READ WRITE;\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Feature", "READ ONLY", "READ WRITE"],
+          "rows": [
+            ["View Data", "Yes", "Yes"],
+            ["Insert Data", "No", "Yes"],
+            ["Update Data", "No", "Yes"],
+            ["Delete Data", "No", "Yes"],
+            ["Used For", "Reports, Analysis", "Normal Transactions"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "SET CONSTRAINT:\nUsed to control when constraints (Primary Key, Foreign Key, etc.) are checked during a transaction.\n\n1. IMMEDIATE\nConstraint is checked immediately after each statement. Error occurs instantly if violated.\n\n2. DEFERRED\nConstraint checking is postponed until COMMIT. Temporary invalid data is allowed during transaction.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Example of DEFERRED Flow:\n\nStep 1 — Start Transaction:\nSTART TRANSACTION;\n\nStep 2 — Set Constraint Deferred:\nSET CONSTRAINT fk_dept DEFERRED;\n\nStep 3 — Insert Employee First (Even if Dept doesn't exist yet):\nINSERT INTO employees VALUES (101, 10);\n\nStep 4 — Insert Department Later:\nINSERT INTO departments VALUES (10);\n\nStep 5 — Commit Transaction:\nCOMMIT;\n\nResult: Transaction succeeds because rule is valid by COMMIT time.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Feature", "IMMEDIATE", "DEFERRED"],
+          "rows": [
+            ["Check Time", "Instantly", "At COMMIT time"],
+            ["Error Timing", "Immediately", "Later if still invalid"],
+            ["Nature", "Strict checking", "Flexible temporary changes"]
+          ]
+        },
+        {
+          "type": "table",
+          "headers": ["Use Case", "IMMEDIATE", "DEFERRED"],
+          "rows": [
+            ["When to use", "Data must always be valid", "Multiple related updates together"],
+            ["Examples", "Banking, Payments", "Bulk data import, Parent-child inserts"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the benefit of using DEFERRED constraints in bulk operations?",
+          "answer": "It allows temporary inconsistencies while related data is being imported, ensuring that all cross-references are valid by the time the transaction is finalized."
+        },
+        {
+          "question": "When would you set a transaction to READ ONLY?",
+          "answer": "When performing data analysis or generating reports where you want to guarantee that no data modifications can accidentally occur."
+        }
+      ]
+    },
+    {
       "id": "sql-data-types",
       "title": "Data Types in MySQL",
       "category": "Basic",
