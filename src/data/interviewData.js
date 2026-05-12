@@ -6688,6 +6688,95 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-denormalization-detailed",
+      "title": "Denormalized Relations in DBMS",
+      "category": "Basic",
+      "definition": "A Denormalized Relation is a table that intentionally contains redundant (duplicate) data to improve query performance and reduce the number of joins.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Denormalized Relations in DBMS\n\nDefinition:\nA Denormalized Relation is a table that intentionally contains redundant (duplicate) data to improve query performance and reduce the number of joins.\nIt is the opposite of Normalization.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Why Denormalization is Used?\n• Normalization reduces redundancy but may require many joins.\n• Sometimes joins become slow in large databases.\n• So, developers combine data into fewer tables to make data retrieval faster.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Main Purpose:\n✅ Faster Read Operations\n✅ Fewer JOINs\n✅ Better Performance for Reports & Analytics\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Disadvantages:\n❌ Data Redundancy\n❌ More Storage Needed\n❌ Data Inconsistency Risk\n❌ Updates become difficult\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Example Scenario:\n1. Normalized Tables:\nStudents (student_id, student_name)\nCourses (course_id, course_name)\nEnrollments (student_id, course_id)\n\nTo get full details, we need multiple JOINs.\n\n2. Denormalized Table:\nStudent_Course (student_id, student_name, course_id, course_name)\nNow data is already combined, no JOIN needed.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Advantage", "Explanation"],
+          "rows": [
+            ["Faster Queries", "No complex joins"],
+            ["Better Reporting", "Easy to generate reports"],
+            ["Reduced Query Complexity", "Simple SELECT statements"],
+            ["Useful in Data Warehouses", "Analytics become fast"]
+          ]
+        },
+        {
+          "type": "table",
+          "headers": ["Disadvantage", "Explanation"],
+          "rows": [
+            ["Data Redundancy", "Same data repeated"],
+            ["Update Problems", "Need to update in many places"],
+            ["More Storage", "Duplicate data uses memory"],
+            ["Inconsistency", "Different copies may mismatch"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Example: E-commerce Website\n\nNormalized:\nCustomers, Orders, Products tables (requires many joins for history).\n\nDenormalized:\nOrder table storing customer_name and product_name directly for fast display.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "When to Use Denormalization?\n✅ Read operations are very frequent\n✅ Performance is more important than storage\n✅ Reporting and Analytics systems\n✅ Data warehouses\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "When NOT to Use?\n❌ Frequent updates happen\n❌ Data consistency is critical\n❌ Storage space must be minimized\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Normalization", "Denormalization"],
+          "rows": [
+            ["Removes redundancy", "Adds redundancy"],
+            ["More joins", "Fewer joins"],
+            ["Better consistency", "Better performance"],
+            ["Less storage", "More storage"],
+            ["Slower reads", "Faster reads"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Practical Example with Output:\nNormalized Tables:\n\nStudents: 1-Ravi, 2-Priya\nCourses: 101-Python, 102-MySQL\nEnrollments: (1, 101), (2, 102)\n\nQuery with JOIN Output:\nstudent_name | course_name\nRavi | Python\nPriya | MySQL\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Denormalized student_course Table:\n\nstudent_id | student_name | course_id | course_name\n1 | Ravi | 101 | Python\n2 | Priya | 102 | MySQL\n\nNo JOIN required → Faster retrieval.\n\n------------------------------------------------"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the primary trade-off when using denormalization?",
+          "answer": "The primary trade-off is improved read performance and reduced query complexity at the cost of increased data redundancy, higher storage requirements, and the risk of data inconsistency."
+        },
+        {
+          "question": "Why is denormalization preferred in Data Warehouses?",
+          "answer": "Data Warehouses focus on analytics and reporting where complex queries are frequent. Denormalization reduces the need for expensive JOIN operations on large datasets, significantly speeding up performance."
+        }
+      ]
+    },
+    {
       "id": "sql-command-types",
       "title": "SQL Command Types",
       "category": "Sub Commands",
