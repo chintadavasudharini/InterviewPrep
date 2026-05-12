@@ -6242,6 +6242,101 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-alter-table-diff",
+      "title": "RENAME vs MODIFY vs CHANGE",
+      "category": "Sub Commands",
+      "definition": "A detailed comparison of RENAME, MODIFY, and CHANGE commands used with ALTER TABLE to modify column structure in MySQL.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Difference Between RENAME, MODIFY, and CHANGE in MySQL\n\nThese commands are used with ALTER TABLE to change column structure in a table.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Command", "Purpose"],
+          "rows": [
+            ["RENAME COLUMN", "Changes only the column name"],
+            ["MODIFY COLUMN", "Changes only the datatype or constraints"],
+            ["CHANGE COLUMN", "Changes both column name and datatype"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1. RENAME COLUMN\nUsed to rename a column without changing its datatype.\n\nSyntax:\nALTER TABLE table_name RENAME COLUMN old_column_name TO new_column_name;\n\nExample:\nRename emp_name to employee_name\nALTER TABLE employees RENAME COLUMN emp_name TO employee_name;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Before Table:"
+        },
+        {
+          "type": "table",
+          "headers": ["emp_id", "emp_name"],
+          "rows": [
+            ["101", "Ravi"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "After Table:"
+        },
+        {
+          "type": "table",
+          "headers": ["emp_id", "employee_name"],
+          "rows": [
+            ["101", "Ravi"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "2. MODIFY COLUMN\nUsed to change the datatype, size, or constraints of a column.\n\nSyntax:\nALTER TABLE table_name MODIFY COLUMN column_name new_datatype;\n\nExample:\nChange salary datatype from INT to DECIMAL\nALTER TABLE employees MODIFY COLUMN salary DECIMAL(10,2);\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Status", "Column Definition"],
+          "rows": [
+            ["Before", "salary INT"],
+            ["After", "salary DECIMAL(10,2)"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "You can also add constraints during modification:\nALTER TABLE employees MODIFY COLUMN salary DECIMAL(10,2) NOT NULL;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. CHANGE COLUMN\nUsed to rename the column and also modify its datatype at the same time.\n\nSyntax:\nALTER TABLE table_name CHANGE COLUMN old_column_name new_column_name new_datatype;\n\nExample:\nRename name to full_name and change datatype from VARCHAR(50) to VARCHAR(100).\nALTER TABLE employees CHANGE COLUMN name full_name VARCHAR(100);\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Before:\nName: name, Datatype: VARCHAR(50), Value: Ravi\n\nAfter:\nName: full_name, Datatype: VARCHAR(100), Value: Ravi\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Feature", "RENAME", "MODIFY", "CHANGE"],
+          "rows": [
+            ["Rename column", "✅", "❌", "✅"],
+            ["Change datatype", "❌", "✅", "✅"],
+            ["Change constraints", "❌", "✅", "✅"],
+            ["Requires old & new name", "❌", "❌", "✅"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Easy Memory Trick:\n• RENAME → Name only\n• MODIFY → Datatype only\n• CHANGE → Name + Datatype together\n\n------------------------------------------------"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Which command is used if you only want to change the size of a VARCHAR column?",
+          "answer": "The MODIFY COLUMN command is used to change the datatype or size without affecting the column name."
+        },
+        {
+          "question": "When would you choose CHANGE over RENAME or MODIFY?",
+          "answer": "You would use CHANGE when you need to perform both renaming and structural modification (like datatype change) in a single statement."
+        }
+      ]
+    },
+    {
       "id": "sql-data-types",
       "title": "Data Types in MySQL",
       "category": "Basic",
