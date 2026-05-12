@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { interviewData } from '../data/interviewData';
 
 const Sidebar = ({ currentTechId }) => {
@@ -7,9 +7,14 @@ const Sidebar = ({ currentTechId }) => {
 
   return (
     <div className="premium-sidebar">
-      <h6 className="text-uppercase small fw-bold mb-4 tracking-wider" style={{ letterSpacing: '2px', color: 'var(--text-muted)' }}>
-        {currentTechId?.toUpperCase()} Curriculum
-      </h6>
+      <Link 
+        to={`/${currentTechId}`}
+        className="text-decoration-none"
+      >
+        <h6 className="text-uppercase small fw-bold mb-4 tracking-wider curriculum-heading" style={{ letterSpacing: '2px' }}>
+          {currentTechId?.toUpperCase()} Curriculum
+        </h6>
+      </Link>
       <div className="nav flex-column">
         {topics.map((topic, index) => (
           <NavLink

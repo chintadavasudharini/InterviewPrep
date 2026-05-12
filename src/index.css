@@ -67,6 +67,18 @@ h1, h2, h3, .brand-font {
   transform: translateX(5px);
 }
 
+.curriculum-heading {
+  color: var(--text-muted);
+  transition: var(--transition);
+  cursor: pointer;
+  display: inline-block;
+}
+
+.curriculum-heading:hover {
+  color: var(--text-dark) !important;
+  transform: translateX(5px);
+}
+
 /* Card Styles */
 .premium-card {
   background: var(--card-bg);
