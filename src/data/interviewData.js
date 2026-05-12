@@ -8725,74 +8725,362 @@ export const interviewData = {
   ],
   "coding": [
     {
-      "id": "coding-patterns",
-      "title": "Essential Coding Patterns",
-      "category": "Basic",
-      "definition": "Coding patterns are reusable solutions to common algorithmic problems encountered in technical interviews.",
+      "id": "reverse-number",
+      "title": "Reverse a Number",
+      "category": "Basic Algorithms",
+      "definition": "Reversing a number involves rearranging its digits in reverse order using mathematical operations like modulo and integer division.",
       "sections": [
         {
           "type": "text",
-          "value": "Common patterns: Sliding Window, Two Pointers, Fast & Slow Pointers, Merge Intervals."
+          "value": "Logic to Reverse a Number:\n1. Get the last digit using n % 10.\n2. Add the digit to the reversed number (rev = rev * 10 + digit).\n3. Remove the last digit using integer division (n // 10)."
+        },
+        {
+          "type": "code",
+          "value": "n = 1234\nrev = 0\n\nwhile n > 0:\n    digit = n % 10\n    rev = rev * 10 + digit\n    n = n // 10\n\nprint(rev)"
+        },
+        {
+          "type": "output",
+          "value": "4321"
         }
       ],
       "questions": [
         {
-          "question": "What is the Sliding Window pattern?",
-          "answer": "It is used to perform operations on a specific window size of an array or string to reduce time complexity from O(N²) to O(N)."
+          "question": "What mathematical operations are used to reverse a number?",
+          "answer": "Modulo (%) is used to extract the last digit, and Integer Division (//) is used to remove the last digit from the original number."
         },
         {
-          "question": "When should you use the Two Pointers approach?",
-          "answer": "It's typically used on sorted arrays or linked lists where you need to find a pair or sub-segment that meets certain criteria."
-        },
-        {
-          "question": "What is the Fast and Slow Pointers algorithm used for?",
-          "answer": "It is primarily used to detect cycles in a linked list or to find the middle element of a list."
+          "question": "How does the formula 'rev = rev * 10 + digit' work?",
+          "answer": "It shifts the existing reversed number one position to the left (by multiplying by 10) and then adds the newly extracted last digit to the ones place."
         }
       ]
     },
     {
-      "id": "two-sum-problem",
-      "title": "Two Sum Problem",
-      "category": "Algorithms",
-      "definition": "Given an array of integers and a target, return indices of the two numbers such that they add up to target.",
+      "id": "palindrome-number",
+      "title": "Palindrome Number",
+      "category": "Basic Algorithms",
+      "definition": "A palindrome number is a number that remains the same when its digits are reversed (e.g., 121, 1331).",
       "sections": [
         {
           "type": "text",
-          "value": "Given an array of integers and a target, find two numbers that add up to the target and return their indices."
-        },
-        {
-          "type": "text",
-          "value": "Strategy:\nUse a Hash Map to store seen numbers and their indices for O(n) time complexity."
+          "value": "Logic to Check Palindrome:\n1. Store the original number in a temporary variable (temp).\n2. Reverse the given number using modulo and integer division.\n3. Compare the temporary variable (temp) with the reversed number (rev).\n4. If temp == rev, it is a Palindrome; otherwise, it is not."
         },
         {
           "type": "code",
-          "value": "def twoSum(nums, target):\n    prevMap = {} # val : index\n    for i, n in enumerate(nums):\n        diff = target - n\n        if diff in prevMap:\n            return [prevMap[diff], i]\n        prevMap[n] = i"
+          "value": "n = 121\ntemp = n\nrev = 0\n\nwhile n > 0:\n    digit = n % 10\n    rev = rev * 10 + digit\n    n = n // 10\n\nif temp == rev:\n    print(\"Palindrome\")\nelse:\n    print(\"Not Palindrome\")"
         },
         {
           "type": "output",
-          "value": "nums = [2,7,11,15], target = 9 -> [0,1]"
-        },
-        {
-          "type": "text",
-          "value": "Quick Revision:\n• Best Approach: Hash Map\n• Time: O(n)\n• Space: O(n)"
+          "value": "Palindrome"
         }
       ],
       "questions": [
         {
-          "question": "What is the time complexity of the hash map approach for Two Sum?",
-          "answer": "O(n), as we only traverse the list once and hash map lookups are O(1) on average."
+          "question": "Why do we need a 'temp' variable when checking for a palindrome?",
+          "answer": "The original number 'n' becomes 0 during the while loop process. We need 'temp' to store the original value so we can compare it with the reversed number at the end."
         },
         {
-          "question": "What is the space complexity?",
-          "answer": "O(n) because in the worst case, we might store every element in the hash map."
+          "question": "What is the time complexity of this algorithm?",
+          "answer": "O(log10(n)), where n is the input number, because the number of iterations depends on the number of digits in n."
+        }
+      ]
+    },
+    {
+      "id": "armstrong-number",
+      "title": "Armstrong Number",
+      "category": "Basic Algorithms",
+      "definition": "An Armstrong number is a number that is equal to the sum of its own digits each raised to the power of the number of digits (e.g., 153 = 1³ + 5³ + 3³).",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Check Armstrong Number:\n1. Store the original number in a temporary variable (temp).\n2. Calculate the number of digits in the number (this will be the power).\n3. Extract each digit using modulo (%).\n4. Raise the digit to the calculated power and add it to a 'sum' variable.\n5. Compare the original number with the final sum."
         },
         {
-          "question": "Can it be solved with two pointers?",
-          "answer": "Yes, but only if the array is sorted. If unsorted, sorting it first makes the complexity O(n log n)."
+          "type": "code",
+          "value": "n = 153\ntemp = n\npower = len(str(n))\nsum = 0\n\nwhile n > 0:\n    digit = n % 10\n    sum = sum + digit ** power\n    n = n // 10\n\nif temp == sum:\n    print(\"Armstrong Number\")\nelse:\n    print(\"Not Armstrong Number\")"
         },
         {
-          "question": "Can we solve it in O(1) space?",
-          "answer": "Yes, by sorting the array and using two pointers, but time complexity becomes O(n log n)."
+          "type": "output",
+          "value": "Armstrong Number"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is an Armstrong Number?",
+          "answer": "It is a number where the sum of its digits, each raised to the power of the total number of digits, equals the original number."
+        },
+        {
+          "question": "How do you determine the power in the Armstrong number logic?",
+          "answer": "In Python, you can find the power by converting the number to a string and using the len() function: power = len(str(n))."
+        }
+      ]
+    },
+    {
+      "id": "factorial-number",
+      "title": "Factorial of a Number",
+      "category": "Basic Algorithms",
+      "definition": "The factorial of a non-negative integer n is the product of all positive integers less than or equal to n (e.g., 5! = 5 × 4 × 3 × 2 × 1 = 120).",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Calculate Factorial:\n1. Initialize a variable 'fact' to 1.\n2. Iterate through all numbers from 1 up to 'n'.\n3. In each iteration, multiply 'fact' by the current number.\n4. You can use a 'for' loop with range or a 'while' loop for this process."
+        },
+        {
+          "type": "code",
+          "value": "# Using For Loop\nn = 5\nfact = 1\nfor i in range(1, n + 1):\n    fact = fact * i\nprint(fact)\n\n# Using While Loop (Without Range)\nn = 5\nfact = 1\ni = 1\nwhile i <= n:\n    fact = fact * i\n    i = i + 1\nprint(fact)"
+        },
+        {
+          "type": "output",
+          "value": "120"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the factorial of 0 and 1?",
+          "answer": "The factorial of both 0 and 1 is 1."
+        },
+        {
+          "question": "Can factorial be calculated for negative numbers?",
+          "answer": "No, factorial is defined only for non-negative integers. For negative numbers, it is undefined."
+        }
+      ]
+    },
+    {
+      "id": "fibonacci-series",
+      "title": "Fibonacci Series",
+      "category": "Basic Algorithms",
+      "definition": "The Fibonacci series is a sequence where each number is the sum of the two preceding ones, starting from 0 and 1 (e.g., 0, 1, 1, 2, 3, 5, 8, ...).",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Generate Fibonacci Series:\n1. Initialize the first two numbers, a = 0 and b = 1.\n2. In each iteration, print the current value of 'a'.\n3. Calculate the next number by adding 'a' and 'b' (c = a + b).\n4. Update 'a' to 'b' and 'b' to the new value 'c'.\n5. Continue until you reach the desired number of terms (n)."
+        },
+        {
+          "type": "code",
+          "value": "# Using While Loop\nn = 10\na = 0\nb = 1\ncount = 1\nwhile count <= n:\n    print(a, end=\" \")\n    c = a + b\n    a = b\n    b = c\n    count = count + 1\n\n# Using For Loop\nn = 10\na = 0\nb = 1\nfor i in range(n):\n    print(a, end=\" \")\n    c = a + b\n    a = b\n    b = c"
+        },
+        {
+          "type": "output",
+          "value": "0 1 1 2 3 5 8 13 21 34"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the Fibonacci series?",
+          "answer": "It is a sequence of numbers where each number (after the first two) is the sum of the two preceding numbers."
+        },
+        {
+          "question": "What is the time complexity of generating n Fibonacci numbers using a loop?",
+          "answer": "The time complexity is O(n) because we perform a single loop that runs n times."
+        }
+      ]
+    },
+    {
+      "id": "prime-number",
+      "title": "Prime Number",
+      "category": "Basic Algorithms",
+      "definition": "A prime number is a natural number greater than 1 that is only divisible by 1 and itself (e.g., 2, 3, 5, 7, 11, ...).",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Check Prime Number:\n1. Initialize a 'count' variable to 0.\n2. Iterate through all numbers from 1 up to the given number 'n'.\n3. Check if 'n' is divisible by the current iterator 'i' (n % i == 0).\n4. If divisible, increment the 'count' variable.\n5. After the loop, if 'count' is exactly 2, the number is Prime; otherwise, it is not."
+        },
+        {
+          "type": "code",
+          "value": "# Using While Loop\nn = 7\ncount = 0\ni = 1\nwhile i <= n:\n    if n % i == 0:\n        count += 1\n    i = i + 1\nif count == 2:\n    print(\"Prime\")\nelse:\n    print(\"Not Prime\")\n\n# Using For Loop\nn = 7\ncount = 0\nfor i in range(1, n + 1):\n    if n % i == 0:\n        count += 1\nif count == 2:\n    print(\"Prime\")\nelse:\n    print(\"Not Prime\")"
+        },
+        {
+          "type": "output",
+          "value": "Prime"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Is 1 a prime number?",
+          "answer": "No, 1 is not a prime number because a prime number must have exactly two distinct positive divisors: 1 and itself."
+        },
+        {
+          "question": "What is the only even prime number?",
+          "answer": "2 is the only even prime number. All other even numbers are divisible by 2, giving them more than two divisors."
+        }
+      ]
+    },
+    {
+      "id": "swap-two-numbers",
+      "title": "Swap Two Numbers",
+      "category": "Basic Algorithms",
+      "definition": "Swapping two numbers means interchanging their values so that each variable holds the other's original value.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Swap Two Numbers:\n\n1. Using Temporary Variable:\n• Store value of 'a' in 'temp'.\n• Assign value of 'b' to 'a'.\n• Assign value of 'temp' (original 'a') to 'b'.\n\n2. Using Arithmetic Operations (Without Temp):\n• a = a + b (a now holds sum)\n• b = a - b (b now holds original a)\n• a = a - b (a now holds original b)"
+        },
+        {
+          "type": "code",
+          "value": "# Method 1: Using Temporary Variable\na = 10\nb = 20\ntemp = a\na = b\nb = temp\nprint(\"After Swap (Temp):\", a, b)\n\n# Method 2: Without Temporary Variable\na = 10\nb = 20\na = a + b\nb = a - b\na = a - b\nprint(\"After Swap (Arithmetic):\", a, b)"
+        },
+        {
+          "type": "output",
+          "value": "20 10"
+        }
+      ],
+      "questions": [
+        {
+          "question": "How can you swap two numbers in a single line in Python?",
+          "answer": "In Python, you can use tuple unpacking: a, b = b, a. This is the most 'Pythonic' and efficient way."
+        },
+        {
+          "question": "What is the advantage of swapping without a temporary variable?",
+          "answer": "It saves space because no extra memory is allocated for a third variable, though the arithmetic method can sometimes lead to overflow in languages with fixed integer sizes (not usually an issue in Python)."
+        }
+      ]
+    },
+    {
+      "id": "count-digits",
+      "title": "Count Digits in a Number",
+      "category": "Basic Algorithms",
+      "definition": "Counting digits is the process of determining the total number of individual digits that form a numerical value.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Count Digits:\n\n1. Using While Loop:\n• Initialize a 'count' variable to 0.\n• While the number 'n' is greater than 0, increment 'count'.\n• Divide 'n' by 10 using integer division (//) to remove the last digit.\n\n2. Using String Conversion:\n• Convert the number to a string using str(n).\n• Use the len() function to find the length of the string."
+        },
+        {
+          "type": "code",
+          "value": "# Method 1: Using While Loop\nn = 12345\ncount = 0\nwhile n > 0:\n    count += 1\n    n = n // 10\nprint(\"Count (Loop):\", count)\n\n# Method 2: Using String Conversion\nn = 12345\ncount = len(str(n))\nprint(\"Count (String):\", count)"
+        },
+        {
+          "type": "output",
+          "value": "5"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Which method is faster for counting digits in Python?",
+          "answer": "Method 2 (string conversion) is usually faster and more concise in Python, though Method 1 (loop) is more universal across different programming languages."
+        },
+        {
+          "question": "How would you handle negative numbers when counting digits?",
+          "answer": "For negative numbers, you should first take the absolute value using abs(n) before counting, otherwise the loop condition (n > 0) or the negative sign in the string will lead to incorrect results."
+        }
+      ]
+    },
+    {
+      "id": "sum-of-digits",
+      "title": "Sum of Digits",
+      "category": "Basic Algorithms",
+      "definition": "Sum of digits is the calculation of the total value obtained by adding every individual digit in a number (e.g., 123 -> 1+2+3 = 6).",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Calculate Sum of Digits:\n\n1. Using While Loop:\n• Extract the last digit using modulo (n % 10).\n• Add this digit to a running 'sum' variable.\n• Remove the last digit using integer division (n // 10).\n\n2. Using String Conversion:\n• Convert the number to a string using str(n).\n• Loop through each character (digit) in the string.\n• Convert each character back to an integer using int() and add it to 'sum'."
+        },
+        {
+          "type": "code",
+          "value": "# Method 1: Using While Loop\nn = 123\nsum = 0\nwhile n > 0:\n    digit = n % 10\n    sum = sum + digit\n    n = n // 10\nprint(\"Sum (Loop):\", sum)\n\n# Method 2: Using String Conversion\nn = 123\nsum = 0\nfor digit in str(n):\n    sum = sum + int(digit)\nprint(\"Sum (String):\", sum)"
+        },
+        {
+          "type": "output",
+          "value": "6"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the result of n % 10 for any positive integer?",
+          "answer": "It returns the remainder after dividing by 10, which is always the last digit of the number."
+        },
+        {
+          "question": "Which method is safer for very large numbers in Python?",
+          "answer": "Both methods work well in Python because it automatically handles arbitrarily large integers, but the string method can be slightly more intuitive for beginners."
+        }
+      ]
+    },
+    {
+      "id": "product-of-digits",
+      "title": "Product of Digits",
+      "category": "Basic Algorithms",
+      "definition": "Product of digits is the calculation of the total value obtained by multiplying every individual digit in a number (e.g., 123 -> 1*2*3 = 6).",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Calculate Product of Digits:\n\n1. Using While Loop:\n• Extract the last digit using modulo (n % 10).\n• Multiply this digit with a running 'mul' variable (initialized to 1).\n• Remove the last digit using integer division (n // 10).\n\n2. Using String Conversion:\n• Convert the number to a string using str(n).\n• Loop through each character (digit) in the string.\n• Convert each character back to an integer and multiply it with 'mul'."
+        },
+        {
+          "type": "code",
+          "value": "# Method 1: Using While Loop\nn = 123\nmul = 1\nwhile n > 0:\n    digit = n % 10\n    mul = mul * digit\n    n = n // 10\nprint(\"Product (Loop):\", mul)\n\n# Method 2: Using String Conversion\nn = 123\nmul = 1\nfor digit in str(n):\n    mul = mul * int(digit)\nprint(\"Product (String):\", mul)"
+        },
+        {
+          "type": "output",
+          "value": "6"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What happens if the number contains the digit 0?",
+          "answer": "The entire product will become 0 because any number multiplied by zero is zero."
+        },
+        {
+          "question": "Why is the product variable initialized to 1?",
+          "answer": "In multiplication, 1 is the identity element. If initialized to 0, the result of any multiplication would always remain 0."
+        }
+      ]
+    },
+    {
+      "id": "leap-year-check",
+      "title": "Leap Year Check",
+      "category": "Basic Algorithms",
+      "definition": "A leap year is a year containing an extra day (366 days instead of 365) to align the calendar with the Earth's orbit around the Sun.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Check Leap Year:\nA year is a leap year if it satisfies either of these conditions:\n1. It is divisible by 400.\n2. It is divisible by 4 AND NOT divisible by 100.\n\nThis ensures that century years are only leap years if they are divisible by 400."
+        },
+        {
+          "type": "code",
+          "value": "year = 2024\n\nif (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):\n    print(\"Leap Year\")\nelse:\n    print(\"Not Leap Year\")"
+        },
+        {
+          "type": "output",
+          "value": "Leap Year"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why is the divisible by 400 rule necessary?",
+          "answer": "The solar year is slightly shorter than 365.25 days. The 400-year rule compensates for this small difference by excluding three out of every four century years from being leap years."
+        },
+        {
+          "question": "Is 2100 a leap year?",
+          "answer": "No. While 2100 is divisible by 4, it is also divisible by 100 and NOT by 400, so it fails the leap year conditions."
+        }
+      ]
+    },
+    {
+      "id": "even-odd-check",
+      "title": "Even or Odd Number",
+      "category": "Basic Algorithms",
+      "definition": "An even number is any integer that can be divided exactly by 2, whereas an odd number always leaves a remainder of 1 when divided by 2.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Check Even or Odd:\n1. Take a number as input.\n2. Use the modulo operator (%) to find the remainder when the number is divided by 2.\n3. If the remainder is 0 (n % 2 == 0), the number is Even.\n4. If the remainder is not 0, the number is Odd."
+        },
+        {
+          "type": "code",
+          "value": "def check_even_odd(num):\n    if num % 2 == 0:\n        return \"Even\"\n    else:\n        return \"Odd\"\n\n# Example Usage\nn = 10\nprint(f\"{n} is {check_even_odd(n)}\")"
+        },
+        {
+          "type": "output",
+          "value": "10 is Even"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What does the % operator do in Python?",
+          "answer": "The % (modulo) operator returns the remainder of a division operation between two numbers."
+        },
+        {
+          "question": "Is 0 considered even or odd?",
+          "answer": "Zero is considered an even number because 0 divided by 2 leaves a remainder of 0."
         }
       ]
     }
