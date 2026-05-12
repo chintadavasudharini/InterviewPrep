@@ -5448,7 +5448,7 @@ export const interviewData = {
         },
         {
           "type": "code",
-          "value": "from sympy import symbols, expand\nx = symbols('x')\expr = (x + 1) ** 2\nprint(expand(expr))"
+          "value": "from sympy import symbols, expand\nx = symbols('x')expr = (x + 1) ** 2\nprint(expand(expr))"
         },
         {
           "type": "output",
@@ -5464,13 +5464,31 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["Library", "Importance"],
+          "headers": [
+            "Library",
+            "Importance"
+          ],
           "rows": [
-            ["NumPy", "Arrays & Math"],
-            ["pandas", "Data Analysis"],
-            ["Matplotlib", "Visualization"],
-            ["Seaborn", "Statistical Charts"],
-            ["scikit-learn", "Machine Learning"]
+            [
+              "NumPy",
+              "Arrays & Math"
+            ],
+            [
+              "pandas",
+              "Data Analysis"
+            ],
+            [
+              "Matplotlib",
+              "Visualization"
+            ],
+            [
+              "Seaborn",
+              "Statistical Charts"
+            ],
+            [
+              "scikit-learn",
+              "Machine Learning"
+            ]
           ]
         }
       ],
@@ -5484,7 +5502,7 @@ export const interviewData = {
           "answer": "Plotly"
         }
       ]
-    },
+    }
   ],
   "mysql": [
     {
@@ -5515,10 +5533,22 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["ID", "Name", "Course"],
+          "headers": [
+            "ID",
+            "Name",
+            "Course"
+          ],
           "rows": [
-            ["1", "Ravi", "CSE"],
-            ["2", "Priya", "ECE"]
+            [
+              "1",
+              "Ravi",
+              "CSE"
+            ],
+            [
+              "2",
+              "Priya",
+              "ECE"
+            ]
           ]
         },
         {
@@ -5527,15 +5557,47 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["Feature", "DBMS", "RDBMS"],
+          "headers": [
+            "Feature",
+            "DBMS",
+            "RDBMS"
+          ],
           "rows": [
-            ["Full Form", "Database Management System", "Relational Database Management System"],
-            ["Data Storage", "Stores data as files", "Stores data in tables"],
-            ["Relationship", "No relation between data", "Supports relationships"],
-            ["Security", "Less security", "More security"],
-            ["Normalization", "Not supported fully", "Supports normalization"],
-            ["Data Redundancy", "More", "Less"],
-            ["Examples", "XML, File System", "MySQL, Oracle, PostgreSQL"]
+            [
+              "Full Form",
+              "Database Management System",
+              "Relational Database Management System"
+            ],
+            [
+              "Data Storage",
+              "Stores data as files",
+              "Stores data in tables"
+            ],
+            [
+              "Relationship",
+              "No relation between data",
+              "Supports relationships"
+            ],
+            [
+              "Security",
+              "Less security",
+              "More security"
+            ],
+            [
+              "Normalization",
+              "Not supported fully",
+              "Supports normalization"
+            ],
+            [
+              "Data Redundancy",
+              "More",
+              "Less"
+            ],
+            [
+              "Examples",
+              "XML, File System",
+              "MySQL, Oracle, PostgreSQL"
+            ]
           ]
         },
         {
@@ -5560,26 +5622,68 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["Type", "Purpose"],
+          "headers": [
+            "Type",
+            "Purpose"
+          ],
           "rows": [
-            ["DDL", "Defines database structure"],
-            ["DML", "Manipulates data"],
-            ["DQL", "Retrieves data"],
-            ["DCL", "Controls permissions"],
-            ["TCL", "Manages transactions"]
+            [
+              "DDL",
+              "Defines database structure"
+            ],
+            [
+              "DML",
+              "Manipulates data"
+            ],
+            [
+              "DQL",
+              "Retrieves data"
+            ],
+            [
+              "DCL",
+              "Controls permissions"
+            ],
+            [
+              "TCL",
+              "Manages transactions"
+            ]
           ]
         },
         {
           "type": "table",
-          "headers": ["Command", "Purpose"],
+          "headers": [
+            "Command",
+            "Purpose"
+          ],
           "rows": [
-            ["CREATE", "Create database/table"],
-            ["INSERT", "Add records"],
-            ["SELECT", "Retrieve records"],
-            ["UPDATE", "Modify records"],
-            ["DELETE", "Remove records"],
-            ["DROP", "Delete database/table"],
-            ["ALTER", "Modify table structure"]
+            [
+              "CREATE",
+              "Create database/table"
+            ],
+            [
+              "INSERT",
+              "Add records"
+            ],
+            [
+              "SELECT",
+              "Retrieve records"
+            ],
+            [
+              "UPDATE",
+              "Modify records"
+            ],
+            [
+              "DELETE",
+              "Remove records"
+            ],
+            [
+              "DROP",
+              "Delete database/table"
+            ],
+            [
+              "ALTER",
+              "Modify table structure"
+            ]
           ]
         }
       ],
@@ -5644,10 +5748,22 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["Student_ID", "Name", "Course"],
+          "headers": [
+            "Student_ID",
+            "Name",
+            "Course"
+          ],
           "rows": [
-            ["101", "Ravi", "Python"],
-            ["102", "Anu", "Java"]
+            [
+              "101",
+              "Ravi",
+              "Python"
+            ],
+            [
+              "102",
+              "Anu",
+              "Java"
+            ]
           ]
         },
         {
@@ -5668,14 +5784,35 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["Term", "Meaning"],
+          "headers": [
+            "Term",
+            "Meaning"
+          ],
           "rows": [
-            ["Table", "Collection of data"],
-            ["Row", "Single horizontal data entry"],
-            ["Column", "Vertical field/attribute"],
-            ["Record", "Another name for row"],
-            ["Primary Key", "Unique identifier"],
-            ["Foreign Key", "Connects two tables"]
+            [
+              "Table",
+              "Collection of data"
+            ],
+            [
+              "Row",
+              "Single horizontal data entry"
+            ],
+            [
+              "Column",
+              "Vertical field/attribute"
+            ],
+            [
+              "Record",
+              "Another name for row"
+            ],
+            [
+              "Primary Key",
+              "Unique identifier"
+            ],
+            [
+              "Foreign Key",
+              "Connects two tables"
+            ]
           ]
         }
       ],
@@ -5691,648 +5828,6 @@ export const interviewData = {
         {
           "question": "What is the purpose of a Foreign Key?",
           "answer": "A Foreign Key is used to create a relationship between two tables by linking a column in one table to the Primary Key of another."
-        }
-      ]
-    },
-    {
-      "id": "mysql-crud-operations",
-      "title": "CRUD Operations in MySQL",
-      "category": "Sub Commands",
-      "definition": "CRUD stands for Create, Read, Update, and Delete. These are the four basic actions performed on data in a database.",
-      "sections": [
-        {
-          "type": "table",
-          "headers": ["Operation", "Meaning", "MySQL Command"],
-          "rows": [
-            ["C", "Create", "INSERT"],
-            ["R", "Read", "SELECT"],
-            ["U", "Update", "UPDATE"],
-            ["D", "Delete", "DELETE"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "1. CREATE (INSERT)\nUsed to add new records into a table.\n\nSyntax:\nINSERT INTO table_name(column1, column2) VALUES(value1, value2);\n\nExample:\nINSERT INTO students(id, name) VALUES(1, 'Ram');\n\n------------------------------------------------"
-        },
-        {
-          "type": "output",
-          "value": "id\tname\n1\tRam"
-        },
-        {
-          "type": "text",
-          "value": "2. READ (SELECT)\nUsed to retrieve data from a table.\n\nSyntax:\nSELECT * FROM table_name;\n\nExample:\nSELECT * FROM students;\n\n------------------------------------------------"
-        },
-        {
-          "type": "output",
-          "value": "id\tname\n1\tRam"
-        },
-        {
-          "type": "text",
-          "value": "3. UPDATE\nUsed to modify existing records.\n\nSyntax:\nUPDATE table_name SET column_name = value WHERE condition;\n\nExample:\nUPDATE students SET name = 'Krishna' WHERE id = 1;\n\n------------------------------------------------"
-        },
-        {
-          "type": "output",
-          "value": "id\tname\n1\tKrishna"
-        },
-        {
-          "type": "text",
-          "value": "4. DELETE\nUsed to remove records from a table.\n\nSyntax:\nDELETE FROM table_name WHERE condition;\n\nExample:\nDELETE FROM students WHERE id = 1;\n\n------------------------------------------------"
-        },
-        {
-          "type": "output",
-          "value": "Record deleted successfully"
-        },
-        {
-          "type": "table",
-          "headers": ["CRUD", "SQL Command", "Purpose"],
-          "rows": [
-            ["Create", "INSERT", "Add new data"],
-            ["Read", "SELECT", "View data"],
-            ["Update", "UPDATE", "Modify data"],
-            ["Delete", "DELETE", "Remove data"]
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": "What does CRUD stand for?",
-          "answer": "CRUD stands for Create, Read, Update, and Delete, representing the four basic functions of persistent storage."
-        },
-        {
-          "question": "Which SQL command is used for the 'Update' operation in CRUD?",
-          "answer": "The UPDATE command is used to modify existing records in a table."
-        },
-        {
-          "question": "Why is the WHERE clause important in UPDATE and DELETE operations?",
-          "answer": "The WHERE clause specifies which records should be updated or deleted. Without it, all records in the table would be affected."
-        }
-      ]
-    },
-    {
-      "id": "mysql-dcl-commands",
-      "title": "DCL (Data Control Language)",
-      "category": "Sub Commands",
-      "definition": "DCL is used to control user permissions and access in a database, allowing administrators to manage who can access and manipulate data.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "DCL (Data Control Language)\nDCL is used to control user permissions and access in a database.\nIt helps the database administrator decide:\n• Who can access the database\n• What operations users can perform\n• Which tables users can use\n\n------------------------------------------------"
-        },
-        {
-          "type": "table",
-          "headers": ["Command", "Purpose"],
-          "rows": [
-            ["GRANT", "Gives privileges to users"],
-            ["REVOKE", "Removes privileges from users"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "1. GRANT Command\nThe GRANT command is used to give permissions to a user.\n\nSyntax:\nGRANT privileges ON table_name TO user_name;\n\nExample:\nGRANT SELECT, INSERT ON employees TO user1;\n\nExplanation:\n• SELECT → Allows viewing data\n• INSERT → Allows adding records\n• User user1 can now read and insert data into the employees table.\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "2. REVOKE Command\nThe REVOKE command is used to remove permissions from a user.\n\nSyntax:\nREVOKE privileges ON table_name FROM user_name;\n\nExample:\nREVOKE INSERT ON employees FROM user1;\n\nExplanation:\n• Removes the INSERT permission from user1\n• The user can still use SELECT if it was not revoked.\n\n------------------------------------------------"
-        },
-        {
-          "type": "table",
-          "headers": ["Privilege", "Meaning"],
-          "rows": [
-            ["SELECT", "Read data"],
-            ["INSERT", "Add new records"],
-            ["UPDATE", "Modify records"],
-            ["DELETE", "Remove records"],
-            ["ALL PRIVILEGES", "Gives all permissions"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "Example with ALL PRIVILEGES:\n\nGrant All Permissions:\nGRANT ALL PRIVILEGES ON employees TO admin1;\n\nRemove All Permissions:\nREVOKE ALL PRIVILEGES ON employees FROM admin1;\n\n------------------------------------------------"
-        },
-        {
-          "type": "table",
-          "headers": ["GRANT", "REVOKE"],
-          "rows": [
-            ["Gives permissions", "Removes permissions"],
-            ["Allows access", "Denies access"],
-            ["Used to authorize users", "Used to cancel authorization"]
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is the main purpose of DCL in MySQL?",
-          "answer": "DCL is used to manage database security by granting or revoking user permissions and access levels."
-        },
-        {
-          "question": "What is the difference between GRANT and REVOKE?",
-          "answer": "GRANT is used to give specific privileges to users, while REVOKE is used to take those privileges away."
-        }
-      ]
-    },
-    {
-      "id": "mysql-dcl-practical",
-      "title": "DCL Practical Example (Two Tables)",
-      "category": "Sub Commands",
-      "definition": "A hands-on demonstration of DCL commands (GRANT and REVOKE) using a two-table database system with specific user permissions.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "DCL (Data Control Language) with Two Tables Example\n\nSuppose we have:\n• departments table\n• employees table\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Step 1: Create Database\n\nCREATE DATABASE company_db;\nUSE company_db;\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Step 2: Create First Table — departments\n\nCREATE TABLE departments (\n    dept_id INT PRIMARY KEY,\n    dept_name VARCHAR(50) NOT NULL\n);\n\nInsert Data:\nINSERT INTO departments VALUES\n(101, 'HR'),\n(102, 'IT'),\n(103, 'Finance');\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Step 3: Create Second Table — employees\n\nCREATE TABLE employees (\n    emp_id INT PRIMARY KEY,\n    emp_name VARCHAR(50) NOT NULL,\n    salary DECIMAL(10,2),\n    dept_id INT,\n    FOREIGN KEY (dept_id) REFERENCES departments(dept_id)\n);\n\nInsert Data:\nINSERT INTO employees VALUES\n(1, 'Ravi', 45000, 101),\n(2, 'Priya', 60000, 102),\n(3, 'Arjun', 55000, 103);\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Table Data Representation:\n\ndepartments Table:"
-        },
-        {
-          "type": "table",
-          "headers": ["dept_id", "dept_name"],
-          "rows": [
-            ["101", "HR"],
-            ["102", "IT"],
-            ["103", "Finance"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "employees Table:"
-        },
-        {
-          "type": "table",
-          "headers": ["emp_id", "emp_name", "salary", "dept_id"],
-          "rows": [
-            ["1", "Ravi", "45000", "101"],
-            ["2", "Priya", "60000", "102"],
-            ["3", "Arjun", "55000", "103"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "DCL Commands Application:\n\n1. GRANT Command\n\nSuppose we created a user named staff_user.\nWe want:\n• User can view data from both tables\n• User can insert records only into employees\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Grant SELECT Permission on departments:\n\nGRANT SELECT ON departments TO staff_user;\n\nMeaning:\n• staff_user can view department details\n• Cannot modify data\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Grant SELECT and INSERT on employees:\n\nGRANT SELECT, INSERT ON employees TO staff_user;\n\nMeaning:\n• staff_user can view employee records\n• Add new employees\n• Cannot delete or update records\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Example Operations by staff_user:\n\n✅ Allowed (View departments):\nSELECT * FROM departments;\n\n✅ Allowed (Add Employee):\nINSERT INTO employees VALUES (4, 'Kiran', 50000, 102);\n\n❌ Not Allowed (Delete Employee):\nDELETE FROM employees WHERE emp_id = 1;\n\nError: DELETE permission was not granted.\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "2. REVOKE Command\n\nNow admin wants to remove INSERT permission from staff_user.\n\nREVOKE INSERT ON employees FROM staff_user;\n\nAfter REVOKE:\n\n✅ Allowed:\nSELECT * FROM employees; (User can still view records)\n\n❌ Not Allowed:\nINSERT INTO employees VALUES (5, 'Sneha', 48000, 101);\n\nError: INSERT permission was removed.\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Grant/Remove All Permissions Example:\n\nGrant All Permissions:\nGRANT ALL PRIVILEGES ON employees TO admin_user;\n\nRemove All Permissions:\nREVOKE ALL PRIVILEGES ON employees FROM admin_user;\n\n------------------------------------------------"
-        },
-        {
-          "type": "table",
-          "headers": ["Command", "Purpose"],
-          "rows": [
-            ["GRANT", "Gives permissions"],
-            ["REVOKE", "Removes permissions"]
-          ]
-        },
-        {
-          "type": "table",
-          "headers": ["Permission", "Meaning"],
-          "rows": [
-            ["SELECT", "Read data"],
-            ["INSERT", "Add data"],
-            ["UPDATE", "Modify data"],
-            ["DELETE", "Remove data"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "About staff_user:\nstaff_user is a database user. Before using GRANT or REVOKE, we must first create the user.\n\nCreate User Example:\nCREATE USER 'staff_user'@'localhost' IDENTIFIED BY 'staff123';\n\nExplanation:\n• staff_user → Username\n• localhost → User can login only from same system\n• staff123 → Password\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Complete DCL Flow:\n\nStep 1: Create User\nCREATE USER 'staff_user'@'localhost' IDENTIFIED BY 'staff123';\n\nStep 2: Grant Permissions\nGRANT SELECT ON company_db.departments TO 'staff_user'@'localhost';\nGRANT SELECT, INSERT ON company_db.employees TO 'staff_user'@'localhost';\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "What staff_user Can Do:\n\n✅ Allowed (View Departments):\nSELECT * FROM departments;\n\n✅ Allowed (Add Employee):\nINSERT INTO employees VALUES (4, 'Kiran', 50000, 102);\n\n❌ Not Allowed (Delete Employee):\nDELETE FROM employees WHERE emp_id = 1;\n\nError: DELETE permission is not given.\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "REVOKE Example:\n\nRemove INSERT permission:\nREVOKE INSERT ON company_db.employees FROM 'staff_user'@'localhost';\n\nNow staff_user can only view employee data.\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "View Existing Users:\nSELECT user, host FROM mysql.user;\n\n------------------------------------------------"
-        },
-        {
-          "type": "table",
-          "headers": ["Term", "Meaning"],
-          "rows": [
-            ["User", "Database account"],
-            ["GRANT", "Give permissions"],
-            ["REVOKE", "Remove permissions"],
-            ["staff_user", "Example database username"]
-          ]
-        }
-,
-        {
-          "type": "text",
-          "value": "CREATE USER Detailed Breakdown:\n\nCREATE USER 'staff_user'@'localhost' IDENTIFIED BY 'staff123';\nThis command creates a new MySQL user account.\n\n------------------------------------------------"
-        },
-        {
-          "type": "table",
-          "headers": ["Part", "Meaning"],
-          "rows": [
-            ["CREATE USER", "Command used to create a new user"],
-            ["'staff_user'", "Username"],
-            ["'localhost'", "Host from where user can connect"],
-            ["IDENTIFIED BY", "Sets password for the user"],
-            ["'staff123'", "Password"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "Detailed Explanation:\n\n1. CREATE USER\nUsed to create a new MySQL login account.\n\n2. 'staff_user'\nThis is the username (Example: admin, manager, employee1, staff_user). Just like creating Gmail usernames.\n\n3. @'localhost'\nThis specifies from where the user can connect. localhost means the same computer/system where MySQL server is running.\n\n'staff_user'@'localhost' means user staff_user can login only from this machine.\n\n------------------------------------------------"
-        },
-        {
-          "type": "table",
-          "headers": ["Example", "Meaning"],
-          "rows": [
-            ["'user1'@'localhost'", "Access only from same computer"],
-            ["'user1'@'%'", "Access from any system"],
-            ["'user1'@'192.168.1.10'", "Access only from specific IP"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "4. IDENTIFIED BY\nUsed to assign password to the user.\n\n5. 'staff123'\nPassword for the account. User must enter this password while logging in.\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Real Meaning of Entire Command:\nCREATE USER 'staff_user'@'localhost' IDENTIFIED BY 'staff123';\nmeans: Create a MySQL account named staff_user that can connect from the same computer using password staff123.\n\n------------------------------------------------"
-        },
-        {
-          "type": "table",
-          "headers": ["Real World (Analogy)", "MySQL"],
-          "rows": [
-            ["Employee ID", "Username"],
-            ["Office Location", "Host"],
-            ["Password", "IDENTIFIED BY"],
-            ["Create new employee account", "CREATE USER"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "Login Example:\nAfter creating user:\nmysql -u staff_user -p\nThen enter: staff123\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "⚠️ Important Note:\nCreating a user does NOT automatically give permissions. After creating the user, admin must give access using:\nGRANT SELECT ON company_db.employees TO 'staff_user'@'localhost';\nOtherwise, the user cannot access tables.\n\n------------------------------------------------"
-        }
-      ],
-      "questions": [
-        {
-          "question": "Can a user perform SELECT operations after their INSERT permission is revoked?",
-          "answer": "Yes, as long as the SELECT permission was granted separately and not revoked."
-        },
-        {
-          "question": "What is the result of attempting a DELETE operation without the DELETE privilege?",
-          "answer": "MySQL will return an error stating that the user does not have the necessary permission to execute the command."
-        }
-      ]
-    },
-    {
-      "id": "mysql-tcl-commands",
-      "title": "TCL (Transaction Control Language)",
-      "category": "Sub Commands",
-      "definition": "TCL commands are used to manage transactions in a database. A transaction is a group of SQL statements executed as a single unit.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "TCL (Transaction Control Language)\nTCL commands are used to manage transactions in a database.\nA transaction is a group of SQL statements executed as a single unit.\n\nExamples of Transactions:\n• Money transfer from one account to another\n• Online ticket booking\n• ATM withdrawal\n\nLogic:\n• If all operations are successful → Save changes (COMMIT)\n• If any operation fails → Undo changes (ROLLBACK)\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "1. COMMIT\nCOMMIT is used to save all changes permanently in the database.\n\nSyntax:\nCOMMIT;\n\nExample:\nUPDATE employees SET salary = 50000 WHERE emp_id = 101;\nCOMMIT;\n\nOutput:\nChanges are saved permanently.\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "2. SAVEPOINT\nSAVEPOINT creates a temporary checkpoint inside a transaction. It helps to rollback to a specific point instead of undoing the entire transaction.\n\nSyntax:\nSAVEPOINT savepoint_name;\n\nExample:\nUPDATE accounts SET balance = balance - 1000 WHERE acc_no = 1;\nSAVEPOINT sp1;\nUPDATE accounts SET balance = balance + 1000 WHERE acc_no = 2;\n\nOutput:\nA rollback point named sp1 is created.\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "3. ROLLBACK\nROLLBACK is used to undo changes made in a transaction.\n\nSyntax:\nROLLBACK;\n\nRollback to Savepoint:\nROLLBACK TO savepoint_name;\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Example 1 — Full Rollback:\nDELETE FROM students WHERE id = 5;\nROLLBACK;\n\nOutput:\nDeleted record is restored.\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Example 2 — Rollback to Savepoint:\nUPDATE products SET price = 2000 WHERE id = 1;\nSAVEPOINT sp1;\nUPDATE products SET price = 3000 WHERE id = 2;\nROLLBACK TO sp1;\n\nOutput:\n• Changes before sp1 remain\n• Changes after sp1 are undone\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Example 3 — Rollback to Commit (Bank Transaction):\nSTART TRANSACTION;\nUPDATE accounts SET balance = balance - 5000 WHERE acc_no = 101;\nUPDATE accounts SET balance = balance + 5000 WHERE acc_no = 102;\nCOMMIT;\n\nOutput:\n₹5000 transferred successfully and changes saved permanently.\n\nIf any error occurs:\nROLLBACK;\n\nOutput:\nAll changes are undone.\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "4. SET TRANSACTION\nSET TRANSACTION is used to set transaction properties.\n\nCommon Uses:\n• Read only transaction\n• Read write transaction\n• Isolation level settings\n\nSyntax:\nSET TRANSACTION READ ONLY;\nOR\nSET TRANSACTION READ WRITE;\n\nNote: READ ONLY allows only reading data, not modifying.\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "5. SET CONSTRAINT\nSET CONSTRAINT controls constraint checking behavior during a transaction.\n\nSyntax:\nSET CONSTRAINT constraint_name DEFERRED;\nOR\nSET CONSTRAINT constraint_name IMMEDIATE;\n\nNote: DEFERRED postpones checking until transaction completion.\n\n------------------------------------------------"
-        },
-        {
-          "type": "table",
-          "headers": ["Command", "Purpose"],
-          "rows": [
-            ["COMMIT", "Saves changes permanently"],
-            ["SAVEPOINT", "Creates rollback point"],
-            ["ROLLBACK", "Undoes changes"],
-            ["SET TRANSACTION", "Sets transaction properties"],
-            ["SET CONSTRAINT", "Controls constraints"]
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is the difference between ROLLBACK and ROLLBACK TO SAVEPOINT?",
-          "answer": "ROLLBACK undoes all changes in the current transaction, while ROLLBACK TO SAVEPOINT only undoes changes made after a specific checkpoint."
-        },
-        {
-          "question": "Why is COMMIT essential in database transactions?",
-          "answer": "COMMIT ensures that once a group of operations is successful, the changes are written permanently to the disk and become visible to other users."
-        }
-      ]
-    },
-    {
-      "id": "mysql-tcl-practical",
-      "title": "TCL Practical Example (Bank System)",
-      "category": "Sub Commands",
-      "definition": "A hands-on demonstration of Transaction Control Language (TCL) including banking scenarios, transaction modes, and constraint management.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "TCL Commands Example Using Bank Accounts Table\n\nStep 1 — Create Table\nCREATE TABLE accounts (\n    acc_no INT PRIMARY KEY,\n    name VARCHAR(50),\n    balance INT\n);\n\nStep 2 — Insert Data\nINSERT INTO accounts VALUES\n(101, 'Ravi', 10000),\n(102, 'Sita', 15000);\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Initial Table Data:"
-        },
-        {
-          "type": "table",
-          "headers": ["acc_no", "name", "balance"],
-          "rows": [
-            ["101", "Ravi", "10000"],
-            ["102", "Sita", "15000"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "Example Using COMMIT, SAVEPOINT, and ROLLBACK\n\nScenario: Ravi transfers money to Sita.\n\nStep 3 — Start Transaction\nSTART TRANSACTION;\n\nStep 4 — Deduct Money from Ravi\nUPDATE accounts SET balance = balance - 5000 WHERE acc_no = 101;\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Table After Deduction:"
-        },
-        {
-          "type": "table",
-          "headers": ["acc_no", "name", "balance"],
-          "rows": [
-            ["101", "Ravi", "5000"],
-            ["102", "Sita", "15000"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "Step 5 — Create SAVEPOINT\nSAVEPOINT transfer_point;\n\nMeaning: If something goes wrong later, we can rollback to this point.\n\nStep 6 — Add Money to Sita\nUPDATE accounts SET balance = balance + 5000 WHERE acc_no = 102;\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Table After Transfer:"
-        },
-        {
-          "type": "table",
-          "headers": ["acc_no", "name", "balance"],
-          "rows": [
-            ["101", "Ravi", "5000"],
-            ["102", "Sita", "20000"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "Step 7 — Suppose Error Happens\n\nNow we decide to cancel the second update.\n\nROLLBACK TO SAVEPOINT:\nROLLBACK TO transfer_point;\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Table After Rollback:"
-        },
-        {
-          "type": "table",
-          "headers": ["acc_no", "name", "balance"],
-          "rows": [
-            ["101", "Ravi", "5000"],
-            ["102", "Sita", "15000"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "Explanation:\n• Deduction from Ravi remains\n• Addition to Sita is undone\n\nStep 8 — COMMIT Changes\nCOMMIT;\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Final Table Data:"
-        },
-        {
-          "type": "table",
-          "headers": ["acc_no", "name", "balance"],
-          "rows": [
-            ["101", "Ravi", "5000"],
-            ["102", "Sita", "15000"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "Full TCL Flow:\n\nSTART TRANSACTION;\nUPDATE accounts SET balance = balance - 5000 WHERE acc_no = 101;\nSAVEPOINT transfer_point;\nUPDATE accounts SET balance = balance + 5000 WHERE acc_no = 102;\nROLLBACK TO transfer_point;\nCOMMIT;\n\n------------------------------------------------"
-        },
-        {
-          "type": "table",
-          "headers": ["Command", "Purpose"],
-          "rows": [
-            ["SAVEPOINT transfer_point", "Creates rollback point"],
-            ["ROLLBACK TO transfer_point", "Undoes changes after savepoint"],
-            ["COMMIT", "Saves final changes permanently"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "Syntax of SET TRANSACTION\n\n1. READ ONLY\nAllows only reading data. INSERT, UPDATE, DELETE are not allowed. Used for reports and analysis.\n\nExample:\nSET TRANSACTION READ ONLY;\nSELECT * FROM employees;\n\nOutput:\nData can be viewed but cannot be modified.\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "2. READ WRITE\nAllows both reading and modifying data. INSERT, UPDATE, DELETE operations are allowed.\n\nExample:\nSET TRANSACTION READ WRITE;\nUPDATE employees SET salary = 60000 WHERE emp_id = 101;\n\nOutput:\nData is updated successfully.\n\n------------------------------------------------"
-        },
-        {
-          "type": "table",
-          "headers": ["Feature", "READ ONLY", "READ WRITE"],
-          "rows": [
-            ["View Data", "Yes", "Yes"],
-            ["Insert Data", "No", "Yes"],
-            ["Update Data", "No", "Yes"],
-            ["Delete Data", "No", "Yes"],
-            ["Used For", "Reports, Analysis", "Normal Transactions"]
-      ]
-    },
-    {
-      "type": "text",
-      "value": "SET CONSTRAINT\nSET CONSTRAINT is used to control when constraints (PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK) are checked during a transaction. They can be checked immediately after each SQL statement or at the end of the transaction (COMMIT).\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "1. IMMEDIATE\nConstraint is checked immediately after executing each statement. If any rule is violated, an error occurs instantly.\n\nExample Setup:\nCREATE TABLE departments (dept_id INT PRIMARY KEY);\nCREATE TABLE employees (\n    emp_id INT PRIMARY KEY,\n    dept_id INT,\n    CONSTRAINT fk_dept FOREIGN KEY (dept_id) REFERENCES departments(dept_id)\n);\n\nUsing IMMEDIATE:\nSET CONSTRAINT fk_dept IMMEDIATE;\nINSERT INTO employees VALUES (101, 10);\n\nWhat Happens? \nDatabase immediately checks if dept_id 10 exists. Since it doesn't:\nOutput: ERROR: Foreign key constraint violated.\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "2. DEFERRED\nConstraint checking is postponed until COMMIT. Temporary invalid data is allowed during the transaction.\n\nExample Steps:\nStep 1 — START TRANSACTION;\nStep 2 — SET CONSTRAINT fk_dept DEFERRED;\nStep 3 — INSERT INTO employees VALUES (101, 10); (No error now)\nStep 4 — INSERT INTO departments VALUES (10);\nStep 5 — COMMIT;\n\nOutput:\nTransaction succeeds because by commit time, department 10 exists.\n\n------------------------------------------------"
-        },
-        {
-          "type": "table",
-          "headers": ["Feature", "IMMEDIATE", "DEFERRED"],
-          "rows": [
-            ["Checking Time", "Checks constraint instantly", "Checks at COMMIT time"],
-            ["Error Timing", "Error occurs immediately", "Error occurs later if still invalid"],
-            ["Nature", "Strict checking", "Flexible temporary changes"]
-          ]
-        },
-        {
-          "type": "table",
-          "headers": ["Mode", "Real-Time Use Case"],
-          "rows": [
-            ["IMMEDIATE", "Banking/Payment systems where data must always be valid"],
-            ["DEFERRED", "Bulk data import, inserting parent-child records in varying order"]
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is the primary benefit of using DEFERRED constraints?",
-          "answer": "It allows for temporary inconsistencies within a transaction, which is useful when multiple related tables need to be updated and the intermediate states might violate constraints."
-        },
-        {
-          "question": "When would you use SET TRANSACTION READ ONLY?",
-          "answer": "It is used when you only need to generate reports or perform data analysis and want to prevent any accidental data modification."
-        }
-      ]
-    },
-    {
-      "id": "mysql-alter-table-diff",
-      "title": "RENAME vs MODIFY vs CHANGE",
-      "category": "Sub Commands",
-      "definition": "A detailed comparison of RENAME, MODIFY, and CHANGE commands used with ALTER TABLE to modify column structure in MySQL.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Difference Between RENAME, MODIFY, and CHANGE in MySQL\n\nThese commands are used with ALTER TABLE to change column structure in a table.\n\n------------------------------------------------"
-        },
-        {
-          "type": "table",
-          "headers": ["Command", "Purpose"],
-          "rows": [
-            ["RENAME COLUMN", "Changes only the column name"],
-            ["MODIFY COLUMN", "Changes only the datatype or constraints"],
-            ["CHANGE COLUMN", "Changes both column name and datatype"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "1. RENAME COLUMN\nUsed to rename a column without changing its datatype.\n\nSyntax:\nALTER TABLE table_name RENAME COLUMN old_column_name TO new_column_name;\n\nExample:\nRename emp_name to employee_name\nALTER TABLE employees RENAME COLUMN emp_name TO employee_name;\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Before Table:"
-        },
-        {
-          "type": "table",
-          "headers": ["emp_id", "emp_name"],
-          "rows": [
-            ["101", "Ravi"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "After Table:"
-        },
-        {
-          "type": "table",
-          "headers": ["emp_id", "employee_name"],
-          "rows": [
-            ["101", "Ravi"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "2. MODIFY COLUMN\nUsed to change the datatype, size, or constraints of a column.\n\nSyntax:\nALTER TABLE table_name MODIFY COLUMN column_name new_datatype;\n\nExample:\nChange salary datatype from INT to DECIMAL\nALTER TABLE employees MODIFY COLUMN salary DECIMAL(10,2);\n\n------------------------------------------------"
-        },
-        {
-          "type": "table",
-          "headers": ["Status", "Column Definition"],
-          "rows": [
-            ["Before", "salary INT"],
-            ["After", "salary DECIMAL(10,2)"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "You can also add constraints during modification:\nALTER TABLE employees MODIFY COLUMN salary DECIMAL(10,2) NOT NULL;\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "3. CHANGE COLUMN\nUsed to rename the column and also modify its datatype at the same time.\n\nSyntax:\nALTER TABLE table_name CHANGE COLUMN old_column_name new_column_name new_datatype;\n\nExample:\nRename name to full_name and change datatype from VARCHAR(50) to VARCHAR(100).\nALTER TABLE employees CHANGE COLUMN name full_name VARCHAR(100);\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Before:\nName: name, Datatype: VARCHAR(50), Value: Ravi\n\nAfter:\nName: full_name, Datatype: VARCHAR(100), Value: Ravi\n\n------------------------------------------------"
-        },
-        {
-          "type": "table",
-          "headers": ["Feature", "RENAME", "MODIFY", "CHANGE"],
-          "rows": [
-            ["Rename column", "✅", "❌", "✅"],
-            ["Change datatype", "❌", "✅", "✅"],
-            ["Change constraints", "❌", "✅", "✅"],
-            ["Requires old & new name", "❌", "❌", "✅"]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "Easy Memory Trick:\n• RENAME → Name only\n• MODIFY → Datatype only\n• CHANGE → Name + Datatype together\n\n------------------------------------------------"
-        }
-      ],
-      "questions": [
-        {
-          "question": "Which command is used if you only want to change the size of a VARCHAR column?",
-          "answer": "The MODIFY COLUMN command is used to change the datatype or size without affecting the column name."
-        },
-        {
-          "question": "When would you choose CHANGE over RENAME or MODIFY?",
-          "answer": "You would use CHANGE when you need to perform both renaming and structural modification (like datatype change) in a single statement."
         }
       ]
     },
@@ -6454,15 +5949,55 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["Constraint", "Allows NULL", "Allows Duplicates", "Purpose"],
+          "headers": [
+            "Constraint",
+            "Allows NULL",
+            "Allows Duplicates",
+            "Purpose"
+          ],
           "rows": [
-            ["DEFAULT", "Yes", "Yes", "Stores default value"],
-            ["NOT NULL", "No", "Yes", "Prevents NULL values"],
-            ["UNIQUE", "Yes", "No", "Stores unique values"],
-            ["PRIMARY KEY", "No", "No", "Uniquely identifies rows"],
-            ["AUTO_INCREMENT", "No", "No", "Automatically increments values"],
-            ["CHECK", "Depends", "Depends", "Applies conditions"],
-            ["FOREIGN KEY", "Yes", "Yes", "Creates relationship between tables"]
+            [
+              "DEFAULT",
+              "Yes",
+              "Yes",
+              "Stores default value"
+            ],
+            [
+              "NOT NULL",
+              "No",
+              "Yes",
+              "Prevents NULL values"
+            ],
+            [
+              "UNIQUE",
+              "Yes",
+              "No",
+              "Stores unique values"
+            ],
+            [
+              "PRIMARY KEY",
+              "No",
+              "No",
+              "Uniquely identifies rows"
+            ],
+            [
+              "AUTO_INCREMENT",
+              "No",
+              "No",
+              "Automatically increments values"
+            ],
+            [
+              "CHECK",
+              "Depends",
+              "Depends",
+              "Applies conditions"
+            ],
+            [
+              "FOREIGN KEY",
+              "Yes",
+              "Yes",
+              "Creates relationship between tables"
+            ]
           ]
         }
       ],
@@ -6501,15 +6036,39 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["Constraint", "Used In"],
+          "headers": [
+            "Constraint",
+            "Used In"
+          ],
           "rows": [
-            ["NOT NULL", "emp_name, dept_name"],
-            ["UNIQUE", "email, dept_name"],
-            ["PRIMARY KEY", "emp_id, dept_id"],
-            ["FOREIGN KEY", "dept_id"],
-            ["DEFAULT", "gender, location"],
-            ["CHECK", "age, salary"],
-            ["AUTO_INCREMENT", "emp_id, dept_id"]
+            [
+              "NOT NULL",
+              "emp_name, dept_name"
+            ],
+            [
+              "UNIQUE",
+              "email, dept_name"
+            ],
+            [
+              "PRIMARY KEY",
+              "emp_id, dept_id"
+            ],
+            [
+              "FOREIGN KEY",
+              "dept_id"
+            ],
+            [
+              "DEFAULT",
+              "gender, location"
+            ],
+            [
+              "CHECK",
+              "age, salary"
+            ],
+            [
+              "AUTO_INCREMENT",
+              "emp_id, dept_id"
+            ]
           ]
         },
         {
@@ -6518,11 +6077,27 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["dept_id", "dept_name", "location"],
+          "headers": [
+            "dept_id",
+            "dept_name",
+            "location"
+          ],
           "rows": [
-            ["1", "HR", "Vijayawada"],
-            ["2", "IT", "Hyderabad"],
-            ["3", "Finance", "Bangalore"]
+            [
+              "1",
+              "HR",
+              "Vijayawada"
+            ],
+            [
+              "2",
+              "IT",
+              "Hyderabad"
+            ],
+            [
+              "3",
+              "Finance",
+              "Bangalore"
+            ]
           ]
         },
         {
@@ -6531,11 +6106,43 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["emp_id", "emp_name", "email", "age", "salary", "gender", "dept_id"],
+          "headers": [
+            "emp_id",
+            "emp_name",
+            "email",
+            "age",
+            "salary",
+            "gender",
+            "dept_id"
+          ],
           "rows": [
-            ["1", "Asha", "asha@gmail.com", "22", "35000", "Female", "1"],
-            ["2", "Rahul", "rahul@gmail.com", "25", "50000", "Male", "2"],
-            ["3", "Kiran", "kiran@gmail.com", "28", "45000", "Not Specified", "3"]
+            [
+              "1",
+              "Asha",
+              "asha@gmail.com",
+              "22",
+              "35000",
+              "Female",
+              "1"
+            ],
+            [
+              "2",
+              "Rahul",
+              "rahul@gmail.com",
+              "25",
+              "50000",
+              "Male",
+              "2"
+            ],
+            [
+              "3",
+              "Kiran",
+              "kiran@gmail.com",
+              "28",
+              "45000",
+              "Not Specified",
+              "3"
+            ]
           ]
         },
         {
@@ -6590,14 +6197,42 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["Classification", "Key Property", "Example/Detail"],
+          "headers": [
+            "Classification",
+            "Key Property",
+            "Example/Detail"
+          ],
           "rows": [
-            ["Degree", "Number of columns", "Binary (2), Ternary (3)"],
-            ["Cardinality", "Number of rows", "Empty vs Non-empty"],
-            ["Relationships", "1:1, 1:M, M:1, M:N", "Person ↔ Passport"],
-            ["Keys", "Primary Key presence", "Strong vs Weak"],
-            ["Normalization", "Design quality", "1NF, 2NF, 3NF"],
-            ["Participation", "Mandatory/Optional", "Total vs Partial"]
+            [
+              "Degree",
+              "Number of columns",
+              "Binary (2), Ternary (3)"
+            ],
+            [
+              "Cardinality",
+              "Number of rows",
+              "Empty vs Non-empty"
+            ],
+            [
+              "Relationships",
+              "1:1, 1:M, M:1, M:N",
+              "Person ↔ Passport"
+            ],
+            [
+              "Keys",
+              "Primary Key presence",
+              "Strong vs Weak"
+            ],
+            [
+              "Normalization",
+              "Design quality",
+              "1NF, 2NF, 3NF"
+            ],
+            [
+              "Participation",
+              "Mandatory/Optional",
+              "Total vs Partial"
+            ]
           ]
         }
       ],
@@ -6640,12 +6275,27 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["Relation Type", "Number of Columns (Degree)"],
+          "headers": [
+            "Relation Type",
+            "Number of Columns (Degree)"
+          ],
           "rows": [
-            ["Unary Relation", "1"],
-            ["Binary Relation", "2"],
-            ["Ternary Relation", "3"],
-            ["n-ary Relation", "n"]
+            [
+              "Unary Relation",
+              "1"
+            ],
+            [
+              "Binary Relation",
+              "2"
+            ],
+            [
+              "Ternary Relation",
+              "3"
+            ],
+            [
+              "n-ary Relation",
+              "n"
+            ]
           ]
         }
       ],
@@ -6680,10 +6330,19 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["Relation Type", "Description"],
+          "headers": [
+            "Relation Type",
+            "Description"
+          ],
           "rows": [
-            ["Empty Relation", "Contains no rows (Cardinality = 0)"],
-            ["Non-empty Relation", "Contains one or more rows (Cardinality > 0)"]
+            [
+              "Empty Relation",
+              "Contains no rows (Cardinality = 0)"
+            ],
+            [
+              "Non-empty Relation",
+              "Contains one or more rows (Cardinality > 0)"
+            ]
           ]
         }
       ],
@@ -6726,12 +6385,32 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["Relationship", "Meaning", "Example"],
+          "headers": [
+            "Relationship",
+            "Meaning",
+            "Example"
+          ],
           "rows": [
-            ["One-to-One", "One record ↔ One record", "Person ↔ Passport"],
-            ["One-to-Many", "One record ↔ Many records", "Department → Employees"],
-            ["Many-to-One", "Many records ↔ One record", "Employees → Manager"],
-            ["Many-to-Many", "Many records ↔ Many records", "Students ↔ Courses"]
+            [
+              "One-to-One",
+              "One record ↔ One record",
+              "Person ↔ Passport"
+            ],
+            [
+              "One-to-Many",
+              "One record ↔ Many records",
+              "Department → Employees"
+            ],
+            [
+              "Many-to-One",
+              "Many records ↔ One record",
+              "Employees → Manager"
+            ],
+            [
+              "Many-to-Many",
+              "Many records ↔ Many records",
+              "Students ↔ Courses"
+            ]
           ]
         }
       ],
@@ -6766,10 +6445,19 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["Relation Type", "Description"],
+          "headers": [
+            "Relation Type",
+            "Description"
+          ],
           "rows": [
-            ["Strong Relation", "Has primary key and exists independently"],
-            ["Weak Relation", "Depends on another relation for existence"]
+            [
+              "Strong Relation",
+              "Has primary key and exists independently"
+            ],
+            [
+              "Weak Relation",
+              "Depends on another relation for existence"
+            ]
           ]
         }
       ],
@@ -6789,6 +6477,82 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-participation-relationship",
+      "title": "Total vs Partial Participation in DBMS",
+      "category": "Basic",
+      "definition": "Participation defines whether all records in an entity must participate in a relationship or if it is optional for some records.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Total Participation\nEvery record in the table must be associated with at least one record in another table. This is also called Mandatory Participation.\n\nExample: Employee → Department\n• Every employee must belong to a department.\n• No employee can exist without a Dept_ID.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. Partial Participation\nSome records may or may not participate in the relationship. This is also called Optional Participation.\n\nExample: Employee → Parking Slot\n• Some employees have parking slots assigned.\n• Others (like new or remote staff) may not have one.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Total Participation",
+            "Partial Participation"
+          ],
+          "rows": [
+            [
+              "Participation is compulsory",
+              "Participation is optional"
+            ],
+            [
+              "Every record must participate",
+              "Some records may not participate"
+            ],
+            [
+              "Mandatory relationship",
+              "Optional relationship"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Relationship",
+            "Participation Type"
+          ],
+          "rows": [
+            [
+              "Employee → Department",
+              "Total Participation"
+            ],
+            [
+              "Customer → Loan",
+              "Partial Participation"
+            ],
+            [
+              "Student → Course",
+              "Partial Participation"
+            ],
+            [
+              "Citizen → Aadhaar",
+              "Total Participation"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "How is Total Participation represented in an ER diagram?",
+          "answer": "Total Participation is usually represented by a double line connecting the entity to the relationship diamond."
+        },
+        {
+          "question": "What is another name for Total and Partial participation?",
+          "answer": "Total Participation is called Mandatory Participation, and Partial Participation is called Optional Participation."
+        },
+        {
+          "question": "Why is 'Citizen → Aadhaar' considered Total Participation?",
+          "answer": "Because in the context of the system, every valid citizen is expected to be registered and associated with a unique Aadhaar record."
+        }
+      ]
+    },
+    {
       "id": "mysql-normalized-denormalized",
       "title": "Normalized vs Denormalized Relations",
       "category": "Basic",
@@ -6804,21 +6568,48 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["Normalized Relation", "Denormalized Relation"],
+          "headers": [
+            "Normalized Relation",
+            "Denormalized Relation"
+          ],
           "rows": [
-            ["Reduces redundancy", "Adds redundancy"],
-            ["Uses multiple related tables", "Combines data into fewer tables"],
-            ["Slower queries due to joins", "Faster queries"],
-            ["Better consistency", "Better performance"]
+            [
+              "Reduces redundancy",
+              "Adds redundancy"
+            ],
+            [
+              "Uses multiple related tables",
+              "Combines data into fewer tables"
+            ],
+            [
+              "Slower queries due to joins",
+              "Faster queries"
+            ],
+            [
+              "Better consistency",
+              "Better performance"
+            ]
           ]
         },
         {
           "type": "table",
-          "headers": ["Used In", "Type"],
+          "headers": [
+            "Used In",
+            "Type"
+          ],
           "rows": [
-            ["Banking Systems (OLTP)", "Normalized"],
-            ["Data Warehouses (OLAP)", "Denormalized"],
-            ["Reporting Systems", "Denormalized"]
+            [
+              "Banking Systems (OLTP)",
+              "Normalized"
+            ],
+            [
+              "Data Warehouses (OLAP)",
+              "Denormalized"
+            ],
+            [
+              "Reporting Systems",
+              "Denormalized"
+            ]
           ]
         }
       ],
@@ -6857,11 +6648,27 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["Normal Form", "Rule", "Removes"],
+          "headers": [
+            "Normal Form",
+            "Rule",
+            "Removes"
+          ],
           "rows": [
-            ["1NF", "Atomic values only", "Repeating groups"],
-            ["2NF", "Remove partial dependency", "Partial functional dependency"],
-            ["3NF", "Remove transitive dependency", "Transitive dependency"]
+            [
+              "1NF",
+              "Atomic values only",
+              "Repeating groups"
+            ],
+            [
+              "2NF",
+              "Remove partial dependency",
+              "Partial functional dependency"
+            ],
+            [
+              "3NF",
+              "Remove transitive dependency",
+              "Transitive dependency"
+            ]
           ]
         }
       ],
@@ -6877,55 +6684,6 @@ export const interviewData = {
         {
           "question": "What is Transitive Dependency?",
           "answer": "Transitive Dependency occurs when a non-key attribute depends on another non-key attribute instead of the primary key. Example: ID → DeptID → DeptName."
-        }
-      ]
-    },
-    {
-      "id": "mysql-participation-relationship",
-      "title": "Total vs Partial Participation in DBMS",
-      "category": "Basic",
-      "definition": "Participation defines whether all records in an entity must participate in a relationship or if it is optional for some records.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. Total Participation\nEvery record in the table must be associated with at least one record in another table. This is also called Mandatory Participation.\n\nExample: Employee → Department\n• Every employee must belong to a department.\n• No employee can exist without a Dept_ID.\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "2. Partial Participation\nSome records may or may not participate in the relationship. This is also called Optional Participation.\n\nExample: Employee → Parking Slot\n• Some employees have parking slots assigned.\n• Others (like new or remote staff) may not have one.\n\n------------------------------------------------"
-        },
-        {
-          "type": "table",
-          "headers": ["Total Participation", "Partial Participation"],
-          "rows": [
-            ["Participation is compulsory", "Participation is optional"],
-            ["Every record must participate", "Some records may not participate"],
-            ["Mandatory relationship", "Optional relationship"]
-          ]
-        },
-        {
-          "type": "table",
-          "headers": ["Relationship", "Participation Type"],
-          "rows": [
-            ["Employee → Department", "Total Participation"],
-            ["Customer → Loan", "Partial Participation"],
-            ["Student → Course", "Partial Participation"],
-            ["Citizen → Aadhaar", "Total Participation"]
-          ]
-        }
-      ],
-      "questions": [
-        {
-          "question": "How is Total Participation represented in an ER diagram?",
-          "answer": "Total Participation is usually represented by a double line connecting the entity to the relationship diamond."
-        },
-        {
-          "question": "What is another name for Total and Partial participation?",
-          "answer": "Total Participation is called Mandatory Participation, and Partial Participation is called Optional Participation."
-        },
-        {
-          "question": "Why is 'Citizen → Aadhaar' considered Total Participation?",
-          "answer": "Because in the context of the system, every valid citizen is expected to be registered and associated with a unique Aadhaar record."
         }
       ]
     },
@@ -6957,13 +6715,37 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["Sub-language", "Full Form", "Purpose"],
+          "headers": [
+            "Sub-language",
+            "Full Form",
+            "Purpose"
+          ],
           "rows": [
-            ["DDL", "Data Definition Language", "Structure of database"],
-            ["DML", "Data Manipulation Language", "Insert/update/delete data"],
-            ["DQL", "Data Query Language", "Retrieve data"],
-            ["DCL", "Data Control Language", "Permissions/security"],
-            ["TCL", "Transaction Control Language", "Manage transactions"]
+            [
+              "DDL",
+              "Data Definition Language",
+              "Structure of database"
+            ],
+            [
+              "DML",
+              "Data Manipulation Language",
+              "Insert/update/delete data"
+            ],
+            [
+              "DQL",
+              "Data Query Language",
+              "Retrieve data"
+            ],
+            [
+              "DCL",
+              "Data Control Language",
+              "Permissions/security"
+            ],
+            [
+              "TCL",
+              "Transaction Control Language",
+              "Manage transactions"
+            ]
           ]
         }
       ],
@@ -6983,58 +6765,116 @@ export const interviewData = {
       ]
     },
     {
-      "id": "sql-delete-truncate-drop",
-      "title": "DELETE vs TRUNCATE vs DROP",
+      "id": "mysql-crud-operations",
+      "title": "CRUD Operations in MySQL",
       "category": "Sub Commands",
-      "definition": "In SQL, DELETE, TRUNCATE, and DROP are all used to remove data or structures, but they differ significantly in their impact and behavior.",
+      "definition": "CRUD stands for Create, Read, Update, and Delete. These are the four basic actions performed on data in a database.",
       "sections": [
         {
-          "type": "text",
-          "value": "1. DELETE\nUsed to delete records (rows) from a table.\n• Table structure remains the same.\n• Can delete all rows or specific rows using a condition.\n\nSyntax:\nDELETE FROM table_name;\nDELETE FROM table_name WHERE condition;\n\n-----------------------------------------------"
+          "type": "table",
+          "headers": [
+            "Operation",
+            "Meaning",
+            "MySQL Command"
+          ],
+          "rows": [
+            [
+              "C",
+              "Create",
+              "INSERT"
+            ],
+            [
+              "R",
+              "Read",
+              "SELECT"
+            ],
+            [
+              "U",
+              "Update",
+              "UPDATE"
+            ],
+            [
+              "D",
+              "Delete",
+              "DELETE"
+            ]
+          ]
         },
         {
           "type": "text",
-          "value": "2. TRUNCATE\nRemoves all rows from a table.\n• Table structure remains.\n• Faster than DELETE.\n• Cannot use WHERE condition.\n\nSyntax:\nTRUNCATE TABLE table_name;\n\n-----------------------------------------------"
+          "value": "1. CREATE (INSERT)\nUsed to add new records into a table.\n\nSyntax:\nINSERT INTO table_name(column1, column2) VALUES(value1, value2);\n\nExample:\nINSERT INTO students(id, name) VALUES(1, 'Ram');\n\n------------------------------------------------"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n1\tRam"
         },
         {
           "type": "text",
-          "value": "3. DROP\nDeletes the entire table permanently.\n• Removes both data and table structure.\n\nSyntax:\nDROP TABLE table_name;\n\n-----------------------------------------------"
+          "value": "2. READ (SELECT)\nUsed to retrieve data from a table.\n\nSyntax:\nSELECT * FROM table_name;\n\nExample:\nSELECT * FROM students;\n\n------------------------------------------------"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n1\tRam"
         },
         {
           "type": "text",
-          "value": "4. ALTER DROP COLUMN\nRemoves a specific column from a table.\n• Remaining table and data stay unchanged.\n\nSyntax:\nALTER TABLE table_name DROP COLUMN column_name;"
+          "value": "3. UPDATE\nUsed to modify existing records.\n\nSyntax:\nUPDATE table_name SET column_name = value WHERE condition;\n\nExample:\nUPDATE students SET name = 'Krishna' WHERE id = 1;\n\n------------------------------------------------"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n1\tKrishna"
+        },
+        {
+          "type": "text",
+          "value": "4. DELETE\nUsed to remove records from a table.\n\nSyntax:\nDELETE FROM table_name WHERE condition;\n\nExample:\nDELETE FROM students WHERE id = 1;\n\n------------------------------------------------"
+        },
+        {
+          "type": "output",
+          "value": "Record deleted successfully"
         },
         {
           "type": "table",
-          "headers": ["Feature", "DELETE", "TRUNCATE", "DROP"],
+          "headers": [
+            "CRUD",
+            "SQL Command",
+            "Purpose"
+          ],
           "rows": [
-            ["Purpose", "Deletes rows", "Removes all rows", "Deletes entire table"],
-            ["Table Structure", "Remains", "Remains", "Removed"],
-            ["Data Removed", "Selected or all rows", "All rows only", "Entire table + data"],
-            ["WHERE Condition", "Allowed", "Not allowed", "Not allowed"],
-            ["Speed", "Slower", "Faster", "Fastest"],
-            ["Rollback Possible", "Yes (in transactions)", "Usually No", "No"],
-            ["Auto Increment Reset", "No", "Yes", "Table removed completely"],
-            ["Command Type", "DML", "DDL", "DDL"]
+            [
+              "Create",
+              "INSERT",
+              "Add new data"
+            ],
+            [
+              "Read",
+              "SELECT",
+              "View data"
+            ],
+            [
+              "Update",
+              "UPDATE",
+              "Modify data"
+            ],
+            [
+              "Delete",
+              "DELETE",
+              "Remove data"
+            ]
           ]
         }
       ],
       "questions": [
         {
-          "question": "Which command is used to remove a specific column from a table?",
-          "answer": "ALTER TABLE table_name DROP COLUMN column_name;"
+          "question": "What does CRUD stand for?",
+          "answer": "CRUD stands for Create, Read, Update, and Delete, representing the four basic functions of persistent storage."
         },
         {
-          "question": "Can you rollback a DELETE command?",
-          "answer": "Yes, DELETE is a DML command and its operations are logged, so they can be rolled back if they were part of a transaction."
+          "question": "Which SQL command is used for the 'Update' operation in CRUD?",
+          "answer": "The UPDATE command is used to modify existing records in a table."
         },
         {
-          "question": "Why is TRUNCATE faster than DELETE?",
-          "answer": "TRUNCATE is a DDL operation that deallocates the entire data pages rather than deleting rows one by one and logging each deletion, making it much faster for large tables."
-        },
-        {
-          "question": "Does TRUNCATE reset identity/auto-increment values?",
-          "answer": "Yes, TRUNCATE resets the auto-increment counter to its seed value, whereas DELETE does not."
+          "question": "Why is the WHERE clause important in UPDATE and DELETE operations?",
+          "answer": "The WHERE clause specifies which records should be updated or deleted. Without it, all records in the table would be affected."
         }
       ]
     },
@@ -7102,20 +6942,59 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["Command", "Purpose"],
+          "headers": [
+            "Command",
+            "Purpose"
+          ],
           "rows": [
-            ["CREATE DATABASE", "Create database"],
-            ["CREATE TABLE", "Create table"],
-            ["INSERT", "Insert records"],
-            ["SELECT", "View data"],
-            ["ALTER ADD", "Add column"],
-            ["ALTER DROP", "Delete column"],
-            ["ALTER MODIFY", "Modify datatype"],
-            ["ALTER CHANGE", "Rename/change column"],
-            ["RENAME TABLE", "Rename table"],
-            ["TRUNCATE", "Delete all rows only"],
-            ["DROP TABLE", "Delete table completely"],
-            ["DROP DATABASE", "Delete database completely"]
+            [
+              "CREATE DATABASE",
+              "Create database"
+            ],
+            [
+              "CREATE TABLE",
+              "Create table"
+            ],
+            [
+              "INSERT",
+              "Insert records"
+            ],
+            [
+              "SELECT",
+              "View data"
+            ],
+            [
+              "ALTER ADD",
+              "Add column"
+            ],
+            [
+              "ALTER DROP",
+              "Delete column"
+            ],
+            [
+              "ALTER MODIFY",
+              "Modify datatype"
+            ],
+            [
+              "ALTER CHANGE",
+              "Rename/change column"
+            ],
+            [
+              "RENAME TABLE",
+              "Rename table"
+            ],
+            [
+              "TRUNCATE",
+              "Delete all rows only"
+            ],
+            [
+              "DROP TABLE",
+              "Delete table completely"
+            ],
+            [
+              "DROP DATABASE",
+              "Delete database completely"
+            ]
           ]
         }
       ],
@@ -7162,13 +7041,31 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["Command", "Purpose"],
+          "headers": [
+            "Command",
+            "Purpose"
+          ],
           "rows": [
-            ["ADD", "Add new column"],
-            ["DROP", "Delete column"],
-            ["RENAME", "Rename column only"],
-            ["MODIFY", "Change datatype only"],
-            ["CHANGE", "Rename + datatype change"]
+            [
+              "ADD",
+              "Add new column"
+            ],
+            [
+              "DROP",
+              "Delete column"
+            ],
+            [
+              "RENAME",
+              "Rename column only"
+            ],
+            [
+              "MODIFY",
+              "Change datatype only"
+            ],
+            [
+              "CHANGE",
+              "Rename + datatype change"
+            ]
           ]
         }
       ],
@@ -7184,6 +7081,260 @@ export const interviewData = {
         {
           "question": "Is the COLUMN keyword mandatory in ALTER TABLE DROP?",
           "answer": "In most SQL dialects like MySQL, you can use 'DROP column_name' or 'DROP COLUMN column_name' interchangeably."
+        }
+      ]
+    },
+    {
+      "id": "mysql-alter-table-diff",
+      "title": "RENAME vs MODIFY vs CHANGE",
+      "category": "Sub Commands",
+      "definition": "A detailed comparison of RENAME, MODIFY, and CHANGE commands used with ALTER TABLE to modify column structure in MySQL.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Difference Between RENAME, MODIFY, and CHANGE in MySQL\n\nThese commands are used with ALTER TABLE to change column structure in a table.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Command",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "RENAME COLUMN",
+              "Changes only the column name"
+            ],
+            [
+              "MODIFY COLUMN",
+              "Changes only the datatype or constraints"
+            ],
+            [
+              "CHANGE COLUMN",
+              "Changes both column name and datatype"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1. RENAME COLUMN\nUsed to rename a column without changing its datatype.\n\nSyntax:\nALTER TABLE table_name RENAME COLUMN old_column_name TO new_column_name;\n\nExample:\nRename emp_name to employee_name\nALTER TABLE employees RENAME COLUMN emp_name TO employee_name;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Before Table:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "emp_id",
+            "emp_name"
+          ],
+          "rows": [
+            [
+              "101",
+              "Ravi"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "After Table:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "emp_id",
+            "employee_name"
+          ],
+          "rows": [
+            [
+              "101",
+              "Ravi"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "2. MODIFY COLUMN\nUsed to change the datatype, size, or constraints of a column.\n\nSyntax:\nALTER TABLE table_name MODIFY COLUMN column_name new_datatype;\n\nExample:\nChange salary datatype from INT to DECIMAL\nALTER TABLE employees MODIFY COLUMN salary DECIMAL(10,2);\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Status",
+            "Column Definition"
+          ],
+          "rows": [
+            [
+              "Before",
+              "salary INT"
+            ],
+            [
+              "After",
+              "salary DECIMAL(10,2)"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "You can also add constraints during modification:\nALTER TABLE employees MODIFY COLUMN salary DECIMAL(10,2) NOT NULL;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. CHANGE COLUMN\nUsed to rename the column and also modify its datatype at the same time.\n\nSyntax:\nALTER TABLE table_name CHANGE COLUMN old_column_name new_column_name new_datatype;\n\nExample:\nRename name to full_name and change datatype from VARCHAR(50) to VARCHAR(100).\nALTER TABLE employees CHANGE COLUMN name full_name VARCHAR(100);\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Before:\nName: name, Datatype: VARCHAR(50), Value: Ravi\n\nAfter:\nName: full_name, Datatype: VARCHAR(100), Value: Ravi\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "RENAME",
+            "MODIFY",
+            "CHANGE"
+          ],
+          "rows": [
+            [
+              "Rename column",
+              "✅",
+              "❌",
+              "✅"
+            ],
+            [
+              "Change datatype",
+              "❌",
+              "✅",
+              "✅"
+            ],
+            [
+              "Change constraints",
+              "❌",
+              "✅",
+              "✅"
+            ],
+            [
+              "Requires old & new name",
+              "❌",
+              "❌",
+              "✅"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Easy Memory Trick:\n• RENAME → Name only\n• MODIFY → Datatype only\n• CHANGE → Name + Datatype together\n\n------------------------------------------------"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Which command is used if you only want to change the size of a VARCHAR column?",
+          "answer": "The MODIFY COLUMN command is used to change the datatype or size without affecting the column name."
+        },
+        {
+          "question": "When would you choose CHANGE over RENAME or MODIFY?",
+          "answer": "You would use CHANGE when you need to perform both renaming and structural modification (like datatype change) in a single statement."
+        }
+      ]
+    },
+    {
+      "id": "sql-delete-truncate-drop",
+      "title": "DELETE vs TRUNCATE vs DROP",
+      "category": "Sub Commands",
+      "definition": "In SQL, DELETE, TRUNCATE, and DROP are all used to remove data or structures, but they differ significantly in their impact and behavior.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. DELETE\nUsed to delete records (rows) from a table.\n• Table structure remains the same.\n• Can delete all rows or specific rows using a condition.\n\nSyntax:\nDELETE FROM table_name;\nDELETE FROM table_name WHERE condition;\n\n-----------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. TRUNCATE\nRemoves all rows from a table.\n• Table structure remains.\n• Faster than DELETE.\n• Cannot use WHERE condition.\n\nSyntax:\nTRUNCATE TABLE table_name;\n\n-----------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. DROP\nDeletes the entire table permanently.\n• Removes both data and table structure.\n\nSyntax:\nDROP TABLE table_name;\n\n-----------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. ALTER DROP COLUMN\nRemoves a specific column from a table.\n• Remaining table and data stay unchanged.\n\nSyntax:\nALTER TABLE table_name DROP COLUMN column_name;"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "DELETE",
+            "TRUNCATE",
+            "DROP"
+          ],
+          "rows": [
+            [
+              "Purpose",
+              "Deletes rows",
+              "Removes all rows",
+              "Deletes entire table"
+            ],
+            [
+              "Table Structure",
+              "Remains",
+              "Remains",
+              "Removed"
+            ],
+            [
+              "Data Removed",
+              "Selected or all rows",
+              "All rows only",
+              "Entire table + data"
+            ],
+            [
+              "WHERE Condition",
+              "Allowed",
+              "Not allowed",
+              "Not allowed"
+            ],
+            [
+              "Speed",
+              "Slower",
+              "Faster",
+              "Fastest"
+            ],
+            [
+              "Rollback Possible",
+              "Yes (in transactions)",
+              "Usually No",
+              "No"
+            ],
+            [
+              "Auto Increment Reset",
+              "No",
+              "Yes",
+              "Table removed completely"
+            ],
+            [
+              "Command Type",
+              "DML",
+              "DDL",
+              "DDL"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Which command is used to remove a specific column from a table?",
+          "answer": "ALTER TABLE table_name DROP COLUMN column_name;"
+        },
+        {
+          "question": "Can you rollback a DELETE command?",
+          "answer": "Yes, DELETE is a DML command and its operations are logged, so they can be rolled back if they were part of a transaction."
+        },
+        {
+          "question": "Why is TRUNCATE faster than DELETE?",
+          "answer": "TRUNCATE is a DDL operation that deallocates the entire data pages rather than deleting rows one by one and logging each deletion, making it much faster for large tables."
+        },
+        {
+          "question": "Does TRUNCATE reset identity/auto-increment values?",
+          "answer": "Yes, TRUNCATE resets the auto-increment counter to its seed value, whereas DELETE does not."
         }
       ]
     },
@@ -7266,8 +7417,832 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-dcl-commands",
+      "title": "DCL (Data Control Language)",
+      "category": "Sub Commands",
+      "definition": "DCL is used to control user permissions and access in a database, allowing administrators to manage who can access and manipulate data.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "DCL (Data Control Language)\nDCL is used to control user permissions and access in a database.\nIt helps the database administrator decide:\n• Who can access the database\n• What operations users can perform\n• Which tables users can use\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Command",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "GRANT",
+              "Gives privileges to users"
+            ],
+            [
+              "REVOKE",
+              "Removes privileges from users"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1. GRANT Command\nThe GRANT command is used to give permissions to a user.\n\nSyntax:\nGRANT privileges ON table_name TO user_name;\n\nExample:\nGRANT SELECT, INSERT ON employees TO user1;\n\nExplanation:\n• SELECT → Allows viewing data\n• INSERT → Allows adding records\n• User user1 can now read and insert data into the employees table.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. REVOKE Command\nThe REVOKE command is used to remove permissions from a user.\n\nSyntax:\nREVOKE privileges ON table_name FROM user_name;\n\nExample:\nREVOKE INSERT ON employees FROM user1;\n\nExplanation:\n• Removes the INSERT permission from user1\n• The user can still use SELECT if it was not revoked.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Privilege",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "SELECT",
+              "Read data"
+            ],
+            [
+              "INSERT",
+              "Add new records"
+            ],
+            [
+              "UPDATE",
+              "Modify records"
+            ],
+            [
+              "DELETE",
+              "Remove records"
+            ],
+            [
+              "ALL PRIVILEGES",
+              "Gives all permissions"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Example with ALL PRIVILEGES:\n\nGrant All Permissions:\nGRANT ALL PRIVILEGES ON employees TO admin1;\n\nRemove All Permissions:\nREVOKE ALL PRIVILEGES ON employees FROM admin1;\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "GRANT",
+            "REVOKE"
+          ],
+          "rows": [
+            [
+              "Gives permissions",
+              "Removes permissions"
+            ],
+            [
+              "Allows access",
+              "Denies access"
+            ],
+            [
+              "Used to authorize users",
+              "Used to cancel authorization"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the main purpose of DCL in MySQL?",
+          "answer": "DCL is used to manage database security by granting or revoking user permissions and access levels."
+        },
+        {
+          "question": "What is the difference between GRANT and REVOKE?",
+          "answer": "GRANT is used to give specific privileges to users, while REVOKE is used to take those privileges away."
+        }
+      ]
+    },
+    {
+      "id": "mysql-dcl-practical",
+      "title": "DCL Practical Example (Two Tables)",
+      "category": "Sub Commands",
+      "definition": "A hands-on demonstration of DCL commands (GRANT and REVOKE) using a two-table database system with specific user permissions.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "DCL (Data Control Language) with Two Tables Example\n\nSuppose we have:\n• departments table\n• employees table\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Step 1: Create Database\n\nCREATE DATABASE company_db;\nUSE company_db;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Step 2: Create First Table — departments\n\nCREATE TABLE departments (\n    dept_id INT PRIMARY KEY,\n    dept_name VARCHAR(50) NOT NULL\n);\n\nInsert Data:\nINSERT INTO departments VALUES\n(101, 'HR'),\n(102, 'IT'),\n(103, 'Finance');\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Step 3: Create Second Table — employees\n\nCREATE TABLE employees (\n    emp_id INT PRIMARY KEY,\n    emp_name VARCHAR(50) NOT NULL,\n    salary DECIMAL(10,2),\n    dept_id INT,\n    FOREIGN KEY (dept_id) REFERENCES departments(dept_id)\n);\n\nInsert Data:\nINSERT INTO employees VALUES\n(1, 'Ravi', 45000, 101),\n(2, 'Priya', 60000, 102),\n(3, 'Arjun', 55000, 103);\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Table Data Representation:\n\ndepartments Table:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "dept_id",
+            "dept_name"
+          ],
+          "rows": [
+            [
+              "101",
+              "HR"
+            ],
+            [
+              "102",
+              "IT"
+            ],
+            [
+              "103",
+              "Finance"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "employees Table:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "emp_id",
+            "emp_name",
+            "salary",
+            "dept_id"
+          ],
+          "rows": [
+            [
+              "1",
+              "Ravi",
+              "45000",
+              "101"
+            ],
+            [
+              "2",
+              "Priya",
+              "60000",
+              "102"
+            ],
+            [
+              "3",
+              "Arjun",
+              "55000",
+              "103"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "DCL Commands Application:\n\n1. GRANT Command\n\nSuppose we created a user named staff_user.\nWe want:\n• User can view data from both tables\n• User can insert records only into employees\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Grant SELECT Permission on departments:\n\nGRANT SELECT ON departments TO staff_user;\n\nMeaning:\n• staff_user can view department details\n• Cannot modify data\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Grant SELECT and INSERT on employees:\n\nGRANT SELECT, INSERT ON employees TO staff_user;\n\nMeaning:\n• staff_user can view employee records\n• Add new employees\n• Cannot delete or update records\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Example Operations by staff_user:\n\n✅ Allowed (View departments):\nSELECT * FROM departments;\n\n✅ Allowed (Add Employee):\nINSERT INTO employees VALUES (4, 'Kiran', 50000, 102);\n\n❌ Not Allowed (Delete Employee):\nDELETE FROM employees WHERE emp_id = 1;\n\nError: DELETE permission was not granted.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. REVOKE Command\n\nNow admin wants to remove INSERT permission from staff_user.\n\nREVOKE INSERT ON employees FROM staff_user;\n\nAfter REVOKE:\n\n✅ Allowed:\nSELECT * FROM employees; (User can still view records)\n\n❌ Not Allowed:\nINSERT INTO employees VALUES (5, 'Sneha', 48000, 101);\n\nError: INSERT permission was removed.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Grant/Remove All Permissions Example:\n\nGrant All Permissions:\nGRANT ALL PRIVILEGES ON employees TO admin_user;\n\nRemove All Permissions:\nREVOKE ALL PRIVILEGES ON employees FROM admin_user;\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Command",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "GRANT",
+              "Gives permissions"
+            ],
+            [
+              "REVOKE",
+              "Removes permissions"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Permission",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "SELECT",
+              "Read data"
+            ],
+            [
+              "INSERT",
+              "Add data"
+            ],
+            [
+              "UPDATE",
+              "Modify data"
+            ],
+            [
+              "DELETE",
+              "Remove data"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "About staff_user:\nstaff_user is a database user. Before using GRANT or REVOKE, we must first create the user.\n\nCreate User Example:\nCREATE USER 'staff_user'@'localhost' IDENTIFIED BY 'staff123';\n\nExplanation:\n• staff_user → Username\n• localhost → User can login only from same system\n• staff123 → Password\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Complete DCL Flow:\n\nStep 1: Create User\nCREATE USER 'staff_user'@'localhost' IDENTIFIED BY 'staff123';\n\nStep 2: Grant Permissions\nGRANT SELECT ON company_db.departments TO 'staff_user'@'localhost';\nGRANT SELECT, INSERT ON company_db.employees TO 'staff_user'@'localhost';\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "What staff_user Can Do:\n\n✅ Allowed (View Departments):\nSELECT * FROM departments;\n\n✅ Allowed (Add Employee):\nINSERT INTO employees VALUES (4, 'Kiran', 50000, 102);\n\n❌ Not Allowed (Delete Employee):\nDELETE FROM employees WHERE emp_id = 1;\n\nError: DELETE permission is not given.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "REVOKE Example:\n\nRemove INSERT permission:\nREVOKE INSERT ON company_db.employees FROM 'staff_user'@'localhost';\n\nNow staff_user can only view employee data.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "View Existing Users:\nSELECT user, host FROM mysql.user;\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Term",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "User",
+              "Database account"
+            ],
+            [
+              "GRANT",
+              "Give permissions"
+            ],
+            [
+              "REVOKE",
+              "Remove permissions"
+            ],
+            [
+              "staff_user",
+              "Example database username"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "CREATE USER Detailed Breakdown:\n\nCREATE USER 'staff_user'@'localhost' IDENTIFIED BY 'staff123';\nThis command creates a new MySQL user account.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Part",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "CREATE USER",
+              "Command used to create a new user"
+            ],
+            [
+              "'staff_user'",
+              "Username"
+            ],
+            [
+              "'localhost'",
+              "Host from where user can connect"
+            ],
+            [
+              "IDENTIFIED BY",
+              "Sets password for the user"
+            ],
+            [
+              "'staff123'",
+              "Password"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Detailed Explanation:\n\n1. CREATE USER\nUsed to create a new MySQL login account.\n\n2. 'staff_user'\nThis is the username (Example: admin, manager, employee1, staff_user). Just like creating Gmail usernames.\n\n3. @'localhost'\nThis specifies from where the user can connect. localhost means the same computer/system where MySQL server is running.\n\n'staff_user'@'localhost' means user staff_user can login only from this machine.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Example",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "'user1'@'localhost'",
+              "Access only from same computer"
+            ],
+            [
+              "'user1'@'%'",
+              "Access from any system"
+            ],
+            [
+              "'user1'@'192.168.1.10'",
+              "Access only from specific IP"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "4. IDENTIFIED BY\nUsed to assign password to the user.\n\n5. 'staff123'\nPassword for the account. User must enter this password while logging in.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Real Meaning of Entire Command:\nCREATE USER 'staff_user'@'localhost' IDENTIFIED BY 'staff123';\nmeans: Create a MySQL account named staff_user that can connect from the same computer using password staff123.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Real World (Analogy)",
+            "MySQL"
+          ],
+          "rows": [
+            [
+              "Employee ID",
+              "Username"
+            ],
+            [
+              "Office Location",
+              "Host"
+            ],
+            [
+              "Password",
+              "IDENTIFIED BY"
+            ],
+            [
+              "Create new employee account",
+              "CREATE USER"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Login Example:\nAfter creating user:\nmysql -u staff_user -p\nThen enter: staff123\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "⚠️ Important Note:\nCreating a user does NOT automatically give permissions. After creating the user, admin must give access using:\nGRANT SELECT ON company_db.employees TO 'staff_user'@'localhost';\nOtherwise, the user cannot access tables.\n\n------------------------------------------------"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Can a user perform SELECT operations after their INSERT permission is revoked?",
+          "answer": "Yes, as long as the SELECT permission was granted separately and not revoked."
+        },
+        {
+          "question": "What is the result of attempting a DELETE operation without the DELETE privilege?",
+          "answer": "MySQL will return an error stating that the user does not have the necessary permission to execute the command."
+        }
+      ]
+    },
+    {
+      "id": "mysql-tcl-commands",
+      "title": "TCL (Transaction Control Language)",
+      "category": "Sub Commands",
+      "definition": "TCL commands are used to manage transactions in a database. A transaction is a group of SQL statements executed as a single unit.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "TCL (Transaction Control Language)\nTCL commands are used to manage transactions in a database.\nA transaction is a group of SQL statements executed as a single unit.\n\nExamples of Transactions:\n• Money transfer from one account to another\n• Online ticket booking\n• ATM withdrawal\n\nLogic:\n• If all operations are successful → Save changes (COMMIT)\n• If any operation fails → Undo changes (ROLLBACK)\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "1. COMMIT\nCOMMIT is used to save all changes permanently in the database.\n\nSyntax:\nCOMMIT;\n\nExample:\nUPDATE employees SET salary = 50000 WHERE emp_id = 101;\nCOMMIT;\n\nOutput:\nChanges are saved permanently.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. SAVEPOINT\nSAVEPOINT creates a temporary checkpoint inside a transaction. It helps to rollback to a specific point instead of undoing the entire transaction.\n\nSyntax:\nSAVEPOINT savepoint_name;\n\nExample:\nUPDATE accounts SET balance = balance - 1000 WHERE acc_no = 1;\nSAVEPOINT sp1;\nUPDATE accounts SET balance = balance + 1000 WHERE acc_no = 2;\n\nOutput:\nA rollback point named sp1 is created.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. ROLLBACK\nROLLBACK is used to undo changes made in a transaction.\n\nSyntax:\nROLLBACK;\n\nRollback to Savepoint:\nROLLBACK TO savepoint_name;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Example 1 — Full Rollback:\nDELETE FROM students WHERE id = 5;\nROLLBACK;\n\nOutput:\nDeleted record is restored.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Example 2 — Rollback to Savepoint:\nUPDATE products SET price = 2000 WHERE id = 1;\nSAVEPOINT sp1;\nUPDATE products SET price = 3000 WHERE id = 2;\nROLLBACK TO sp1;\n\nOutput:\n• Changes before sp1 remain\n• Changes after sp1 are undone\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Example 3 — Rollback to Commit (Bank Transaction):\nSTART TRANSACTION;\nUPDATE accounts SET balance = balance - 5000 WHERE acc_no = 101;\nUPDATE accounts SET balance = balance + 5000 WHERE acc_no = 102;\nCOMMIT;\n\nOutput:\n₹5000 transferred successfully and changes saved permanently.\n\nIf any error occurs:\nROLLBACK;\n\nOutput:\nAll changes are undone.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. SET TRANSACTION\nSET TRANSACTION is used to set transaction properties.\n\nCommon Uses:\n• Read only transaction\n• Read write transaction\n• Isolation level settings\n\nSyntax:\nSET TRANSACTION READ ONLY;\nOR\nSET TRANSACTION READ WRITE;\n\nNote: READ ONLY allows only reading data, not modifying.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "5. SET CONSTRAINT\nSET CONSTRAINT controls constraint checking behavior during a transaction.\n\nSyntax:\nSET CONSTRAINT constraint_name DEFERRED;\nOR\nSET CONSTRAINT constraint_name IMMEDIATE;\n\nNote: DEFERRED postpones checking until transaction completion.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Command",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "COMMIT",
+              "Saves changes permanently"
+            ],
+            [
+              "SAVEPOINT",
+              "Creates rollback point"
+            ],
+            [
+              "ROLLBACK",
+              "Undoes changes"
+            ],
+            [
+              "SET TRANSACTION",
+              "Sets transaction properties"
+            ],
+            [
+              "SET CONSTRAINT",
+              "Controls constraints"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between ROLLBACK and ROLLBACK TO SAVEPOINT?",
+          "answer": "ROLLBACK undoes all changes in the current transaction, while ROLLBACK TO SAVEPOINT only undoes changes made after a specific checkpoint."
+        },
+        {
+          "question": "Why is COMMIT essential in database transactions?",
+          "answer": "COMMIT ensures that once a group of operations is successful, the changes are written permanently to the disk and become visible to other users."
+        }
+      ]
+    },
+    {
+      "id": "mysql-tcl-practical",
+      "title": "TCL Practical Example (Bank System)",
+      "category": "Sub Commands",
+      "definition": "A hands-on demonstration of Transaction Control Language (TCL) including banking scenarios, transaction modes, and constraint management.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "TCL Commands Example Using Bank Accounts Table\n\nStep 1 — Create Table\nCREATE TABLE accounts (\n    acc_no INT PRIMARY KEY,\n    name VARCHAR(50),\n    balance INT\n);\n\nStep 2 — Insert Data\nINSERT INTO accounts VALUES\n(101, 'Ravi', 10000),\n(102, 'Sita', 15000);\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Initial Table Data:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "acc_no",
+            "name",
+            "balance"
+          ],
+          "rows": [
+            [
+              "101",
+              "Ravi",
+              "10000"
+            ],
+            [
+              "102",
+              "Sita",
+              "15000"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Example Using COMMIT, SAVEPOINT, and ROLLBACK\n\nScenario: Ravi transfers money to Sita.\n\nStep 3 — Start Transaction\nSTART TRANSACTION;\n\nStep 4 — Deduct Money from Ravi\nUPDATE accounts SET balance = balance - 5000 WHERE acc_no = 101;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Table After Deduction:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "acc_no",
+            "name",
+            "balance"
+          ],
+          "rows": [
+            [
+              "101",
+              "Ravi",
+              "5000"
+            ],
+            [
+              "102",
+              "Sita",
+              "15000"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Step 5 — Create SAVEPOINT\nSAVEPOINT transfer_point;\n\nMeaning: If something goes wrong later, we can rollback to this point.\n\nStep 6 — Add Money to Sita\nUPDATE accounts SET balance = balance + 5000 WHERE acc_no = 102;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Table After Transfer:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "acc_no",
+            "name",
+            "balance"
+          ],
+          "rows": [
+            [
+              "101",
+              "Ravi",
+              "5000"
+            ],
+            [
+              "102",
+              "Sita",
+              "20000"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Step 7 — Suppose Error Happens\n\nNow we decide to cancel the second update.\n\nROLLBACK TO SAVEPOINT:\nROLLBACK TO transfer_point;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Table After Rollback:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "acc_no",
+            "name",
+            "balance"
+          ],
+          "rows": [
+            [
+              "101",
+              "Ravi",
+              "5000"
+            ],
+            [
+              "102",
+              "Sita",
+              "15000"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Explanation:\n• Deduction from Ravi remains\n• Addition to Sita is undone\n\nStep 8 — COMMIT Changes\nCOMMIT;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Final Table Data:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "acc_no",
+            "name",
+            "balance"
+          ],
+          "rows": [
+            [
+              "101",
+              "Ravi",
+              "5000"
+            ],
+            [
+              "102",
+              "Sita",
+              "15000"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Full TCL Flow:\n\nSTART TRANSACTION;\nUPDATE accounts SET balance = balance - 5000 WHERE acc_no = 101;\nSAVEPOINT transfer_point;\nUPDATE accounts SET balance = balance + 5000 WHERE acc_no = 102;\nROLLBACK TO transfer_point;\nCOMMIT;\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Command",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "SAVEPOINT transfer_point",
+              "Creates rollback point"
+            ],
+            [
+              "ROLLBACK TO transfer_point",
+              "Undoes changes after savepoint"
+            ],
+            [
+              "COMMIT",
+              "Saves final changes permanently"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Syntax of SET TRANSACTION\n\n1. READ ONLY\nAllows only reading data. INSERT, UPDATE, DELETE are not allowed. Used for reports and analysis.\n\nExample:\nSET TRANSACTION READ ONLY;\nSELECT * FROM employees;\n\nOutput:\nData can be viewed but cannot be modified.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. READ WRITE\nAllows both reading and modifying data. INSERT, UPDATE, DELETE operations are allowed.\n\nExample:\nSET TRANSACTION READ WRITE;\nUPDATE employees SET salary = 60000 WHERE emp_id = 101;\n\nOutput:\nData is updated successfully.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "READ ONLY",
+            "READ WRITE"
+          ],
+          "rows": [
+            [
+              "View Data",
+              "Yes",
+              "Yes"
+            ],
+            [
+              "Insert Data",
+              "No",
+              "Yes"
+            ],
+            [
+              "Update Data",
+              "No",
+              "Yes"
+            ],
+            [
+              "Delete Data",
+              "No",
+              "Yes"
+            ],
+            [
+              "Used For",
+              "Reports, Analysis",
+              "Normal Transactions"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "SET CONSTRAINT\nSET CONSTRAINT is used to control when constraints (PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK) are checked during a transaction. They can be checked immediately after each SQL statement or at the end of the transaction (COMMIT).\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "1. IMMEDIATE\nConstraint is checked immediately after executing each statement. If any rule is violated, an error occurs instantly.\n\nExample Setup:\nCREATE TABLE departments (dept_id INT PRIMARY KEY);\nCREATE TABLE employees (\n    emp_id INT PRIMARY KEY,\n    dept_id INT,\n    CONSTRAINT fk_dept FOREIGN KEY (dept_id) REFERENCES departments(dept_id)\n);\n\nUsing IMMEDIATE:\nSET CONSTRAINT fk_dept IMMEDIATE;\nINSERT INTO employees VALUES (101, 10);\n\nWhat Happens? \nDatabase immediately checks if dept_id 10 exists. Since it doesn't:\nOutput: ERROR: Foreign key constraint violated.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. DEFERRED\nConstraint checking is postponed until COMMIT. Temporary invalid data is allowed during the transaction.\n\nExample Steps:\nStep 1 — START TRANSACTION;\nStep 2 — SET CONSTRAINT fk_dept DEFERRED;\nStep 3 — INSERT INTO employees VALUES (101, 10); (No error now)\nStep 4 — INSERT INTO departments VALUES (10);\nStep 5 — COMMIT;\n\nOutput:\nTransaction succeeds because by commit time, department 10 exists.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "IMMEDIATE",
+            "DEFERRED"
+          ],
+          "rows": [
+            [
+              "Checking Time",
+              "Checks constraint instantly",
+              "Checks at COMMIT time"
+            ],
+            [
+              "Error Timing",
+              "Error occurs immediately",
+              "Error occurs later if still invalid"
+            ],
+            [
+              "Nature",
+              "Strict checking",
+              "Flexible temporary changes"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Mode",
+            "Real-Time Use Case"
+          ],
+          "rows": [
+            [
+              "IMMEDIATE",
+              "Banking/Payment systems where data must always be valid"
+            ],
+            [
+              "DEFERRED",
+              "Bulk data import, inserting parent-child records in varying order"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the primary benefit of using DEFERRED constraints?",
+          "answer": "It allows for temporary inconsistencies within a transaction, which is useful when multiple related tables need to be updated and the intermediate states might violate constraints."
+        },
+        {
+          "question": "When would you use SET TRANSACTION READ ONLY?",
+          "answer": "It is used when you only need to generate reports or perform data analysis and want to prevent any accidental data modification."
+        }
+      ]
+    },
+    {
+      "id": "sql-filtering-concepts",
+      "title": "SQL Filtering Concepts",
+      "category": "Basic",
+      "definition": "Filtering data means retrieving only the required records from a table using conditions. This module covers the conceptual definitions of various filtering operators.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. WHERE Clause\nThe WHERE clause is used to filter records based on a condition.\n• Returns only matching rows\n• Used with SELECT, UPDATE, and DELETE\n• Helps retrieve specific data from a table\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. AND Operator\nThe AND operator is used to combine multiple conditions.\n• All conditions must be TRUE\n• Returns records only if every condition matches\n• Used for more specific filtering\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. OR Operator\nThe OR operator is used to combine multiple conditions.\n• At least one condition must be TRUE\n• Returns records if any condition matches\n• Used for alternative filtering conditions\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. NOT Operator\nThe NOT operator is used to exclude records that match a condition.\n• Reverses the condition\n• Returns records that do not satisfy the condition\n• Used for negative filtering\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "5. BETWEEN Operator\nThe BETWEEN operator is used to filter data within a range.\n• Includes both starting and ending values\n• Works with numbers, dates, and text\n• Useful for ranges like marks, salary, age, dates\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "6. IN Operator\nThe IN operator is used to match multiple values in a condition.\n• Simplifies multiple OR conditions\n• Checks whether a value exists in a list\n• Makes queries shorter and cleaner\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "7. LIKE Operator\nThe LIKE operator is used for pattern matching.\n• Searches for specific patterns in text\n• Mostly used with character/string data\n• Works together with wildcards\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "8. Wildcards\nWildcards are special symbols used with the LIKE operator for pattern searching.\nCommon wildcards:\n• % → Represents zero, one, or many characters\n• _ → Represents a single character\n\nUsed to search names, find partial matches, and filter text patterns.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "9. LIMIT Clause\nThe LIMIT clause is used to restrict the number of rows returned.\n• Returns only a specific number of records\n• Useful for large datasets\n• Commonly used for pagination and top results"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the primary purpose of the WHERE clause?",
+          "answer": "To filter records in a database table based on specific conditions.\n\n-----------------"
+        },
+        {
+          "question": "Which wildcard represents a single character in a LIKE pattern?",
+          "answer": "The underscore (_) wildcard represents a single character.\n\n-----------------"
+        },
+        {
+          "question": "When would you use the BETWEEN operator?",
+          "answer": "When you need to filter data within a specific range, such as a range of salaries or dates."
+        }
+      ]
+    },
+    {
       "id": "sql-filtering-data",
-      "title": "Filtering Data in SQL",
+      "title": "Filtering Data Example",
       "category": "Queries",
       "definition": "Filtering data means retrieving only the required records from a table using conditions.",
       "sections": [
@@ -7360,64 +8335,6 @@ export const interviewData = {
       ]
     },
     {
-      "id": "sql-filtering-concepts",
-      "title": "SQL Filtering Concepts",
-      "category": "Basic",
-      "definition": "Filtering data means retrieving only the required records from a table using conditions. This module covers the conceptual definitions of various filtering operators.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "1. WHERE Clause\nThe WHERE clause is used to filter records based on a condition.\n• Returns only matching rows\n• Used with SELECT, UPDATE, and DELETE\n• Helps retrieve specific data from a table\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "2. AND Operator\nThe AND operator is used to combine multiple conditions.\n• All conditions must be TRUE\n• Returns records only if every condition matches\n• Used for more specific filtering\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "3. OR Operator\nThe OR operator is used to combine multiple conditions.\n• At least one condition must be TRUE\n• Returns records if any condition matches\n• Used for alternative filtering conditions\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "4. NOT Operator\nThe NOT operator is used to exclude records that match a condition.\n• Reverses the condition\n• Returns records that do not satisfy the condition\n• Used for negative filtering\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "5. BETWEEN Operator\nThe BETWEEN operator is used to filter data within a range.\n• Includes both starting and ending values\n• Works with numbers, dates, and text\n• Useful for ranges like marks, salary, age, dates\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "6. IN Operator\nThe IN operator is used to match multiple values in a condition.\n• Simplifies multiple OR conditions\n• Checks whether a value exists in a list\n• Makes queries shorter and cleaner\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "7. LIKE Operator\nThe LIKE operator is used for pattern matching.\n• Searches for specific patterns in text\n• Mostly used with character/string data\n• Works together with wildcards\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "8. Wildcards\nWildcards are special symbols used with the LIKE operator for pattern searching.\nCommon wildcards:\n• % → Represents zero, one, or many characters\n• _ → Represents a single character\n\nUsed to search names, find partial matches, and filter text patterns.\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "9. LIMIT Clause\nThe LIMIT clause is used to restrict the number of rows returned.\n• Returns only a specific number of records\n• Useful for large datasets\n• Commonly used for pagination and top results"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is the primary purpose of the WHERE clause?",
-          "answer": "To filter records in a database table based on specific conditions.\n\n-----------------"
-        },
-        {
-          "question": "Which wildcard represents a single character in a LIKE pattern?",
-          "answer": "The underscore (_) wildcard represents a single character.\n\n-----------------"
-        },
-        {
-          "question": "When would you use the BETWEEN operator?",
-          "answer": "When you need to filter data within a specific range, such as a range of salaries or dates."
-        }
-      ]
-    },
-    {
       "id": "sql-joins",
       "title": "SQL JOINS",
       "category": "Queries",
@@ -7429,14 +8346,35 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["Join Type", "Purpose"],
+          "headers": [
+            "Join Type",
+            "Purpose"
+          ],
           "rows": [
-            ["INNER JOIN", "Returns matching records from both tables"],
-            ["LEFT JOIN", "Returns all records from left table + matched records from right table"],
-            ["RIGHT JOIN", "Returns all records from right table + matched records from left table"],
-            ["FULL JOIN", "Returns all records when match exists in either table"],
-            ["CROSS JOIN", "Returns all combinations of rows"],
-            ["SELF JOIN", "Joins a table with itself"]
+            [
+              "INNER JOIN",
+              "Returns matching records from both tables"
+            ],
+            [
+              "LEFT JOIN",
+              "Returns all records from left table + matched records from right table"
+            ],
+            [
+              "RIGHT JOIN",
+              "Returns all records from right table + matched records from left table"
+            ],
+            [
+              "FULL JOIN",
+              "Returns all records when match exists in either table"
+            ],
+            [
+              "CROSS JOIN",
+              "Returns all combinations of rows"
+            ],
+            [
+              "SELF JOIN",
+              "Joins a table with itself"
+            ]
           ]
         },
         {
@@ -7497,13 +8435,37 @@ export const interviewData = {
         },
         {
           "type": "table",
-          "headers": ["Join", "Matching Rows", "Non-Matching Rows"],
+          "headers": [
+            "Join",
+            "Matching Rows",
+            "Non-Matching Rows"
+          ],
           "rows": [
-            ["INNER JOIN", "Yes", "No"],
-            ["LEFT JOIN", "Yes", "Left table only"],
-            ["RIGHT JOIN", "Yes", "Right table only"],
-            ["FULL JOIN", "Yes", "Both tables"],
-            ["CROSS JOIN", "No condition", "All combinations"]
+            [
+              "INNER JOIN",
+              "Yes",
+              "No"
+            ],
+            [
+              "LEFT JOIN",
+              "Yes",
+              "Left table only"
+            ],
+            [
+              "RIGHT JOIN",
+              "Yes",
+              "Right table only"
+            ],
+            [
+              "FULL JOIN",
+              "Yes",
+              "Both tables"
+            ],
+            [
+              "CROSS JOIN",
+              "No condition",
+              "All combinations"
+            ]
           ]
         },
         {
