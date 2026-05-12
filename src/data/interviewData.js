@@ -6069,10 +6069,28 @@ export const interviewData = {
             ["SET TRANSACTION", "Sets transaction properties"],
             ["SET CONSTRAINT", "Controls constraints"]
           ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between ROLLBACK and ROLLBACK TO SAVEPOINT?",
+          "answer": "ROLLBACK undoes all changes in the current transaction, while ROLLBACK TO SAVEPOINT only undoes changes made after a specific checkpoint."
         },
         {
+          "question": "Why is COMMIT essential in database transactions?",
+          "answer": "COMMIT ensures that once a group of operations is successful, the changes are written permanently to the disk and become visible to other users."
+        }
+      ]
+    },
+    {
+      "id": "mysql-tcl-practical",
+      "title": "TCL Practical Example (Bank System)",
+      "category": "Sub Commands",
+      "definition": "A hands-on demonstration of Transaction Control Language (TCL) including banking scenarios, transaction modes, and constraint management.",
+      "sections": [
+        {
           "type": "text",
-          "value": "TCL Commands Example Using Bank Accounts Table\n\nStep 1 — Create Table:\nCREATE TABLE accounts (\n    acc_no INT PRIMARY KEY,\n    name VARCHAR(50),\n    balance INT\n);\n\nStep 2 — Insert Data:\nINSERT INTO accounts VALUES (101, 'Ravi', 10000), (102, 'Sita', 15000);\n\n------------------------------------------------"
+          "value": "TCL Commands Example Using Bank Accounts Table\n\nStep 1 — Create Table\nCREATE TABLE accounts (\n    acc_no INT PRIMARY KEY,\n    name VARCHAR(50),\n    balance INT\n);\n\nStep 2 — Insert Data\nINSERT INTO accounts VALUES\n(101, 'Ravi', 10000),\n(102, 'Sita', 15000);\n\n------------------------------------------------"
         },
         {
           "type": "text",
@@ -6088,7 +6106,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "Example Using COMMIT, SAVEPOINT, and ROLLBACK\nScenario: Ravi transfers money to Sita.\n\nStep 3 — Start Transaction:\nSTART TRANSACTION;\n\nStep 4 — Deduct Money from Ravi:\nUPDATE accounts SET balance = balance - 5000 WHERE acc_no = 101;\n\n------------------------------------------------"
+          "value": "Example Using COMMIT, SAVEPOINT, and ROLLBACK\n\nScenario: Ravi transfers money to Sita.\n\nStep 3 — Start Transaction\nSTART TRANSACTION;\n\nStep 4 — Deduct Money from Ravi\nUPDATE accounts SET balance = balance - 5000 WHERE acc_no = 101;\n\n------------------------------------------------"
         },
         {
           "type": "text",
@@ -6104,7 +6122,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "Step 5 — Create SAVEPOINT:\nSAVEPOINT transfer_point;\nMeaning: If something goes wrong later, we can rollback to this point.\n\nStep 6 — Add Money to Sita:\nUPDATE accounts SET balance = balance + 5000 WHERE acc_no = 102;\n\n------------------------------------------------"
+          "value": "Step 5 — Create SAVEPOINT\nSAVEPOINT transfer_point;\n\nMeaning: If something goes wrong later, we can rollback to this point.\n\nStep 6 — Add Money to Sita\nUPDATE accounts SET balance = balance + 5000 WHERE acc_no = 102;\n\n------------------------------------------------"
         },
         {
           "type": "text",
@@ -6120,7 +6138,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "Step 7 — Suppose Error Happens:\nNow we decide to cancel the second update.\n\nROLLBACK TO SAVEPOINT:\nROLLBACK TO transfer_point;\n\n------------------------------------------------"
+          "value": "Step 7 — Suppose Error Happens\n\nNow we decide to cancel the second update.\n\nROLLBACK TO SAVEPOINT:\nROLLBACK TO transfer_point;\n\n------------------------------------------------"
         },
         {
           "type": "text",
@@ -6136,7 +6154,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "Explanation:\n• Deduction from Ravi remains\n• Addition to Sita is undone\n\nStep 8 — COMMIT Changes:\nCOMMIT;\n\n------------------------------------------------"
+          "value": "Explanation:\n• Deduction from Ravi remains\n• Addition to Sita is undone\n\nStep 8 — COMMIT Changes\nCOMMIT;\n\n------------------------------------------------"
         },
         {
           "type": "text",
@@ -6152,7 +6170,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "Full TCL Flow Summary:\n\nSTART TRANSACTION;\nUPDATE accounts SET balance = balance - 5000 WHERE acc_no = 101;\nSAVEPOINT transfer_point;\nUPDATE accounts SET balance = balance + 5000 WHERE acc_no = 102;\nROLLBACK TO transfer_point;\nCOMMIT;\n\n------------------------------------------------"
+          "value": "Full TCL Flow:\n\nSTART TRANSACTION;\nUPDATE accounts SET balance = balance - 5000 WHERE acc_no = 101;\nSAVEPOINT transfer_point;\nUPDATE accounts SET balance = balance + 5000 WHERE acc_no = 102;\nROLLBACK TO transfer_point;\nCOMMIT;\n\n------------------------------------------------"
         },
         {
           "type": "table",
@@ -6165,7 +6183,11 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "Syntax of SET TRANSACTION:\n\n1. READ ONLY:\nAllows only reading data. INSERT, UPDATE, DELETE are not allowed. Used for reports and analysis.\nExample: SET TRANSACTION READ ONLY; SELECT * FROM employees;\n\n2. READ WRITE:\nAllows both reading and modifying data. INSERT, UPDATE, DELETE operations are allowed.\nExample: SET TRANSACTION READ WRITE; UPDATE employees SET salary = 60000 WHERE emp_id = 101;\n\n------------------------------------------------"
+          "value": "Syntax of SET TRANSACTION\n\n1. READ ONLY\nAllows only reading data. INSERT, UPDATE, DELETE are not allowed. Used for reports and analysis.\n\nExample:\nSET TRANSACTION READ ONLY;\nSELECT * FROM employees;\n\nOutput:\nData can be viewed but cannot be modified.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. READ WRITE\nAllows both reading and modifying data. INSERT, UPDATE, DELETE operations are allowed.\n\nExample:\nSET TRANSACTION READ WRITE;\nUPDATE employees SET salary = 60000 WHERE emp_id = 101;\n\nOutput:\nData is updated successfully.\n\n------------------------------------------------"
         },
         {
           "type": "table",
@@ -6176,46 +6198,46 @@ export const interviewData = {
             ["Update Data", "No", "Yes"],
             ["Delete Data", "No", "Yes"],
             ["Used For", "Reports, Analysis", "Normal Transactions"]
-          ]
+      ]
+    },
+    {
+      "type": "text",
+      "value": "SET CONSTRAINT\nSET CONSTRAINT is used to control when constraints (PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK) are checked during a transaction. They can be checked immediately after each SQL statement or at the end of the transaction (COMMIT).\n\n------------------------------------------------"
         },
         {
           "type": "text",
-          "value": "SET CONSTRAINT Details:\n\nSET CONSTRAINT is used to control when constraints (PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK) are checked during a transaction.\n\n1. IMMEDIATE:\nConstraint is checked immediately after executing each statement. If any rule is violated, error occurs instantly.\nSyntax: SET CONSTRAINT constraint_name IMMEDIATE;\n\n------------------------------------------------"
+          "value": "1. IMMEDIATE\nConstraint is checked immediately after executing each statement. If any rule is violated, an error occurs instantly.\n\nExample Setup:\nCREATE TABLE departments (dept_id INT PRIMARY KEY);\nCREATE TABLE employees (\n    emp_id INT PRIMARY KEY,\n    dept_id INT,\n    CONSTRAINT fk_dept FOREIGN KEY (dept_id) REFERENCES departments(dept_id)\n);\n\nUsing IMMEDIATE:\nSET CONSTRAINT fk_dept IMMEDIATE;\nINSERT INTO employees VALUES (101, 10);\n\nWhat Happens? \nDatabase immediately checks if dept_id 10 exists. Since it doesn't:\nOutput: ERROR: Foreign key constraint violated.\n\n------------------------------------------------"
         },
         {
           "type": "text",
-          "value": "Example Using IMMEDIATE:\n\nSET CONSTRAINT fk_dept IMMEDIATE;\nINSERT INTO employees VALUES (101, 10);\n\nWhat Happens? Database immediately checks if dept_id 10 exists. If not found, output: ERROR: Foreign key constraint violated.\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "2. DEFERRED:\nConstraint checking is postponed until COMMIT. Temporary invalid data is allowed during transaction.\nSyntax: SET CONSTRAINT constraint_name DEFERRED;\n\n------------------------------------------------"
-        },
-        {
-          "type": "text",
-          "value": "Example Using DEFERRED:\n\nStep 1 — Start Transaction: START TRANSACTION;\nStep 2 — Set Constraint Deferred: SET CONSTRAINT fk_dept DEFERRED;\nStep 3 — Insert Employee First: INSERT INTO employees VALUES (101, 10); (No error now)\nStep 4 — Insert Department Later: INSERT INTO departments VALUES (10);\nStep 5 — Commit Transaction: COMMIT; (Transaction succeeds successfully)\n\n------------------------------------------------"
+          "value": "2. DEFERRED\nConstraint checking is postponed until COMMIT. Temporary invalid data is allowed during the transaction.\n\nExample Steps:\nStep 1 — START TRANSACTION;\nStep 2 — SET CONSTRAINT fk_dept DEFERRED;\nStep 3 — INSERT INTO employees VALUES (101, 10); (No error now)\nStep 4 — INSERT INTO departments VALUES (10);\nStep 5 — COMMIT;\n\nOutput:\nTransaction succeeds because by commit time, department 10 exists.\n\n------------------------------------------------"
         },
         {
           "type": "table",
-          "headers": ["IMMEDIATE", "DEFERRED"],
+          "headers": ["Feature", "IMMEDIATE", "DEFERRED"],
           "rows": [
-            ["Checks constraint instantly", "Checks at COMMIT time"],
-            ["Error occurs immediately", "Error occurs later if still invalid"],
-            ["Strict checking", "Flexible temporary changes"]
+            ["Checking Time", "Checks constraint instantly", "Checks at COMMIT time"],
+            ["Error Timing", "Error occurs immediately", "Error occurs later if still invalid"],
+            ["Nature", "Strict checking", "Flexible temporary changes"]
           ]
         },
         {
-          "type": "text",
-          "value": "Real-Time Use Case:\n\nIMMEDIATE:\n• Used when data must always remain valid\n• Banking and Payment systems\n\nDEFERRED:\n• Used when multiple related inserts/updates happen together\n• Parent-child records inserted in different order\n• Bulk data import operations\n\n------------------------------------------------"
+          "type": "table",
+          "headers": ["Mode", "Real-Time Use Case"],
+          "rows": [
+            ["IMMEDIATE", "Banking/Payment systems where data must always be valid"],
+            ["DEFERRED", "Bulk data import, inserting parent-child records in varying order"]
+          ]
         }
       ],
       "questions": [
         {
-          "question": "What is the difference between ROLLBACK and ROLLBACK TO SAVEPOINT?",
-          "answer": "ROLLBACK undoes all changes in the current transaction, while ROLLBACK TO SAVEPOINT only undoes changes made after a specific checkpoint."
+          "question": "What is the primary benefit of using DEFERRED constraints?",
+          "answer": "It allows for temporary inconsistencies within a transaction, which is useful when multiple related tables need to be updated and the intermediate states might violate constraints."
         },
         {
-          "question": "Why is COMMIT essential in database transactions?",
-          "answer": "COMMIT ensures that once a group of operations is successful, the changes are written permanently to the disk and become visible to other users."
+          "question": "When would you use SET TRANSACTION READ ONLY?",
+          "answer": "It is used when you only need to generate reports or perform data analysis and want to prevent any accidental data modification."
         }
       ]
     },
