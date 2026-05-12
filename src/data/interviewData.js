@@ -8185,7 +8185,7 @@ export const interviewData = {
     {
       "id": "sql-filtering-concepts",
       "title": "SQL Filtering Concepts",
-      "category": "Basic",
+      "category": "Queries",
       "definition": "Filtering data means retrieving only the required records from a table using conditions. This module covers the conceptual definitions of various filtering operators.",
       "sections": [
         {
