@@ -5769,6 +5769,68 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-dcl-commands",
+      "title": "DCL (Data Control Language)",
+      "category": "Sub Commands",
+      "definition": "DCL is used to control user permissions and access in a database, allowing administrators to manage who can access and manipulate data.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "DCL (Data Control Language)\nDCL is used to control user permissions and access in a database.\nIt helps the database administrator decide:\n• Who can access the database\n• What operations users can perform\n• Which tables users can use\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Command", "Purpose"],
+          "rows": [
+            ["GRANT", "Gives privileges to users"],
+            ["REVOKE", "Removes privileges from users"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1. GRANT Command\nThe GRANT command is used to give permissions to a user.\n\nSyntax:\nGRANT privileges ON table_name TO user_name;\n\nExample:\nGRANT SELECT, INSERT ON employees TO user1;\n\nExplanation:\n• SELECT → Allows viewing data\n• INSERT → Allows adding records\n• User user1 can now read and insert data into the employees table.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. REVOKE Command\nThe REVOKE command is used to remove permissions from a user.\n\nSyntax:\nREVOKE privileges ON table_name FROM user_name;\n\nExample:\nREVOKE INSERT ON employees FROM user1;\n\nExplanation:\n• Removes the INSERT permission from user1\n• The user can still use SELECT if it was not revoked.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Privilege", "Meaning"],
+          "rows": [
+            ["SELECT", "Read data"],
+            ["INSERT", "Add new records"],
+            ["UPDATE", "Modify records"],
+            ["DELETE", "Remove records"],
+            ["ALL PRIVILEGES", "Gives all permissions"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Example with ALL PRIVILEGES:\n\nGrant All Permissions:\nGRANT ALL PRIVILEGES ON employees TO admin1;\n\nRemove All Permissions:\nREVOKE ALL PRIVILEGES ON employees FROM admin1;\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["GRANT", "REVOKE"],
+          "rows": [
+            ["Gives permissions", "Removes permissions"],
+            ["Allows access", "Denies access"],
+            ["Used to authorize users", "Used to cancel authorization"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the main purpose of DCL in MySQL?",
+          "answer": "DCL is used to manage database security by granting or revoking user permissions and access levels."
+        },
+        {
+          "question": "What is the difference between GRANT and REVOKE?",
+          "answer": "GRANT is used to give specific privileges to users, while REVOKE is used to take those privileges away."
+        }
+      ]
+    },
+    {
       "id": "sql-data-types",
       "title": "Data Types in MySQL",
       "category": "Basic",
