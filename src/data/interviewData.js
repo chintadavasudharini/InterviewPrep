@@ -5950,6 +5950,61 @@ export const interviewData = {
             ["staff_user", "Example database username"]
           ]
         }
+,
+        {
+          "type": "text",
+          "value": "CREATE USER Detailed Breakdown:\n\nCREATE USER 'staff_user'@'localhost' IDENTIFIED BY 'staff123';\nThis command creates a new MySQL user account.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Part", "Meaning"],
+          "rows": [
+            ["CREATE USER", "Command used to create a new user"],
+            ["'staff_user'", "Username"],
+            ["'localhost'", "Host from where user can connect"],
+            ["IDENTIFIED BY", "Sets password for the user"],
+            ["'staff123'", "Password"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Detailed Explanation:\n\n1. CREATE USER\nUsed to create a new MySQL login account.\n\n2. 'staff_user'\nThis is the username (Example: admin, manager, employee1, staff_user). Just like creating Gmail usernames.\n\n3. @'localhost'\nThis specifies from where the user can connect. localhost means the same computer/system where MySQL server is running.\n\n'staff_user'@'localhost' means user staff_user can login only from this machine.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Example", "Meaning"],
+          "rows": [
+            ["'user1'@'localhost'", "Access only from same computer"],
+            ["'user1'@'%'", "Access from any system"],
+            ["'user1'@'192.168.1.10'", "Access only from specific IP"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "4. IDENTIFIED BY\nUsed to assign password to the user.\n\n5. 'staff123'\nPassword for the account. User must enter this password while logging in.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Real Meaning of Entire Command:\nCREATE USER 'staff_user'@'localhost' IDENTIFIED BY 'staff123';\nmeans: Create a MySQL account named staff_user that can connect from the same computer using password staff123.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Real World (Analogy)", "MySQL"],
+          "rows": [
+            ["Employee ID", "Username"],
+            ["Office Location", "Host"],
+            ["Password", "IDENTIFIED BY"],
+            ["Create new employee account", "CREATE USER"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Login Example:\nAfter creating user:\nmysql -u staff_user -p\nThen enter: staff123\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "⚠️ Important Note:\nCreating a user does NOT automatically give permissions. After creating the user, admin must give access using:\nGRANT SELECT ON company_db.employees TO 'staff_user'@'localhost';\nOtherwise, the user cannot access tables.\n\n------------------------------------------------"
+        }
       ],
       "questions": [
         {
