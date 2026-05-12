@@ -6018,6 +6018,71 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-tcl-commands",
+      "title": "TCL (Transaction Control Language)",
+      "category": "Sub Commands",
+      "definition": "TCL commands are used to manage transactions in a database. A transaction is a group of SQL statements executed as a single unit.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "TCL (Transaction Control Language)\nTCL commands are used to manage transactions in a database.\nA transaction is a group of SQL statements executed as a single unit.\n\nExamples of Transactions:\n• Money transfer from one account to another\n• Online ticket booking\n• ATM withdrawal\n\nLogic:\n• If all operations are successful → Save changes (COMMIT)\n• If any operation fails → Undo changes (ROLLBACK)\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "1. COMMIT\nCOMMIT is used to save all changes permanently in the database.\n\nSyntax:\nCOMMIT;\n\nExample:\nUPDATE employees SET salary = 50000 WHERE emp_id = 101;\nCOMMIT;\n\nOutput:\nChanges are saved permanently.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. SAVEPOINT\nSAVEPOINT creates a temporary checkpoint inside a transaction. It helps to rollback to a specific point instead of undoing the entire transaction.\n\nSyntax:\nSAVEPOINT savepoint_name;\n\nExample:\nUPDATE accounts SET balance = balance - 1000 WHERE acc_no = 1;\nSAVEPOINT sp1;\nUPDATE accounts SET balance = balance + 1000 WHERE acc_no = 2;\n\nOutput:\nA rollback point named sp1 is created.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. ROLLBACK\nROLLBACK is used to undo changes made in a transaction.\n\nSyntax:\nROLLBACK;\n\nRollback to Savepoint:\nROLLBACK TO savepoint_name;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Example 1 — Full Rollback:\nDELETE FROM students WHERE id = 5;\nROLLBACK;\n\nOutput:\nDeleted record is restored.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Example 2 — Rollback to Savepoint:\nUPDATE products SET price = 2000 WHERE id = 1;\nSAVEPOINT sp1;\nUPDATE products SET price = 3000 WHERE id = 2;\nROLLBACK TO sp1;\n\nOutput:\n• Changes before sp1 remain\n• Changes after sp1 are undone\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Example 3 — Rollback to Commit (Bank Transaction):\nSTART TRANSACTION;\nUPDATE accounts SET balance = balance - 5000 WHERE acc_no = 101;\nUPDATE accounts SET balance = balance + 5000 WHERE acc_no = 102;\nCOMMIT;\n\nOutput:\n₹5000 transferred successfully and changes saved permanently.\n\nIf any error occurs:\nROLLBACK;\n\nOutput:\nAll changes are undone.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. SET TRANSACTION\nSET TRANSACTION is used to set transaction properties.\n\nCommon Uses:\n• Read only transaction\n• Read write transaction\n• Isolation level settings\n\nSyntax:\nSET TRANSACTION READ ONLY;\nOR\nSET TRANSACTION READ WRITE;\n\nNote: READ ONLY allows only reading data, not modifying.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "5. SET CONSTRAINT\nSET CONSTRAINT controls constraint checking behavior during a transaction.\n\nSyntax:\nSET CONSTRAINT constraint_name DEFERRED;\nOR\nSET CONSTRAINT constraint_name IMMEDIATE;\n\nNote: DEFERRED postpones checking until transaction completion.\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Command", "Purpose"],
+          "rows": [
+            ["COMMIT", "Saves changes permanently"],
+            ["SAVEPOINT", "Creates rollback point"],
+            ["ROLLBACK", "Undoes changes"],
+            ["SET TRANSACTION", "Sets transaction properties"],
+            ["SET CONSTRAINT", "Controls constraints"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between ROLLBACK and ROLLBACK TO SAVEPOINT?",
+          "answer": "ROLLBACK undoes all changes in the current transaction, while ROLLBACK TO SAVEPOINT only undoes changes made after a specific checkpoint."
+        },
+        {
+          "question": "Why is COMMIT essential in database transactions?",
+          "answer": "COMMIT ensures that once a group of operations is successful, the changes are written permanently to the disk and become visible to other users."
+        }
+      ]
+    },
+    {
       "id": "sql-data-types",
       "title": "Data Types in MySQL",
       "category": "Basic",
