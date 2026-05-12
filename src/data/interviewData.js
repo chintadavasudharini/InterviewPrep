@@ -9083,6 +9083,246 @@ export const interviewData = {
           "answer": "Zero is considered an even number because 0 divided by 2 leaves a remainder of 0."
         }
       ]
+    },
+    {
+      "id": "largest-of-three",
+      "title": "Largest of Three Numbers",
+      "category": "Basic Algorithms",
+      "definition": "Determining the largest of three numbers involves comparing the values to identify the one with the highest numerical magnitude.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Find Largest of Three:\n\n1. Using Conditional Statements (If-Elif-Else):\n• Check if 'a' is greater than both 'b' and 'c'.\n• If not, check if 'b' is greater than 'c'.\n• If both fail, 'c' is the largest.\n\n2. Using Built-in max() Function:\n• Use the max(a, b, c) function, which internally compares all arguments and returns the highest value."
+        },
+        {
+          "type": "code",
+          "value": "# Method 1: Using If-Elif-Else\na = 10\nb = 50\nc = 30\nif a > b and a > c:\n    print(a)\nelif b > c:\n    print(b)\nelse:\n    print(c)\n\n# Method 2: Using Built-in max()\ndef find_largest(a, b, c):\n    return max(a, b, c)\nprint(\"Largest:\", find_largest(10, 50, 30))"
+        },
+        {
+          "type": "output",
+          "value": "50"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why is 'elif' used instead of a second 'if' in the comparison logic?",
+          "answer": "Using 'elif' makes the code more efficient because once a condition is met, the subsequent conditions are not checked, saving processing time."
+        },
+        {
+          "question": "Can max() take more than three arguments?",
+          "answer": "Yes, max() can take any number of arguments or even an iterable like a list, and it will return the largest element."
+        }
+      ]
+    },
+    {
+      "id": "sum-natural-numbers",
+      "title": "Sum of Natural Numbers",
+      "category": "Basic Algorithms",
+      "definition": "The sum of natural numbers is the cumulative total of all positive integers from 1 up to a specified value 'n'.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Calculate Sum of Natural Numbers:\n\n1. Using Loops (Iterative):\n• Initialize sum to 0.\n• Loop from 1 to n.\n• Add each number to the sum.\n\n2. Using Mathematical Formula (O(1)):\n• Use the formula: Sum = n * (n + 1) / 2.\n• This method is significantly faster as it calculates the result directly without looping."
+        },
+        {
+          "type": "code",
+          "value": "# Method 1: Using While Loop\ndef natural_sum_loop(n):\n    sum = 0\n    i = 1\n    while i <= n:\n        sum = sum + i\n        i += 1\n    return sum\n\n# Method 2: Using For Loop\nn = 5\nsum = 0\nfor i in range(1, n + 1):\n    sum += i\n\n# Method 3: Using Formula\ndef natural_sum_formula(n):\n    return n * (n + 1) // 2"
+        },
+        {
+          "type": "output",
+          "value": "15"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the time complexity of the formula-based method?",
+          "answer": "O(1), because it performs a fixed number of operations regardless of how large 'n' is."
+        },
+        {
+          "question": "Why is integer division (//) used in the formula in Python?",
+          "answer": "Using // ensures that the result is returned as an integer. Since the product of n and (n+1) is always even, the division by 2 will always be exact."
+        }
+      ]
+    },
+    {
+      "id": "positive-negative-check",
+      "title": "Positive, Negative, or Zero Check",
+      "category": "Basic Algorithms",
+      "definition": "Determining the state of a number involves comparing it against zero to categorize it as positive, negative, or zero.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Check Number State:\n1. Use an 'if' statement to check if the number is greater than 0.\n2. Use an 'elif' statement to check if the number is less than 0.\n3. Use an 'else' statement to handle the case where the number is exactly 0."
+        },
+        {
+          "type": "code",
+          "value": "def check_number(n):\n    if n > 0:\n        return \"Positive\"\n    elif n < 0:\n        return \"Negative\"\n    else:\n        return \"Zero\"\n\n# Example Usage\nn = -5\nprint(f\"{n} is {check_number(n)}\")"
+        },
+        {
+          "type": "output",
+          "value": "-5 is Negative"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the importance of zero in this check?",
+          "answer": "Zero acts as the origin point; every other real number is either greater than zero or less than zero."
+        },
+        {
+          "question": "Can this be solved using a ternary operator?",
+          "answer": "Yes, but it would be nested: 'Positive' if n > 0 else ('Negative' if n < 0 else 'Zero')."
+        }
+      ]
+    },
+    {
+      "id": "count-even-odd-digits",
+      "title": "Count Even and Odd Digits",
+      "category": "Basic Algorithms",
+      "definition": "This algorithm iterates through each digit of a number and determines whether it is even or odd, maintaining a count for both categories.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Count Even/Odd Digits:\n1. Extract the last digit of the number using modulo (n % 10).\n2. Check if the extracted digit is divisible by 2 (digit % 2 == 0).\n3. Increment the 'even' counter if divisible; otherwise, increment the 'odd' counter.\n4. Use integer division (n // 10) to remove the last digit.\n5. Repeat the process until all digits are processed (n > 0)."
+        },
+        {
+          "type": "code",
+          "value": "def count_even_odd(n):\n    even = 0\n    odd = 0\n    while n > 0:\n        digit = n % 10\n        if digit % 2 == 0:\n            even += 1\n        else:\n            odd += 1\n        n = n // 10\n    print(\"Even Count:\", even)\n    print(\"Odd Count:\", odd)\n\n# Example Usage\ncount_even_odd(12345)"
+        },
+        {
+          "type": "output",
+          "value": "Even Count: 2\nOdd Count: 3"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Does zero count as an even digit in this logic?",
+          "answer": "Yes, zero is treated as an even digit because 0 % 2 equals 0."
+        },
+        {
+          "question": "Could this be implemented by converting the number to a string?",
+          "answer": "Yes, you could iterate through the string characters, convert each back to an integer, and perform the parity check."
+        }
+      ]
+    },
+    {
+      "id": "simple-calculator",
+      "title": "Simple Calculator",
+      "category": "Basic Algorithms",
+      "definition": "A simple calculator implementation using conditional statements to perform basic mathematical operations like addition, subtraction, multiplication, and division.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic for Simple Calculator:\n1. Accept two numerical inputs (a and b).\n2. Accept an operator string (+, -, *, /).\n3. Use if-elif-else blocks to determine which mathematical operation to execute based on the operator.\n4. Return the calculated result or a warning for invalid operators."
+        },
+        {
+          "type": "code",
+          "value": "def calculator(a, b, op):\n    if op == \"+\":\n        return a + b\n    elif op == \"-\":\n        return a - b\n    elif op == \"*\":\n        return a * b\n    elif op == \"/\":\n        return a / b\n    else:\n        return \"Invalid Operator\"\n\n# Example Usage\nprint(\"Result:\", calculator(10, 5, \"*\"))"
+        },
+        {
+          "type": "output",
+          "value": "Result: 50"
+        }
+      ],
+      "questions": [
+        {
+          "question": "How should you handle division by zero in this program?",
+          "answer": "You should add an additional check inside the 'elif op == \"/\"' block to see if 'b == 0'. If it is, return an error message like 'Cannot divide by zero' to prevent the program from crashing."
+        },
+        {
+          "question": "Can this be implemented using a dictionary instead of if-elif?",
+          "answer": "Yes, you can use a dictionary to map operator strings to functions or lambda expressions for a more modular and cleaner implementation."
+        }
+      ]
+    },
+    {
+      "id": "perfect-number",
+      "title": "Perfect Number",
+      "category": "Basic Algorithms",
+      "definition": "A perfect number is a positive integer that equals the sum of its proper divisors (excluding the number itself). For example, 6 has divisors 1, 2, and 3, and 1+2+3 = 6.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Check Perfect Number:\n1. Initialize a variable 'sum' to 0.\n2. Loop through all integers from 1 up to (but not including) the number 'n'.\n3. Check if the current integer 'i' is a divisor of 'n' (n % i == 0).\n4. If it is a divisor, add it to 'sum'.\n5. After the loop, compare the final 'sum' with the original number 'n'.\n6. If they are equal, it's a Perfect Number."
+        },
+        {
+          "type": "code",
+          "value": "# Using While Loop\nn = 28\nsum = 0\ni = 1\nwhile i < n:\n    if n % i == 0:\n        sum = sum + i\n    i += 1\nif sum == n:\n    print(\"Perfect Number\")\nelse:\n    print(\"Not Perfect\")\n\n# Using For Loop\nn = 6\nsum = 0\nfor i in range(1, n):\n    if n % i == 0:\n        sum += i\nif sum == n:\n    print(\"Perfect Number\")\nelse:\n    print(\"Not Perfect\")"
+        },
+        {
+          "type": "output",
+          "value": "Perfect Number"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What are some examples of perfect numbers?",
+          "answer": "The first few perfect numbers are 6, 28, 496, and 8128."
+        },
+        {
+          "question": "What is the time complexity of this perfect number check?",
+          "answer": "O(n), as we iterate through every number from 1 to n-1. It can be optimized to O(sqrt(n)) by iterating only up to the square root of n."
+        }
+      ]
+    },
+    {
+      "id": "strong-number",
+      "title": "Strong Number",
+      "category": "Basic Algorithms",
+      "definition": "A strong number is a special number whose sum of factorials of its digits is equal to the original number (e.g., 145 -> 1! + 4! + 5! = 1 + 24 + 120 = 145).",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Check Strong Number:\n1. Store the original number in a temporary variable (temp).\n2. Extract each digit from the number using modulo (n % 10).\n3. Calculate the factorial of each extracted digit.\n4. Add the factorial value to a running 'sum' variable.\n5. Remove the last digit using integer division (n // 10) and repeat.\n6. Finally, if 'sum' equals 'temp', it is a Strong Number."
+        },
+        {
+          "type": "code",
+          "value": "# Method 1: Using While Loops\ndef check_strong(n):\n    temp = n\n    sum = 0\n    while n > 0:\n        digit = n % 10\n        fact = 1\n        i = 1\n        while i <= digit:\n            fact *= i\n            i += 1\n        sum += fact\n        n //= 10\n    return \"Strong Number\" if sum == temp else \"Not Strong\"\n\n# Method 2: Using For Loop for Factorial\nn = 145\ntemp, sum = n, 0\nwhile n > 0:\n    digit = n % 10\n    fact = 1\n    for i in range(1, digit + 1):\n        fact *= i\n    sum += fact\n    n //= 10\nprint(\"Strong Number\" if sum == temp else \"Not Strong\")"
+        },
+        {
+          "type": "output",
+          "value": "Strong Number"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Give examples of Strong Numbers.",
+          "answer": "Common examples include 1, 2, 145, and 40585."
+        },
+        {
+          "question": "How can you optimize the factorial calculation in this algorithm?",
+          "answer": "Since there are only 10 possible digits (0-9), you can pre-calculate their factorials and store them in a list or dictionary to avoid redundant calculations."
+        }
+      ]
+    },
+    {
+      "id": "multiplication-table",
+      "title": "Multiplication Table",
+      "category": "Basic Algorithms",
+      "definition": "Generating a multiplication table involves iterating through a range of numbers and multiplying them by a base value to display the products in a structured format.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Generate Multiplication Table:\n1. Accept a base number (n).\n2. Iterate through a range of integers from 1 up to 10 (or a custom limit).\n3. In each iteration, multiply the base number by the current iterator (n * i).\n4. Format the output to show the relationship: 'n x i = product'."
+        },
+        {
+          "type": "code",
+          "value": "# Method 1: Using For Loop\ndef print_table(num):\n    for i in range(1, 11):\n        print(f\"{num} x {i} = {num * i}\")\n\n# Method 2: Using While Loop\nn = 5\ni = 1\nwhile i <= 10:\n    print(f\"{n} x {i} = {n * i}\")\n    i += 1"
+        },
+        {
+          "type": "output",
+          "value": "5 x 1 = 5\n5 x 2 = 10\n...\n5 x 10 = 50"
+        }
+      ],
+      "questions": [
+        {
+          "question": "How can you customize the range of the multiplication table?",
+          "answer": "You can change the range(1, 11) function to range(1, limit + 1) where 'limit' is the desired ending number for your table."
+        },
+        {
+          "question": "Why is range(1, 11) used to go from 1 to 10?",
+          "answer": "In Python, the range(start, stop) function is inclusive of the start but exclusive of the stop value. Thus, to include 10, we must specify 11 as the stop value."
+        }
+      ]
     }
   ],
   "ml": [
