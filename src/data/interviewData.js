@@ -5831,6 +5831,138 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-dcl-practical",
+      "title": "DCL Practical Example (Two Tables)",
+      "category": "Sub Commands",
+      "definition": "A hands-on demonstration of DCL commands (GRANT and REVOKE) using a two-table database system with specific user permissions.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "DCL (Data Control Language) with Two Tables Example\n\nSuppose we have:\n• departments table\n• employees table\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Step 1: Create Database\n\nCREATE DATABASE company_db;\nUSE company_db;\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Step 2: Create First Table — departments\n\nCREATE TABLE departments (\n    dept_id INT PRIMARY KEY,\n    dept_name VARCHAR(50) NOT NULL\n);\n\nInsert Data:\nINSERT INTO departments VALUES\n(101, 'HR'),\n(102, 'IT'),\n(103, 'Finance');\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Step 3: Create Second Table — employees\n\nCREATE TABLE employees (\n    emp_id INT PRIMARY KEY,\n    emp_name VARCHAR(50) NOT NULL,\n    salary DECIMAL(10,2),\n    dept_id INT,\n    FOREIGN KEY (dept_id) REFERENCES departments(dept_id)\n);\n\nInsert Data:\nINSERT INTO employees VALUES\n(1, 'Ravi', 45000, 101),\n(2, 'Priya', 60000, 102),\n(3, 'Arjun', 55000, 103);\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Table Data Representation:\n\ndepartments Table:"
+        },
+        {
+          "type": "table",
+          "headers": ["dept_id", "dept_name"],
+          "rows": [
+            ["101", "HR"],
+            ["102", "IT"],
+            ["103", "Finance"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "employees Table:"
+        },
+        {
+          "type": "table",
+          "headers": ["emp_id", "emp_name", "salary", "dept_id"],
+          "rows": [
+            ["1", "Ravi", "45000", "101"],
+            ["2", "Priya", "60000", "102"],
+            ["3", "Arjun", "55000", "103"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "DCL Commands Application:\n\n1. GRANT Command\n\nSuppose we created a user named staff_user.\nWe want:\n• User can view data from both tables\n• User can insert records only into employees\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Grant SELECT Permission on departments:\n\nGRANT SELECT ON departments TO staff_user;\n\nMeaning:\n• staff_user can view department details\n• Cannot modify data\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Grant SELECT and INSERT on employees:\n\nGRANT SELECT, INSERT ON employees TO staff_user;\n\nMeaning:\n• staff_user can view employee records\n• Add new employees\n• Cannot delete or update records\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Example Operations by staff_user:\n\n✅ Allowed (View departments):\nSELECT * FROM departments;\n\n✅ Allowed (Add Employee):\nINSERT INTO employees VALUES (4, 'Kiran', 50000, 102);\n\n❌ Not Allowed (Delete Employee):\nDELETE FROM employees WHERE emp_id = 1;\n\nError: DELETE permission was not granted.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. REVOKE Command\n\nNow admin wants to remove INSERT permission from staff_user.\n\nREVOKE INSERT ON employees FROM staff_user;\n\nAfter REVOKE:\n\n✅ Allowed:\nSELECT * FROM employees; (User can still view records)\n\n❌ Not Allowed:\nINSERT INTO employees VALUES (5, 'Sneha', 48000, 101);\n\nError: INSERT permission was removed.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Grant/Remove All Permissions Example:\n\nGrant All Permissions:\nGRANT ALL PRIVILEGES ON employees TO admin_user;\n\nRemove All Permissions:\nREVOKE ALL PRIVILEGES ON employees FROM admin_user;\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Command", "Purpose"],
+          "rows": [
+            ["GRANT", "Gives permissions"],
+            ["REVOKE", "Removes permissions"]
+          ]
+        },
+        {
+          "type": "table",
+          "headers": ["Permission", "Meaning"],
+          "rows": [
+            ["SELECT", "Read data"],
+            ["INSERT", "Add data"],
+            ["UPDATE", "Modify data"],
+            ["DELETE", "Remove data"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "About staff_user:\nstaff_user is a database user. Before using GRANT or REVOKE, we must first create the user.\n\nCreate User Example:\nCREATE USER 'staff_user'@'localhost' IDENTIFIED BY 'staff123';\n\nExplanation:\n• staff_user → Username\n• localhost → User can login only from same system\n• staff123 → Password\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Complete DCL Flow:\n\nStep 1: Create User\nCREATE USER 'staff_user'@'localhost' IDENTIFIED BY 'staff123';\n\nStep 2: Grant Permissions\nGRANT SELECT ON company_db.departments TO 'staff_user'@'localhost';\nGRANT SELECT, INSERT ON company_db.employees TO 'staff_user'@'localhost';\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "What staff_user Can Do:\n\n✅ Allowed (View Departments):\nSELECT * FROM departments;\n\n✅ Allowed (Add Employee):\nINSERT INTO employees VALUES (4, 'Kiran', 50000, 102);\n\n❌ Not Allowed (Delete Employee):\nDELETE FROM employees WHERE emp_id = 1;\n\nError: DELETE permission is not given.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "REVOKE Example:\n\nRemove INSERT permission:\nREVOKE INSERT ON company_db.employees FROM 'staff_user'@'localhost';\n\nNow staff_user can only view employee data.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "View Existing Users:\nSELECT user, host FROM mysql.user;\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": ["Term", "Meaning"],
+          "rows": [
+            ["User", "Database account"],
+            ["GRANT", "Give permissions"],
+            ["REVOKE", "Remove permissions"],
+            ["staff_user", "Example database username"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Can a user perform SELECT operations after their INSERT permission is revoked?",
+          "answer": "Yes, as long as the SELECT permission was granted separately and not revoked."
+        },
+        {
+          "question": "What is the result of attempting a DELETE operation without the DELETE privilege?",
+          "answer": "MySQL will return an error stating that the user does not have the necessary permission to execute the command."
+        }
+      ]
+    },
+    {
       "id": "sql-data-types",
       "title": "Data Types in MySQL",
       "category": "Basic",
