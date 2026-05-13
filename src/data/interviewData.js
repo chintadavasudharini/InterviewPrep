@@ -3223,182 +3223,2419 @@ export const interviewData = {
       ]
     },
     {
-      "id": "python-lists",
-      "title": "Lists",
+      "id": "python-collections",
+      "title": "Python Collections (List, Tuple, Set, Dictionary)",
       "category": "Basic",
-      "definition": "Lists are used to store multiple items in a single variable. They are ordered, changeable (mutable), and allow duplicate values.",
+      "definition": "Python has 4 built-in data types used to store collections of data: List, Tuple, Set, and Dictionary.",
       "sections": [
         {
           "type": "text",
-          "value": "1. Creating and Accessing Lists\nLists are defined using square brackets [ ]. Items are indexed starting from 0."
-        },
-        {
-          "type": "code",
-          "value": "fruits = [\"apple\", \"banana\", \"cherry\"]\nprint(fruits)\nprint(fruits[1]) # Accessing second item"
-        },
-        {
-          "type": "output",
-          "value": "['apple', 'banana', 'cherry']\nbanana"
+          "value": "Python has 4 built-in data types used to store collections of data:\n\n1. List []\nA list is:\n• Ordered\n• Changeable (mutable)\n• Allows duplicates"
         },
         {
           "type": "text",
-          "value": "2. Modifying Lists\nLists are mutable, meaning you can change, add, and remove items after the list has been created."
+          "value": "Example"
         },
         {
           "type": "code",
-          "value": "fruits = [\"apple\", \"banana\"]\nfruits.append(\"orange\") # Adding\nfruits[0] = \"kiwi\" # Modifying\nprint(fruits)"
+          "value": "fruits = [\"apple\", \"banana\", \"mango\"]\n\nprint(fruits)"
         },
         {
           "type": "output",
-          "value": "['kiwi', 'banana', 'orange']"
+          "value": "['apple', 'banana', 'mango']"
         },
         {
           "type": "text",
-          "value": "Quick Revision:\n• Syntax: [ ]\n• Mutable: Can be changed\n• Ordered: Maintains sequence\n• Duplicates: Allowed"
+          "value": "2. Tuple ()\nA tuple is:\n• Ordered\n• Unchangeable (immutable)\n• Allows duplicates"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "colors = (\"red\", \"green\", \"blue\")\n\nprint(colors)"
+        },
+        {
+          "type": "output",
+          "value": "('red', 'green', 'blue')"
+        },
+        {
+          "type": "text",
+          "value": "3. Set {}\nA set is:\n• Unordered\n• No duplicates\n• Changeable"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "numbers = {1, 2, 3, 4, 4, 5}\n\nprint(numbers)"
+        },
+        {
+          "type": "output",
+          "value": "{1, 2, 3, 4, 5}\n\n(duplicate 4 removed automatically)"
+        },
+        {
+          "type": "text",
+          "value": "4. Dictionary {key:value}\nA dictionary stores data in:\n• Key : Value pairs\n• Ordered (Python 3.7+)\n• Changeable\n• No duplicate keys"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "student = {\n    \"name\": \"Rani\",\n    \"age\": 22,\n    \"course\": \"Python\"\n}\n\nprint(student)"
+        },
+        {
+          "type": "output",
+          "value": "{'name': 'Rani', 'age': 22, 'course': 'Python'}"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between List, Tuple, Set, Dictionary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "List",
+            "Tuple",
+            "Set",
+            "Dictionary"
+          ],
+          "rows": [
+            [
+              "Symbol",
+              "[]",
+              "()",
+              "{}",
+              "{key:value}"
+            ],
+            [
+              "Ordered",
+              "Yes",
+              "Yes",
+              "No",
+              "Yes"
+            ],
+            [
+              "Mutable",
+              "Yes",
+              "No",
+              "Yes",
+              "Yes"
+            ],
+            [
+              "Duplicates",
+              "Yes",
+              "Yes",
+              "No",
+              "Keys No"
+            ],
+            [
+              "Indexing",
+              "Yes",
+              "Yes",
+              "No",
+              "By Key"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Simple Example Using All Collections"
+        },
+        {
+          "type": "code",
+          "value": "# List\na = [1, 2, 3]\n\n# Tuple\nb = (4, 5, 6)\n\n# Set\nc = {7, 8, 9}\n\n# Dictionary\nd = {\"name\": \"Ram\", \"age\": 25}\n\nprint(a)\nprint(b)\nprint(c)\nprint(d)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3]\n(4, 5, 6)\n{8, 9, 7}\n{'name': 'Ram', 'age': 25}"
         }
       ],
       "questions": [
         {
-          "question": "What does it mean that a list is 'mutable'?",
-          "answer": "It means the items in the list can be changed, added, or removed after the list is created."
+          "question": "What are the four main built-in collection data types in Python?",
+          "answer": "List, Tuple, Set, and Dictionary."
         },
         {
-          "question": "How do you add an item to the end of a list?",
-          "answer": "Using the append() method, for example: list.append(item)."
+          "question": "Which Python collection is unordered and does not allow duplicate members?",
+          "answer": "A Set."
+        },
+        {
+          "question": "What is the main difference between a List and a Tuple?",
+          "answer": "Lists are mutable (can be changed), while Tuples are immutable (cannot be changed)."
         }
       ]
     },
     {
-      "id": "python-tuples",
-      "title": "Tuples",
+      "id": "python-list-details",
+      "title": "Python - List",
       "category": "Basic",
-      "definition": "Tuples are used to store multiple items in a single variable. They are ordered and immutable (unchangeable).",
+      "definition": "Lists are used to store multiple items in a single variable. Lists are created using square brackets.",
       "sections": [
         {
           "type": "text",
-          "value": "1. Creating Tuples\nTuples are written with round brackets ( )."
+          "value": "List Items\nList items are ordered, changeable, and allow duplicate values.\nList items are indexed, the first item has index [0], the second item has index [1] etc."
+        },
+        {
+          "type": "text",
+          "value": "Ordered\nWhen we say that lists are ordered, it means that the items have a defined order, and that order will not change.\nIf you add new items to a list, the new items will be placed at the end of the list.\nNote: There are some list methods that will change the order, but in general: the order of the items will not change."
+        },
+        {
+          "type": "text",
+          "value": "Changeable\nThe list is changeable, meaning that we can change, add, and remove items in a list after it has been created."
+        },
+        {
+          "type": "text",
+          "value": "Allow Duplicates\nSince lists are indexed, lists can have items with the same value:"
+        },
+        {
+          "type": "text",
+          "value": "List Length"
         },
         {
           "type": "code",
-          "value": "thistuple = (\"apple\", \"banana\", \"cherry\")\nprint(thistuple)"
+          "value": "thislist = [\"apple\", \"banana\", \"cherry\"]\nprint(len(thislist))"
         },
         {
           "type": "output",
-          "value": "('apple', 'banana', 'cherry')"
+          "value": "3"
         },
         {
           "type": "text",
-          "value": "2. Immutability\nOnce a tuple is created, you cannot change its values. Tuples are unchangeable."
+          "value": "List Items - Data Types\nList items can be of any data type\nA list can contain different data types"
+        },
+        {
+          "type": "text",
+          "value": "type()\nFrom Python's perspective, lists are defined as objects with the data type 'list':\n<class 'list'>"
+        },
+        {
+          "type": "text",
+          "value": "The list() Constructor\nThe list() constructor is used to create a list in Python.\nSyntax\nlist(iterable)\niterable can be:\nstring\ntuple\nset\nrange\ndictionary\netc."
+        },
+        {
+          "type": "text",
+          "value": "Create List from Tuple"
         },
         {
           "type": "code",
-          "value": "x = (\"apple\", \"banana\")\n# x[0] = \"kiwi\" # This would cause an error"
+          "value": "t = (1, 2, 3)\na = list(t)\nprint(a)"
         },
         {
-          "type": "text",
-          "value": "Quick Revision:\n• Syntax: ( )\n• Immutable: Cannot be changed\n• Ordered: Maintains sequence\n• Faster: Usually faster than lists"
+          "type": "output",
+          "value": "[1, 2, 3]"
         }
       ],
       "questions": [
         {
-          "question": "Can you change an item in a tuple after it's created?",
-          "answer": "No, tuples are immutable, meaning their elements cannot be changed, added, or removed once defined."
+          "question": "How are lists created in Python?",
+          "answer": "Lists are created using square brackets []."
         },
         {
-          "question": "When should you use a tuple instead of a list?",
-          "answer": "Use a tuple when you have a collection of items that should not change throughout the program, ensuring data integrity."
+          "question": "What does it mean that a list is 'ordered'?",
+          "answer": "It means that the items have a defined order, and that order will not change unless specific methods are used."
+        },
+        {
+          "question": "Can a Python list contain different data types?",
+          "answer": "Yes, a list can contain items of any data type and can even mix different data types."
         }
       ]
     },
     {
-      "id": "python-sets",
-      "title": "Sets",
+      "id": "python-access-list-items",
+      "title": "Python - Access List Items",
       "category": "Basic",
-      "definition": "Sets are used to store multiple items in a single variable. They are unordered, unchangeable, and do not allow duplicate values.",
+      "definition": "List items are indexed and you can access them by referring to the index number.",
       "sections": [
         {
           "type": "text",
-          "value": "1. Creating Sets\nSets are written with curly brackets { }. They do not maintain any specific order."
-        },
-        {
-          "type": "code",
-          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\nprint(thisset)"
-        },
-        {
-          "type": "output",
-          "value": "{'banana', 'cherry', 'apple'}"
+          "value": "Access List Items\nList items are indexed and you can access them by referring to the index number\nNote: The first item has index 0."
         },
         {
           "type": "text",
-          "value": "2. No Duplicates\nSets automatically remove any duplicate items."
-        },
-        {
-          "type": "code",
-          "value": "nums = {1, 2, 2, 3, 3, 3}\nprint(nums)"
-        },
-        {
-          "type": "output",
-          "value": "{1, 2, 3}"
+          "value": "Negative Indexing\nNegative indexing means start from the end\n-1 refers to the last item, -2 refers to the second last item etc."
         },
         {
           "type": "text",
-          "value": "Quick Revision:\n• Syntax: { }\n• Unordered: No index\n• Unique: No duplicates\n• Mutable: Can add/remove items"
+          "value": "Range of Indexes\nYou can specify a range of indexes by specifying where to start and where to end the range.\nWhen specifying a range, the return value will be a new list with the specified items."
+        },
+        {
+          "type": "code",
+          "value": "thislist = [\"apple\", \"banana\", \"cherry\", \"orange\", \"kiwi\", \"melon\", \"mango\"]\nprint(thislist[2:5])\nprint(thislist[:4])\nprint(thislist[2:])"
+        },
+        {
+          "type": "output",
+          "value": "['cherry', 'orange', 'kiwi']\n['apple', 'banana', 'cherry', 'orange']\n['cherry', 'orange', 'kiwi', 'melon', 'mango']"
+        },
+        {
+          "type": "text",
+          "value": "Return the third, fourth, and fifth item\nThe search will start at index 2 (included) and end at index 5 (not included)."
+        },
+        {
+          "type": "text",
+          "value": "Range of Negative Indexes\nSpecify negative indexes if you want to start the search from the end of the list:"
+        },
+        {
+          "type": "code",
+          "value": "thislist = [\"apple\", \"banana\", \"cherry\", \"orange\", \"kiwi\", \"melon\", \"mango\"]\nprint(thislist[-4:-1])"
+        },
+        {
+          "type": "output",
+          "value": "['orange', 'kiwi', 'melon']"
+        },
+        {
+          "type": "text",
+          "value": "returns the items from \"orange\" (-4) to, but NOT including \"mango\" (-1)"
         }
       ],
       "questions": [
         {
-          "question": "How do sets handle duplicate values?",
-          "answer": "Sets automatically ignore duplicate values; only unique items are stored."
+          "question": "What is the index of the first item in a Python list?",
+          "answer": "The first item has index 0."
         },
         {
-          "question": "Can you access set items using an index?",
-          "answer": "No, sets are unordered and unindexed, so you cannot access items by referring to an index."
+          "question": "What does negative indexing -1 refer to?",
+          "answer": "It refers to the last item in the list."
+        },
+        {
+          "question": "How do you specify a range of items from index 2 to 5 (not including 5)?",
+          "answer": "By using the syntax list[2:5]."
         }
       ]
     },
     {
-      "id": "python-dicts",
-      "title": "Dictionaries",
+      "id": "python-change-list-items",
+      "title": "Python – Change List Items",
       "category": "Basic",
-      "definition": "Dictionaries are used to store data values in key:value pairs. They are ordered, changeable, and do not allow duplicate keys.",
+      "definition": "Lists are mutable, which means you can change, update, or replace items after the list is created.",
       "sections": [
         {
           "type": "text",
-          "value": "1. Creating Dictionaries\nDictionaries are written with curly brackets, and have keys and values."
-        },
-        {
-          "type": "code",
-          "value": "car = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\nprint(car[\"brand\"])"
-        },
-        {
-          "type": "output",
-          "value": "Ford"
+          "value": "Change Single Item\nSyntax\nlist_name[index] = new_value"
         },
         {
           "type": "text",
-          "value": "2. Modifying Dictionaries\nYou can change the value of a specific item by referring to its key name."
+          "value": "Example"
         },
         {
           "type": "code",
-          "value": "car[\"year\"] = 2020\ncar[\"color\"] = \"red\" # Adding new key\nprint(car)"
+          "value": "fruits = [\"apple\", \"banana\", \"mango\"]\n\nfruits[1] = \"orange\"\n\nprint(fruits)"
         },
         {
           "type": "output",
-          "value": "{'brand': 'Ford', 'model': 'Mustang', 'year': 2020, 'color': 'red'}"
+          "value": "['apple', 'orange', 'mango']"
         },
         {
           "type": "text",
-          "value": "Quick Revision:\n• Syntax: { key: value }\n• Keys: Must be unique\n• Mutable: Can be changed\n• Access: Via keys, not index"
+          "value": "Change Using Negative Index"
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\", \"mango\"]\n\nfruits[-1] = \"grapes\"\n\nprint(fruits)"
+        },
+        {
+          "type": "output",
+          "value": "['apple', 'banana', 'grapes']"
+        },
+        {
+          "type": "text",
+          "value": "Change Range of Items\nSyntax\nlist[start:end] = [values]"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "nums = [10, 20, 30, 40, 50]\n\nnums[1:3] = [200, 300]\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[10, 200, 300, 40, 50]"
+        },
+        {
+          "type": "text",
+          "value": "Insert More Items Than Replaced"
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 2, 3]\n\nnums[1:2] = [20, 30, 40]\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 20, 30, 40, 3]"
+        },
+        {
+          "type": "text",
+          "value": "Replace Multiple Items with Fewer Items"
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 2, 3, 4, 5]\n\nnums[1:4] = [100]\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 100, 5]"
+        },
+        {
+          "type": "text",
+          "value": "Change All Items"
+        },
+        {
+          "type": "code",
+          "value": "colors = [\"red\", \"blue\", \"green\"]\n\ncolors[:] = [\"black\", \"white\", \"pink\"]\n\nprint(colors)"
+        },
+        {
+          "type": "output",
+          "value": "['black', 'white', 'pink']"
+        },
+        {
+          "type": "text",
+          "value": "Change Nested List Item"
+        },
+        {
+          "type": "code",
+          "value": "data = [[1, 2], [3, 4]]\n\ndata[1][0] = 100\n\nprint(data)"
+        },
+        {
+          "type": "output",
+          "value": "[[1, 2], [100, 4]]"
+        },
+        {
+          "type": "text",
+          "value": "Using Loop to Change Items"
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 2, 3, 4]\n\nfor i in range(len(nums)):\n    nums[i] = nums[i] * 2\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[2, 4, 6, 8]"
+        },
+        {
+          "type": "text",
+          "value": "Important Points\n• Lists are mutable\n• Index starts from 0\n• Negative index starts from -1\n• Slicing excludes ending index\n• Multiple values can be replaced at once"
         }
       ],
       "questions": [
         {
-          "question": "What happens if you try to add a duplicate key to a dictionary?",
-          "answer": "Dictionaries cannot have two items with the same key. If you assign a new value to an existing key, it will overwrite the old value."
+          "question": "What does it mean that a list is mutable?",
+          "answer": "It means you can change, update, or replace items after the list has been created."
         },
         {
-          "question": "How do you access a value in a dictionary?",
-          "answer": "By referring to its key name inside square brackets, e.g., dict['key'], or using the get() method."
+          "question": "How can you change a range of items in a list?",
+          "answer": "By using slicing: list[start:end] = [new_values]."
+        },
+        {
+          "question": "How do you update a nested list item?",
+          "answer": "By using multiple indices, e.g., list[outer_index][inner_index] = new_value."
+        }
+      ]
+    },
+    {
+      "id": "python-add-list-items",
+      "title": "Python – Add List Items",
+      "category": "Basic",
+      "definition": "You can add items to a list using different methods such as append(), insert(), and extend().",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Methods to Add Items"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "append()",
+              "Add one item at end"
+            ],
+            [
+              "insert()",
+              "Add item at specific position"
+            ],
+            [
+              "extend()",
+              "Add multiple items"
+            ],
+            [
+              "+ operator",
+              "Join lists"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1. append()\n\nAdds one item at the end of the list.\n\nSyntax\nlist_name.append(value)"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\"]\n\nfruits.append(\"mango\")\n\nprint(fruits)"
+        },
+        {
+          "type": "output",
+          "value": "['apple', 'banana', 'mango']"
+        },
+        {
+          "type": "text",
+          "value": "Add Number"
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 2, 3]\n\nnums.append(4)\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3, 4]"
+        },
+        {
+          "type": "text",
+          "value": "2. insert()\n\nAdds item at a specific index position.\n\nSyntax\nlist_name.insert(index, value)"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"mango\"]\n\nfruits.insert(1, \"banana\")\n\nprint(fruits)"
+        },
+        {
+          "type": "output",
+          "value": "['apple', 'banana', 'mango']"
+        },
+        {
+          "type": "text",
+          "value": "Insert at Beginning"
+        },
+        {
+          "type": "code",
+          "value": "nums = [20, 30]\n\nnums.insert(0, 10)\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[10, 20, 30]"
+        },
+        {
+          "type": "text",
+          "value": "3. extend()\n\nAdds multiple items to the list.\n\nSyntax\nlist1.extend(list2)"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "a = [1, 2]\nb = [3, 4]\n\na.extend(b)\n\nprint(a)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3, 4]"
+        },
+        {
+          "type": "text",
+          "value": "Add Tuple Using extend()"
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 2]\n\nnums.extend((3, 4))\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3, 4]"
+        },
+        {
+          "type": "text",
+          "value": "4. Using + Operator"
+        },
+        {
+          "type": "code",
+          "value": "a = [1, 2]\nb = [3, 4]\n\nc = a + b\n\nprint(c)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3, 4]"
+        },
+        {
+          "type": "text",
+          "value": "Add List Inside List"
+        },
+        {
+          "type": "code",
+          "value": "a = [1, 2]\n\na.append([3, 4])\n\nprint(a)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, [3, 4]]"
+        },
+        {
+          "type": "text",
+          "value": "append() adds the entire list as a single element.\n\nDifference Between append() and extend()"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "append()",
+            "extend()"
+          ],
+          "rows": [
+            [
+              "Adds one item",
+              "Adds multiple items"
+            ],
+            [
+              "List becomes nested if list added",
+              "Adds elements individually"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "a = [1, 2]\nb = [3, 4]\n\na.append(b)\n\nprint(a)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, [3, 4]]"
+        },
+        {
+          "type": "code",
+          "value": "a = [1, 2]\nb = [3, 4]\n\na.extend(b)\n\nprint(a)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3, 4]"
+        },
+        {
+          "type": "text",
+          "value": "Add Multiple Items After a Specific Index in Python List\n\nYou can add multiple items after a specific index using slicing \n\nUsing Slicing \nSyntax\nlist[index+1:index+1] = [items]"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 2, 5, 6]\nnums[2:2] = [3, 4]\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3, 4, 5, 6]"
+        },
+        {
+          "type": "text",
+          "value": "Explanation\n• nums[2:2] → Insert at index 2\n• [3,4] → Multiple items added"
+        },
+        {
+          "type": "text",
+          "value": "Important Points\n• append() → adds one item\n• insert() → adds at specific position\n• extend() → adds multiple items\n• + joins lists\n• Lists are mutable (changeable)"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between append() and extend() in Python lists?",
+          "answer": "append() adds its argument as a single element to the end of a list, whereas extend() iterates over its argument adding each element to the list, extending the list."
+        },
+        {
+          "question": "How do you insert an item at a specific position in a list?",
+          "answer": "Using the insert() method: list.insert(index, element)."
+        },
+        {
+          "question": "Can you use the + operator to join two lists?",
+          "answer": "Yes, the + operator concatenates two lists and returns a new list."
+        }
+      ]
+    },
+    {
+      "id": "python-remove-list-items",
+      "title": "Python – Remove List Items",
+      "category": "Basic",
+      "definition": "You can remove items from a list using different methods such as remove(), pop(), clear(), and the del keyword.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Methods to Remove Items"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "remove()",
+              "Remove specific value"
+            ],
+            [
+              "pop()",
+              "Remove using index"
+            ],
+            [
+              "del",
+              "Delete item or entire list"
+            ],
+            [
+              "clear()",
+              "Remove all items"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1. remove()\n\nRemoves a specific value.\n\nSyntax\nlist_name.remove(value)"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\", \"mango\"]\n\nfruits.remove(\"banana\")\n\nprint(fruits)"
+        },
+        {
+          "type": "output",
+          "value": "['apple', 'mango']"
+        },
+        {
+          "type": "text",
+          "value": "Important Point\n\nIf duplicate values exist, only the first occurrence is removed."
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 2, 2, 3]\n\nnums.remove(2)\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3]"
+        },
+        {
+          "type": "text",
+          "value": "2. pop()\n\nRemoves item using index.\n\nSyntax\nlist_name.pop(index)"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "nums = [10, 20, 30, 40]\n\nnums.pop(1)\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[10, 30, 40]"
+        },
+        {
+          "type": "text",
+          "value": "pop() Without Index\n\nRemoves last item."
+        },
+        {
+          "type": "code",
+          "value": "nums = [10, 20, 30]\n\nnums.pop()\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[10, 20]"
+        },
+        {
+          "type": "text",
+          "value": "Store Removed Item"
+        },
+        {
+          "type": "code",
+          "value": "nums = [100, 200, 300]\n\nx = nums.pop()\n\nprint(x)\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "300\n[100, 200]"
+        },
+        {
+          "type": "text",
+          "value": "3. del Keyword\n\nDeletes item using index."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 2, 3, 4]\n\ndel nums[1]\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 3, 4]"
+        },
+        {
+          "type": "text",
+          "value": "Delete Multiple Items"
+        },
+        {
+          "type": "code",
+          "value": "nums = [10, 20, 30, 40, 50]\n\ndel nums[1:4]\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[10, 50]"
+        },
+        {
+          "type": "text",
+          "value": "Delete Entire List"
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 2, 3]\n\ndel nums\n\n# After deleting, using nums gives error."
+        },
+        {
+          "type": "text",
+          "value": "4. clear()\n\nRemoves all items but keeps the list."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 2, 3]\n\nnums.clear()\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[]"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between remove() and pop()"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "remove()",
+            "pop()"
+          ],
+          "rows": [
+            [
+              "Removes by value",
+              "Removes by index"
+            ],
+            [
+              "No return value",
+              "Returns removed item"
+            ],
+            [
+              "Error if value not found",
+              "Error if index invalid"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Important Points\n• remove() → remove by value\n• pop() → remove by index\n• del → delete items or entire list\n• clear() → empty the list\n• Lists are mutable"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between remove() and pop()?",
+          "answer": "remove() removes the first occurrence of a specific value, while pop() removes an item at a specific index and returns it."
+        },
+        {
+          "question": "What happens if you use pop() without an index?",
+          "answer": "It removes and returns the last item in the list."
+        },
+        {
+          "question": "How do you empty a list without deleting the list object itself?",
+          "answer": "Using the clear() method: list.clear()."
+        }
+      ]
+    },
+    {
+      "id": "python-loop-lists",
+      "title": "Python – Loop Lists",
+      "category": "Basic",
+      "definition": "Looping through a list means accessing each item one by one using various methods provided by Python.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Looping through a list means accessing each item one by one.\n\nPython provides different ways to loop through lists."
+        },
+        {
+          "type": "text",
+          "value": "Example List"
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\", \"mango\"]"
+        },
+        {
+          "type": "text",
+          "value": "1. Loop Using for Loop\n\nMost commonly used method.\n\nSyntax\nfor variable in list:\n    print(variable)"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\", \"mango\"]\n\nfor i in fruits:\n    print(i)"
+        },
+        {
+          "type": "output",
+          "value": "apple\nbanana\nmango"
+        },
+        {
+          "type": "text",
+          "value": "2. Loop Using range() and len()\n\nUsed when index positions are needed."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\", \"mango\"]\n\nfor i in range(len(fruits)):\n    print(i, fruits[i])"
+        },
+        {
+          "type": "output",
+          "value": "0 apple\n1 banana\n2 mango"
+        },
+        {
+          "type": "text",
+          "value": "Explanation"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Part",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "len(fruits)",
+              "Total items"
+            ],
+            [
+              "range()",
+              "Generates indexes"
+            ],
+            [
+              "fruits[i]",
+              "Access item using index"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "3. Loop Using while Loop"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\", \"mango\"]\n\ni = 0\n\nwhile i < len(fruits):\n    print(fruits[i])\n    i += 1"
+        },
+        {
+          "type": "output",
+          "value": "apple\nbanana\nmango"
+        },
+        {
+          "type": "text",
+          "value": "4. Loop Using List Comprehension\n\nShort method."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\", \"mango\"]\n\n[print(i) for i in fruits]"
+        },
+        {
+          "type": "output",
+          "value": "apple\nbanana\nmango"
+        },
+        {
+          "type": "text",
+          "value": "5. Loop with Index and Value Using enumerate()\n\nenumerate() is used to get both:\n• index\n• value"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\", \"mango\"]\n\nfor index, value in enumerate(fruits):\n    print(index, value)"
+        },
+        {
+          "type": "output",
+          "value": "0 apple\n1 banana\n2 mango"
+        },
+        {
+          "type": "text",
+          "value": "6. Nested Loop in Lists"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "data = [[1, 2], [3, 4]]\n\nfor row in data:\n    for item in row:\n        print(item)"
+        },
+        {
+          "type": "output",
+          "value": "1\n2\n3\n4"
+        },
+        {
+          "type": "text",
+          "value": "Reverse Loop"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 2, 3, 4]\n\nfor i in reversed(nums):\n    print(i)"
+        },
+        {
+          "type": "output",
+          "value": "4\n3\n2\n1"
+        },
+        {
+          "type": "text",
+          "value": "Important Points\n• for loop is most commonly used\n• range(len(list)) gives indexes\n• while loop works using condition\n• enumerate() gives index + value\n• Nested loops work for nested lists"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the most common way to loop through a list in Python?",
+          "answer": "Using a 'for' loop: for x in list: print(x)."
+        },
+        {
+          "question": "How can you loop through a list and get both the index and the value at the same time?",
+          "answer": "Using the enumerate() function: for index, value in enumerate(list): print(index, value)."
+        },
+        {
+          "question": "How do you loop through a list in reverse order?",
+          "answer": "By using the reversed() function: for x in reversed(list): print(x)."
+        }
+      ]
+    },
+    {
+      "id": "python-enumerate",
+      "title": "Python enumerate()",
+      "category": "Basic",
+      "definition": "enumerate() is used to get both the index and value while looping through a list or any iterable.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "enumerate() is used to get both:\n• index\n• value\n\nwhile looping through a list (or any iterable)."
+        },
+        {
+          "type": "text",
+          "value": "Syntax\nenumerate(iterable, start)"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Parameter",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "iterable",
+              "List, tuple, string, etc."
+            ],
+            [
+              "start",
+              "Starting index (optional)"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Without enumerate()"
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\", \"mango\"]\n\nindex = 0\n\nfor i in fruits:\n    print(index, i)\n    index += 1"
+        },
+        {
+          "type": "output",
+          "value": "0 apple\n1 banana\n2 mango"
+        },
+        {
+          "type": "text",
+          "value": "Using enumerate()"
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\", \"mango\"]\n\nfor index, value in enumerate(fruits):\n    print(index, value)"
+        },
+        {
+          "type": "output",
+          "value": "0 apple\n1 banana\n2 mango"
+        },
+        {
+          "type": "text",
+          "value": "Explanation"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Variable",
+            "Stores"
+          ],
+          "rows": [
+            [
+              "index",
+              "Position number"
+            ],
+            [
+              "value",
+              "Actual item"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Start Index from 1"
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\", \"mango\"]\n\nfor index, value in enumerate(fruits, start=1):\n    print(index, value)"
+        },
+        {
+          "type": "output",
+          "value": "1 apple\n2 banana\n3 mango"
+        },
+        {
+          "type": "text",
+          "value": "Convert enumerate Object to List"
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\"]\n\nx = list(enumerate(fruits))\n\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "[(0, 'apple'), (1, 'banana')]"
+        },
+        {
+          "type": "text",
+          "value": "Using enumerate() with String"
+        },
+        {
+          "type": "code",
+          "value": "name = \"Python\"\n\nfor index, value in enumerate(name):\n    print(index, value)"
+        },
+        {
+          "type": "output",
+          "value": "0 P\n1 y\n2 t\n3 h\n4 o\n5 n"
+        },
+        {
+          "type": "text",
+          "value": "Using enumerate() with Tuple"
+        },
+        {
+          "type": "code",
+          "value": "data = (10, 20, 30)\n\nfor index, value in enumerate(data):\n    print(index, value)"
+        },
+        {
+          "type": "output",
+          "value": "0 10\n1 20\n2 30"
+        },
+        {
+          "type": "text",
+          "value": "Important Points\n• enumerate() gives index + value\n• Commonly used with loops\n• Cleaner than manually increasing index\n• Returns an enumerate object\n• Default starting index is 0"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What parameters does the enumerate() function take?",
+          "answer": "It takes an iterable (like a list or tuple) and an optional 'start' parameter to specify the beginning index."
+        },
+        {
+          "question": "How do you start counting from 1 instead of 0 using enumerate()?",
+          "answer": "By providing the start=1 argument: enumerate(iterable, start=1)."
+        },
+        {
+          "question": "What type of object does enumerate() return?",
+          "answer": "It returns an enumerate object, which is an iterator that yields tuples containing the index and the value."
+        }
+      ]
+    },
+    {
+      "id": "python-list-comprehension",
+      "title": "Python – List Comprehension",
+      "category": "Basic",
+      "definition": "List comprehension is a short and easy way to create lists using a single line of code.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "List comprehension is a short and easy way to create lists using a single line of code.\n\nThe Syntax\nnewlist = [expression for item in iterable if condition == True]\nThe return value is a new list, leaving the old list unchanged."
+        },
+        {
+          "type": "text",
+          "value": "Syntax\n[new_value for item in iterable]"
+        },
+        {
+          "type": "text",
+          "value": "Basic Example"
+        },
+        {
+          "type": "code",
+          "value": "nums = [x for x in range(1, 6)]\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3, 4, 5]"
+        },
+        {
+          "type": "text",
+          "value": "Without List Comprehension"
+        },
+        {
+          "type": "code",
+          "value": "nums = []\n\nfor x in range(1, 6):\n    nums.append(x)\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3, 4, 5]"
+        },
+        {
+          "type": "text",
+          "value": "1. Square Numbers"
+        },
+        {
+          "type": "code",
+          "value": "nums = [x*x for x in range(1, 6)]\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 4, 9, 16, 25]"
+        },
+        {
+          "type": "text",
+          "value": "2. Even Numbers"
+        },
+        {
+          "type": "code",
+          "value": "even = [x for x in range(1, 11) if x % 2 == 0]\n\nprint(even)"
+        },
+        {
+          "type": "output",
+          "value": "[2, 4, 6, 8, 10]"
+        },
+        {
+          "type": "text",
+          "value": "Syntax with Condition\n[new_value for item in iterable if condition]"
+        },
+        {
+          "type": "text",
+          "value": "3. Odd Numbers"
+        },
+        {
+          "type": "code",
+          "value": "odd = [x for x in range(1, 11) if x % 2 != 0]\n\nprint(odd)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 3, 5, 7, 9]"
+        },
+        {
+          "type": "text",
+          "value": "4. Convert Strings to Uppercase"
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\", \"mango\"]\n\nnew = [x.upper() for x in fruits]\n\nprint(new)"
+        },
+        {
+          "type": "output",
+          "value": "['APPLE', 'BANANA', 'MANGO']"
+        },
+        {
+          "type": "text",
+          "value": "5. List Comprehension with if-else\nSyntax\n[value_if_true if condition else value_if_false for item in iterable]"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 2, 3, 4, 5]\n\nresult = [\"Even\" if x % 2 == 0 else \"Odd\" for x in nums]\n\nprint(result)"
+        },
+        {
+          "type": "output",
+          "value": "['Odd', 'Even', 'Odd', 'Even', 'Odd']"
+        },
+        {
+          "type": "text",
+          "value": "6. Using String in List Comprehension"
+        },
+        {
+          "type": "code",
+          "value": "name = \"python\"\n\nletters = [x for x in name]\n\nprint(letters)"
+        },
+        {
+          "type": "output",
+          "value": "['p', 'y', 't', 'h', 'o', 'n']"
+        },
+        {
+          "type": "text",
+          "value": "7. Nested List Comprehension"
+        },
+        {
+          "type": "code",
+          "value": "matrix = [[1, 2], [3, 4]]\n\nnums = [item for row in matrix for item in row]\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3, 4]"
+        },
+        {
+          "type": "text",
+          "value": "Important Points\n• Shorter and cleaner code\n• Used to create new lists\n• Can include conditions\n• Faster than normal loops in many cases\n• Very commonly asked in interviews"
+        },
+        {
+          "type": "text",
+          "value": "General Forms\n\nSimple\n[x for x in iterable]\n\nWith Condition\n[x for x in iterable if condition]\n\nWith if-else\n[value1 if condition else value2 for x in iterable]"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is list comprehension in Python?",
+          "answer": "It's a concise way to create lists using a single line of code, often as an alternative to traditional for loops."
+        },
+        {
+          "question": "How do you add a condition to a list comprehension?",
+          "answer": "By adding an 'if' statement at the end: [x for x in range(10) if x % 2 == 0]."
+        },
+        {
+          "question": "Can you use if-else logic inside a list comprehension?",
+          "answer": "Yes, but the syntax changes: [value_if_true if condition else value_if_false for item in iterable]."
+        }
+      ]
+    },
+    {
+      "id": "python-sort-lists",
+      "title": "Python – Sort Lists",
+      "category": "Basic",
+      "definition": "Sorting means arranging list items in ascending or descending order using sort() or sorted().",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Sorting means arranging list items in:\n• Ascending order\n• Descending order\n\nPython provides:\n• sort()\n• sorted()"
+        },
+        {
+          "type": "text",
+          "value": "1. sort()\n\nsort() changes the original list.\n\nSyntax\nlist_name.sort()"
+        },
+        {
+          "type": "text",
+          "value": "Sort Numbers in Ascending Order"
+        },
+        {
+          "type": "code",
+          "value": "nums = [4, 1, 3, 2]\n\nnums.sort()\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3, 4]"
+        },
+        {
+          "type": "text",
+          "value": "Sort Strings Alphabetically"
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"mango\", \"apple\", \"banana\"]\n\nfruits.sort()\n\nprint(fruits)"
+        },
+        {
+          "type": "output",
+          "value": "['apple', 'banana', 'mango']"
+        },
+        {
+          "type": "text",
+          "value": "2. Descending Order\n\nUse reverse=True\n\nSyntax\nlist_name.sort(reverse=True)"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "nums = [4, 1, 3, 2]\n\nnums.sort(reverse=True)\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[4, 3, 2, 1]"
+        },
+        {
+          "type": "text",
+          "value": "Sort Strings in Reverse Alphabetical Order"
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"mango\", \"apple\", \"banana\"]\n\nfruits.sort(reverse=True)\n\nprint(fruits)"
+        },
+        {
+          "type": "output",
+          "value": "['mango', 'banana', 'apple']"
+        },
+        {
+          "type": "text",
+          "value": "3. Case-Sensitive Sorting\n\nUppercase letters come first."
+        },
+        {
+          "type": "code",
+          "value": "names = [\"banana\", \"Apple\", \"cat\"]\n\nnames.sort()\n\nprint(names)"
+        },
+        {
+          "type": "output",
+          "value": "['Apple', 'banana', 'cat']"
+        },
+        {
+          "type": "text",
+          "value": "Case-Insensitive Sorting\n\nUse key=str.lower"
+        },
+        {
+          "type": "code",
+          "value": "names = [\"banana\", \"Apple\", \"cat\"]\n\nnames.sort(key=str.lower)\n\nprint(names)"
+        },
+        {
+          "type": "output",
+          "value": "['Apple', 'banana', 'cat']"
+        },
+        {
+          "type": "text",
+          "value": "4. sorted() Function\n\nReturns a new sorted list.\n\nOriginal list remains unchanged.\n\nSyntax\nsorted(list_name)"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "nums = [4, 1, 3, 2]\n\nnew = sorted(nums)\n\nprint(new)\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3, 4]\n[4, 1, 3, 2]"
+        },
+        {
+          "type": "text",
+          "value": "5. Sort by Length"
+        },
+        {
+          "type": "code",
+          "value": "words = [\"apple\", \"kiwi\", \"banana\"]\n\nwords.sort(key=len)\n\nprint(words)"
+        },
+        {
+          "type": "output",
+          "value": "['kiwi', 'apple', 'banana']"
+        },
+        {
+          "type": "text",
+          "value": "6. Custom Sorting\n\nSort based on last digit."
+        },
+        {
+          "type": "code",
+          "value": "nums = [23, 11, 45, 32]\n\nnums.sort(key=lambda x: x % 10)\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[11, 32, 23, 45]"
+        },
+        {
+          "type": "text",
+          "value": "7. Reverse List (Not Sorting)\n\nreverse() only reverses current order."
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 2, 3]\n\nnums.reverse()\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[3, 2, 1]"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between sort() and sorted()"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "sort()",
+            "sorted()"
+          ],
+          "rows": [
+            [
+              "Changes original list",
+              "Creates new list"
+            ],
+            [
+              "Works only on lists",
+              "Works on any iterable"
+            ],
+            [
+              "Faster",
+              "Slightly slower"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Important Points\n• sort() modifies original list\n• sorted() returns new sorted list\n• reverse=True gives descending order\n• key= is used for custom sorting\n• reverse() only reverses order, not sort"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between sort() and sorted()?",
+          "answer": "sort() modifies the original list in place and returns None, whereas sorted() returns a new sorted list and leaves the original iterable unchanged."
+        },
+        {
+          "question": "How do you sort a list in descending order?",
+          "answer": "By passing the argument reverse=True to either the sort() method or the sorted() function."
+        },
+        {
+          "question": "How can you perform a case-insensitive sort on a list of strings?",
+          "answer": "By using the key argument with str.lower: list.sort(key=str.lower)."
+        }
+      ]
+    },
+    {
+      "id": "python-custom-sorting",
+      "title": "Python Custom Sorting Using key",
+      "category": "Basic",
+      "definition": "Custom sorting allows you to specify a function that determines the sorting criteria using the key parameter.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "You can customize the sort order by providing a function to the key parameter."
+        },
+        {
+          "type": "code",
+          "value": "def myfunc(n):\n    return abs(n - 50)\n\nthislist = [100, 50, 65, 82, 23]\n\nthislist.sort(key = myfunc)\n\nprint(thislist)"
+        },
+        {
+          "type": "output",
+          "value": "[50, 65, 23, 82, 100]"
+        },
+        {
+          "type": "text",
+          "value": "Explanation\n\nThe list is sorted based on the distance from 50.\n\nFunction\ndef myfunc(n):\n    return abs(n - 50)\n\n• abs() returns positive value\n• Calculates how far each number is from 50"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Number",
+            "Calculation",
+            "Result"
+          ],
+          "rows": [
+            [
+              "100",
+              "abs(100 - 50)",
+              "50"
+            ],
+            [
+              "50",
+              "abs(50 - 50)",
+              "0"
+            ],
+            [
+              "65",
+              "abs(65 - 50)",
+              "15"
+            ],
+            [
+              "82",
+              "abs(82 - 50)",
+              "32"
+            ],
+            [
+              "23",
+              "abs(23 - 50)",
+              "27"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Sorting Based on Results\n\nThe values are arranged according to:\n0, 15, 27, 32, 50\n\nCorresponding numbers:\n50, 65, 23, 82, 100"
+        },
+        {
+          "type": "text",
+          "value": "Final Sorted List"
+        },
+        {
+          "type": "code",
+          "value": "[50, 65, 23, 82, 100]"
+        },
+        {
+          "type": "text",
+          "value": "Important Point\n• sort(key = function_name)\n• key decides how sorting should happen\n• Original values stay same\n• Sorting depends on returned value from function"
+        },
+        {
+          "type": "text",
+          "value": "Same Using Lambda Function"
+        },
+        {
+          "type": "code",
+          "value": "thislist = [100, 50, 65, 82, 23]\n\nthislist.sort(key=lambda n: abs(n - 50))\n\nprint(thislist)"
+        },
+        {
+          "type": "output",
+          "value": "[50, 65, 23, 82, 100]"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What does the 'key' parameter do in the sort() method?",
+          "answer": "It specifies a function to be called on each list element prior to making comparisons. The return value of this function determines the sort order."
+        },
+        {
+          "question": "Does using a 'key' function change the actual values in the list?",
+          "answer": "No, it only changes how they are compared for sorting. The original values remain unchanged in the final sorted list."
+        },
+        {
+          "question": "How can you use a lambda function for custom sorting?",
+          "answer": "By passing the lambda as the key argument, e.g., list.sort(key=lambda x: abs(x-50))."
+        }
+      ]
+    },
+    {
+      "id": "python-copy-lists",
+      "title": "Python – Copy Lists",
+      "category": "Basic",
+      "definition": "Copying a list means creating another list with the same elements. It is essential for maintaining independent data structures.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Copying a list means creating another list with the same elements.\n\nWhy Copy Needed?\n\nIf you directly assign one list to another:\na = [1, 2, 3]\nb = a\n\nBoth variables point to the same list. Changing one affects the other."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "a = [1, 2, 3]\nb = a\n\nb[0] = 100\n\nprint(a)\nprint(b)"
+        },
+        {
+          "type": "output",
+          "value": "[100, 2, 3]\n[100, 2, 3]"
+        },
+        {
+          "type": "text",
+          "value": "Methods to Copy Lists"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Description"
+          ],
+          "rows": [
+            [
+              "copy()",
+              "Creates copy"
+            ],
+            [
+              "list()",
+              "Using constructor"
+            ],
+            [
+              "slicing [:]",
+              "Using slice"
+            ],
+            [
+              "copy module",
+              "Deep copy"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1. Using copy()\n\nSyntax\nnew_list = old_list.copy()"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "a = [1, 2, 3]\nb = a.copy()\n\nb[0] = 100\n\nprint(a)\nprint(b)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3]\n[100, 2, 3]"
+        },
+        {
+          "type": "text",
+          "value": "2. Using list()"
+        },
+        {
+          "type": "code",
+          "value": "a = [10, 20, 30]\nb = list(a)\n\nprint(b)"
+        },
+        {
+          "type": "output",
+          "value": "[10, 20, 30]"
+        },
+        {
+          "type": "text",
+          "value": "3. Using Slicing [:]"
+        },
+        {
+          "type": "code",
+          "value": "a = [1, 2, 3]\nb = a[:]\n\nprint(b)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3]"
+        },
+        {
+          "type": "text",
+          "value": "4. Using copy.deepcopy()\n\nUsed for nested lists."
+        },
+        {
+          "type": "text",
+          "value": "Problem with Normal Copy"
+        },
+        {
+          "type": "code",
+          "value": "a = [[1, 2], [3, 4]]\nb = a.copy()\n\nb[0][0] = 100\n\nprint(a)\nprint(b)"
+        },
+        {
+          "type": "output",
+          "value": "[[100, 2], [3, 4]]\n[[100, 2], [3, 4]]"
+        },
+        {
+          "type": "text",
+          "value": "Inner lists are still shared.\n\nDeep Copy"
+        },
+        {
+          "type": "code",
+          "value": "import copy\n\na = [[1, 2], [3, 4]]\nb = copy.deepcopy(a)\n\nb[0][0] = 100\n\nprint(a)\nprint(b)"
+        },
+        {
+          "type": "output",
+          "value": "[[1, 2], [3, 4]]\n[[100, 2], [3, 4]]"
+        },
+        {
+          "type": "difference",
+          "type": "text",
+          "value": "Difference Between Shallow Copy and Deep Copy"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Shallow Copy",
+            "Deep Copy"
+          ],
+          "rows": [
+            [
+              "Copies outer list only",
+              "Copies all nested objects"
+            ],
+            [
+              "Inner objects shared",
+              "Fully independent"
+            ],
+            [
+              "Faster",
+              "Slightly slower"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Important Points\n• = does not create copy\n• copy(), list(), [:] create shallow copies\n• deepcopy() creates full independent copy\n• Use deepcopy() for nested lists"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between a shallow copy and a deep copy?",
+          "answer": "A shallow copy creates a new collection object but populates it with references to the same items in the original. A deep copy recursively creates new copies of everything found in the original, making the new object fully independent."
+        },
+        {
+          "question": "Why shouldn't you use '=' to copy a list?",
+          "answer": "Because '=' only creates a new reference to the same memory object. Any change made to one list will reflect in the other."
+        },
+        {
+          "question": "Which method should you use to copy a list containing other lists?",
+          "answer": "You should use copy.deepcopy() from the 'copy' module to ensure that nested lists are also copied and not shared."
+        }
+      ]
+    },
+    {
+      "id": "python-shallow-vs-deep-copy",
+      "title": "Shallow Copy and Deep Copy in Python",
+      "category": "Basic",
+      "definition": "When copying lists (especially nested lists), Python provides shallow copy and deep copy to manage how inner objects are handled.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Shallow Copy\n\nA shallow copy copies:\n• only the outer object\n• inner objects are shared\n\nSo, changes inside nested items affect both lists."
+        },
+        {
+          "type": "text",
+          "value": "Example of Shallow Copy"
+        },
+        {
+          "type": "code",
+          "value": "a = [[1, 2], [3, 4]]\n\nb = a.copy()\n\nb[0][0] = 100\n\nprint(a)\nprint(b)"
+        },
+        {
+          "type": "output",
+          "value": "[[100, 2], [3, 4]]\n[[100, 2], [3, 4]]"
+        },
+        {
+          "type": "text",
+          "value": "Why?\nb = a.copy()\n\nOnly outer list is copied. Inner lists are still shared:\n[1, 2]\n[3, 4]\n\nBoth a and b point to same inner lists."
+        },
+        {
+          "type": "text",
+          "value": "Memory Representation\na ------> [ inner1 , inner2 ]\n               ↑\nb ------> [ --- ]\n\nBoth use same inner objects."
+        },
+        {
+          "type": "text",
+          "value": "Methods for Shallow Copy"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Example"
+          ],
+          "rows": [
+            [
+              "copy()",
+              "b = a.copy()"
+            ],
+            [
+              "slicing",
+              "b = a[:]"
+            ],
+            [
+              "list()",
+              "b = list(a)"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "2. Deep Copy\n\nDeep copy copies:\n• outer object\n• all inner objects\n\nEverything becomes fully independent."
+        },
+        {
+          "type": "text",
+          "value": "Example of Deep Copy"
+        },
+        {
+          "type": "code",
+          "value": "import copy\n\na = [[1, 2], [3, 4]]\n\nb = copy.deepcopy(a)\n\nb[0][0] = 100\n\nprint(a)\nprint(b)"
+        },
+        {
+          "type": "output",
+          "value": "[[1, 2], [3, 4]]\n[[100, 2], [3, 4]]"
+        },
+        {
+          "type": "text",
+          "value": "Why?\ncopy.deepcopy(a)\n\ncreates completely separate inner lists."
+        },
+        {
+          "type": "text",
+          "value": "Memory Representation\na ------> [ inner1 , inner2 ]\n\nb ------> [ new1 , new2 ]\n\nNo shared objects."
+        },
+        {
+          "type": "text",
+          "value": "Difference Between Shallow Copy and Deep Copy"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Shallow Copy",
+            "Deep Copy"
+          ],
+          "rows": [
+            [
+              "Copies outer object only",
+              "Copies all objects"
+            ],
+            [
+              "Inner objects shared",
+              "Fully independent"
+            ],
+            [
+              "Faster",
+              "Slower"
+            ],
+            [
+              "Less memory",
+              "More memory"
+            ],
+            [
+              "Changes may affect original",
+              "No effect on original"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Simple Example\n\nShallow Copy"
+        },
+        {
+          "type": "code",
+          "value": "a = [[10]]\nb = a.copy()\nb[0][0] = 99\nprint(a)"
+        },
+        {
+          "type": "output",
+          "value": "[[99]]\n\nOriginal changed."
+        },
+        {
+          "type": "text",
+          "value": "Deep Copy"
+        },
+        {
+          "type": "code",
+          "value": "import copy\n\na = [[10]]\nb = copy.deepcopy(a)\nb[0][0] = 99\nprint(a)"
+        },
+        {
+          "type": "output",
+          "value": "[[10]]\n\nOriginal unchanged."
+        },
+        {
+          "type": "text",
+          "value": "Important Points\n• = → no copy, same object\n• copy() → shallow copy\n• deepcopy() → full independent copy\n• Deep copy mainly used for nested lists/dictionaries"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What happens if you modify a nested element in a shallowly copied list?",
+          "answer": "The change will reflect in both the original and the copied list because they both share references to the same inner objects."
+        },
+        {
+          "question": "Why is deep copy slower and more memory-intensive than shallow copy?",
+          "answer": "Because it recursively duplicates every object found within the original structure, creating entirely new objects in memory instead of just copying references."
+        },
+        {
+          "question": "When is it absolutely necessary to use copy.deepcopy()?",
+          "answer": "When dealing with nested data structures (like lists within lists or dictionaries within lists) where you need the new copy to be completely independent of the original."
+        }
+      ]
+    },
+    {
+      "id": "python-join-lists",
+      "title": "Python – Join Lists",
+      "category": "Basic",
+      "definition": "Joining lists means combining two or more lists into one list using various methods like the + operator, extend(), or loops.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Joining lists means combining two or more lists into one list."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Description"
+          ],
+          "rows": [
+            [
+              "+ operator",
+              "Combines lists"
+            ],
+            [
+              "extend()",
+              "Adds elements of another list"
+            ],
+            [
+              "loop + append()",
+              "Add items one by one"
+            ],
+            [
+              "list comprehension",
+              "Join while processing"
+            ],
+            [
+              "* operator",
+              "Repeat lists"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1. Using + Operator\n\nMost common method.\n\nSyntax\nnew_list = list1 + list2"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "a = [1, 2]\nb = [3, 4]\n\nc = a + b\n\nprint(c)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3, 4]"
+        },
+        {
+          "type": "text",
+          "value": "Join String Lists"
+        },
+        {
+          "type": "code",
+          "value": "fruits1 = [\"apple\", \"banana\"]\nfruits2 = [\"mango\", \"grapes\"]\n\nresult = fruits1 + fruits2\n\nprint(result)"
+        },
+        {
+          "type": "output",
+          "value": "['apple', 'banana', 'mango', 'grapes']"
+        },
+        {
+          "type": "text",
+          "value": "2. Using extend()\n\nAdds elements of one list into another.\n\nSyntax\nlist1.extend(list2)"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "a = [1, 2]\nb = [3, 4]\n\na.extend(b)\n\nprint(a)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3, 4]"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between + and extend()"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "+ Operator",
+            "extend()"
+          ],
+          "rows": [
+            [
+              "Creates new list",
+              "Modifies existing list"
+            ],
+            [
+              "Original lists unchanged",
+              "Original list changes"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "3. Using Loop + append()"
+        },
+        {
+          "type": "code",
+          "value": "a = [1, 2]\nb = [3, 4]\n\nfor i in b:\n    a.append(i)\n\nprint(a)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3, 4]"
+        },
+        {
+          "type": "text",
+          "value": "4. Using List Comprehension"
+        },
+        {
+          "type": "code",
+          "value": "a = [1, 2]\nb = [3, 4]\n\nresult = [x for x in a] + [y for y in b]\n\nprint(result)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3, 4]"
+        },
+        {
+          "type": "text",
+          "value": "5. Using * Operator\n\nRepeats list items."
+        },
+        {
+          "type": "code",
+          "value": "a = [1, 2]\n\nprint(a * 3)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 1, 2, 1, 2]"
+        },
+        {
+          "type": "text",
+          "value": "Join Nested Lists"
+        },
+        {
+          "type": "code",
+          "value": "a = [[1, 2]]\nb = [[3, 4]]\n\nc = a + b\n\nprint(c)"
+        },
+        {
+          "type": "output",
+          "value": "[[1, 2], [3, 4]]"
+        },
+        {
+          "type": "text",
+          "value": "Important Points\n• + creates new joined list\n• extend() modifies original list\n• append() adds single item\n• extend() adds multiple items\n• * repeats lists"
+        },
+        {
+          "type": "text",
+          "value": "append() vs extend()"
+        },
+        {
+          "type": "text",
+          "value": "append()"
+        },
+        {
+          "type": "code",
+          "value": "a = [1, 2]\n\na.append([3, 4])\n\nprint(a)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, [3, 4]]"
+        },
+        {
+          "type": "text",
+          "value": "extend()"
+        },
+        {
+          "type": "code",
+          "value": "a = [1, 2]\n\na.extend([3, 4])\n\nprint(a)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3, 4]"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the primary difference between the + operator and the extend() method for joining lists?",
+          "answer": "The + operator creates and returns a new list containing elements from both lists, whereas extend() modifies the original list in-place by adding elements from the second list."
+        },
+        {
+          "question": "How does append() differ from extend() when adding a list to another list?",
+          "answer": "append() adds the entire list as a single nested element, while extend() iterates through the list and adds each element individually."
+        },
+        {
+          "question": "What happens when you multiply a list by an integer using the * operator?",
+          "answer": "It performs list repetition, creating a new list that contains the elements of the original list repeated the specified number of times."
+        }
+      ]
+    },
+    {
+      "id": "python-list-methods",
+      "title": "Python – List Methods",
+      "category": "Basic",
+      "definition": "List methods are built-in functions used to perform operations on lists such as adding, removing, and sorting items.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "List methods are built-in functions used to perform operations on lists."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "append()",
+              "Add item at end"
+            ],
+            [
+              "insert()",
+              "Add item at specific position"
+            ],
+            [
+              "extend()",
+              "Add multiple items"
+            ],
+            [
+              "remove()",
+              "Remove specific item"
+            ],
+            [
+              "pop()",
+              "Remove item using index"
+            ],
+            [
+              "clear()",
+              "Remove all items"
+            ],
+            [
+              "index()",
+              "Find position of item"
+            ],
+            [
+              "count()",
+              "Count occurrences"
+            ],
+            [
+              "sort()",
+              "Sort list"
+            ],
+            [
+              "reverse()",
+              "Reverse list"
+            ],
+            [
+              "copy()",
+              "Copy list"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1. append()\n\nAdds one item at the end."
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 2]\n\nnums.append(3)\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3]"
+        },
+        {
+          "type": "text",
+          "value": "2. insert()\n\nAdds item at a specific index."
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 3]\n\nnums.insert(1, 2)\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3]"
+        },
+        {
+          "type": "text",
+          "value": "3. extend()\n\nAdds multiple items."
+        },
+        {
+          "type": "code",
+          "value": "a = [1, 2]\n\na.extend([3, 4])\n\nprint(a)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3, 4]"
+        },
+        {
+          "type": "text",
+          "value": "4. remove()\n\nRemoves first matching value."
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 2, 3]\n\nnums.remove(2)\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 3]"
+        },
+        {
+          "type": "text",
+          "value": "5. pop()\n\nRemoves item using index."
+        },
+        {
+          "type": "code",
+          "value": "nums = [10, 20, 30]\n\nnums.pop(1)\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[10, 30]"
+        },
+        {
+          "type": "text",
+          "value": "pop() Without Index"
+        },
+        {
+          "type": "code",
+          "value": "nums = [10, 20, 30]\n\nnums.pop()\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[10, 20]"
+        },
+        {
+          "type": "text",
+          "value": "6. clear()\n\nRemoves all items."
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 2, 3]\n\nnums.clear()\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[]"
+        },
+        {
+          "type": "text",
+          "value": "7. index()\n\nReturns index position of item."
+        },
+        {
+          "type": "code",
+          "value": "fruits = [\"apple\", \"banana\", \"mango\"]\n\nprint(fruits.index(\"banana\"))"
+        },
+        {
+          "type": "output",
+          "value": "1"
+        },
+        {
+          "type": "text",
+          "value": "8. count()\n\nCounts occurrences of value."
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 2, 2, 3, 2]\n\nprint(nums.count(2))"
+        },
+        {
+          "type": "output",
+          "value": "3"
+        },
+        {
+          "type": "text",
+          "value": "9. sort()\n\nSorts list in ascending order."
+        },
+        {
+          "type": "code",
+          "value": "nums = [4, 1, 3, 2]\n\nnums.sort()\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3, 4]"
+        },
+        {
+          "type": "text",
+          "value": "Descending Sort"
+        },
+        {
+          "type": "code",
+          "value": "nums = [4, 1, 3, 2]\n\nnums.sort(reverse=True)\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[4, 3, 2, 1]"
+        },
+        {
+          "type": "text",
+          "value": "10. reverse()\n\nReverses current order."
+        },
+        {
+          "type": "code",
+          "value": "nums = [1, 2, 3]\n\nnums.reverse()\n\nprint(nums)"
+        },
+        {
+          "type": "output",
+          "value": "[3, 2, 1]"
+        },
+        {
+          "type": "text",
+          "value": "11. copy()\n\nCreates shallow copy."
+        },
+        {
+          "type": "code",
+          "value": "a = [1, 2, 3]\n\nb = a.copy()\n\nprint(b)"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3]"
+        },
+        {
+          "type": "text",
+          "value": "Summary Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Example"
+          ],
+          "rows": [
+            [
+              "append()",
+              "a.append(5)"
+            ],
+            [
+              "insert()",
+              "a.insert(1,5)"
+            ],
+            [
+              "extend()",
+              "a.extend([3,4])"
+            ],
+            [
+              "remove()",
+              "a.remove(2)"
+            ],
+            [
+              "pop()",
+              "a.pop()"
+            ],
+            [
+              "clear()",
+              "a.clear()"
+            ],
+            [
+              "index()",
+              "a.index(5)"
+            ],
+            [
+              "count()",
+              "a.count(2)"
+            ],
+            [
+              "sort()",
+              "a.sort()"
+            ],
+            [
+              "reverse()",
+              "a.reverse()"
+            ],
+            [
+              "copy()",
+              "a.copy()"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Important Points\n• Lists are mutable\n• Methods modify the original list\n• append() adds one item\n• extend() adds multiple items\n• sort() arranges items\n• copy() creates shallow copy"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Which list method can be used to add multiple elements at once?",
+          "answer": "The extend() method is used to add all elements of an iterable to the end of the list."
+        },
+        {
+          "question": "What is the difference between remove() and pop()?",
+          "answer": "remove() deletes the first matching value, while pop() removes an item at a specific index and returns it."
+        },
+        {
+          "question": "How do you find the total number of times a specific value appears in a list?",
+          "answer": "Using the count() method: list.count(value)."
         }
       ]
     },
