@@ -9621,6 +9621,727 @@ export const interviewData = {
       ]
     },
     {
+      "id": "python-access-dictionary-items",
+      "title": "Python - Access Dictionary Items",
+      "category": "Basic",
+      "definition": "Dictionary items can be accessed via their keys using either square bracket notation or the get() method. Python also provides view objects for keys, values, and items that dynamically update as the dictionary changes.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Dictionary items are accessed using their key names."
+        },
+        {
+          "type": "text",
+          "value": "Access Items Using []\n\nUse square brackets with the key name."
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nx = thisdict[\"model\"]\n\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "Mustang"
+        },
+        {
+          "type": "text",
+          "value": "Access Items Using get()\n\nget() also returns the value of a key, but it handles missing keys differently."
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nx = thisdict.get(\"model\")\n\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "Mustang"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between [] and get()"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "If Key Does Not Exist"
+          ],
+          "rows": [
+            [
+              "dict[key]",
+              "Gives Error (KeyError)"
+            ],
+            [
+              "dict.get(key)",
+              "Returns None (or a default value)"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Example Using []"
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\"brand\": \"Ford\"}\n# print(thisdict[\"model\"]) # Output: KeyError: 'model'"
+        },
+        {
+          "type": "text",
+          "value": "Example Using get()"
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\"brand\": \"Ford\"}\nprint(thisdict.get(\"model\"))"
+        },
+        {
+          "type": "output",
+          "value": "None"
+        },
+        {
+          "type": "text",
+          "value": "Get Keys Using keys()\n\nThe keys() method returns a view object containing all keys in the dictionary."
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nx = thisdict.keys()\n\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "dict_keys(['brand', 'model', 'year'])"
+        },
+        {
+          "type": "text",
+          "value": "keys() is Dynamic (View Object)\n\nIf the dictionary changes, the keys view also updates automatically."
+        },
+        {
+          "type": "code",
+          "value": "car = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nx = car.keys()\nprint(x)   # before change\n\ncar[\"color\"] = \"white\"\nprint(x)   # after change"
+        },
+        {
+          "type": "output",
+          "value": "dict_keys(['brand', 'model', 'year'])\ndict_keys(['brand', 'model', 'year', 'color'])"
+        },
+        {
+          "type": "text",
+          "value": "Get Values Using values()\n\nThe values() method returns a view object containing all values."
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nx = thisdict.values()\n\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "dict_values(['Ford', 'Mustang', 1964])"
+        },
+        {
+          "type": "text",
+          "value": "values() Updates Automatically"
+        },
+        {
+          "type": "code",
+          "value": "car = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nx = car.values()\nprint(x)\n\ncar[\"year\"] = 2020\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "dict_values(['Ford', 'Mustang', 1964])\ndict_values(['Ford', 'Mustang', 2020])"
+        },
+        {
+          "type": "text",
+          "value": "Get Items Using items()\n\nThe items() method returns a view object containing key-value pairs as tuples."
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nx = thisdict.items()\n\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])"
+        },
+        {
+          "type": "text",
+          "value": "items() Updates Automatically"
+        },
+        {
+          "type": "code",
+          "value": "car = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nx = car.items()\nprint(x)\n\ncar[\"color\"] = \"red\"\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])\ndict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964), ('color', 'red')])"
+        },
+        {
+          "type": "text",
+          "value": "Check if Key Exists Using in\n\nUse the in keyword to check whether a key exists in the dictionary."
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nif \"model\" in thisdict:\n    print(\"Yes, model key exists\")"
+        },
+        {
+          "type": "output",
+          "value": "Yes, model key exists"
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Example: Student Record Access"
+        },
+        {
+          "type": "code",
+          "value": "student = {\n  \"id\": 101,\n  \"name\": \"Vasudha\",\n  \"course\": \"Python\",\n  \"marks\": 95\n}\n\nprint(student[\"name\"])\nprint(student.keys())\nprint(student.values())\nprint(student.items())\n\nif \"course\" in student:\n    print(\"Course key exists\")"
+        },
+        {
+          "type": "output",
+          "value": "Vasudha\ndict_keys(['id', 'name', 'course', 'marks'])\ndict_values([101, 'Vasudha', 'Python', 95])\ndict_items([('id', 101), ('name', 'Vasudha'), ('course', 'Python'), ('marks', 95)])\nCourse key exists"
+        },
+        {
+          "type": "text",
+          "value": "Important Access Methods"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "dict[key]",
+              "Access value (raises error if missing)"
+            ],
+            [
+              "get()",
+              "Access value safely (returns None if missing)"
+            ],
+            [
+              "keys()",
+              "Get all keys as a dynamic view"
+            ],
+            [
+              "values()",
+              "Get all values as a dynamic view"
+            ],
+            [
+              "items()",
+              "Get key-value pairs as tuples"
+            ],
+            [
+              "in",
+              "Check for key existence"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the advantage of using the .get() method over square brackets []?",
+          "answer": "The .get() method returns None (or a specified default value) if the key does not exist, preventing the program from crashing with a KeyError."
+        },
+        {
+          "question": "What does it mean that .keys(), .values(), and .items() return 'view objects'?",
+          "answer": "View objects are dynamic. This means if you change the dictionary (add, update, or remove items), the view object will reflect those changes automatically without needing to call the method again."
+        },
+        {
+          "question": "How can you check if a specific key exists in a dictionary using a single line of code?",
+          "answer": "You can use the 'in' keyword, for example: 'my_key' in my_dictionary."
+        }
+      ]
+    },
+    {
+      "id": "python-change-dictionary-items",
+      "title": "Python - Change Dictionary Items",
+      "category": "Basic",
+      "definition": "Dictionaries are mutable collections, allowing you to modify existing values by referring to their keys or using the update() method. The update() method is particularly useful for changing multiple items simultaneously or adding new items if the specified keys do not already exist.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Dictionaries are changeable, which means you can modify their values after creation."
+        },
+        {
+          "type": "text",
+          "value": "Change Values\n\nYou can change the value of a specific item by referring to its key name:\n\nSyntax: dictionary[key] = new_value"
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nthisdict[\"year\"] = 2020\n\nprint(thisdict)"
+        },
+        {
+          "type": "output",
+          "value": "{'brand': 'Ford', 'model': 'Mustang', 'year': 2020}"
+        },
+        {
+          "type": "text",
+          "value": "Change Multiple Items Using update()\n\nThe update() method updates the dictionary with items from a given argument. The argument must be a dictionary, or an iterable object with key:value pairs.\n\nSyntax: dictionary.update({key:value})"
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nthisdict.update({\"year\": 2025})\n\nprint(thisdict)"
+        },
+        {
+          "type": "output",
+          "value": "{'brand': 'Ford', 'model': 'Mustang', 'year': 2025}"
+        },
+        {
+          "type": "text",
+          "value": "Change Multiple Values Individually"
+        },
+        {
+          "type": "code",
+          "value": "student = {\n  \"name\": \"Vasudha\",\n  \"course\": \"Python\",\n  \"marks\": 85\n}\n\nstudent[\"marks\"] = 95\nstudent[\"course\"] = \"Full Stack Python\"\n\nprint(student)"
+        },
+        {
+          "type": "output",
+          "value": "{\n 'name': 'Vasudha',\n 'course': 'Full Stack Python',\n 'marks': 95\n}"
+        },
+        {
+          "type": "text",
+          "value": "Using update() for Multiple Changes"
+        },
+        {
+          "type": "code",
+          "value": "student = {\n  \"name\": \"Vasudha\",\n  \"course\": \"Python\",\n  \"marks\": 85\n}\n\nstudent.update({\n  \"marks\": 99,\n  \"course\": \"MERN Stack\"\n})\n\nprint(student)"
+        },
+        {
+          "type": "output",
+          "value": "{\n 'name': 'Vasudha',\n 'course': 'MERN Stack',\n 'marks': 99\n}"
+        },
+        {
+          "type": "text",
+          "value": "Add New Item While Updating\n\nIf the key provided to update() does not exist, the item will be added to the dictionary."
+        },
+        {
+          "type": "code",
+          "value": "car = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\"\n}\n\ncar.update({\"color\": \"Black\"})\n\nprint(car)"
+        },
+        {
+          "type": "output",
+          "value": "{'brand': 'Ford', 'model': 'Mustang', 'color': 'Black'}"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between Assignment and update()"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "dict[key] = value",
+              "Change or add a single item"
+            ],
+            [
+              "update()",
+              "Change or add multiple items at once"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Example: Employee Record Update"
+        },
+        {
+          "type": "code",
+          "value": "employee = {\n  \"id\": 101,\n  \"name\": \"Ravi\",\n  \"salary\": 25000\n}\n\n# Change salary\nemployee[\"salary\"] = 30000\n\n# Add department\nemployee[\"department\"] = \"IT\"\n\nprint(employee)"
+        },
+        {
+          "type": "output",
+          "value": "{'id': 101, 'name': 'Ravi', 'salary': 30000, 'department': 'IT'}"
+        },
+        {
+          "type": "text",
+          "value": "Important Points\n• Dictionaries are mutable objects.\n• Existing values can be changed via their keys.\n• New key:value pairs can be added using the same syntax.\n• update() can modify multiple items together or add new ones."
+        },
+        {
+          "type": "text",
+          "value": "Quick Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operation",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Change item",
+              "dict[\"age\"] = 25"
+            ],
+            [
+              "Update item",
+              "dict.update({\"age\": 25})"
+            ],
+            [
+              "Add new item",
+              "dict[\"city\"] = \"Delhi\""
+            ],
+            [
+              "Multiple updates",
+              "dict.update({\"a\": 1, \"b\": 2})"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the primary difference between dictionary[key] = value and dictionary.update()?",
+          "answer": "Assignment (dict[key] = value) is typically used for changing or adding a single item. update() is used for changing or adding multiple items simultaneously using another dictionary or iterable."
+        },
+        {
+          "question": "Does the .update() method only modify existing keys?",
+          "answer": "No. If a key provided to the .update() method does not exist in the original dictionary, it will be added as a new key-value pair."
+        },
+        {
+          "question": "Are dictionaries mutable or immutable in Python?",
+          "answer": "Dictionaries are mutable, meaning their contents (values) can be changed after the dictionary has been created."
+        }
+      ]
+    },
+    {
+      "id": "python-add-dictionary-items",
+      "title": "Python - Add Dictionary Items",
+      "category": "Basic",
+      "definition": "Python dictionaries are dynamic, meaning they can grow in size after initialization. New key-value pairs can be added using square bracket assignment or the update() method, allowing for flexible data structures that can include nested dictionaries and various data types.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Dictionaries are dynamic, so you can add new items anytime."
+        },
+        {
+          "type": "text",
+          "value": "Add Items Using New Key\n\nYou can add a new item by using a new key name inside square brackets.\n\nSyntax: dictionary[\"new_key\"] = value"
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nthisdict[\"color\"] = \"red\"\n\nprint(thisdict)"
+        },
+        {
+          "type": "output",
+          "value": "{'brand': 'Ford', 'model': 'Mustang', 'year': 1964, 'color': 'red'}"
+        },
+        {
+          "type": "text",
+          "value": "Add Multiple Items Using update()\n\nThe update() method can add many items at once.\n\nSyntax: dictionary.update({key:value})"
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\"\n}\n\nthisdict.update({\n  \"year\": 2025,\n  \"color\": \"black\"\n})\n\nprint(thisdict)"
+        },
+        {
+          "type": "output",
+          "value": "{'brand': 'Ford', 'model': 'Mustang', 'year': 2025, 'color': 'black'}"
+        },
+        {
+          "type": "text",
+          "value": "Add Different Data Types\n\nDictionary values can be any datatype, including lists and booleans."
+        },
+        {
+          "type": "code",
+          "value": "student = {\n  \"name\": \"Vasudha\"\n}\n\nstudent[\"marks\"] = 95\nstudent[\"passed\"] = True\nstudent[\"skills\"] = [\"Python\", \"SQL\", \"Flask\"]\n\nprint(student)"
+        },
+        {
+          "type": "output",
+          "value": "{'name': 'Vasudha', 'marks': 95, 'passed': True, 'skills': ['Python', 'SQL', 'Flask']}"
+        },
+        {
+          "type": "text",
+          "value": "Add Nested Dictionary\n\nYou can store a dictionary within another dictionary."
+        },
+        {
+          "type": "code",
+          "value": "employee = {\n  \"id\": 101,\n  \"name\": \"Ravi\"\n}\n\nemployee[\"address\"] = {\n  \"city\": \"Vijayawada\",\n  \"state\": \"AP\"\n}\n\nprint(employee)"
+        },
+        {
+          "type": "output",
+          "value": "{'id': 101, 'name': 'Ravi', 'address': {'city': 'Vijayawada', 'state': 'AP'}}"
+        },
+        {
+          "type": "text",
+          "value": "Add Item Using User Input"
+        },
+        {
+          "type": "code",
+          "value": "student = {}\n\n# name = input(\"Enter name: \")\n# marks = int(input(\"Enter marks: \"))\n\n# student[\"name\"] = name\n# student[\"marks\"] = marks\n\n# print(student)"
+        },
+        {
+          "type": "text",
+          "value": "Sample Output:\nEnter name: Vasudha\nEnter marks: 98\n{'name': 'Vasudha', 'marks': 98}"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between Add and Update"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "dict[key] = value",
+              "Add a single item"
+            ],
+            [
+              "update()",
+              "Add multiple items at once"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Example: Bank Account Record"
+        },
+        {
+          "type": "code",
+          "value": "bank = {\n  \"name\": \"Vasudha\",\n  \"balance\": 5000\n}\n\nbank[\"account_type\"] = \"Savings\"\nbank[\"branch\"] = \"Vijayawada\"\n\nprint(bank)"
+        },
+        {
+          "type": "output",
+          "value": "{'name': 'Vasudha', 'balance': 5000, 'account_type': 'Savings', 'branch': 'Vijayawada'}"
+        },
+        {
+          "type": "text",
+          "value": "Important Points\n• Dictionaries are mutable and dynamic.\n• New keys can be added anytime by simple assignment.\n• If you use an existing key, the value will be updated rather than added.\n• update() is the most efficient way for bulk additions."
+        },
+        {
+          "type": "text",
+          "value": "Quick Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operation",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Add single item",
+              "dict[\"age\"] = 25"
+            ],
+            [
+              "Add multiple items",
+              "dict.update({\"a\": 1, \"b\": 2})"
+            ],
+            [
+              "Add list value",
+              "dict[\"skills\"] = [\"Python\"]"
+            ],
+            [
+              "Add nested dictionary",
+              "dict[\"address\"] = {...}"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "How do you add a new key-value pair to an existing dictionary?",
+          "answer": "You can add a new item by providing a new key inside square brackets and assigning it a value: dictionary['new_key'] = value."
+        },
+        {
+          "question": "Can you add multiple items to a dictionary in a single statement?",
+          "answer": "Yes, you can use the .update() method with a dictionary of new key-value pairs to add multiple items at once."
+        },
+        {
+          "question": "What happens if you try to 'add' an item using a key that already exists?",
+          "answer": "If the key already exists, Python will not add a new item; instead, it will update the existing key with the new value you provided."
+        }
+      ]
+    },
+    {
+      "id": "python-remove-dictionary-items",
+      "title": "Python - Remove Dictionary Items",
+      "category": "Basic",
+      "definition": "Python provides multiple ways to remove items from a dictionary, ranging from targeted removal via pop() and del, to bulk removal using clear(). Understanding the nuances—such as pop() returning the removed value and popitem() targeting the most recent insertion—is crucial for effective memory and data management.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Python provides several methods to remove items from a dictionary."
+        },
+        {
+          "type": "text",
+          "value": "Remove Item Using pop()\n\nThe pop() method removes the item with the specified key and returns the value of that item.\n\nSyntax: dictionary.pop(key)"
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nthisdict.pop(\"model\")\n\nprint(thisdict)"
+        },
+        {
+          "type": "output",
+          "value": "{'brand': 'Ford', 'year': 1964}"
+        },
+        {
+          "type": "text",
+          "value": "pop() Returns Removed Value"
+        },
+        {
+          "type": "code",
+          "value": "student = {\n  \"name\": \"Vasudha\",\n  \"marks\": 95\n}\n\nx = student.pop(\"marks\")\n\nprint(x)\nprint(student)"
+        },
+        {
+          "type": "output",
+          "value": "95\n{'name': 'Vasudha'}"
+        },
+        {
+          "type": "text",
+          "value": "Remove Last Inserted Item Using popitem()\n\nThe popitem() method removes the last inserted item (in versions before 3.7, a random item was removed instead).\n\nSyntax: dictionary.popitem()"
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nthisdict.popitem()\n\nprint(thisdict)"
+        },
+        {
+          "type": "output",
+          "value": "{'brand': 'Ford', 'model': 'Mustang'}"
+        },
+        {
+          "type": "text",
+          "value": "Delete Item Using del\n\nThe del keyword removes the item with the specified key name.\n\nSyntax: del dictionary[key]"
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\ndel thisdict[\"year\"]\n\nprint(thisdict)"
+        },
+        {
+          "type": "output",
+          "value": "{'brand': 'Ford', 'model': 'Mustang'}"
+        },
+        {
+          "type": "text",
+          "value": "Delete Entire Dictionary\n\nThe del keyword can also delete the dictionary completely."
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\"\n}\n\ndel thisdict\n\n# print(thisdict) # This would cause a NameError"
+        },
+        {
+          "type": "output",
+          "value": "NameError: name 'thisdict' is not defined"
+        },
+        {
+          "type": "text",
+          "value": "Clear Dictionary Using clear()\n\nThe clear() method empties the dictionary of all items, but the dictionary object still exists.\n\nSyntax: dictionary.clear()"
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nthisdict.clear()\n\nprint(thisdict)"
+        },
+        {
+          "type": "output",
+          "value": "{}"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between clear() and del"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Result"
+          ],
+          "rows": [
+            [
+              "clear()",
+              "Removes all items; dictionary becomes empty {}"
+            ],
+            [
+              "del",
+              "Deletes the entire dictionary object from memory"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Remove Item Comparison"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Feature"
+          ],
+          "rows": [
+            [
+              "pop()",
+              "Removes specific item and returns its value"
+            ],
+            [
+              "del",
+              "Removes specific item only (no return value)"
+            ],
+            [
+              "popitem()",
+              "Removes the last inserted item as a tuple"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Example: Employee Record Cleanup"
+        },
+        {
+          "type": "code",
+          "value": "employee = {\n  \"id\": 101,\n  \"name\": \"Ravi\",\n  \"salary\": 30000,\n  \"department\": \"IT\"\n}\n\nemployee.pop(\"salary\")\ndel employee[\"department\"]\n\nprint(employee)"
+        },
+        {
+          "type": "output",
+          "value": "{'id': 101, 'name': 'Ravi'}"
+        },
+        {
+          "type": "text",
+          "value": "Important Points\n• pop(key) is safe if you want to store the removed value.\n• popitem() is useful for LIFO (Last-In, First-Out) operations.\n• del is a statement, not a method, and can be used on the entire object.\n• clear() is the best way to reuse a dictionary variable without re-initializing."
+        },
+        {
+          "type": "text",
+          "value": "Quick Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "pop(key)",
+              "Remove specific item and get value"
+            ],
+            [
+              "popitem()",
+              "Remove last inserted item"
+            ],
+            [
+              "del dict[key]",
+              "Delete specific item (no return)"
+            ],
+            [
+              "del dict",
+              "Delete whole dictionary object"
+            ],
+            [
+              "clear()",
+              "Remove all items (keep object)"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between the pop() method and the del keyword for removing items?",
+          "answer": "The .pop() method removes the item and returns its value, which can be stored in a variable. The del keyword simply removes the item and does not return anything."
+        },
+        {
+          "question": "What happens when you use .popitem() on a dictionary?",
+          "answer": "In Python 3.7 and later, .popitem() removes and returns the last inserted key-value pair as a tuple. In earlier versions, it removed a random item."
+        },
+        {
+          "question": "How do you empty a dictionary without deleting the dictionary variable itself?",
+          "answer": "You can use the .clear() method. It removes all elements from the dictionary, leaving it as an empty dictionary {}."
+        }
+      ]
+    },
+    {
       "id": "python-for-loop",
       "title": "For Loop",
       "category": "Loops",
