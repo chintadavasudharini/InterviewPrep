@@ -5640,6 +5640,3987 @@ export const interviewData = {
       ]
     },
     {
+      "id": "python-tuples",
+      "title": "Python Tuples",
+      "category": "Basic",
+      "definition": "A Tuple is used to store multiple items in a single variable. It is one of 4 built-in collection data types in Python, alongside Lists, Sets, and Dictionaries.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "mytuple = (\"apple\", \"banana\", \"cherry\")\n\nA Tuple is used to store multiple items in a single variable.\n\nPython has 4 built-in collection data types:\n• List\n• Tuple\n• Set\n• Dictionary"
+        },
+        {
+          "type": "text",
+          "value": "What is a Tuple?\n\nA tuple is:\n• Ordered\n• Unchangeable (Immutable)\n• Allows Duplicate Values\n\nTuples are written using round brackets ()."
+        },
+        {
+          "type": "text",
+          "value": "Example: Create a Tuple"
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\")\n\nprint(thistuple)"
+        },
+        {
+          "type": "output",
+          "value": "('apple', 'banana', 'cherry')"
+        },
+        {
+          "type": "text",
+          "value": "Tuple Items\n\nTuple items are:\n• Indexed\n• Ordered\n• Immutable\n• Can contain duplicates"
+        },
+        {
+          "type": "text",
+          "value": "Ordered\n\nTuples maintain the insertion order."
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\")\n\nprint(thistuple[0])"
+        },
+        {
+          "type": "output",
+          "value": "apple"
+        },
+        {
+          "type": "text",
+          "value": "Unchangeable (Immutable)\n\nAfter creating a tuple, you cannot:\n• change items\n• add items\n• remove items"
+        },
+        {
+          "type": "text",
+          "value": "❌ This will give an error:"
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\")\n\nthistuple[1] = \"orange\""
+        },
+        {
+          "type": "output",
+          "value": "TypeError"
+        },
+        {
+          "type": "text",
+          "value": "Allow Duplicates\n\nTuples can store duplicate values."
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\", \"apple\", \"cherry\")\n\nprint(thistuple)"
+        },
+        {
+          "type": "output",
+          "value": "('apple', 'banana', 'cherry', 'apple', 'cherry')"
+        },
+        {
+          "type": "text",
+          "value": "Tuple Length\n\nUse len() to find the number of items."
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\")\n\nprint(len(thistuple))"
+        },
+        {
+          "type": "output",
+          "value": "3"
+        },
+        {
+          "type": "text",
+          "value": "Create Tuple With One Item\n\nFor a single item tuple, comma is mandatory."
+        },
+        {
+          "type": "text",
+          "value": "Correct"
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\",)\n\nprint(type(thistuple))"
+        },
+        {
+          "type": "output",
+          "value": "<class 'tuple'>"
+        },
+        {
+          "type": "text",
+          "value": "Wrong (Not a Tuple)"
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\")\n\nprint(type(thistuple))"
+        },
+        {
+          "type": "output",
+          "value": "<class 'str'>"
+        },
+        {
+          "type": "text",
+          "value": "Because Python treats it as a string unless a comma is added."
+        },
+        {
+          "type": "text",
+          "value": "Tuple Data Types\n\nTuples can store any data type."
+        },
+        {
+          "type": "text",
+          "value": "String Tuple"
+        },
+        {
+          "type": "code",
+          "value": "tuple1 = (\"apple\", \"banana\", \"cherry\")"
+        },
+        {
+          "type": "text",
+          "value": "Integer Tuple"
+        },
+        {
+          "type": "code",
+          "value": "tuple2 = (1, 5, 7, 9, 3)"
+        },
+        {
+          "type": "text",
+          "value": "Boolean Tuple"
+        },
+        {
+          "type": "code",
+          "value": "tuple3 = (True, False, False)"
+        },
+        {
+          "type": "text",
+          "value": "Mixed Data Types in Tuple\n\nA tuple can contain different data types together."
+        },
+        {
+          "type": "code",
+          "value": "tuple1 = (\"abc\", 34, True, 40, \"male\")\n\nprint(tuple1)"
+        },
+        {
+          "type": "output",
+          "value": "('abc', 34, True, 40, 'male')"
+        },
+        {
+          "type": "text",
+          "value": "type() Function\n\nUse type() to check the data type."
+        },
+        {
+          "type": "code",
+          "value": "mytuple = (\"apple\", \"banana\", \"cherry\")\n\nprint(type(mytuple))"
+        },
+        {
+          "type": "output",
+          "value": "<class 'tuple'>"
+        },
+        {
+          "type": "text",
+          "value": "tuple() Constructor\n\nYou can also create a tuple using the tuple() constructor."
+        },
+        {
+          "type": "code",
+          "value": "thistuple = tuple((\"apple\", \"banana\", \"cherry\"))\n\nprint(thistuple)"
+        },
+        {
+          "type": "output",
+          "value": "('apple', 'banana', 'cherry')"
+        },
+        {
+          "type": "text",
+          "value": "⚠ Note the double brackets:\ntuple((\"a\", \"b\"))\n\n• Outer brackets → function call\n• Inner brackets → tuple items"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between List and Tuple"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "List",
+            "Tuple"
+          ],
+          "rows": [
+            [
+              "Brackets",
+              "[]",
+              "()"
+            ],
+            [
+              "Changeable",
+              "Yes",
+              "No"
+            ],
+            [
+              "Ordered",
+              "Yes",
+              "Yes"
+            ],
+            [
+              "Duplicates",
+              "Yes",
+              "Yes"
+            ],
+            [
+              "Faster",
+              "No",
+              "Yes"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "When to Use Tuple?\n\nUse tuples when:\n• Data should not change\n• Fixed values are needed\n• Better performance is required"
+        },
+        {
+          "type": "text",
+          "value": "Example:"
+        },
+        {
+          "type": "code",
+          "value": "days = (\"Mon\", \"Tue\", \"Wed\", \"Thu\", \"Fri\")"
+        },
+        {
+          "type": "text",
+          "value": "Important Interview Points\n• Tuple is immutable.\n• Tuple uses ().\n• Single-item tuple needs a comma.\n• Tuple allows duplicate values.\n• Tuple items are indexed.\n• Tuples are faster than lists."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the primary characteristic of a tuple that distinguishes it from a list?",
+          "answer": "Tuples are immutable (unchangeable), meaning once they are created, you cannot change, add, or remove items. Lists, on the other hand, are mutable."
+        },
+        {
+          "question": "How do you create a tuple with only one item?",
+          "answer": "To create a single-item tuple, you must add a trailing comma after the item: mytuple = ('apple',). Without the comma, Python will treat it as a string."
+        },
+        {
+          "question": "Which constructor can be used to convert an iterable into a tuple?",
+          "answer": "The tuple() constructor can be used to create a tuple from any iterable object like a list, string, or range."
+        }
+      ]
+    },
+    {
+      "id": "python-access-tuple-items",
+      "title": "Python - Access Tuple Items",
+      "category": "Basic",
+      "definition": "Tuple items can be accessed using indexing, negative indexing, and slicing. You can also check for item existence using the 'in' keyword.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Tuple items can be accessed using:\n• Indexing\n• Negative Indexing\n• Range/Slicing\n• Membership (in keyword)"
+        },
+        {
+          "type": "text",
+          "value": "Access Tuple Items Using Index\n\nUse square brackets [] with index numbers."
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\")\n\nprint(thistuple[1])"
+        },
+        {
+          "type": "output",
+          "value": "banana"
+        },
+        {
+          "type": "text",
+          "value": "📌 Index starts from 0"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Item",
+            "Index"
+          ],
+          "rows": [
+            [
+              "apple",
+              "0"
+            ],
+            [
+              "banana",
+              "1"
+            ],
+            [
+              "cherry",
+              "2"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Negative Indexing\n\nNegative indexing starts from the end."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Item",
+            "Negative Index"
+          ],
+          "rows": [
+            [
+              "apple",
+              "-3"
+            ],
+            [
+              "banana",
+              "-2"
+            ],
+            [
+              "cherry",
+              "-1"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\")\n\nprint(thistuple[-1])"
+        },
+        {
+          "type": "output",
+          "value": "cherry"
+        },
+        {
+          "type": "text",
+          "value": "Range of Indexes (Slicing)\n\nSyntax:\ntuple[start:end]\n• start → included\n• end → excluded"
+        },
+        {
+          "type": "text",
+          "value": "Example: Access Multiple Items"
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\", \"orange\", \"kiwi\", \"melon\", \"mango\")\n\nprint(thistuple[2:5])"
+        },
+        {
+          "type": "output",
+          "value": "('cherry', 'orange', 'kiwi')"
+        },
+        {
+          "type": "text",
+          "value": "Explanation"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Index",
+            "Value"
+          ],
+          "rows": [
+            [
+              "2",
+              "cherry"
+            ],
+            [
+              "3",
+              "orange"
+            ],
+            [
+              "4",
+              "kiwi"
+            ],
+            [
+              "5",
+              "melon ❌ excluded"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Range From Beginning\n\nIf start index is omitted, Python starts from index 0."
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\", \"orange\", \"kiwi\", \"melon\", \"mango\")\n\nprint(thistuple[:4])"
+        },
+        {
+          "type": "output",
+          "value": "('apple', 'banana', 'cherry', 'orange')"
+        },
+        {
+          "type": "text",
+          "value": "Range Till End\n\nIf end index is omitted, Python goes till the last item."
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\", \"orange\", \"kiwi\", \"melon\", \"mango\")\n\nprint(thistuple[2:])"
+        },
+        {
+          "type": "output",
+          "value": "('cherry', 'orange', 'kiwi', 'melon', 'mango')"
+        },
+        {
+          "type": "text",
+          "value": "Range of Negative Indexes\n\nYou can also slice using negative indexes."
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\", \"orange\", \"kiwi\", \"melon\", \"mango\")\n\nprint(thistuple[-4:-1])"
+        },
+        {
+          "type": "output",
+          "value": "('orange', 'kiwi', 'melon')"
+        },
+        {
+          "type": "text",
+          "value": "Explanation"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Negative Index",
+            "Value"
+          ],
+          "rows": [
+            [
+              "-4",
+              "orange"
+            ],
+            [
+              "-3",
+              "kiwi"
+            ],
+            [
+              "-2",
+              "melon"
+            ],
+            [
+              "-1",
+              "mango ❌ excluded"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Check if Item Exists\n\nUse the in keyword."
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\")\n\nif \"apple\" in thistuple:\n    print(\"Yes, 'apple' is in the fruits tuple\")"
+        },
+        {
+          "type": "output",
+          "value": "Yes, 'apple' is in the fruits tuple"
+        },
+        {
+          "type": "text",
+          "value": "Check if Item Does NOT Exist\n\nUse not in."
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\")\n\nif \"orange\" not in thistuple:\n    print(\"Orange is not present\")"
+        },
+        {
+          "type": "output",
+          "value": "Orange is not present"
+        },
+        {
+          "type": "text",
+          "value": "Important Interview Points\n• Tuple indexing starts from 0\n• Negative indexing starts from -1\n• Slicing returns a new tuple\n• End index is always excluded\n• in keyword checks existence\n• Tuples are immutable, but items can still be accessed using indexes"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operation",
+            "Example"
+          ],
+          "rows": [
+            [
+              "First item",
+              "t[0]"
+            ],
+            [
+              "Last item",
+              "t[-1]"
+            ],
+            [
+              "Range",
+              "t[1:4]"
+            ],
+            [
+              "From start",
+              "t[:3]"
+            ],
+            [
+              "Till end",
+              "t[2:]"
+            ],
+            [
+              "Negative slice",
+              "t[-4:-1]"
+            ],
+            [
+              "Check item",
+              "\"apple\" in t"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the result of slicing a tuple, and does it modify the original tuple?",
+          "answer": "Slicing a tuple returns a new tuple containing the specified range of items. It does NOT modify the original tuple because tuples are immutable."
+        },
+        {
+          "question": "What does a negative index of -1 refer to in a tuple?",
+          "answer": "A negative index of -1 refers to the very last item in the tuple."
+        },
+        {
+          "question": "In the slice thistuple[2:5], which index positions are included in the result?",
+          "answer": "The items at index positions 2, 3, and 4 are included. The item at index position 5 is excluded."
+        }
+      ]
+    },
+    {
+      "id": "python-update-tuples",
+      "title": "Python - Update Tuples",
+      "category": "Basic",
+      "definition": "Tuples are immutable, but you can update them using workarounds like converting them to lists or using concatenation.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Tuples are immutable (unchangeable). That means after creating a tuple, you cannot:\n• Change items\n• Add items\n• Remove items\n\nBut Python provides some workarounds using lists."
+        },
+        {
+          "type": "text",
+          "value": "Change Tuple Values\n\n❌ Direct modification is not allowed."
+        },
+        {
+          "type": "code",
+          "value": "x = (\"apple\", \"banana\", \"cherry\")\n\nx[1] = \"kiwi\""
+        },
+        {
+          "type": "output",
+          "value": "TypeError"
+        },
+        {
+          "type": "text",
+          "value": "Workaround: Convert Tuple → List → Tuple\n\nSteps:\n1. Convert tuple to list\n2. Change the list\n3. Convert list back to tuple"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "x = (\"apple\", \"banana\", \"cherry\")\ny = list(x)\ny[1] = \"kiwi\"\nx = tuple(y)\n\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "('apple', 'kiwi', 'cherry')"
+        },
+        {
+          "type": "text",
+          "value": "Add Items to Tuple\n\nTuples do not support append(), insert(), or extend() because they are immutable. But there are workarounds."
+        },
+        {
+          "type": "text",
+          "value": "Method 1: Convert into List"
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\")\ny = list(thistuple)\ny.append(\"orange\")\nthistuple = tuple(y)\n\nprint(thistuple)"
+        },
+        {
+          "type": "output",
+          "value": "('apple', 'banana', 'cherry', 'orange')"
+        },
+        {
+          "type": "text",
+          "value": "Method 2: Add Tuple to Tuple\n\nYou can concatenate tuples using +."
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\")\ny = (\"orange\",)\nthistuple += y\n\nprint(thistuple)"
+        },
+        {
+          "type": "output",
+          "value": "('apple', 'banana', 'cherry', 'orange')"
+        },
+        {
+          "type": "text",
+          "value": "Important Note: Single Item Tuple\n\nA comma , is mandatory."
+        },
+        {
+          "type": "text",
+          "value": "Correct"
+        },
+        {
+          "type": "code",
+          "value": "y = (\"orange\",)"
+        },
+        {
+          "type": "text",
+          "value": "Wrong"
+        },
+        {
+          "type": "code",
+          "value": "y = (\"orange\")"
+        },
+        {
+          "type": "text",
+          "value": "Without comma, Python treats it as a string."
+        },
+        {
+          "type": "text",
+          "value": "Add Multiple Items"
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\")\ny = (\"orange\", \"kiwi\")\nthistuple += y\n\nprint(thistuple)"
+        },
+        {
+          "type": "output",
+          "value": "('apple', 'banana', 'orange', 'kiwi')"
+        },
+        {
+          "type": "text",
+          "value": "Remove Items from Tuple\n\n❌ Direct removal is not possible."
+        },
+        {
+          "type": "code",
+          "value": "thistuple.remove(\"apple\")"
+        },
+        {
+          "type": "output",
+          "value": "AttributeError"
+        },
+        {
+          "type": "text",
+          "value": "Workaround: Convert into List"
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\")\ny = list(thistuple)\ny.remove(\"apple\")\nthistuple = tuple(y)\n\nprint(thistuple)"
+        },
+        {
+          "type": "output",
+          "value": "('banana', 'cherry')"
+        },
+        {
+          "type": "text",
+          "value": "Delete Entire Tuple\n\nUse del keyword."
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\")\ndel thistuple\n\n# This will raise an error because thistuple no longer exists\n# print(thistuple)"
+        },
+        {
+          "type": "output",
+          "value": "NameError"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between remove() and del"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Keyword/Method",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "remove()",
+              "Removes a specific item from a list (used in workaround)"
+            ],
+            [
+              "del",
+              "Deletes the entire tuple/variable"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Important Interview Points\n• Tuples are immutable.\n• Tuple items cannot be directly updated.\n• Use list conversion as workaround.\n• Tuples do not support append() or remove().\n• Tuples can be concatenated using +.\n• del deletes the entire tuple."
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operation",
+            "Possible?",
+            "Method"
+          ],
+          "rows": [
+            [
+              "Change item",
+              "❌ Directly",
+              "Convert to list"
+            ],
+            [
+              "Add item",
+              "❌ Directly",
+              "list() or tuple concat"
+            ],
+            [
+              "Remove item",
+              "❌ Directly",
+              "Convert to list"
+            ],
+            [
+              "Delete tuple",
+              "✅",
+              "del"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the standard workaround to modify an item in a tuple?",
+          "answer": "The standard workaround is to convert the tuple into a list using the list() constructor, modify the list, and then convert it back into a tuple using the tuple() constructor."
+        },
+        {
+          "question": "Can you use the '+' operator to add items to a tuple?",
+          "answer": "Yes, you can concatenate two tuples using the '+' operator to create a new tuple. Note that if you're adding a single item, it must be defined as a single-item tuple with a trailing comma."
+        },
+        {
+          "question": "What happens when you try to use the .append() method on a tuple?",
+          "answer": "It will raise an AttributeError because tuples are immutable and do not have an append() method."
+        }
+      ]
+    },
+    {
+      "id": "python-unpack-tuples",
+      "title": "Python - Unpack Tuples",
+      "category": "Basic",
+      "definition": "Packing is the process of storing multiple values in a single tuple, while unpacking is the process of extracting those values back into separate variables.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Packing a Tuple\n\nWhen values are stored inside a tuple, it is called packing."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "fruits = (\"apple\", \"banana\", \"cherry\")"
+        },
+        {
+          "type": "text",
+          "value": "Here, \"apple\", \"banana\", and \"cherry\" are packed into one tuple variable called fruits."
+        },
+        {
+          "type": "text",
+          "value": "Unpacking a Tuple\n\nExtracting tuple values into variables is called unpacking."
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "fruits = (\"apple\", \"banana\", \"cherry\")\n\n(green, yellow, red) = fruits\n\nprint(green)\nprint(yellow)\nprint(red)"
+        },
+        {
+          "type": "output",
+          "value": "apple\nbanana\ncherry"
+        },
+        {
+          "type": "text",
+          "value": "How Unpacking Works"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Tuple Value",
+            "Variable"
+          ],
+          "rows": [
+            [
+              "apple",
+              "green"
+            ],
+            [
+              "banana",
+              "yellow"
+            ],
+            [
+              "cherry",
+              "red"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Important Rule\n\nThe number of variables must match the number of tuple items."
+        },
+        {
+          "type": "text",
+          "value": "✅ Correct:"
+        },
+        {
+          "type": "code",
+          "value": "(a, b, c) = (10, 20, 30)"
+        },
+        {
+          "type": "text",
+          "value": "❌ Wrong:"
+        },
+        {
+          "type": "code",
+          "value": "(a, b) = (10, 20, 30)"
+        },
+        {
+          "type": "output",
+          "value": "ValueError"
+        },
+        {
+          "type": "text",
+          "value": "Because there are more values than variables."
+        },
+        {
+          "type": "text",
+          "value": "Using Asterisk *\n\nUse * when the number of variables is less than the number of tuple values. The * collects remaining items as a list."
+        },
+        {
+          "type": "text",
+          "value": "Example 1: Asterisk at Last Variable"
+        },
+        {
+          "type": "code",
+          "value": "fruits = (\"apple\", \"banana\", \"cherry\", \"strawberry\", \"raspberry\")\n\n(green, yellow, *red) = fruits\n\nprint(green)\nprint(yellow)\nprint(red)"
+        },
+        {
+          "type": "output",
+          "value": "apple\nbanana\n['cherry', 'strawberry', 'raspberry']"
+        },
+        {
+          "type": "text",
+          "value": "Explanation"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Variable",
+            "Value"
+          ],
+          "rows": [
+            [
+              "green",
+              "apple"
+            ],
+            [
+              "yellow",
+              "banana"
+            ],
+            [
+              "red",
+              "['cherry', 'strawberry', 'raspberry']"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "📌 red becomes a list."
+        },
+        {
+          "type": "text",
+          "value": "Example 2: Asterisk in Middle"
+        },
+        {
+          "type": "code",
+          "value": "fruits = (\"apple\", \"mango\", \"papaya\", \"pineapple\", \"cherry\")\n\n(green, *tropic, red) = fruits\n\nprint(green)\nprint(tropic)\nprint(red)"
+        },
+        {
+          "type": "output",
+          "value": "apple\n['mango', 'papaya', 'pineapple']\ncherry"
+        },
+        {
+          "type": "text",
+          "value": "Explanation"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Variable",
+            "Value"
+          ],
+          "rows": [
+            [
+              "green",
+              "apple"
+            ],
+            [
+              "tropic",
+              "['mango', 'papaya', 'pineapple']"
+            ],
+            [
+              "red",
+              "cherry"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Python automatically assigns:\n• first value → green\n• last value → red\n• remaining values → tropic"
+        },
+        {
+          "type": "text",
+          "value": "Example 3: Asterisk at Beginning"
+        },
+        {
+          "type": "code",
+          "value": "fruits = (\"apple\", \"banana\", \"cherry\", \"orange\")\n\n(*first, last) = fruits\n\nprint(first)\nprint(last)"
+        },
+        {
+          "type": "output",
+          "value": "['apple', 'banana', 'cherry']\norange"
+        },
+        {
+          "type": "text",
+          "value": "Unpacking Without Brackets\n\nBrackets are optional."
+        },
+        {
+          "type": "code",
+          "value": "fruits = (\"apple\", \"banana\", \"cherry\")\n\ngreen, yellow, red = fruits\n\nprint(green)"
+        },
+        {
+          "type": "output",
+          "value": "apple"
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Example"
+        },
+        {
+          "type": "code",
+          "value": "student = (\"Vasu\", 23, \"Python\")\n\nname, age, course = student\n\nprint(name)\nprint(age)\nprint(course)"
+        },
+        {
+          "type": "output",
+          "value": "Vasu\n23\nPython"
+        },
+        {
+          "type": "text",
+          "value": "Important Interview Points\n• Packing → storing multiple values in tuple\n• Unpacking → extracting tuple values into variables\n• Variable count must match tuple items\n• * collects remaining items as a list\n• Only one * variable is allowed in unpacking"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Concept",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Packing",
+              "t = (1,2,3)"
+            ],
+            [
+              "Unpacking",
+              "a,b,c = t"
+            ],
+            [
+              "Asterisk unpacking",
+              "a,*b = t"
+            ],
+            [
+              "Remaining values",
+              "Stored as list"
+            ],
+            [
+              "Multiple unpacking",
+              "a,*b,c = t"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between tuple packing and unpacking?",
+          "answer": "Packing is the process of assigning multiple values to a single tuple variable. Unpacking is the reverse process, where the items within a tuple are assigned to multiple individual variables."
+        },
+        {
+          "question": "How do you handle a situation where the number of variables is less than the number of items in a tuple during unpacking?",
+          "answer": "You can use an asterisk (*) before one of the variable names. This variable will collect the remaining items as a list."
+        },
+        {
+          "question": "Where can the asterisk (*) be placed during tuple unpacking, and what is its effect?",
+          "answer": "The asterisk can be placed at the beginning, middle, or end of the variable sequence. It always collects the 'overflowing' items into a list, matching other variables to the corresponding items at the start or end of the tuple."
+        }
+      ]
+    },
+    {
+      "id": "python-loop-tuples",
+      "title": "Python - Loop Tuples",
+      "category": "Basic",
+      "definition": "You can iterate through tuple items using a for loop, by referring to index numbers, using a while loop, or with the enumerate() function.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "You can loop through tuple items using:\n• for loop\n• Index numbers\n• while loop"
+        },
+        {
+          "type": "text",
+          "value": "Loop Through a Tuple Using for Loop\n\nThe easiest way to iterate through a tuple is using a for loop."
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\")\n\nfor x in thistuple:\n    print(x)"
+        },
+        {
+          "type": "output",
+          "value": "apple\nbanana\ncherry"
+        },
+        {
+          "type": "text",
+          "value": "How It Works"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Iteration",
+            "x Value"
+          ],
+          "rows": [
+            [
+              "1",
+              "apple"
+            ],
+            [
+              "2",
+              "banana"
+            ],
+            [
+              "3",
+              "cherry"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "The loop automatically takes one item at a time."
+        },
+        {
+          "type": "text",
+          "value": "Loop Through Index Numbers\n\nYou can also access tuple items using index numbers. Use:\n• len() → gives tuple length\n• range() → generates index numbers"
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\")\n\nfor i in range(len(thistuple)):\n    print(thistuple[i])"
+        },
+        {
+          "type": "output",
+          "value": "apple\nbanana\ncherry"
+        },
+        {
+          "type": "text",
+          "value": "Explanation"
+        },
+        {
+          "type": "text",
+          "value": "Step 1: len(thistuple)\nlen(thistuple) Output: 3\n\nStep 2: range(3)\nProduces indexes: 0, 1, 2\n\nStep 3: thistuple[i]\nAccesses items using indexes."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "i",
+            "thistuple[i]"
+          ],
+          "rows": [
+            [
+              "0",
+              "apple"
+            ],
+            [
+              "1",
+              "banana"
+            ],
+            [
+              "2",
+              "cherry"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Using a while Loop\n\nYou can also iterate using a while loop."
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\")\n\ni = 0\n\nwhile i < len(thistuple):\n    print(thistuple[i])\n    i = i + 1"
+        },
+        {
+          "type": "output",
+          "value": "apple\nbanana\ncherry"
+        },
+        {
+          "type": "text",
+          "value": "Explanation\n\n• Initial Value: i = 0 (Start from first index)\n• Condition: i < len(thistuple) (Loop runs while index is less than tuple length)\n• Increment: i = i + 1 (Moves to next index)\n\n📌 Without increment → infinite loop."
+        },
+        {
+          "type": "text",
+          "value": "Using enumerate()\n\nenumerate() gives both index and value."
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (\"apple\", \"banana\", \"cherry\")\n\nfor index, value in enumerate(thistuple):\n    print(index, value)"
+        },
+        {
+          "type": "output",
+          "value": "0 apple\n1 banana\n2 cherry"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between Loops"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Loop Type",
+            "Best For"
+          ],
+          "rows": [
+            [
+              "for item in tuple",
+              "Direct item access"
+            ],
+            [
+              "for i in range(len())",
+              "Index-based access"
+            ],
+            [
+              "while loop",
+              "Manual control"
+            ],
+            [
+              "enumerate()",
+              "Index + value together"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Example"
+        },
+        {
+          "type": "code",
+          "value": "students = (\"Vasu\", \"Ravi\", \"Anu\")\n\nfor student in students:\n    print(\"Welcome\", student)"
+        },
+        {
+          "type": "output",
+          "value": "Welcome Vasu\nWelcome Ravi\nWelcome Anu"
+        },
+        {
+          "type": "text",
+          "value": "Important Interview Points\n• Tuples are iterable.\n• for loop is the easiest method.\n• range(len(tuple)) is used for index access.\n• while loop needs manual increment.\n• enumerate() returns index and value together."
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Syntax"
+          ],
+          "rows": [
+            [
+              "Direct loop",
+              "for x in tuple:"
+            ],
+            [
+              "Index loop",
+              "for i in range(len(tuple)):"
+            ],
+            [
+              "While loop",
+              "while i < len(tuple):"
+            ],
+            [
+              "Enumerate",
+              "for i, x in enumerate(tuple):"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Which loop is generally preferred for simple iteration over a tuple in Python?",
+          "answer": "The 'for item in tuple' loop is generally preferred because it is the most concise and readable way to access items directly."
+        },
+        {
+          "question": "How can you access both the index and the value while looping through a tuple?",
+          "answer": "You can use the built-in enumerate() function, which returns a tuple containing the index and the value for each item during iteration."
+        },
+        {
+          "question": "What is a potential danger when using a while loop to iterate through a tuple?",
+          "answer": "If you forget to increment the index variable (e.g., i += 1), you will create an infinite loop because the condition will always remain true."
+        }
+      ]
+    },
+    {
+      "id": "python-join-tuples",
+      "title": "Python - Join Tuples",
+      "category": "Basic",
+      "definition": "Joining tuples involves combining two or more tuples to create a new tuple using the concatenation (+) or repetition (*) operators.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Joining tuples means combining two or more tuples into one tuple.\n\nSince tuples are immutable, we cannot directly modify them, but we can create a new tuple by joining existing tuples."
+        },
+        {
+          "type": "text",
+          "value": "Join Two Tuples Using +\n\nUse the + operator to concatenate tuples."
+        },
+        {
+          "type": "code",
+          "value": "tuple1 = (\"apple\", \"banana\", \"cherry\")\ntuple2 = (\"orange\", \"kiwi\", \"melon\")\n\ntuple3 = tuple1 + tuple2\n\nprint(tuple3)"
+        },
+        {
+          "type": "output",
+          "value": "('apple', 'banana', 'cherry', 'orange', 'kiwi', 'melon')"
+        },
+        {
+          "type": "text",
+          "value": "How It Works"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Tuple",
+            "Values"
+          ],
+          "rows": [
+            [
+              "tuple1",
+              "apple, banana, cherry"
+            ],
+            [
+              "tuple2",
+              "orange, kiwi, melon"
+            ],
+            [
+              "tuple3",
+              "combination of both"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Join Multiple Tuples\n\nYou can join more than two tuples."
+        },
+        {
+          "type": "code",
+          "value": "tuple1 = (1, 2)\ntuple2 = (3, 4)\ntuple3 = (5, 6)\n\nresult = tuple1 + tuple2 + tuple3\n\nprint(result)"
+        },
+        {
+          "type": "output",
+          "value": "(1, 2, 3, 4, 5, 6)"
+        },
+        {
+          "type": "text",
+          "value": "Multiply Tuples\n\nUse * operator to repeat tuple items."
+        },
+        {
+          "type": "code",
+          "value": "fruits = (\"apple\", \"banana\", \"cherry\")\n\nmytuple = fruits * 2\n\nprint(mytuple)"
+        },
+        {
+          "type": "output",
+          "value": "('apple', 'banana', 'cherry', 'apple', 'banana', 'cherry')"
+        },
+        {
+          "type": "text",
+          "value": "Another Example"
+        },
+        {
+          "type": "code",
+          "value": "numbers = (1, 2, 3)\n\nprint(numbers * 3)"
+        },
+        {
+          "type": "output",
+          "value": "(1, 2, 3, 1, 2, 3, 1, 2, 3)"
+        },
+        {
+          "type": "text",
+          "value": "Important Note\n\nJoining creates a new tuple. Original tuples remain unchanged."
+        },
+        {
+          "type": "code",
+          "value": "tuple1 = (1, 2)\ntuple2 = (3, 4)\n\ntuple3 = tuple1 + tuple2\n\nprint(tuple1)\nprint(tuple2)\nprint(tuple3)"
+        },
+        {
+          "type": "output",
+          "value": "(1, 2)\n(3, 4)\n(1, 2, 3, 4)"
+        },
+        {
+          "type": "text",
+          "value": "Join Tuple with Single Item\n\nRemember the comma , for single-item tuples."
+        },
+        {
+          "type": "text",
+          "value": "Correct"
+        },
+        {
+          "type": "code",
+          "value": "tuple1 = (\"apple\",)\ntuple2 = (\"banana\",)\n\nprint(tuple1 + tuple2)"
+        },
+        {
+          "type": "output",
+          "value": "('apple', 'banana')"
+        },
+        {
+          "type": "text",
+          "value": "Wrong"
+        },
+        {
+          "type": "code",
+          "value": "tuple1 = (\"apple\")"
+        },
+        {
+          "type": "text",
+          "value": "This becomes a string, not a tuple."
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Example"
+        },
+        {
+          "type": "code",
+          "value": "frontend = (\"HTML\", \"CSS\")\nbackend = (\"Python\", \"Flask\")\n\nfullstack = frontend + backend\n\nprint(fullstack)"
+        },
+        {
+          "type": "output",
+          "value": "('HTML', 'CSS', 'Python', 'Flask')"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between + and *"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operator",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "+",
+              "Combines tuples"
+            ],
+            [
+              "*",
+              "Repeats tuple items"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Important Interview Points\n• Tuples are joined using +\n• Tuple multiplication uses *\n• Joining creates a new tuple\n• Original tuples are unchanged\n• Single-item tuple requires comma"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operation",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Join tuples",
+              "t1 + t2"
+            ],
+            [
+              "Repeat tuple",
+              "t * 3"
+            ],
+            [
+              "Single-item tuple",
+              "(\"apple\",)"
+            ],
+            [
+              "Immutable",
+              "Original tuple not modified"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What happens to the original tuples when you join them using the '+' operator?",
+          "answer": "The original tuples remain unchanged. The '+' operator creates a brand new tuple that contains the elements of both."
+        },
+        {
+          "question": "How can you create a tuple that repeats the elements of another tuple three times?",
+          "answer": "You can use the multiplication operator (*): new_tuple = original_tuple * 3."
+        },
+        {
+          "question": "Can you join a tuple with a string directly using the '+' operator?",
+          "answer": "No, you can only concatenate a tuple with another tuple. To add a single string item, you must first convert it into a single-item tuple by adding a trailing comma: tuple1 + ('new_item',)."
+        }
+      ]
+    },
+    {
+      "id": "python-tuple-methods",
+      "title": "Python - Tuple Methods",
+      "category": "Basic",
+      "definition": "Python tuples have only two built-in methods, count() and index(), because they are immutable and do not support methods that modify the collection.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Python tuples have only 2 built-in methods because tuples are immutable (unchangeable)."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Description"
+          ],
+          "rows": [
+            [
+              "count()",
+              "Returns the number of times a value occurs"
+            ],
+            [
+              "index()",
+              "Returns the index of the first occurrence of a value"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1. count() Method\n\nThe count() method returns how many times a specified value appears in the tuple."
+        },
+        {
+          "type": "text",
+          "value": "Syntax\ntuple.count(value)"
+        },
+        {
+          "type": "text",
+          "value": "Example 1"
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)\n\nx = thistuple.count(5)\n\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "2"
+        },
+        {
+          "type": "text",
+          "value": "Because 5 appears 2 times."
+        },
+        {
+          "type": "text",
+          "value": "Example 2"
+        },
+        {
+          "type": "code",
+          "value": "fruits = (\"apple\", \"banana\", \"apple\", \"cherry\", \"apple\")\n\nprint(fruits.count(\"apple\"))"
+        },
+        {
+          "type": "output",
+          "value": "3"
+        },
+        {
+          "type": "text",
+          "value": "Example 3: Boolean Values"
+        },
+        {
+          "type": "code",
+          "value": "numbers = (True, False, True, True)\n\nprint(numbers.count(True))"
+        },
+        {
+          "type": "output",
+          "value": "3"
+        },
+        {
+          "type": "text",
+          "value": "2. index() Method\n\nThe index() method returns the position (index) of the first occurrence of a value."
+        },
+        {
+          "type": "text",
+          "value": "Syntax\ntuple.index(value)"
+        },
+        {
+          "type": "text",
+          "value": "Example 1"
+        },
+        {
+          "type": "code",
+          "value": "thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)\n\nx = thistuple.index(8)\n\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "3"
+        },
+        {
+          "type": "text",
+          "value": "Because the first 8 is at index 3."
+        },
+        {
+          "type": "text",
+          "value": "Example 2"
+        },
+        {
+          "type": "code",
+          "value": "fruits = (\"apple\", \"banana\", \"cherry\")\n\nprint(fruits.index(\"banana\"))"
+        },
+        {
+          "type": "output",
+          "value": "1"
+        },
+        {
+          "type": "text",
+          "value": "Important Note About index()\n\nIf the value is not found, Python raises an error."
+        },
+        {
+          "type": "code",
+          "value": "fruits = (\"apple\", \"banana\", \"cherry\")\n\n# print(fruits.index(\"orange\"))"
+        },
+        {
+          "type": "output",
+          "value": "ValueError"
+        },
+        {
+          "type": "text",
+          "value": "Avoid Error Using in"
+        },
+        {
+          "type": "code",
+          "value": "fruits = (\"apple\", \"banana\", \"cherry\")\n\nif \"orange\" in fruits:\n    print(fruits.index(\"orange\"))\nelse:\n    print(\"Item not found\")"
+        },
+        {
+          "type": "output",
+          "value": "Item not found"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between count() and index()"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Purpose",
+            "Return Type"
+          ],
+          "rows": [
+            [
+              "count()",
+              "Counts occurrences",
+              "Integer"
+            ],
+            [
+              "index()",
+              "Finds position",
+              "Integer"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Example"
+        },
+        {
+          "type": "code",
+          "value": "students = (\"Vasu\", \"Anu\", \"Ravi\", \"Anu\")\n\nprint(\"Anu appears:\", students.count(\"Anu\"))\nprint(\"Ravi index:\", students.index(\"Ravi\"))"
+        },
+        {
+          "type": "output",
+          "value": "Anu appears: 2\nRavi index: 2"
+        },
+        {
+          "type": "text",
+          "value": "Important Interview Points\n• Tuples have only 2 methods.\n• Tuples are immutable.\n• count() counts occurrences.\n• index() returns first occurrence index.\n• index() raises ValueError if item not found."
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Example",
+            "Output"
+          ],
+          "rows": [
+            [
+              "count()",
+              "t.count(5)",
+              "Number of occurrences"
+            ],
+            [
+              "index()",
+              "t.index(5)",
+              "Position of first occurrence"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why do tuples have significantly fewer methods than lists in Python?",
+          "answer": "Tuples are immutable, so they do not support any methods that would modify the collection (like append, remove, sort, or clear). They only provide read-only methods like count() and index()."
+        },
+        {
+          "question": "What happens if you use the .index() method for a value that exists multiple times in a tuple?",
+          "answer": "The .index() method will only return the index of the very first occurrence of that value."
+        },
+        {
+          "question": "How can you safely find the index of an item without risking a ValueError?",
+          "answer": "You should first check if the item exists in the tuple using the 'in' keyword before calling the .index() method."
+        }
+      ]
+    },
+    {
+      "id": "python-sets",
+      "title": "Python Sets",
+      "category": "Basic",
+      "definition": "A set is an unordered, unindexed, and unchangeable collection of unique items. While you cannot modify individual items, you can add or remove them from the set.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "myset = {\"apple\", \"banana\", \"cherry\"}\n\nA set is used to store multiple items in a single variable. A set is:\n• Unordered\n• Unchangeable (Partial: items cannot be changed, but can be added/removed)\n• Unindexed\n• No duplicate values allowed"
+        },
+        {
+          "type": "text",
+          "value": "Creating a Set\n\nSets are written using curly braces {}."
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\nprint(thisset)"
+        },
+        {
+          "type": "output",
+          "value": "{'banana', 'apple', 'cherry'}"
+        },
+        {
+          "type": "text",
+          "value": "⚠️ Order may change every time because sets are unordered."
+        },
+        {
+          "type": "text",
+          "value": "Characteristics of Sets"
+        },
+        {
+          "type": "text",
+          "value": "1. Unordered\n\nSet items do not have a fixed order. Possible outputs for {\"apple\", \"banana\", \"cherry\"} could be {'banana', 'cherry', 'apple'} or any other combination.\n\n⚠️ You cannot access items using index: thisset[0] # Error"
+        },
+        {
+          "type": "text",
+          "value": "2. Unchangeable\n\nYou cannot modify existing items directly. However, you can add or remove items."
+        },
+        {
+          "type": "text",
+          "value": "3. Duplicate Values Not Allowed\n\nSets automatically remove duplicates."
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\", \"apple\"}\nprint(thisset)"
+        },
+        {
+          "type": "output",
+          "value": "{'apple', 'banana', 'cherry'}"
+        },
+        {
+          "type": "text",
+          "value": "Only one \"apple\" is stored."
+        },
+        {
+          "type": "text",
+          "value": "True and 1 in Sets\n\nIn Python, True == 1, so they are treated as duplicates."
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\", True, 1, 2}\nprint(thisset)"
+        },
+        {
+          "type": "output",
+          "value": "{True, 2, 'banana', 'apple', 'cherry'}"
+        },
+        {
+          "type": "text",
+          "value": "1 is ignored because True already exists."
+        },
+        {
+          "type": "text",
+          "value": "False and 0 in Sets\n\nFalse == 0, so they are treated as duplicates."
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\", False, True, 0}\nprint(thisset)"
+        },
+        {
+          "type": "output",
+          "value": "{False, True, 'banana', 'apple', 'cherry'}"
+        },
+        {
+          "type": "text",
+          "value": "0 is ignored because False already exists."
+        },
+        {
+          "type": "text",
+          "value": "Length of a Set\n\nUse len() to find number of items."
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\nprint(len(thisset))"
+        },
+        {
+          "type": "output",
+          "value": "3"
+        },
+        {
+          "type": "text",
+          "value": "Set Items Can Have Different Data Types"
+        },
+        {
+          "type": "code",
+          "value": "set1 = {\"apple\", \"banana\", \"cherry\"}\nset2 = {1, 5, 7, 9, 3}\nset3 = {True, False}\n\n# Mixed Data Types\nmixed_set = {\"abc\", 34, True, 40, \"male\"}"
+        },
+        {
+          "type": "text",
+          "value": "Checking the Data Type"
+        },
+        {
+          "type": "code",
+          "value": "myset = {\"apple\", \"banana\", \"cherry\"}\nprint(type(myset))"
+        },
+        {
+          "type": "output",
+          "value": "<class 'set'>"
+        },
+        {
+          "type": "text",
+          "value": "Using the set() Constructor\n\nYou can also create a set using set()."
+        },
+        {
+          "type": "code",
+          "value": "thisset = set((\"apple\", \"banana\", \"cherry\"))\nprint(thisset)"
+        },
+        {
+          "type": "text",
+          "value": "⚠️ Notice the double parentheses: set((\"apple\", \"banana\", \"cherry\")). This is because set() takes one iterable argument."
+        },
+        {
+          "type": "text",
+          "value": "Important Differences Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "List",
+            "Tuple",
+            "Set"
+          ],
+          "rows": [
+            [
+              "Ordered",
+              "✔️",
+              "✔️",
+              "❌"
+            ],
+            [
+              "Changeable",
+              "✔️",
+              "❌",
+              "Partial (Add/Remove)"
+            ],
+            [
+              "Duplicates Allowed",
+              "✔️",
+              "✔️",
+              "❌"
+            ],
+            [
+              "Indexed",
+              "✔️",
+              "✔️",
+              "❌"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Simple Real-Time Example\n\nRemoving duplicate student names:"
+        },
+        {
+          "type": "code",
+          "value": "students = {\"Ram\", \"Sita\", \"Ram\", \"Krishna\"}\nprint(students)"
+        },
+        {
+          "type": "output",
+          "value": "{'Ram', 'Sita', 'Krishna'}"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why are sets described as 'unordered'?",
+          "answer": "Sets are unordered because their items do not have a defined sequence or fixed position. This means that items may appear in a different order every time you print or iterate through the set."
+        },
+        {
+          "question": "How do sets handle boolean values like True and False in relation to integers?",
+          "answer": "In Python, True is equivalent to 1 and False is equivalent to 0. Since sets only allow unique values, they treat True/1 and False/0 as duplicates and only store the one that was added first."
+        },
+        {
+          "question": "Can you access a specific item in a set using an index (e.g., myset[0])?",
+          "answer": "No, sets are unindexed. Attempting to access an item by index will result in a TypeError."
+        }
+      ]
+    },
+    {
+      "id": "python-access-set-items",
+      "title": "Python - Access Set Items",
+      "category": "Basic",
+      "definition": "Because sets are unordered and unindexed, you cannot access their items using an index. Instead, you must iterate through them using a loop or check for membership using the 'in' keyword.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Access Items in a Set\n\nSets are unordered and unindexed. So, you cannot access set items using index numbers like lists or tuples."
+        },
+        {
+          "type": "text",
+          "value": "❌ Not allowed:"
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\n\n# print(thisset[0])"
+        },
+        {
+          "type": "output",
+          "value": "TypeError: 'set' object is not subscriptable"
+        },
+        {
+          "type": "text",
+          "value": "Loop Through Set Items\n\nYou can access items by using a for loop."
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\n\nfor x in thisset:\n    print(x)"
+        },
+        {
+          "type": "output",
+          "value": "banana\napple\ncherry"
+        },
+        {
+          "type": "text",
+          "value": "⚠️ Order may change because sets are unordered."
+        },
+        {
+          "type": "text",
+          "value": "Check if Item Exists (in Keyword)\n\nUse in to check whether an item exists in a set."
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\n\nprint(\"banana\" in thisset)"
+        },
+        {
+          "type": "output",
+          "value": "True"
+        },
+        {
+          "type": "text",
+          "value": "Check if Item Does NOT Exist (not in)\n\nUse not in to check whether an item is absent."
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\n\nprint(\"banana\" not in thisset)"
+        },
+        {
+          "type": "output",
+          "value": "False"
+        },
+        {
+          "type": "text",
+          "value": "More Examples"
+        },
+        {
+          "type": "text",
+          "value": "Example 1"
+        },
+        {
+          "type": "code",
+          "value": "colors = {\"red\", \"blue\", \"green\"}\nprint(\"red\" in colors)"
+        },
+        {
+          "type": "output",
+          "value": "True"
+        },
+        {
+          "type": "text",
+          "value": "Example 2"
+        },
+        {
+          "type": "code",
+          "value": "colors = {\"red\", \"blue\", \"green\"}\nprint(\"yellow\" in colors)"
+        },
+        {
+          "type": "output",
+          "value": "False"
+        },
+        {
+          "type": "text",
+          "value": "Example 3"
+        },
+        {
+          "type": "code",
+          "value": "numbers = {10, 20, 30, 40}\n\nfor n in numbers:\n    print(n)"
+        },
+        {
+          "type": "output",
+          "value": "40\n10\n20\n30"
+        },
+        {
+          "type": "text",
+          "value": "Change Items in a Set\n\nOnce a set is created, you cannot directly change items."
+        },
+        {
+          "type": "text",
+          "value": "❌ Example"
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\n\n# thisset[1] = \"orange\""
+        },
+        {
+          "type": "output",
+          "value": "TypeError"
+        },
+        {
+          "type": "text",
+          "value": "But You Can Add New Items\n\nUse add() method."
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\n\nthisset.add(\"orange\")\n\nprint(thisset)"
+        },
+        {
+          "type": "output",
+          "value": "{'banana', 'orange', 'apple', 'cherry'}"
+        },
+        {
+          "type": "text",
+          "value": "Quick Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operation",
+            "Allowed?"
+          ],
+          "rows": [
+            [
+              "Access using index",
+              "❌"
+            ],
+            [
+              "Loop through set",
+              "✔️"
+            ],
+            [
+              "Check item using in",
+              "✔️"
+            ],
+            [
+              "Change existing item directly",
+              "❌"
+            ],
+            [
+              "Add new item",
+              "✔️"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What error do you get if you try to access a set item by index?",
+          "answer": "You will get a 'TypeError' stating that a 'set' object is not subscriptable."
+        },
+        {
+          "question": "How can you check if a specific value exists within a set without using a loop?",
+          "answer": "You can use the 'in' keyword (membership operator), which returns True if the value exists and False otherwise."
+        },
+        {
+          "question": "Since you cannot change an item in a set, what is the standard way to 'update' it?",
+          "answer": "You must remove the old item (using .remove() or .remove()) and then add the new item using the .add() method."
+        }
+      ]
+    },
+    {
+      "id": "python-add-set-items",
+      "title": "Python - Add Set Items",
+      "category": "Basic",
+      "definition": "While sets are partially unchangeable, you can add new items to them using the add() method for a single item or the update() method for multiple items from any iterable.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Add Items to a Set\n\nSets are unchangeable, but you can still add new items or remove items. To add items, Python provides:\n• add() → add one item\n• update() → add multiple items"
+        },
+        {
+          "type": "text",
+          "value": "1. add() Method\n\nUse add() to add a single item to a set."
+        },
+        {
+          "type": "text",
+          "value": "Syntax\nsetname.add(item)"
+        },
+        {
+          "type": "text",
+          "value": "Example: Add One Item"
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\n\nthisset.add(\"orange\")\n\nprint(thisset)"
+        },
+        {
+          "type": "output",
+          "value": "{'banana', 'orange', 'apple', 'cherry'}"
+        },
+        {
+          "type": "text",
+          "value": "⚠️ Order may vary because sets are unordered."
+        },
+        {
+          "type": "text",
+          "value": "Adding Duplicate Items\n\nIf the item already exists, it will not be added again."
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\n\nthisset.add(\"apple\")\n\nprint(thisset)"
+        },
+        {
+          "type": "output",
+          "value": "{'banana', 'apple', 'cherry'}"
+        },
+        {
+          "type": "text",
+          "value": "No duplicate value is added."
+        },
+        {
+          "type": "text",
+          "value": "2. update() Method\n\nUse update() to add multiple items from another iterable (Set, List, Tuple, Dictionary, String, etc.)."
+        },
+        {
+          "type": "text",
+          "value": "Syntax\nsetname.update(iterable)"
+        },
+        {
+          "type": "text",
+          "value": "Add One Set into Another Set"
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\ntropical = {\"pineapple\", \"mango\", \"papaya\"}\n\nthisset.update(tropical)\n\nprint(thisset)"
+        },
+        {
+          "type": "output",
+          "value": "{'banana', 'papaya', 'mango', 'apple', 'pineapple', 'cherry'}"
+        },
+        {
+          "type": "text",
+          "value": "Add List Items into a Set"
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\nmylist = [\"kiwi\", \"orange\"]\n\nthisset.update(mylist)\n\nprint(thisset)"
+        },
+        {
+          "type": "output",
+          "value": "{'banana', 'orange', 'apple', 'kiwi', 'cherry'}"
+        },
+        {
+          "type": "text",
+          "value": "Add Tuple Items into a Set"
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\"}\nmytuple = (\"grapes\", \"mango\")\n\nthisset.update(mytuple)\n\nprint(thisset)"
+        },
+        {
+          "type": "output",
+          "value": "{'banana', 'mango', 'grapes', 'apple'}"
+        },
+        {
+          "type": "text",
+          "value": "Add Characters from a String\n\nA string is also iterable. Each character is added separately."
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\"}\n\nthisset.update(\"hi\")\n\nprint(thisset)"
+        },
+        {
+          "type": "output",
+          "value": "{'banana', 'h', 'apple', 'i'}"
+        },
+        {
+          "type": "text",
+          "value": "Add Dictionary to Set\n\nOnly dictionary keys are added."
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\"}\nmydict = {\"name\": \"Ram\", \"age\": 22}\n\nthisset.update(mydict)\n\nprint(thisset)"
+        },
+        {
+          "type": "output",
+          "value": "{'banana', 'name', 'apple', 'age'}"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between add() and update()"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Purpose",
+            "Adds"
+          ],
+          "rows": [
+            [
+              "add()",
+              "Add one item",
+              "Single item"
+            ],
+            [
+              "update()",
+              "Add multiple items",
+              "Iterable items"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Important Note\n\n❌ Wrong: thisset.add([\"kiwi\", \"orange\"])\nOutput: TypeError: unhashable type: 'list'\n\nBecause lists cannot be added as a single set item. Correct way is using .update()."
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Example\n\nRemove duplicate student names while adding new students:"
+        },
+        {
+          "type": "code",
+          "value": "students = {\"Ram\", \"Sita\"}\nnew_students = [\"Krishna\", \"Ram\", \"Anu\"]\n\nstudents.update(new_students)\n\nprint(students)"
+        },
+        {
+          "type": "output",
+          "value": "{'Ram', 'Sita', 'Krishna', 'Anu'}"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the primary difference between the .add() and .update() methods in Python sets?",
+          "answer": "The .add() method is used to add a single element to a set, whereas the .update() method is used to add multiple elements from any iterable (like a list, tuple, or even another set)."
+        },
+        {
+          "question": "What happens if you try to add a list as an item using the .add() method?",
+          "answer": "It will raise a 'TypeError: unhashable type: list' because set items must be hashable (immutable), and a list is mutable. To add the elements of a list, you should use .update() instead."
+        },
+        {
+          "question": "If you update a set with a dictionary, what values are actually added to the set?",
+          "answer": "When updating a set with a dictionary, only the keys of the dictionary are added to the set; the values are ignored."
+        }
+      ]
+    },
+    {
+      "id": "python-remove-set-items",
+      "title": "Python - Remove Set Items",
+      "category": "Basic",
+      "definition": "Python provides several methods to remove items from a set, including remove(), discard(), pop(), clear(), and the del keyword, each with different behaviors regarding missing items and memory.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Python provides several ways to remove items from a set. Methods used:\n• remove()\n• discard()\n• pop()\n• clear()\n• del"
+        },
+        {
+          "type": "text",
+          "value": "1. remove() Method\n\nUse remove() to remove a specific item."
+        },
+        {
+          "type": "text",
+          "value": "Syntax\nsetname.remove(item)"
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\n\nthisset.remove(\"banana\")\n\nprint(thisset)"
+        },
+        {
+          "type": "output",
+          "value": "{'apple', 'cherry'}"
+        },
+        {
+          "type": "text",
+          "value": "⚠️ Important Note: If the item does not exist, remove() gives an error."
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\n\n# thisset.remove(\"orange\")"
+        },
+        {
+          "type": "output",
+          "value": "KeyError: 'orange'"
+        },
+        {
+          "type": "text",
+          "value": "2. discard() Method\n\ndiscard() also removes an item."
+        },
+        {
+          "type": "text",
+          "value": "Syntax\nsetname.discard(item)"
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\n\nthisset.discard(\"banana\")\n\nprint(thisset)"
+        },
+        {
+          "type": "output",
+          "value": "{'apple', 'cherry'}"
+        },
+        {
+          "type": "text",
+          "value": "⚠️ Important Difference: If the item does not exist, discard() does NOT give an error."
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\n\nthisset.discard(\"orange\")\n\nprint(thisset)"
+        },
+        {
+          "type": "output",
+          "value": "{'banana', 'apple', 'cherry'}"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between remove() and discard()"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "If Item Exists",
+            "If Item Does Not Exist"
+          ],
+          "rows": [
+            [
+              "remove()",
+              "Removes item",
+              "❌ Error"
+            ],
+            [
+              "discard()",
+              "Removes item",
+              "✔️ No error"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "3. pop() Method\n\npop() removes a random item from the set. Because sets are unordered, you do not know which item will be removed."
+        },
+        {
+          "type": "text",
+          "value": "Syntax\nsetname.pop()"
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\n\nx = thisset.pop()\n\nprint(x)\nprint(thisset)"
+        },
+        {
+          "type": "output",
+          "value": "banana\n{'apple', 'cherry'}"
+        },
+        {
+          "type": "text",
+          "value": "⚠️ The removed item may be different every time. pop() returns the removed item."
+        },
+        {
+          "type": "text",
+          "value": "pop() on Empty Set"
+        },
+        {
+          "type": "code",
+          "value": "thisset = set()\n# thisset.pop()"
+        },
+        {
+          "type": "output",
+          "value": "KeyError: 'pop from an empty set'"
+        },
+        {
+          "type": "text",
+          "value": "4. clear() Method\n\nclear() removes all items from the set. The set still exists, but becomes empty."
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\n\nthisset.clear()\n\nprint(thisset)"
+        },
+        {
+          "type": "output",
+          "value": "set()"
+        },
+        {
+          "type": "text",
+          "value": "5. del Keyword\n\ndel deletes the entire set completely."
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\n\ndel thisset\n\n# print(thisset)"
+        },
+        {
+          "type": "output",
+          "value": "NameError: name 'thisset' is not defined"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between clear() and del"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Result"
+          ],
+          "rows": [
+            [
+              "clear()",
+              "Empties the set"
+            ],
+            [
+              "del",
+              "Deletes the set completely"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Examples"
+        },
+        {
+          "type": "text",
+          "value": "Example 1: Remove Duplicate Completed Tasks"
+        },
+        {
+          "type": "code",
+          "value": "tasks = {\"Coding\", \"Reading\", \"Exercise\"}\ntasks.remove(\"Reading\")\n\nprint(tasks)"
+        },
+        {
+          "type": "output",
+          "value": "{'Coding', 'Exercise'}"
+        },
+        {
+          "type": "text",
+          "value": "Example 2: Safely Remove Item"
+        },
+        {
+          "type": "code",
+          "value": "fruits = {\"apple\", \"banana\"}\nfruits.discard(\"orange\")\n\nprint(fruits)"
+        },
+        {
+          "type": "output",
+          "value": "{'apple', 'banana'}"
+        },
+        {
+          "type": "text",
+          "value": "Example 3: Empty the Set"
+        },
+        {
+          "type": "code",
+          "value": "students = {\"Ram\", \"Sita\", \"Krishna\"}\nstudents.clear()\n\nprint(students)"
+        },
+        {
+          "type": "output",
+          "value": "set()"
+        },
+        {
+          "type": "text",
+          "value": "Quick Summary Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "remove()",
+              "Remove specific item"
+            ],
+            [
+              "discard()",
+              "Remove item safely"
+            ],
+            [
+              "pop()",
+              "Remove random item"
+            ],
+            [
+              "clear()",
+              "Remove all items"
+            ],
+            [
+              "del",
+              "Delete entire set"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the critical difference between the .remove() and .discard() methods?",
+          "answer": "The .remove() method will raise a 'KeyError' if the specified item is not found in the set. The .discard() method will not raise any error if the item is missing."
+        },
+        {
+          "question": "How does the .pop() method behave with sets compared to lists?",
+          "answer": "In sets, .pop() removes a random element because sets are unordered, and you cannot specify an index. In lists, .pop() typically removes the last item or an item at a specific index."
+        },
+        {
+          "question": "What is the result of using .clear() on a set, and how does it differ from using 'del'?",
+          "answer": ".clear() removes all elements from the set, leaving an empty set variable behind. 'del' deletes the set variable entirely from memory."
+        }
+      ]
+    },
+    {
+      "id": "python-loop-sets",
+      "title": "Python - Loop Sets",
+      "category": "Basic",
+      "definition": "Sets can be iterated using a for loop to access each item. Because sets are unordered, the order of items in the loop may vary between executions.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Loop Through a Set\n\nYou can loop through the items of a set using a for loop. Since sets are unordered, the output order may change every time."
+        },
+        {
+          "type": "text",
+          "value": "Syntax\nfor variable in setname:\n    print(variable)"
+        },
+        {
+          "type": "text",
+          "value": "Example 1: Loop Through a Set"
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\n\nfor x in thisset:\n    print(x)"
+        },
+        {
+          "type": "output",
+          "value": "banana\napple\ncherry"
+        },
+        {
+          "type": "text",
+          "value": "⚠️ Order may vary because sets are unordered."
+        },
+        {
+          "type": "text",
+          "value": "How It Works\n• for x in thisset: x stores one item at a time.\n• Loop continues until all items are printed."
+        },
+        {
+          "type": "text",
+          "value": "Example 2: Print Each Item"
+        },
+        {
+          "type": "code",
+          "value": "colors = {\"red\", \"green\", \"blue\"}\n\nfor color in colors:\n    print(color)"
+        },
+        {
+          "type": "output",
+          "value": "green\nblue\nred"
+        },
+        {
+          "type": "text",
+          "value": "Example 3: Using end"
+        },
+        {
+          "type": "code",
+          "value": "numbers = {1, 2, 3, 4}\n\nfor n in numbers:\n    print(n, end=\" \")"
+        },
+        {
+          "type": "output",
+          "value": "1 2 3 4"
+        },
+        {
+          "type": "text",
+          "value": "Example 4: Check Items While Looping"
+        },
+        {
+          "type": "code",
+          "value": "fruits = {\"apple\", \"banana\", \"mango\"}\n\nfor fruit in fruits:\n    if fruit == \"banana\":\n        print(\"Banana Found\")"
+        },
+        {
+          "type": "output",
+          "value": "Banana Found"
+        },
+        {
+          "type": "text",
+          "value": "Example 5: Count Items Using Loop"
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\n\ncount = 0\n\nfor x in thisset:\n    count += 1\n\nprint(count)"
+        },
+        {
+          "type": "output",
+          "value": "3"
+        },
+        {
+          "type": "text",
+          "value": "Convert Set to List While Looping\n\nSometimes we convert a set into a list for indexing or sorting purposes."
+        },
+        {
+          "type": "code",
+          "value": "thisset = {\"apple\", \"banana\", \"cherry\"}\n\nmylist = list(thisset)\n\nfor x in mylist:\n    print(x)"
+        },
+        {
+          "type": "output",
+          "value": "banana\napple\ncherry"
+        },
+        {
+          "type": "text",
+          "value": "Nested Loop with Sets"
+        },
+        {
+          "type": "code",
+          "value": "set1 = {\"a\", \"b\"}\nset2 = {1, 2}\n\nfor x in set1:\n    for y in set2:\n        print(x, y)"
+        },
+        {
+          "type": "output",
+          "value": "a 1\na 2\nb 1\nb 2"
+        },
+        {
+          "type": "text",
+          "value": "Important Notes Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "Set Support"
+          ],
+          "rows": [
+            [
+              "Ordered",
+              "❌ No"
+            ],
+            [
+              "Indexed",
+              "❌ No"
+            ],
+            [
+              "Supports Looping",
+              "✔️ Yes"
+            ],
+            [
+              "Duplicate Values",
+              "❌ No"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Example: Student Names"
+        },
+        {
+          "type": "code",
+          "value": "students = {\"Ram\", \"Sita\", \"Krishna\"}\n\nfor student in students:\n    print(\"Welcome\", student)"
+        },
+        {
+          "type": "output",
+          "value": "Welcome Ram\nWelcome Krishna\nWelcome Sita"
+        },
+        {
+          "type": "text",
+          "value": "Quick Summary Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operation",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Loop set",
+              "for x in thisset:"
+            ],
+            [
+              "Print item",
+              "print(x)"
+            ],
+            [
+              "Nested loop",
+              "for x in set1: for y in set2:"
+            ],
+            [
+              "Check condition",
+              "if x == value:"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Can you use a while loop with a set in the same way you use it with a list?",
+          "answer": "Not directly using an index, because sets are unindexed. You would first need to convert the set to a list using list() or use an iterator."
+        },
+        {
+          "question": "Does the order of items during a loop through a set match the order in which they were added?",
+          "answer": "No. Sets are unordered, so they do not keep track of the insertion order. The items will appear in an unpredictable order during iteration."
+        },
+        {
+          "question": "Why would you convert a set to a list before looping?",
+          "answer": "Converting a set to a list allows you to sort the items or access them by index, which is not possible with the set itself."
+        }
+      ]
+    },
+    {
+      "id": "python-join-sets",
+      "title": "Python - Join Sets",
+      "category": "Basic",
+      "definition": "Joining sets involves combining elements from two or more sets using methods like union(), update(), intersection(), difference(), and symmetric_difference(), or their corresponding operators.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "There are several ways to join two or more sets in Python."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "union()",
+              "Combines all unique items"
+            ],
+            [
+              "update()",
+              "Adds items into existing set"
+            ],
+            [
+              "intersection()",
+              "Keeps only common items"
+            ],
+            [
+              "difference()",
+              "Keeps items only in first set"
+            ],
+            [
+              "symmetric_difference()",
+              "Keeps non-common items"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1. union()\n\nThe union() method returns a new set containing all items from both sets."
+        },
+        {
+          "type": "code",
+          "value": "set1 = {\"a\", \"b\", \"c\"}\nset2 = {1, 2, 3}\n\nset3 = set1.union(set2)\n\nprint(set3)"
+        },
+        {
+          "type": "output",
+          "value": "{1, 2, 3, 'a', 'b', 'c'}"
+        },
+        {
+          "type": "text",
+          "value": "Using | Operator"
+        },
+        {
+          "type": "code",
+          "value": "set1 = {\"a\", \"b\", \"c\"}\nset2 = {1, 2, 3}\n\nset3 = set1 | set2\n\nprint(set3)"
+        },
+        {
+          "type": "text",
+          "value": "Join Multiple Sets"
+        },
+        {
+          "type": "code",
+          "value": "set1 = {\"a\", \"b\", \"c\"}\nset2 = {1, 2, 3}\nset3 = {\"John\", \"Elena\"}\nset4 = {\"apple\", \"banana\"}\n\n# Using union()\nmyset = set1.union(set2, set3, set4)\n\n# Using |\nmyset2 = set1 | set2 | set3 | set4"
+        },
+        {
+          "type": "text",
+          "value": "Join Set with Tuple\n\nunion() can join sets with other iterable data types like tuples and lists."
+        },
+        {
+          "type": "code",
+          "value": "x = {\"a\", \"b\", \"c\"}\ny = (1, 2, 3)\n\nz = x.union(y)\n\nprint(z)"
+        },
+        {
+          "type": "output",
+          "value": "{1, 2, 3, 'a', 'b', 'c'}"
+        },
+        {
+          "type": "text",
+          "value": "⚠️ The | operator works only between sets."
+        },
+        {
+          "type": "text",
+          "value": "2. update()\n\nupdate() inserts items from one set into another. It changes the original set."
+        },
+        {
+          "type": "code",
+          "value": "set1 = {\"a\", \"b\", \"c\"}\nset2 = {1, 2, 3}\n\nset1.update(set2)\n\nprint(set1)"
+        },
+        {
+          "type": "output",
+          "value": "{1, 2, 3, 'a', 'b', 'c'}"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between union() and update()"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Returns New Set",
+            "Changes Original Set"
+          ],
+          "rows": [
+            [
+              "union()",
+              "✔️ Yes",
+              "❌ No"
+            ],
+            [
+              "update()",
+              "❌ No",
+              "✔️ Yes"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "3. intersection()\n\nKeeps only duplicate/common items."
+        },
+        {
+          "type": "code",
+          "value": "set1 = {\"apple\", \"banana\", \"cherry\"}\nset2 = {\"google\", \"microsoft\", \"apple\"}\n\nset3 = set1.intersection(set2)\n\nprint(set3)"
+        },
+        {
+          "type": "output",
+          "value": "{'apple'}"
+        },
+        {
+          "type": "text",
+          "value": "Using & Operator"
+        },
+        {
+          "type": "code",
+          "value": "set3 = set1 & set2"
+        },
+        {
+          "type": "text",
+          "value": "intersection_update()\n\nChanges the original set and keeps only common items."
+        },
+        {
+          "type": "code",
+          "value": "set1 = {\"apple\", \"banana\", \"cherry\"}\nset2 = {\"google\", \"microsoft\", \"apple\"}\n\nset1.intersection_update(set2)\n\nprint(set1)"
+        },
+        {
+          "type": "output",
+          "value": "{'apple'}"
+        },
+        {
+          "type": "text",
+          "value": "True and 1 in Intersection\n\nTrue and 1 are treated as duplicates. Same for False and 0."
+        },
+        {
+          "type": "code",
+          "value": "set1 = {\"apple\", 1, \"banana\", 0, \"cherry\"}\nset2 = {False, \"google\", 1, \"apple\", 2, True}\n\nset3 = set1.intersection(set2)\n\nprint(set3)"
+        },
+        {
+          "type": "output",
+          "value": "{False, 1, 'apple'}"
+        },
+        {
+          "type": "text",
+          "value": "4. difference()\n\nReturns items from first set that are not in second set."
+        },
+        {
+          "type": "code",
+          "value": "set1 = {\"apple\", \"banana\", \"cherry\"}\nset2 = {\"google\", \"microsoft\", \"apple\"}\n\nset3 = set1.difference(set2)\n\nprint(set3)"
+        },
+        {
+          "type": "output",
+          "value": "{'banana', 'cherry'}"
+        },
+        {
+          "type": "text",
+          "value": "Using - Operator"
+        },
+        {
+          "type": "code",
+          "value": "set3 = set1 - set2"
+        },
+        {
+          "type": "text",
+          "value": "difference_update()\n\nChanges original set by removing common items."
+        },
+        {
+          "type": "code",
+          "value": "set1 = {\"apple\", \"banana\", \"cherry\"}\nset2 = {\"google\", \"microsoft\", \"apple\"}\n\nset1.difference_update(set2)\n\nprint(set1)"
+        },
+        {
+          "type": "output",
+          "value": "{'banana', 'cherry'}"
+        },
+        {
+          "type": "text",
+          "value": "5. symmetric_difference()\n\nKeeps items that are NOT common in both sets."
+        },
+        {
+          "type": "code",
+          "value": "set1 = {\"apple\", \"banana\", \"cherry\"}\nset2 = {\"google\", \"microsoft\", \"apple\"}\n\nset3 = set1.symmetric_difference(set2)\n\nprint(set3)"
+        },
+        {
+          "type": "output",
+          "value": "{'banana', 'cherry', 'google', 'microsoft'}"
+        },
+        {
+          "type": "text",
+          "value": "Using ^ Operator"
+        },
+        {
+          "type": "code",
+          "value": "set3 = set1 ^ set2"
+        },
+        {
+          "type": "text",
+          "value": "symmetric_difference_update()\n\nChanges original set and keeps only non-common items."
+        },
+        {
+          "type": "code",
+          "value": "set1 = {\"apple\", \"banana\", \"cherry\"}\nset2 = {\"google\", \"microsoft\", \"apple\"}\n\nset1.symmetric_difference_update(set2)\n\nprint(set1)"
+        },
+        {
+          "type": "output",
+          "value": "{'banana', 'cherry', 'google', 'microsoft'}"
+        },
+        {
+          "type": "text",
+          "value": "Quick Summary Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Result"
+          ],
+          "rows": [
+            [
+              "union()",
+              "All unique items"
+            ],
+            [
+              "update()",
+              "Adds items to original set"
+            ],
+            [
+              "intersection()",
+              "Common items only"
+            ],
+            [
+              "difference()",
+              "Items only in first set"
+            ],
+            [
+              "symmetric_difference()",
+              "Non-common items"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Operators Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operator",
+            "Equivalent Method"
+          ],
+          "rows": [
+            [
+              "|",
+              "union()"
+            ],
+            [
+              "&",
+              "intersection()"
+            ],
+            [
+              "-",
+              "difference()"
+            ],
+            [
+              "^",
+              "symmetric_difference()"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between union() and intersection() in Python sets?",
+          "answer": "union() combines all unique elements from both sets, while intersection() only returns elements that are present in both sets."
+        },
+        {
+          "question": "Which set method would you use if you want to find elements that are in set A but not in set B?",
+          "answer": "You would use the .difference() method (or the '-' operator): setA.difference(setB)."
+        },
+        {
+          "question": "What does the .symmetric_difference() method return?",
+          "answer": "It returns a new set containing only the elements that are unique to each set (elements not present in both sets)."
+        }
+      ]
+    },
+    {
+      "id": "python-frozenset",
+      "title": "Python frozenset",
+      "category": "Basic",
+      "definition": "A frozenset is an immutable version of a Python set. Once created, its elements cannot be added, removed, or modified, making it hashable and suitable for use as dictionary keys or elements of other sets.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "A frozenset is an immutable version of a set.\n• set → mutable (can change)\n• frozenset → immutable (cannot change)\n\nOnce a frozenset is created, you cannot add, remove, or update items."
+        },
+        {
+          "type": "text",
+          "value": "Syntax\nfrozenset(iterable)"
+        },
+        {
+          "type": "text",
+          "value": "Creating a frozenset"
+        },
+        {
+          "type": "code",
+          "value": "myset = frozenset({\"apple\", \"banana\", \"cherry\"})\n\nprint(myset)"
+        },
+        {
+          "type": "output",
+          "value": "frozenset({'banana', 'apple', 'cherry'})"
+        },
+        {
+          "type": "text",
+          "value": "Type of frozenset"
+        },
+        {
+          "type": "code",
+          "value": "myset = frozenset({\"apple\", \"banana\"})\n\nprint(type(myset))"
+        },
+        {
+          "type": "output",
+          "value": "<class 'frozenset'>"
+        },
+        {
+          "type": "text",
+          "value": "Why Use frozenset?\n• Data that should not change\n• Safer collections\n• Sets as dictionary keys\n• Sets inside another set"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between set and frozenset"
+        },
+        {
+          "type": "table",
+          "headers": ["Feature", "set", "frozenset"],
+          "rows": [
+            ["Mutable", "✔️ Yes", "❌ No"],
+            ["Add items", "✔️ Yes", "❌ No"],
+            ["Remove items", "✔️ Yes", "❌ No"],
+            ["Indexed", "❌ No", "❌ No"],
+            ["Duplicate values", "❌ No", "❌ No"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Cannot Add Items"
+        },
+        {
+          "type": "code",
+          "value": "myset = frozenset({\"apple\", \"banana\"})\n\n# myset.add(\"orange\")"
+        },
+        {
+          "type": "output",
+          "value": "AttributeError: 'frozenset' object has no attribute 'add'"
+        },
+        {
+          "type": "text",
+          "value": "Cannot Remove Items"
+        },
+        {
+          "type": "code",
+          "value": "myset = frozenset({\"apple\", \"banana\"})\n\n# myset.remove(\"apple\")"
+        },
+        {
+          "type": "output",
+          "value": "AttributeError: 'frozenset' object has no attribute 'remove'"
+        },
+        {
+          "type": "text",
+          "value": "Loop Through frozenset\n\nYou can loop through items using for."
+        },
+        {
+          "type": "code",
+          "value": "myset = frozenset({\"apple\", \"banana\", \"cherry\"})\n\nfor x in myset:\n    print(x)"
+        },
+        {
+          "type": "output",
+          "value": "banana\napple\ncherry"
+        },
+        {
+          "type": "text",
+          "value": "Check Item Exists"
+        },
+        {
+          "type": "code",
+          "value": "myset = frozenset({\"apple\", \"banana\", \"cherry\"})\n\nprint(\"banana\" in myset)"
+        },
+        {
+          "type": "output",
+          "value": "True"
+        },
+        {
+          "type": "text",
+          "value": "frozenset with List"
+        },
+        {
+          "type": "code",
+          "value": "numbers = [1, 2, 3, 4]\n\nfset = frozenset(numbers)\n\nprint(fset)"
+        },
+        {
+          "type": "output",
+          "value": "frozenset({1, 2, 3, 4})"
+        },
+        {
+          "type": "text",
+          "value": "frozenset Methods\n\nfrozenset supports read-only set methods:"
+        },
+        {
+          "type": "table",
+          "headers": ["Method", "Purpose"],
+          "rows": [
+            ["union()", "Combine sets"],
+            ["intersection()", "Common items"],
+            ["difference()", "Different items"],
+            ["issubset()", "Check subset"],
+            ["issuperset()", "Check superset"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Example: union()"
+        },
+        {
+          "type": "code",
+          "value": "a = frozenset({1, 2, 3})\nb = frozenset({3, 4, 5})\n\nc = a.union(b)\n\nprint(c)"
+        },
+        {
+          "type": "output",
+          "value": "frozenset({1, 2, 3, 4, 5})"
+        },
+        {
+          "type": "text",
+          "value": "Example: intersection()"
+        },
+        {
+          "type": "code",
+          "value": "a = frozenset({1, 2, 3})\nb = frozenset({2, 3, 4})\n\nprint(a.intersection(b))"
+        },
+        {
+          "type": "output",
+          "value": "frozenset({2, 3})"
+        },
+        {
+          "type": "text",
+          "value": "frozenset as Dictionary Key\n\nNormal sets cannot be dictionary keys because they are mutable. But frozenset can be used."
+        },
+        {
+          "type": "code",
+          "value": "mydict = {\n    frozenset({1, 2, 3}): \"Numbers\"\n}\n\nprint(mydict)"
+        },
+        {
+          "type": "output",
+          "value": "{frozenset({1, 2, 3}): 'Numbers'}"
+        },
+        {
+          "type": "text",
+          "value": "Set Inside Another Set\n\nNormal sets cannot be stored inside sets."
+        },
+        {
+          "type": "code",
+          "value": "a = {1, 2}\n# b = {a}\n# Output: TypeError: unhashable type: 'set'"
+        },
+        {
+          "type": "text",
+          "value": "Using frozenset"
+        },
+        {
+          "type": "code",
+          "value": "a = frozenset({1, 2})\n\nb = {a}\n\nprint(b)"
+        },
+        {
+          "type": "output",
+          "value": "{frozenset({1, 2})}"
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Example: Store permanent user roles"
+        },
+        {
+          "type": "code",
+          "value": "roles = frozenset({\"Admin\", \"Manager\", \"HR\"})\n\nprint(roles)"
+        },
+        {
+          "type": "text",
+          "value": "These roles cannot be modified accidentally."
+        },
+        {
+          "type": "text",
+          "value": "Quick Summary"
+        },
+        {
+          "type": "table",
+          "headers": ["Topic", "frozenset Support"],
+          "rows": [
+            ["Mutable", "❌ No"],
+            ["Ordered", "❌ No"],
+            ["Duplicate values", "❌ No"],
+            ["Add/Remove items", "❌ Not allowed"],
+            ["Looping", "✔️ Yes"],
+            ["Membership check", "✔️ Yes"],
+            ["Dictionary key", "✔️ Yes"]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the main difference between a set and a frozenset?",
+          "answer": "A set is mutable (you can add or remove items), while a frozenset is immutable (it cannot be changed after creation)."
+        },
+        {
+          "question": "Why can a frozenset be used as a dictionary key while a normal set cannot?",
+          "answer": "Dictionary keys must be hashable (immutable). Since a normal set is mutable, it is unhashable. A frozenset is immutable and therefore hashable, making it valid for use as a key."
+        },
+        {
+          "question": "Does a frozenset support the .add() or .remove() methods?",
+          "answer": "No. Attempting to use .add() or .remove() on a frozenset will raise an AttributeError because it is immutable."
+        }
+      ]
+    },
+    {
+      "id": "python-frozenset-methods",
+      "title": "Python frozenset Methods",
+      "category": "Basic",
+      "definition": "While frozensets are immutable and do not support methods that modify data (like add or remove), they support a wide range of read-only operations for set comparison, subset checking, and combining elements.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "A frozenset is immutable, so methods that modify data like add() or remove() are not available. However, many read-only set operations are supported."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "copy()",
+              "Returns a copy"
+            ],
+            [
+              "difference()",
+              "Items only in first set"
+            ],
+            [
+              "intersection()",
+              "Common items"
+            ],
+            [
+              "isdisjoint()",
+              "Check no common items"
+            ],
+            [
+              "issubset()",
+              "Check subset"
+            ],
+            [
+              "issuperset()",
+              "Check superset"
+            ],
+            [
+              "symmetric_difference()",
+              "Non-common items"
+            ],
+            [
+              "union()",
+              "Combine all unique items"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1. copy()\n\nReturns a copy of the frozenset."
+        },
+        {
+          "type": "code",
+          "value": "a = frozenset({1, 2, 3})\n\nb = a.copy()\n\nprint(b)"
+        },
+        {
+          "type": "output",
+          "value": "frozenset({1, 2, 3})"
+        },
+        {
+          "type": "text",
+          "value": "2. difference()\n\nReturns items present in first frozenset but not in second. Use the - operator as a shorthand."
+        },
+        {
+          "type": "code",
+          "value": "a = frozenset({1, 2, 3, 4})\nb = frozenset({3, 4})\n\nc = a.difference(b)\n# OR\n# c = a - b\n\nprint(c)"
+        },
+        {
+          "type": "output",
+          "value": "frozenset({1, 2})"
+        },
+        {
+          "type": "text",
+          "value": "3. intersection()\n\nReturns common items from both frozensets. Use the & operator as a shorthand."
+        },
+        {
+          "type": "code",
+          "value": "a = frozenset({1, 2, 3})\nb = frozenset({2, 3, 4})\n\nc = a.intersection(b)\n# OR\n# c = a & b\n\nprint(c)"
+        },
+        {
+          "type": "output",
+          "value": "frozenset({2, 3})"
+        },
+        {
+          "type": "text",
+          "value": "4. isdisjoint()\n\nReturns True if both sets have no common items."
+        },
+        {
+          "type": "code",
+          "value": "a = frozenset({1, 2})\nb = frozenset({3, 4})\n\nprint(a.isdisjoint(b))"
+        },
+        {
+          "type": "output",
+          "value": "True"
+        },
+        {
+          "type": "text",
+          "value": "5. issubset()\n\nReturns True if all items of one set exist in another. Use the <= operator as a shorthand."
+        },
+        {
+          "type": "code",
+          "value": "a = frozenset({1, 2})\nb = frozenset({1, 2, 3, 4})\n\nprint(a.issubset(b))"
+        },
+        {
+          "type": "output",
+          "value": "True"
+        },
+        {
+          "type": "text",
+          "value": "6. issuperset()\n\nReturns True if a set contains all items of another set. Use the >= operator as a shorthand."
+        },
+        {
+          "type": "code",
+          "value": "a = frozenset({1, 2, 3, 4})\nb = frozenset({1, 2})\n\nprint(a.issuperset(b))"
+        },
+        {
+          "type": "output",
+          "value": "True"
+        },
+        {
+          "type": "text",
+          "value": "7. symmetric_difference()\n\nReturns items not common in both sets. Use the ^ operator as a shorthand."
+        },
+        {
+          "type": "code",
+          "value": "a = frozenset({1, 2, 3})\nb = frozenset({3, 4, 5})\n\nc = a.symmetric_difference(b)\n# OR\n# c = a ^ b\n\nprint(c)"
+        },
+        {
+          "type": "output",
+          "value": "frozenset({1, 2, 4, 5})"
+        },
+        {
+          "type": "text",
+          "value": "8. union()\n\nCombines all unique items. Use the | operator as a shorthand."
+        },
+        {
+          "type": "code",
+          "value": "a = frozenset({1, 2})\nb = frozenset({3, 4})\n\nc = a.union(b)\n# OR\n# c = a | b\n\nprint(c)"
+        },
+        {
+          "type": "output",
+          "value": "frozenset({1, 2, 3, 4})"
+        },
+        {
+          "type": "text",
+          "value": "Chaining Multiple Methods"
+        },
+        {
+          "type": "code",
+          "value": "a = frozenset({1, 2})\nb = frozenset({2, 3})\nc = frozenset({4, 5})\n\nresult = a.union(b).union(c)\n\nprint(result)"
+        },
+        {
+          "type": "output",
+          "value": "frozenset({1, 2, 3, 4, 5})"
+        },
+        {
+          "type": "text",
+          "value": "⚠️ Important Note: These methods are NOT available in frozenset because it is immutable:\n• add()\n• remove()\n• discard()\n• update()\n• clear()\n• pop()"
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Example: Student Course Groups"
+        },
+        {
+          "type": "code",
+          "value": "python_students = frozenset({\"Ram\", \"Sita\", \"Anu\"})\njava_students = frozenset({\"Sita\", \"Kiran\"})\n\ncommon = python_students.intersection(java_students)\n\nprint(common)"
+        },
+        {
+          "type": "output",
+          "value": "frozenset({'Sita'})"
+        },
+        {
+          "type": "text",
+          "value": "Quick Summary Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "union()",
+              "Combine sets"
+            ],
+            [
+              "intersection()",
+              "Common items"
+            ],
+            [
+              "difference()",
+              "Different items"
+            ],
+            [
+              "symmetric_difference()",
+              "Non-common items"
+            ],
+            [
+              "issubset()",
+              "Check subset"
+            ],
+            [
+              "issuperset()",
+              "Check superset"
+            ],
+            [
+              "isdisjoint()",
+              "Check no common items"
+            ],
+            [
+              "copy()",
+              "Copy frozenset"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Can you use the .union() method on a frozenset to join it with a regular set?",
+          "answer": "Yes. A frozenset's .union() method can accept any iterable, including a regular set. The result will always be a new frozenset."
+        },
+        {
+          "question": "What is the difference between .difference() and .symmetric_difference() in frozensets?",
+          "answer": ".difference() returns items only in the first set. .symmetric_difference() returns items that are unique to each set (not common to both)."
+        },
+        {
+          "question": "How do you check if two frozensets have absolutely no items in common?",
+          "answer": "You can use the .isdisjoint() method, which returns True if there are zero common elements."
+        }
+      ]
+    },
+    {
+      "id": "python-set-methods-complete",
+      "title": "Python - Set Methods",
+      "category": "Basic",
+      "definition": "Python sets provide a comprehensive collection of built-in methods designed for element manipulation, set comparison, and performing mathematical operations such as union, intersection, and difference.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Python sets provide many built-in methods to add, remove, join, and compare sets."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Description"
+          ],
+          "rows": [
+            [
+              "add()",
+              "Adds one item"
+            ],
+            [
+              "clear()",
+              "Removes all items"
+            ],
+            [
+              "copy()",
+              "Returns copy of set"
+            ],
+            [
+              "difference()",
+              "Items only in first set"
+            ],
+            [
+              "difference_update()",
+              "Removes common items"
+            ],
+            [
+              "discard()",
+              "Removes item safely"
+            ],
+            [
+              "intersection()",
+              "Common items only"
+            ],
+            [
+              "intersection_update()",
+              "Keeps only common items"
+            ],
+            [
+              "isdisjoint()",
+              "Checks no common items"
+            ],
+            [
+              "issubset()",
+              "Checks subset"
+            ],
+            [
+              "issuperset()",
+              "Checks superset"
+            ],
+            [
+              "pop()",
+              "Removes random item"
+            ],
+            [
+              "remove()",
+              "Removes specific item"
+            ],
+            [
+              "symmetric_difference()",
+              "Non-common items"
+            ],
+            [
+              "symmetric_difference_update()",
+              "Updates with non-common items"
+            ],
+            [
+              "union()",
+              "Combines sets"
+            ],
+            [
+              "update()",
+              "Adds items from another iterable"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1. add()\nAdds one item to the set."
+        },
+        {
+          "type": "code",
+          "value": "fruits = {\"apple\", \"banana\"}\nfruits.add(\"orange\")\n\nprint(fruits)"
+        },
+        {
+          "type": "output",
+          "value": "{'banana', 'orange', 'apple'}"
+        },
+        {
+          "type": "text",
+          "value": "2. clear()\nRemoves all items from the set."
+        },
+        {
+          "type": "code",
+          "value": "fruits = {\"apple\", \"banana\"}\nfruits.clear()\n\nprint(fruits)"
+        },
+        {
+          "type": "output",
+          "value": "set()"
+        },
+        {
+          "type": "text",
+          "value": "3. copy()\nReturns a copy of the set."
+        },
+        {
+          "type": "code",
+          "value": "a = {\"apple\", \"banana\"}\nb = a.copy()\n\nprint(b)"
+        },
+        {
+          "type": "output",
+          "value": "{'apple', 'banana'}"
+        },
+        {
+          "type": "text",
+          "value": "4. difference()\nReturns items present only in first set."
+        },
+        {
+          "type": "code",
+          "value": "a = {\"apple\", \"banana\", \"cherry\"}\nb = {\"banana\"}\n\nprint(a.difference(b))"
+        },
+        {
+          "type": "output",
+          "value": "{'apple', 'cherry'}"
+        },
+        {
+          "type": "text",
+          "value": "5. difference_update()\nRemoves common items from original set."
+        },
+        {
+          "type": "code",
+          "value": "a = {\"apple\", \"banana\", \"cherry\"}\nb = {\"banana\"}\n\na.difference_update(b)\n\nprint(a)"
+        },
+        {
+          "type": "output",
+          "value": "{'apple', 'cherry'}"
+        },
+        {
+          "type": "text",
+          "value": "6. discard()\nRemoves item safely without error."
+        },
+        {
+          "type": "code",
+          "value": "fruits = {\"apple\", \"banana\"}\nfruits.discard(\"banana\")\n\nprint(fruits)"
+        },
+        {
+          "type": "output",
+          "value": "{'apple'}"
+        },
+        {
+          "type": "text",
+          "value": "7. intersection()\nReturns common items."
+        },
+        {
+          "type": "code",
+          "value": "a = {\"apple\", \"banana\"}\nb = {\"banana\", \"orange\"}\n\nprint(a.intersection(b))"
+        },
+        {
+          "type": "output",
+          "value": "{'banana'}"
+        },
+        {
+          "type": "text",
+          "value": "8. intersection_update()\nKeeps only common items in original set."
+        },
+        {
+          "type": "code",
+          "value": "a = {\"apple\", \"banana\"}\nb = {\"banana\", \"orange\"}\n\na.intersection_update(b)\n\nprint(a)"
+        },
+        {
+          "type": "output",
+          "value": "{'banana'}"
+        },
+        {
+          "type": "text",
+          "value": "9. isdisjoint()\nReturns True if no common items exist."
+        },
+        {
+          "type": "code",
+          "value": "a = {\"apple\", \"banana\"}\nb = {\"orange\", \"kiwi\"}\n\nprint(a.isdisjoint(b))"
+        },
+        {
+          "type": "output",
+          "value": "True"
+        },
+        {
+          "type": "text",
+          "value": "10. issubset()\nChecks whether all items exist in another set."
+        },
+        {
+          "type": "code",
+          "value": "a = {\"apple\"}\nb = {\"apple\", \"banana\"}\n\nprint(a.issubset(b))"
+        },
+        {
+          "type": "output",
+          "value": "True"
+        },
+        {
+          "type": "text",
+          "value": "11. issuperset()\nChecks whether set contains all items of another set."
+        },
+        {
+          "type": "code",
+          "value": "a = {\"apple\", \"banana\"}\nb = {\"apple\"}\n\nprint(a.issuperset(b))"
+        },
+        {
+          "type": "output",
+          "value": "True"
+        },
+        {
+          "type": "text",
+          "value": "12. pop()\nRemoves random item."
+        },
+        {
+          "type": "code",
+          "value": "fruits = {\"apple\", \"banana\", \"orange\"}\n\nx = fruits.pop()\n\nprint(x)\nprint(fruits)"
+        },
+        {
+          "type": "output",
+          "value": "banana\n{'apple', 'orange'}"
+        },
+        {
+          "type": "text",
+          "value": "13. remove()\nRemoves specific item. Gives error if item does not exist."
+        },
+        {
+          "type": "code",
+          "value": "fruits = {\"apple\", \"banana\"}\nfruits.remove(\"banana\")\n\nprint(fruits)"
+        },
+        {
+          "type": "output",
+          "value": "{'apple'}"
+        },
+        {
+          "type": "text",
+          "value": "14. symmetric_difference()\nReturns non-common items."
+        },
+        {
+          "type": "code",
+          "value": "a = {\"apple\", \"banana\"}\nb = {\"banana\", \"orange\"}\n\nprint(a.symmetric_difference(b))"
+        },
+        {
+          "type": "output",
+          "value": "{'apple', 'orange'}"
+        },
+        {
+          "type": "text",
+          "value": "15. symmetric_difference_update()\nUpdates original set with non-common items."
+        },
+        {
+          "type": "code",
+          "value": "a = {\"apple\", \"banana\"}\nb = {\"banana\", \"orange\"}\n\na.symmetric_difference_update(b)\n\nprint(a)"
+        },
+        {
+          "type": "output",
+          "value": "{'apple', 'orange'}"
+        },
+        {
+          "type": "text",
+          "value": "16. union()\nCombines all unique items."
+        },
+        {
+          "type": "code",
+          "value": "a = {\"apple\", \"banana\"}\nb = {\"orange\", \"kiwi\"}\n\nprint(a.union(b))"
+        },
+        {
+          "type": "output",
+          "value": "{'banana', 'orange', 'apple', 'kiwi'}"
+        },
+        {
+          "type": "text",
+          "value": "17. update()\nAdds items from another iterable."
+        },
+        {
+          "type": "code",
+          "value": "a = {\"apple\", \"banana\"}\nb = {\"orange\", \"kiwi\"}\n\na.update(b)\n\nprint(a)"
+        },
+        {
+          "type": "output",
+          "value": "{'banana', 'orange', 'apple', 'kiwi'}"
+        },
+        {
+          "type": "text",
+          "value": "Operators Equivalent"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operator",
+            "Method"
+          ],
+          "rows": [
+            [
+              "|",
+              "union()"
+            ],
+            [
+              "&",
+              "intersection()"
+            ],
+            [
+              "-",
+              "difference()"
+            ],
+            [
+              "^",
+              "symmetric_difference()"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Example: Student Groups"
+        },
+        {
+          "type": "code",
+          "value": "python_students = {\"Ram\", \"Sita\"}\njava_students = {\"Sita\", \"Kiran\"}\n\nall_students = python_students.union(java_students)\n\nprint(all_students)"
+        },
+        {
+          "type": "output",
+          "value": "{'Ram', 'Sita', 'Kiran'}"
+        },
+        {
+          "type": "text",
+          "value": "Quick Summary Categories"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Category",
+            "Methods"
+          ],
+          "rows": [
+            [
+              "Add Items",
+              "add(), update()"
+            ],
+            [
+              "Remove Items",
+              "remove(), discard(), pop(), clear()"
+            ],
+            [
+              "Join Sets",
+              "union(), intersection()"
+            ],
+            [
+              "Compare Sets",
+              "issubset(), issuperset(), isdisjoint()"
+            ],
+            [
+              "Modify Sets",
+              "difference_update(), intersection_update()"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between remove() and discard()?",
+          "answer": "Both remove an item, but remove() raises a KeyError if the item is not found, while discard() does nothing."
+        },
+        {
+          "question": "How do 'update' methods (like difference_update) differ from their counterparts (like difference)?",
+          "answer": "Counterparts return a NEW set without modifying the original. 'Update' methods modify the ORIGINAL set in-place and usually return None."
+        },
+        {
+          "question": "What happens when you use .pop() on a set?",
+          "answer": "It removes and returns a random element from the set. Since sets are unordered, you cannot predict which element will be removed."
+        }
+      ]
+    },
+    {
+      "id": "python-dictionaries",
+      "title": "Python Dictionaries",
+      "category": "Basic",
+      "definition": "A Python dictionary is an ordered (as of Python 3.7), changeable collection that stores data in key:value pairs. Dictionaries do not allow duplicate keys and are highly efficient for data retrieval.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "A dictionary in Python is used to store data in key : value pairs.\n• Keys must be unique\n• Values can be any data type\n\nDictionaries are:\n• Ordered\n• Changeable (mutable)\n• No duplicate keys allowed"
+        },
+        {
+          "type": "text",
+          "value": "Creating a Dictionary"
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nprint(thisdict)"
+        },
+        {
+          "type": "output",
+          "value": "{'brand': 'Ford', 'model': 'Mustang', 'year': 1964}"
+        },
+        {
+          "type": "text",
+          "value": "Access Dictionary Items\n\nUse the key name inside square brackets []."
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nprint(thisdict[\"brand\"])"
+        },
+        {
+          "type": "output",
+          "value": "Ford"
+        },
+        {
+          "type": "text",
+          "value": "Ordered or Unordered?\n\nAs of Python version 3.7, dictionaries are ordered. In Python 3.6 and earlier, dictionaries were unordered.\n\nBeing 'Ordered' means:\n• Items keep insertion order\n• Order will remain same"
+        },
+        {
+          "type": "code",
+          "value": "data = {\n  \"a\": 1,\n  \"b\": 2,\n  \"c\": 3\n}\n\nprint(data)"
+        },
+        {
+          "type": "output",
+          "value": "{'a': 1, 'b': 2, 'c': 3}"
+        },
+        {
+          "type": "text",
+          "value": "Changeable\n\nDictionaries are mutable, so values can be changed."
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"year\": 1964\n}\n\nthisdict[\"year\"] = 2025\n\nprint(thisdict)"
+        },
+        {
+          "type": "output",
+          "value": "{'brand': 'Ford', 'year': 2025}"
+        },
+        {
+          "type": "text",
+          "value": "Duplicate Keys Not Allowed\n\nIf duplicate keys are used, the latest value overwrites the old value."
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"year\": 1964,\n  \"year\": 2020\n}\n\nprint(thisdict)"
+        },
+        {
+          "type": "output",
+          "value": "{'brand': 'Ford', 'year': 2020}"
+        },
+        {
+          "type": "text",
+          "value": "Dictionary Length\n\nUse len() to count items."
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nprint(len(thisdict))"
+        },
+        {
+          "type": "output",
+          "value": "3"
+        },
+        {
+          "type": "text",
+          "value": "Dictionary Data Types\n\nDictionary values can store different data types, including lists."
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"electric\": False,\n  \"year\": 1964,\n  \"colors\": [\"red\", \"white\", \"blue\"]\n}\n\nprint(thisdict)"
+        },
+        {
+          "type": "output",
+          "value": "{\n 'brand': 'Ford',\n 'electric': False,\n 'year': 1964,\n 'colors': ['red', 'white', 'blue']\n}"
+        },
+        {
+          "type": "text",
+          "value": "type() Function\n\nUse type() to check the data type."
+        },
+        {
+          "type": "code",
+          "value": "print(type(thisdict))"
+        },
+        {
+          "type": "output",
+          "value": "<class 'dict'>"
+        },
+        {
+          "type": "text",
+          "value": "Using dict() Constructor\n\nYou can also create a dictionary using the dict() constructor."
+        },
+        {
+          "type": "code",
+          "value": "thisdict = dict(\n  name = \"John\",\n  age = 36,\n  country = \"Norway\"\n)\n\nprint(thisdict)"
+        },
+        {
+          "type": "output",
+          "value": "{'name': 'John', 'age': 36, 'country': 'Norway'}"
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Example\n\nStoring a student record:"
+        },
+        {
+          "type": "code",
+          "value": "student = {\n  \"id\": 101,\n  \"name\": \"Vasudha\",\n  \"course\": \"Python\",\n  \"marks\": 95\n}\n\nprint(student[\"name\"])\nprint(student[\"marks\"])"
+        },
+        {
+          "type": "output",
+          "value": "Vasudha\n95"
+        },
+        {
+          "type": "text",
+          "value": "Important Points"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Ordered",
+              "Maintains insertion order"
+            ],
+            [
+              "Changeable",
+              "Can add/update/delete items"
+            ],
+            [
+              "Duplicate Keys",
+              "Not allowed (overwrites older)"
+            ],
+            [
+              "Syntax",
+              "{key: value}"
+            ],
+            [
+              "Data Type",
+              "dict"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Dictionary Syntax Guide"
+        },
+        {
+          "type": "code",
+          "value": "dictionary_name = {\n   key1: value1,\n   key2: value2\n}"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What happens if you try to add a duplicate key to a Python dictionary?",
+          "answer": "Python dictionaries do not allow duplicate keys. If you provide a duplicate key, the latest value assigned to that key will overwrite the previous one."
+        },
+        {
+          "question": "Since which version of Python are dictionaries considered 'ordered'?",
+          "answer": "Dictionaries are considered ordered starting from Python version 3.7. In version 3.6, they were also ordered in CPython, but it became a language feature in 3.7."
+        },
+        {
+          "question": "How do you access a value in a dictionary if you know its key?",
+          "answer": "You can access a value by placing the key name inside square brackets [] after the dictionary variable, e.g., my_dict['key_name']."
+        }
+      ]
+    },
+    {
       "id": "python-for-loop",
       "title": "For Loop",
       "category": "Loops",

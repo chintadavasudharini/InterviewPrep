@@ -15,7 +15,7 @@ let mysqlEnd = -1;
 for (let i = mysqlStart; i < content.length; i++) {
     if (content[i] === '[') balance++;
     else if (content[i] === ']') balance--;
-    
+
     if (balance === 0) {
         mysqlEnd = i;
         break;
