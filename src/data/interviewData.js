@@ -10349,7 +10349,7 @@ export const interviewData = {
       "sections": [
         {
           "type": "text",
-          "value": "You can loop through a dictionary using a for loop.\n\nBy default, looping through a dictionary returns the keys."
+          "value": "You can loop through a dictionary using a for loop.\nBy default, looping through a dictionary returns the keys."
         },
         {
           "type": "text",
@@ -10401,7 +10401,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "Loop Through Both Keys and Values Using items()\n\nThe items() method returns key-value pairs as tuples."
+          "value": "Loop Through Both Keys and Values Using items()\nThe items() method returns key-value pairs as tuples."
         },
         {
           "type": "code",
@@ -10480,7 +10480,7 @@ export const interviewData = {
       "sections": [
         {
           "type": "text",
-          "value": "You cannot copy a dictionary simply by using:\n\ndict2 = dict1\n\nBecause dict2 will only be a reference to dict1, and changes made in dict1 or dict2 will automatically appers for both dicts\n\nBecause both variables will refer to the same dictionary.\n\nTo create a real copy, use:\n\ncopy() method\ndict() constructor"
+          "value": "You cannot copy a dictionary simply by using:\ndict2 = dict1\nBecause dict2 will only be a reference to dict1, and changes made in dict1 or dict2 will automatically appers for both dicts\nBecause both variables will refer to the same dictionary.\nTo create a real copy, use:\ncopy() method\ndict() constructor"
         },
         {
           "type": "text",
@@ -10496,7 +10496,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "Copy Dictionary Using copy()\n\nThe copy() method creates a new dictionary."
+          "value": "Copy Dictionary Using copy()\nThe copy() method creates a new dictionary."
         },
         {
           "type": "text",
@@ -10528,7 +10528,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "Copy Dictionary Using dict()\n\nYou can also use the dict() constructor."
+          "value": "Copy Dictionary Using dict()\nYou can also use the dict() constructor."
         },
         {
           "type": "text",
@@ -10560,7 +10560,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "Shallow Copy\n\ncopy() and dict() create a shallow copy.\n\nThis means:\n\nOuter dictionary is copied\nNested objects still share memory"
+          "value": "Shallow Copy\ncopy() and dict() create a shallow copy.\nThis means:\n• Outer dictionary is copied\n• Nested objects still share memory"
         },
         {
           "type": "text",
@@ -10576,7 +10576,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "Deep Copy\n\nFor completely separate nested copies, use deepcopy() from copy module."
+          "value": "Deep Copy\nFor completely separate nested copies, use deepcopy() from copy module."
         },
         {
           "type": "code",
@@ -10672,7 +10672,7 @@ export const interviewData = {
       "sections": [
         {
           "type": "text",
-          "value": "A Nested Dictionary means a dictionary inside another dictionary.\n\nIt is used to store grouped or complex data."
+          "value": "A Nested Dictionary means a dictionary inside another dictionary.\nIt is used to store grouped or complex data."
         },
         {
           "type": "text",
@@ -10688,7 +10688,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "Access Items in Nested Dictionary\n\nUse multiple keys."
+          "value": "Access Items in Nested Dictionary\nUse multiple keys."
         },
         {
           "type": "text",
@@ -10929,7 +10929,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "1. clear()\n\nRemoves all items from dictionary."
+          "value": "1. clear()\nRemoves all items from dictionary."
         },
         {
           "type": "code",
@@ -10941,7 +10941,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "2. copy()\n\nReturns a copy of dictionary."
+          "value": "2. copy()\nReturns a copy of dictionary."
         },
         {
           "type": "code",
@@ -10953,7 +10953,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "3. fromkeys()\n\nCreates a new dictionary using given keys."
+          "value": "3. fromkeys()\nCreates a new dictionary using given keys."
         },
         {
           "type": "text",
@@ -10973,7 +10973,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "4. get()\n\nReturns value of specified key."
+          "value": "4. get()\nReturns value of specified key."
         },
         {
           "type": "code",
@@ -10985,7 +10985,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "5. items()\n\nReturns all key-value pairs."
+          "value": "5. items()\nReturns all key-value pairs."
         },
         {
           "type": "code",
@@ -10997,7 +10997,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "6. keys()\n\nReturns all keys."
+          "value": "6. keys()\nReturns all keys."
         },
         {
           "type": "code",
@@ -11009,7 +11009,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "7. pop()\n\nRemoves specified key."
+          "value": "7. pop()\nRemoves specified key."
         },
         {
           "type": "code",
@@ -11021,7 +11021,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "8. popitem()\n\nRemoves last inserted item."
+          "value": "8. popitem()\nRemoves last inserted item."
         },
         {
           "type": "code",
@@ -11033,7 +11033,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "9. setdefault()\n\nReturns value of key.\nIf key does not exist, inserts key with specified value."
+          "value": "9. setdefault()\nReturns value of key.\nIf key does not exist, inserts key with specified value."
         },
         {
           "type": "text",
@@ -11053,7 +11053,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "10. update()\n\nUpdates dictionary with new items."
+          "value": "10. update()\nUpdates dictionary with new items."
         },
         {
           "type": "code",
@@ -11065,7 +11065,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "11. values()\n\nReturns all values."
+          "value": "11. values()\nReturns all values."
         },
         {
           "type": "code",
@@ -11198,6 +11198,3398 @@ export const interviewData = {
         {
           "question": "What does the fromkeys() method do?",
           "answer": "It creates a new dictionary from a sequence of keys and a single optional value for all of them."
+        }
+      ]
+    },
+    {
+      "id": "python-functions",
+      "title": "Python Functions",
+      "category": "Basic",
+      "definition": "In Python, functions are reusable blocks of code that perform a specific task. They help you organize programs, avoid repetition, and make code easier to read and maintain.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "In Python, functions are reusable blocks of code that perform a specific task. They help you organize programs, avoid repetition, and make code easier to read and maintain. A function can return data as a result."
+        },
+        {
+          "type": "text",
+          "value": "🧩 Basic Structure of a Function\n\ndef function_name(parameters):\n    # code block\n    return result\n\n• def → keyword to define a function\n• function_name → name you choose\n• parameters → inputs (optional)\n• return → sends back a result (optional)"
+        },
+        {
+          "type": "text",
+          "value": "Creating a Function\nIn Python, a function is defined using the def keyword, followed by a function name and parentheses:\nThe code inside the function must be indented. Python uses indentation to define code blocks."
+        },
+        {
+          "type": "text",
+          "value": "Calling a Function\nTo call a function, write its name followed by parentheses"
+        },
+        {
+          "type": "code",
+          "value": "def name():\n    print(\"Vasudharini\")\nname()"
+        },
+        {
+          "type": "output",
+          "value": "Vasudharini"
+        },
+        {
+          "type": "text",
+          "value": "Function Names\nFunction names follow the same rules as variable names in Python:\n• A function name must start with a letter or underscore\n• A function name can only contain letters, numbers, and underscores\n• Function names are case-sensitive (myFunction and myfunction are different)"
+        },
+        {
+          "type": "text",
+          "value": "Example\nValid function names:\n• calculate_sum()\n• _private_function()\n• myFunction2()"
+        },
+        {
+          "type": "text",
+          "value": "✨ Example 1: Simple Function"
+        },
+        {
+          "type": "code",
+          "value": "def greet():\n    print(\"Hello, world!\")\ngreet()"
+        },
+        {
+          "type": "output",
+          "value": "Hello, world!"
+        },
+        {
+          "type": "text",
+          "value": "🔢 Example 2: Function with Parameters"
+        },
+        {
+          "type": "code",
+          "value": "def even_odd(n):\n    if n % 2 == 0:\n        print(\"Even\")\n    else:\n        print(\"Odd\")\neven_odd(10)"
+        },
+        {
+          "type": "output",
+          "value": "Even"
+        },
+        {
+          "type": "text",
+          "value": "🔁 Example 3: Function with Return Value"
+        },
+        {
+          "type": "code",
+          "value": "def add(a, b):\n    return a + b\nresult = add(3, 5)\nprint(result)"
+        },
+        {
+          "type": "output",
+          "value": "8"
+        },
+        {
+          "type": "text",
+          "value": "You can use the returned value directly:\nUsing the return value directly"
+        },
+        {
+          "type": "code",
+          "value": "def get_greeting():\n  return \"Hello from a function\"\nprint(get_greeting())"
+        },
+        {
+          "type": "output",
+          "value": "Hello from a function"
+        },
+        {
+          "type": "text",
+          "value": "The pass Statement\nFunction definitions cannot be empty. If you need to create a function placeholder without any code, use the pass statement."
+        },
+        {
+          "type": "code",
+          "value": "def my_function():\n  pass"
+        },
+        {
+          "type": "text",
+          "value": "The pass statement is often used when developing, allowing you to define the structure first and implement details later."
+        },
+        {
+          "type": "text",
+          "value": "Parameters vs Arguments\nThe terms parameter and argument can be used for the same thing:\n information that are passed into a function.\n\nFrom a function's perspective:\nA parameter is the variable listed inside the parentheses in the function definition.\nAn argument is the actual value that is sent to the function when it is called."
+        },
+        {
+          "type": "text",
+          "value": "Quick Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Concept",
+            "Description"
+          ],
+          "rows": [
+            [
+              "def",
+              "Keyword to define a function"
+            ],
+            [
+              "Indentation",
+              "Required to define the code block"
+            ],
+            [
+              "return",
+              "Sends data back to the caller"
+            ],
+            [
+              "Calling",
+              "Executing the function via name()"
+            ],
+            [
+              "pass",
+              "Placeholder for empty functions"
+            ],
+            [
+              "Parameter",
+              "Variable in function definition"
+            ],
+            [
+              "Argument",
+              "Actual value sent during call"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the keyword used to define a function in Python?",
+          "answer": "The def keyword."
+        },
+        {
+          "question": "How do you call a function in Python?",
+          "answer": "By writing the function name followed by parentheses, e.g., my_function()."
+        },
+        {
+          "question": "What is the purpose of the 'pass' statement in a function?",
+          "answer": "It serves as a placeholder when a function definition is empty, preventing errors while the actual implementation is pending."
+        },
+        {
+          "question": "What is the difference between a parameter and an argument?",
+          "answer": "A parameter is the variable listed inside the function definition parentheses, while an argument is the actual value sent to the function when it is called."
+        }
+      ]
+    },
+    {
+      "id": "python-function-arguments",
+      "title": "Python Function Arguments",
+      "category": "Basic",
+      "definition": "Arguments are values passed into a function during a call. Python supports various argument types including positional, keyword, and default arguments, allowing functions to handle diverse data types and return results effectively.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Arguments\nValues can be passed into functions as arguments.\nArguments are specified after the function name, inside the parentheses. You can add as many arguments as you want, just separate them with a comma.\nFunction arguments are values passed to a function when calling it."
+        },
+        {
+          "type": "text",
+          "value": "A function with one argument:"
+        },
+        {
+          "type": "code",
+          "value": "def my_function(fname):\n  print(fname + \" Chintada\")\n\nmy_function(\"Vasudharini\")\nmy_function(\"Srinivas\")\nmy_function(\"DhanaLakshmi\")"
+        },
+        {
+          "type": "output",
+          "value": "Vasudharini Chintada\nSrinivas Chintada\nDhanaLakshmi Chintada"
+        },
+        {
+          "type": "text",
+          "value": "fname → parameter\n\"Vasudharini\", \"Srinivas\", \"DhanaLakshmi\" → argument"
+        },
+        {
+          "type": "text",
+          "value": "Number of Arguments\nBy default, a function must be called with the correct number of arguments.\nIf your function expects 2 arguments, you must call it with exactly 2 arguments."
+        },
+        {
+          "type": "text",
+          "value": "This function expects 2 arguments, and gets 2 arguments"
+        },
+        {
+          "type": "code",
+          "value": "def my_function(fname, lname):\n  print(fname + \" \" + lname)\n\nmy_function(\"Vasudharini\", \"Chintada\")"
+        },
+        {
+          "type": "output",
+          "value": "Vasudharini Chintada"
+        },
+        {
+          "type": "text",
+          "value": "📌 Types of Function Arguments in Python"
+        },
+        {
+          "type": "text",
+          "value": "1. Keyword Arguments\nYou can send arguments with the key = value syntax.\nThe phrase Keyword Arguments is often shortened to kwargs in Python documentation.\nArguments are passed using parameter names."
+        },
+        {
+          "type": "code",
+          "value": "def my_function(animal, name):\n  print(\"I have a\", animal)\n  print(\"My\", animal + \"'s name is\", name)\n\nmy_function(name = \"Buddy\", animal = \"dog\")"
+        },
+        {
+          "type": "output",
+          "value": "I have a dog\nMy dog's name is Buddy"
+        },
+        {
+          "type": "text",
+          "value": "✅ This way, with keyword arguments, the order of the arguments does not matter."
+        },
+        {
+          "type": "text",
+          "value": "2. Positional Arguments\nWhen you call a function with arguments without using keywords, they are called positional arguments.\nValues are passed in the correct order."
+        },
+        {
+          "type": "code",
+          "value": "def my_function(animal, name):\n  print(\"I have a\", animal)\n  print(\"My\", animal + \"'s name is\", name)\n\nmy_function(\"dog\", \"Buddy\")"
+        },
+        {
+          "type": "output",
+          "value": "I have a dog\nMy dog's name is Buddy"
+        },
+        {
+          "type": "text",
+          "value": "⚠️ The order matters with positional arguments."
+        },
+        {
+          "type": "text",
+          "value": "3. Default Arguments\nYou can assign default values to parameters. If the function is called without an argument, it uses the default value\nA default value is assigned to a parameter."
+        },
+        {
+          "type": "code",
+          "value": "def my_function(name = \"friend\"):\n  print(\"Hello\", name)\n\nmy_function(\"Vasu\")\nmy_function()\nmy_function(\"Vasudha\")"
+        },
+        {
+          "type": "output",
+          "value": "Hello Vasu\nHello friend\nHello Vasudha"
+        },
+        {
+          "type": "text",
+          "value": "Mixing Positional and Keyword Arguments\nYou can mix positional and keyword arguments in a function call."
+        },
+        {
+          "type": "code",
+          "value": "def my_function(animal, name, age):\n  print(\"I have a\", age, \"year old\", animal, \"named\", name)\nmy_function(\"dog\", age = 5, name = \"Buddy\")"
+        },
+        {
+          "type": "output",
+          "value": "I have a 5 year old dog named Buddy"
+        },
+        {
+          "type": "text",
+          "value": "However, positional arguments must come before keyword arguments"
+        },
+        {
+          "type": "text",
+          "value": "Passing Different Data Types\nYou can send any data type as an argument to a function (string, number, list, dictionary, etc.).\n\nThe data type will be preserved inside the function:"
+        },
+        {
+          "type": "text",
+          "value": "Sending a list as an argument:"
+        },
+        {
+          "type": "code",
+          "value": "def my_function(fruits):\n  for fruit in fruits:\n    print(fruit)\n\nmy_fruits = [\"apple\", \"banana\", \"cherry\"]\nmy_function(my_fruits)"
+        },
+        {
+          "type": "output",
+          "value": "apple\nbanana\ncherry"
+        },
+        {
+          "type": "text",
+          "value": "Sending a dictionary as an argument:"
+        },
+        {
+          "type": "code",
+          "value": "def my_function(person):\n  print(\"Name:\", person[\"name\"])\n  print(\"Age:\", person[\"age\"])\n\nmy_person = {\"name\": \"Emil\", \"age\": 25}\nmy_function(my_person)"
+        },
+        {
+          "type": "output",
+          "value": "Name: Emil\nAge: 25"
+        },
+        {
+          "type": "text",
+          "value": "Return Values\nFunctions can return values using the return statement"
+        },
+        {
+          "type": "code",
+          "value": "def my_function(x, y):\n  return x + y\n\nresult = my_function(5, 3)\nprint(result)"
+        },
+        {
+          "type": "output",
+          "value": "8"
+        },
+        {
+          "type": "text",
+          "value": "Returning Different Data Types\nFunctions can return any data type, including lists, tuples, dictionaries, and more."
+        },
+        {
+          "type": "text",
+          "value": "A function that returns a list:"
+        },
+        {
+          "type": "code",
+          "value": "def my_function():\n  return [\"apple\", \"banana\", \"cherry\"]\n\nfruits = my_function()\nprint(fruits[0])\nprint(fruits[1])\nprint(fruits[2])"
+        },
+        {
+          "type": "output",
+          "value": "apple\nbanana\ncherry"
+        },
+        {
+          "type": "text",
+          "value": "A function that returns a tuple:"
+        },
+        {
+          "type": "code",
+          "value": "def my_function():\n  return (10, 20)\n\nx, y = my_function()\nprint(\"x:\", x)\nprint(\"y:\", y)"
+        },
+        {
+          "type": "output",
+          "value": "x: 10\ny: 20"
+        },
+        {
+          "type": "text",
+          "value": "Quick Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Argument Type",
+            "Behavior"
+          ],
+          "rows": [
+            [
+              "Positional",
+              "Order matters"
+            ],
+            [
+              "Keyword",
+              "key=value syntax, order doesn't matter"
+            ],
+            [
+              "Default",
+              "Uses a pre-defined value if omitted"
+            ],
+            [
+              "Mixing",
+              "Positional must precede Keyword"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What are positional arguments?",
+          "answer": "Arguments that must be passed in the correct positional order."
+        },
+        {
+          "question": "What happens if you call a function with fewer arguments than expected?",
+          "answer": "Python will raise a TypeError, stating that the function is missing required positional arguments."
+        },
+        {
+          "question": "Can you mix positional and keyword arguments in a single function call?",
+          "answer": "Yes, but positional arguments must always come before keyword arguments."
+        }
+      ]
+    },
+    {
+      "id": "python-positional-keyword-only",
+      "title": "Positional-Only and Keyword-Only Arguments",
+      "category": "Basic",
+      "definition": "Python allows you to restrict how arguments are passed to a function using the / and * symbols. Positional-only arguments must be passed by position, while keyword-only arguments must be passed using parameter names.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Python allows you to control how arguments are passed to a function.\nThere are 3 types:\n\n• Positional-only arguments → must be passed by position\n• Keyword-only arguments → must be passed using parameter names\n• Normal arguments → can be passed either way"
+        },
+        {
+          "type": "text",
+          "value": "1. Positional-Only Arguments (/)\nUse / in the function definition.\nArguments before / are positional-only."
+        },
+        {
+          "type": "text",
+          "value": "Syntax\ndef function_name(arg1, arg2, /):\n    pass"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "def my_function(name, /):\n    print(\"Hello\", name)\n\nmy_function(\"Emil\")"
+        },
+        {
+          "type": "output",
+          "value": "Hello Emil"
+        },
+        {
+          "type": "text",
+          "value": "Here:\n\n\"Emil\" is passed by position\nname= is NOT allowed"
+        },
+        {
+          "type": "text",
+          "value": "Invalid Example"
+        },
+        {
+          "type": "code",
+          "value": "def my_function(name, /):\n    print(\"Hello\", name)\n\nmy_function(name=\"Emil\")"
+        },
+        {
+          "type": "output",
+          "value": "TypeError"
+        },
+        {
+          "type": "text",
+          "value": "Because name is positional-only."
+        },
+        {
+          "type": "text",
+          "value": "Why Use Positional-Only Arguments?\nUseful when:\n\n• Parameter names should not matter\n• You may change parameter names later\n• Built-in functions behave this way\n\nExample:\npow(2, 3)\nYou normally use positions, not:\npow(base=2, exp=3)"
+        },
+        {
+          "type": "text",
+          "value": "2. Keyword-Only Arguments (*)\nUse * before parameters.\nArguments after * are keyword-only."
+        },
+        {
+          "type": "text",
+          "value": "Syntax\ndef function_name(*, arg1, arg2):\n    pass"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "def my_function(*, name):\n    print(\"Hello\", name)\n\nmy_function(name=\"Emil\")"
+        },
+        {
+          "type": "output",
+          "value": "Hello Emil"
+        },
+        {
+          "type": "text",
+          "value": "Invalid Example"
+        },
+        {
+          "type": "code",
+          "value": "def my_function(*, name):\n    print(\"Hello\", name)\n\nmy_function(\"Emil\")"
+        },
+        {
+          "type": "output",
+          "value": "TypeError"
+        },
+        {
+          "type": "text",
+          "value": "Because name must be passed as a keyword."
+        },
+        {
+          "type": "text",
+          "value": "Why Use Keyword-Only Arguments?\nUseful when:\n\n• Function has many optional arguments\n• Improves readability\n• Avoids confusion\n\nExample:\ndef student(*, name, age):\n    print(name, age)\n\nstudent(name=\"Ram\", age=21)\nThis is clearer than:\nstudent(\"Ram\", 21)"
+        },
+        {
+          "type": "text",
+          "value": "3. Combining Both (/ and *)\nYou can use both together.\n\n• Before / → positional-only\n• Between / and * → normal arguments\n• After * → keyword-only"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "def my_function(a, b, /, *, c, d):\n    return a + b + c + d\n\nresult = my_function(5, 10, c=15, d=20)\n\nprint(result)"
+        },
+        {
+          "type": "output",
+          "value": "50"
+        },
+        {
+          "type": "text",
+          "value": "Understanding the Function\ndef my_function(a, b, /, *, c, d):"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Argument",
+            "Type"
+          ],
+          "rows": [
+            [
+              "a",
+              "positional-only"
+            ],
+            [
+              "b",
+              "positional-only"
+            ],
+            [
+              "c",
+              "keyword-only"
+            ],
+            [
+              "d",
+              "keyword-only"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "So:\n\nmy_function(5, 10, c=15, d=20)\n\n✅ Correct\n\nBut:\n\nmy_function(a=5, b=10, c=15, d=20)\n\n❌ Error"
+        },
+        {
+          "type": "text",
+          "value": "Full Example with All Types"
+        },
+        {
+          "type": "code",
+          "value": "def details(id, /, name, *, city):\n    print(\"ID:\", id)\n    print(\"Name:\", name)\n    print(\"City:\", city)\n\ndetails(101, \"Rahul\", city=\"Hyderabad\")"
+        },
+        {
+          "type": "output",
+          "value": "ID: 101\nName: Rahul\nCity: Hyderabad"
+        },
+        {
+          "type": "text",
+          "value": "Argument Type Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Symbol",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "/",
+              "Positional-only arguments before it"
+            ],
+            [
+              "*",
+              "Keyword-only arguments after it"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Quick Comparison"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Function Definition",
+            "Valid Call"
+          ],
+          "rows": [
+            [
+              "def f(x, /)",
+              "f(10)"
+            ],
+            [
+              "def f(*, x)",
+              "f(x=10)"
+            ],
+            [
+              "def f(x)",
+              "f(10) or f(x=10)"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Real-World Example"
+        },
+        {
+          "type": "code",
+          "value": "def create_account(username, /, *, password):\n    print(\"Account created\")\n# Correct\ncreate_account(\"vasu\", password=\"1234\")\n# Wrong\ncreate_account(username=\"vasu\", password=\"1234\")"
+        },
+        {
+          "type": "text",
+          "value": "Because username is positional-only."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What does the / symbol indicate in a function definition?",
+          "answer": "It indicates that all arguments before it must be passed by position only (no keywords allowed)."
+        },
+        {
+          "question": "How do you enforce keyword-only arguments in Python?",
+          "answer": "By placing a * symbol before the keyword-only parameters in the function definition."
+        },
+        {
+          "question": "In the function def func(a, /, b, *, c):, what is the nature of the argument b?",
+          "answer": "Argument b is a 'normal' argument that can be passed either by position or by keyword."
+        }
+      ]
+    },
+    {
+      "id": "python-examples-positional-keyword-only",
+      "title": "Clear Examples for Positional-Only and Keyword-Only Arguments",
+      "category": "Basic",
+      "definition": "To master positional-only (/) and keyword-only (*) arguments, it is essential to understand the difference between correct and incorrect function calls. These examples clarify how Python enforces argument passing rules.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. Positional-Only Arguments (/)\nArguments before / must be given by position only."
+        },
+        {
+          "type": "text",
+          "value": "Example 1"
+        },
+        {
+          "type": "code",
+          "value": "def student(name, /):\n    print(name)\n\nstudent(\"Rahul\")"
+        },
+        {
+          "type": "output",
+          "value": "Rahul\n\n✅ Correct because \"Rahul\" is passed by position."
+        },
+        {
+          "type": "text",
+          "value": "Wrong Example"
+        },
+        {
+          "type": "code",
+          "value": "def student(name, /):\n    print(name)\n\nstudent(name=\"Rahul\")"
+        },
+        {
+          "type": "output",
+          "value": "TypeError\n\n❌ Wrong because positional-only arguments cannot use name=."
+        },
+        {
+          "type": "text",
+          "value": "Real Understanding"
+        },
+        {
+          "type": "code",
+          "value": "def add(a, b, /):\n    print(a + b)\n\nadd(10, 20)"
+        },
+        {
+          "type": "output",
+          "value": "30\n\n✅ Correct"
+        },
+        {
+          "type": "text",
+          "value": "Wrong"
+        },
+        {
+          "type": "code",
+          "value": "add(a=10, b=20)"
+        },
+        {
+          "type": "output",
+          "value": "TypeError\n\n❌ Because a and b are positional-only."
+        },
+        {
+          "type": "text",
+          "value": "Easy Memory Trick\n/\nMeans:\n👉 \"Use only position\""
+        },
+        {
+          "type": "text",
+          "value": "2. Keyword-Only Arguments (*)\nArguments after * must use parameter names."
+        },
+        {
+          "type": "text",
+          "value": "Example 1"
+        },
+        {
+          "type": "code",
+          "value": "def student(*, name):\n    print(name)\n\nstudent(name=\"Rahul\")"
+        },
+        {
+          "type": "output",
+          "value": "Rahul\n\n✅ Correct because keyword is used."
+        },
+        {
+          "type": "text",
+          "value": "Wrong Example"
+        },
+        {
+          "type": "code",
+          "value": "def student(*, name):\n    print(name)\n\nstudent(\"Rahul\")"
+        },
+        {
+          "type": "output",
+          "value": "TypeError\n\n❌ Wrong because keyword-only arguments require name=."
+        },
+        {
+          "type": "text",
+          "value": "Real Understanding"
+        },
+        {
+          "type": "code",
+          "value": "def login(*, username, password):\n    print(\"Username:\", username)\n    print(\"Password:\", password)\n\nlogin(username=\"vasu\", password=\"1234\")"
+        },
+        {
+          "type": "output",
+          "value": "Username: vasu\nPassword: 1234\n\n✅ Correct"
+        },
+        {
+          "type": "text",
+          "value": "Wrong"
+        },
+        {
+          "type": "code",
+          "value": "login(\"vasu\", \"1234\")"
+        },
+        {
+          "type": "output",
+          "value": "TypeError\n\n❌ Because username and password are keyword-only."
+        },
+        {
+          "type": "text",
+          "value": "Easy Memory Trick\n*\nMeans:\n👉 \"Use parameter names\""
+        },
+        {
+          "type": "text",
+          "value": "3. Combining Both Together"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "def employee(id, /, *, name):\n    print(\"ID:\", id)\n    print(\"Name:\", name)\n\nemployee(101, name=\"Rahul\")"
+        },
+        {
+          "type": "output",
+          "value": "ID: 101\nName: Rahul"
+        },
+        {
+          "type": "text",
+          "value": "Understanding"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Argument",
+            "Type"
+          ],
+          "rows": [
+            [
+              "id",
+              "positional-only"
+            ],
+            [
+              "name",
+              "keyword-only"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Correct Call\nemployee(101, name=\"Rahul\")\n\n✅ Correct\n\nWrong Call 1\nemployee(id=101, name=\"Rahul\")\n\n❌ Error because id is positional-only.\n\nWrong Call 2\nemployee(101, \"Rahul\")\n\n❌ Error because name is keyword-only."
+        },
+        {
+          "type": "text",
+          "value": "Simple Visual Understanding"
+        },
+        {
+          "type": "text",
+          "value": "Positional-Only\ndef fun(a, /):\n\n✅ Call like:\n\nfun(10)\n\n❌ Not:\n\nfun(a=10)"
+        },
+        {
+          "type": "text",
+          "value": "Keyword-Only\ndef fun(*, a):\n\n✅ Call like:\n\nfun(a=10)\n\n❌ Not:\n\nfun(10)"
+        },
+        {
+          "type": "text",
+          "value": "Final Comparison Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type",
+            "Symbol",
+            "How to Pass"
+          ],
+          "rows": [
+            [
+              "Positional-only",
+              "/",
+              "By position only"
+            ],
+            [
+              "Keyword-only",
+              "*",
+              "By parameter name only"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "One Perfect Example"
+        },
+        {
+          "type": "code",
+          "value": "def details(id, /, age, *, city):\n    print(id)\n    print(age)\n    print(city)\n\ndetails(101, 22, city=\"Vijayawada\")"
+        },
+        {
+          "type": "output",
+          "value": "101\n22\nVijayawada"
+        },
+        {
+          "type": "text",
+          "value": "Argument Types Here"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Argument",
+            "Type"
+          ],
+          "rows": [
+            [
+              "id",
+              "positional-only"
+            ],
+            [
+              "age",
+              "normal"
+            ],
+            [
+              "city",
+              "keyword-only"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "So:\n\ndetails(101, 22, city=\"Vijayawada\")\n\n✅ Correct\n\ndetails(id=101, age=22, city=\"Vijayawada\")\n\n❌ Error (id cannot use keyword)\n\ndetails(101, 22, \"Vijayawada\")\n\n❌ Error (city must use keyword)"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What happens if you try to pass a positional-only argument using its name?",
+          "answer": "Python raises a TypeError."
+        },
+        {
+          "question": "Why is student(\"Rahul\") invalid for def student(*, name):?",
+          "answer": "Because the * symbol enforces that all following arguments must be passed using keywords, and 'Rahul' is being passed by position."
+        },
+        {
+          "question": "In def details(id, /, age, *, city):, can age be passed as a keyword argument?",
+          "answer": "Yes, because age is placed between / and *, making it a normal argument that accepts both positional and keyword passing."
+        }
+      ]
+    },
+    {
+      "id": "python-args-kwargs",
+      "title": "Python *args and **kwargs",
+      "category": "Basic",
+      "definition": "When the number of arguments passed into a function is unknown, Python provides *args and **kwargs. *args collects extra positional arguments into a tuple, while **kwargs collects keyword arguments into a dictionary.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "By default, a function must be called with the correct number of arguments."
+        },
+        {
+          "type": "code",
+          "value": "def add(a, b):\n    print(a + b)\n\nadd(10, 20)"
+        },
+        {
+          "type": "output",
+          "value": "30"
+        },
+        {
+          "type": "text",
+          "value": "Here, the function expects exactly 2 arguments. But sometimes, we do not know how many arguments will be passed.\nFor this, Python provides:\n• *args → accepts multiple positional arguments\n• **kwargs → accepts multiple keyword arguments"
+        },
+        {
+          "type": "text",
+          "value": "⭐ *args (Arbitrary Positional Arguments)\nIf you do not know how many positional arguments will be passed into a function, use *args.\nIt collects all extra positional arguments into a tuple."
+        },
+        {
+          "type": "text",
+          "value": "Syntax:\ndef function_name(*args):\n    pass"
+        },
+        {
+          "type": "text",
+          "value": "Example 1: Basic *args"
+        },
+        {
+          "type": "code",
+          "value": "def my_function(*kids):\n    print(\"The youngest child is\", kids[2])\n\nmy_function(\"Vasu\", \"Vasudha\", \"Vasudharini\")"
+        },
+        {
+          "type": "output",
+          "value": "The youngest child is Vasudharini"
+        },
+        {
+          "type": "text",
+          "value": "🔍 What Happens Internally?"
+        },
+        {
+          "type": "code",
+          "value": "def my_function(*args):\n    print(\"Type:\", type(args))\n    print(\"First argument:\", args[0])\n    print(\"Second argument:\", args[1])\n    print(\"Thrid argument:\", args[2])\n    print(\"All arguments:\", args)\n\nmy_function(\"Vasu\", \"Vasudha\", \"Vasudharini\")"
+        },
+        {
+          "type": "output",
+          "value": "Type: <class 'tuple'>\nFirst argument: Vasu\nSecond argument: Vasudha\nThrid argument: Vasudharini\nAll arguments: ('Vasu', 'Vasudha', 'Vasudharini')\n\n✅ args becomes a tuple."
+        },
+        {
+          "type": "text",
+          "value": "Using *args with Regular Arguments\nRegular parameters must come before *args."
+        },
+        {
+          "type": "code",
+          "value": "def my_function(greeting, *names):\n    for name in names:\n        print(greeting, name)\n\nmy_function(\"Hello\", \"Vasu\", \"Vasudha\", \"Vasudharini\")"
+        },
+        {
+          "type": "output",
+          "value": "Hello Vasu\nHello Vasudha\nHello Vasudharini"
+        },
+        {
+          "type": "text",
+          "value": "Practical Example: Sum of Numbers"
+        },
+        {
+          "type": "code",
+          "value": "def my_function(*numbers):\n    total = 0\n    for num in numbers:\n        total += num\n    return total\n\nprint(my_function(1, 2, 3))\nprint(my_function(10, 20, 30, 40))\nprint(my_function(5))"
+        },
+        {
+          "type": "output",
+          "value": "6\n100\n5"
+        },
+        {
+          "type": "text",
+          "value": "Practical Example: Find Maximum Value"
+        },
+        {
+          "type": "code",
+          "value": "def my_function(*numbers):\n    if len(numbers) == 0:\n        return None\n    max_num = numbers[0]\n    for num in numbers:\n        if num > max_num:\n            max_num = num\n    return max_num\n\nprint(my_function(3, 7, 2, 9, 1))"
+        },
+        {
+          "type": "output",
+          "value": "9"
+        },
+        {
+          "type": "text",
+          "value": "⭐ **kwargs (Arbitrary Keyword Arguments)\nIf you do not know how many keyword arguments will be passed, use **kwargs.\nIt collects all keyword arguments into a dictionary."
+        },
+        {
+          "type": "text",
+          "value": "Syntax:\ndef function_name(**kwargs):\n    pass"
+        },
+        {
+          "type": "text",
+          "value": "Example 1: Basic **kwargs"
+        },
+        {
+          "type": "code",
+          "value": "def my_function(**kid):\n    print(\"Her last name is\", kid[\"lname\"])\n\nmy_function(fname=\"Vasudharini\", lname=\"Chintada\")"
+        },
+        {
+          "type": "output",
+          "value": "Her last name is Chintada"
+        },
+        {
+          "type": "text",
+          "value": "🔍 What Happens Internally?"
+        },
+        {
+          "type": "code",
+          "value": "def my_function(**myvar):\n    print(\"Type:\", type(myvar))\n    print(\"Name:\", myvar[\"name\"])\n    print(\"Age:\", myvar[\"age\"])\n    print(\"City:\", myvar[\"city\"])\n    print(\"All data:\", myvar)\n\nmy_function(name=\"Vasudharini\", age=23, city=\"Vijayawada\")"
+        },
+        {
+          "type": "output",
+          "value": "Type: <class 'dict'>\nName: Vasudharini\nAge: 23\nCity: Vijayawada\nAll data: {'name': 'Vasudharini', 'age': 23, 'city': 'Vijayawada'}\n\n✅ kwargs becomes a dictionary."
+        },
+        {
+          "type": "text",
+          "value": "Using **kwargs with Regular Arguments\nRegular parameters must come before **kwargs."
+        },
+        {
+          "type": "code",
+          "value": "def my_function(username, **details):\n    print(\"Username:\", username)\n    print(\"Additional details:\")\n    for key, value in details.items():\n        print(key + \":\", value)\n\nmy_function(\"vasudharini\", age=23, city=\"Vijayawada\", hobby=\"coding\")"
+        },
+        {
+          "type": "output",
+          "value": "Username: vasudharini\nAdditional details:\nage: 23\ncity: Vijayawada\nhobby: coding"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Combining *args and **kwargs\nYou can use both together.\nCorrect Order: Regular parameters → *args → **kwargs"
+        },
+        {
+          "type": "code",
+          "value": "def my_function(title, *args, **kwargs):\n    print(\"Title:\", title)\n    print(\"Positional arguments:\", args)\n    print(\"Keyword arguments:\", kwargs)\n\nmy_function(\n    \"User Info\",\n    \"vasu\",\n    \"vasudharini\",\n    age=25,\n    city=\"Vijayawada\"\n)"
+        },
+        {
+          "type": "output",
+          "value": "Title: User Info\nPositional arguments: ('vasu', 'vasudharini')\nKeyword arguments: {'age': 25, 'city': 'Vijayawada'}"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Unpacking Arguments\n* and ** are also used while calling functions."
+        },
+        {
+          "type": "text",
+          "value": "Unpacking a List with *"
+        },
+        {
+          "type": "code",
+          "value": "def my_function(a, b, c):\n    return a + b + c\n\nnumbers = [1, 2, 3]\nresult = my_function(*numbers)\nprint(result)"
+        },
+        {
+          "type": "output",
+          "value": "6\n\nInternally my_function(*numbers) is same as my_function(1, 2, 3)"
+        },
+        {
+          "type": "text",
+          "value": "Unpacking a Dictionary with **"
+        },
+        {
+          "type": "code",
+          "value": "def my_function(fname, lname):\n    print(\"Hello\", fname, lname)\n\nperson = {\n    \"fname\": \"Vasudharini\",\n    \"lname\": \"Chintada\"\n}\n\nmy_function(**person)"
+        },
+        {
+          "type": "output",
+          "value": "Hello Vasudharini Chintada\n\nInternally my_function(**person) is same as my_function(fname=\"Vasudharini\", lname=\"Chintada\")"
+        },
+        {
+          "type": "text",
+          "value": "🧠 Important Difference"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "*args",
+            "**kwargs"
+          ],
+          "rows": [
+            [
+              "Accepts",
+              "Positional arguments",
+              "Keyword arguments"
+            ],
+            [
+              "Stored As",
+              "Tuple",
+              "Dictionary"
+            ],
+            [
+              "Symbol",
+              "*",
+              "**"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "📌 Remember"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Usage",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "*args in definition",
+              "Collect positional arguments"
+            ],
+            [
+              "**kwargs in definition",
+              "Collect keyword arguments"
+            ],
+            [
+              "*list in function call",
+              "Unpack list/tuple"
+            ],
+            [
+              "**dict in function call",
+              "Unpack dictionary"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🎯 Real-Time Example"
+        },
+        {
+          "type": "code",
+          "value": "def employee(name, *skills, **details):\n    print(\"Name:\", name)\n    print(\"\\nSkills:\")\n    for skill in skills:\n        print(skill)\n    print(\"\\nDetails:\")\n    for key, value in details.items():\n        print(key, \":\", value)\n\nemployee(\n    \"Vasu\",\n    \"Python\",\n    \"Flask\",\n    \"MySQL\",\n    age=23,\n    city=\"Vijayawada\"\n)"
+        },
+        {
+          "type": "output",
+          "value": "Name: Vasu\n\nSkills:\nPython\nFlask\nMySQL\n\nDetails:\nage : 23\ncity : Vijayawada"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between *args and **kwargs?",
+          "answer": "*args is used to pass a variable number of positional arguments (stored as a tuple), while **kwargs is used to pass a variable number of keyword arguments (stored as a dictionary)."
+        },
+        {
+          "question": "What is the correct order of parameters when combining regular arguments, *args, and **kwargs?",
+          "answer": "The correct order is: Regular parameters, then *args, then **kwargs."
+        },
+        {
+          "question": "How do you unpack a list into a function call?",
+          "answer": "You use the * operator before the list name in the function call, like func(*my_list)."
+        }
+      ]
+    },
+    {
+      "id": "python-args-kwargs-mastery",
+      "title": "Python *args and **kwargs (Practical Examples)",
+      "category": "Basic",
+      "definition": "Mastering *args and **kwargs is essential for writing flexible Python functions. These examples demonstrate how to handle a variable number of positional and keyword arguments effectively using specific real-world data patterns.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "*args and **kwargs are used when you do not know how many arguments will be passed to a function."
+        },
+        {
+          "type": "text",
+          "value": "⭐ *args (Non-Keyword Variable Arguments)\n*args allows a function to accept multiple positional arguments. It stores values in a tuple."
+        },
+        {
+          "type": "text",
+          "value": "Syntax:\ndef function_name(*args):\n    pass"
+        },
+        {
+          "type": "text",
+          "value": "Example 1: Basic *args"
+        },
+        {
+          "type": "code",
+          "value": "def numbers(*args):\n    print(args)\n\nnumbers(1, 2, 3, 4)"
+        },
+        {
+          "type": "output",
+          "value": "(1, 2, 3, 4)"
+        },
+        {
+          "type": "text",
+          "value": "Example 2: Loop Through *args"
+        },
+        {
+          "type": "code",
+          "value": "def show(*names):\n    for i in names:\n        print(i)\n\nshow(\"vasu\", \"vasudha\", \"vasudharini\")"
+        },
+        {
+          "type": "output",
+          "value": "vasu\nvasudha\nvasudharini"
+        },
+        {
+          "type": "text",
+          "value": "Example 3: Sum of Numbers Using *args"
+        },
+        {
+          "type": "code",
+          "value": "def total(*nums):\n    result = 0\n    for i in nums:\n        result += i\n    print(\"Total =\", result)\n\ntotal(10, 20, 30)"
+        },
+        {
+          "type": "output",
+          "value": "Total = 60"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Important Point\nargs is just a name. You can use any name."
+        },
+        {
+          "type": "code",
+          "value": "def demo(*x):\n    print(x)\n\ndemo(1, 2)"
+        },
+        {
+          "type": "output",
+          "value": "(1, 2)"
+        },
+        {
+          "type": "text",
+          "value": "⭐ **kwargs (Keyword Variable Arguments)\n**kwargs allows a function to accept multiple keyword arguments. It stores values in a dictionary."
+        },
+        {
+          "type": "text",
+          "value": "Syntax:\ndef function_name(**kwargs):\n    pass"
+        },
+        {
+          "type": "text",
+          "value": "Example 1: Basic **kwargs"
+        },
+        {
+          "type": "code",
+          "value": "def details(**kwargs):\n    print(kwargs)\n\ndetails(name=\"Vasudharini\", age=23)"
+        },
+        {
+          "type": "output",
+          "value": "{'name': 'Vasudharini', 'age': 23}"
+        },
+        {
+          "type": "text",
+          "value": "Example 2: Access Dictionary Values"
+        },
+        {
+          "type": "code",
+          "value": "def student(**data):\n    print(\"Name:\", data[\"name\"])\n    print(\"Age:\", data[\"age\"])\n\nstudent(name=\"Vasudharini\", age=23)"
+        },
+        {
+          "type": "output",
+          "value": "Name: Vasudharini\nAge: 23"
+        },
+        {
+          "type": "text",
+          "value": "Example 3: Loop Through **kwargs"
+        },
+        {
+          "type": "code",
+          "value": "def info(**data):\n    for key, value in data.items():\n        print(key, \"=\", value)\n\ninfo(name=\"Vasudharini\", age=23, city=\"Vijayawada\")"
+        },
+        {
+          "type": "output",
+          "value": "name = Vasudharini\nage = 23\ncity = Vijayawada"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Important Point\nkwargs is also just a name."
+        },
+        {
+          "type": "code",
+          "value": "def demo(**x):\n    print(x)\n\ndemo(a=1, b=2)"
+        },
+        {
+          "type": "output",
+          "value": "{'a': 1, 'b': 2}"
+        },
+        {
+          "type": "text",
+          "value": "🔄 Difference Between *args and **kwargs"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "*args",
+            "**kwargs"
+          ],
+          "rows": [
+            [
+              "Accepts",
+              "Positional arguments",
+              "Keyword arguments"
+            ],
+            [
+              "Stores data in",
+              "Tuple",
+              "Dictionary"
+            ],
+            [
+              "Symbol",
+              "*",
+              "**"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Using Both Together"
+        },
+        {
+          "type": "code",
+          "value": "def demo(*args, **kwargs):\n    print(\"Args:\", args)\n    print(\"Kwargs:\", kwargs)\n\ndemo(1, 2, 3, name=\"Vasudharini\", age=23)"
+        },
+        {
+          "type": "output",
+          "value": "Args: (1, 2, 3)\nKwargs: {'name': 'Vasudharini', 'age': 23}"
+        },
+        {
+          "type": "text",
+          "value": "📌 Order of Arguments in Functions\nCorrect order: Regular parameters → Default arguments → *args → **kwargs"
+        },
+        {
+          "type": "code",
+          "value": "def demo(a, b=10, *args, **kwargs):\n    print(a, b, args, kwargs)\n\ndemo(1, 20, 2, 3, name=\"Vasudharini\")"
+        },
+        {
+          "type": "output",
+          "value": "1 20 (2, 3) {'name': 'Vasudharini'}"
+        },
+        {
+          "type": "text",
+          "value": "🎯 Real-World Example"
+        },
+        {
+          "type": "code",
+          "value": "def employee(name, *skills, **details):\n    print(\"Name:\", name)\n    print(\"\\nSkills:\")\n    for i in skills:\n        print(i)\n    print(\"\\nDetails:\")\n    for k, v in details.items():\n        print(k, \":\", v)\n\nemployee(\n    \"Vasudharini\",\n    \"Python\",\n    \"Django\",\n    age=23,\n    city=\"Vijayawada\"\n)"
+        },
+        {
+          "type": "output",
+          "value": "Name: Vasudharini\n\nSkills:\nPython\nDjango\n\nDetails:\nage : 23\ncity : Vijayawada"
+        }
+      ],
+      "questions": [
+        {
+          "question": "In the function def show(*names):, what is the data type of names?",
+          "answer": "It is a tuple."
+        },
+        {
+          "question": "What is the purpose of the ** prefix in a function parameter?",
+          "answer": "It allows the function to collect any number of keyword arguments into a dictionary."
+        },
+        {
+          "question": "Can you use a name other than args or kwargs?",
+          "answer": "Yes, args and kwargs are just conventions; you can use any name as long as it is preceded by * or **."
+        }
+      ]
+    },
+    {
+      "id": "python-scope",
+      "title": "Python Scope",
+      "category": "Basic",
+      "definition": "Scope determines the visibility and accessibility of a variable in different regions of a program. Python follows the LEGB rule (Local, Enclosing, Global, Built-in) to resolve variable names.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "A variable is only available inside the region where it is created. This is called scope. Python has mainly 4 types of scope:\n• Local Scope\n• Enclosing Scope\n• Global Scope\n• Built-in Scope"
+        },
+        {
+          "type": "text",
+          "value": "1. Local Scope\nA variable created inside a function belongs to the local scope. It can only be used inside that function."
+        },
+        {
+          "type": "code",
+          "value": "def my_function():\n    x = 10\n    print(x)\n\nmy_function()"
+        },
+        {
+          "type": "output",
+          "value": "10"
+        },
+        {
+          "type": "text",
+          "value": "Accessing Local Variable Outside Function"
+        },
+        {
+          "type": "code",
+          "value": "def my_function():\n    x = 10\n\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "NameError: name 'x' is not defined\n\n✅ Because x exists only inside the function."
+        },
+        {
+          "type": "text",
+          "value": "2. Global Scope\nA variable created outside all functions is called a global variable. It can be used anywhere in the program."
+        },
+        {
+          "type": "code",
+          "value": "x = 100\n\ndef my_function():\n    print(x)\n\nmy_function()\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "100\n100"
+        },
+        {
+          "type": "text",
+          "value": "Local vs Global Variable\nIf a local variable and global variable have the same name, the local variable gets priority inside the function."
+        },
+        {
+          "type": "code",
+          "value": "x = 50\n\ndef my_function():\n    x = 10\n    print(\"Local x =\", x)\n\nmy_function()\nprint(\"Global x =\", x)"
+        },
+        {
+          "type": "output",
+          "value": "Local x = 10\nGlobal x = 50"
+        },
+        {
+          "type": "text",
+          "value": "3. The global Keyword\nNormally, you cannot change a global variable inside a function directly. Use the global keyword to modify it."
+        },
+        {
+          "type": "text",
+          "value": "❌ Without global"
+        },
+        {
+          "type": "code",
+          "value": "x = 10\n\ndef my_function():\n    x = 20\n    print(x)\n\nmy_function()\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "20\n10\n\n✅ The global variable is not changed."
+        },
+        {
+          "type": "text",
+          "value": "✅ With global"
+        },
+        {
+          "type": "code",
+          "value": "x = 10\n\ndef my_function():\n    global x\n    x = 20\n\nmy_function()\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "20\n\n✅ Now the global variable is modified."
+        },
+        {
+          "type": "text",
+          "value": "Creating Global Variable Inside Function"
+        },
+        {
+          "type": "code",
+          "value": "def my_function():\n    global x\n    x = 100\n\nmy_function()\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "100"
+        },
+        {
+          "type": "text",
+          "value": "4. Enclosing Scope (Nested Functions)\nA variable in the outer function can be accessed inside the inner function."
+        },
+        {
+          "type": "code",
+          "value": "def outer():\n    x = \"Python\"\n    def inner():\n        print(x)\n    inner()\n\nouter()"
+        },
+        {
+          "type": "output",
+          "value": "Python"
+        },
+        {
+          "type": "text",
+          "value": "The nonlocal Keyword\nUsed to modify a variable from the enclosing function."
+        },
+        {
+          "type": "code",
+          "value": "def outer():\n    x = 10\n    def inner():\n        nonlocal x\n        x = 20\n        print(\"Inner:\", x)\n    inner()\n    print(\"Outer:\", x)\n\nouter()"
+        },
+        {
+          "type": "output",
+          "value": "Inner: 20\nOuter: 20"
+        },
+        {
+          "type": "text",
+          "value": "5. Built-in Scope\nPython already has built-in names/functions available everywhere like print(), len(), type(), and range()."
+        },
+        {
+          "type": "code",
+          "value": "x = [1, 2, 3]\nprint(len(x))"
+        },
+        {
+          "type": "output",
+          "value": "3"
+        },
+        {
+          "type": "text",
+          "value": "🧠 LEGB Rule in Python\nPython searches variables in this order: Local → Enclosing → Global → Built-in."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Scope",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "L",
+              "Local"
+            ],
+            [
+              "E",
+              "Enclosing"
+            ],
+            [
+              "G",
+              "Global"
+            ],
+            [
+              "B",
+              "Built-in"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "LEGB Example"
+        },
+        {
+          "type": "code",
+          "value": "x = \"global\"\n\ndef outer():\n    x = \"enclosing\"\n    def inner():\n        x = \"local\"\n        print(\"Inner:\", x)\n    inner()\n    print(\"Outer:\", x)\n\nouter()\nprint(\"Global:\", x)"
+        },
+        {
+          "type": "output",
+          "value": "Inner: local\nOuter: enclosing\nGlobal: global"
+        },
+        {
+          "type": "text",
+          "value": "Summary Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Scope Type",
+            "Defined Where",
+            "Accessible Where"
+          ],
+          "rows": [
+            [
+              "Local",
+              "Inside function",
+              "Only inside function"
+            ],
+            [
+              "Global",
+              "Outside function",
+              "Entire program"
+            ],
+            [
+              "Enclosing",
+              "Outer function",
+              "Inner function"
+            ],
+            [
+              "Built-in",
+              "Python built-ins",
+              "Everywhere"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🎯 Real-Time Example"
+        },
+        {
+          "type": "code",
+          "value": "balance = 1000\n\ndef deposit(amount):\n    global balance\n    balance += amount\n    print(\"Updated Balance:\", balance)\n\ndeposit(500)\nprint(\"Final Balance:\", balance)"
+        },
+        {
+          "type": "output",
+          "value": "Updated Balance: 1500\nFinal Balance: 1500"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the LEGB rule in Python?",
+          "answer": "It is the order in which Python searches for variables: Local, Enclosing, Global, and then Built-in."
+        },
+        {
+          "question": "How can you modify a global variable inside a function?",
+          "answer": "By using the 'global' keyword followed by the variable name before assigning a new value."
+        },
+        {
+          "question": "What is the purpose of the 'nonlocal' keyword?",
+          "answer": "It is used in nested functions to work with variables defined in the outer (enclosing) function's scope."
+        }
+      ]
+    },
+    {
+      "id": "python-scope-tutorial",
+      "title": "Python Scope (Tutorial)",
+      "category": "Basic",
+      "definition": "A comprehensive guide to understanding variable accessibility in Python. This module covers the nuances of local, global, enclosing, and built-in scopes, specifically focusing on nested function behaviors and keyword interactions.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "A variable is only available inside the region where it is created. This is called scope."
+        },
+        {
+          "type": "text",
+          "value": "📌 Types of Scope in Python\nPython mainly has: Local, Global, Enclosing, and Built-in Scope. Python follows the LEGB Rule to search for variables."
+        },
+        {
+          "type": "text",
+          "value": "1. Local Scope\nA variable created inside a function belongs to the local scope. It can only be used inside that function."
+        },
+        {
+          "type": "code",
+          "value": "def myfunc():\n    x = 300\n    print(x)\n\nmyfunc()"
+        },
+        {
+          "type": "output",
+          "value": "300\n\n✅ x exists only inside myfunc()."
+        },
+        {
+          "type": "text",
+          "value": "Accessing Local Variable Outside Function"
+        },
+        {
+          "type": "code",
+          "value": "def myfunc():\n    x = 300\n\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "NameError: name 'x' is not defined\n\nBecause x is local to the function."
+        },
+        {
+          "type": "text",
+          "value": "2. Function Inside Function\nA local variable can also be accessed by functions inside that function."
+        },
+        {
+          "type": "code",
+          "value": "def myfunc():\n    x = 300\n    def myinnerfunc():\n        print(x)\n    myinnerfunc()\n\nmyfunc()"
+        },
+        {
+          "type": "output",
+          "value": "300\n\n✅ Inner functions can access variables from outer functions. This is called Enclosing Scope."
+        },
+        {
+          "type": "text",
+          "value": "3. Global Scope\nA variable created outside all functions is called a global variable. It can be used anywhere in the program."
+        },
+        {
+          "type": "code",
+          "value": "x = 300\n\ndef myfunc():\n    print(x)\n\nmyfunc()\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "300\n300\n\n✅ Global variables are accessible inside and outside functions."
+        },
+        {
+          "type": "text",
+          "value": "4. Naming Variables (Local vs Global)\nIf the same variable name exists inside and outside a function, Python treats them as different variables."
+        },
+        {
+          "type": "code",
+          "value": "x = 300\n\ndef myfunc():\n    x = 200\n    print(x)\n\nmyfunc()\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "200\n300"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Variable",
+            "Scope",
+            "Value"
+          ],
+          "rows": [
+            [
+              "Local x",
+              "Inside function",
+              "200"
+            ],
+            [
+              "Global x",
+              "Outside function",
+              "300"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "✅ Local variable gets priority inside the function."
+        },
+        {
+          "type": "text",
+          "value": "5. The global Keyword\nUse global when you want to create or modify a global variable inside a function."
+        },
+        {
+          "type": "text",
+          "value": "Creating Global Variable Inside Function"
+        },
+        {
+          "type": "code",
+          "value": "def myfunc():\n    global x\n    x = 300\n\nmyfunc()\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "300"
+        },
+        {
+          "type": "text",
+          "value": "Changing Global Variable Inside Function"
+        },
+        {
+          "type": "code",
+          "value": "x = 300\n\ndef myfunc():\n    global x\n    x = 200\n\nmyfunc()\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "200\n\n✅ global allows changing the original global variable."
+        },
+        {
+          "type": "text",
+          "value": "6. The nonlocal Keyword\nnonlocal is used inside nested functions. It allows the inner function to modify variables from the outer function."
+        },
+        {
+          "type": "code",
+          "value": "def myfunc1():\n    x = \"Jane\"\n    def myfunc2():\n        nonlocal x\n        x = \"hello\"\n    myfunc2()\n    return x\n\nprint(myfunc1())"
+        },
+        {
+          "type": "output",
+          "value": "hello"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Difference Between global and nonlocal"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Keyword",
+            "Used For"
+          ],
+          "rows": [
+            [
+              "global",
+              "Modify global variable"
+            ],
+            [
+              "nonlocal",
+              "Modify enclosing function variable"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "7. Built-in Scope\nPython has built-in names available everywhere."
+        },
+        {
+          "type": "code",
+          "value": "numbers = [1, 2, 3]\nprint(len(numbers))"
+        },
+        {
+          "type": "output",
+          "value": "3"
+        },
+        {
+          "type": "text",
+          "value": "🧠 The LEGB Rule\nPython searches variables in this order: Local → Enclosing → Global → Built-in."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Letter",
+            "Scope"
+          ],
+          "rows": [
+            [
+              "L",
+              "Local"
+            ],
+            [
+              "E",
+              "Enclosing"
+            ],
+            [
+              "G",
+              "Global"
+            ],
+            [
+              "B",
+              "Built-in"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "LEGB Example"
+        },
+        {
+          "type": "code",
+          "value": "x = \"global\"\n\ndef outer():\n    x = \"enclosing\"\n    def inner():\n        x = \"local\"\n        print(\"Inner:\", x)\n    inner()\n    print(\"Outer:\", x)\n\nouter()\nprint(\"Global:\", x)"
+        },
+        {
+          "type": "output",
+          "value": "Inner: local\nOuter: enclosing\nGlobal: global"
+        },
+        {
+          "type": "text",
+          "value": "🔍 How Python Searches\nInside inner():\n1. Checks Local → \"local\" found (Stops searching)\n\nIf not found:\n2. checks Enclosing\n3. then Global\n4. then Built-in"
+        },
+        {
+          "type": "text",
+          "value": "📌 Summary Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Scope Type",
+            "Created Where",
+            "Accessible Where"
+          ],
+          "rows": [
+            [
+              "Local",
+              "Inside function",
+              "Only inside function"
+            ],
+            [
+              "Enclosing",
+              "Outer function",
+              "Inner function"
+            ],
+            [
+              "Global",
+              "Outside function",
+              "Entire program"
+            ],
+            [
+              "Built-in",
+              "Python built-ins",
+              "Everywhere"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🎯 Real-Time Example"
+        },
+        {
+          "type": "code",
+          "value": "balance = 1000\n\ndef deposit(amount):\n    global balance\n    balance += amount\n    print(\"Updated Balance:\", balance)\n\ndeposit(500)\nprint(\"Final Balance:\", balance)"
+        },
+        {
+          "type": "output",
+          "value": "Updated Balance: 1500\nFinal Balance: 1500"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between global and nonlocal keywords?",
+          "answer": "'global' is used to access or modify variables at the top level of a script, while 'nonlocal' is used in nested functions to modify variables in the immediate outer function scope."
+        },
+        {
+          "question": "Why does a local variable take priority over a global one with the same name inside a function?",
+          "answer": "Because Python follows the LEGB rule, searching the Local scope first before checking the Global scope."
+        },
+        {
+          "question": "What happens if a variable is not found in the Local, Enclosing, or Global scopes?",
+          "answer": "Python finally checks the Built-in scope. If it's still not found, it raises a NameError."
+        }
+      ]
+    },
+    {
+      "id": "python-decorators",
+      "title": "Python Decorators",
+      "category": "Basic",
+      "definition": "A decorator is a function that modifies the behavior of another function without changing its original code. It is a powerful tool for code reuse and for adding extra functionality to existing functions.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Decorators are used to add extra functionality, reuse code, and avoid repetition. In Python, functions are treated like variables, meaning they can be passed as arguments and can return other functions."
+        },
+        {
+          "type": "text",
+          "value": "⭐ Function Inside Function"
+        },
+        {
+          "type": "code",
+          "value": "def outer():\n    def inner():\n        print(\"Inner Function\")\n    inner()\n\nouter()"
+        },
+        {
+          "type": "output",
+          "value": "Inner Function"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Returning a Function"
+        },
+        {
+          "type": "code",
+          "value": "def outer():\n    def inner():\n        print(\"Hello from inner\")\n    return inner\n\nx = outer()\nx()"
+        },
+        {
+          "type": "output",
+          "value": "Hello from inner"
+        },
+        {
+          "type": "text",
+          "value": "🎯 What is a Decorator?\nA decorator takes a function, adds some functionality, and returns the modified function."
+        },
+        {
+          "type": "code",
+          "value": "def decorator_function(original_function):\n    def wrapper():\n        print(\"Before the function call\")\n        original_function()\n        print(\"After the function call\")\n    return wrapper\n\ndef display():\n    print(\"Hello World\")\n\ndecorated = decorator_function(display)\ndecorated()"
+        },
+        {
+          "type": "output",
+          "value": "Before the function call\nHello World\nAfter the function call"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Step",
+            "Description"
+          ],
+          "rows": [
+            [
+              "display",
+              "Original function"
+            ],
+            [
+              "wrapper",
+              "Adds extra functionality"
+            ],
+            [
+              "decorator_function()",
+              "Returns wrapper"
+            ],
+            [
+              "decorated()",
+              "Executes modified function"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "⭐ Using @ Decorator Syntax\nPython provides a shortcut using @ to apply a decorator to a function."
+        },
+        {
+          "type": "code",
+          "value": "def decorator_function(original_function):\n    def wrapper():\n        print(\"Before function\")\n        original_function()\n        print(\"After function\")\n    return wrapper\n\n@decorator_function\ndef display():\n    print(\"Hello\")\n\ndisplay()"
+        },
+        {
+          "type": "output",
+          "value": "Before function\nHello\nAfter function"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Decorator with Arguments\nIf the original function has parameters, the wrapper must also accept parameters using *args and **kwargs for flexibility."
+        },
+        {
+          "type": "code",
+          "value": "def decorator_function(original_function):\n    def wrapper(*args, **kwargs):\n        print(\"Before function\")\n        original_function(*args, **kwargs)\n        print(\"After function\")\n    return wrapper\n\n@decorator_function\ndef greet(name):\n    print(\"Hello\", name)\n\n@decorator_function\ndef add(a, b):\n    print(a + b)\n\ngreet(\"Alice\")\nadd(10, 20)"
+        },
+        {
+          "type": "output",
+          "value": "Before function\nHello Alice\nAfter function\nBefore function\n30\nAfter function"
+        },
+        {
+          "type": "text",
+          "value": "🎯 Real-World Example: Login Check"
+        },
+        {
+          "type": "code",
+          "value": "def login_required(function):\n    def wrapper():\n        print(\"Checking login...\")\n        function()\n    return wrapper\n\n@login_required\ndef dashboard():\n    print(\"Welcome to Dashboard\")\n\ndashboard()"
+        },
+        {
+          "type": "output",
+          "value": "Checking login...\nWelcome to Dashboard"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Multiple Decorators\nYou can apply more than one decorator by stacking them."
+        },
+        {
+          "type": "code",
+          "value": "def decorator1(func):\n    def wrapper():\n        print(\"Decorator 1\")\n        func()\n    return wrapper\n\ndef decorator2(func):\n    def wrapper():\n        print(\"Decorator 2\")\n        func()\n    return wrapper\n\n@decorator1\n@decorator2\ndef display():\n    print(\"Hello\")\n\ndisplay()"
+        },
+        {
+          "type": "output",
+          "value": "Decorator 1\nDecorator 2\nHello"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Built-in Decorators in Python"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Decorator",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "@staticmethod",
+              "Static method"
+            ],
+            [
+              "@classmethod",
+              "Class method"
+            ],
+            [
+              "@property",
+              "Getter method"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Example: @staticmethod and @property"
+        },
+        {
+          "type": "code",
+          "value": "class Student:\n    def __init__(self, name):\n        self._name = name\n    @property\n    def name(self):\n        return self._name\n    @staticmethod\n    def info():\n        print(\"Student class\")\n\ns = Student(\"Alice\")\nprint(s.name)\nStudent.info()"
+        },
+        {
+          "type": "output",
+          "value": "Alice\nStudent class"
+        },
+        {
+          "type": "text",
+          "value": "🧠 Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Concept",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Decorator",
+              "Function that modifies another function"
+            ],
+            [
+              "wrapper",
+              "Inner function inside decorator"
+            ],
+            [
+              "@decorator",
+              "Shortcut syntax"
+            ],
+            [
+              "*args, **kwargs",
+              "Makes decorator flexible"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🎯 Simple Visual Flow\n@decorator\ndef hello():\n    pass\n\nis equal to:\nhello = decorator(hello)"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is a decorator in Python?",
+          "answer": "A decorator is a function that takes another function as an argument, adds some functionality, and returns a new function without modifying the original function's source code."
+        },
+        {
+          "question": "What is the purpose of the wrapper function inside a decorator?",
+          "answer": "The wrapper function contains the actual logic that adds behavior before and/or after the original function is executed."
+        },
+        {
+          "question": "How do you handle function arguments in a decorator?",
+          "answer": "By using *args and **kwargs in the wrapper function definition and when calling the original function inside the wrapper."
+        }
+      ]
+    },
+    {
+      "id": "python-decorators-advanced",
+      "title": "Python Decorators (Advanced Concepts)",
+      "category": "Basic",
+      "definition": "Building upon basic decorators, this module explores advanced patterns such as decorators with arguments, preserving function metadata with functools.wraps, and understanding the execution order of multiple stacked decorators.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Decorators let you add extra behavior to a function without changing the original function code. A decorator is a function that takes another function as input and returns a modified function."
+        },
+        {
+          "type": "text",
+          "value": "🧠 Basic Idea\n@decorator_name\ndef myfunction():\n    pass\n\nis equal to:\nmyfunction = decorator_name(myfunction)"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Basic Decorator Example"
+        },
+        {
+          "type": "code",
+          "value": "def changecase(func):\n    def myinner():\n        return func().upper()\n    return myinner\n\n@changecase\ndef myfunction():\n    return \"Hello Sally\"\n\nprint(myfunction())"
+        },
+        {
+          "type": "output",
+          "value": "HELLO SALLY"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Part",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "changecase",
+              "Decorator function"
+            ],
+            [
+              "myfunction",
+              "Original function"
+            ],
+            [
+              "myinner",
+              "Wrapper function"
+            ],
+            [
+              "@changecase",
+              "Applies decorator"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🔥 How It Works Internally\nmyfunction = changecase(myfunction)\nThe decorator takes the original function, modifies its behavior, and returns a new function."
+        },
+        {
+          "type": "text",
+          "value": "⭐ Multiple Decorator Calls\nThe same decorator can be used on many functions."
+        },
+        {
+          "type": "code",
+          "value": "def changecase(func):\n    def myinner():\n        return func().upper()\n    return myinner\n\n@changecase\ndef myfunction():\n    return \"Hello Sally\"\n\n@changecase\ndef otherfunction():\n    return \"I am speed!\"\n\nprint(myfunction())\nprint(otherfunction())"
+        },
+        {
+          "type": "output",
+          "value": "HELLO SALLY\nI AM SPEED!"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Decorators with Function Arguments\nIf the decorated function accepts arguments, the wrapper must also accept arguments using *args and **kwargs to be flexible."
+        },
+        {
+          "type": "code",
+          "value": "def changecase(func):\n    def myinner(*args, **kwargs):\n        return func(*args, **kwargs).upper()\n    return myinner\n\n@changecase\ndef myfunction(nam):\n    return \"Hello \" + nam\n\nprint(myfunction(\"John\"))"
+        },
+        {
+          "type": "output",
+          "value": "HELLO JOHN"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Decorator with Arguments\nDecorators themselves can also take arguments. This requires an extra wrapper level."
+        },
+        {
+          "type": "code",
+          "value": "def changecase(n):\n    def decorator(func):\n        def myinner():\n            if n == 1:\n                return func().lower()\n            else:\n                return func().upper()\n        return myinner\n    return decorator\n\n@changecase(1)\ndef myfunction():\n    return \"Hello Linus\"\n\nprint(myfunction())"
+        },
+        {
+          "type": "output",
+          "value": "hello linus"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Multiple Decorators\nYou can apply more than one decorator to a function. Decorators are executed from bottom to top."
+        },
+        {
+          "type": "code",
+          "value": "def changecase(func):\n    def myinner():\n        return func().upper()\n    return myinner\n\ndef addgreeting(func):\n    def myinner():\n        return \"Hello \" + func() + \" Have a good day!\"\n    return myinner\n\n@changecase\n@addgreeting\ndef myfunction():\n    return \"Tobias\"\n\nprint(myfunction())"
+        },
+        {
+          "type": "output",
+          "value": "HELLO TOBIAS HAVE A GOOD DAY!"
+        },
+        {
+          "type": "text",
+          "value": "🔍 Order of Execution\nPython applies decorators in reverse order.\n@decorator1\n@decorator2\ndef test():\n    pass\n\nInternally: test = decorator1(decorator2(test))"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Function Metadata and the Problem with Decorators\nFunctions have metadata like __name__. However, decorators replace the original function with the wrapper function, causing metadata loss."
+        },
+        {
+          "type": "code",
+          "value": "def changecase(func):\n    def myinner():\n        return func().upper()\n    return myinner\n\n@changecase\ndef myfunction():\n    return \"Have a great day!\"\n\nprint(myfunction.__name__)"
+        },
+        {
+          "type": "output",
+          "value": "myinner\n\n⚠️ Original function name 'myfunction' is lost."
+        },
+        {
+          "type": "text",
+          "value": "⭐ Fix Using functools.wraps\nPython provides functools.wraps to preserve original function metadata."
+        },
+        {
+          "type": "code",
+          "value": "import functools\n\ndef changecase(func):\n    @functools.wraps(func)\n    def myinner():\n        return func().upper()\n    return myinner\n\n@changecase\ndef myfunction():\n    return \"Have a great day!\"\n\nprint(myfunction.__name__)"
+        },
+        {
+          "type": "output",
+          "value": "myfunction\n\n✅ Original metadata is preserved."
+        },
+        {
+          "type": "text",
+          "value": "📌 Summary Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Concept",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Decorator",
+              "Function that modifies another function"
+            ],
+            [
+              "Wrapper",
+              "Inner function inside decorator"
+            ],
+            [
+              "@decorator",
+              "Shortcut syntax"
+            ],
+            [
+              "*args, **kwargs",
+              "Accept flexible arguments"
+            ],
+            [
+              "functools.wraps",
+              "Preserve original metadata"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "In what order are multiple decorators executed in Python?",
+          "answer": "Decorators are executed from the bottom up (closest to the function definition first)."
+        },
+        {
+          "question": "What is the problem with losing function metadata when using decorators?",
+          "answer": "Losing metadata like '__name__' can make debugging difficult and break tools that rely on function introspection."
+        },
+        {
+          "question": "How do you pass arguments to a decorator itself?",
+          "answer": "By creating another outer function level that accepts the arguments and returns the actual decorator function."
+        }
+      ]
+    },
+    {
+      "id": "python-lambda",
+      "title": "Python Lambda Functions",
+      "category": "Basic",
+      "definition": "A lambda function is a small anonymous function in Python. Anonymous means the function has no name. Lambda functions can take any number of arguments, but they can have only one expression.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Syntax:\nlambda arguments : expression"
+        },
+        {
+          "type": "text",
+          "value": "✅ Normal Function vs Lambda Function"
+        },
+        {
+          "type": "code",
+          "value": "# Normal Function\ndef add(a, b):\n    return a + b\n\nprint(add(10, 20))\n\n# Lambda Function\nadd_lambda = lambda a, b: a + b\n\nprint(add_lambda(10, 20))"
+        },
+        {
+          "type": "output",
+          "value": "30\n30"
+        },
+        {
+          "type": "text",
+          "value": "🔍 Explanation\nlambda a, b: a + b\n• lambda: Keyword\n• a, b: Arguments\n• a + b: Expression returned automatically"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Lambda with One Argument"
+        },
+        {
+          "type": "code",
+          "value": "square = lambda x: x * x\nprint(square(5))"
+        },
+        {
+          "type": "output",
+          "value": "25"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Lambda with Multiple Arguments"
+        },
+        {
+          "type": "code",
+          "value": "multiply = lambda a, b, c: a * b * c\nprint(multiply(2, 3, 4))"
+        },
+        {
+          "type": "output",
+          "value": "24"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Immediately Calling Lambda Function"
+        },
+        {
+          "type": "code",
+          "value": "print((lambda a, b: a + b)(5, 10))"
+        },
+        {
+          "type": "output",
+          "value": "15"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Why Use Lambda Functions?\nLambda functions are useful for short functions, one-time use, and passing functions as arguments."
+        },
+        {
+          "type": "text",
+          "value": "⭐ Using Lambda Inside Another Function"
+        },
+        {
+          "type": "code",
+          "value": "def myfunc(n):\n    return lambda a: a * n\n\ndouble = myfunc(2)\nprint(double(10))"
+        },
+        {
+          "type": "output",
+          "value": "20"
+        },
+        {
+          "type": "text",
+          "value": "🔍 Explanation\ndouble = myfunc(2) returns lambda a: a * 2.\n\nYou can use the same function definition to make both functions in the same program:"
+        },
+        {
+          "type": "code",
+          "value": "def myfunc(n):\n  return lambda a : a * n\n\nmydoubler = myfunc(2)\nmytripler = myfunc(3)\n\nprint(mydoubler(11))\nprint(mytripler(11))"
+        },
+        {
+          "type": "output",
+          "value": "22\n33"
+        },
+        {
+          "type": "text",
+          "value": "Use lambda functions when an anonymous function is required for a short period of time."
+        },
+        {
+          "type": "text",
+          "value": "⭐ Lambda with map()\nmap() applies a function to every item in an iterable."
+        },
+        {
+          "type": "code",
+          "value": "numbers = [1, 2, 3, 4]\nresult = list(map(lambda x: x * 2, numbers))\nprint(result)"
+        },
+        {
+          "type": "output",
+          "value": "[2, 4, 6, 8]"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Lambda with filter()\nfilter() selects items based on a condition."
+        },
+        {
+          "type": "code",
+          "value": "numbers = [1, 2, 3, 4, 5, 6]\nresult = list(filter(lambda x: x % 2 == 0, numbers))\nprint(result)"
+        },
+        {
+          "type": "output",
+          "value": "[2, 4, 6]"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Lambda with sorted()\nUsed for custom sorting."
+        },
+        {
+          "type": "code",
+          "value": "students = [\n    (\"John\", 25),\n    (\"Alice\", 20),\n    (\"Bob\", 22)\n]\n\nstudents.sort(key=lambda x: x[1])\nprint(students)"
+        },
+        {
+          "type": "output",
+          "value": "[('Alice', 20), ('Bob', 22), ('John', 25)]"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Lambda with Conditional Expression"
+        },
+        {
+          "type": "code",
+          "value": "check = lambda x: \"Even\" if x % 2 == 0 else \"Odd\"\n\nprint(check(10))\nprint(check(7))"
+        },
+        {
+          "type": "output",
+          "value": "Even\nOdd"
+        },
+        {
+          "type": "text",
+          "value": "❌ Limitations of Lambda\nLambda functions can contain only one expression, cannot have multiple statements, and are not suitable for complex logic."
+        },
+        {
+          "type": "text",
+          "value": "❌ Invalid Lambda Example (Causes Error)"
+        },
+        {
+          "type": "code",
+          "value": "# lambda x:\n#     y = x + 1\n#     return y"
+        },
+        {
+          "type": "text",
+          "value": "✅ Use Normal Function for Complex Logic"
+        },
+        {
+          "type": "code",
+          "value": "def calculate(x):\n    y = x + 1\n    return y\n\nprint(calculate(5))"
+        },
+        {
+          "type": "output",
+          "value": "6"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Difference Between def and lambda"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "def Function",
+            "lambda Function"
+          ],
+          "rows": [
+            [
+              "Name",
+              "Has name",
+              "Anonymous"
+            ],
+            [
+              "Statements",
+              "Multiple allowed",
+              "Only one expression"
+            ],
+            [
+              "Complexity",
+              "Suitable for large logic",
+              "Suitable for short logic"
+            ],
+            [
+              "Return",
+              "Uses return",
+              "Returns automatically"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "📌 Real-Time Example"
+        },
+        {
+          "type": "code",
+          "value": "employees = [\n    {\"name\": \"Alice\", \"salary\": 50000},\n    {\"name\": \"Bob\", \"salary\": 30000},\n    {\"name\": \"John\", \"salary\": 40000}\n]\n\nemployees.sort(key=lambda emp: emp[\"salary\"])\n\nfor emp in employees:\n    print(emp)"
+        },
+        {
+          "type": "output",
+          "value": "{'name': 'Bob', 'salary': 30000}\n{'name': 'John', 'salary': 40000}\n{'name': 'Alice', 'salary': 50000}"
+        },
+        {
+          "type": "text",
+          "value": "🧠 Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Concept",
+            "Description"
+          ],
+          "rows": [
+            [
+              "lambda",
+              "Anonymous function"
+            ],
+            [
+              "Syntax",
+              "lambda arguments : expression"
+            ],
+            [
+              "Returns",
+              "Automatically"
+            ],
+            [
+              "Best Use",
+              "Short temporary functions"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is an anonymous function in Python?",
+          "answer": "An anonymous function is a function without a name, defined using the 'lambda' keyword rather than the standard 'def' keyword."
+        },
+        {
+          "question": "What is the primary limitation of a lambda function?",
+          "answer": "It can only contain a single expression and cannot include multiple statements or assignments."
+        },
+        {
+          "question": "How do you immediately call a lambda function?",
+          "answer": "By wrapping the entire lambda definition in parentheses and providing arguments in another set of parentheses, like: (lambda x: x+1)(5)."
+        }
+      ]
+    },
+    {
+      "id": "python-lambda-sorting",
+      "title": "Lambda for Custom Sorting",
+      "category": "Basic",
+      "definition": "One of the most common uses for lambda functions is as a key for sorting complex data structures like lists of tuples or dictionaries. This guide breaks down exactly how Python uses lambdas to determine sort order.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "When you have a list of tuples, you might want to sort by a specific value (like age or name) instead of the whole tuple. The 'key' argument in the sort() method allows you to pass a lambda function to tell Python which index to use for sorting."
+        },
+        {
+          "type": "code",
+          "value": "students = [\n    (\"John\", 20),\n    (\"Alice\", 25),\n    (\"Bob\", 22)\n]\n\n# Sort by age (index 1)\nstudents.sort(key=lambda x: x[1])\nprint(students)"
+        },
+        {
+          "type": "output",
+          "value": "[('John', 20), ('Bob', 22), ('Alice', 25)]"
+        },
+        {
+          "type": "text",
+          "value": "🧠 Step-by-Step Explanation"
+        },
+        {
+          "type": "text",
+          "value": "1. Original List\nEach item is a tuple: (name, age)\n[('John', 20), ('Alice', 25), ('Bob', 22)]"
+        },
+        {
+          "type": "text",
+          "value": "2. Understanding lambda x: x[1]\n• x represents each tuple during iteration\n• x[1] means the second value (age)"
+        },
+        {
+          "type": "text",
+          "value": "3. Internal Iteration Trace\n• Tuple 1: x = (\"John\", 20) → x[1] = 20\n• Tuple 2: x = (\"Alice\", 25) → x[1] = 25\n• Tuple 3: x = (\"Bob\", 22) → x[1] = 22\n\nPython sorts using the values: 20, 25, 22. After sorting: 20, 22, 25."
+        },
+        {
+          "type": "text",
+          "value": "Easy Meaning: lambda x: x[1] means 👉 \"Take the second value from each tuple and sort using it.\""
+        },
+        {
+          "type": "text",
+          "value": "⭐ Sort by Name Instead\nUsing index 0 (the name) as the sorting key."
+        },
+        {
+          "type": "code",
+          "value": "students = [(\"John\", 20), (\"Alice\", 25), (\"Bob\", 22)]\nstudents.sort(key=lambda x: x[0])\nprint(students)"
+        },
+        {
+          "type": "output",
+          "value": "[('Alice', 25), ('Bob', 22), ('John', 20)]"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Descending Order\nLargest age comes first by using the 'reverse=True' parameter."
+        },
+        {
+          "type": "code",
+          "value": "students = [(\"John\", 20), (\"Alice\", 25), (\"Bob\", 22)]\nstudents.sort(key=lambda x: x[1], reverse=True)\nprint(students)"
+        },
+        {
+          "type": "output",
+          "value": "[('Alice', 25), ('Bob', 22), ('John', 20)]"
+        }
+      ],
+      "questions": [
+        {
+          "question": "How do you sort a list of tuples by the first element using a lambda?",
+          "answer": "By using 'list.sort(key=lambda x: x[0])' or 'sorted(list, key=lambda x: x[0])'."
+        },
+        {
+          "question": "What does the 'x' represent in 'lambda x: x[1]' when used in sorting?",
+          "answer": "The 'x' represents each individual element (in this case, a tuple) within the list being sorted."
+        },
+        {
+          "question": "Can you use a lambda to sort in descending order?",
+          "answer": "Yes, by combining the lambda 'key' with the 'reverse=True' parameter in the sort() or sorted() function."
+        }
+      ]
+    },
+    {
+      "id": "python-generators",
+      "title": "Python Generators",
+      "category": "Basic",
+      "definition": "A generator is a special type of function that returns values one at a time using the yield keyword instead of return. They are highly memory-efficient for working with large datasets.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Generators are used to save memory and generate values lazily (one by one). This is especially useful for infinite sequences or large files."
+        },
+        {
+          "type": "text",
+          "value": "Normal Function vs Generator\nA normal function stops after a return statement, while a generator pauses at yield and can resume later."
+        },
+        {
+          "type": "code",
+          "value": "def mygenerator():\n    yield 1\n    yield 2\n    yield 3\n\nx = mygenerator()\nprint(next(x))\nprint(next(x))\nprint(next(x))"
+        },
+        {
+          "type": "output",
+          "value": "1\n2\n3"
+        },
+        {
+          "type": "text",
+          "value": "🔍 What is yield?\nYield pauses the function, saves the current state, and resumes from the same point when next() is called again."
+        },
+        {
+          "type": "text",
+          "value": "⭐ Using Generator with Loop\nGenerators are commonly used with for-loops, which automatically handle the next() calls and StopIteration."
+        },
+        {
+          "type": "code",
+          "value": "def mygenerator():\n    yield 10\n    yield 20\n    yield 30\n\nfor i in mygenerator():\n    print(i)"
+        },
+        {
+          "type": "output",
+          "value": "10\n20\n30"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Generator vs List (Memory Advantage)\nLists store all values in memory at once, while generators produce values only when needed."
+        },
+        {
+          "type": "code",
+          "value": "# Using List (Memory intensive)\ndef mylist():\n    return [i for i in range(5)]\n\n# Using Generator (Memory efficient)\ndef mygenerator():\n    for i in range(5):\n        yield i\n\nprint(mylist())\nprint(list(mygenerator()))"
+        },
+        {
+          "type": "output",
+          "value": "[0, 1, 2, 3, 4]\n[0, 1, 2, 3, 4]"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Generator Expression\nSimilar to list comprehension but uses parentheses. It returns a generator object instead of a full list."
+        },
+        {
+          "type": "code",
+          "value": "numbers = (x * x for x in range(5))\n\nfor i in numbers:\n    print(i)"
+        },
+        {
+          "type": "output",
+          "value": "0\n1\n4\n9\n16"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Infinite Generator\nGenerators can represent infinite sequences without crashing the program (as long as you don't try to convert them to a list)."
+        },
+        {
+          "type": "code",
+          "value": "def infinite():\n    i = 1\n    while True:\n        yield i\n        i += 1\n\nx = infinite()\nprint(next(x))\nprint(next(x))\nprint(next(x))"
+        },
+        {
+          "type": "output",
+          "value": "1\n2\n3"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Difference Between return and yield"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "return",
+            "yield"
+          ],
+          "rows": [
+            [
+              "Stops function",
+              "Yes",
+              "Pauses function"
+            ],
+            [
+              "Returns",
+              "One value",
+              "Multiple values over time"
+            ],
+            [
+              "Memory usage",
+              "Higher",
+              "Lower"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🔥 Difference Between Normal Function and Generator"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "Normal Function",
+            "Generator"
+          ],
+          "rows": [
+            [
+              "Keyword",
+              "return",
+              "yield"
+            ],
+            [
+              "Output",
+              "Entire result",
+              "One value at a time"
+            ],
+            [
+              "Execution",
+              "Runs fully",
+              "Pauses and resumes"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "📌 Advantages of Generators:\n• Memory efficient\n• Faster for large data processing\n• Easy iteration via lazy evaluation\n• Supports large/infinite datasets"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the primary difference between a list and a generator?",
+          "answer": "A list stores all its elements in memory at once, while a generator produces elements one by one on demand, saving memory."
+        },
+        {
+          "question": "What does the 'yield' keyword do?",
+          "answer": "It pauses the function and returns a value to the caller, while preserving the function's state (variables) so it can resume from where it left off."
+        },
+        {
+          "question": "What happens when you call next() on an exhausted generator?",
+          "answer": "It raises a 'StopIteration' exception, indicating that there are no more values to yield."
+        }
+      ]
+    },
+    {
+      "id": "python-generators-tutorial",
+      "title": "Python Generators (Advanced Concepts)",
+      "category": "Basic",
+      "definition": "Building upon basic generators, this module explores advanced features like the send() and close() methods, infinite sequence generation (Fibonacci), and memory-efficient aggregations using generator expressions.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Generators are special functions that can pause execution, save their state, and resume later. When a generator is called, it returns a generator object instead of executing immediately."
+        },
+        {
+          "type": "text",
+          "value": "⭐ Simple Generator Example\nUnlike normal functions, generators yield values one at a time and maintain their local variables between calls."
+        },
+        {
+          "type": "code",
+          "value": "def my_generator():\n    yield 1\n    yield 2\n    yield 3\n\nfor value in my_generator():\n    print(value)"
+        },
+        {
+          "type": "output",
+          "value": "1\n2\n3"
+        },
+        {
+          "type": "text",
+          "value": "🔍 Important Point\nCalling my_generator() does NOT run the function immediately; it creates a generator object. Execution starts only when iterating over it."
+        },
+        {
+          "type": "text",
+          "value": "⭐ Manual Control with next()\nYou can manually step through a generator using the next() function. Once all values are yielded, it raises a StopIteration exception."
+        },
+        {
+          "type": "code",
+          "value": "def simple_gen():\n    yield \"Emil\"\n    yield \"Tobias\"\n    yield \"Linus\"\n\ngen = simple_gen()\nprint(next(gen))\nprint(next(gen))\nprint(next(gen))"
+        },
+        {
+          "type": "output",
+          "value": "Emil\nTobias\nLinus"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Fibonacci Generator\nGenerators are perfect for representing infinite sequences without consuming massive amounts of memory."
+        },
+        {
+          "type": "code",
+          "value": "def fibonacci():\n    a, b = 0, 1\n    while True:\n        yield a\n        a, b = b, a + b\n\ngen = fibonacci()\nfor _ in range(10):\n    print(next(gen))"
+        },
+        {
+          "type": "output",
+          "value": "0\n1\n1\n2\n3\n5\n8\n13\n21\n34"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Generator Expressions with sum()\nYou can use generator expressions inside aggregation functions like sum() to process data without creating temporary lists."
+        },
+        {
+          "type": "code",
+          "value": "total = sum(x * x for x in range(10))\nprint(total)"
+        },
+        {
+          "type": "output",
+          "value": "285"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Generator Methods: send() and close()\nGenerators can receive data from the caller using send() and can be manually terminated using close()."
+        },
+        {
+          "type": "text",
+          "value": "1. send() Method\nSends a value back into the generator. The generator must be 'primed' by calling next() first."
+        },
+        {
+          "type": "code",
+          "value": "def echo_generator():\n    while True:\n        received = yield\n        print(\"Received:\", received)\n\ngen = echo_generator()\nnext(gen) # Priming\ngen.send(\"Hello\")\ngen.send(\"World\")"
+        },
+        {
+          "type": "output",
+          "value": "Received: Hello\nReceived: World"
+        },
+        {
+          "type": "text",
+          "value": "2. close() Method\nStops the generator immediately. Any code in a 'finally' block will still execute."
+        },
+        {
+          "type": "code",
+          "value": "def my_gen():\n    try:\n        yield 1\n        yield 2\n    finally:\n        print(\"Generator closed\")\n\ngen = my_gen()\nprint(next(gen))\ngen.close()"
+        },
+        {
+          "type": "output",
+          "value": "1\nGenerator closed"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Difference Between return and yield"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "return",
+            "yield"
+          ],
+          "rows": [
+            [
+              "Stops function",
+              "Yes",
+              "No (Pauses)"
+            ],
+            [
+              "Returns values",
+              "One time",
+              "Multiple times"
+            ],
+            [
+              "State saved",
+              "No",
+              "Yes"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "📌 Summary Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Concept",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Generator",
+              "Function using yield"
+            ],
+            [
+              "yield",
+              "Pauses function and saves state"
+            ],
+            [
+              "send()",
+              "Sends value into generator"
+            ],
+            [
+              "close()",
+              "Stops generator"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What does 'priming' a generator mean?",
+          "answer": "It means calling next() on a generator for the first time to start its execution up to the first 'yield' statement, which is necessary before using send()."
+        },
+        {
+          "question": "Can you send values into a generator? If so, how?",
+          "answer": "Yes, using the 'send()' method. The value sent is received as the result of the 'yield' expression inside the generator function."
+        },
+        {
+          "question": "What is the benefit of using a generator expression with sum()?",
+          "answer": "It processes each number one by one and adds it to the total, avoiding the need to create and store a full list of squares in memory."
+        }
+      ]
+    },
+    {
+      "id": "python-recursion",
+      "title": "Python Recursion",
+      "category": "Basic",
+      "definition": "Recursion is a programming technique where a function calls itself to solve smaller instances of the same problem. Every recursive function must have a base case to terminate and avoid infinite loops.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "A recursive function solves a problem by breaking it into smaller subproblems. It consists of two parts: a Base Case (to stop recursion) and a Recursive Call (where the function calls itself)."
+        },
+        {
+          "type": "text",
+          "value": "⚠️ Important Rule\nWithout a base case, recursion runs forever, leading to a 'RecursionError: maximum recursion depth exceeded'."
+        },
+        {
+          "type": "text",
+          "value": "⭐ Simple Recursion with Base Case\nIn this example, the function counts down from 'n' and stops when 'n' reaches 0."
+        },
+        {
+          "type": "code",
+          "value": "def count(n):\n    if n == 0:\n        return\n    print(n)\n    count(n - 1)\n\ncount(5)"
+        },
+        {
+          "type": "output",
+          "value": "5\n4\n3\n2\n1"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Mathematical Recursion: Factorial\nFactorial formula: n! = n × (n-1)!"
+        },
+        {
+          "type": "code",
+          "value": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    return n * factorial(n - 1)\n\nprint(factorial(5))"
+        },
+        {
+          "type": "output",
+          "value": "120"
+        },
+        {
+          "type": "text",
+          "value": "🔍 Execution Trace for factorial(5):\n5 * factorial(4) → 5 * 4 * factorial(3) → 5 * 4 * 3 * factorial(2) → 5 * 4 * 3 * 2 * factorial(1) = 120"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Fibonacci Sequence Using Recursion\nFormula: F(n) = F(n-1) + F(n-2)"
+        },
+        {
+          "type": "code",
+          "value": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\nfor i in range(10):\n    print(fibonacci(i), end=' ')"
+        },
+        {
+          "type": "output",
+          "value": "0 1 1 2 3 5 8 13 21 34"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Reverse String Using Recursion"
+        },
+        {
+          "type": "code",
+          "value": "def reverse(text):\n    if len(text) == 0:\n        return text\n    return reverse(text[1:]) + text[0]\n\nprint(reverse(\"Python\"))"
+        },
+        {
+          "type": "output",
+          "value": "nohtyP"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Recursion vs Loop"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "Recursion",
+            "Loop (Iterative)"
+          ],
+          "rows": [
+            [
+              "Code Style",
+              "Cleaner, more expressive",
+              "Uses counters and conditions"
+            ],
+            [
+              "Memory",
+              "Higher (uses stack space)",
+              "Lower"
+            ],
+            [
+              "Speed",
+              "Often slower",
+              "Usually faster"
+            ],
+            [
+              "Best for",
+              "Trees, graphs, math",
+              "Simple iterations"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "⭐ Recursion Limit\nPython limits recursion depth to prevent stack overflows. You can check and modify this limit using the 'sys' module."
+        },
+        {
+          "type": "code",
+          "value": "import sys\nprint(\"Current limit:\", sys.getrecursionlimit())\n\n# To change limit:\n# sys.setrecursionlimit(2000)"
+        },
+        {
+          "type": "output",
+          "value": "Current limit: 1000"
+        },
+        {
+          "type": "text",
+          "value": "📌 Real-Time Example: Directory Traversal\nRecursively exploring folders and subfolders to find all files."
+        },
+        {
+          "type": "code",
+          "value": "import os\n\ndef show_files(path):\n    for item in os.listdir(path):\n        full_path = os.path.join(path, item)\n        if os.path.isdir(full_path):\n            show_files(full_path)\n        else:\n            print(full_path)"
+        },
+        {
+          "type": "text",
+          "value": "🧠 Summary Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Concept",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Base Case",
+              "The condition that stops the recursion"
+            ],
+            [
+              "Recursive Call",
+              "The line where the function calls itself"
+            ],
+            [
+              "Call Stack",
+              "The memory area where calls are stored"
+            ],
+            [
+              "RecursionError",
+              "Occurs when depth exceeds limit"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What are the two essential components of a recursive function?",
+          "answer": "A base case (to terminate the recursion) and a recursive call (to perform the repeated logic on a smaller problem)."
+        },
+        {
+          "question": "What is a 'RecursionError' in Python?",
+          "answer": "It is an error that occurs when a recursive function reaches the maximum allowed depth, usually because a base case is missing or never reached."
+        },
+        {
+          "question": "Which is more memory-efficient: Recursion or Loops?",
+          "answer": "Loops (iterative approach) are generally more memory-efficient because they don't add new frames to the call stack for every iteration."
+        }
+      ]
+    },
+    {
+      "id": "python-recursion-tutorial",
+      "title": "Python Recursion (Tutorial)",
+      "category": "Basic",
+      "definition": "This module provides a step-by-step tutorial on recursion, focusing on list processing, base case logic, and practical mathematical sequences like Fibonacci and factorials.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Recursion is when a function calls itself to solve problems by breaking them into smaller subproblems. Every recursive function must contain a Base Case and a Recursive Case."
+        },
+        {
+          "type": "text",
+          "value": "Part vs Purpose Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Part",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "Base Case",
+              "Stops the recursion"
+            ],
+            [
+              "Recursive Case",
+              "Calls the function again with a smaller problem"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "⭐ Simple Recursive Function: Countdown"
+        },
+        {
+          "type": "code",
+          "value": "def countdown(n):\n    if n <= 0:\n        print(\"Done!\")\n    else:\n        print(n)\n        countdown(n - 1)\n\ncountdown(5)"
+        },
+        {
+          "type": "output",
+          "value": "5\n4\n3\n2\n1\nDone!"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Fibonacci Sequence Logic\nIn the sequence 0, 1, 1, 2, 3, 5, 8, 13..., each number is the sum of the previous two."
+        },
+        {
+          "type": "code",
+          "value": "def fibonacci(n):\n    if n <= 1:\n        return n\n    else:\n        return fibonacci(n - 1) + fibonacci(n - 2)\n\nprint(fibonacci(7))"
+        },
+        {
+          "type": "output",
+          "value": "13"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Recursion with Lists\nRecursion can process lists element by element using slicing."
+        },
+        {
+          "type": "text",
+          "value": "1. Sum of List Elements"
+        },
+        {
+          "type": "code",
+          "value": "def sum_list(numbers):\n    if len(numbers) == 0:\n        return 0\n    else:\n        return numbers[0] + sum_list(numbers[1:])\n\nmy_list = [1, 2, 3, 4, 5]\nprint(sum_list(my_list))"
+        },
+        {
+          "type": "output",
+          "value": "15"
+        },
+        {
+          "type": "text",
+          "value": "2. Find Maximum Value in List"
+        },
+        {
+          "type": "code",
+          "value": "def find_max(numbers):\n    if len(numbers) == 1:\n        return numbers[0]\n    else:\n        max_of_rest = find_max(numbers[1:])\n        return numbers[0] if numbers[0] > max_of_rest else max_of_rest\n\nmy_list = [3, 7, 2, 9, 1]\nprint(find_max(my_list))"
+        },
+        {
+          "type": "output",
+          "value": "9"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Handling the Recursion Limit\nPython prevents crashes by limiting depth. You can check or increase this if necessary."
+        },
+        {
+          "type": "code",
+          "value": "import sys\nprint(\"Limit:\", sys.getrecursionlimit())\n\nsys.setrecursionlimit(2000)\nprint(\"New Limit:\", sys.getrecursionlimit())"
+        },
+        {
+          "type": "output",
+          "value": "Limit: 1000\nNew Limit: 2000"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Concept",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Recursion",
+              "Function calling itself"
+            ],
+            [
+              "Base Case",
+              "Stops recursion"
+            ],
+            [
+              "Recursive Case",
+              "Function calls itself"
+            ],
+            [
+              "Call Stack",
+              "Stores recursive calls"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "How does 'numbers[1:]' help in list recursion?",
+          "answer": "It creates a new list excluding the first element, allowing the recursive call to process the 'rest' of the list until it becomes empty."
+        },
+        {
+          "question": "What is the base case for summing a list recursively?",
+          "answer": "The base case is when the list is empty (length 0), at which point the function returns 0 to stop further calls."
+        },
+        {
+          "question": "Is it always safe to increase the recursion limit?",
+          "answer": "No, increasing the limit too much can cause a program to crash with a stack overflow if the physical memory (stack space) is exhausted."
+        }
+      ]
+    },
+    {
+      "id": "python-recursion-mastery",
+      "title": "Python Recursive Code Examples",
+      "category": "Basic",
+      "definition": "This comprehensive reference guide provides 15 essential recursive programming examples in Python, covering mathematical logic, string manipulation, list processing, and number system conversions.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Recursion is a powerful tool for solving problems that can be divided into identical subproblems. Below are 15 common interview-focused recursive code snippets."
+        },
+        {
+          "type": "text",
+          "value": "1. Countdown Program\nCounts down from n to 1."
+        },
+        {
+          "type": "code",
+          "value": "def countdown(n):\n    if n <= 0:\n        print(\"Done\")\n    else:\n        print(n)\n        countdown(n - 1)\n\ncountdown(5)"
+        },
+        {
+          "type": "output",
+          "value": "5\n4\n3\n2\n1\nDone"
+        },
+        {
+          "type": "text",
+          "value": "2. Factorial Calculation\nCalculates n! = n * (n-1)!"
+        },
+        {
+          "type": "code",
+          "value": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    return n * factorial(n - 1)\n\nprint(factorial(5))"
+        },
+        {
+          "type": "output",
+          "value": "120"
+        },
+        {
+          "type": "text",
+          "value": "3. Fibonacci Series\nPrints the sequence up to n terms."
+        },
+        {
+          "type": "code",
+          "value": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\n\nfor i in range(10):\n    print(fibonacci(i), end=\" \")"
+        },
+        {
+          "type": "output",
+          "value": "0 1 1 2 3 5 8 13 21 34"
+        },
+        {
+          "type": "text",
+          "value": "4. Sum of Natural Numbers\nCalculates the sum of numbers from 1 to n."
+        },
+        {
+          "type": "code",
+          "value": "def total(n):\n    if n == 0:\n        return 0\n    return n + total(n - 1)\n\nprint(total(5))"
+        },
+        {
+          "type": "output",
+          "value": "15"
+        },
+        {
+          "type": "text",
+          "value": "5. Reverse a String"
+        },
+        {
+          "type": "code",
+          "value": "def reverse(text):\n    if len(text) == 0:\n        return text\n    return reverse(text[1:]) + text[0]\n\nprint(reverse(\"Python\"))"
+        },
+        {
+          "type": "output",
+          "value": "nohtyP"
+        },
+        {
+          "type": "text",
+          "value": "6. Power of a Number\nCalculates a to the power of n."
+        },
+        {
+          "type": "code",
+          "value": "def power(a, n):\n    if n == 0:\n        return 1\n    return a * power(a, n - 1)\n\nprint(power(2, 3))"
+        },
+        {
+          "type": "output",
+          "value": "8"
+        },
+        {
+          "type": "text",
+          "value": "7. Find Maximum in List"
+        },
+        {
+          "type": "code",
+          "value": "def find_max(numbers):\n    if len(numbers) == 1:\n        return numbers[0]\n    max_rest = find_max(numbers[1:])\n    return numbers[0] if numbers[0] > max_rest else max_rest\n\nmy_list = [3, 7, 2, 9, 1]\nprint(find_max(my_list))"
+        },
+        {
+          "type": "output",
+          "value": "9"
+        },
+        {
+          "type": "text",
+          "value": "8. Sum of List Elements"
+        },
+        {
+          "type": "code",
+          "value": "def sum_list(numbers):\n    if len(numbers) == 0:\n        return 0\n    return numbers[0] + sum_list(numbers[1:])\n\nmy_list = [1, 2, 3, 4, 5]\nprint(sum_list(my_list))"
+        },
+        {
+          "type": "output",
+          "value": "15"
+        },
+        {
+          "type": "text",
+          "value": "9. Palindrome Check"
+        },
+        {
+          "type": "code",
+          "value": "def palindrome(text):\n    if len(text) <= 1:\n        return True\n    if text[0] != text[-1]:\n        return False\n    return palindrome(text[1:-1])\n\nprint(palindrome(\"madam\"))\nprint(palindrome(\"python\"))"
+        },
+        {
+          "type": "output",
+          "value": "True\nFalse"
+        },
+        {
+          "type": "text",
+          "value": "10. Decimal to Binary Conversion"
+        },
+        {
+          "type": "code",
+          "value": "def binary(n):\n    if n == 0:\n        return \"\"\n    return binary(n // 2) + str(n % 2)\n\nprint(binary(10))"
+        },
+        {
+          "type": "output",
+          "value": "1010"
+        },
+        {
+          "type": "text",
+          "value": "11. GCD (Greatest Common Divisor)\nEuclidean algorithm: GCD(a,b) = GCD(b, a % b)"
+        },
+        {
+          "type": "code",
+          "value": "def gcd(a, b):\n    if b == 0:\n        return a\n    return gcd(b, a % b)\n\nprint(gcd(12, 18))"
+        },
+        {
+          "type": "output",
+          "value": "6"
+        },
+        {
+          "type": "text",
+          "value": "12. Multiplication Using Recursion"
+        },
+        {
+          "type": "code",
+          "value": "def multiply(a, b):\n    if b == 0:\n        return 0\n    return a + multiply(a, b - 1)\n\nprint(multiply(5, 3))"
+        },
+        {
+          "type": "output",
+          "value": "15"
+        },
+        {
+          "type": "text",
+          "value": "13. Count Digits in a Number"
+        },
+        {
+          "type": "code",
+          "value": "def count_digits(n):\n    if n == 0:\n        return 0\n    return 1 + count_digits(n // 10)\n\nprint(count_digits(12345))"
+        },
+        {
+          "type": "output",
+          "value": "5"
+        },
+        {
+          "type": "text",
+          "value": "14. Sum of Digits"
+        },
+        {
+          "type": "code",
+          "value": "def sum_digits(n):\n    if n == 0:\n        return 0\n    return n % 10 + sum_digits(n // 10)\n\nprint(sum_digits(1234))"
+        },
+        {
+          "type": "output",
+          "value": "10"
+        },
+        {
+          "type": "text",
+          "value": "15. Print Numbers 1 to N (Head Recursion)\nBy calling recursion before printing, numbers are displayed in ascending order."
+        },
+        {
+          "type": "code",
+          "value": "def print_numbers(n):\n    if n == 0:\n        return\n    print_numbers(n - 1)\n    print(n)\n\nprint_numbers(5)"
+        },
+        {
+          "type": "output",
+          "value": "1\n2\n3\n4\n5"
+        },
+        {
+          "type": "text",
+          "value": "🧠 Structural Reminder\nEvery recursive function requires a Base Case to stop and a Recursive Call that moves toward the base case."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the Euclidean algorithm in recursion?",
+          "answer": "It is an efficient method for computing the GCD of two numbers by repeatedly replacing the larger number with its remainder when divided by the smaller number until the remainder is zero."
+        },
+        {
+          "question": "Explain the difference between Head and Tail recursion in the examples above.",
+          "answer": "In 'Countdown' (Tail), the recursive call is the last action. In 'Print 1 to N' (Head), the recursive call happens before the print statement, causing numbers to be processed in reverse order on the return path."
+        },
+        {
+          "question": "Why is the base case for 'Palindrome' check 'len(text) <= 1'?",
+          "answer": "Because a string with one character or an empty string is by definition a palindrome, and it represents the smallest possible subproblem."
         }
       ]
     },
