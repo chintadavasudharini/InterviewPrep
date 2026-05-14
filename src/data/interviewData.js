@@ -10342,6 +10342,866 @@ export const interviewData = {
       ]
     },
     {
+      "id": "python-loop-dictionaries",
+      "title": "Python - Loop Dictionaries",
+      "category": "Basic",
+      "definition": "You can loop through a dictionary using a for loop. By default, looping through a dictionary returns the keys, but Python provides methods like keys(), values(), and items() to iterate over specific components.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "You can loop through a dictionary using a for loop.\n\nBy default, looping through a dictionary returns the keys."
+        },
+        {
+          "type": "text",
+          "value": "Loop Through Keys"
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nfor x in thisdict:\n    print(x)"
+        },
+        {
+          "type": "output",
+          "value": "brand\nmodel\nyear"
+        },
+        {
+          "type": "text",
+          "value": "Print Values Using Keys"
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nfor x in thisdict:\n    print(thisdict[x])"
+        },
+        {
+          "type": "output",
+          "value": "Ford\nMustang\n1964"
+        },
+        {
+          "type": "text",
+          "value": "Loop Through Values Using values()"
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nfor x in thisdict.values():\n    print(x)"
+        },
+        {
+          "type": "output",
+          "value": "Ford\nMustang\n1964"
+        },
+        {
+          "type": "text",
+          "value": "Loop Through Keys Using keys()"
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nfor x in thisdict.keys():\n    print(x)"
+        },
+        {
+          "type": "output",
+          "value": "brand\nmodel\nyear"
+        },
+        {
+          "type": "text",
+          "value": "Loop Through Both Keys and Values Using items()\n\nThe items() method returns key-value pairs as tuples."
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nfor x, y in thisdict.items():\n    print(x, y)"
+        },
+        {
+          "type": "output",
+          "value": "brand Ford\nmodel Mustang\nyear 1964"
+        },
+        {
+          "type": "text",
+          "value": "Using Formatted Output"
+        },
+        {
+          "type": "code",
+          "value": "student = {\n  \"name\": \"Vasudha\",\n  \"course\": \"Python\",\n  \"marks\": 95\n}\n\nfor key, value in student.items():\n    print(key, \":\", value)"
+        },
+        {
+          "type": "output",
+          "value": "name : Vasudha\ncourse : Python\nmarks : 95"
+        },
+        {
+          "type": "text",
+          "value": "Important Points\n• Looping directly over a dictionary iterates through its keys.\n• .values() allows iterating through values only.\n• .keys() explicitly iterates through keys.\n• .items() is the most efficient way to get both keys and values."
+        },
+        {
+          "type": "text",
+          "value": "Quick Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Loop Method",
+            "What it Returns"
+          ],
+          "rows": [
+            [
+              "for x in dict",
+              "Keys"
+            ],
+            [
+              "for x in dict.values()",
+              "Values"
+            ],
+            [
+              "for x in dict.keys()",
+              "Keys"
+            ],
+            [
+              "for x, y in dict.items()",
+              "Key-Value Tuples"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the default behavior when looping through a dictionary in Python?",
+          "answer": "By default, looping through a dictionary returns its keys."
+        },
+        {
+          "question": "How do you loop through both keys and values of a dictionary simultaneously?",
+          "answer": "You can use the .items() method, which returns each item as a key-value pair in a tuple format."
+        },
+        {
+          "question": "Which method would you use to iterate only over the values of a dictionary?",
+          "answer": "The .values() method."
+        }
+      ]
+    },
+    {
+      "id": "python-copy-dictionaries",
+      "title": "Python - Copy Dictionaries",
+      "category": "Basic",
+      "definition": "You cannot copy a dictionary simply by using dict2 = dict1 because dict2 will only be a reference to dict1. To create a real copy, use the copy() method or the dict() constructor.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "You cannot copy a dictionary simply by using:\n\ndict2 = dict1\n\nBecause dict2 will only be a reference to dict1, and changes made in dict1 or dict2 will automatically appers for both dicts\n\nBecause both variables will refer to the same dictionary.\n\nTo create a real copy, use:\n\ncopy() method\ndict() constructor"
+        },
+        {
+          "type": "text",
+          "value": "Problem with Direct Assignment"
+        },
+        {
+          "type": "code",
+          "value": "dict1 = {\n  \"name\": \"Vasudha\",\n  \"course\": \"Python\"\n}\n\ndict2 = dict1\n\ndict2[\"course\"] = \"MERN\"\n\nprint(dict1)\nprint(dict2)"
+        },
+        {
+          "type": "output",
+          "value": "{'name': 'Vasudha', 'course': 'MERN'}\n\n{'name': 'Vasudha', 'course': 'MERN'}\n\nBoth changed because both point to the same memory."
+        },
+        {
+          "type": "text",
+          "value": "Copy Dictionary Using copy()\n\nThe copy() method creates a new dictionary."
+        },
+        {
+          "type": "text",
+          "value": "Syntax\nnew_dict = old_dict.copy()"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nmydict = thisdict.copy()\n\nprint(mydict)"
+        },
+        {
+          "type": "output",
+          "value": "{'brand': 'Ford', 'model': 'Mustang', 'year': 1964}"
+        },
+        {
+          "type": "text",
+          "value": "Verify Independent Copy"
+        },
+        {
+          "type": "code",
+          "value": "dict1 = {\n  \"name\": \"Vasudha\",\n  \"course\": \"Python\"\n}\n\ndict2 = dict1.copy()\n\ndict2[\"course\"] = \"Django\"\n\nprint(dict1)\nprint(dict2)"
+        },
+        {
+          "type": "output",
+          "value": "{'name': 'Vasudha', 'course': 'Python'}\n\n{'name': 'Vasudha', 'course': 'Django'}\n\nNow changes affect only copied dictionary."
+        },
+        {
+          "type": "text",
+          "value": "Copy Dictionary Using dict()\n\nYou can also use the dict() constructor."
+        },
+        {
+          "type": "text",
+          "value": "Syntax\nnew_dict = dict(old_dict)"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "thisdict = {\n  \"brand\": \"Ford\",\n  \"model\": \"Mustang\",\n  \"year\": 1964\n}\n\nmydict = dict(thisdict)\n\nprint(mydict)"
+        },
+        {
+          "type": "output",
+          "value": "{'brand': 'Ford', 'model': 'Mustang', 'year': 1964}"
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Example"
+        },
+        {
+          "type": "code",
+          "value": "student = {\n  \"name\": \"Vasudha\",\n  \"marks\": 95,\n  \"course\": \"Python\"\n}\n\nbackup = student.copy()\n\nbackup[\"marks\"] = 100\n\nprint(\"Original:\", student)\nprint(\"Copied:\", backup)"
+        },
+        {
+          "type": "output",
+          "value": "Original: {'name': 'Vasudha', 'marks': 95, 'course': 'Python'}\n\nCopied: {'name': 'Vasudha', 'marks': 100, 'course': 'Python'}"
+        },
+        {
+          "type": "text",
+          "value": "Shallow Copy\n\ncopy() and dict() create a shallow copy.\n\nThis means:\n\nOuter dictionary is copied\nNested objects still share memory"
+        },
+        {
+          "type": "text",
+          "value": "Example of Shallow Copy"
+        },
+        {
+          "type": "code",
+          "value": "dict1 = {\n  \"student\": {\n      \"name\": \"Vasudha\"\n  }\n}\n\ndict2 = dict1.copy()\n\ndict2[\"student\"][\"name\"] = \"Ravi\"\n\nprint(dict1)\nprint(dict2)"
+        },
+        {
+          "type": "output",
+          "value": "{\n 'student': {'name': 'Ravi'}\n}\n\n{\n 'student': {'name': 'Ravi'}\n}\n\nNested dictionary changed in both."
+        },
+        {
+          "type": "text",
+          "value": "Deep Copy\n\nFor completely separate nested copies, use deepcopy() from copy module."
+        },
+        {
+          "type": "code",
+          "value": "import copy\n\ndict1 = {\n  \"student\": {\n      \"name\": \"Vasudha\"\n  }\n}\n\ndict2 = copy.deepcopy(dict1)\n\ndict2[\"student\"][\"name\"] = \"Ravi\"\n\nprint(dict1)\nprint(dict2)"
+        },
+        {
+          "type": "output",
+          "value": "{\n 'student': {'name': 'Vasudha'}\n}\n\n{\n 'student': {'name': 'Ravi'}\n}"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between Copy Methods"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Type"
+          ],
+          "rows": [
+            [
+              "=",
+              "Reference copy"
+            ],
+            [
+              "copy()",
+              "Shallow copy"
+            ],
+            [
+              "dict()",
+              "Shallow copy"
+            ],
+            [
+              "deepcopy()",
+              "Deep copy"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Important Points\n• = does not create a new dictionary.\n• copy() creates independent outer copy.\n• Nested objects still share memory in shallow copy.\n• Use deepcopy() for complete independent copy."
+        },
+        {
+          "type": "text",
+          "value": "Quick Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operation",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Reference copy",
+              "b = a"
+            ],
+            [
+              "Shallow copy",
+              "b = a.copy()"
+            ],
+            [
+              "Constructor copy",
+              "b = dict(a)"
+            ],
+            [
+              "Deep copy",
+              "copy.deepcopy(a)"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why is dict2 = dict1 not a true way to copy a dictionary?",
+          "answer": "Because it only creates a reference to the same dictionary. Any changes made to one will automatically be reflected in the other."
+        },
+        {
+          "question": "What is the difference between a shallow copy and a deep copy?",
+          "answer": "A shallow copy (using .copy() or dict()) copies the outer dictionary but nested objects still share memory. A deep copy (using copy.deepcopy()) creates completely independent copies of all nested objects."
+        },
+        {
+          "question": "Which module is required to perform a deep copy of a dictionary?",
+          "answer": "The 'copy' module."
+        }
+      ]
+    },
+    {
+      "id": "python-nested-dictionaries",
+      "title": "Python - Nested Dictionaries",
+      "category": "Basic",
+      "definition": "A Nested Dictionary means a dictionary inside another dictionary. It is used to store grouped or complex data effectively.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "A Nested Dictionary means a dictionary inside another dictionary.\n\nIt is used to store grouped or complex data."
+        },
+        {
+          "type": "text",
+          "value": "Create a Nested Dictionary"
+        },
+        {
+          "type": "code",
+          "value": "myfamily = {\n  \"child1\": {\n    \"name\": \"Emil\",\n    \"year\": 2004\n  },\n  \"child2\": {\n    \"name\": \"Tobias\",\n    \"year\": 2007\n  },\n  \"child3\": {\n    \"name\": \"Linus\",\n    \"year\": 2011\n  }\n}\n\nprint(myfamily)"
+        },
+        {
+          "type": "output",
+          "value": "{\n 'child1': {'name': 'Emil', 'year': 2004},\n 'child2': {'name': 'Tobias', 'year': 2007},\n 'child3': {'name': 'Linus', 'year': 2011}\n}"
+        },
+        {
+          "type": "text",
+          "value": "Access Items in Nested Dictionary\n\nUse multiple keys."
+        },
+        {
+          "type": "text",
+          "value": "Syntax\ndictionary[outer_key][inner_key]"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "myfamily = {\n  \"child1\": {\n    \"name\": \"Emil\",\n    \"year\": 2004\n  },\n  \"child2\": {\n    \"name\": \"Tobias\",\n    \"year\": 2007\n  }\n}\n\nprint(myfamily[\"child1\"][\"name\"])"
+        },
+        {
+          "type": "output",
+          "value": "Emil"
+        },
+        {
+          "type": "text",
+          "value": "Change Values in Nested Dictionary"
+        },
+        {
+          "type": "code",
+          "value": "myfamily = {\n  \"child1\": {\n    \"name\": \"Emil\",\n    \"year\": 2004\n  }\n}\n\nmyfamily[\"child1\"][\"year\"] = 2010\n\nprint(myfamily)"
+        },
+        {
+          "type": "output",
+          "value": "{\n 'child1': {'name': 'Emil', 'year': 2010}\n}"
+        },
+        {
+          "type": "text",
+          "value": "Add Items to Nested Dictionary"
+        },
+        {
+          "type": "code",
+          "value": "student = {\n  \"s1\": {\n    \"name\": \"Vasudha\",\n    \"marks\": 95\n  }\n}\n\nstudent[\"s1\"][\"course\"] = \"Python\"\n\nprint(student)"
+        },
+        {
+          "type": "output",
+          "value": "{\n 's1': {\n    'name': 'Vasudha',\n    'marks': 95,\n    'course': 'Python'\n }\n}"
+        },
+        {
+          "type": "text",
+          "value": "Add New Nested Dictionary"
+        },
+        {
+          "type": "code",
+          "value": "students = {\n  \"s1\": {\n    \"name\": \"Vasudha\"\n  }\n}\n\nstudents[\"s2\"] = {\n  \"name\": \"Ravi\",\n  \"marks\": 88\n}\n\nprint(students)"
+        },
+        {
+          "type": "output",
+          "value": "{\n 's1': {'name': 'Vasudha'},\n 's2': {'name': 'Ravi', 'marks': 88}\n}"
+        },
+        {
+          "type": "text",
+          "value": "Create Nested Dictionary Using Separate Dictionaries"
+        },
+        {
+          "type": "code",
+          "value": "child1 = {\n  \"name\": \"Emil\",\n  \"year\": 2004\n}\n\nchild2 = {\n  \"name\": \"Tobias\",\n  \"year\": 2007\n}\n\nchild3 = {\n  \"name\": \"Linus\",\n  \"year\": 2011\n}\n\nmyfamily = {\n  \"child1\": child1,\n  \"child2\": child2,\n  \"child3\": child3\n}\n\nprint(myfamily)"
+        },
+        {
+          "type": "output",
+          "value": "{\n 'child1': {'name': 'Emil', 'year': 2004},\n 'child2': {'name': 'Tobias', 'year': 2007},\n 'child3': {'name': 'Linus', 'year': 2011}\n}"
+        },
+        {
+          "type": "text",
+          "value": "Loop Through Nested Dictionaries"
+        },
+        {
+          "type": "code",
+          "value": "myfamily = {\n  \"child1\": {\n    \"name\": \"Emil\",\n    \"year\": 2004\n  },\n  \"child2\": {\n    \"name\": \"Tobias\",\n    \"year\": 2007\n  }\n}\n\nfor x, obj in myfamily.items():\n    print(x)\n\n    for y in obj:\n        print(f\"{y} : {obj[y]}\")"
+        },
+        {
+          "type": "output",
+          "value": "child1\nname: Emil\nyear: 2004\n\nchild2\nname: Tobias\nyear: 2007"
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Example"
+        },
+        {
+          "type": "code",
+          "value": "employees = {\n  \"emp1\": {\n    \"name\": \"Vasudha\",\n    \"department\": \"IT\",\n    \"salary\": 50000\n  },\n\n  \"emp2\": {\n    \"name\": \"Ravi\",\n    \"department\": \"HR\",\n    \"salary\": 40000\n  }\n}\n\nprint(employees[\"emp1\"][\"salary\"])"
+        },
+        {
+          "type": "output",
+          "value": "50000"
+        },
+        {
+          "type": "text",
+          "value": "Advantages of Nested Dictionaries"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Advantage",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Organized Data",
+              "Stores related data together"
+            ],
+            [
+              "Flexible",
+              "Can store complex structures"
+            ],
+            [
+              "Easy Access",
+              "Access using multiple keys"
+            ],
+            [
+              "Real-Time Usage",
+              "Used in JSON, APIs, databases"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Important Points\n• Nested dictionary = dictionary inside dictionary\n• Access using multiple keys\n• Can update/add/remove inner dictionary items\n• Commonly used in real-world applications"
+        },
+        {
+          "type": "text",
+          "value": "Quick Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operation",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Access nested item",
+              "dict[\"a\"][\"b\"]"
+            ],
+            [
+              "Change nested value",
+              "dict[\"a\"][\"b\"] = 10"
+            ],
+            [
+              "Add nested item",
+              "dict[\"a\"][\"c\"] = 20"
+            ],
+            [
+              "Add new nested dict",
+              "dict[\"x\"] = {...}"
+            ],
+            [
+              "Loop nested dict",
+              "for x,y in dict.items()"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is a nested dictionary in Python?",
+          "answer": "A nested dictionary is a dictionary that contains other dictionaries as its values."
+        },
+        {
+          "question": "How do you access a specific value in a nested dictionary?",
+          "answer": "You use multiple sets of square brackets, one for each level of the dictionary: dictionary[outer_key][inner_key]."
+        },
+        {
+          "question": "Can you create a nested dictionary using pre-existing dictionary variables?",
+          "answer": "Yes, you can assign pre-defined dictionaries as values to keys in a new dictionary."
+        }
+      ]
+    },
+    {
+      "id": "python-dictionary-methods",
+      "title": "Python Dictionary Methods",
+      "category": "Basic",
+      "definition": "Python provides many built-in methods to work with dictionaries, allowing for efficient data manipulation including clearing, copying, accessing, and updating items.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Python provides many built-in methods to work with dictionaries."
+        },
+        {
+          "type": "text",
+          "value": "List of Dictionary Methods"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Description"
+          ],
+          "rows": [
+            [
+              "clear()",
+              "Removes all items"
+            ],
+            [
+              "copy()",
+              "Returns a copy of dictionary"
+            ],
+            [
+              "fromkeys()",
+              "Creates dictionary from keys"
+            ],
+            [
+              "get()",
+              "Returns value of key"
+            ],
+            [
+              "items()",
+              "Returns key-value pairs"
+            ],
+            [
+              "keys()",
+              "Returns all keys"
+            ],
+            [
+              "pop()",
+              "Removes specified key"
+            ],
+            [
+              "popitem()",
+              "Removes last inserted item"
+            ],
+            [
+              "setdefault()",
+              "Returns value of key"
+            ],
+            [
+              "update()",
+              "Updates dictionary"
+            ],
+            [
+              "values()",
+              "Returns all values"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1. clear()\n\nRemoves all items from dictionary."
+        },
+        {
+          "type": "code",
+          "value": "student = {\n  \"name\": \"Vasudha\",\n  \"marks\": 95\n}\n\nstudent.clear()\n\nprint(student)"
+        },
+        {
+          "type": "output",
+          "value": "{}"
+        },
+        {
+          "type": "text",
+          "value": "2. copy()\n\nReturns a copy of dictionary."
+        },
+        {
+          "type": "code",
+          "value": "student = {\n  \"name\": \"Vasudha\",\n  \"marks\": 95\n}\n\nx = student.copy()\n\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "{'name': 'Vasudha', 'marks': 95}"
+        },
+        {
+          "type": "text",
+          "value": "3. fromkeys()\n\nCreates a new dictionary using given keys."
+        },
+        {
+          "type": "text",
+          "value": "Syntax\ndict.fromkeys(keys, value)"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "x = ('key1', 'key2', 'key3')\n\ny = 0\n\nthisdict = dict.fromkeys(x, y)\n\nprint(thisdict)"
+        },
+        {
+          "type": "output",
+          "value": "{'key1': 0, 'key2': 0, 'key3': 0}"
+        },
+        {
+          "type": "text",
+          "value": "4. get()\n\nReturns value of specified key."
+        },
+        {
+          "type": "code",
+          "value": "student = {\n  \"name\": \"Vasudha\",\n  \"marks\": 95\n}\n\nprint(student.get(\"name\"))"
+        },
+        {
+          "type": "output",
+          "value": "Vasudha"
+        },
+        {
+          "type": "text",
+          "value": "5. items()\n\nReturns all key-value pairs."
+        },
+        {
+          "type": "code",
+          "value": "student = {\n  \"name\": \"Vasudha\",\n  \"marks\": 95\n}\n\nprint(student.items())"
+        },
+        {
+          "type": "output",
+          "value": "dict_items([('name', 'Vasudha'), ('marks', 95)])"
+        },
+        {
+          "type": "text",
+          "value": "6. keys()\n\nReturns all keys."
+        },
+        {
+          "type": "code",
+          "value": "student = {\n  \"name\": \"Vasudha\",\n  \"marks\": 95\n}\n\nprint(student.keys())"
+        },
+        {
+          "type": "output",
+          "value": "dict_keys(['name', 'marks'])"
+        },
+        {
+          "type": "text",
+          "value": "7. pop()\n\nRemoves specified key."
+        },
+        {
+          "type": "code",
+          "value": "student = {\n  \"name\": \"Vasudha\",\n  \"marks\": 95\n}\n\nstudent.pop(\"marks\")\n\nprint(student)"
+        },
+        {
+          "type": "output",
+          "value": "{'name': 'Vasudha'}"
+        },
+        {
+          "type": "text",
+          "value": "8. popitem()\n\nRemoves last inserted item."
+        },
+        {
+          "type": "code",
+          "value": "student = {\n  \"name\": \"Vasudha\",\n  \"marks\": 95\n}\n\nstudent.popitem()\n\nprint(student)"
+        },
+        {
+          "type": "output",
+          "value": "{'name': 'Vasudha'}"
+        },
+        {
+          "type": "text",
+          "value": "9. setdefault()\n\nReturns value of key.\nIf key does not exist, inserts key with specified value."
+        },
+        {
+          "type": "text",
+          "value": "Syntax\ndictionary.setdefault(key, default_value)"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "student = {\n  \"name\": \"Vasudha\",\n  \"marks\": 95\n}\n\nx = student.setdefault(\"course\", \"Python\")\n\nprint(x)\n\nprint(student)"
+        },
+        {
+          "type": "output",
+          "value": "Python\n\n{\n 'name': 'Vasudha',\n 'marks': 95,\n 'course': 'Python'\n}"
+        },
+        {
+          "type": "text",
+          "value": "10. update()\n\nUpdates dictionary with new items."
+        },
+        {
+          "type": "code",
+          "value": "student = {\n  \"name\": \"Vasudha\"\n}\n\nstudent.update({\n  \"marks\": 95,\n  \"course\": \"Python\"\n})\n\nprint(student)"
+        },
+        {
+          "type": "output",
+          "value": "{\n 'name': 'Vasudha',\n 'marks': 95,\n 'course': 'Python'\n}"
+        },
+        {
+          "type": "text",
+          "value": "11. values()\n\nReturns all values."
+        },
+        {
+          "type": "code",
+          "value": "student = {\n  \"name\": \"Vasudha\",\n  \"marks\": 95\n}\n\nprint(student.values())"
+        },
+        {
+          "type": "output",
+          "value": "dict_values(['Vasudha', 95])"
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Example"
+        },
+        {
+          "type": "code",
+          "value": "employee = {\n  \"id\": 101,\n  \"name\": \"Ravi\",\n  \"salary\": 30000\n}\n\nprint(employee.keys())\n\nprint(employee.values())\n\nprint(employee.items())\n\nemployee.update({\"department\": \"IT\"})\n\nprint(employee)"
+        },
+        {
+          "type": "output",
+          "value": "dict_keys(['id', 'name', 'salary'])\n\ndict_values([101, 'Ravi', 30000])\n\ndict_items([\n('id', 101),\n('name', 'Ravi'),\n('salary', 30000)\n])\n\n{\n 'id': 101,\n 'name': 'Ravi',\n 'salary': 30000,\n 'department': 'IT'\n}"
+        },
+        {
+          "type": "text",
+          "value": "Most Important Dictionary Methods"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Common Use"
+          ],
+          "rows": [
+            [
+              "get()",
+              "Safe value access"
+            ],
+            [
+              "keys()",
+              "Get all keys"
+            ],
+            [
+              "values()",
+              "Get all values"
+            ],
+            [
+              "items()",
+              "Get key-value pairs"
+            ],
+            [
+              "update()",
+              "Add/update items"
+            ],
+            [
+              "pop()",
+              "Remove specific item"
+            ],
+            [
+              "copy()",
+              "Copy dictionary"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Quick Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "clear()",
+              "Remove all items"
+            ],
+            [
+              "copy()",
+              "Copy dictionary"
+            ],
+            [
+              "fromkeys()",
+              "Create dictionary from keys"
+            ],
+            [
+              "get()",
+              "Get value"
+            ],
+            [
+              "items()",
+              "Get all items"
+            ],
+            [
+              "keys()",
+              "Get all keys"
+            ],
+            [
+              "pop()",
+              "Remove key"
+            ],
+            [
+              "popitem()",
+              "Remove last item"
+            ],
+            [
+              "setdefault()",
+              "Insert if key absent"
+            ],
+            [
+              "update()",
+              "Update dictionary"
+            ],
+            [
+              "values()",
+              "Get all values"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between pop() and popitem()?",
+          "answer": "pop() removes an item with a specific key, while popitem() removes the last inserted item in the dictionary."
+        },
+        {
+          "question": "How does the setdefault() method work?",
+          "answer": "setdefault() returns the value of a key if it exists. If the key does not exist, it inserts the key with the specified default value."
+        },
+        {
+          "question": "What does the fromkeys() method do?",
+          "answer": "It creates a new dictionary from a sequence of keys and a single optional value for all of them."
+        }
+      ]
+    },
+    {
       "id": "python-for-loop",
       "title": "For Loop",
       "category": "Loops",
