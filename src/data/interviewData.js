@@ -17275,6 +17275,97 @@ export const interviewData = {
       ]
     },
     {
+      "id": "python-oop-interview-questions-part3",
+      "title": "Python OOP Interview Questions - Part 3",
+      "category": "OOP Basics",
+      "definition": "A curated collection of the most frequent and essential Object-Oriented Programming interview questions, designed to reinforce core architectural concepts in Python.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "🎯 1. What is OOP?\nObject-Oriented Programming (OOP) is a programming paradigm based on the concept of 'objects', which can contain data (attributes) and code (methods). It is designed to make code more modular, reusable, and easier to maintain."
+        },
+        {
+          "type": "text",
+          "value": "🏛️ 2. What are the 4 Pillars of OOP?\n• Encapsulation: Bundling data and methods.\n• Abstraction: Hiding implementation details.\n• Inheritance: Reusing code from parent classes.\n• Polymorphism: Different behaviors for the same interface."
+        },
+        {
+          "type": "text",
+          "value": "⚖️ 3. Difference: Encapsulation vs. Abstraction"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Encapsulation",
+            "Abstraction"
+          ],
+          "rows": [
+            [
+              "Hides data and attributes",
+              "Hides internal implementation/logic"
+            ],
+            [
+              "Uses private variables (__var)",
+              "Uses abstract classes or methods"
+            ],
+            [
+              "Focuses on 'How' to restrict access",
+              "Focuses on 'What' the object does"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🧬 4. What is Inheritance?\nInheritance is a mechanism where a child class acquires the properties and methods of a parent class. It allows for hierarchical classification and significant code reusability."
+        },
+        {
+          "type": "text",
+          "value": "🎭 5. What is Polymorphism?\nPolymorphism means 'many forms'. It allows a single function or method to behave differently based on the object it is acting upon."
+        },
+        {
+          "type": "text",
+          "value": "🔄 6. What is Method Overriding?\nMethod overriding allows a child class to provide a specific implementation for a method that is already defined in its parent class."
+        },
+        {
+          "type": "code",
+          "value": "class Parent:\n    def show(self): print(\"Parent\")\n\nclass Child(Parent):\n    def show(self): print(\"Child\")"
+        },
+        {
+          "type": "text",
+          "value": "🛠️ 7. What is a Constructor in Python?\nA constructor is a special method called __init__() that is automatically executed when an object of a class is created. It is used to initialize the object's attributes."
+        },
+        {
+          "type": "text",
+          "value": "👉 8. What is 'self' in Python?\n'self' is a reference to the current instance of the class. It is used to access variables and methods belonging to the class from within its own methods."
+        },
+        {
+          "type": "text",
+          "value": "🔗 9. Can Python support Multiple Inheritance?\nYes, Python supports multiple inheritance, where a single class can inherit from more than one parent class."
+        },
+        {
+          "type": "code",
+          "value": "class A: pass\nclass B: pass\nclass C(A, B): pass # Class C inherits from both A and B"
+        },
+        {
+          "type": "text",
+          "value": "🧊 10. What is an Object?\nAn object is a real-world entity and an 'instance' of a class. While a class is a blueprint, an object is the actual building created from that blueprint."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Which keyword is used for inheritance in Python?",
+          "answer": "In Python, inheritance is specified by passing the parent class as an argument to the child class definition, e.g., 'class Child(Parent):'."
+        },
+        {
+          "question": "What is the difference between a class and an object?",
+          "answer": "A class is a blueprint or template, whereas an object is a specific instance of that class that contains actual data."
+        },
+        {
+          "question": "Is the 'self' keyword mandatory in Python?",
+          "answer": "Technically, you can use any name (it's just the first parameter of instance methods), but 'self' is the universal standard and must be present to access instance attributes."
+        }
+      ]
+    },
+    {
       "id": "what-is-a-class",
       "title": "What is a Class in Python?",
       "category": "OOP Basics",
