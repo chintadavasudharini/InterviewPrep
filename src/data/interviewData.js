@@ -855,6 +855,125 @@ export const interviewData = {
       ]
     },
     {
+      "id": "python-none",
+      "title": "Python None",
+      "category": "Basic",
+      "definition": "None is a special constant in Python that represents the absence of a value or a null value. It is an object of its own data type, NoneType.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "⭐ Understanding None\nNone is used to define a null variable or an object. It is not the same as 0, False, or an empty string. Variables can be assigned None to indicate 'no value', 'not set', or an 'empty result'."
+        },
+        {
+          "type": "code",
+          "value": "x = None\nprint(x)\nprint(type(x))"
+        },
+        {
+          "type": "output",
+          "value": "None\n<class 'NoneType'>"
+        },
+        {
+          "type": "text",
+          "value": "🔍 Comparing to None\nTo compare a value to None, you should always use the 'is' and 'is not' identity operators, rather than equality operators (==)."
+        },
+        {
+          "type": "code",
+          "value": "result = None\n\nif result is None:\n    print(\"No result yet\")\nelse:\n    print(\"Result is ready\")"
+        },
+        {
+          "type": "output",
+          "value": "No result yet"
+        },
+        {
+          "type": "text",
+          "value": "🔥 None in Boolean Context\nIn Python, None is considered 'Falsy'. When converted to a boolean, it returns False."
+        },
+        {
+          "type": "code",
+          "value": "print(bool(None))"
+        },
+        {
+          "type": "output",
+          "value": "False"
+        },
+        {
+          "type": "text",
+          "value": "⚙️ Functions and None\nIf a function does not have an explicit return statement, Python automatically returns None."
+        },
+        {
+          "type": "code",
+          "value": "def myfunc():\n    x = 5\n\nx = myfunc()\nprint(x)"
+        },
+        {
+          "type": "output",
+          "value": "None"
+        },
+        {
+          "type": "text",
+          "value": "👉 Critical Comparisons"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Value",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "None",
+              "Absence of value (NoneType)"
+            ],
+            [
+              "0",
+              "The number zero (int)"
+            ],
+            [
+              "False",
+              "Boolean false (bool)"
+            ],
+            [
+              "\"\"",
+              "Empty string (str)"
+            ],
+            [
+              "[]",
+              "Empty list (list)"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🎯 Real-Time Example\nChecking if a user has provided their name."
+        },
+        {
+          "type": "code",
+          "value": "name = None\n\nif name is None:\n    print(\"Please enter your name\")"
+        },
+        {
+          "type": "output",
+          "value": "Please enter your name"
+        },
+        {
+          "type": "text",
+          "value": "🚀 Quick Summary\n• Represents absence of value.\n• Data type: NoneType.\n• Use 'is None' for identity checks.\n• Functions without 'return' return None.\n• Considered False in boolean logic."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is None in Python?",
+          "answer": "None is a special constant representing the absence of a value or a null state. It is a singleton object of the NoneType class."
+        },
+        {
+          "question": "Why is 'is None' preferred over '== None'?",
+          "answer": "Since None is a singleton (only one instance exists in memory), identity comparison using 'is' is faster and more reliable than equality comparison using '=='."
+        },
+        {
+          "question": "What does a function return if it lacks a return statement?",
+          "answer": "Python functions implicitly return 'None' if no explicit return value is specified."
+        }
+      ]
+    },
+    {
       "id": "python-numbers",
       "title": "Python Numbers",
       "category": "Basic",
@@ -14590,6 +14709,2250 @@ export const interviewData = {
         {
           "question": "Why is the base case for 'Palindrome' check 'len(text) <= 1'?",
           "answer": "Because a string with one character or an empty string is by definition a palindrome, and it represents the smallest possible subproblem."
+        }
+      ]
+    },
+    {
+      "id": "python-range",
+      "title": "Python range()",
+      "category": "Basic",
+      "definition": "In Python, range() is a built-in function used to generate a sequence of numbers. It’s commonly used in loops like for.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Basic Syntax:\nrange(start, stop, step)"
+        },
+        {
+          "type": "text",
+          "value": "🔍 How it works\n• start (optional): The number to begin from. (default = 0)\n• stop (required): The number to stop before. (Note: This number is NOT included in the result)\n• step (optional): The difference between each number. (default = 1)"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Example 1: Simple range\nIf only one number is provided, it is treated as the 'stop' value."
+        },
+        {
+          "type": "code",
+          "value": "for i in range(5):\n    print(i, end=\" \")"
+        },
+        {
+          "type": "output",
+          "value": "0 1 2 3 4"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Example 2: With start and stop\nSpecifying both where to begin and where to end."
+        },
+        {
+          "type": "code",
+          "value": "for i in range(2, 6):\n    print(i, end=\" \")"
+        },
+        {
+          "type": "output",
+          "value": "2 3 4 5"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Example 3: With step\nUsing the third parameter to skip numbers."
+        },
+        {
+          "type": "code",
+          "value": "for i in range(1, 10, 2):\n    print(i, end=\" \")"
+        },
+        {
+          "type": "output",
+          "value": "1 3 5 7 9"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Example 4: Reverse range\nUsing a negative step value to count backwards."
+        },
+        {
+          "type": "code",
+          "value": "for i in range(10, 0, -1):\n    print(i, end=\" \")"
+        },
+        {
+          "type": "output",
+          "value": "10 9 8 7 6 5 4 3 2 1"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Key Points to Remember"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "Detail"
+          ],
+          "rows": [
+            [
+              "Exclusion",
+              "The 'stop' value is always excluded."
+            ],
+            [
+              "Efficiency",
+              "It is a lazy iterator—it doesn't store all numbers in memory."
+            ],
+            [
+              "List Conversion",
+              "Can be converted to a list using list(range(5))."
+            ],
+            [
+              "Default Start",
+              "If start is omitted, it defaults to 0."
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🎯 Quick Tip: Memory Efficiency\nrange() doesn't actually produce a list of numbers. It is a range object that produces numbers on demand, making it extremely efficient even for very large ranges like range(1000000)."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Is the 'stop' value included in a range() function result?",
+          "answer": "No, the range() function stops exactly one step before the 'stop' value."
+        },
+        {
+          "question": "What happens if the step value is negative?",
+          "answer": "The range() function counts downwards, provided that the 'start' value is greater than the 'stop' value."
+        },
+        {
+          "question": "How can you convert a range object into a physical list of numbers?",
+          "answer": "By using the list() constructor, for example: list(range(5))."
+        }
+      ]
+    },
+    {
+      "id": "python-range-advanced",
+      "title": "Python range() - Part 2",
+      "category": "Basic",
+      "definition": "In Python, the built-in range() function returns an immutable sequence of numbers and is mainly used in loops.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "• Immutable means the values cannot be changed after creation.\n• range() creates a special data type called range."
+        },
+        {
+          "type": "text",
+          "value": "Syntax:\nrange(start, stop, step)"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Parameter",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "start",
+              "Starting value (default = 0)"
+            ],
+            [
+              "stop",
+              "Ending value (excluded)"
+            ],
+            [
+              "step",
+              "Difference between numbers (default = 1)"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1. range() with One Argument\nWhen only one argument is given, it becomes the stop value."
+        },
+        {
+          "type": "code",
+          "value": "x = range(10)\n\nprint(list(x))"
+        },
+        {
+          "type": "output",
+          "value": "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]"
+        },
+        {
+          "type": "text",
+          "value": "🔍 Explanation\nStart defaults to 0\nStop is 10 (excluded)\n\nSo range(10) means range(0, 10, 1)."
+        },
+        {
+          "type": "text",
+          "value": "2. range() with Two Arguments\nFirst argument = start\nSecond argument = stop"
+        },
+        {
+          "type": "code",
+          "value": "x = range(3, 10)\n\nprint(list(x))"
+        },
+        {
+          "type": "output",
+          "value": "[3, 4, 5, 6, 7, 8, 9]"
+        },
+        {
+          "type": "text",
+          "value": "🔍 Explanation\nStarts from 3\nStops before 10"
+        },
+        {
+          "type": "text",
+          "value": "3. range() with Three Arguments\nThird argument is the step value."
+        },
+        {
+          "type": "code",
+          "value": "x = range(3, 10, 2)\n\nprint(list(x))"
+        },
+        {
+          "type": "output",
+          "value": "[3, 5, 7, 9]"
+        },
+        {
+          "type": "text",
+          "value": "🔍 Explanation\nThe numbers increase by 2."
+        },
+        {
+          "type": "text",
+          "value": "⭐ Using range() in Loops"
+        },
+        {
+          "type": "code",
+          "value": "for i in range(5):\n    print(i)"
+        },
+        {
+          "type": "output",
+          "value": "0\n1\n2\n3\n4"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Reverse Range\nUsing a negative step:"
+        },
+        {
+          "type": "code",
+          "value": "for i in range(10, 0, -1):\n    print(i)"
+        },
+        {
+          "type": "output",
+          "value": "10\n9\n8\n7\n6\n5\n4\n3\n2\n1"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Convert Range to List\nA range object is not directly displayed clearly, so we often convert it to a list."
+        },
+        {
+          "type": "code",
+          "value": "print(list(range(5)))\nprint(list(range(1, 6)))\nprint(list(range(5, 20, 3)))"
+        },
+        {
+          "type": "output",
+          "value": "[0, 1, 2, 3, 4]\n[1, 2, 3, 4, 5]\n[5, 8, 11, 14, 17]"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Accessing Elements in a Range"
+        },
+        {
+          "type": "code",
+          "value": "r = range(10)\n\nprint(r[2])"
+        },
+        {
+          "type": "output",
+          "value": "2"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Slicing Ranges"
+        },
+        {
+          "type": "code",
+          "value": "r = range(10)\n\nprint(r[:5])\nprint(list(r[:5]))"
+        },
+        {
+          "type": "output",
+          "value": "range(0, 5)\n[0, 1, 2, 3, 4]"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Membership Testing (in Operator)"
+        },
+        {
+          "type": "code",
+          "value": "r = range(0, 10, 2)\n\nprint(6 in r)\nprint(7 in r)"
+        },
+        {
+          "type": "output",
+          "value": "True\nFalse"
+        },
+        {
+          "type": "text",
+          "value": "🔍 Explanation\nRange contains: 0, 2, 4, 6, 8. So 6 is present (True) and 7 is absent (False)."
+        },
+        {
+          "type": "text",
+          "value": "🔥 Length of a Range"
+        },
+        {
+          "type": "code",
+          "value": "r = range(0, 10, 2)\n\nprint(len(r))"
+        },
+        {
+          "type": "output",
+          "value": "5"
+        },
+        {
+          "type": "text",
+          "value": "🔍 Explanation\nElements are: 0, 2, 4, 6, 8. Total = 5."
+        },
+        {
+          "type": "text",
+          "value": "📌 Important Points\n✅ start is inclusive\n✅ stop is exclusive\n✅ Default start = 0\n✅ Default step = 1\n✅ Supports indexing and slicing\n✅ Immutable sequence"
+        },
+        {
+          "type": "text",
+          "value": "❌ Common Mistake"
+        },
+        {
+          "type": "code",
+          "value": "print(list(range(1, 5)))"
+        },
+        {
+          "type": "output",
+          "value": "[1, 2, 3, 4]"
+        },
+        {
+          "type": "text",
+          "value": "⚠️ Many beginners expect 5 also, but the stop value is not included."
+        },
+        {
+          "type": "text",
+          "value": "🚀 Quick Summary Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Code",
+            "Output Sequence"
+          ],
+          "rows": [
+            [
+              "range(5)",
+              "0 1 2 3 4"
+            ],
+            [
+              "range(1, 5)",
+              "1 2 3 4"
+            ],
+            [
+              "range(1, 10, 2)",
+              "1 3 5 7 9"
+            ],
+            [
+              "range(10, 0, -1)",
+              "10 9 8 7 6 5 4 3 2 1"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What does it mean that a range object is immutable?",
+          "answer": "It means the numbers within the sequence cannot be modified after the range object is created."
+        },
+        {
+          "question": "How do you check if a specific number exists in a range without using a loop?",
+          "answer": "You can use the 'in' operator for membership testing, e.g., '6 in range(0, 10, 2)'."
+        },
+        {
+          "question": "Can you access a specific element in a range using an index?",
+          "answer": "Yes, range objects support indexing just like lists and tuples, e.g., r[2] will return the third element."
+        }
+      ]
+    },
+    {
+      "id": "python-arrays",
+      "title": "Python Arrays",
+      "category": "Basic",
+      "definition": "In Python, arrays are used to store multiple values in a single variable. While Python doesn't have a built-in 'array' type like C or Java, it uses lists as flexible arrays.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Python provides three primary ways to work with arrays:\n1. Python Lists (Most Common)\n2. The array Module (Typed Arrays)\n3. NumPy Arrays (Scientific Computing)"
+        },
+        {
+          "type": "text",
+          "value": "1. Python Lists (Most Common \"Array\")\nA list is the standard, most flexible way to create an array in Python."
+        },
+        {
+          "type": "code",
+          "value": "numbers = [1, 2, 3, 4, 5]\nprint(numbers[0])"
+        },
+        {
+          "type": "output",
+          "value": "1"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Features of Lists:\n• Can store different data types (mixed types)\n• Dynamic size (can grow or shrink)\n• Supports indexing and slicing"
+        },
+        {
+          "type": "code",
+          "value": "numbers.append(6)     # Add element\nnumbers.remove(2)     # Remove element\nprint(numbers[1:4])   # Slice"
+        },
+        {
+          "type": "output",
+          "value": "[3, 4, 5]"
+        },
+        {
+          "type": "text",
+          "value": "2. Using the array Module (Typed Arrays)\nFor more memory-efficient arrays where all elements are of the same type."
+        },
+        {
+          "type": "code",
+          "value": "import array\n\narr = array.array('i', [1, 2, 3, 4])\nprint(arr[2])"
+        },
+        {
+          "type": "output",
+          "value": "3"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type Code",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "'i'",
+              "Signed Integer"
+            ],
+            [
+              "'f'",
+              "Floating point"
+            ],
+            [
+              "'d'",
+              "Double precision float"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "👉 Unlike lists, all elements in an array.array must be the same type."
+        },
+        {
+          "type": "text",
+          "value": "3. NumPy Arrays (Advanced & Powerful)\nFor scientific computing and large-scale mathematical operations."
+        },
+        {
+          "type": "code",
+          "value": "import numpy as np\n\narr = np.array([1, 2, 3, 4])\nprint(arr * 2)"
+        },
+        {
+          "type": "output",
+          "value": "[2 4 6 8]"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Why NumPy?\n• Significantly faster than lists for math\n• Supports vectorization (no loops needed)\n• Standard for Data Science and AI"
+        },
+        {
+          "type": "text",
+          "value": "4. Multi-Dimensional Arrays\nLists can act as 2D arrays (matrices) using nested structures."
+        },
+        {
+          "type": "code",
+          "value": "matrix = [\n    [1, 2, 3],\n    [4, 5, 6]\n]\n\nprint(matrix[1][2])"
+        },
+        {
+          "type": "output",
+          "value": "6"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Quick Comparison Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "List",
+            "array module",
+            "NumPy"
+          ],
+          "rows": [
+            [
+              "Flexible Type",
+              "✅ Yes",
+              "❌ No",
+              "❌ No"
+            ],
+            [
+              "Math Speed",
+              "❌ Slow",
+              "✅ Fast",
+              "🚀 Very Fast"
+            ],
+            [
+              "Multi-Dim",
+              "✅ Nested",
+              "❌ 1D Only",
+              "✅ Optimized"
+            ],
+            [
+              "Use Case",
+              "General Use",
+              "Memory Efficiency",
+              "Data Science"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "✔️ Simple Rule:\n• Use lists for most general tasks.\n• Use NumPy for heavy mathematical or data science work."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Does Python have a built-in 'array' data type like C++?",
+          "answer": "Not as a primitive type. Python primarily uses 'lists' as flexible arrays, but provides the 'array' module for typed, memory-efficient arrays."
+        },
+        {
+          "question": "What is the main limitation of the 'array' module compared to a list?",
+          "answer": "All elements in an 'array.array' object must be of the same data type, whereas a list can store mixed data types."
+        },
+        {
+          "question": "Why is NumPy preferred for data science over standard Python lists?",
+          "answer": "NumPy arrays are much faster for mathematical operations because they use contiguous memory and support vectorized operations that avoid Python loop overhead."
+        }
+      ]
+    },
+    {
+      "id": "python-arrays-part2",
+      "title": "Python Arrays - Part 2",
+      "category": "Basic",
+      "definition": "Python uses lists as flexible arrays. This module covers core operations, built-in methods, and practical programs for working with array-like structures in Python.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "⚠️ Note: Python does not have a built-in array data type like C or Java. Instead, lists are commonly used as arrays."
+        },
+        {
+          "type": "text",
+          "value": "🎯 What is an Array?\nAn array is a variable that can store multiple values in a single variable."
+        },
+        {
+          "type": "code",
+          "value": "cars = [\"Ford\", \"Volvo\", \"BMW\"]\nprint(cars)"
+        },
+        {
+          "type": "output",
+          "value": "['Ford', 'Volvo', 'BMW']"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Why Use Arrays (Lists)?\nArrays help when storing many values, looping through items, searching data, and sorting data."
+        },
+        {
+          "type": "code",
+          "value": "cars = [\"Ford\", \"Volvo\", \"BMW\"]\n\nfor car in cars:\n    print(car)"
+        },
+        {
+          "type": "output",
+          "value": "Ford\nVolvo\nBMW"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Access Array Elements\nUse the index number (starting from 0) to access specific items."
+        },
+        {
+          "type": "code",
+          "value": "cars = [\"Ford\", \"Volvo\", \"BMW\"]\nprint(cars[0])"
+        },
+        {
+          "type": "output",
+          "value": "Ford"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Value",
+            "Index"
+          ],
+          "rows": [
+            [
+              "Ford",
+              "0"
+            ],
+            [
+              "Volvo",
+              "1"
+            ],
+            [
+              "BMW",
+              "2"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "⭐ Change Array Elements\nYou can modify an element by referring to its index."
+        },
+        {
+          "type": "code",
+          "value": "cars = [\"Ford\", \"Volvo\", \"BMW\"]\ncars[0] = \"Toyota\"\nprint(cars)"
+        },
+        {
+          "type": "output",
+          "value": "['Toyota', 'Volvo', 'BMW']"
+        },
+        {
+          "type": "text",
+          "value": "📏 Array Length\nUse the len() function to find the number of elements."
+        },
+        {
+          "type": "code",
+          "value": "cars = [\"Ford\", \"Volvo\", \"BMW\"]\nprint(len(cars))"
+        },
+        {
+          "type": "output",
+          "value": "3"
+        },
+        {
+          "type": "text",
+          "value": "👉 Note: Length is always 1 more than the highest index."
+        },
+        {
+          "type": "text",
+          "value": "➕ Add & Insert Elements"
+        },
+        {
+          "type": "code",
+          "value": "cars = [\"Ford\", \"Volvo\", \"BMW\"]\n\ncars.append(\"Honda\")     # Add to end\ncars.insert(1, \"Toyota\") # Insert at index 1\n\nprint(cars)"
+        },
+        {
+          "type": "output",
+          "value": "['Ford', 'Toyota', 'Volvo', 'BMW', 'Honda']"
+        },
+        {
+          "type": "text",
+          "value": "➖ Remove Elements\nUse pop() for index-based removal and remove() for value-based removal."
+        },
+        {
+          "type": "code",
+          "value": "cars = [\"Ford\", \"Volvo\", \"BMW\"]\n\ncars.pop(1)      # Removes index 1 (Volvo)\ncars.remove(\"Ford\") # Removes value \"Ford\"\n\nprint(cars)"
+        },
+        {
+          "type": "output",
+          "value": "['BMW']"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Array (List) Methods Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Description"
+          ],
+          "rows": [
+            [
+              "append()",
+              "Adds element at end"
+            ],
+            [
+              "clear()",
+              "Removes all elements"
+            ],
+            [
+              "copy()",
+              "Returns copy of list"
+            ],
+            [
+              "count()",
+              "Counts occurrences"
+            ],
+            [
+              "extend()",
+              "Adds another list"
+            ],
+            [
+              "index()",
+              "Returns index of value"
+            ],
+            [
+              "insert()",
+              "Adds at specific position"
+            ],
+            [
+              "pop()",
+              "Removes by index"
+            ],
+            [
+              "remove()",
+              "Removes by value"
+            ],
+            [
+              "reverse()",
+              "Reverses list"
+            ],
+            [
+              "sort()",
+              "Sorts list"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "⭐ Example Using Multiple Methods"
+        },
+        {
+          "type": "code",
+          "value": "numbers = [4, 2, 8, 1]\n\nnumbers.append(10)\nnumbers.sort()\nnumbers.reverse()\n\nprint(numbers)"
+        },
+        {
+          "type": "output",
+          "value": "[10, 8, 4, 2, 1]"
+        },
+        {
+          "type": "text",
+          "value": "🔍 Real Array Module in Python\nPython provides a specialized array module for typed data."
+        },
+        {
+          "type": "code",
+          "value": "import array\narr = array.array('i', [1, 2, 3, 4])\nprint(arr)"
+        },
+        {
+          "type": "output",
+          "value": "array('i', [1, 2, 3, 4])"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "List",
+            "Array Module"
+          ],
+          "rows": [
+            [
+              "Built-in",
+              "✅ Yes",
+              "❌ No (Import needed)"
+            ],
+            [
+              "Mixed Types",
+              "✅ Allowed",
+              "❌ Not Allowed"
+            ],
+            [
+              "Numeric Speed",
+              "❌ Slow",
+              "✅ Fast"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "💻 Practice Programs"
+        },
+        {
+          "type": "text",
+          "value": "1. Sum of Array Elements"
+        },
+        {
+          "type": "code",
+          "value": "numbers = [10, 20, 30, 40]\ntotal = 0\nfor x in numbers:\n    total += x\nprint(\"Sum =\", total)"
+        },
+        {
+          "type": "output",
+          "value": "Sum = 100"
+        },
+        {
+          "type": "text",
+          "value": "2. Find Largest Element"
+        },
+        {
+          "type": "code",
+          "value": "numbers = [12, 45, 7, 89, 23]\nlargest = numbers[0]\nfor x in numbers:\n    if x > largest:\n        largest = x\nprint(\"Largest =\", largest)"
+        },
+        {
+          "type": "output",
+          "value": "Largest = 89"
+        },
+        {
+          "type": "text",
+          "value": "3. Search Element"
+        },
+        {
+          "type": "code",
+          "value": "numbers = [1, 2, 3, 4, 5]\nsearch = 4\nif search in numbers:\n    print(\"Found\")\nelse:\n    print(\"Not Found\")"
+        },
+        {
+          "type": "output",
+          "value": "Found"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between pop() and remove()?",
+          "answer": "pop() removes an element at a specific index, while remove() deletes the first occurrence of a specific value from the list."
+        },
+        {
+          "question": "How do you add an element to a specific position in an array?",
+          "answer": "Using the insert() method, which takes the index and the value as arguments, e.g., cars.insert(1, 'Toyota')."
+        },
+        {
+          "question": "Why would you use the 'array' module instead of a list?",
+          "answer": "When working with large amounts of numeric data of the same type, as it is more memory-efficient and faster than standard lists."
+        }
+      ]
+    },
+    {
+      "id": "python-iterators",
+      "title": "Python Iterators",
+      "category": "Basic",
+      "definition": "Iterators are objects that allow you to traverse through a sequence of elements one at a time, without needing to store the entire sequence in memory at once.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "🔁 What is an Iterator?\nAn iterator is any object that implements two special methods:\n• __iter__() → returns the iterator object itself\n• __next__() → returns the next value, and raises StopIteration when done"
+        },
+        {
+          "type": "text",
+          "value": "🧠 Basic Example of Manual Iteration"
+        },
+        {
+          "type": "code",
+          "value": "my_list = [1, 2, 3]\n\n# Get iterator\nit = iter(my_list)\n\n# Iterate manually\nprint(next(it))\nprint(next(it))\nprint(next(it))"
+        },
+        {
+          "type": "output",
+          "value": "1\n2\n3"
+        },
+        {
+          "type": "text",
+          "value": "👉 Note: Calling next(it) again will raise a StopIteration exception."
+        },
+        {
+          "type": "text",
+          "value": "🔄 Using Iterators in Loops\nA for loop automatically handles iterator creation and next() calls behind the scenes."
+        },
+        {
+          "type": "code",
+          "value": "# This loop:\nfor item in [1, 2, 3]:\n    print(item)\n\n# Is equivalent to this logic:\nit = iter([1, 2, 3])\nwhile True:\n    try:\n        item = next(it)\n        print(item)\n    except StopIteration:\n        break"
+        },
+        {
+          "type": "output",
+          "value": "1\n2\n3"
+        },
+        {
+          "type": "text",
+          "value": "🏗️ Creating Your Own Iterator\nYou can define a custom iterator by implementing __iter__ and __next__ in a class."
+        },
+        {
+          "type": "code",
+          "value": "class CountUp:\n    def __init__(self, max):\n        self.max = max\n        self.current = 0\n\n    def __iter__(self):\n        return self\n\n    def __next__(self):\n        if self.current < self.max:\n            self.current += 1\n            return self.current\n        else:\n            raise StopIteration\n\ncounter = CountUp(3)\nfor num in counter:\n    print(num)"
+        },
+        {
+          "type": "output",
+          "value": "1\n2\n3"
+        },
+        {
+          "type": "text",
+          "value": "⚡ Iterators vs Iterables"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Term",
+            "Definition",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Iterable",
+              "Any object you can loop over",
+              "[1, 2, 3] (List)"
+            ],
+            [
+              "Iterator",
+              "The object that performs iteration",
+              "iter([1, 2, 3])"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🚀 Generators (Shortcut for Iterators)\nGenerators are a simpler way to create iterators using the yield keyword."
+        },
+        {
+          "type": "code",
+          "value": "def count_up(max):\n    for i in range(1, max + 1):\n        yield i\n\nfor num in count_up(3):\n    print(num)"
+        },
+        {
+          "type": "output",
+          "value": "1\n2\n3"
+        },
+        {
+          "type": "text",
+          "value": "✅ Key Advantages of Iterators:\n• Memory efficient (lazy evaluation)\n• Clean iteration logic\n• Perfect for large or infinite sequences"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What two methods must an object implement to be considered an iterator?",
+          "answer": "An object must implement the '__iter__()' method and the '__next__()' method."
+        },
+        {
+          "question": "What exception is raised when an iterator has no more items to return?",
+          "answer": "The 'StopIteration' exception is raised."
+        },
+        {
+          "question": "How does a generator differ from a custom iterator class?",
+          "answer": "A generator is a more concise way to create an iterator using the 'yield' keyword, which automatically handles the state and implementation of '__iter__()' and '__next__()'."
+        }
+      ]
+    },
+    {
+      "id": "python-iterators-part2",
+      "title": "Python Iterators - Part 2",
+      "category": "Basic",
+      "definition": "Deep dive into the iterator protocol, distinguishing between iterables and iterators, and exploring custom implementation with terminating conditions.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "🔹 Iterator vs Iterable\n• Iterable: Any object you can loop through using a for loop (List, Tuple, String, Dictionary, Set).\n• Iterator: The object that actually performs the iteration."
+        },
+        {
+          "type": "code",
+          "value": "mylist = [1, 2, 3]\nmyit = iter(mylist)\n\nprint(next(myit))\nprint(next(myit))\nprint(next(myit))"
+        },
+        {
+          "type": "output",
+          "value": "1\n2\n3"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Function",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "iter()",
+              "Converts iterable into iterator"
+            ],
+            [
+              "next()",
+              "Gets next value from iterator"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🔹 Tuple & String Iterator Examples\nEven strings and tuples are iterable objects."
+        },
+        {
+          "type": "code",
+          "value": "mytuple = (\"apple\", \"banana\", \"cherry\")\nmyit = iter(mytuple)\nprint(next(myit))\n\nmystr = \"banana\"\nmyit_str = iter(mystr)\nprint(next(myit_str))"
+        },
+        {
+          "type": "output",
+          "value": "apple\nb"
+        },
+        {
+          "type": "text",
+          "value": "🔹 Looping Through an Iterator\nA for loop automatically uses an iterator internally."
+        },
+        {
+          "type": "code",
+          "value": "mytuple = (\"apple\", \"banana\", \"cherry\")\nfor x in mytuple:\n    print(x)"
+        },
+        {
+          "type": "output",
+          "value": "apple\nbanana\ncherry"
+        },
+        {
+          "type": "text",
+          "value": "🔹 Create Your Own Iterator\nTo create a custom iterator class, you must implement __iter__() and __next__()."
+        },
+        {
+          "type": "code",
+          "value": "class MyNumbers:\n    def __iter__(self):\n        self.a = 1\n        return self\n\n    def __next__(self):\n        x = self.a\n        self.a += 1\n        return x\n\nmyclass = MyNumbers()\nmyiter = iter(myclass)\n\nprint(next(myiter))\nprint(next(myiter))\nprint(next(myiter))"
+        },
+        {
+          "type": "output",
+          "value": "1\n2\n3"
+        },
+        {
+          "type": "text",
+          "value": "⚠️ Note: The example above is an infinite iterator because it lacks a terminating condition."
+        },
+        {
+          "type": "text",
+          "value": "🔹 StopIteration\nTo stop iteration after a certain point, you must raise StopIteration."
+        },
+        {
+          "type": "code",
+          "value": "class MyNumbers:\n    def __iter__(self):\n        self.a = 1\n        return self\n\n    def __next__(self):\n        if self.a <= 3:\n            x = self.a\n            self.a += 1\n            return x\n        else:\n            raise StopIteration\n\nmyclass = MyNumbers()\nfor x in myclass:\n    print(x)"
+        },
+        {
+          "type": "output",
+          "value": "1\n2\n3"
+        },
+        {
+          "type": "text",
+          "value": "🔹 Important Concepts Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Concept",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Iterable",
+              "Object you can loop through"
+            ],
+            [
+              "Iterator",
+              "Object producing next values"
+            ],
+            [
+              "iter()",
+              "Creates iterator"
+            ],
+            [
+              "next()",
+              "Gets next item"
+            ],
+            [
+              "StopIteration",
+              "Stops iteration"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "📺 Real-Life Analogy: The TV Remote\n• TV Channels List → Iterable\n• Remote Button → Iterator\n• Pressing 'Next Channel' → next()"
+        },
+        {
+          "type": "text",
+          "value": "🔹 Iterable vs Iterator Comparison"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "Iterable",
+            "Iterator"
+          ],
+          "rows": [
+            [
+              "Can loop using for",
+              "✅",
+              "✅"
+            ],
+            [
+              "Stores data",
+              "✅",
+              "Usually no"
+            ],
+            [
+              "Uses iter()",
+              "Returns iterator",
+              "Returns itself"
+            ],
+            [
+              "Uses next() directly",
+              "❌",
+              "✅"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🚀 Generator vs Iterator\nGenerators are an easier way to create iterators using the yield keyword."
+        },
+        {
+          "type": "code",
+          "value": "def mygen():\n    yield 1\n    yield 2\n\ng = mygen()\nprint(next(g))\nprint(next(g))"
+        },
+        {
+          "type": "output",
+          "value": "1\n2"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the primary difference between an iterable and an iterator?",
+          "answer": "An iterable is the data structure itself (like a list), while the iterator is the object that keeps track of the current position during iteration."
+        },
+        {
+          "question": "Why is 'StopIteration' necessary in a custom iterator?",
+          "answer": "It signals to the for loop (or any iteration tool) that there are no more elements to process, preventing infinite loops."
+        },
+        {
+          "question": "What does iter() return when called on an iterator object?",
+          "answer": "An iterator's __iter__() method simply returns 'self' (the iterator itself)."
+        }
+      ]
+    },
+    {
+      "id": "python-modules",
+      "title": "Python Modules",
+      "category": "Basic",
+      "definition": "A module in Python is a file containing Python code (.py extension) that can include functions, variables, and classes. Modules allow you to organize, reuse, and maintain code efficiently.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "⭐ Why Use Modules?\n• Reuse code across different programs\n• Organize large programs into manageable files\n• Avoid redundant coding\n• Improve program maintainability"
+        },
+        {
+          "type": "text",
+          "value": "🏗️ Creating and Using a Module\nFirst, create a module file named mymodule.py:"
+        },
+        {
+          "type": "code",
+          "value": "# mymodule.py\ndef greeting(name):\n    print(\"Hello, \" + name)\n\nperson1 = {\n    \"name\": \"John\",\n    \"age\": 36\n}"
+        },
+        {
+          "type": "text",
+          "value": "Now, import and use it in another file:"
+        },
+        {
+          "type": "code",
+          "value": "import mymodule\n\nmymodule.greeting(\"Jonathan\")\nprint(mymodule.person1[\"age\"])"
+        },
+        {
+          "type": "output",
+          "value": "Hello, Jonathan\n36"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Re-naming a Module (Alias)\nYou can create an alias when you import a module by using the 'as' keyword."
+        },
+        {
+          "type": "code",
+          "value": "import mymodule as mx\n\nprint(mx.person1[\"name\"])"
+        },
+        {
+          "type": "output",
+          "value": "John"
+        },
+        {
+          "type": "text",
+          "value": "🌍 Built-in Modules\nPython comes with many pre-installed modules ready for use."
+        },
+        {
+          "type": "code",
+          "value": "import platform\nimport math\nimport random\n\nprint(platform.system())  # e.g., Windows\nprint(math.sqrt(25))      # 5.0\nprint(random.randint(1, 10))"
+        },
+        {
+          "type": "text",
+          "value": "🔍 Using the dir() Function\nThe dir() function lists all the function names (or variable names) in a module."
+        },
+        {
+          "type": "code",
+          "value": "import platform\nprint(dir(platform))"
+        },
+        {
+          "type": "text",
+          "value": "⭐ Selective Import (from...import)\nYou can choose to import only specific parts from a module."
+        },
+        {
+          "type": "code",
+          "value": "from mymodule import person1\n\n# Note: No need to use 'mymodule.person1'\nprint(person1[\"name\"])"
+        },
+        {
+          "type": "output",
+          "value": "John"
+        },
+        {
+          "type": "text",
+          "value": "👉 Important Difference:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Using 'import'",
+            "Using 'from...import'"
+          ],
+          "rows": [
+            [
+              "Requires module name prefix",
+              "Direct access (no prefix)"
+            ],
+            [
+              "Imports entire module",
+              "Imports specific items"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🎯 Real-Time Example: Calculator Module"
+        },
+        {
+          "type": "code",
+          "value": "# calculator.py\ndef add(a, b): return a + b\ndef sub(a, b): return a - b\n\n# main.py\nimport calculator\nprint(calculator.add(10, 5))"
+        },
+        {
+          "type": "output",
+          "value": "15"
+        },
+        {
+          "type": "text",
+          "value": "✅ Advantages Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Advantage",
+            "Description"
+          ],
+          "rows": [
+            [
+              "Code Reuse",
+              "Write once, use many times"
+            ],
+            [
+              "Organization",
+              "Separate code into logical files"
+            ],
+            [
+              "Maintenance",
+              "Easier debugging and updates"
+            ],
+            [
+              "Collaboration",
+              "Teams can work on different modules"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🚀 Quick Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Concept",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Create",
+              "filename.py"
+            ],
+            [
+              "Import",
+              "import filename"
+            ],
+            [
+              "Alias",
+              "import filename as alias"
+            ],
+            [
+              "Specific Item",
+              "from filename import item"
+            ],
+            [
+              "Check Content",
+              "dir(filename)"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between 'import' and 'from...import'?",
+          "answer": "Using 'import' requires you to use the module name to access its contents (e.g., math.sqrt), whereas 'from...import' allows direct access to specific items without the prefix."
+        },
+        {
+          "question": "What does the dir() function return when called on a module?",
+          "answer": "It returns a sorted list of strings containing the names of all variables, functions, and classes defined within that module."
+        },
+        {
+          "question": "Why is 'from module import *' generally not recommended?",
+          "answer": "It can lead to namespace pollution and confusion, as it's unclear which functions come from which module, and it might override existing names in your current scope."
+        }
+      ]
+    },
+    {
+      "id": "python-regex",
+      "title": "Python Regular Expressions (RegEx)",
+      "category": "Basic",
+      "definition": "Regular expressions (regex) are handled using the built-in re module. They allow you to search, match, and manipulate text patterns efficiently using a specialized syntax.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "🔹 Basic Usage\nImport the 're' module to start working with patterns."
+        },
+        {
+          "type": "code",
+          "value": "import re\n\ntext = \"My phone number is 123-456-7890\"\nmatch = re.search(r\"\\d{3}-\\d{3}-\\d{4}\", text)\n\nif match:\n    print(\"Found:\", match.group())"
+        },
+        {
+          "type": "output",
+          "value": "Found: 123-456-7890"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Common Functions"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Function",
+            "Description"
+          ],
+          "rows": [
+            [
+              "re.search()",
+              "Finds first match anywhere in string"
+            ],
+            [
+              "re.match()",
+              "Checks only at the beginning of string"
+            ],
+            [
+              "re.findall()",
+              "Returns all matches as a list of strings"
+            ],
+            [
+              "re.sub()",
+              "Replaces matches with a replacement string"
+            ]
+          ]
+        },
+        {
+          "type": "code",
+          "value": "import re\ntext = \"apple banana apple\"\n\n# Find all occurrences\nprint(re.findall(r\"apple\", text))\n\n# Replace text\nprint(re.sub(r\"apple\", \"orange\", text))"
+        },
+        {
+          "type": "output",
+          "value": "['apple', 'apple']\norange banana orange"
+        },
+        {
+          "type": "text",
+          "value": "⚡ Common Regex Patterns"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Pattern",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              ".",
+              "Any character (except newline)"
+            ],
+            [
+              "\\d",
+              "Digit (0–9)"
+            ],
+            [
+              "\\w",
+              "Word character (a-z, A-Z, 0-9, _)"
+            ],
+            [
+              "\\s",
+              "Whitespace (space, tab, newline)"
+            ],
+            [
+              "^ / $",
+              "Start / End of string"
+            ],
+            [
+              "* / +",
+              "0 or more / 1 or more occurrences"
+            ],
+            [
+              "?",
+              "Optional (0 or 1 occurrence)"
+            ],
+            [
+              "{n}",
+              "Exactly n times"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🚀 Practical Examples"
+        },
+        {
+          "type": "text",
+          "value": "1. Extracting Emails"
+        },
+        {
+          "type": "code",
+          "value": "import re\ntext = \"Contact: test@example.com\"\nemails = re.findall(r\"\\S+@\\S+\", text)\nprint(emails)"
+        },
+        {
+          "type": "output",
+          "value": "['test@example.com']"
+        },
+        {
+          "type": "text",
+          "value": "2. Validating a Number (fullmatch)"
+        },
+        {
+          "type": "code",
+          "value": "import re\nnumber = \"12345\"\nif re.fullmatch(r\"\\d+\", number):\n    print(\"Valid number\")"
+        },
+        {
+          "type": "output",
+          "value": "Valid number"
+        },
+        {
+          "type": "text",
+          "value": "3. Splitting Text on Multiple Delimiters"
+        },
+        {
+          "type": "code",
+          "value": "import re\ntext = \"apple,banana;orange\"\nparts = re.split(r\"[,;]\", text)\nprint(parts)"
+        },
+        {
+          "type": "output",
+          "value": "['apple', 'banana', 'orange']"
+        },
+        {
+          "type": "text",
+          "value": "✅ Professional Tips:\n• Use raw strings (r\"pattern\") to avoid backslash escaping issues.\n• Test regex patterns on small samples using tools like regex101 before coding.\n• Keep patterns readable—break down complex regex into commented segments if needed."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between re.search() and re.match()?",
+          "answer": "re.match() only checks for a match at the beginning of the string, while re.search() scans the entire string for the first location where the pattern matches."
+        },
+        {
+          "question": "Why should we use raw strings (r'...') for regex patterns in Python?",
+          "answer": "Raw strings treat backslashes as literal characters, preventing Python from interpreting them as escape sequences (like \\n for newline), which is crucial for regex tokens like \\d or \\w."
+        },
+        {
+          "question": "How do you replace all occurrences of a pattern in a string?",
+          "answer": "By using the 're.sub()' function, which takes the pattern, the replacement string, and the target text as arguments."
+        }
+      ]
+    },
+    {
+      "id": "python-regex-part2",
+      "title": "Python RegEx - Part 2",
+      "category": "Basic",
+      "definition": "Extended study of Python's re module, focusing on advanced pattern matching functions, validation logic, and practical data extraction techniques.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "🎯 Why Use RegEx?\nRegEx is essential for validating emails, checking passwords, extracting phone numbers, and advanced text replacements."
+        },
+        {
+          "type": "text",
+          "value": "🔹 1. re.search()\nSearches the string and returns the first match found anywhere."
+        },
+        {
+          "type": "code",
+          "value": "import re\ntext = \"My number is 9876543210\"\nresult = re.search(r\"\\d+\", text)\nprint(result.group())"
+        },
+        {
+          "type": "output",
+          "value": "9876543210"
+        },
+        {
+          "type": "text",
+          "value": "🔹 2. re.findall()\nReturns all matches in a list. Ideal for extracting multiple values."
+        },
+        {
+          "type": "code",
+          "value": "import re\ntext = \"I have 2 apples and 5 bananas\"\nnumbers = re.findall(r\"\\d+\", text)\nprint(numbers)"
+        },
+        {
+          "type": "output",
+          "value": "['2', '5']"
+        },
+        {
+          "type": "text",
+          "value": "🔍 Explanation:\n• \\d → Digit (0–9)\n• + → One or more\nSo \\d+ matches numbers with one or more digits."
+        },
+        {
+          "type": "text",
+          "value": "🔹 3. re.match()\nChecks only at the beginning of the string. Returns None if the pattern is not at the very start."
+        },
+        {
+          "type": "code",
+          "value": "import re\ntext = \"Python is easy\"\nresult = re.match(r\"Python\", text)\nprint(\"Matched\" if result else \"Not Matched\")"
+        },
+        {
+          "type": "output",
+          "value": "Matched"
+        },
+        {
+          "type": "text",
+          "value": "🔹 4. re.sub() & re.split()\nPowerful tools for cleaning and parsing text."
+        },
+        {
+          "type": "code",
+          "value": "import re\ntext = \"apple,banana;orange\"\n\n# Replace text\nclean = re.sub(r\"cats\", \"dogs\", \"I like cats\")\n# Split using multiple delimiters\nparts = re.split(r\"[,;]\", text)\n\nprint(clean)\nprint(parts)"
+        },
+        {
+          "type": "output",
+          "value": "I like dogs\n['apple', 'banana', 'orange']"
+        },
+        {
+          "type": "text",
+          "value": "⚡ Important RegEx Symbols Reference"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Symbol",
+            "Meaning",
+            "Example"
+          ],
+          "rows": [
+            [
+              ".",
+              "Any character",
+              "a.b"
+            ],
+            [
+              "\\d / \\D",
+              "Digit / Non-digit",
+              "\\d+ / \\D+"
+            ],
+            [
+              "\\w",
+              "Word character",
+              "\\w+"
+            ],
+            [
+              "\\s",
+              "Whitespace",
+              "\\s+"
+            ],
+            [
+              "^ / $",
+              "Start / End of string",
+              "^Hi / End$"
+            ],
+            [
+              "* / +",
+              "0+ / 1+ occurrences",
+              "ab* / ab+"
+            ],
+            [
+              "?",
+              "Optional",
+              "colou?r"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🚀 Real-Time Examples"
+        },
+        {
+          "type": "text",
+          "value": "✅ Email Validation"
+        },
+        {
+          "type": "code",
+          "value": "import re\nemail = \"test@gmail.com\"\npattern = r\"^[a-zA-Z0-9._]+@[a-z]+\\.[a-z]{2,}$\"\nprint(\"Valid\" if re.match(pattern, email) else \"Invalid\")"
+        },
+        {
+          "type": "output",
+          "value": "Valid"
+        },
+        {
+          "type": "text",
+          "value": "✅ Phone Number Extraction & Space Removal"
+        },
+        {
+          "type": "code",
+          "value": "import re\ntext = \"Python    is    easy\"\n# Normalize spaces\nresult = re.sub(r\"\\s+\", \" \", text)\nprint(result)"
+        },
+        {
+          "type": "output",
+          "value": "Python is easy"
+        },
+        {
+          "type": "text",
+          "value": "🔹 Difference Between Common Functions"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Function",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "search()",
+              "Find first match anywhere"
+            ],
+            [
+              "match()",
+              "Match only from beginning"
+            ],
+            [
+              "findall()",
+              "Return all matches in a list"
+            ],
+            [
+              "sub()",
+              "Replace patterns with text"
+            ],
+            [
+              "split()",
+              "Split string using patterns"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "💻 Mini Practice Programs"
+        },
+        {
+          "type": "code",
+          "value": "import re\ntext = \"Python Programming\"\n\n# 1. Find vowels\nvowels = re.findall(r\"[aeiou]\", text)\n# 2. Find words starting with P\np_words = re.findall(r\"\\bP\\w+\", text)\n\nprint(\"Vowels:\", vowels)\nprint(\"P words:\", p_words)"
+        },
+        {
+          "type": "output",
+          "value": "Vowels: ['o', 'o', 'a', 'i']\nP words: ['Python', 'Programming']"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between \\d and \\D in RegEx?",
+          "answer": "\\d matches any decimal digit (0-9), while \\D matches any character that is NOT a decimal digit."
+        },
+        {
+          "question": "How do you make a character optional in a regex pattern?",
+          "answer": "By using the '?' quantifier, which matches the preceding character 0 or 1 time (e.g., 'favou?r' matches both 'favor' and 'favour')."
+        },
+        {
+          "question": "What does \\b signify in a regex pattern?",
+          "answer": "\\b represents a word boundary, which is used to match patterns that are specifically at the start or end of a word."
+        }
+      ]
+    },
+    {
+      "id": "python-pip",
+      "title": "Python PIP (Package Manager)",
+      "category": "Basic",
+      "definition": "PIP is the standard package manager for Python. It allows you to install, update, and manage external libraries and dependencies that are not included in the standard Python library.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "🚀 Core PIP Commands\nPIP simplifies the process of adding third-party functionality to your Python projects."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Action",
+            "Command"
+          ],
+          "rows": [
+            [
+              "Install Package",
+              "pip install package_name"
+            ],
+            [
+              "Specific Version",
+              "pip install package_name==1.2.3"
+            ],
+            [
+              "Upgrade",
+              "pip install --upgrade package_name"
+            ],
+            [
+              "Uninstall",
+              "pip uninstall package_name"
+            ],
+            [
+              "List Installed",
+              "pip list"
+            ],
+            [
+              "Show Details",
+              "pip show package_name"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🌍 Using PIP with Multiple Python Versions\nIf you have multiple versions of Python installed, use the -m flag to ensure you're targeting the correct environment."
+        },
+        {
+          "type": "code",
+          "value": "python -m pip install numpy\n# OR\npython3 -m pip install numpy"
+        },
+        {
+          "type": "text",
+          "value": "🛡️ Virtual Environments (venv)\nBest practice is to use virtual environments to isolate project dependencies and avoid version conflicts."
+        },
+        {
+          "type": "code",
+          "value": "# 1. Create the environment\npython -m venv venv\n\n# 2. Activate it\n# Windows:\nvenv\\Scripts\\activate\n# macOS/Linux:\nsource venv/bin/activate"
+        },
+        {
+          "type": "text",
+          "value": "📜 Dependency Management with Requirements Files\nYou can install all project dependencies at once using a requirements.txt file."
+        },
+        {
+          "type": "code",
+          "value": "pip install -r requirements.txt"
+        },
+        {
+          "type": "text",
+          "value": "✅ Benefits of PIP:\n• Access to thousands of libraries on PyPI (Python Package Index)\n• Simplified dependency resolution\n• Automated updates and removal"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What does PIP stand for?",
+          "answer": "PIP is a recursive acronym for 'Pip Installs Packages' (or sometimes 'Preferred Installer Program')."
+        },
+        {
+          "question": "How do you install a specific version of a library using PIP?",
+          "answer": "By using the '==' operator followed by the version number, e.g., 'pip install requests==2.25.1'."
+        },
+        {
+          "question": "Why should you use a requirements.txt file?",
+          "answer": "It allows for consistent environments across different machines by recording all project dependencies and their versions, making it easy for others to install them using 'pip install -r'."
+        }
+      ]
+    },
+    {
+      "id": "python-pip-part2",
+      "title": "Python PIP - Part 2",
+      "category": "Basic",
+      "definition": "Extended guide on using PIP for package management, library integration, and troubleshooting common environment issues.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "📦 What is a Package?\nA package is a collection of Python modules that provide extra functionality. Examples include:\n• NumPy (Math)\n• Pandas (Data Analysis)\n• Flask/Django (Web Development)"
+        },
+        {
+          "type": "text",
+          "value": "🔍 Checking and Installing PIP\nPIP usually comes pre-installed with Python 3.4+. You can verify it via terminal:"
+        },
+        {
+          "type": "code",
+          "value": "pip --version"
+        },
+        {
+          "type": "output",
+          "value": "pip 25.0 from C:\\Python\\Lib\\site-packages\\pip (python 3.12)"
+        },
+        {
+          "type": "text",
+          "value": "🏗️ Hands-on Example: The 'camelcase' Library"
+        },
+        {
+          "type": "code",
+          "value": "# 1. Install\npip install camelcase\n\n# 2. Use in Python\nimport camelcase\nc = camelcase.CamelCase()\ntxt = \"hello world\"\nprint(c.hump(txt))"
+        },
+        {
+          "type": "output",
+          "value": "Hello World"
+        },
+        {
+          "type": "text",
+          "value": "⚙️ Advanced Package Management"
+        },
+        {
+          "type": "code",
+          "value": "pip install --upgrade camelcase   # Update\npip uninstall camelcase           # Remove\npip list                          # List all\npip show numpy                    # Details"
+        },
+        {
+          "type": "text",
+          "value": "📜 Dependency Mastery\nYou can install specific versions, multiple packages, or use a requirements file for batch setup."
+        },
+        {
+          "type": "code",
+          "value": "pip install numpy==1.26.0\npip install numpy pandas matplotlib\npip install -r requirements.txt"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Important PIP Commands Reference"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Command",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "pip --version",
+              "Check pip version"
+            ],
+            [
+              "pip install",
+              "Install a package"
+            ],
+            [
+              "pip uninstall",
+              "Remove a package"
+            ],
+            [
+              "pip list",
+              "List installed packages"
+            ],
+            [
+              "pip show",
+              "Show package details"
+            ],
+            [
+              "pip install -r",
+              "Install from requirements file"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🚀 Real-Time Framework Example: Flask"
+        },
+        {
+          "type": "code",
+          "value": "from flask import Flask\napp = Flask(__name__)\n\n@app.route('/')\ndef home(): return \"Hello Flask\"\n\n# app.run()"
+        },
+        {
+          "type": "text",
+          "value": "⚠️ Common Errors and Solutions\nIf 'pip' is not recognized, use the python module flag:"
+        },
+        {
+          "type": "code",
+          "value": "python -m pip install package_name"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between a Module and a Package?",
+          "answer": "A Module is a single Python file (.py), while a Package is a collection of modules organized in a folder structure."
+        },
+        {
+          "question": "Where can you find official Python packages?",
+          "answer": "Official packages are hosted on PyPI (Python Package Index) at pypi.org."
+        },
+        {
+          "question": "Which command allows you to see the installation path of a package?",
+          "answer": "The 'pip show package_name' command provides details including the version and location."
+        }
+      ]
+    },
+    {
+      "id": "python-virtual-environment",
+      "title": "Python Virtual Environment",
+      "category": "Basic",
+      "definition": "A Virtual Environment is an isolated space where you can install project-specific Python packages without affecting the global Python installation or other projects.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "🚀 Why Use Virtual Environments?\nThey prevent version conflicts. For example, Project A might need Django 3.2, while Project B needs Django 5.0. Virtual environments keep these dependencies completely separate."
+        },
+        {
+          "type": "text",
+          "value": "🏗️ Creating a Virtual Environment\nNavigate to your project folder and run the venv module."
+        },
+        {
+          "type": "code",
+          "value": "# Windows\npython -m venv myenv\n\n# macOS/Linux\npython3 -m venv myenv"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Activation Logic\nThe (myenv) prefix in your terminal indicates the environment is active."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Platform",
+            "Activation Command"
+          ],
+          "rows": [
+            [
+              "Windows",
+              "myenv\\Scripts\\activate"
+            ],
+            [
+              "macOS / Linux",
+              "source myenv/bin/activate"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🛡️ Dependency Management Workflow"
+        },
+        {
+          "type": "code",
+          "value": "pip install flask                # Install package\npip freeze > requirements.txt    # Save dependencies\npip install -r requirements.txt # Restore environment\ndeactivate                       # Exit environment"
+        },
+        {
+          "type": "text",
+          "value": "🎯 Complete Project Lifecycle Example"
+        },
+        {
+          "type": "code",
+          "value": "# Setup\nmkdir flaskproject && cd flaskproject\npython -m venv env\n# Activate (Windows)\nenv\\Scripts\\activate\n\n# Code (app.py)\nfrom flask import Flask\napp = Flask(__name__)\n@app.route('/')\ndef home(): return 'Hello Flask'\n# app.run(debug=True)"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Global vs. Virtual Comparison"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "Global Python",
+            "Virtual Environment"
+          ],
+          "rows": [
+            [
+              "Isolation",
+              "❌ Shared by all",
+              "✅ Isolated per project"
+            ],
+            [
+              "Conflicts",
+              "⚠️ High risk",
+              "🛡️ No conflicts"
+            ],
+            [
+              "Management",
+              "❌ Difficult",
+              "✅ Very Easy"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "✅ Professional Best Practices:\n• Create one environment per project.\n• Always use a 'requirements.txt' file.\n• Add your environment folder (env/, venv/) to .gitignore."
+        },
+        {
+          "type": "text",
+          "value": "⚠️ Common Troubleshooting:\n• Windows PowerShell: If scripts are disabled, run 'Set-ExecutionPolicy RemoteSigned' as Admin.\n• PATH issues: Ensure Python is added to your system PATH."
+        },
+        {
+          "type": "text",
+          "value": "🚀 Advanced Ecosystem Tools:\n• pipenv: Combines pip and venv.\n• conda: Industry standard for Data Science and ML."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the primary purpose of a virtual environment?",
+          "answer": "To provide an isolated environment for Python projects, ensuring that each project has its own set of dependencies and avoiding version conflicts between them."
+        },
+        {
+          "question": "How do you record the current environment's dependencies into a file?",
+          "answer": "By using the command 'pip freeze > requirements.txt'."
+        },
+        {
+          "question": "How do you remove a virtual environment from your system?",
+          "answer": "Simply deactivate it and then delete the virtual environment folder (e.g., 'rmdir /s myenv' on Windows)."
+        }
+      ]
+    },
+    {
+      "id": "python-try-except",
+      "title": "Python Try...Except",
+      "category": "Basic",
+      "definition": "Exception handling in Python is managed through try and except blocks. They allow you to catch runtime errors and handle them gracefully, preventing the program from crashing.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "⭐ Basic Syntax\nThe 'try' block contains code that might raise an error, while the 'except' block contains code to handle that error."
+        },
+        {
+          "type": "code",
+          "value": "try:\n    x = int(input(\"Enter a number: \"))\n    print(10 / x)\nexcept:\n    print(\"Something went wrong!\")"
+        },
+        {
+          "type": "text",
+          "value": "🔍 Catching Specific Exceptions\nIt is better practice to catch specific errors so you can handle them differently based on the cause."
+        },
+        {
+          "type": "code",
+          "value": "try:\n    x = int(input(\"Enter a number: \"))\n    print(10 / x)\nexcept ValueError:\n    print(\"Invalid input! Please enter a number.\")\nexcept ZeroDivisionError:\n    print(\"Cannot divide by zero.\")"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Using else and finally\n• else: Runs only if NO exceptions occurred.\n• finally: Runs ALWAYS, regardless of whether an error happened or not (useful for cleanup)."
+        },
+        {
+          "type": "code",
+          "value": "try:\n    x = int(input(\"Enter a number: \"))\n    result = 10 / x\nexcept ZeroDivisionError:\n    print(\"Cannot divide by zero.\")\nelse:\n    print(\"Result:\", result)\nfinally:\n    print(\"Execution finished.\")"
+        },
+        {
+          "type": "text",
+          "value": "🛡️ Catching Multiple Exceptions\nYou can group exceptions into a tuple to handle different errors with the same block of code."
+        },
+        {
+          "type": "code",
+          "value": "try:\n    num = int(\"abc\")\nexcept (ValueError, TypeError) as e:\n    print(\"Error encountered:\", e)"
+        },
+        {
+          "type": "output",
+          "value": "Error encountered: invalid literal for int() with base 10: 'abc'"
+        },
+        {
+          "type": "text",
+          "value": "✅ Key Best Practices:\n• Avoid bare 'except:' blocks; always specify the exception type if possible.\n• Use 'finally' to close files or database connections.\n• Keep 'try' blocks small to avoid catching unrelated errors."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the purpose of the 'else' block in try...except?",
+          "answer": "The 'else' block is executed if and only if no exceptions were raised in the 'try' block."
+        },
+        {
+          "question": "What is the difference between 'except' and 'finally'?",
+          "answer": "The 'except' block runs only when an error occurs, whereas the 'finally' block runs every time, whether an error occurred or not."
+        },
+        {
+          "question": "How do you access the error message in an except block?",
+          "answer": "By using the 'as' keyword, for example: 'except Exception as e:', where 'e' becomes the variable containing the exception details."
+        }
+      ]
+    },
+    {
+      "id": "python-try-except-part2",
+      "title": "Python Try...Except - Part 2",
+      "category": "Basic",
+      "definition": "Extended study of Python's exception handling system, covering specialized error types, manual exception triggering, and resource cleanup patterns.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "🎯 Graceful Error Handling\nWithout exception handling, a single error like an undefined variable will crash your entire program. With try-except, you can notify the user and keep the application running."
+        },
+        {
+          "type": "code",
+          "value": "try:\n    print(x) # x is not defined\nexcept NameError:\n    print(\"Variable x is not defined\")"
+        },
+        {
+          "type": "output",
+          "value": "Variable x is not defined"
+        },
+        {
+          "type": "text",
+          "value": "📚 Common Python Exceptions Reference"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Exception",
+            "Description"
+          ],
+          "rows": [
+            [
+              "NameError",
+              "Variable is not defined in the current scope"
+            ],
+            [
+              "TypeError",
+              "Operation applied to an object of inappropriate type"
+            ],
+            [
+              "ValueError",
+              "Function receives argument of right type but inappropriate value"
+            ],
+            [
+              "ZeroDivisionError",
+              "Second argument of division or modulo is zero"
+            ],
+            [
+              "IndexError",
+              "Sequence subscript is out of range"
+            ],
+            [
+              "KeyError",
+              "Dictionary key is not found"
+            ],
+            [
+              "FileNotFoundError",
+              "File or directory is requested but doesn't exist"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🔥 Deep Dive: else & finally\n• else block: Executes only if NO exceptions were raised.\n• finally block: Executes ALWAYS, primarily used for releasing external resources."
+        },
+        {
+          "type": "code",
+          "value": "try:\n    print(\"Hello\")\nexcept:\n    print(\"Error\")\nelse:\n    print(\"Success: No errors occurred\")\nfinally:\n    print(\"Cleanup: Task finished\")"
+        },
+        {
+          "type": "output",
+          "value": "Hello\nSuccess: No errors occurred\nCleanup: Task finished"
+        },
+        {
+          "type": "text",
+          "value": "📂 Real-World Scenario: File Handling\nUsing nested try blocks and finally to ensure files are closed regardless of success or failure."
+        },
+        {
+          "type": "code",
+          "value": "try:\n    f = open(\"demo.txt\")\n    try:\n        f.write(\"Hello\")\n    except:\n        print(\"Error writing to file\")\n    finally:\n        f.close()\nexcept:\n    print(\"Error: File could not be opened\")"
+        },
+        {
+          "type": "text",
+          "value": "🚀 Raising Exceptions (raise)\nYou can manually trigger exceptions when specific conditions are met using the 'raise' keyword."
+        },
+        {
+          "type": "code",
+          "value": "x = -1\nif x < 0:\n    raise Exception(\"No negative numbers allowed\")"
+        },
+        {
+          "type": "text",
+          "value": "💻 Capstone Example: Robust Division Tool"
+        },
+        {
+          "type": "code",
+          "value": "try:\n    a = int(input(\"Enter number: \"))\n    result = 10 / a\nexcept ZeroDivisionError:\n    print(\"Error: Cannot divide by zero\")\nexcept ValueError:\n    print(\"Error: Please enter numbers only\")\nelse:\n    print(\"Success! Result:\", result)\nfinally:\n    print(\"Environment reset. Ready for next input.\")"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the primary difference between the 'except' and 'finally' blocks?",
+          "answer": "The 'except' block runs only if an exception is raised, while the 'finally' block runs unconditionally at the end of the try-except chain."
+        },
+        {
+          "question": "Why is it important to use 'finally' when dealing with files or databases?",
+          "answer": "External resources like files and database connections need to be explicitly closed or released to prevent memory leaks and locks. 'finally' ensures this happens even if an error occurs mid-process."
+        },
+        {
+          "question": "How do you manually force an exception to occur in your code?",
+          "answer": "By using the 'raise' keyword followed by the exception type and an optional error message, e.g., 'raise ValueError(\"Invalid input\")'."
+        }
+      ]
+    },
+    {
+      "id": "python-file-handling",
+      "title": "Python File Handling",
+      "category": "Basic",
+      "definition": "File handling in Python allows you to create, read, write, and delete files stored on the file system using built-in functions and the 'os' module.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "📂 Opening a File\nPython uses the open() function to interact with files. It takes the filename and a mode as arguments."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Mode",
+            "Meaning",
+            "Description"
+          ],
+          "rows": [
+            [
+              "'r'",
+              "Read",
+              "Default. Opens for reading. Error if file missing."
+            ],
+            [
+              "'w'",
+              "Write",
+              "Opens for writing. Overwrites existing content."
+            ],
+            [
+              "'a'",
+              "Append",
+              "Adds content to end of file without overwriting."
+            ],
+            [
+              "'x'",
+              "Create",
+              "Creates a new file. Error if it already exists."
+            ],
+            [
+              "'t' / 'b'",
+              "Text / Binary",
+              "Default is text mode ('t'). Binary ('b') for images/executables."
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "📖 Reading Files\nYou can read the entire file, specific characters, or line-by-line."
+        },
+        {
+          "type": "code",
+          "value": "f = open(\"demo.txt\", \"r\")\nprint(f.read())       # Entire file\n# print(f.read(5))    # First 5 chars\n# print(f.readline()) # First line\nf.close()"
+        },
+        {
+          "type": "text",
+          "value": "💡 The 'with' Statement (Best Practice)\nUsing 'with' ensures the file is automatically closed, even if an error occurs. This is the professional standard for file handling."
+        },
+        {
+          "type": "code",
+          "value": "with open(\"demo.txt\", \"r\") as f:\n    data = f.read()\n    print(data)"
+        },
+        {
+          "type": "text",
+          "value": "✍️ Writing and Appending\n• 'w' overwrites everything.\n• 'a' keeps old data and adds new text to the end."
+        },
+        {
+          "type": "code",
+          "value": "# Writing\nwith open(\"demo.txt\", \"w\") as f:\n    f.write(\"Python File Handling\")\n\n# Appending\nwith open(\"demo.txt\", \"a\") as f:\n    f.write(\"\\nLearning Python\")"
+        },
+        {
+          "type": "text",
+          "value": "🗑️ Deleting Files and Folders\nTo remove files, you must import the 'os' module."
+        },
+        {
+          "type": "code",
+          "value": "import os\n\nif os.path.exists(\"demo.txt\"):\n    os.remove(\"demo.txt\")\n    print(\"File Deleted\")\nelse:\n    print(\"File Not Found\")\n\n# os.rmdir(\"myfolder\") # Delete empty folder"
+        },
+        {
+          "type": "text",
+          "value": "🚀 Industry Use Cases"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Application",
+            "Usage"
+          ],
+          "rows": [
+            [
+              "Banking App",
+              "Store daily transaction logs"
+            ],
+            [
+              "Notes App",
+              "Save and load user text files"
+            ],
+            [
+              "Data Analysis",
+              "Read CSV and generate reports"
+            ],
+            [
+              "Web Server",
+              "Store application logs and errors"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "💻 Mini Practice Lab"
+        },
+        {
+          "type": "code",
+          "value": "# 1. Count characters\nwith open(\"demo.txt\", \"r\") as f:\n    print(\"Char count:\", len(f.read()))\n\n# 2. Copy file\nwith open(\"source.txt\", \"r\") as s, open(\"copy.txt\", \"w\") as c:\n    c.write(s.read())"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between 'w' and 'a' modes?",
+          "answer": "The 'w' (write) mode overwrites the existing content of the file, while 'a' (append) mode adds new content to the end of the file without deleting the existing data."
+        },
+        {
+          "question": "Why is the 'with' statement preferred over manual f.close()?",
+          "answer": "The 'with' statement provides better resource management by automatically closing the file once the block is exited, even if an exception is raised, which prevents memory leaks."
+        },
+        {
+          "question": "Which method would you use to read a file line-by-line into a list?",
+          "answer": "The 'f.readlines()' method reads all lines and returns them as a list of strings."
         }
       ]
     },
