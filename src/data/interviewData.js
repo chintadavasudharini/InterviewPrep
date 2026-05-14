@@ -17171,6 +17171,110 @@ export const interviewData = {
       ]
     },
     {
+      "id": "python-oop-concepts-part2",
+      "title": "Python OOP Concepts - Part 2",
+      "category": "OOP Basics",
+      "definition": "A deep dive into the four foundational pillars of Object-Oriented Programming: Encapsulation, Abstraction, Inheritance, and Polymorphism.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "🛡️ 1. Encapsulation\nEncapsulation involves bundling data and methods into a single unit (class) and restricting access to some components. This protects data from accidental modification."
+        },
+        {
+          "type": "code",
+          "value": "class BankAccount:\n    def __init__(self):\n        self.__balance = 0   # Private variable\n\n    def deposit(self, amount):\n        self.__balance += amount\n\n    def get_balance(self):\n        return self.__balance\n\nacc = BankAccount()\nacc.deposit(5000)\nprint(acc.get_balance())"
+        },
+        {
+          "type": "output",
+          "value": "5000"
+        },
+        {
+          "type": "text",
+          "value": "🔍 2. Abstraction\nAbstraction focuses on hiding complex implementation details and showing only the essential features of an object. It reduces programming complexity and effort."
+        },
+        {
+          "type": "code",
+          "value": "class EmailService:\n    def send_email(self, to, body):\n        self.__connect()\n        print(f\"Sending email to {to}\")\n\n    def __connect(self):\n        print(\"Connecting to mail server...\")\n\nobj = EmailService()\nobj.send_email(\"user@example.com\", \"Hello\")"
+        },
+        {
+          "type": "output",
+          "value": "Connecting to mail server...\nSending email to user@example.com"
+        },
+        {
+          "type": "text",
+          "value": "🧬 3. Inheritance\nInheritance allows a new class (child) to inherit attributes and methods from an existing class (parent), promoting code reusability."
+        },
+        {
+          "type": "code",
+          "value": "class Animal:\n    def speak(self): print(\"Animal speaks\")\n\nclass Dog(Animal):\n    def speak(self): print(\"Woof!\")\n\nclass Cat(Animal):\n    def speak(self): print(\"Meow!\")\n\nd, c = Dog(), Cat()\nd.speak()\nc.speak()"
+        },
+        {
+          "type": "output",
+          "value": "Woof!\nMeow!"
+        },
+        {
+          "type": "text",
+          "value": "🎭 4. Polymorphism\nPolymorphism allows different classes to be treated as instances of the same parent class through the same interface (method name), with each class providing its own implementation."
+        },
+        {
+          "type": "code",
+          "value": "class Circle:\n    def draw(self): print(\"Drawing Circle\")\nclass Rectangle:\n    def draw(self): print(\"Drawing Rectangle\")\n\ndef display(shape):\n    shape.draw()\n\ndisplay(Circle())\ndisplay(Rectangle())"
+        },
+        {
+          "type": "output",
+          "value": "Drawing Circle\nDrawing Rectangle"
+        },
+        {
+          "type": "text",
+          "value": "📊 Quick Summary Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Concept",
+            "Key Purpose",
+            "Real-World Example"
+          ],
+          "rows": [
+            [
+              "Encapsulation",
+              "Data Security",
+              "Private Bank Balance"
+            ],
+            [
+              "Abstraction",
+              "Hide Complexity",
+              "Email Send Button"
+            ],
+            [
+              "Inheritance",
+              "Code Reusability",
+              "Animal → Dog Hierarchy"
+            ],
+            [
+              "Polymorphism",
+              "Flexibility",
+              "Shapes drawing differently"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is method overriding in Python?",
+          "answer": "Method overriding occurs when a child class provides a specific implementation of a method that is already defined in its parent class."
+        },
+        {
+          "question": "Does Python support multiple inheritance?",
+          "answer": "Yes, Python allows a class to inherit from more than one parent class, e.g., 'class C(A, B):'."
+        },
+        {
+          "question": "What is the purpose of 'self' in Python classes?",
+          "answer": "'self' represents the instance of the class and allows access to the attributes and methods of that specific object."
+        }
+      ]
+    },
+    {
       "id": "what-is-a-class",
       "title": "What is a Class in Python?",
       "category": "OOP Basics",
