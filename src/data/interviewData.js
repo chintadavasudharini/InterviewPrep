@@ -20226,6 +20226,309 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-keys",
+      "title": "Keys in MySQL / DBMS",
+      "category": "Basic",
+      "definition": "Keys are used to uniquely identify records in a table and create relationships between tables, ensuring data integrity and efficient retrieval.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1️⃣ Primary Key\n\nA Primary Key is a column (or combination of columns) that uniquely identifies each row in a table.\n\nFeatures:\n• Unique values only\n• Cannot contain NULL\n• One primary key per table"
+        },
+        {
+          "type": "text",
+          "value": "Example Table: Students"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "student_id",
+            "name",
+            "city"
+          ],
+          "rows": [
+            [
+              "101",
+              "Ram",
+              "Delhi"
+            ],
+            [
+              "102",
+              "Ravi",
+              "Mumbai"
+            ],
+            [
+              "103",
+              "Sita",
+              "Chennai"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Here, student_id is the Primary Key."
+        },
+        {
+          "type": "code",
+          "value": "CREATE TABLE Students (\n    student_id INT PRIMARY KEY,\n    name VARCHAR(50),\n    city VARCHAR(50)\n);"
+        },
+        {
+          "type": "text",
+          "value": "2️⃣ Foreign Key\n\nA Foreign Key is a column that creates a relationship between two tables. It refers to the Primary Key in another table."
+        },
+        {
+          "type": "text",
+          "value": "Example\nParent Table: Departments"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "dept_id",
+            "dept_name"
+          ],
+          "rows": [
+            [
+              "1",
+              "HR"
+            ],
+            [
+              "2",
+              "IT"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Child Table: Employees"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "emp_id",
+            "name",
+            "dept_id"
+          ],
+          "rows": [
+            [
+              "101",
+              "Ram",
+              "1"
+            ],
+            [
+              "102",
+              "Ravi",
+              "2"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Here, dept_id in Employees is a Foreign Key."
+        },
+        {
+          "type": "code",
+          "value": "CREATE TABLE Departments (\n    dept_id INT PRIMARY KEY,\n    dept_name VARCHAR(50)\n);\n\nCREATE TABLE Employees (\n    emp_id INT PRIMARY KEY,\n    name VARCHAR(50),\n    dept_id INT,\n    FOREIGN KEY (dept_id) REFERENCES Departments(dept_id)\n);"
+        },
+        {
+          "type": "text",
+          "value": "3️⃣ Candidate Key\n\nA Candidate Key is a column that can uniquely identify rows. A table can have multiple candidate keys. One candidate key becomes the Primary Key."
+        },
+        {
+          "type": "text",
+          "value": "Example Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "student_id",
+            "email",
+            "phone"
+          ],
+          "rows": [
+            [
+              "101",
+              "ram@gmail.com",
+              "9876543210"
+            ],
+            [
+              "102",
+              "ravi@gmail.com",
+              "9876543211"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Possible Candidate Keys:\n• student_id\n• email\n• phone\n\nAll are unique. One of them is selected as the Primary Key."
+        },
+        {
+          "type": "text",
+          "value": "4️⃣ Composite Key\n\nA Composite Key is a key made using two or more columns together. Used when a single column cannot uniquely identify rows."
+        },
+        {
+          "type": "text",
+          "value": "Example Table: Student_Courses"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "student_id",
+            "course_id",
+            "marks"
+          ],
+          "rows": [
+            [
+              "101",
+              "C1",
+              "85"
+            ],
+            [
+              "101",
+              "C2",
+              "90"
+            ],
+            [
+              "102",
+              "C1",
+              "88"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Here:\n• student_id alone → not unique\n• course_id alone → not unique\n• Combination of both → unique\n\nSo (student_id, course_id) is a Composite Key."
+        },
+        {
+          "type": "code",
+          "value": "CREATE TABLE Student_Courses (\n    student_id INT,\n    course_id VARCHAR(10),\n    marks INT,\n    PRIMARY KEY (student_id, course_id)\n);"
+        },
+        {
+          "type": "text",
+          "value": "5️⃣ Super Key\n\nA Super Key is any column or set of columns that uniquely identifies rows. It may contain extra unnecessary columns."
+        },
+        {
+          "type": "text",
+          "value": "Example Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "student_id",
+            "email",
+            "name"
+          ],
+          "rows": [
+            [
+              "101",
+              "ram@gmail.com",
+              "Ram"
+            ],
+            [
+              "102",
+              "ravi@gmail.com",
+              "Ravi"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Possible Super Keys:\n• student_id\n• email\n• (student_id, name)\n• (email, name)\n\nBecause all combinations uniquely identify rows."
+        },
+        {
+          "type": "text",
+          "value": "Difference Between Keys"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Key Type",
+            "Unique",
+            "NULL Allowed",
+            "Multiple Allowed"
+          ],
+          "rows": [
+            [
+              "Primary Key",
+              "Yes",
+              "No",
+              "No"
+            ],
+            [
+              "Foreign Key",
+              "No",
+              "Yes",
+              "Yes"
+            ],
+            [
+              "Candidate Key",
+              "Yes",
+              "No",
+              "Yes"
+            ],
+            [
+              "Composite Key",
+              "Yes",
+              "Depends",
+              "Yes"
+            ],
+            [
+              "Super Key",
+              "Yes",
+              "Depends",
+              "Yes"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Simple Real-Time Example: College Database"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Key",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Primary Key",
+              "Student ID"
+            ],
+            [
+              "Foreign Key",
+              "Department ID in Student Table"
+            ],
+            [
+              "Candidate Key",
+              "Email, Phone Number"
+            ],
+            [
+              "Composite Key",
+              "(Student ID + Course ID)"
+            ],
+            [
+              "Super Key",
+              "Student ID + Name"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the main difference between a Primary Key and a Foreign Key?",
+          "answer": "A Primary Key uniquely identifies a row within its own table and cannot be NULL. A Foreign Key is a field that links to a Primary Key in another table to create a relationship."
+        },
+        {
+          "question": "Can a table have more than one Primary Key?",
+          "answer": "No, a table can have only one Primary Key. However, a Primary Key can consist of multiple columns (Composite Key)."
+        },
+        {
+          "question": "What is a Candidate Key?",
+          "answer": "A Candidate Key is a set of one or more columns that can uniquely identify a record in a table. From multiple candidate keys, one is chosen as the Primary Key."
+        }
+      ]
+    },
+    {
       "id": "mysql-participation-relationship",
       "title": "Total vs Partial Participation in DBMS",
       "category": "Basic",
@@ -20298,6 +20601,146 @@ export const interviewData = {
         {
           "question": "Why is 'Citizen → Aadhaar' considered Total Participation?",
           "answer": "Because in the context of the system, every valid citizen is expected to be registered and associated with a unique Aadhaar record."
+        }
+      ]
+    },
+    {
+      "id": "mysql-order-execution",
+      "title": "SQL Order of Execution",
+      "category": "Basic",
+      "definition": "The logical execution order of a SQL query is the sequence in which the database engine processes different clauses. It differs from the syntax order (how we write the query) and is crucial for understanding why certain aliases or conditions work while others do not.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "🧠 Logical Execution Order of SQL\n\nEven though you write SELECT first, the database processes the query in this sequence:\n\n1. FROM – choose the tables\n2. JOIN – combine tables (if any)\n3. WHERE – filter rows\n4. GROUP BY – group rows\n5. HAVING – filter groups\n6. SELECT – choose columns / expressions\n7. DISTINCT – remove duplicates\n8. ORDER BY – sort results\n9. LIMIT / OFFSET – restrict output"
+        },
+        {
+          "type": "text",
+          "value": "🔍 Example Query"
+        },
+        {
+          "type": "code",
+          "value": "SELECT department, COUNT(*) AS total\nFROM employees\nWHERE salary > 50000\nGROUP BY department\nHAVING COUNT(*) > 5\nORDER BY total DESC;"
+        },
+        {
+          "type": "text",
+          "value": "⚙️ How it actually runs:\n1. FROM employees → get the table\n2. WHERE salary > 50000 → filter rows\n3. GROUP BY department → group rows\n4. HAVING COUNT(*) > 5 → filter groups\n5. SELECT department, COUNT(*) → compute output\n6. ORDER BY total DESC → sort result"
+        },
+        {
+          "type": "text",
+          "value": "⚠️ Key Points:\n• You cannot use aliases in WHERE (because SELECT happens later).\n• You can use aliases in ORDER BY (because it runs after SELECT).\n• HAVING is used for aggregated conditions, while WHERE is for row-level conditions."
+        },
+        {
+          "type": "text",
+          "value": "✍️ SQL Writing Order (Syntax Order)\n\nThis is the order in which we write an SQL query:\n\n1. SELECT\n2. FROM\n3. JOIN\n4. WHERE\n5. GROUP BY\n6. HAVING\n7. ORDER BY\n8. LIMIT"
+        },
+        {
+          "type": "text",
+          "value": "📌 Full Syntax Structure"
+        },
+        {
+          "type": "code",
+          "value": "SELECT column_names\nFROM table_name\nJOIN table_name\nON condition\nWHERE condition\nGROUP BY column_name\nHAVING condition\nORDER BY column_name ASC|DESC\nLIMIT number;"
+        },
+        {
+          "type": "text",
+          "value": "🧠 Writing Order vs Execution Order"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Writing Order",
+            "Execution Order"
+          ],
+          "rows": [
+            [
+              "SELECT",
+              "FROM"
+            ],
+            [
+              "FROM",
+              "WHERE"
+            ],
+            [
+              "WHERE",
+              "GROUP BY"
+            ],
+            [
+              "GROUP BY",
+              "HAVING"
+            ],
+            [
+              "HAVING",
+              "SELECT"
+            ],
+            [
+              "ORDER BY",
+              "ORDER BY"
+            ],
+            [
+              "LIMIT",
+              "LIMIT"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "🔥 Easy Trick to Remember\n\n✍️ Writing Order: SFWGHOL (Select From Where Group Having Order Limit)\n\n⚙️ Execution Order: FWGHOSL (From Where Group Having Select Order Limit)"
+        },
+        {
+          "type": "text",
+          "value": "📌 Simple Meaning of Each Clause"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Clause",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "SELECT",
+              "Choose columns"
+            ],
+            [
+              "FROM",
+              "Choose table"
+            ],
+            [
+              "WHERE",
+              "Filter rows"
+            ],
+            [
+              "GROUP BY",
+              "Create groups"
+            ],
+            [
+              "HAVING",
+              "Filter groups"
+            ],
+            [
+              "ORDER BY",
+              "Sort data"
+            ],
+            [
+              "LIMIT",
+              "Restrict rows"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why can't we use column aliases in the WHERE clause?",
+          "answer": "Because the WHERE clause is executed before the SELECT clause. The database engine hasn't processed the aliases defined in SELECT yet when it evaluates the WHERE condition."
+        },
+        {
+          "question": "Can we use aliases in the ORDER BY clause?",
+          "answer": "Yes, because the ORDER BY clause is executed after the SELECT clause, so the database engine is aware of the aliases at that stage."
+        },
+        {
+          "question": "What is the difference between WHERE and HAVING in terms of execution order?",
+          "answer": "WHERE is executed before the data is grouped (GROUP BY), so it filters individual rows. HAVING is executed after the data is grouped, so it filters the resulting groups based on aggregate functions."
         }
       ]
     },
@@ -21173,6 +21616,295 @@ export const interviewData = {
         {
           "question": "Does TRUNCATE reset identity/auto-increment values?",
           "answer": "Yes, TRUNCATE resets the auto-increment counter to its seed value, whereas DELETE does not."
+        }
+      ]
+    },
+    {
+      "id": "mysql-dml",
+      "title": "What is DML?",
+      "category": "Sub Commands",
+      "definition": "DML stands for Data Manipulation Language. It is used to manage data inside tables by adding, viewing, modifying, or removing records.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "DML Commands:\n• INSERT → Add data\n• SELECT → View data\n• UPDATE → Modify data\n• DELETE → Remove data"
+        },
+        {
+          "type": "text",
+          "value": "Example Table\nCreate Table"
+        },
+        {
+          "type": "code",
+          "value": "CREATE TABLE employees (\n    emp_id INT,\n    emp_name VARCHAR(30),\n    department VARCHAR(20),\n    salary INT\n);"
+        },
+        {
+          "type": "text",
+          "value": "Table Structure"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "emp_id",
+            "emp_name",
+            "department",
+            "salary"
+          ],
+          "rows": [
+            [
+              "101",
+              "Ravi",
+              "HR",
+              "25000"
+            ],
+            [
+              "102",
+              "Priya",
+              "IT",
+              "40000"
+            ],
+            [
+              "103",
+              "Arun",
+              "Sales",
+              "30000"
+            ],
+            [
+              "104",
+              "Sneha",
+              "IT",
+              "45000"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1️⃣ INSERT Command\nPurpose: Used to insert/add rows into a table.\n\nSyntax:\nINSERT INTO table_name\nVALUES(value1, value2, value3);"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "INSERT INTO employees\nVALUES\n(101, 'Ravi', 'HR', 25000),\n(102, 'Priya', 'IT', 40000),\n(103, 'Arun', 'Sales', 30000),\n(104, 'Sneha', 'IT', 45000);"
+        },
+        {
+          "type": "output",
+          "value": "Query OK, 4 rows affected"
+        },
+        {
+          "type": "text",
+          "value": "2️⃣ SELECT Command\nPurpose: Used to display/view data from a table.\n\nExample:"
+        },
+        {
+          "type": "code",
+          "value": "SELECT * FROM employees;"
+        },
+        {
+          "type": "text",
+          "value": "Output"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "emp_id",
+            "emp_name",
+            "department",
+            "salary"
+          ],
+          "rows": [
+            [
+              "101",
+              "Ravi",
+              "HR",
+              "25000"
+            ],
+            [
+              "102",
+              "Priya",
+              "IT",
+              "40000"
+            ],
+            [
+              "103",
+              "Arun",
+              "Sales",
+              "30000"
+            ],
+            [
+              "104",
+              "Sneha",
+              "IT",
+              "45000"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "3️⃣ UPDATE Command\nPurpose: Used to modify existing data.\n\nSyntax:\nUPDATE table_name\nSET column_name = value\nWHERE condition;"
+        },
+        {
+          "type": "text",
+          "value": "Example: Increase Ravi's salary to 28000."
+        },
+        {
+          "type": "code",
+          "value": "UPDATE employees\nSET salary = 28000\nWHERE emp_name = 'Ravi';"
+        },
+        {
+          "type": "output",
+          "value": "Query OK, 1 row affected"
+        },
+        {
+          "type": "text",
+          "value": "Check Updated Table"
+        },
+        {
+          "type": "code",
+          "value": "SELECT * FROM employees;"
+        },
+        {
+          "type": "text",
+          "value": "Output"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "emp_id",
+            "emp_name",
+            "department",
+            "salary"
+          ],
+          "rows": [
+            [
+              "101",
+              "Ravi",
+              "HR",
+              "28000"
+            ],
+            [
+              "102",
+              "Priya",
+              "IT",
+              "40000"
+            ],
+            [
+              "103",
+              "Arun",
+              "Sales",
+              "30000"
+            ],
+            [
+              "104",
+              "Sneha",
+              "IT",
+              "45000"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "4️⃣ DELETE Command\nPurpose: Used to delete rows from a table.\n\nSyntax:\nDELETE FROM table_name\nWHERE condition;"
+        },
+        {
+          "type": "text",
+          "value": "Example: Delete employee Arun."
+        },
+        {
+          "type": "code",
+          "value": "DELETE FROM employees\nWHERE emp_id = 103;"
+        },
+        {
+          "type": "output",
+          "value": "Query OK, 1 row affected"
+        },
+        {
+          "type": "text",
+          "value": "Check Table"
+        },
+        {
+          "type": "code",
+          "value": "SELECT * FROM employees;"
+        },
+        {
+          "type": "text",
+          "value": "Output"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "emp_id",
+            "emp_name",
+            "department",
+            "salary"
+          ],
+          "rows": [
+            [
+              "101",
+              "Ravi",
+              "HR",
+              "28000"
+            ],
+            [
+              "102",
+              "Priya",
+              "IT",
+              "40000"
+            ],
+            [
+              "104",
+              "Sneha",
+              "IT",
+              "45000"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Important Notes\n\nWithout WHERE in UPDATE\nUPDATE employees\nSET salary = 50000;\n⚠️ Updates all rows.\n\nWithout WHERE in DELETE\nDELETE FROM employees;\n⚠️ Deletes all rows from table."
+        },
+        {
+          "type": "text",
+          "value": "Quick Summary"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Command",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "INSERT",
+              "Add data"
+            ],
+            [
+              "SELECT",
+              "View data"
+            ],
+            [
+              "UPDATE",
+              "Modify data"
+            ],
+            [
+              "DELETE",
+              "Remove data"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is DML in SQL?",
+          "answer": "DML (Data Manipulation Language) is a sub-language of SQL used for managing and manipulating data within existing database tables."
+        },
+        {
+          "question": "What happens if you run an UPDATE command without a WHERE clause?",
+          "answer": "If you omit the WHERE clause in an UPDATE statement, all rows in the table will be updated with the new value."
+        },
+        {
+          "question": "Which DML command is used to remove specific records from a table?",
+          "answer": "The DELETE command combined with a WHERE clause is used to remove specific records."
         }
       ]
     },
@@ -22312,6 +23044,1046 @@ export const interviewData = {
         }
       ],
       "questions": []
+    },
+    {
+      "id": "mysql-joins-2",
+      "title": "Joins-2: Joins in MySQL ⭐",
+      "category": "Queries",
+      "definition": "Joins are used to combine data from two or more tables based on a related column, allowing you to retrieve a unified view of information spread across different relations.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Why Joins are Used?\n\nSuppose you have:\n\nemployees table\nemp_id | name | dept_id\n1 | Ram | 101\n2 | Sita | 102\n3 | John | 103\n\ndepartments table\ndept_id | dept_name\n101 | HR\n102 | IT\n104 | Finance\n\nTo get employee names with department names, we use JOIN."
+        },
+        {
+          "type": "text",
+          "value": "Types of Joins:\n• INNER JOIN\n• LEFT JOIN\n• RIGHT JOIN\n• CROSS JOIN\n• SELF JOIN"
+        },
+        {
+          "type": "text",
+          "value": "Create Sample Tables"
+        },
+        {
+          "type": "code",
+          "value": "CREATE TABLE employees (\n    emp_id INT,\n    name VARCHAR(50),\n    dept_id INT\n);\n\nINSERT INTO employees VALUES\n(1, 'Ram', 101),\n(2, 'Sita', 102),\n(3, 'John', 103),\n(4, 'David', NULL);\n\nCREATE TABLE departments (\n    dept_id INT,\n    dept_name VARCHAR(50)\n);\n\nINSERT INTO departments VALUES\n(101, 'HR'),\n(102, 'IT'),\n(104, 'Finance');"
+        },
+        {
+          "type": "text",
+          "value": "1️⃣ INNER JOIN ⭐\nReturns only matching records from both tables.\n\nSyntax:\nSELECT columns\nFROM table1\nINNER JOIN table2\nON table1.column = table2.column;"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "SELECT employees.name, departments.dept_name\nFROM employees\nINNER JOIN departments\nON employees.dept_id = departments.dept_id;"
+        },
+        {
+          "type": "text",
+          "value": "Output"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "name",
+            "dept_name"
+          ],
+          "rows": [
+            [
+              "Ram",
+              "HR"
+            ],
+            [
+              "Sita",
+              "IT"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Explanation:\n• 101 matches → shown\n• 102 matches → shown\n• 103 not found in departments → not shown\n• NULL → not shown\n\nVisual Idea: employees ∩ departments (Only common records)"
+        },
+        {
+          "type": "text",
+          "value": "2️⃣ LEFT JOIN ⭐\nReturns ALL records from LEFT table and matching records from RIGHT table. If no match → NULL values.\n\nSyntax:\nSELECT columns\nFROM table1\nLEFT JOIN table2\nON table1.column = table2.column;"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "SELECT employees.name, departments.dept_name\nFROM employees\nLEFT JOIN departments\nON employees.dept_id = departments.dept_id;"
+        },
+        {
+          "type": "text",
+          "value": "Output"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "name",
+            "dept_name"
+          ],
+          "rows": [
+            [
+              "Ram",
+              "HR"
+            ],
+            [
+              "Sita",
+              "IT"
+            ],
+            [
+              "John",
+              "NULL"
+            ],
+            [
+              "David",
+              "NULL"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Explanation:\nAll employees are shown. John has no matching department, and David has NULL dept_id, so their department becomes NULL.\n\nVisual Idea: All employees + matching departments"
+        },
+        {
+          "type": "text",
+          "value": "3️⃣ RIGHT JOIN ⭐\nReturns ALL records from RIGHT table and matching records from LEFT table. If no match → NULL values.\n\nSyntax:\nSELECT columns\nFROM table1\nRIGHT JOIN table2\nON table1.column = table2.column;"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "SELECT employees.name, departments.dept_name\nFROM employees\nRIGHT JOIN departments\nON employees.dept_id = departments.dept_id;"
+        },
+        {
+          "type": "text",
+          "value": "Output"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "name",
+            "dept_name"
+          ],
+          "rows": [
+            [
+              "Ram",
+              "HR"
+            ],
+            [
+              "Sita",
+              "IT"
+            ],
+            [
+              "NULL",
+              "Finance"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Explanation:\nAll departments are shown. Finance department has no employee, so the employee name becomes NULL.\n\nVisual Idea: All departments + matching employees"
+        },
+        {
+          "type": "text",
+          "value": "4️⃣ CROSS JOIN ⭐\nReturns Cartesian Product. Every row from table1 combines with every row from table2.\n\nFormula: Rows in table1 × Rows in table2\nResult: 4 (employees) × 3 (departments) = 12 rows\n\nSyntax:\nSELECT columns\nFROM table1\nCROSS JOIN table2;"
+        },
+        {
+          "type": "text",
+          "value": "Example"
+        },
+        {
+          "type": "code",
+          "value": "SELECT employees.name, departments.dept_name\nFROM employees\nCROSS JOIN departments;"
+        },
+        {
+          "type": "text",
+          "value": "Output (Few Rows)"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "name",
+            "dept_name"
+          ],
+          "rows": [
+            [
+              "Ram",
+              "HR"
+            ],
+            [
+              "Ram",
+              "IT"
+            ],
+            [
+              "Ram",
+              "Finance"
+            ],
+            [
+              "Sita",
+              "HR"
+            ],
+            [
+              "Sita",
+              "IT"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Use Cases:\n• Generating combinations\n• Product variations\n• Timetable combinations"
+        },
+        {
+          "type": "text",
+          "value": "5️⃣ SELF JOIN ⭐\nA table joins with itself. Used when rows in the same table are related."
+        },
+        {
+          "type": "text",
+          "value": "Example Table: staff"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "emp_id",
+            "emp_name",
+            "manager_id"
+          ],
+          "rows": [
+            [
+              "1",
+              "Ram",
+              "NULL"
+            ],
+            [
+              "2",
+              "Sita",
+              "1"
+            ],
+            [
+              "3",
+              "John",
+              "1"
+            ],
+            [
+              "4",
+              "David",
+              "2"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Query"
+        },
+        {
+          "type": "code",
+          "value": "SELECT \n    e.emp_name AS Employee,\n    m.emp_name AS Manager\nFROM staff e\nLEFT JOIN staff m\nON e.manager_id = m.emp_id;"
+        },
+        {
+          "type": "text",
+          "value": "Output"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Employee",
+            "Manager"
+          ],
+          "rows": [
+            [
+              "Ram",
+              "NULL"
+            ],
+            [
+              "Sita",
+              "Ram"
+            ],
+            [
+              "John",
+              "Ram"
+            ],
+            [
+              "David",
+              "Sita"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Explanation:\nSame table used twice: e = employee, m = manager. This is called aliasing."
+        },
+        {
+          "type": "text",
+          "value": "Difference Between JOIN Types ⭐"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "JOIN Type",
+            "Returns"
+          ],
+          "rows": [
+            [
+              "INNER JOIN",
+              "Only matching rows"
+            ],
+            [
+              "LEFT JOIN",
+              "All left + matching right"
+            ],
+            [
+              "RIGHT JOIN",
+              "All right + matching left"
+            ],
+            [
+              "CROSS JOIN",
+              "Every combination"
+            ],
+            [
+              "SELF JOIN",
+              "Table joins itself"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Easy Memory Trick ⭐\n• INNER → Common\n• LEFT → Everything from LEFT\n• RIGHT → Everything from RIGHT\n• CROSS → All combinations\n• SELF → Same table"
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Examples ⭐"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "JOIN",
+            "Real Example"
+          ],
+          "rows": [
+            [
+              "INNER JOIN",
+              "Students with valid courses"
+            ],
+            [
+              "LEFT JOIN",
+              "All customers with orders"
+            ],
+            [
+              "RIGHT JOIN",
+              "All products with sales"
+            ],
+            [
+              "CROSS JOIN",
+              "Shirt-color combinations"
+            ],
+            [
+              "SELF JOIN",
+              "Employee-manager hierarchy"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Practice Questions ⭐\n1. Display employee names with department names.\n2. Show all employees even if no department exists.\n3. Show all departments even if no employee exists.\n4. Generate all possible employee-department combinations.\n5. Display employee and manager names using SELF JOIN."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Q1. Difference between INNER JOIN and LEFT JOIN?",
+          "answer": "INNER JOIN: Only matching rows; non-matching are removed. \nLEFT JOIN: All left rows; non-matching right columns become NULL."
+        },
+        {
+          "question": "Q2. What is Cartesian Product?",
+          "answer": "It is the result of a CROSS JOIN where every row from the first table combines with every row from the second table."
+        },
+        {
+          "question": "Q3. Why SELF JOIN is used?",
+          "answer": "To relate rows within the same table, such as Employee ↔ Manager or Parent ↔ Child hierarchies."
+        }
+      ]
+    },
+    {
+      "id": "mysql-joins-3",
+      "title": "Joins-3: SQL Joins in MySQL",
+      "category": "Queries",
+      "definition": "A comprehensive walkthrough of SQL Joins using two tables (Employee and Department), including schema creation, data insertion, and query execution for all major join types.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1️⃣ Create Tables\n\nEmployee Table"
+        },
+        {
+          "type": "code",
+          "value": "CREATE TABLE Employee (\n    emp_id INT,\n    emp_name VARCHAR(30),\n    dept_id INT\n);"
+        },
+        {
+          "type": "text",
+          "value": "Department Table"
+        },
+        {
+          "type": "code",
+          "value": "CREATE TABLE Department (\n    dept_id INT,\n    dept_name VARCHAR(30),\n    location VARCHAR(30)\n);"
+        },
+        {
+          "type": "text",
+          "value": "2️⃣ Insert Data\n\nEmployee Table Data"
+        },
+        {
+          "type": "code",
+          "value": "INSERT INTO Employee VALUES\n(1, 'Ravi', 101),\n(2, 'Priya', 102),\n(3, 'Kiran', 103),\n(4, 'Anu', NULL);"
+        },
+        {
+          "type": "text",
+          "value": "Department Table Data"
+        },
+        {
+          "type": "code",
+          "value": "INSERT INTO Department VALUES\n(101, 'HR', 'Hyderabad'),\n(102, 'IT', 'Bangalore'),\n(104, 'Finance', 'Chennai');"
+        },
+        {
+          "type": "text",
+          "value": "Table Structures Overview\n\nEmployee Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "emp_id",
+            "emp_name",
+            "dept_id"
+          ],
+          "rows": [
+            [
+              "1",
+              "Ravi",
+              "101"
+            ],
+            [
+              "2",
+              "Priya",
+              "102"
+            ],
+            [
+              "3",
+              "Kiran",
+              "103"
+            ],
+            [
+              "4",
+              "Anu",
+              "NULL"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Department Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "dept_id",
+            "dept_name",
+            "location"
+          ],
+          "rows": [
+            [
+              "101",
+              "HR",
+              "Hyderabad"
+            ],
+            [
+              "102",
+              "IT",
+              "Bangalore"
+            ],
+            [
+              "104",
+              "Finance",
+              "Chennai"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1️⃣ INNER JOIN\nReturns only matching rows from both tables.\n\nQuery:"
+        },
+        {
+          "type": "code",
+          "value": "SELECT E.emp_name, D.dept_name\nFROM Employee E\nINNER JOIN Department D\nON E.dept_id = D.dept_id;"
+        },
+        {
+          "type": "text",
+          "value": "Output"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "emp_name",
+            "dept_name"
+          ],
+          "rows": [
+            [
+              "Ravi",
+              "HR"
+            ],
+            [
+              "Priya",
+              "IT"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "✅ Only matching dept_id values are shown."
+        },
+        {
+          "type": "text",
+          "value": "2️⃣ LEFT JOIN\nReturns all rows from LEFT table + matching rows from RIGHT table.\n\nQuery:"
+        },
+        {
+          "type": "code",
+          "value": "SELECT E.emp_name, D.dept_name\nFROM Employee E\nLEFT JOIN Department D\nON E.dept_id = D.dept_id;"
+        },
+        {
+          "type": "text",
+          "value": "Output"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "emp_name",
+            "dept_name"
+          ],
+          "rows": [
+            [
+              "Ravi",
+              "HR"
+            ],
+            [
+              "Priya",
+              "IT"
+            ],
+            [
+              "Kiran",
+              "NULL"
+            ],
+            [
+              "Anu",
+              "NULL"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "✅ All employees are displayed."
+        },
+        {
+          "type": "text",
+          "value": "3️⃣ RIGHT JOIN\nReturns all rows from RIGHT table + matching rows from LEFT table.\n\nQuery:"
+        },
+        {
+          "type": "code",
+          "value": "SELECT E.emp_name, D.dept_name\nFROM Employee E\nRIGHT JOIN Department D\nON E.dept_id = D.dept_id;"
+        },
+        {
+          "type": "text",
+          "value": "Output"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "emp_name",
+            "dept_name"
+          ],
+          "rows": [
+            [
+              "Ravi",
+              "HR"
+            ],
+            [
+              "Priya",
+              "IT"
+            ],
+            [
+              "NULL",
+              "Finance"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "✅ All departments are displayed."
+        },
+        {
+          "type": "text",
+          "value": "4️⃣ CROSS JOIN\nReturns all possible combinations.\nFormula: Rows in Table1 × Rows in Table2\nHere: 4 Employees × 3 Departments = 12 Rows\n\nQuery:"
+        },
+        {
+          "type": "code",
+          "value": "SELECT E.emp_name, D.dept_name\nFROM Employee E\nCROSS JOIN Department D;"
+        },
+        {
+          "type": "text",
+          "value": "Sample Output"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "emp_name",
+            "dept_name"
+          ],
+          "rows": [
+            [
+              "Ravi",
+              "HR"
+            ],
+            [
+              "Ravi",
+              "IT"
+            ],
+            [
+              "Ravi",
+              "Finance"
+            ],
+            [
+              "Priya",
+              "HR"
+            ],
+            [
+              "Priya",
+              "IT"
+            ],
+            [
+              "Priya",
+              "Finance"
+            ],
+            [
+              "Kiran",
+              "HR"
+            ],
+            [
+              "Kiran",
+              "IT"
+            ],
+            [
+              "Kiran",
+              "Finance"
+            ],
+            [
+              "Anu",
+              "HR"
+            ],
+            [
+              "Anu",
+              "IT"
+            ],
+            [
+              "Anu",
+              "Finance"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "✅ Every row combines with every row."
+        },
+        {
+          "type": "text",
+          "value": "5️⃣ SELF JOIN\nA table joins with itself.\n\nCreate Table"
+        },
+        {
+          "type": "code",
+          "value": "CREATE TABLE Employees (\n    emp_id INT,\n    emp_name VARCHAR(30),\n    manager_id INT\n);"
+        },
+        {
+          "type": "text",
+          "value": "Insert Data"
+        },
+        {
+          "type": "code",
+          "value": "INSERT INTO Employees VALUES\n(1, 'Ravi', NULL),\n(2, 'Priya', 1),\n(3, 'Kiran', 1),\n(4, 'Anu', 2);"
+        },
+        {
+          "type": "text",
+          "value": "Employees Table Structure"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "emp_id",
+            "emp_name",
+            "manager_id"
+          ],
+          "rows": [
+            [
+              "1",
+              "Ravi",
+              "NULL"
+            ],
+            [
+              "2",
+              "Priya",
+              "1"
+            ],
+            [
+              "3",
+              "Kiran",
+              "1"
+            ],
+            [
+              "4",
+              "Anu",
+              "2"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Query"
+        },
+        {
+          "type": "code",
+          "value": "SELECT \nE.emp_name AS Employee,\nM.emp_name AS Manager\nFROM Employees E\nLEFT JOIN Employees M\nON E.manager_id = M.emp_id;"
+        },
+        {
+          "type": "text",
+          "value": "Output"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Employee",
+            "Manager"
+          ],
+          "rows": [
+            [
+              "Ravi",
+              "NULL"
+            ],
+            [
+              "Priya",
+              "Ravi"
+            ],
+            [
+              "Kiran",
+              "Ravi"
+            ],
+            [
+              "Anu",
+              "Priya"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "✅ Employee and manager are from the same table."
+        },
+        {
+          "type": "text",
+          "value": "Quick Difference Table"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "JOIN Type",
+            "Returns"
+          ],
+          "rows": [
+            [
+              "INNER JOIN",
+              "Matching rows only"
+            ],
+            [
+              "LEFT JOIN",
+              "All left table rows"
+            ],
+            [
+              "RIGHT JOIN",
+              "All right table rows"
+            ],
+            [
+              "CROSS JOIN",
+              "All combinations"
+            ],
+            [
+              "SELF JOIN",
+              "Table joined with itself"
+            ]
+          ]
+        }
+      ],
+      "questions": []
+    },
+    {
+      "id": "mysql-subqueries",
+      "title": "Subqueries in MySQL",
+      "category": "Queries",
+      "definition": "A subquery is a query nested inside another SQL query. The inner query executes first and its result is used by the outer query to filter or manipulate data.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Syntax:\n\nSELECT column_name\nFROM table_name\nWHERE column_name OPERATOR (\n    SELECT column_name\n    FROM table_name\n);"
+        },
+        {
+          "type": "text",
+          "value": "Create Sample Table\nEmployee Table"
+        },
+        {
+          "type": "code",
+          "value": "CREATE TABLE Employees (\n    emp_id INT PRIMARY KEY,\n    emp_name VARCHAR(50),\n    department VARCHAR(30),\n    salary INT,\n    manager_id INT\n);"
+        },
+        {
+          "type": "text",
+          "value": "Insert 10 Rows"
+        },
+        {
+          "type": "code",
+          "value": "INSERT INTO Employees VALUES\n(101, 'Asha',    'HR',       40000, 201),\n(102, 'Ravi',    'IT',       70000, 202),\n(103, 'Kiran',   'Finance',  50000, 201),\n(104, 'Sneha',   'IT',       80000, 202),\n(105, 'Arjun',   'Marketing',45000, 203),\n(106, 'Meena',   'Finance',  60000, 201),\n(107, 'Vikram',  'IT',       75000, 202),\n(108, 'Pooja',   'HR',       42000, 201),\n(109, 'Ramesh',  'Marketing',47000, 203),\n(110, 'Divya',   'IT',       90000, 202);"
+        },
+        {
+          "type": "text",
+          "value": "Table Data"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "emp_id",
+            "emp_name",
+            "department",
+            "salary",
+            "manager_id"
+          ],
+          "rows": [
+            [
+              "101",
+              "Asha",
+              "HR",
+              "40000",
+              "201"
+            ],
+            [
+              "102",
+              "Ravi",
+              "IT",
+              "70000",
+              "202"
+            ],
+            [
+              "103",
+              "Kiran",
+              "Finance",
+              "50000",
+              "201"
+            ],
+            [
+              "104",
+              "Sneha",
+              "IT",
+              "80000",
+              "202"
+            ],
+            [
+              "105",
+              "Arjun",
+              "Marketing",
+              "45000",
+              "203"
+            ],
+            [
+              "106",
+              "Meena",
+              "Finance",
+              "60000",
+              "201"
+            ],
+            [
+              "107",
+              "Vikram",
+              "IT",
+              "75000",
+              "202"
+            ],
+            [
+              "108",
+              "Pooja",
+              "HR",
+              "42000",
+              "201"
+            ],
+            [
+              "109",
+              "Ramesh",
+              "Marketing",
+              "47000",
+              "203"
+            ],
+            [
+              "110",
+              "Divya",
+              "IT",
+              "90000",
+              "202"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1️⃣ Single Row Subquery\n\nA subquery that returns only one row/value. Uses operators like =, >, <, >=, <=."
+        },
+        {
+          "type": "text",
+          "value": "Example 1: Find employees earning more than average salary"
+        },
+        {
+          "type": "code",
+          "value": "SELECT emp_name, salary\nFROM Employees\nWHERE salary > (\n    SELECT AVG(salary)\n    FROM Employees\n);"
+        },
+        {
+          "type": "output",
+          "value": "Inner Query Result: 59900\n\nFinal Output:\nemp_name | salary\nRavi | 70000\nSneha | 80000\nMeena | 60000\nVikram | 75000\nDivya | 90000"
+        },
+        {
+          "type": "text",
+          "value": "Example 2: Find employee with highest salary"
+        },
+        {
+          "type": "code",
+          "value": "SELECT emp_name, salary\nFROM Employees\nWHERE salary = (\n    SELECT MAX(salary)\n    FROM Employees\n);"
+        },
+        {
+          "type": "output",
+          "value": "emp_name | salary\nDivya | 90000"
+        },
+        {
+          "type": "text",
+          "value": "2️⃣ Multiple Row Subquery\n\nA subquery that returns multiple rows. Uses operators like IN, ANY, ALL, EXISTS."
+        },
+        {
+          "type": "text",
+          "value": "Example 1: IN Operator\nFind employees working in departments where salary > 75000 exists"
+        },
+        {
+          "type": "code",
+          "value": "SELECT emp_name, department\nFROM Employees\nWHERE department IN (\n    SELECT department\n    FROM Employees\n    WHERE salary > 75000\n);"
+        },
+        {
+          "type": "output",
+          "value": "Inner Query Result: IT\n\nFinal Output:\nemp_name | department\nRavi | IT\nSneha | IT\nVikram | IT\nDivya | IT"
+        },
+        {
+          "type": "text",
+          "value": "ANY Operator Example: Find employees earning more than ANY Finance employee"
+        },
+        {
+          "type": "code",
+          "value": "SELECT emp_name, salary\nFROM Employees\nWHERE salary > ANY (\n    SELECT salary\n    FROM Employees\n    WHERE department = 'Finance'\n);"
+        },
+        {
+          "type": "output",
+          "value": "Condition: salary > ANY(50000, 60000) → salary > 50000\n\nOutput:\nemp_name | salary\nRavi | 70000\nSneha | 80000\nMeena | 60000\nVikram | 75000\nDivya | 90000"
+        },
+        {
+          "type": "text",
+          "value": "ALL Operator Example: Find employees earning more than ALL Finance employees"
+        },
+        {
+          "type": "code",
+          "value": "SELECT emp_name, salary\nFROM Employees\nWHERE salary > ALL (\n    SELECT salary\n    FROM Employees\n    WHERE department = 'Finance'\n);"
+        },
+        {
+          "type": "output",
+          "value": "Condition: salary > ALL(50000, 60000) → salary > 60000\n\nOutput:\nemp_name | salary\nRavi | 70000\nSneha | 80000\nVikram | 75000\nDivya | 90000"
+        },
+        {
+          "type": "text",
+          "value": "EXISTS Operator Example: Find departments having employees with salary > 80000"
+        },
+        {
+          "type": "code",
+          "value": "SELECT DISTINCT department\nFROM Employees E1\nWHERE EXISTS (\n    SELECT *\n    FROM Employees E2\n    WHERE E1.department = E2.department\n    AND E2.salary > 80000\n);"
+        },
+        {
+          "type": "output",
+          "value": "department\nIT"
+        },
+        {
+          "type": "text",
+          "value": "3️⃣ Correlated Subquery\n\nA subquery that depends on the outer query. It executes once for every row and inner query uses outer query columns."
+        },
+        {
+          "type": "text",
+          "value": "Example: Find employees earning more than their department average salary"
+        },
+        {
+          "type": "code",
+          "value": "SELECT emp_name, department, salary\nFROM Employees E1\nWHERE salary > (\n    SELECT AVG(salary)\n    FROM Employees E2\n    WHERE E1.department = E2.department\n);"
+        },
+        {
+          "type": "output",
+          "value": "Department Averages:\nHR: 41000, IT: 78750, Finance: 55000, Marketing: 46000\n\nOutput:\nemp_name | department | salary\nSneha | IT | 80000\nMeena | Finance | 60000\nRamesh | Marketing | 47000\nDivya | IT | 90000"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between Types"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Type",
+            "Returns",
+            "Operators"
+          ],
+          "rows": [
+            [
+              "Single Row Subquery",
+              "One row",
+              "=, >, <"
+            ],
+            [
+              "Multiple Row Subquery",
+              "Multiple rows",
+              "IN, ANY, ALL"
+            ],
+            [
+              "Correlated Subquery",
+              "Depends on outer query",
+              "EXISTS, comparison"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Execution Order:\n1. SELECT\n2. FROM\n3. WHERE (Subquery executes first)\n4. GROUP BY\n5. HAVING\n6. ORDER BY"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision:\n• Subquery: Query inside another query\n• Single Row: Returns one value\n• Multiple Row: Returns many rows\n• Correlated: Depends on outer query\n• IN: Match multiple values\n• ANY: Compare with at least one\n• ALL: Compare with all\n• EXISTS: Checks row existence"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between a subquery and a correlated subquery?",
+          "answer": "A regular subquery is independent of the outer query and executes once. A correlated subquery depends on data from the outer query and executes once for each row processed by the outer query."
+        },
+        {
+          "question": "What is the difference between ANY and ALL operators?",
+          "answer": "ANY returns TRUE if the comparison is true for at least one value in the subquery result. ALL returns TRUE only if the comparison is true for every value in the subquery result."
+        },
+        {
+          "question": "Which executes first: inner query or outer query?",
+          "answer": "In a non-correlated subquery, the inner query executes first and passes its result to the outer query. In a correlated subquery, the execution is interleaved as it runs for each row of the outer query."
+        },
+        {
+          "question": "How does the EXISTS operator work?",
+          "answer": "EXISTS checks for the existence of any record in the subquery result. It returns TRUE if the subquery returns one or more rows, and FALSE if no rows are returned."
+        }
+      ]
     }
   ],
   "dsa": [
