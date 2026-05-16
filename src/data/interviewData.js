@@ -22905,6 +22905,853 @@ export const interviewData = {
       ]
     },
     {
+      "id": "mysql-like-wildcards",
+      "title": "SQL LIKE Operator & Wildcards",
+      "category": "Queries",
+      "definition": "The LIKE operator in SQL/MySQL is used to search for a specified pattern in a column. It is primarily used with the WHERE clause for sophisticated string pattern matching.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Syntax\n\nSELECT column_name\nFROM table_name\nWHERE column_name LIKE pattern;\n\n------------------------------------------------"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Wildcard",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "%",
+              "Represents zero, one, or many characters"
+            ],
+            [
+              "_",
+              "Represents a single character"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1. % Wildcard\n\n% matches any number of characters.\n\nExample Table: students"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "id",
+            "name"
+          ],
+          "rows": [
+            ["1", "Ram"],
+            ["2", "Ravi"],
+            ["3", "Ramesh"],
+            ["4", "Sita"],
+            ["5", "Raj"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Example 1: Names starting with \"Ra\"\n\nSELECT * FROM students\nWHERE name LIKE 'Ra%';"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n1\tRam\n2\tRavi\n3\tRamesh\n5\tRaj"
+        },
+        {
+          "type": "text",
+          "value": "Example 2: Names ending with \"a\"\n\nSELECT * FROM students\nWHERE name LIKE '%a';"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n4\tSita"
+        },
+        {
+          "type": "text",
+          "value": "Example 3: Names containing \"am\"\n\nSELECT * FROM students\nWHERE name LIKE '%am%';"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n1\tRam\n3\tRamesh\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. _ Wildcard\n\n_ matches exactly one character."
+        },
+        {
+          "type": "text",
+          "value": "Example 1: Names with 3 letters\n\nSELECT * FROM students\nWHERE name LIKE '___';"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n1\tRam\n5\tRaj"
+        },
+        {
+          "type": "text",
+          "value": "Example 2: Names starting with \"R\" and having 4 letters\n\nSELECT * FROM students\nWHERE name LIKE 'R___';"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n2\tRavi\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Combined Wildcards\n\nExample: Starts with R and Ends with h\n\nSELECT * FROM students\nWHERE name LIKE 'R%h';"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n3\tRamesh\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "LIKE with Numbers\n\nLIKE can also be used with numeric values by treating them as strings.\n\nExample: Salaries starting with 5\n\nSELECT * FROM employees\nWHERE salary LIKE '5%';"
+        },
+        {
+          "type": "text",
+          "value": "NOT LIKE\n\nUsed to exclude matching patterns.\n\nExample: Names that do NOT start with \"R\"\n\nSELECT * FROM students\nWHERE name NOT LIKE 'R%';"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n4\tSita\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Case Sensitivity\n\nIn MySQL, LIKE is usually case-insensitive by default.\n\nSELECT * FROM students\nWHERE name LIKE 'ram%';\nMatches: Ram, RAM, ram (depending on collation).\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Difference Between = and LIKE"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "= Operator",
+            "LIKE Operator"
+          ],
+          "rows": [
+            [
+              "Matching Type",
+              "Exact match",
+              "Pattern match"
+            ],
+            [
+              "Wildcards",
+              "No wildcards",
+              "Uses wildcards"
+            ],
+            [
+              "Speed",
+              "Faster",
+              "Slightly slower"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Difference Between LIKE and IN"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "LIKE",
+            "IN"
+          ],
+          "rows": [
+            [
+              "Purpose",
+              "Pattern matching",
+              "Exact multiple values"
+            ],
+            [
+              "Example",
+              "WHERE name LIKE 'R%'",
+              "WHERE name IN ('Ram','Ravi')"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Important Pattern Examples"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Pattern",
+            "Meaning"
+          ],
+          "rows": [
+            ["'A%'", "Starts with A"],
+            ["'%A'", "Ends with A"],
+            ["'%A%'", "Contains A"],
+            ["'A____'", "5-letter words starting with A"],
+            ["'__a%'", "Third character is a"],
+            ["'_a%'", "Second character is a"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Examples\n\n• Gmail Search: SELECT * FROM users WHERE email LIKE '%@gmail.com';\n• Phone Numbers: SELECT * FROM customers WHERE phone LIKE '9%';\n• Employee Search: SELECT * FROM employees WHERE name LIKE '%k';\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Summary\n\n• LIKE is used for pattern matching.\n• % → multiple characters, _ → single character.\n• Used with WHERE clause.\n• NOT LIKE excludes patterns.\n• Common in searching names, emails, phone numbers, etc."
+        }
+      ],
+      "questions": [
+        {
+          "question": "1. What is the use of LIKE in SQL?",
+          "answer": "Used to search data using patterns."
+        },
+        {
+          "question": "2. Difference between % and _?",
+          "answer": "% represents multiple characters, while _ represents a single character."
+        },
+        {
+          "question": "3. Difference between LIKE and IN?",
+          "answer": "LIKE is used for pattern matching (e.g., name LIKE 'R%'), while IN is used for matching exact multiple values (e.g., name IN ('Ram','Ravi'))."
+        },
+        {
+          "question": "4. Can LIKE be used with numbers?",
+          "answer": "Yes, it can be used with numbers, although it is mainly used with text."
+        },
+        {
+          "question": "5. What is NOT LIKE?",
+          "answer": "Used to exclude matching patterns."
+        }
+      ]
+    },
+    {
+      "id": "mysql-like-examples-pro",
+      "title": "SQL LIKE Operator: 20+ Practical Examples",
+      "category": "Queries",
+      "definition": "A comprehensive guide to the SQL LIKE operator using a 10-record Employees dataset, covering 20 distinct pattern matching scenarios including prefixes, suffixes, character positioning, and combined wildcards.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Database Setup\n\nTo follow along with these examples, create and populate the following employees table."
+        },
+        {
+          "type": "code",
+          "value": "CREATE TABLE employees (\n    id INT PRIMARY KEY,\n    name VARCHAR(50),\n    age INT,\n    city VARCHAR(50),\n    department VARCHAR(50),\n    salary INT\n);\n\nINSERT INTO employees VALUES\n(1, 'Ram', 25, 'Hyderabad', 'HR', 35000),\n(2, 'Ravi', 28, 'Vijayawada', 'IT', 50000),\n(3, 'Sita', 24, 'Chennai', 'Finance', 42000),\n(4, 'Kiran', 30, 'Bangalore', 'IT', 60000),\n(5, 'Anu', 27, 'Mumbai', 'Marketing', 45000),\n(6, 'Rajesh', 32, 'Delhi', 'Sales', 55000),\n(7, 'Sneha', 26, 'Pune', 'HR', 38000),\n(8, 'Arjun', 29, 'Hyderabad', 'IT', 62000),\n(9, 'Divya', 23, 'Chennai', 'Support', 30000),\n(10, 'Mahesh', 35, 'Bangalore', 'Finance', 70000);"
+        },
+        {
+          "type": "text",
+          "value": "Employees Table Data"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "id",
+            "name",
+            "age",
+            "city",
+            "department",
+            "salary"
+          ],
+          "rows": [
+            ["1", "Ram", "25", "Hyderabad", "HR", "35000"],
+            ["2", "Ravi", "28", "Vijayawada", "IT", "50000"],
+            ["3", "Sita", "24", "Chennai", "Finance", "42000"],
+            ["4", "Kiran", "30", "Bangalore", "IT", "60000"],
+            ["5", "Anu", "27", "Mumbai", "Marketing", "45000"],
+            ["6", "Rajesh", "32", "Delhi", "Sales", "55000"],
+            ["7", "Sneha", "26", "Pune", "HR", "38000"],
+            ["8", "Arjun", "29", "Hyderabad", "IT", "62000"],
+            ["9", "Divya", "23", "Chennai", "Support", "30000"],
+            ["10", "Mahesh", "35", "Bangalore", "Finance", "70000"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "1. Starts With (A%)\nExample: Names starting with 'R'\nSELECT * FROM employees WHERE name LIKE 'R%';"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n1\tRam\n2\tRavi\n6\tRajesh\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. Ends With (%a)\nExample: Names ending with 'a'\nSELECT * FROM employees WHERE name LIKE '%a';"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n3\tSita\n9\tDivya\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. Contains (%text%)\nExample: Names containing 'vi'\nSELECT * FROM employees WHERE name LIKE '%vi%';"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n2\tRavi\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. Exact Number of Characters (_)\nExample: Names having exactly 3 letters\nSELECT * FROM employees WHERE name LIKE '___';"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n1\tRam\n5\tAnu\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "5. Starts With and Fixed Length\nExample: 4-letter names starting with 'R'\nSELECT * FROM employees WHERE name LIKE 'R___';"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n2\tRavi\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "6. Second Character Matching\nExample: Names where second letter is 'a'\nSELECT * FROM employees WHERE name LIKE '_a%';"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n1\tRam\n2\tRavi\n4\tKiran\n6\tRajesh\n10\tMahesh\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "7. Third Character Matching\nExample: Names where third character is 'v'\nSELECT * FROM employees WHERE name LIKE '__v%';"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n9\tDivya\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "8. Starts and Ends With\nExample: Names starting with 'R' and ending with 'h'\nSELECT * FROM employees WHERE name LIKE 'R%h';"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n6\tRajesh\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "9. City Starts With H\nSELECT * FROM employees WHERE city LIKE 'H%';"
+        },
+        {
+          "type": "output",
+          "value": "city\nHyderabad\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "10. Department Ends With e\nSELECT * FROM employees WHERE department LIKE '%e';"
+        },
+        {
+          "type": "output",
+          "value": "department\nFinance\nSales\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "11. Department Contains 'an'\nSELECT * FROM employees WHERE department LIKE '%an%';"
+        },
+        {
+          "type": "output",
+          "value": "department\nFinance\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "12. Salary Starts With 5\nSELECT * FROM employees WHERE salary LIKE '5%';"
+        },
+        {
+          "type": "output",
+          "value": "salary\n50000\n55000\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "13. NOT LIKE\nExample: Names NOT starting with 'R'\nSELECT * FROM employees WHERE name NOT LIKE 'R%';"
+        },
+        {
+          "type": "output",
+          "value": "id\tname\n3\tSita\n4\tKiran\n5\tAnu\n7\tSneha\n8\tArjun\n9\tDivya\n10\tMahesh\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "14. Multiple _ Wildcards\nExample: Names with exactly 5 letters\nSELECT * FROM employees WHERE name LIKE '_____';"
+        },
+        {
+          "type": "output",
+          "value": "name\nKiran\nSneha\nDivya\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "15. Combination of % and _\nExample: Names starting with 'R' and having at least 4 characters\nSELECT * FROM employees WHERE name LIKE 'R___%';"
+        },
+        {
+          "type": "output",
+          "value": "name\nRavi\nRajesh\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "16. City Contains 'a'\nSELECT * FROM employees WHERE city LIKE '%a%';"
+        },
+        {
+          "type": "output",
+          "value": "city\nHyderabad\nVijayawada\nChennai\nBangalore\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "17. Names Ending With 'n'\nSELECT * FROM employees WHERE name LIKE '%n';"
+        },
+        {
+          "type": "output",
+          "value": "name\nKiran\nArjun\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "18. Names Starting With Any Single Character + 'i'\nSELECT * FROM employees WHERE name LIKE '_i%';"
+        },
+        {
+          "type": "output",
+          "value": "name\nSita\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "19. Cities Having Exactly 5 Letters\nSELECT * FROM employees WHERE city LIKE '_____';"
+        },
+        {
+          "type": "output",
+          "value": "city\nDelhi\nPune\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "20. Departments Starting With 'M'\nSELECT * FROM employees WHERE department LIKE 'M%';"
+        },
+        {
+          "type": "output",
+          "value": "department\nMarketing"
+        }
+      ],
+      "questions": [
+        {
+          "question": "1. What is LIKE used for?",
+          "answer": "Used for pattern matching in SQL."
+        },
+        {
+          "question": "2. Difference between % and _",
+          "answer": "% represents zero or many characters, while _ represents exactly one character."
+        },
+        {
+          "question": "3. Difference between LIKE and =",
+          "answer": "LIKE is used for pattern matching (supporting wildcards), whereas = is used for exact matching."
+        },
+        {
+          "question": "4. Can LIKE be used with numbers?",
+          "answer": "Yes. For example, 'WHERE salary LIKE 6%' finds salaries starting with 6."
+        },
+        {
+          "question": "5. What is NOT LIKE?",
+          "answer": "It is used to exclude records that match a specific pattern."
+        }
+      ]
+    },
+    {
+      "id": "mysql-in-operator",
+      "title": "SQL IN Operator & NOT IN",
+      "category": "Queries",
+      "definition": "The IN operator in MySQL is used to filter records by checking if a value matches any value in a list or subquery. It serves as a cleaner, more readable alternative to multiple OR conditions.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Basic Syntax\n\nSELECT column_name\nFROM table_name\nWHERE column_name IN (value1, value2, value3, ...);\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "1. Basic Example\nSuppose you want to find employees who belong to specific departments."
+        },
+        {
+          "type": "code",
+          "value": "SELECT * \nFROM employees\nWHERE department IN ('HR', 'Finance', 'IT');"
+        },
+        {
+          "type": "text",
+          "value": "✅ This returns employees who belong to either HR, Finance, or IT.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. Using IN with Numbers\nIN works equally well with numeric data types."
+        },
+        {
+          "type": "code",
+          "value": "SELECT * \nFROM orders\nWHERE order_id IN (101, 102, 103);"
+        },
+        {
+          "type": "text",
+          "value": "------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. Using IN with Subquery\nYou can use a subquery to provide the list of values dynamically."
+        },
+        {
+          "type": "code",
+          "value": "SELECT * \nFROM employees\nWHERE department_id IN (\n    SELECT id FROM departments WHERE location = 'New York'\n);"
+        },
+        {
+          "type": "text",
+          "value": "✅ This gets all employees working in departments that are located in New York.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. NOT IN Operator\nWorks as the opposite of IN, returning records that do NOT match any value in the list."
+        },
+        {
+          "type": "code",
+          "value": "SELECT * \nFROM employees\nWHERE department NOT IN ('HR', 'IT');"
+        },
+        {
+          "type": "text",
+          "value": "------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "⚠️ Important Notes\n\n1. Better than OR:\nIN is a cleaner alternative to multiple OR conditions.\n\n-- Instead of:\nWHERE department = 'HR' OR department = 'Finance'\n-- Use:\nWHERE department IN ('HR', 'Finance')\n\n2. NULL Values:\nBe extremely careful with NULL values when using NOT IN. If the list contains a NULL value, the NOT IN operator will return no rows because NULL is considered unknown."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the primary advantage of using the IN operator?",
+          "answer": "It provides a cleaner and more readable syntax when checking a column against multiple possible values, replacing long strings of OR conditions."
+        },
+        {
+          "question": "How does the IN operator work with subqueries?",
+          "answer": "The inner query (subquery) executes first to generate a list of values, and then the outer query uses that list to filter its own results."
+        },
+        {
+          "question": "What is the major pitfall of using NOT IN with NULL values?",
+          "answer": "If a subquery or a list used with NOT IN returns even a single NULL value, the entire query will return an empty result set because comparing anything to NULL results in 'Unknown'."
+        }
+      ]
+    },
+    {
+      "id": "mysql-in-vs-or",
+      "title": "Difference Between IN and OR",
+      "category": "Queries",
+      "definition": "Both IN and OR are used to filter rows based on multiple conditions. While they can often achieve the same results for a single column, they have distinct use cases based on readability, performance, and column involvement.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "1. OR Operator\nThe OR operator is used to combine multiple conditions. A record is included if at least one of the conditions is true."
+        },
+        {
+          "type": "code",
+          "value": "SELECT *\nFROM employees\nWHERE department = 'HR'\n   OR department = 'IT'\n   OR department = 'Finance';"
+        },
+        {
+          "type": "text",
+          "value": "------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. IN Operator\nThe IN operator is used to check if a value exists in a specified list. It is a more compact way to handle multiple values for the same column."
+        },
+        {
+          "type": "code",
+          "value": "SELECT *\nFROM employees\nWHERE department IN ('HR', 'IT', 'Finance');"
+        },
+        {
+          "type": "text",
+          "value": "✅ This produces the exact same result as the OR query above.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "🔥 Main Differences"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "OR Operator",
+            "IN Operator"
+          ],
+          "rows": [
+            [
+              "Used for",
+              "Multiple conditions",
+              "Multiple values of same column"
+            ],
+            [
+              "Readability",
+              "Less readable for many values",
+              "Cleaner and shorter"
+            ],
+            [
+              "Performance",
+              "Slightly slower for many conditions",
+              "Usually better/optimized"
+            ],
+            [
+              "Supports Different Columns",
+              "✅ Yes",
+              "❌ No"
+            ],
+            [
+              "Best for",
+              "Different conditions",
+              "Same column multiple values"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Example Comparison\n\nUsing OR:\nSELECT * FROM students WHERE course = 'Python' OR course = 'Java' OR course = 'MySQL';\n\nUsing IN:\nSELECT * FROM students WHERE course IN ('Python', 'Java', 'MySQL');\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "When to Use OR\nUse OR when your conditions involve different columns."
+        },
+        {
+          "type": "code",
+          "value": "SELECT *\nFROM employees\nWHERE department = 'HR'\n   OR salary > 50000;"
+        },
+        {
+          "type": "text",
+          "value": "⚠️ Note: IN cannot be used here because the conditions target different columns (department and salary).\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "When to Use IN\nUse IN when you are checking multiple specific values for a single column."
+        },
+        {
+          "type": "code",
+          "value": "SELECT *\nFROM employees\nWHERE city IN ('Delhi', 'Mumbai', 'Chennai');"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Is IN better than OR?",
+          "answer": "For multiple values in the same column, IN is better because it is cleaner and easier to read. For conditions involving different columns, you must use OR."
+        },
+        {
+          "question": "What is the simple rule for choosing between IN and OR?",
+          "answer": "Same column multiple values → Use IN. Different conditions/columns → Use OR."
+        }
+      ]
+    },
+    {
+      "id": "mysql-in-subquery",
+      "title": "SQL IN with Subquery",
+      "category": "Queries",
+      "definition": "The IN operator with a subquery is used to compare a column value against a list of results dynamically generated by another SQL query. This is a powerful technique for joining logic across multiple tables without using explicit JOIN syntax.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Syntax\n\nSELECT column_name\nFROM table_name\nWHERE column_name IN (\n    SELECT column_name\n    FROM another_table\n);\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Example 1: Basic IN with Subquery\nSuppose we want to find the names of customers who have placed at least one order."
+        },
+        {
+          "type": "text",
+          "value": "Step 1: Subquery Executes First\nThe inner query runs to get all customer IDs from the orders table.\n\nSELECT customer_id FROM orders;\n-- Returns: 1, 3\n\nStep 2: Main Query Executes\nThe main query then checks which customers have these IDs.\n\nSELECT customer_name FROM customers WHERE customer_id IN (1, 3);"
+        },
+        {
+          "type": "output",
+          "value": "customer_name\nRam\nJohn\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Example 2: Employees Working in IT Department\nFind employee names where their department is 'IT'."
+        },
+        {
+          "type": "code",
+          "value": "SELECT emp_name\nFROM employees\nWHERE dept_id IN (\n    SELECT dept_id\n    FROM departments\n    WHERE dept_name = 'IT'\n);"
+        },
+        {
+          "type": "output",
+          "value": "emp_name\nRavi\nKiran\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Important Rules for IN Subqueries\n\n1. Execution Order: The inner query (subquery) always runs first and provides the values for the outer query.\n2. Single Column Rule: The subquery MUST return only one column to be compared with the outer query.\n\n✅ Correct: SELECT id FROM table\n❌ Wrong: SELECT id, name FROM table"
+        },
+        {
+          "type": "text",
+          "value": "IN vs EXISTS"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "IN Operator",
+            "EXISTS Operator"
+          ],
+          "rows": [
+            [
+              "Core Logic",
+              "Compares actual values",
+              "Checks for existence of rows"
+            ],
+            [
+              "Performance",
+              "Better for small result sets",
+              "Better for large datasets"
+            ],
+            [
+              "Return Type",
+              "Returns a list of values",
+              "Returns TRUE or FALSE"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "NOT IN with Subquery\nUsed to find records that are missing from another table.\n\nExample: Find customers who have NEVER placed an order.\n\nSELECT customer_name\nFROM customers\nWHERE customer_id NOT IN (\n    SELECT customer_id\n    FROM orders\n);"
+        },
+        {
+          "type": "output",
+          "value": "customer_name\nSita\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Practice Scenarios\n\n1. Find students who attended exams:\nSELECT student_name FROM students WHERE student_id IN (SELECT student_id FROM exams);\n\n2. Find employees not assigned to projects:\nSELECT emp_name FROM employees WHERE emp_id NOT IN (SELECT emp_id FROM projects);"
+        }
+      ],
+      "questions": [
+        {
+          "question": "Q1. What is a subquery?",
+          "answer": "A query nested inside another query, usually within the WHERE, FROM, or SELECT clause."
+        },
+        {
+          "question": "Q2. Can a subquery return multiple columns when used with IN?",
+          "answer": "No. A subquery used with IN must return exactly one column for comparison."
+        },
+        {
+          "question": "Q3. Which executes first: the main query or the subquery?",
+          "answer": "The subquery executes first to generate the set of values needed for the main query's filtering."
+        },
+        {
+          "question": "Q4. How does NOT IN behave with subqueries?",
+          "answer": "It filters for rows in the outer table where the value is not present in the list returned by the inner query. Note: If the inner query returns any NULLs, NOT IN will return zero results."
+        }
+      ]
+    },
+    {
+      "id": "mysql-views",
+      "title": "SQL Views: Virtual Tables",
+      "category": "Queries",
+      "definition": "A View is a virtual table based on the result-set of an SQL query. It contains rows and columns just like a real table, but it does not store data permanently; instead, it provides a safe and simplified window into the underlying base tables.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "What is a View?\n\nA View is a dynamic, virtual table created from a SELECT query. It allows you to save a complex query and treat its result as if it were a physical table.\n\nCommon Use Cases:\n• Security: Restricting access to specific rows or columns.\n• Simplification: Reducing the complexity of nested joins or subqueries.\n• Query Reuse: Saving frequently used logic for easy access.\n• Data Abstraction: Hiding sensitive information like salaries or passwords.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Setup Example Table"
+        },
+        {
+          "type": "code",
+          "value": "CREATE TABLE Employees (\n    emp_id INT PRIMARY KEY,\n    emp_name VARCHAR(50),\n    department VARCHAR(50),\n    salary INT\n);\n\nINSERT INTO Employees VALUES\n(1, 'Ram', 'HR', 30000),\n(2, 'Ravi', 'IT', 50000),\n(3, 'Divya', 'IT', 60000),\n(4, 'Kiran', 'Sales', 45000),\n(5, 'Mahesh', 'HR', 35000);"
+        },
+        {
+          "type": "text",
+          "value": "1. Creating a View\n\nSyntax:\nCREATE VIEW view_name AS\nSELECT columns\nFROM table\nWHERE condition;\n\nExample: Create a view specifically for IT department employees."
+        },
+        {
+          "type": "code",
+          "value": "CREATE VIEW IT_Employees AS\nSELECT emp_id, emp_name, salary\nFROM Employees\nWHERE department = 'IT';"
+        },
+        {
+          "type": "text",
+          "value": "To view the results:\nSELECT * FROM IT_Employees;"
+        },
+        {
+          "type": "output",
+          "value": "emp_id  emp_name  salary\n2       Ravi      50000\n3       Divya     60000\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "2. Updating a View Structure\n\nYou can modify an existing view's definition using the CREATE OR REPLACE VIEW command."
+        },
+        {
+          "type": "code",
+          "value": "CREATE OR REPLACE VIEW IT_Employees AS\nSELECT emp_id, emp_name, department, salary\nFROM Employees\nWHERE department = 'IT';"
+        },
+        {
+          "type": "text",
+          "value": "------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "3. Updating Data Through a View\n\nOne of the powerful features of Views is that they can often be used to update the data in the original base table."
+        },
+        {
+          "type": "code",
+          "value": "UPDATE IT_Employees\nSET salary = 70000\nWHERE emp_id = 2;"
+        },
+        {
+          "type": "text",
+          "value": "Check the original Employees table:\nSELECT * FROM Employees WHERE emp_id = 2;"
+        },
+        {
+          "type": "output",
+          "value": "emp_id  emp_name  department  salary\n2       Ravi      IT          70000\n\n✅ Notice: The salary in the original table was also updated from 50000 to 70000.\n\n------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "4. Dropping a View\n\nIf you no longer need a view, you can delete it without affecting the data in the base tables."
+        },
+        {
+          "type": "code",
+          "value": "DROP VIEW IT_Employees;"
+        },
+        {
+          "type": "text",
+          "value": "------------------------------------------------"
+        },
+        {
+          "type": "text",
+          "value": "Summary & Types of Views"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Feature",
+            "Description"
+          ],
+          "rows": [
+            ["Stores Data?", "❌ No (Virtual)"],
+            ["Acts Like a Table?", "✅ Yes"],
+            ["Improves Security?", "✅ Yes (Restricts access)"],
+            ["Updates Original Table?", "✅ Yes (In simple cases)"]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Types of Views:\n• Simple View: Created from a single table (most are updatable).\n• Complex View: Created from multiple tables using joins (not usually updatable)."
+        },
+        {
+          "type": "text",
+          "value": "Real-Time Security Example:\nA company's Employees table might contain sensitive data like PAN numbers and Passwords. For HR personnel, you can create a view that only exposes non-sensitive columns."
+        },
+        {
+          "type": "code",
+          "value": "CREATE VIEW HR_Staff_View AS\nSELECT emp_name, department\nFROM Employees;"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the main difference between a Table and a View?",
+          "answer": "A table is a physical storage structure that holds data on disk, while a view is a virtual table that merely saves a SQL query and does not store data independently."
+        },
+        {
+          "question": "Is a view faster than a table?",
+          "answer": "Generally, views are slightly slower because the database must execute the underlying query every time the view is accessed, whereas a table is accessed directly."
+        },
+        {
+          "question": "When can you NOT update data through a view?",
+          "answer": "Updates are usually blocked if the view contains: Joins, DISTINCT, GROUP BY, HAVING, or Aggregate functions (SUM, AVG, etc.)."
+        },
+        {
+          "question": "How do you see a list of all views in a database?",
+          "answer": "You can use the command: SHOW FULL TABLES WHERE Table_type = 'VIEW';"
+        }
+      ]
+    },
+    {
       "id": "sql-joins",
       "title": "SQL JOINS",
       "category": "Queries",
