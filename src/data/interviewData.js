@@ -24935,44 +24935,69 @@ export const interviewData = {
   ],
   "dsa": [
     {
-      "id": "linked-list-basics",
-      "title": "Linked List Basics",
+      "id": "basics-of-arrays",
+      "title": "Basics of Arrays",
       "category": "Data Structures",
-      "definition": "A linked list is a linear data structure where elements are not stored at contiguous memory locations.",
+      "definition": "An array is a linear data structure that stores multiple elements of the same type in contiguous memory locations.",
       "sections": [
         {
           "type": "text",
-          "value": "Each element (node) contains data and a pointer to the next node."
+          "value": "Important Points:\n. Index starts from 0\n. Fixed order\n. Fast access using index\n. Can store duplicates"
         },
         {
           "type": "text",
-          "value": "Syntax:\nclass Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None"
+          "value": "Array Representation Example:\n\nIndex:   0    1    2    3    4\nValue: [10,  20,  30,  40,  50]"
         },
         {
           "type": "code",
-          "value": "node1 = Node(10)\nnode2 = Node(20)\nnode1.next = node2"
+          "value": "# Initializing an array/list in Python\narr = [10, 20, 30, 40, 50]\n\n# Accessing element by index\nprint(\"Element at index 2:\", arr[2])"
         },
         {
           "type": "output",
-          "value": "node1.next.data -> 20"
+          "value": "Element at index 2: 30"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operation",
+            "Time Complexity"
+          ],
+          "rows": [
+            [
+              "Access",
+              "O(1)"
+            ],
+            [
+              "Search",
+              "O(n)"
+            ],
+            [
+              "Insert at end",
+              "O(1)"
+            ],
+            [
+              "Insert/Delete at middle",
+              "O(n)"
+            ]
+          ]
         },
         {
           "type": "text",
-          "value": "Quick Revision:\n• Structure: Node-based\n• Memory: Non-contiguous\n• Size: Dynamic"
+          "value": "Quick Revision:\n• Structure: Contiguous memory allocation.\n• Access: Fast O(1) access using 0-based indices.\n• Operations: Insertion/deletion at middle is slow O(n) due to shifting.\n• Type: Usually stores homogeneous (same type) elements in traditional arrays."
         }
       ],
       "questions": [
         {
-          "question": "What is a linked list?",
-          "answer": "A linear data structure where elements are not stored at contiguous memory locations."
+          "question": "Why is array access O(1) in time complexity?",
+          "answer": "Because elements are stored in contiguous memory locations, the address of any element at index 'i' can be calculated directly using: Address = Base_Address + i * Element_Size."
         },
         {
-          "question": "What does a node contain?",
-          "answer": "A node contains data and a reference (pointer) to the next node in the sequence."
+          "question": "What is the primary disadvantage of using a static array?",
+          "answer": "Static arrays have a fixed size. Once declared, their capacity cannot be changed, which can lead to memory wastage if underutilized or overflow if the number of elements exceeds the capacity."
         },
         {
-          "question": "Difference between Array and Linked List?",
-          "answer": "Arrays have fixed sizes and contiguous memory; Linked Lists have dynamic sizes and use pointers to connect non-contiguous memory."
+          "question": "Why is inserting or deleting an element at the middle of an array O(n)?",
+          "answer": "To maintain contiguous storage, inserting or deleting an element at the middle requires shifting all subsequent elements to the right (for insertion) or to the left (for deletion), which takes linear time."
         }
       ]
     }
