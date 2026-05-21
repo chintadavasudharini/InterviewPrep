@@ -25700,7 +25700,7 @@ export const interviewData = {
       "sections": [
         {
           "type": "text",
-          "value": "Logic to Check Neon Number:\n1. Calculate the square of the given number (n * n).\n2. Initialize a 'sum' variable to 0.\n3. Extract each digit from the square using modulo (% 10) and add it to 'sum'.\n4. Remove the last digit from the square using integer division (// 10).\n5. Repeat until the square is 0.\n6. If the 'sum' equals the original number 'n', it is a Neon Number; otherwise, it is not."
+          "value": "Logic to Check Neon Number:\n. Calculate the square of the given number (n * n).\n. Initialize a 'sum' variable to 0.\n. Extract each digit from the square using modulo (% 10) and add it to 'sum'.\n. Remove the last digit from the square using integer division (// 10).\n. Repeat until the square is 0.\n. If the 'sum' equals the original number 'n', it is a Neon Number; otherwise, it is not."
         },
         {
           "type": "code",
@@ -25709,6 +25709,10 @@ export const interviewData = {
         {
           "type": "output",
           "value": "Neon Number"
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision:\n• Definition: Sum of digits of square equals the original number.\n• Process: Square the number, extract digits, sum them up, and compare.\n• Example: 9^2 = 81 -> 8 + 1 = 9 (Neon).\n• Rarity: Extremely rare because squares grow much faster than digit sums."
         }
       ],
       "questions": [
