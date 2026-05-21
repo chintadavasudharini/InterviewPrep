@@ -25691,6 +25691,36 @@ export const interviewData = {
           "answer": "In Python, the range(start, stop) function is inclusive of the start but exclusive of the stop value. Thus, to include 10, we must specify 11 as the stop value."
         }
       ]
+    },
+    {
+      "id": "neon-number",
+      "title": "Neon Number",
+      "category": "Basic Algorithms",
+      "definition": "A neon number is a number where the sum of digits of its square is equal to the original number (e.g., 9^2 = 81, and 8 + 1 = 9).",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Check Neon Number:\n1. Calculate the square of the given number (n * n).\n2. Initialize a 'sum' variable to 0.\n3. Extract each digit from the square using modulo (% 10) and add it to 'sum'.\n4. Remove the last digit from the square using integer division (// 10).\n5. Repeat until the square is 0.\n6. If the 'sum' equals the original number 'n', it is a Neon Number; otherwise, it is not."
+        },
+        {
+          "type": "code",
+          "value": "n = 9\n\nsquare = n * n\nsum = 0\n\nwhile square > 0:\n    digit = square % 10\n    sum += digit\n    square = square // 10\n\nif sum == n:\n    print(\"Neon Number\")\nelse:\n    print(\"Not Neon Number\")"
+        },
+        {
+          "type": "output",
+          "value": "Neon Number"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What are the single-digit neon numbers other than 0 and 1?",
+          "answer": "9 is the only other single-digit Neon Number in base 10 (since 9^2 = 81 and 8 + 1 = 9)."
+        },
+        {
+          "question": "Why are neon numbers extremely rare?",
+          "answer": "As numbers grow larger, their squares grow much faster than the sum of their digits. For example, for a 3-digit number n, its square is a 5 or 6 digit number, and the maximum possible sum of digits for a 6-digit number is 54, which is far less than n."
+        }
+      ]
     }
   ],
   "ml": [
