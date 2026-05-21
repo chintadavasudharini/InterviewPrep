@@ -24957,6 +24957,42 @@ export const interviewData = {
           "value": "Element at index 2: 30"
         },
         {
+          "type": "text",
+          "value": "Array Traversal:\n. Traversal is the process of visiting every element in the array exactly once.\n. Used for operations like printing, summing, or modifying all elements."
+        },
+        {
+          "type": "code",
+          "value": "arr = [10, 20, 30, 40]\nfor i in arr:\n    print(i)"
+        },
+        {
+          "type": "output",
+          "value": "10\n20\n30\n40"
+        },
+        {
+          "type": "text",
+          "value": "Array Insertion & Deletion:\n. Insertion (Append): Adding an element to the end of the array ($O(1)$ amortized complexity).\n. Deletion: Removing a specific value from the array. This requires finding the element and shifting subsequent elements to maintain contiguous ordering ($O(n)$ complexity)."
+        },
+        {
+          "type": "code",
+          "value": "# Insertion Example (Append)\narr = [10, 20, 30]\narr.append(40)\nprint(\"After Insertion:\", arr)\n\n# Deletion Example (Remove)\narr = [10, 20, 30, 40]\narr.remove(30)\nprint(\"After Deletion:\", arr)"
+        },
+        {
+          "type": "output",
+          "value": "After Insertion: [10, 20, 30, 40]\nAfter Deletion: [10, 20, 40]"
+        },
+        {
+          "type": "text",
+          "value": "Array Searching (Linear Search):\n. Linear search checks every element in the array one by one from beginning to end until the target is found.\n. Time Complexity is $O(n)$ in the worst and average cases because we may need to scan the entire array."
+        },
+        {
+          "type": "code",
+          "value": "arr = [10, 20, 30, 40]\ntarget = 30\n\nfor i in range(len(arr)):\n    if arr[i] == target:\n        print(\"Found at index\", i)"
+        },
+        {
+          "type": "output",
+          "value": "Found at index 2"
+        },
+        {
           "type": "table",
           "headers": [
             "Operation",
@@ -24968,7 +25004,7 @@ export const interviewData = {
               "O(1)"
             ],
             [
-              "Search",
+              "Search / Linear Search",
               "O(n)"
             ],
             [
@@ -24983,7 +25019,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "Quick Revision:\n• Structure: Contiguous memory allocation.\n• Access: Fast O(1) access using 0-based indices.\n• Operations: Insertion/deletion at middle is slow O(n) due to shifting.\n• Type: Usually stores homogeneous (same type) elements in traditional arrays."
+          "value": "Quick Revision:\n• Structure: Contiguous memory allocation.\n• Operations: Traversal visits every element ($O(n)$), Linear search scans element-by-element ($O(n)$).\n• Insertion: Fast $O(1)$ at end, slow $O(n)$ at middle due to shifts.\n• Deletion: Slow $O(n)$ at middle/start due to elements shifting left."
         }
       ],
       "questions": [
