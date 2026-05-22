@@ -25153,909 +25153,1803 @@ export const interviewData = {
     }
   ],
   "coding": [
-    {
-      "id": "reverse-number",
-      "title": "Reverse a Number",
-      "category": "Basic Algorithms",
-      "definition": "Reversing a number involves rearranging its digits in reverse order using mathematical operations like modulo and integer division.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Reverse a Number:\n1. Get the last digit using n % 10.\n2. Add the digit to the reversed number (rev = rev * 10 + digit).\n3. Remove the last digit using integer division (n // 10)."
-        },
-        {
-          "type": "code",
-          "value": "n = 1234\nrev = 0\n\nwhile n > 0:\n    digit = n % 10\n    rev = rev * 10 + digit\n    n = n // 10\n\nprint(rev)"
-        },
-        {
-          "type": "output",
-          "value": "4321"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What mathematical operations are used to reverse a number?",
-          "answer": "Modulo (%) is used to extract the last digit, and Integer Division (//) is used to remove the last digit from the original number."
-        },
-        {
-          "question": "How does the formula 'rev = rev * 10 + digit' work?",
-          "answer": "It shifts the existing reversed number one position to the left (by multiplying by 10) and then adds the newly extracted last digit to the ones place."
-        }
-      ]
-    },
-    {
-      "id": "palindrome-number",
-      "title": "Palindrome Number",
-      "category": "Basic Algorithms",
-      "definition": "A palindrome number is a number that remains the same when its digits are reversed (e.g., 121, 1331).",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Check Palindrome:\n1. Store the original number in a temporary variable (temp).\n2. Reverse the given number using modulo and integer division.\n3. Compare the temporary variable (temp) with the reversed number (rev).\n4. If temp == rev, it is a Palindrome; otherwise, it is not."
-        },
-        {
-          "type": "code",
-          "value": "n = 121\ntemp = n\nrev = 0\n\nwhile n > 0:\n    digit = n % 10\n    rev = rev * 10 + digit\n    n = n // 10\n\nif temp == rev:\n    print(\"Palindrome\")\nelse:\n    print(\"Not Palindrome\")"
-        },
-        {
-          "type": "output",
-          "value": "Palindrome"
-        }
-      ],
-      "questions": [
-        {
-          "question": "Why do we need a 'temp' variable when checking for a palindrome?",
-          "answer": "The original number 'n' becomes 0 during the while loop process. We need 'temp' to store the original value so we can compare it with the reversed number at the end."
-        },
-        {
-          "question": "What is the time complexity of this algorithm?",
-          "answer": "O(log10(n)), where n is the input number, because the number of iterations depends on the number of digits in n."
-        }
-      ]
-    },
-    {
-      "id": "armstrong-number",
-      "title": "Armstrong Number",
-      "category": "Basic Algorithms",
-      "definition": "An Armstrong number is a number that is equal to the sum of its own digits each raised to the power of the number of digits (e.g., 153 = 1³ + 5³ + 3³).",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Check Armstrong Number:\n1. Store the original number in a temporary variable (temp).\n2. Calculate the number of digits in the number (this will be the power).\n3. Extract each digit using modulo (%).\n4. Raise the digit to the calculated power and add it to a 'sum' variable.\n5. Compare the original number with the final sum."
-        },
-        {
-          "type": "code",
-          "value": "n = 153\ntemp = n\npower = len(str(n))\nsum = 0\n\nwhile n > 0:\n    digit = n % 10\n    sum = sum + digit ** power\n    n = n // 10\n\nif temp == sum:\n    print(\"Armstrong Number\")\nelse:\n    print(\"Not Armstrong Number\")"
-        },
-        {
-          "type": "output",
-          "value": "Armstrong Number"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is an Armstrong Number?",
-          "answer": "It is a number where the sum of its digits, each raised to the power of the total number of digits, equals the original number."
-        },
-        {
-          "question": "How do you determine the power in the Armstrong number logic?",
-          "answer": "In Python, you can find the power by converting the number to a string and using the len() function: power = len(str(n))."
-        }
-      ]
-    },
-    {
-      "id": "factorial-number",
-      "title": "Factorial of a Number",
-      "category": "Basic Algorithms",
-      "definition": "The factorial of a non-negative integer n is the product of all positive integers less than or equal to n (e.g., 5! = 5 × 4 × 3 × 2 × 1 = 120).",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Calculate Factorial:\n1. Initialize a variable 'fact' to 1.\n2. Iterate through all numbers from 1 up to 'n'.\n3. In each iteration, multiply 'fact' by the current number.\n4. You can use a 'for' loop with range or a 'while' loop for this process."
-        },
-        {
-          "type": "code",
-          "value": "# Using For Loop\nn = 5\nfact = 1\nfor i in range(1, n + 1):\n    fact = fact * i\nprint(fact)\n\n# Using While Loop (Without Range)\nn = 5\nfact = 1\ni = 1\nwhile i <= n:\n    fact = fact * i\n    i = i + 1\nprint(fact)"
-        },
-        {
-          "type": "output",
-          "value": "120"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is the factorial of 0 and 1?",
-          "answer": "The factorial of both 0 and 1 is 1."
-        },
-        {
-          "question": "Can factorial be calculated for negative numbers?",
-          "answer": "No, factorial is defined only for non-negative integers. For negative numbers, it is undefined."
-        }
-      ]
-    },
-    {
-      "id": "fibonacci-series",
-      "title": "Fibonacci Series",
-      "category": "Basic Algorithms",
-      "definition": "The Fibonacci series is a sequence where each number is the sum of the two preceding ones, starting from 0 and 1 (e.g., 0, 1, 1, 2, 3, 5, 8, ...).",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Generate Fibonacci Series:\n1. Initialize the first two numbers, a = 0 and b = 1.\n2. In each iteration, print the current value of 'a'.\n3. Calculate the next number by adding 'a' and 'b' (c = a + b).\n4. Update 'a' to 'b' and 'b' to the new value 'c'.\n5. Continue until you reach the desired number of terms (n)."
-        },
-        {
-          "type": "code",
-          "value": "# Using While Loop\nn = 10\na = 0\nb = 1\ncount = 1\nwhile count <= n:\n    print(a, end=\" \")\n    c = a + b\n    a = b\n    b = c\n    count = count + 1\n\n# Using For Loop\nn = 10\na = 0\nb = 1\nfor i in range(n):\n    print(a, end=\" \")\n    c = a + b\n    a = b\n    b = c"
-        },
-        {
-          "type": "output",
-          "value": "0 1 1 2 3 5 8 13 21 34"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is the Fibonacci series?",
-          "answer": "It is a sequence of numbers where each number (after the first two) is the sum of the two preceding numbers."
-        },
-        {
-          "question": "What is the time complexity of generating n Fibonacci numbers using a loop?",
-          "answer": "The time complexity is O(n) because we perform a single loop that runs n times."
-        }
-      ]
-    },
-    {
-      "id": "prime-number",
-      "title": "Prime Number",
-      "category": "Basic Algorithms",
-      "definition": "A prime number is a natural number greater than 1 that is only divisible by 1 and itself (e.g., 2, 3, 5, 7, 11, ...).",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Check Prime Number:\n1. Initialize a 'count' variable to 0.\n2. Iterate through all numbers from 1 up to the given number 'n'.\n3. Check if 'n' is divisible by the current iterator 'i' (n % i == 0).\n4. If divisible, increment the 'count' variable.\n5. After the loop, if 'count' is exactly 2, the number is Prime; otherwise, it is not."
-        },
-        {
-          "type": "code",
-          "value": "# Using While Loop\nn = 7\ncount = 0\ni = 1\nwhile i <= n:\n    if n % i == 0:\n        count += 1\n    i = i + 1\nif count == 2:\n    print(\"Prime\")\nelse:\n    print(\"Not Prime\")\n\n# Using For Loop\nn = 7\ncount = 0\nfor i in range(1, n + 1):\n    if n % i == 0:\n        count += 1\nif count == 2:\n    print(\"Prime\")\nelse:\n    print(\"Not Prime\")"
-        },
-        {
-          "type": "output",
-          "value": "Prime"
-        }
-      ],
-      "questions": [
-        {
-          "question": "Is 1 a prime number?",
-          "answer": "No, 1 is not a prime number because a prime number must have exactly two distinct positive divisors: 1 and itself."
-        },
-        {
-          "question": "What is the only even prime number?",
-          "answer": "2 is the only even prime number. All other even numbers are divisible by 2, giving them more than two divisors."
-        }
-      ]
-    },
-    {
-      "id": "swap-two-numbers",
-      "title": "Swap Two Numbers",
-      "category": "Basic Algorithms",
-      "definition": "Swapping two numbers means interchanging their values so that each variable holds the other's original value.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Swap Two Numbers:\n\n1. Using Temporary Variable:\n• Store value of 'a' in 'temp'.\n• Assign value of 'b' to 'a'.\n• Assign value of 'temp' (original 'a') to 'b'.\n\n2. Using Arithmetic Operations (Without Temp):\n• a = a + b (a now holds sum)\n• b = a - b (b now holds original a)\n• a = a - b (a now holds original b)"
-        },
-        {
-          "type": "code",
-          "value": "# Method 1: Using Temporary Variable\na = 10\nb = 20\ntemp = a\na = b\nb = temp\nprint(\"After Swap (Temp):\", a, b)\n\n# Method 2: Without Temporary Variable\na = 10\nb = 20\na = a + b\nb = a - b\na = a - b\nprint(\"After Swap (Arithmetic):\", a, b)"
-        },
-        {
-          "type": "output",
-          "value": "20 10"
-        }
-      ],
-      "questions": [
-        {
-          "question": "How can you swap two numbers in a single line in Python?",
-          "answer": "In Python, you can use tuple unpacking: a, b = b, a. This is the most 'Pythonic' and efficient way."
-        },
-        {
-          "question": "What is the advantage of swapping without a temporary variable?",
-          "answer": "It saves space because no extra memory is allocated for a third variable, though the arithmetic method can sometimes lead to overflow in languages with fixed integer sizes (not usually an issue in Python)."
-        }
-      ]
-    },
-    {
-      "id": "count-digits",
-      "title": "Count Digits in a Number",
-      "category": "Basic Algorithms",
-      "definition": "Counting digits is the process of determining the total number of individual digits that form a numerical value.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Count Digits:\n\n1. Using While Loop:\n• Initialize a 'count' variable to 0.\n• While the number 'n' is greater than 0, increment 'count'.\n• Divide 'n' by 10 using integer division (//) to remove the last digit.\n\n2. Using String Conversion:\n• Convert the number to a string using str(n).\n• Use the len() function to find the length of the string."
-        },
-        {
-          "type": "code",
-          "value": "# Method 1: Using While Loop\nn = 12345\ncount = 0\nwhile n > 0:\n    count += 1\n    n = n // 10\nprint(\"Count (Loop):\", count)\n\n# Method 2: Using String Conversion\nn = 12345\ncount = len(str(n))\nprint(\"Count (String):\", count)"
-        },
-        {
-          "type": "output",
-          "value": "5"
-        }
-      ],
-      "questions": [
-        {
-          "question": "Which method is faster for counting digits in Python?",
-          "answer": "Method 2 (string conversion) is usually faster and more concise in Python, though Method 1 (loop) is more universal across different programming languages."
-        },
-        {
-          "question": "How would you handle negative numbers when counting digits?",
-          "answer": "For negative numbers, you should first take the absolute value using abs(n) before counting, otherwise the loop condition (n > 0) or the negative sign in the string will lead to incorrect results."
-        }
-      ]
-    },
-    {
-      "id": "sum-of-digits",
-      "title": "Sum of Digits",
-      "category": "Basic Algorithms",
-      "definition": "Sum of digits is the calculation of the total value obtained by adding every individual digit in a number (e.g., 123 -> 1+2+3 = 6).",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Calculate Sum of Digits:\n\n1. Using While Loop:\n• Extract the last digit using modulo (n % 10).\n• Add this digit to a running 'sum' variable.\n• Remove the last digit using integer division (n // 10).\n\n2. Using String Conversion:\n• Convert the number to a string using str(n).\n• Loop through each character (digit) in the string.\n• Convert each character back to an integer using int() and add it to 'sum'."
-        },
-        {
-          "type": "code",
-          "value": "# Method 1: Using While Loop\nn = 123\nsum = 0\nwhile n > 0:\n    digit = n % 10\n    sum = sum + digit\n    n = n // 10\nprint(\"Sum (Loop):\", sum)\n\n# Method 2: Using String Conversion\nn = 123\nsum = 0\nfor digit in str(n):\n    sum = sum + int(digit)\nprint(\"Sum (String):\", sum)"
-        },
-        {
-          "type": "output",
-          "value": "6"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is the result of n % 10 for any positive integer?",
-          "answer": "It returns the remainder after dividing by 10, which is always the last digit of the number."
-        },
-        {
-          "question": "Which method is safer for very large numbers in Python?",
-          "answer": "Both methods work well in Python because it automatically handles arbitrarily large integers, but the string method can be slightly more intuitive for beginners."
-        }
-      ]
-    },
-    {
-      "id": "product-of-digits",
-      "title": "Product of Digits",
-      "category": "Basic Algorithms",
-      "definition": "Product of digits is the calculation of the total value obtained by multiplying every individual digit in a number (e.g., 123 -> 1*2*3 = 6).",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Calculate Product of Digits:\n\n1. Using While Loop:\n• Extract the last digit using modulo (n % 10).\n• Multiply this digit with a running 'mul' variable (initialized to 1).\n• Remove the last digit using integer division (n // 10).\n\n2. Using String Conversion:\n• Convert the number to a string using str(n).\n• Loop through each character (digit) in the string.\n• Convert each character back to an integer and multiply it with 'mul'."
-        },
-        {
-          "type": "code",
-          "value": "# Method 1: Using While Loop\nn = 123\nmul = 1\nwhile n > 0:\n    digit = n % 10\n    mul = mul * digit\n    n = n // 10\nprint(\"Product (Loop):\", mul)\n\n# Method 2: Using String Conversion\nn = 123\nmul = 1\nfor digit in str(n):\n    mul = mul * int(digit)\nprint(\"Product (String):\", mul)"
-        },
-        {
-          "type": "output",
-          "value": "6"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What happens if the number contains the digit 0?",
-          "answer": "The entire product will become 0 because any number multiplied by zero is zero."
-        },
-        {
-          "question": "Why is the product variable initialized to 1?",
-          "answer": "In multiplication, 1 is the identity element. If initialized to 0, the result of any multiplication would always remain 0."
-        }
-      ]
-    },
-    {
-      "id": "leap-year-check",
-      "title": "Leap Year Check",
-      "category": "Basic Algorithms",
-      "definition": "A leap year is a year containing an extra day (366 days instead of 365) to align the calendar with the Earth's orbit around the Sun.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Check Leap Year:\nA year is a leap year if it satisfies either of these conditions:\n1. It is divisible by 400.\n2. It is divisible by 4 AND NOT divisible by 100.\n\nThis ensures that century years are only leap years if they are divisible by 400."
-        },
-        {
-          "type": "code",
-          "value": "year = 2024\n\nif (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):\n    print(\"Leap Year\")\nelse:\n    print(\"Not Leap Year\")"
-        },
-        {
-          "type": "output",
-          "value": "Leap Year"
-        }
-      ],
-      "questions": [
-        {
-          "question": "Why is the divisible by 400 rule necessary?",
-          "answer": "The solar year is slightly shorter than 365.25 days. The 400-year rule compensates for this small difference by excluding three out of every four century years from being leap years."
-        },
-        {
-          "question": "Is 2100 a leap year?",
-          "answer": "No. While 2100 is divisible by 4, it is also divisible by 100 and NOT by 400, so it fails the leap year conditions."
-        }
-      ]
-    },
-    {
-      "id": "even-odd-check",
-      "title": "Even or Odd Number",
-      "category": "Basic Algorithms",
-      "definition": "An even number is any integer that can be divided exactly by 2, whereas an odd number always leaves a remainder of 1 when divided by 2.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Check Even or Odd:\n1. Take a number as input.\n2. Use the modulo operator (%) to find the remainder when the number is divided by 2.\n3. If the remainder is 0 (n % 2 == 0), the number is Even.\n4. If the remainder is not 0, the number is Odd."
-        },
-        {
-          "type": "code",
-          "value": "def check_even_odd(num):\n    if num % 2 == 0:\n        return \"Even\"\n    else:\n        return \"Odd\"\n\n# Example Usage\nn = 10\nprint(f\"{n} is {check_even_odd(n)}\")"
-        },
-        {
-          "type": "output",
-          "value": "10 is Even"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What does the % operator do in Python?",
-          "answer": "The % (modulo) operator returns the remainder of a division operation between two numbers."
-        },
-        {
-          "question": "Is 0 considered even or odd?",
-          "answer": "Zero is considered an even number because 0 divided by 2 leaves a remainder of 0."
-        }
-      ]
-    },
-    {
-      "id": "largest-of-three",
-      "title": "Largest of Three Numbers",
-      "category": "Basic Algorithms",
-      "definition": "Determining the largest of three numbers involves comparing the values to identify the one with the highest numerical magnitude.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Find Largest of Three:\n\n1. Using Conditional Statements (If-Elif-Else):\n• Check if 'a' is greater than both 'b' and 'c'.\n• If not, check if 'b' is greater than 'c'.\n• If both fail, 'c' is the largest.\n\n2. Using Built-in max() Function:\n• Use the max(a, b, c) function, which internally compares all arguments and returns the highest value."
-        },
-        {
-          "type": "code",
-          "value": "# Method 1: Using If-Elif-Else\na = 10\nb = 50\nc = 30\nif a > b and a > c:\n    print(a)\nelif b > c:\n    print(b)\nelse:\n    print(c)\n\n# Method 2: Using Built-in max()\ndef find_largest(a, b, c):\n    return max(a, b, c)\nprint(\"Largest:\", find_largest(10, 50, 30))"
-        },
-        {
-          "type": "output",
-          "value": "50"
-        }
-      ],
-      "questions": [
-        {
-          "question": "Why is 'elif' used instead of a second 'if' in the comparison logic?",
-          "answer": "Using 'elif' makes the code more efficient because once a condition is met, the subsequent conditions are not checked, saving processing time."
-        },
-        {
-          "question": "Can max() take more than three arguments?",
-          "answer": "Yes, max() can take any number of arguments or even an iterable like a list, and it will return the largest element."
-        }
-      ]
-    },
-    {
-      "id": "sum-natural-numbers",
-      "title": "Sum of Natural Numbers",
-      "category": "Basic Algorithms",
-      "definition": "The sum of natural numbers is the cumulative total of all positive integers from 1 up to a specified value 'n'.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Calculate Sum of Natural Numbers:\n\n1. Using Loops (Iterative):\n• Initialize sum to 0.\n• Loop from 1 to n.\n• Add each number to the sum.\n\n2. Using Mathematical Formula (O(1)):\n• Use the formula: Sum = n * (n + 1) / 2.\n• This method is significantly faster as it calculates the result directly without looping."
-        },
-        {
-          "type": "code",
-          "value": "# Method 1: Using While Loop\ndef natural_sum_loop(n):\n    sum = 0\n    i = 1\n    while i <= n:\n        sum = sum + i\n        i += 1\n    return sum\n\n# Method 2: Using For Loop\nn = 5\nsum = 0\nfor i in range(1, n + 1):\n    sum += i\n\n# Method 3: Using Formula\ndef natural_sum_formula(n):\n    return n * (n + 1) // 2"
-        },
-        {
-          "type": "output",
-          "value": "15"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is the time complexity of the formula-based method?",
-          "answer": "O(1), because it performs a fixed number of operations regardless of how large 'n' is."
-        },
-        {
-          "question": "Why is integer division (//) used in the formula in Python?",
-          "answer": "Using // ensures that the result is returned as an integer. Since the product of n and (n+1) is always even, the division by 2 will always be exact."
-        }
-      ]
-    },
-    {
-      "id": "positive-negative-check",
-      "title": "Positive, Negative, or Zero Check",
-      "category": "Basic Algorithms",
-      "definition": "Determining the state of a number involves comparing it against zero to categorize it as positive, negative, or zero.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Check Number State:\n1. Use an 'if' statement to check if the number is greater than 0.\n2. Use an 'elif' statement to check if the number is less than 0.\n3. Use an 'else' statement to handle the case where the number is exactly 0."
-        },
-        {
-          "type": "code",
-          "value": "def check_number(n):\n    if n > 0:\n        return \"Positive\"\n    elif n < 0:\n        return \"Negative\"\n    else:\n        return \"Zero\"\n\n# Example Usage\nn = -5\nprint(f\"{n} is {check_number(n)}\")"
-        },
-        {
-          "type": "output",
-          "value": "-5 is Negative"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is the importance of zero in this check?",
-          "answer": "Zero acts as the origin point; every other real number is either greater than zero or less than zero."
-        },
-        {
-          "question": "Can this be solved using a ternary operator?",
-          "answer": "Yes, but it would be nested: 'Positive' if n > 0 else ('Negative' if n < 0 else 'Zero')."
-        }
-      ]
-    },
-    {
-      "id": "count-even-odd-digits",
-      "title": "Count Even and Odd Digits",
-      "category": "Basic Algorithms",
-      "definition": "This algorithm iterates through each digit of a number and determines whether it is even or odd, maintaining a count for both categories.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Count Even/Odd Digits:\n1. Extract the last digit of the number using modulo (n % 10).\n2. Check if the extracted digit is divisible by 2 (digit % 2 == 0).\n3. Increment the 'even' counter if divisible; otherwise, increment the 'odd' counter.\n4. Use integer division (n // 10) to remove the last digit.\n5. Repeat the process until all digits are processed (n > 0)."
-        },
-        {
-          "type": "code",
-          "value": "def count_even_odd(n):\n    even = 0\n    odd = 0\n    while n > 0:\n        digit = n % 10\n        if digit % 2 == 0:\n            even += 1\n        else:\n            odd += 1\n        n = n // 10\n    print(\"Even Count:\", even)\n    print(\"Odd Count:\", odd)\n\n# Example Usage\ncount_even_odd(12345)"
-        },
-        {
-          "type": "output",
-          "value": "Even Count: 2\nOdd Count: 3"
-        }
-      ],
-      "questions": [
-        {
-          "question": "Does zero count as an even digit in this logic?",
-          "answer": "Yes, zero is treated as an even digit because 0 % 2 equals 0."
-        },
-        {
-          "question": "Could this be implemented by converting the number to a string?",
-          "answer": "Yes, you could iterate through the string characters, convert each back to an integer, and perform the parity check."
-        }
-      ]
-    },
-    {
-      "id": "simple-calculator",
-      "title": "Simple Calculator",
-      "category": "Basic Algorithms",
-      "definition": "A simple calculator implementation using conditional statements to perform basic mathematical operations like addition, subtraction, multiplication, and division.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic for Simple Calculator:\n1. Accept two numerical inputs (a and b).\n2. Accept an operator string (+, -, *, /).\n3. Use if-elif-else blocks to determine which mathematical operation to execute based on the operator.\n4. Return the calculated result or a warning for invalid operators."
-        },
-        {
-          "type": "code",
-          "value": "def calculator(a, b, op):\n    if op == \"+\":\n        return a + b\n    elif op == \"-\":\n        return a - b\n    elif op == \"*\":\n        return a * b\n    elif op == \"/\":\n        return a / b\n    else:\n        return \"Invalid Operator\"\n\n# Example Usage\nprint(\"Result:\", calculator(10, 5, \"*\"))"
-        },
-        {
-          "type": "output",
-          "value": "Result: 50"
-        }
-      ],
-      "questions": [
-        {
-          "question": "How should you handle division by zero in this program?",
-          "answer": "You should add an additional check inside the 'elif op == \"/\"' block to see if 'b == 0'. If it is, return an error message like 'Cannot divide by zero' to prevent the program from crashing."
-        },
-        {
-          "question": "Can this be implemented using a dictionary instead of if-elif?",
-          "answer": "Yes, you can use a dictionary to map operator strings to functions or lambda expressions for a more modular and cleaner implementation."
-        }
-      ]
-    },
-    {
-      "id": "perfect-number",
-      "title": "Perfect Number",
-      "category": "Basic Algorithms",
-      "definition": "A perfect number is a positive integer that equals the sum of its proper divisors (excluding the number itself). For example, 6 has divisors 1, 2, and 3, and 1+2+3 = 6.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Check Perfect Number:\n1. Initialize a variable 'sum' to 0.\n2. Loop through all integers from 1 up to (but not including) the number 'n'.\n3. Check if the current integer 'i' is a divisor of 'n' (n % i == 0).\n4. If it is a divisor, add it to 'sum'.\n5. After the loop, compare the final 'sum' with the original number 'n'.\n6. If they are equal, it's a Perfect Number."
-        },
-        {
-          "type": "code",
-          "value": "# Using While Loop\nn = 28\nsum = 0\ni = 1\nwhile i < n:\n    if n % i == 0:\n        sum = sum + i\n    i += 1\nif sum == n:\n    print(\"Perfect Number\")\nelse:\n    print(\"Not Perfect\")\n\n# Using For Loop\nn = 6\nsum = 0\nfor i in range(1, n):\n    if n % i == 0:\n        sum += i\nif sum == n:\n    print(\"Perfect Number\")\nelse:\n    print(\"Not Perfect\")"
-        },
-        {
-          "type": "output",
-          "value": "Perfect Number"
-        }
-      ],
-      "questions": [
-        {
-          "question": "What are some examples of perfect numbers?",
-          "answer": "The first few perfect numbers are 6, 28, 496, and 8128."
-        },
-        {
-          "question": "What is the time complexity of this perfect number check?",
-          "answer": "O(n), as we iterate through every number from 1 to n-1. It can be optimized to O(sqrt(n)) by iterating only up to the square root of n."
-        }
-      ]
-    },
-    {
-      "id": "strong-number",
-      "title": "Strong Number",
-      "category": "Basic Algorithms",
-      "definition": "A strong number is a special number whose sum of factorials of its digits is equal to the original number (e.g., 145 -> 1! + 4! + 5! = 1 + 24 + 120 = 145).",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Check Strong Number:\n1. Store the original number in a temporary variable (temp).\n2. Extract each digit from the number using modulo (n % 10).\n3. Calculate the factorial of each extracted digit.\n4. Add the factorial value to a running 'sum' variable.\n5. Remove the last digit using integer division (n // 10) and repeat.\n6. Finally, if 'sum' equals 'temp', it is a Strong Number."
-        },
-        {
-          "type": "code",
-          "value": "# Method 1: Using While Loops\ndef check_strong(n):\n    temp = n\n    sum = 0\n    while n > 0:\n        digit = n % 10\n        fact = 1\n        i = 1\n        while i <= digit:\n            fact *= i\n            i += 1\n        sum += fact\n        n //= 10\n    return \"Strong Number\" if sum == temp else \"Not Strong\"\n\n# Method 2: Using For Loop for Factorial\nn = 145\ntemp, sum = n, 0\nwhile n > 0:\n    digit = n % 10\n    fact = 1\n    for i in range(1, digit + 1):\n        fact *= i\n    sum += fact\n    n //= 10\nprint(\"Strong Number\" if sum == temp else \"Not Strong\")"
-        },
-        {
-          "type": "output",
-          "value": "Strong Number"
-        }
-      ],
-      "questions": [
-        {
-          "question": "Give examples of Strong Numbers.",
-          "answer": "Common examples include 1, 2, 145, and 40585."
-        },
-        {
-          "question": "How can you optimize the factorial calculation in this algorithm?",
-          "answer": "Since there are only 10 possible digits (0-9), you can pre-calculate their factorials and store them in a list or dictionary to avoid redundant calculations."
-        }
-      ]
-    },
-    {
-      "id": "multiplication-table",
-      "title": "Multiplication Table",
-      "category": "Basic Algorithms",
-      "definition": "Generating a multiplication table involves iterating through a range of numbers and multiplying them by a base value to display the products in a structured format.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Generate Multiplication Table:\n1. Accept a base number (n).\n2. Iterate through a range of integers from 1 up to 10 (or a custom limit).\n3. In each iteration, multiply the base number by the current iterator (n * i).\n4. Format the output to show the relationship: 'n x i = product'."
-        },
-        {
-          "type": "code",
-          "value": "# Method 1: Using For Loop\ndef print_table(num):\n    for i in range(1, 11):\n        print(f\"{num} x {i} = {num * i}\")\n\n# Method 2: Using While Loop\nn = 5\ni = 1\nwhile i <= 10:\n    print(f\"{n} x {i} = {n * i}\")\n    i += 1"
-        },
-        {
-          "type": "output",
-          "value": "5 x 1 = 5\n5 x 2 = 10\n...\n5 x 10 = 50"
-        }
-      ],
-      "questions": [
-        {
-          "question": "How can you customize the range of the multiplication table?",
-          "answer": "You can change the range(1, 11) function to range(1, limit + 1) where 'limit' is the desired ending number for your table."
-        },
-        {
-          "question": "Why is range(1, 11) used to go from 1 to 10?",
-          "answer": "In Python, the range(start, stop) function is inclusive of the start but exclusive of the stop value. Thus, to include 10, we must specify 11 as the stop value."
-        }
-      ]
-    },
-    {
-      "id": "neon-number",
-      "title": "Neon Number",
-      "category": "Basic Algorithms",
-      "definition": "A neon number is a number where the sum of digits of its square is equal to the original number (e.g., 9^2 = 81, and 8 + 1 = 9).",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Check Neon Number:\n. Calculate the square of the given number (n * n).\n. Initialize a 'sum' variable to 0.\n. Extract each digit from the square using modulo (% 10) and add it to 'sum'.\n. Remove the last digit from the square using integer division (// 10).\n. Repeat until the square is 0.\n. If the 'sum' equals the original number 'n', it is a Neon Number; otherwise, it is not."
-        },
-        {
-          "type": "code",
-          "value": "n = 9\n\nsquare = n * n\nsum = 0\n\nwhile square > 0:\n    digit = square % 10\n    sum += digit\n    square = square // 10\n\nif sum == n:\n    print(\"Neon Number\")\nelse:\n    print(\"Not Neon Number\")"
-        },
-        {
-          "type": "output",
-          "value": "Neon Number"
-        },
-        {
-          "type": "text",
-          "value": "Quick Revision:\n• Definition: Sum of digits of square equals the original number.\n• Process: Square the number, extract digits, sum them up, and compare.\n• Example: 9^2 = 81 -> 8 + 1 = 9 (Neon).\n• Rarity: Extremely rare because squares grow much faster than digit sums."
-        }
-      ],
-      "questions": [
-        {
-          "question": "What are the single-digit neon numbers other than 0 and 1?",
-          "answer": "9 is the only other single-digit Neon Number in base 10 (since 9^2 = 81 and 8 + 1 = 9)."
-        },
-        {
-          "question": "Why are neon numbers extremely rare?",
-          "answer": "As numbers grow larger, their squares grow much faster than the sum of their digits. For example, for a 3-digit number n, its square is a 5 or 6 digit number, and the maximum possible sum of digits for a 6-digit number is 54, which is far less than n."
-        }
-      ]
-    },
-    {
-      "id": "happy-number",
-      "title": "Happy Number",
-      "category": "Basic Algorithms",
-      "definition": "A happy number is a number that eventually becomes 1 when you repeatedly replace it with the sum of the squares of its digits. If the process enters a loop that never reaches 1, the number is unhappy (or sad).",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Check Happy Number:\n1. Repeatedly replace the number with the sum of the squares of its digits.\n2. Continue this process until the number either becomes 1 (Happy Number) or enters a loop that includes 4 (Unhappy Number).\n3. Any unhappy number will eventually enter the cycle: 4 → 16 → 37 → 58 → 89 → 145 → 42 → 20 → 4. Therefore, we can terminate the loop when the number becomes 1 or 4."
-        },
-        {
-          "type": "code",
-          "value": "num = int(input(\"Enter a number: \"))\n\noriginal = num\n\nwhile num != 1 and num != 4:\n    total = 0\n\n    while num > 0:\n        digit = num % 10\n        total = total + (digit * digit)\n        num = num // 10\n\n    num = total\n\nif num == 1:\n    print(original, \"is a Happy Number\")\nelse:\n    print(original, \"is not a Happy Number\")"
-        },
-        {
-          "type": "output",
-          "value": "Enter a number: 19\n19 is a Happy Number"
-        },
-        {
-          "type": "text",
-          "value": "Step-by-Step Execution for 19:\n• First Iteration:\n  1² + 9² = 1 + 81 = 82\n• Second Iteration:\n  8² + 2² = 64 + 4 = 68\n• Third Iteration:\n  6² + 8² = 36 + 64 = 100\n• Fourth Iteration:\n  1² + 0² + 0² = 1\n• Conclusion: Since it reaches 1, 19 is a Happy Number."
-        },
-        {
-          "type": "text",
-          "value": "Quick Revision:\n• Definition: Sum of squares of digits repeatedly eventually reaches 1.\n• Cycle termination: If a number is unhappy, it will always loop back to 4.\n• First few happy numbers: 1, 7, 10, 13, 19, 23, 28, 31, 32, 44, ...\n• Cycle numbers: 4, 16, 37, 58, 89, 145, 42, 20."
-        }
-      ],
-      "questions": [
-        {
-          "question": "Why does the loop terminate when num becomes 4?",
-          "answer": "It is mathematically proven that all unhappy numbers enter an infinite cycle containing the number 4 (specifically: 4 -> 16 -> 37 -> 58 -> 89 -> 145 -> 42 -> 20 -> 4). By checking for 4, we avoid an infinite loop."
-        },
-        {
-          "question": "What is the alternative way to detect cycles in Happy Numbers?",
-          "answer": "You can use Floyd's Cycle-Finding Algorithm (Tortoise and Hare approach) or use a hash set to keep track of already visited numbers. If a number is already in the set, a cycle is detected."
-        },
-        {
-          "question": "What is the time complexity of checking if a number is happy?",
-          "answer": "The time complexity is O(log n). The number of digits in n is log10(n), and the sum of squares of digits reduces the value extremely quickly, leading to a logarithmic number of steps."
-        }
-      ]
-    },
-    {
-      "id": "sum-first-n-even",
-      "title": "Sum of First N Even Numbers",
-      "category": "Basic Algorithms",
-      "definition": "Calculating the sum of the first N even numbers (2, 4, 6, 8, ...) can be achieved either using a loop to generate and add each even number or via a mathematical formula n * (n + 1) for constant-time complexity.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Calculate Sum of First N Even Numbers:\n1. Accept the count of even numbers to sum up (n).\n2. Method 1 (Iterative): Initialize a running sum to 0 and start with the first even number (2). Loop n times, adding the even number to the sum and incrementing the even number by 2 in each step.\n3. Method 2 (Formula): Utilize the arithmetic progression sum formula, which simplifies to n * (n + 1) to find the sum in O(1) time."
-        },
-        {
-          "type": "code",
-          "value": "# Method 1: Iterative Approach\nn = int(input(\"Enter n: \"))\nsum = 0\neven = 2\nfor i in range(n):\n    sum = sum + even\n    even = even + 2\nprint(\"Sum =\", sum)\n\n# Method 2: Formula Method (O(1) Time)\n# sum = n * (n + 1)"
-        },
-        {
-          "type": "output",
-          "value": "Enter n: 5\nSum = 30"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Step",
-            "Even Number",
-            "Sum"
+  {
+    "id": "reverse-number",
+    "title": "Reverse a Number",
+    "category": "Basic Algorithms",
+    "definition": "Reversing a number involves rearranging its digits in reverse order using mathematical operations like modulo and integer division.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Reverse a Number:\n1. Get the last digit using n % 10.\n2. Add the digit to the reversed number (rev = rev * 10 + digit).\n3. Remove the last digit using integer division (n // 10)."
+      },
+      {
+        "type": "code",
+        "value": "n = 1234\nrev = 0\n\nwhile n > 0:\n    digit = n % 10\n    rev = rev * 10 + digit\n    n = n // 10\n\nprint(rev)"
+      },
+      {
+        "type": "output",
+        "value": "4321"
+      }
+    ],
+    "questions": [
+      {
+        "question": "What mathematical operations are used to reverse a number?",
+        "answer": "Modulo (%) is used to extract the last digit, and Integer Division (//) is used to remove the last digit from the original number."
+      },
+      {
+        "question": "How does the formula 'rev = rev * 10 + digit' work?",
+        "answer": "It shifts the existing reversed number one position to the left (by multiplying by 10) and then adds the newly extracted last digit to the ones place."
+      }
+    ]
+  },
+  {
+    "id": "palindrome-number",
+    "title": "Palindrome Number",
+    "category": "Basic Algorithms",
+    "definition": "A palindrome number is a number that remains the same when its digits are reversed (e.g., 121, 1331).",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Check Palindrome:\n1. Store the original number in a temporary variable (temp).\n2. Reverse the given number using modulo and integer division.\n3. Compare the temporary variable (temp) with the reversed number (rev).\n4. If temp == rev, it is a Palindrome; otherwise, it is not."
+      },
+      {
+        "type": "code",
+        "value": "n = 121\ntemp = n\nrev = 0\n\nwhile n > 0:\n    digit = n % 10\n    rev = rev * 10 + digit\n    n = n // 10\n\nif temp == rev:\n    print(\"Palindrome\")\nelse:\n    print(\"Not Palindrome\")"
+      },
+      {
+        "type": "output",
+        "value": "Palindrome"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why do we need a 'temp' variable when checking for a palindrome?",
+        "answer": "The original number 'n' becomes 0 during the while loop process. We need 'temp' to store the original value so we can compare it with the reversed number at the end."
+      },
+      {
+        "question": "What is the time complexity of this algorithm?",
+        "answer": "O(log10(n)), where n is the input number, because the number of iterations depends on the number of digits in n."
+      }
+    ]
+  },
+  {
+    "id": "armstrong-number",
+    "title": "Armstrong Number",
+    "category": "Basic Algorithms",
+    "definition": "An Armstrong number is a number that is equal to the sum of its own digits each raised to the power of the number of digits (e.g., 153 = 1³ + 5³ + 3³).",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Check Armstrong Number:\n1. Store the original number in a temporary variable (temp).\n2. Calculate the number of digits in the number (this will be the power).\n3. Extract each digit using modulo (%).\n4. Raise the digit to the calculated power and add it to a 'sum' variable.\n5. Compare the original number with the final sum."
+      },
+      {
+        "type": "code",
+        "value": "n = 153\ntemp = n\npower = len(str(n))\nsum = 0\n\nwhile n > 0:\n    digit = n % 10\n    sum = sum + digit ** power\n    n = n // 10\n\nif temp == sum:\n    print(\"Armstrong Number\")\nelse:\n    print(\"Not Armstrong Number\")"
+      },
+      {
+        "type": "output",
+        "value": "Armstrong Number"
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is an Armstrong Number?",
+        "answer": "It is a number where the sum of its digits, each raised to the power of the total number of digits, equals the original number."
+      },
+      {
+        "question": "How do you determine the power in the Armstrong number logic?",
+        "answer": "In Python, you can find the power by converting the number to a string and using the len() function: power = len(str(n))."
+      }
+    ]
+  },
+  {
+    "id": "factorial-number",
+    "title": "Factorial of a Number",
+    "category": "Basic Algorithms",
+    "definition": "The factorial of a non-negative integer n is the product of all positive integers less than or equal to n (e.g., 5! = 5 × 4 × 3 × 2 × 1 = 120).",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Calculate Factorial:\n1. Initialize a variable 'fact' to 1.\n2. Iterate through all numbers from 1 up to 'n'.\n3. In each iteration, multiply 'fact' by the current number.\n4. You can use a 'for' loop with range or a 'while' loop for this process."
+      },
+      {
+        "type": "code",
+        "value": "# Using For Loop\nn = 5\nfact = 1\nfor i in range(1, n + 1):\n    fact = fact * i\nprint(fact)\n\n# Using While Loop (Without Range)\nn = 5\nfact = 1\ni = 1\nwhile i <= n:\n    fact = fact * i\n    i = i + 1\nprint(fact)"
+      },
+      {
+        "type": "output",
+        "value": "120"
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the factorial of 0 and 1?",
+        "answer": "The factorial of both 0 and 1 is 1."
+      },
+      {
+        "question": "Can factorial be calculated for negative numbers?",
+        "answer": "No, factorial is defined only for non-negative integers. For negative numbers, it is undefined."
+      }
+    ]
+  },
+  {
+    "id": "fibonacci-series",
+    "title": "Fibonacci Series",
+    "category": "Basic Algorithms",
+    "definition": "The Fibonacci series is a sequence where each number is the sum of the two preceding ones, starting from 0 and 1 (e.g., 0, 1, 1, 2, 3, 5, 8, ...).",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Generate Fibonacci Series:\n1. Initialize the first two numbers, a = 0 and b = 1.\n2. In each iteration, print the current value of 'a'.\n3. Calculate the next number by adding 'a' and 'b' (c = a + b).\n4. Update 'a' to 'b' and 'b' to the new value 'c'.\n5. Continue until you reach the desired number of terms (n)."
+      },
+      {
+        "type": "code",
+        "value": "# Using While Loop\nn = 10\na = 0\nb = 1\ncount = 1\nwhile count <= n:\n    print(a, end=\" \")\n    c = a + b\n    a = b\n    b = c\n    count = count + 1\n\n# Using For Loop\nn = 10\na = 0\nb = 1\nfor i in range(n):\n    print(a, end=\" \")\n    c = a + b\n    a = b\n    b = c"
+      },
+      {
+        "type": "output",
+        "value": "0 1 1 2 3 5 8 13 21 34"
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the Fibonacci series?",
+        "answer": "It is a sequence of numbers where each number (after the first two) is the sum of the two preceding numbers."
+      },
+      {
+        "question": "What is the time complexity of generating n Fibonacci numbers using a loop?",
+        "answer": "The time complexity is O(n) because we perform a single loop that runs n times."
+      }
+    ]
+  },
+  {
+    "id": "prime-number",
+    "title": "Prime Number",
+    "category": "Basic Algorithms",
+    "definition": "A prime number is a natural number greater than 1 that is only divisible by 1 and itself (e.g., 2, 3, 5, 7, 11, ...).",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Check Prime Number:\n1. Initialize a 'count' variable to 0.\n2. Iterate through all numbers from 1 up to the given number 'n'.\n3. Check if 'n' is divisible by the current iterator 'i' (n % i == 0).\n4. If divisible, increment the 'count' variable.\n5. After the loop, if 'count' is exactly 2, the number is Prime; otherwise, it is not."
+      },
+      {
+        "type": "code",
+        "value": "# Using While Loop\nn = 7\ncount = 0\ni = 1\nwhile i <= n:\n    if n % i == 0:\n        count += 1\n    i = i + 1\nif count == 2:\n    print(\"Prime\")\nelse:\n    print(\"Not Prime\")\n\n# Using For Loop\nn = 7\ncount = 0\nfor i in range(1, n + 1):\n    if n % i == 0:\n        count += 1\nif count == 2:\n    print(\"Prime\")\nelse:\n    print(\"Not Prime\")"
+      },
+      {
+        "type": "output",
+        "value": "Prime"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Is 1 a prime number?",
+        "answer": "No, 1 is not a prime number because a prime number must have exactly two distinct positive divisors: 1 and itself."
+      },
+      {
+        "question": "What is the only even prime number?",
+        "answer": "2 is the only even prime number. All other even numbers are divisible by 2, giving them more than two divisors."
+      }
+    ]
+  },
+  {
+    "id": "factors-of-a-number",
+    "title": "Factors of a Number",
+    "category": "Basic Algorithms",
+    "definition": "Factors are numbers that divide a given integer completely without leaving any remainder (e.g., factors of 12 are 1, 2, 3, 4, 6, 12).",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Find Factors of a Number:\n1. Loop through all integers from 1 up to the given number (num).\n2. Check if the number is divisible by the current integer 'i' (num % i == 0).\n3. If divisible, 'i' is a factor of the number.\n4. Print or record the value of 'i'."
+      },
+      {
+        "type": "code",
+        "value": "num = int(input(\"Enter a number: \"))\n\nprint(\"Factors are:\")\n\nfor i in range(1, num + 1):\n    if num % i == 0:\n        print(i)"
+      },
+      {
+        "type": "output",
+        "value": "Enter a number: 12\n\nFactors are:\n1\n2\n3\n4\n6\n12"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Divisor (i)",
+          "Operation (12 % i)",
+          "Is Factor?",
+          "Remainder"
+        ],
+        "rows": [
+          [
+            "1",
+            "12 % 1",
+            "Yes",
+            "0"
           ],
-          "rows": [
-            [
-              "1",
-              "2",
-              "2"
-            ],
-            [
-              "2",
-              "4",
-              "6"
-            ],
-            [
-              "3",
-              "6",
-              "12"
-            ],
-            [
-              "4",
-              "8",
-              "20"
-            ],
-            [
-              "5",
-              "10",
-              "30"
-            ]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "Formula Method:\n• The mathematical formula to find the sum of the first n even numbers is:\n  Sum = n * (n + 1)\n• For example, when n = 5:\n  5 * (5 + 1) = 5 * 6 = 30."
-        },
-        {
-          "type": "text",
-          "value": "Quick Revision:\n• Even series: 2, 4, 6, 8, 10, ...\n• Iterative logic: Loop n times, generate even numbers with +2, and accumulate sum.\n• Formula logic: n * (n + 1) gives instant O(1) result."
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is the time complexity of the iterative method vs. the formula method?",
-          "answer": "The iterative method has a time complexity of O(n) because it loops n times. The formula method has a time complexity of O(1) because it performs constant-time arithmetic operations."
-        },
-        {
-          "question": "How do you derive the formula n * (n + 1) for the sum of first n even numbers?",
-          "answer": "The first n even numbers form an Arithmetic Progression (AP) with first term a = 2 and common difference d = 2. The sum of first n terms of an AP is given by Sn = n/2 * [2a + (n-1)d]. Substituting a=2 and d=2 gives Sn = n/2 * [4 + (n-1)2] = n/2 * [2n + 2] = n * (n + 1)."
-        },
-        {
-          "question": "What is the space complexity of both approaches?",
-          "answer": "Both approaches have a space complexity of O(1) since they only use a few constant variables to store the inputs and calculated sums."
-        }
-      ]
-    },
-    {
-      "id": "sum-first-n-odd",
-      "title": "Sum of First N Odd Numbers",
-      "category": "Basic Algorithms",
-      "definition": "Calculating the sum of the first N odd numbers (1, 3, 5, 7, ...) can be achieved either using a loop to generate and add each odd number or via a mathematical formula n^2 for constant-time complexity.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Calculate Sum of First N Odd Numbers:\n1. Accept the count of odd numbers to sum up (n).\n2. Method 1 (Iterative): Initialize a running sum to 0 and start with the first odd number (1). Loop n times, adding the odd number to the sum and incrementing the odd number by 2 in each step.\n3. Method 2 (Formula): Utilize the arithmetic progression sum formula, which simplifies beautifully to n² to find the sum in O(1) time."
-        },
-        {
-          "type": "code",
-          "value": "# Method 1: Iterative Approach\nn = int(input(\"Enter n: \"))\nsum = 0\nodd = 1\nfor i in range(n):\n    sum = sum + odd\n    odd = odd + 2\nprint(\"Sum =\", sum)\n\n# Method 2: Formula Method (O(1) Time)\n# sum = n ** 2"
-        },
-        {
-          "type": "output",
-          "value": "Enter n: 5\nSum = 25"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Step",
-            "Odd Number",
-            "Sum"
+          [
+            "2",
+            "12 % 2",
+            "Yes",
+            "0"
           ],
-          "rows": [
-            [
-              "1",
-              "1",
-              "1"
-            ],
-            [
-              "2",
-              "3",
-              "4"
-            ],
-            [
-              "3",
-              "5",
-              "9"
-            ],
-            [
-              "4",
-              "7",
-              "16"
-            ],
-            [
-              "5",
-              "9",
-              "25"
-            ]
-          ]
-        },
-        {
-          "type": "text",
-          "value": "Formula Method:\n• The mathematical formula to find the sum of the first n odd numbers is:\n  Sum = n² (n raised to the power of 2)\n• For example, when n = 5:\n  5² = 5 * 5 = 25."
-        },
-        {
-          "type": "text",
-          "value": "Quick Revision:\n• Odd series: 1, 3, 5, 7, 9, ...\n• Iterative logic: Loop n times, generate odd numbers with +2, and accumulate sum.\n• Formula logic: n² gives instant O(1) result."
-        }
-      ],
-      "questions": [
-        {
-          "question": "What is the time complexity of the iterative method vs. the formula method?",
-          "answer": "The iterative method has a time complexity of O(n) because it loops n times. The formula method has a time complexity of O(1) because it performs a single multiplication (constant-time operation)."
-        },
-        {
-          "question": "How do you derive the formula n^2 for the sum of first n odd numbers?",
-          "answer": "The first n odd numbers form an Arithmetic Progression (AP) with first term a = 1 and common difference d = 2. The sum of first n terms of an AP is Sn = n/2 * [2a + (n-1)d]. Substituting a=1 and d=2 gives Sn = n/2 * [2(1) + (n-1)2] = n/2 * [2 + 2n - 2] = n/2 * [2n] = n^2."
-        },
-        {
-          "question": "What is the space complexity of both approaches?",
-          "answer": "Both approaches have a space complexity of O(1) since they only use a few constant variables to store the inputs and calculated sums."
-        }
-      ]
-    },
-    {
-      "id": "hcf-lcm",
-      "title": "HCF and LCM",
-      "category": "Basic Algorithms",
-      "definition": "HCF (Highest Common Factor / Greatest Common Divisor) is the largest positive integer that divides two or more integers without leaving a remainder. LCM (Least Common Multiple) is the smallest positive integer that is divisible by two or more integers. They are related by the equation: HCF * LCM = Product of the Numbers.",
-      "sections": [
-        {
-          "type": "text",
-          "value": "Logic to Calculate HCF and LCM:\n1. HCF (Listing Method): Find all factors of both numbers and identify the largest common factor.\n2. HCF (Euclidean Algorithm): An extremely efficient recursive/iterative method. Keep replacing (a, b) with (b, a % b) until b becomes 0. The remaining non-zero value is the HCF.\n3. LCM: Can be computed iteratively by incrementing multiples, or directly using the relationship: LCM = (a * b) // HCF."
-        },
-        {
-          "type": "code",
-          "value": "# 1. HCF and LCM (Euclidean Algorithm - Highly Efficient)\na = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\n\nx, y = a, b\nwhile y != 0:\n    x, y = y, x % y\nhcf = x\nlcm = (a * b) // hcf\n\nprint(\"HCF =\", hcf)\nprint(\"LCM =\", lcm)\n\n# 2. HCF Basic (Listing Method)\n# small = min(a, b)\n# for i in range(small, 0, -1):\n#     if a % i == 0 and b % i == 0:\n#         hcf = i\n#         break\n\n# 3. LCM Basic (Listing Method)\n# large = max(a, b)\n# while True:\n#     if large % a == 0 and large % b == 0:\n#         lcm = large\n#         break\n#     large += 1\n\n# 4. Shortcut using Math module\n# import math\n# hcf = math.gcd(a, b)\n# lcm = (a * b) // math.gcd(a, b)"
-        },
-        {
-          "type": "output",
-          "value": "Enter first number: 12\nEnter second number: 18\nHCF = 6\nLCM = 36"
-        },
-        {
-          "type": "table",
-          "headers": [
-            "Concept",
-            "HCF (GCD)",
-            "LCM"
+          [
+            "3",
+            "12 % 3",
+            "Yes",
+            "0"
           ],
-          "rows": [
-            [
-              "Definition",
-              "Biggest common divisor",
-              "Smallest common multiple"
-            ],
-            [
-              "Factor Inclusions",
-              "Common factors only",
-              "All factors with highest power"
-            ],
-            [
-              "Relative Value",
-              "Small value (<= minimum input)",
-              "Large value (>= maximum input)"
-            ],
-            [
-              "Example (12 & 18)",
-              "6",
-              "36"
-            ]
+          [
+            "4",
+            "12 % 4",
+            "Yes",
+            "0"
+          ],
+          [
+            "5",
+            "12 % 5",
+            "No",
+            "2"
+          ],
+          [
+            "6",
+            "12 % 6",
+            "Yes",
+            "0"
+          ],
+          [
+            "7 to 11",
+            "12 % i",
+            "No",
+            "Non-zero"
+          ],
+          [
+            "12",
+            "12 % 12",
+            "Yes",
+            "0"
           ]
-        },
-        {
-          "type": "text",
-          "value": "How Euclidean Algorithm Works (for 18 and 12):\n• Step 1: 18 mod 12 = 6 (Replace inputs with 12 and 6)\n• Step 2: 12 mod 6 = 0 (Replace inputs with 6 and 0)\n• Since the second number becomes 0, the HCF is the last divisor, which is 6.\n• Relation: LCM = (12 * 18) // 6 = 216 // 6 = 36."
-        },
-        {
-          "type": "text",
-          "value": "Quick Revision:\n• HCF/GCD: Largest number that divides all input numbers.\n• LCM: Smallest number that is a multiple of all input numbers.\n• Fundamental Relation: HCF(a, b) * LCM(a, b) = a * b.\n• Optimization: Always compute HCF using the Euclidean Algorithm and LCM using the formula."
-        }
-      ],
-      "questions": [
-        {
-          "question": "Why is the Euclidean Algorithm much faster than the listing/basic method?",
-          "answer": "The basic method iterates linear-time O(min(a, b)) steps in the worst case (e.g., for prime numbers). The Euclidean algorithm reduces the inputs logarithmically using modular division, achieving a time complexity of O(log(min(a, b)))."
-        },
-        {
-          "question": "How do you calculate HCF/LCM for three numbers?",
-          "answer": "For three numbers a, b, and c:\n- HCF(a, b, c) = HCF(HCF(a, b), c)\n- LCM(a, b, c) = LCM(LCM(a, b), c)\nNote: The relation HCF * LCM = Product does NOT hold true for three or more numbers."
-        },
-        {
-          "question": "What are prime factor powers in calculating HCF and LCM?",
-          "answer": "When factorized into primes (e.g., 12 = 2^2 * 3^1, 18 = 2^1 * 3^2):\n- HCF takes the lowest power of all common prime factors: 2^1 * 3^1 = 6.\n- LCM takes the highest power of all prime factors present: 2^2 * 3^2 = 36."
-        }
-      ]
-    }
-  ],
+        ]
+      },
+      {
+        "type": "text",
+        "value": "Step-by-Step Tracing for 12:\n• We test divisibility from 1 up to 12.\n• Modulo check: 12 % i == 0.\n• Successful divisors: 1, 2, 3, 4, 6, and 12."
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the time complexity of this algorithm?",
+        "answer": "The time complexity is O(n) because we check every single integer from 1 to n. This can be optimized to O(sqrt(n)) by only iterating up to the square root of n, since factors always occur in pairs (e.g., if 2 divides 12, then 6 also divides 12)."
+      },
+      {
+        "question": "Does 1 and the number itself always count as factors?",
+        "answer": "Yes, for any positive integer n greater than 1, both 1 and n are always factors because n % 1 = 0 and n % n = 0."
+      }
+    ]
+  },
+  {
+    "id": "count-factors",
+    "title": "Count Factors",
+    "category": "Basic Algorithms",
+    "definition": "Counting factors is the process of determining the total number of integer divisors that a given number has, excluding any remainders.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Count Factors:\n1. Initialize a count variable to 0.\n2. Loop through all numbers from 1 up to 'num'.\n3. Check if 'num % i == 0'. If yes, it is a factor.\n4. Whenever a factor is found, increment the count by 1."
+      },
+      {
+        "type": "code",
+        "value": "num = int(input(\"Enter a number: \"))\n\ncount = 0\n\nfor i in range(1, num + 1):\n    if num % i == 0:\n        count = count + 1\n\nprint(\"Total Factors =\", count)"
+      },
+      {
+        "type": "output",
+        "value": "Enter a number: 12\nTotal Factors = 6"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Number",
+          "Factors Found",
+          "Total Count"
+        ],
+        "rows": [
+          [
+            "12",
+            "1, 2, 3, 4, 6, 12",
+            "6"
+          ],
+          [
+            "7",
+            "1, 7",
+            "2"
+          ],
+          [
+            "1",
+            "1",
+            "1"
+          ]
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "How can we use factor counting to check if a number is prime?",
+        "answer": "A prime number has exactly 2 factors: 1 and the number itself. If count == 2, the number is prime; otherwise, it is composite or 1."
+      },
+      {
+        "question": "What is the range used for searching factors?",
+        "answer": "We search the range from 1 to the number itself (inclusive) using range(1, num + 1)."
+      }
+    ]
+  },
+  {
+    "id": "sum-of-factors",
+    "title": "Sum of Factors",
+    "category": "Basic Algorithms",
+    "definition": "Find the sum of all factors of a number. This represents the total value obtained by adding all divisors of the number.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Find Sum of Factors:\n1. Initialize a sum variable to 0.\n2. Loop through all integers from 1 up to the given number (num).\n3. If num % i == 0, add the factor 'i' to sum."
+      },
+      {
+        "type": "code",
+        "value": "num = int(input(\"Enter a number: \"))\n\nsum = 0\n\nfor i in range(1, num + 1):\n    if num % i == 0:\n        sum = sum + i\n\nprint(\"Sum of Factors =\", sum)"
+      },
+      {
+        "type": "output",
+        "value": "Enter a number: 12\nSum of Factors = 28"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Number",
+          "Factors",
+          "Addition String",
+          "Sum"
+        ],
+        "rows": [
+          [
+            "12",
+            "1, 2, 3, 4, 6, 12",
+            "1+2+3+4+6+12",
+            "28"
+          ],
+          [
+            "6",
+            "1, 2, 3, 6",
+            "1+2+3+6",
+            "12"
+          ]
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the sum of factors for prime number 7?",
+        "answer": "For a prime number p, its factors are only 1 and p. The sum of factors is 1 + p. For 7, the sum is 1 + 7 = 8."
+      },
+      {
+        "question": "What is a perfect number in terms of its factors sum?",
+        "answer": "A perfect number is a number where the sum of its proper factors (excluding the number itself) equals the number. Alternatively, the sum of all factors equals 2 * num."
+      }
+    ]
+  },
+  {
+    "id": "prime-factors",
+    "title": "Prime Factors of a Number",
+    "category": "Basic Algorithms",
+    "definition": "Prime factors are the factors of a number that are also prime numbers. Every integer greater than 1 has a unique prime factorization.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Find Prime Factors:\n1. Loop through all integers 'i' from 2 up to 'num' to find factors (num % i == 0).\n2. For each factor, check if it is prime by testing divisibility with all numbers 'j' from 2 up to 'i-1'.\n3. If no divisor is found, it is a prime factor and we print it."
+      },
+      {
+        "type": "code",
+        "value": "num = int(input(\"Enter a number: \"))\n\nprint(\"Prime Factors are:\")\n\nfor i in range(2, num + 1):\n    if num % i == 0:\n        prime = True\n        for j in range(2, i):\n            if i % j == 0:\n                prime = False\n                break\n        if prime:\n            print(i)"
+      },
+      {
+        "type": "output",
+        "value": "Enter a number: 12\n\nPrime Factors are:\n2\n3"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Number",
+          "All Factors",
+          "Prime Factors Only",
+          "Prime Factorization"
+        ],
+        "rows": [
+          [
+            "12",
+            "1, 2, 3, 4, 6, 12",
+            "2, 3",
+            "2 * 2 * 3 = 12"
+          ],
+          [
+            "30",
+            "1, 2, 3, 5, 6, 10, 15, 30",
+            "2, 3, 5",
+            "2 * 3 * 5 = 30"
+          ]
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why do we start searching prime factors from 2?",
+        "answer": "We start from 2 because 1 is not a prime number, and 2 is the smallest prime number."
+      },
+      {
+        "question": "Can we optimize the prime factors algorithm?",
+        "answer": "Yes. A more efficient way is to divide the number by its smallest divisor repeatedly until it's no longer divisible, then proceed to the next divisor. This reduces search bounds dynamically."
+      }
+    ]
+  },
+  {
+    "id": "swap-two-numbers",
+    "title": "Swap Two Numbers",
+    "category": "Basic Algorithms",
+    "definition": "Swapping two numbers means interchanging their values so that each variable holds the other's original value.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Swap Two Numbers:\n\n1. Using Temporary Variable:\n• Store value of 'a' in 'temp'.\n• Assign value of 'b' to 'a'.\n• Assign value of 'temp' (original 'a') to 'b'.\n\n2. Using Arithmetic Operations (Without Temp):\n• a = a + b (a now holds sum)\n• b = a - b (b now holds original a)\n• a = a - b (a now holds original b)"
+      },
+      {
+        "type": "code",
+        "value": "# Method 1: Using Temporary Variable\na = 10\nb = 20\ntemp = a\na = b\nb = temp\nprint(\"After Swap (Temp):\", a, b)\n\n# Method 2: Without Temporary Variable\na = 10\nb = 20\na = a + b\nb = a - b\na = a - b\nprint(\"After Swap (Arithmetic):\", a, b)"
+      },
+      {
+        "type": "output",
+        "value": "20 10"
+      }
+    ],
+    "questions": [
+      {
+        "question": "How can you swap two numbers in a single line in Python?",
+        "answer": "In Python, you can use tuple unpacking: a, b = b, a. This is the most 'Pythonic' and efficient way."
+      },
+      {
+        "question": "What is the advantage of swapping without a temporary variable?",
+        "answer": "It saves space because no extra memory is allocated for a third variable, though the arithmetic method can sometimes lead to overflow in languages with fixed integer sizes (not usually an issue in Python)."
+      }
+    ]
+  },
+  {
+    "id": "count-digits",
+    "title": "Count Digits in a Number",
+    "category": "Basic Algorithms",
+    "definition": "Counting digits is the process of determining the total number of individual digits that form a numerical value.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Count Digits:\n\n1. Using While Loop:\n• Initialize a 'count' variable to 0.\n• While the number 'n' is greater than 0, increment 'count'.\n• Divide 'n' by 10 using integer division (//) to remove the last digit.\n\n2. Using String Conversion:\n• Convert the number to a string using str(n).\n• Use the len() function to find the length of the string."
+      },
+      {
+        "type": "code",
+        "value": "# Method 1: Using While Loop\nn = 12345\ncount = 0\nwhile n > 0:\n    count += 1\n    n = n // 10\nprint(\"Count (Loop):\", count)\n\n# Method 2: Using String Conversion\nn = 12345\ncount = len(str(n))\nprint(\"Count (String):\", count)"
+      },
+      {
+        "type": "output",
+        "value": "5"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Which method is faster for counting digits in Python?",
+        "answer": "Method 2 (string conversion) is usually faster and more concise in Python, though Method 1 (loop) is more universal across different programming languages."
+      },
+      {
+        "question": "How would you handle negative numbers when counting digits?",
+        "answer": "For negative numbers, you should first take the absolute value using abs(n) before counting, otherwise the loop condition (n > 0) or the negative sign in the string will lead to incorrect results."
+      }
+    ]
+  },
+  {
+    "id": "simple-calculator",
+    "title": "Simple Calculator",
+    "category": "Basic Algorithms",
+    "definition": "A simple calculator implementation using conditional statements to perform basic mathematical operations like addition, subtraction, multiplication, and division.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic for Simple Calculator:\n1. Accept two numerical inputs (a and b).\n2. Accept an operator string (+, -, *, /).\n3. Use if-elif-else blocks to determine which mathematical operation to execute based on the operator.\n4. Return the calculated result or a warning for invalid operators."
+      },
+      {
+        "type": "code",
+        "value": "def calculator(a, b, op):\n    if op == \"+\":\n        return a + b\n    elif op == \"-\":\n        return a - b\n    elif op == \"*\":\n        return a * b\n    elif op == \"/\":\n        return a / b\n    else:\n        return \"Invalid Operator\"\n\n# Example Usage\nprint(\"Result:\", calculator(10, 5, \"*\"))"
+      },
+      {
+        "type": "output",
+        "value": "Result: 50"
+      }
+    ],
+    "questions": [
+      {
+        "question": "How should you handle division by zero in this program?",
+        "answer": "You should add an additional check inside the 'elif op == \"/\"' block to see if 'b == 0'. If it is, return an error message like 'Cannot divide by zero' to prevent the program from crashing."
+      },
+      {
+        "question": "Can this be implemented using a dictionary instead of if-elif?",
+        "answer": "Yes, you can use a dictionary to map operator strings to functions or lambda expressions for a more modular and cleaner implementation."
+      }
+    ]
+  },
+  {
+    "id": "sum-of-digits",
+    "title": "Sum of Digits",
+    "category": "Basic Algorithms",
+    "definition": "Sum of digits is the calculation of the total value obtained by adding every individual digit in a number (e.g., 123 -> 1+2+3 = 6).",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Calculate Sum of Digits:\n\n1. Using While Loop:\n• Extract the last digit using modulo (n % 10).\n• Add this digit to a running 'sum' variable.\n• Remove the last digit using integer division (n // 10).\n\n2. Using String Conversion:\n• Convert the number to a string using str(n).\n• Loop through each character (digit) in the string.\n• Convert each character back to an integer using int() and add it to 'sum'."
+      },
+      {
+        "type": "code",
+        "value": "# Method 1: Using While Loop\nn = 123\nsum = 0\nwhile n > 0:\n    digit = n % 10\n    sum = sum + digit\n    n = n // 10\nprint(\"Sum (Loop):\", sum)\n\n# Method 2: Using String Conversion\nn = 123\nsum = 0\nfor digit in str(n):\n    sum = sum + int(digit)\nprint(\"Sum (String):\", sum)"
+      },
+      {
+        "type": "output",
+        "value": "6"
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the result of n % 10 for any positive integer?",
+        "answer": "It returns the remainder after dividing by 10, which is always the last digit of the number."
+      },
+      {
+        "question": "Which method is safer for very large numbers in Python?",
+        "answer": "Both methods work well in Python because it automatically handles arbitrarily large integers, but the string method can be slightly more intuitive for beginners."
+      }
+    ]
+  },
+  {
+    "id": "product-of-digits",
+    "title": "Product of Digits",
+    "category": "Basic Algorithms",
+    "definition": "Product of digits is the calculation of the total value obtained by multiplying every individual digit in a number (e.g., 123 -> 1*2*3 = 6).",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Calculate Product of Digits:\n\n1. Using While Loop:\n• Extract the last digit using modulo (n % 10).\n• Multiply this digit with a running 'mul' variable (initialized to 1).\n• Remove the last digit using integer division (n // 10).\n\n2. Using String Conversion:\n• Convert the number to a string using str(n).\n• Loop through each character (digit) in the string.\n• Convert each character back to an integer and multiply it with 'mul'."
+      },
+      {
+        "type": "code",
+        "value": "# Method 1: Using While Loop\nn = 123\nmul = 1\nwhile n > 0:\n    digit = n % 10\n    mul = mul * digit\n    n = n // 10\nprint(\"Product (Loop):\", mul)\n\n# Method 2: Using String Conversion\nn = 123\nmul = 1\nfor digit in str(n):\n    mul = mul * int(digit)\nprint(\"Product (String):\", mul)"
+      },
+      {
+        "type": "output",
+        "value": "6"
+      }
+    ],
+    "questions": [
+      {
+        "question": "What happens if the number contains the digit 0?",
+        "answer": "The entire product will become 0 because any number multiplied by zero is zero."
+      },
+      {
+        "question": "Why is the product variable initialized to 1?",
+        "answer": "In multiplication, 1 is the identity element. If initialized to 0, the result of any multiplication would always remain 0."
+      }
+    ]
+  },
+  {
+    "id": "multiplication-table",
+    "title": "Multiplication Table",
+    "category": "Basic Algorithms",
+    "definition": "Generating a multiplication table involves iterating through a range of numbers and multiplying them by a base value to display the products in a structured format.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Generate Multiplication Table:\n1. Accept a base number (n).\n2. Iterate through a range of integers from 1 up to 10 (or a custom limit).\n3. In each iteration, multiply the base number by the current iterator (n * i).\n4. Format the output to show the relationship: 'n x i = product'."
+      },
+      {
+        "type": "code",
+        "value": "# Method 1: Using For Loop\ndef print_table(num):\n    for i in range(1, 11):\n        print(f\"{num} x {i} = {num * i}\")\n\n# Method 2: Using While Loop\nn = 5\ni = 1\nwhile i <= 10:\n    print(f\"{n} x {i} = {n * i}\")\n    i += 1"
+      },
+      {
+        "type": "output",
+        "value": "5 x 1 = 5\n5 x 2 = 10\n...\n5 x 10 = 50"
+      }
+    ],
+    "questions": [
+      {
+        "question": "How can you customize the range of the multiplication table?",
+        "answer": "You can change the range(1, 11) function to range(1, limit + 1) where 'limit' is the desired ending number for your table."
+      },
+      {
+        "question": "Why is range(1, 11) used to go from 1 to 10?",
+        "answer": "In Python, the range(start, stop) function is inclusive of the start but exclusive of the stop value. Thus, to include 10, we must specify 11 as the stop value."
+      }
+    ]
+  },
+  {
+    "id": "leap-year-check",
+    "title": "Leap Year Check",
+    "category": "Basic Algorithms",
+    "definition": "A leap year is a year containing an extra day (366 days instead of 365) to align the calendar with the Earth's orbit around the Sun.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Check Leap Year:\nA year is a leap year if it satisfies either of these conditions:\n1. It is divisible by 400.\n2. It is divisible by 4 AND NOT divisible by 100.\n\nThis ensures that century years are only leap years if they are divisible by 400."
+      },
+      {
+        "type": "code",
+        "value": "year = 2024\n\nif (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):\n    print(\"Leap Year\")\nelse:\n    print(\"Not Leap Year\")"
+      },
+      {
+        "type": "output",
+        "value": "Leap Year"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why is the divisible by 400 rule necessary?",
+        "answer": "The solar year is slightly shorter than 365.25 days. The 400-year rule compensates for this small difference by excluding three out of every four century years from being leap years."
+      },
+      {
+        "question": "Is 2100 a leap year?",
+        "answer": "No. While 2100 is divisible by 4, it is also divisible by 100 and NOT by 400, so it fails the leap year conditions."
+      }
+    ]
+  },
+  {
+    "id": "check-divisibility",
+    "title": "Check Divisibility",
+    "category": "Basic Algorithms",
+    "definition": "This algorithm checks whether a given number is completely divisible by another number (a divisor) without leaving a remainder.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Check Divisibility:\n1. Take a number (num) and a divisor as inputs.\n2. Use the modulo operator (%) to find the remainder: remainder = num % divisor.\n3. If the remainder is exactly 0, the number is divisible by the divisor.\n4. Otherwise, the number is not divisible by the divisor."
+      },
+      {
+        "type": "code",
+        "value": "num = int(input(\"Enter number: \"))\ndivisor = int(input(\"Enter divisor: \"))\n\nif num % divisor == 0:\n    print(num, \"is divisible by\", divisor)\nelse:\n    print(num, \"is not divisible by\", divisor)"
+      },
+      {
+        "type": "output",
+        "value": "Enter number: 10\nEnter divisor: 5\n\n10 is divisible by 5"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Number",
+          "Divisor",
+          "Expression",
+          "Remainder",
+          "Result"
+        ],
+        "rows": [
+          [
+            "12",
+            "3",
+            "12 % 3",
+            "0",
+            "Divisible"
+          ],
+          [
+            "12",
+            "5",
+            "12 % 5",
+            "2",
+            "Not Divisible"
+          ]
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "What happens if the divisor is zero?",
+        "answer": "Division by zero is undefined. Running num % 0 in Python will raise a ZeroDivisionError."
+      },
+      {
+        "question": "How is divisibility used in other algorithm checks?",
+        "answer": "It is the basic building block for checking even/odd numbers, leap years, prime numbers, factors, HCF/LCM, and base conversions."
+      }
+    ]
+  },
+  {
+    "id": "even-odd-check",
+    "title": "Even or Odd Number",
+    "category": "Basic Algorithms",
+    "definition": "An even number is any integer that can be divided exactly by 2, whereas an odd number always leaves a remainder of 1 when divided by 2.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Check Even or Odd:\n1. Take a number as input.\n2. Use the modulo operator (%) to find the remainder when the number is divided by 2.\n3. If the remainder is 0 (n % 2 == 0), the number is Even.\n4. If the remainder is not 0, the number is Odd."
+      },
+      {
+        "type": "code",
+        "value": "def check_even_odd(num):\n    if num % 2 == 0:\n        return \"Even\"\n    else:\n        return \"Odd\"\n\n# Example Usage\nn = 10\nprint(f\"{n} is {check_even_odd(n)}\")"
+      },
+      {
+        "type": "output",
+        "value": "10 is Even"
+      }
+    ],
+    "questions": [
+      {
+        "question": "What does the % operator do in Python?",
+        "answer": "The % (modulo) operator returns the remainder of a division operation between two numbers."
+      },
+      {
+        "question": "Is 0 considered even or odd?",
+        "answer": "Zero is considered an even number because 0 divided by 2 leaves a remainder of 0."
+      }
+    ]
+  },
+  {
+    "id": "largest-of-three",
+    "title": "Largest of Three Numbers",
+    "category": "Basic Algorithms",
+    "definition": "Determining the largest of three numbers involves comparing the values to identify the one with the highest numerical magnitude.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Find Largest of Three:\n\n1. Using Conditional Statements (If-Elif-Else):\n• Check if 'a' is greater than both 'b' and 'c'.\n• If not, check if 'b' is greater than 'c'.\n• If both fail, 'c' is the largest.\n\n2. Using Built-in max() Function:\n• Use the max(a, b, c) function, which internally compares all arguments and returns the highest value."
+      },
+      {
+        "type": "code",
+        "value": "# Method 1: Using If-Elif-Else\na = 10\nb = 50\nc = 30\nif a > b and a > c:\n    print(a)\nelif b > c:\n    print(b)\nelse:\n    print(c)\n\n# Method 2: Using Built-in max()\ndef find_largest(a, b, c):\n    return max(a, b, c)\nprint(\"Largest:\", find_largest(10, 50, 30))"
+      },
+      {
+        "type": "output",
+        "value": "50"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why is 'elif' used instead of a second 'if' in the comparison logic?",
+        "answer": "Using 'elif' makes the code more efficient because once a condition is met, the subsequent conditions are not checked, saving processing time."
+      },
+      {
+        "question": "Can max() take more than three arguments?",
+        "answer": "Yes, max() can take any number of arguments or even an iterable like a list, and it will return the largest element."
+      }
+    ]
+  },
+  {
+    "id": "sum-natural-numbers",
+    "title": "Sum of Natural Numbers",
+    "category": "Basic Algorithms",
+    "definition": "The sum of natural numbers is the cumulative total of all positive integers from 1 up to a specified value 'n'.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Calculate Sum of Natural Numbers:\n\n1. Using Loops (Iterative):\n• Initialize sum to 0.\n• Loop from 1 to n.\n• Add each number to the sum.\n\n2. Using Mathematical Formula (O(1)):\n• Use the formula: Sum = n * (n + 1) / 2.\n• This method is significantly faster as it calculates the result directly without looping."
+      },
+      {
+        "type": "code",
+        "value": "# Method 1: Using While Loop\ndef natural_sum_loop(n):\n    sum = 0\n    i = 1\n    while i <= n:\n        sum = sum + i\n        i += 1\n    return sum\n\n# Method 2: Using For Loop\nn = 5\nsum = 0\nfor i in range(1, n + 1):\n    sum += i\n\n# Method 3: Using Formula\ndef natural_sum_formula(n):\n    return n * (n + 1) // 2"
+      },
+      {
+        "type": "output",
+        "value": "15"
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the time complexity of the formula-based method?",
+        "answer": "O(1), because it performs a fixed number of operations regardless of how large 'n' is."
+      },
+      {
+        "question": "Why is integer division (//) used in the formula in Python?",
+        "answer": "Using // ensures that the result is returned as an integer. Since the product of n and (n+1) is always even, the division by 2 will always be exact."
+      }
+    ]
+  },
+  {
+    "id": "sum-first-n-even",
+    "title": "Sum of First N Even Numbers",
+    "category": "Basic Algorithms",
+    "definition": "Calculating the sum of the first N even numbers (2, 4, 6, 8, ...) can be achieved either using a loop to generate and add each even number or via a mathematical formula n * (n + 1) for constant-time complexity.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Calculate Sum of First N Even Numbers:\n1. Accept the count of even numbers to sum up (n).\n2. Method 1 (Iterative): Initialize a running sum to 0 and start with the first even number (2). Loop n times, adding the even number to the sum and incrementing the even number by 2 in each step.\n3. Method 2 (Formula): Utilize the arithmetic progression sum formula, which simplifies to n * (n + 1) to find the sum in O(1) time."
+      },
+      {
+        "type": "code",
+        "value": "# Method 1: Iterative Approach\nn = int(input(\"Enter n: \"))\nsum = 0\neven = 2\nfor i in range(n):\n    sum = sum + even\n    even = even + 2\nprint(\"Sum =\", sum)\n\n# Method 2: Formula Method (O(1) Time)\n# sum = n * (n + 1)"
+      },
+      {
+        "type": "output",
+        "value": "Enter n: 5\nSum = 30"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Step",
+          "Even Number",
+          "Sum"
+        ],
+        "rows": [
+          [
+            "1",
+            "2",
+            "2"
+          ],
+          [
+            "2",
+            "4",
+            "6"
+          ],
+          [
+            "3",
+            "6",
+            "12"
+          ],
+          [
+            "4",
+            "8",
+            "20"
+          ],
+          [
+            "5",
+            "10",
+            "30"
+          ]
+        ]
+      },
+      {
+        "type": "text",
+        "value": "Formula Method:\n• The mathematical formula to find the sum of the first n even numbers is:\n  Sum = n * (n + 1)\n• For example, when n = 5:\n  5 * (5 + 1) = 5 * 6 = 30."
+      },
+      {
+        "type": "text",
+        "value": "Quick Revision:\n• Even series: 2, 4, 6, 8, 10, ...\n• Iterative logic: Loop n times, generate even numbers with +2, and accumulate sum.\n• Formula logic: n * (n + 1) gives instant O(1) result."
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the time complexity of the iterative method vs. the formula method?",
+        "answer": "The iterative method has a time complexity of O(n) because it loops n times. The formula method has a time complexity of O(1) because it performs constant-time arithmetic operations."
+      },
+      {
+        "question": "How do you derive the formula n * (n + 1) for the sum of first n even numbers?",
+        "answer": "The first n even numbers form an Arithmetic Progression (AP) with first term a = 2 and common difference d = 2. The sum of first n terms of an AP is given by Sn = n/2 * [2a + (n-1)d]. Substituting a=2 and d=2 gives Sn = n/2 * [4 + (n-1)2] = n/2 * [2n + 2] = n * (n + 1)."
+      },
+      {
+        "question": "What is the space complexity of both approaches?",
+        "answer": "Both approaches have a space complexity of O(1) since they only use a few constant variables to store the inputs and calculated sums."
+      }
+    ]
+  },
+  {
+    "id": "sum-first-n-odd",
+    "title": "Sum of First N Odd Numbers",
+    "category": "Basic Algorithms",
+    "definition": "Calculating the sum of the first N odd numbers (1, 3, 5, 7, ...) can be achieved either using a loop to generate and add each odd number or via a mathematical formula n^2 for constant-time complexity.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Calculate Sum of First N Odd Numbers:\n1. Accept the count of odd numbers to sum up (n).\n2. Method 1 (Iterative): Initialize a running sum to 0 and start with the first odd number (1). Loop n times, adding the odd number to the sum and incrementing the odd number by 2 in each step.\n3. Method 2 (Formula): Utilize the arithmetic progression sum formula, which simplifies beautifully to n² to find the sum in O(1) time."
+      },
+      {
+        "type": "code",
+        "value": "# Method 1: Iterative Approach\nn = int(input(\"Enter n: \"))\nsum = 0\nodd = 1\nfor i in range(n):\n    sum = sum + odd\n    odd = odd + 2\nprint(\"Sum =\", sum)\n\n# Method 2: Formula Method (O(1) Time)\n# sum = n ** 2"
+      },
+      {
+        "type": "output",
+        "value": "Enter n: 5\nSum = 25"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Step",
+          "Odd Number",
+          "Sum"
+        ],
+        "rows": [
+          [
+            "1",
+            "1",
+            "1"
+          ],
+          [
+            "2",
+            "3",
+            "4"
+          ],
+          [
+            "3",
+            "5",
+            "9"
+          ],
+          [
+            "4",
+            "7",
+            "16"
+          ],
+          [
+            "5",
+            "9",
+            "25"
+          ]
+        ]
+      },
+      {
+        "type": "text",
+        "value": "Formula Method:\n• The mathematical formula to find the sum of the first n odd numbers is:\n  Sum = n² (n raised to the power of 2)\n• For example, when n = 5:\n  5² = 5 * 5 = 25."
+      },
+      {
+        "type": "text",
+        "value": "Quick Revision:\n• Odd series: 1, 3, 5, 7, 9, ...\n• Iterative logic: Loop n times, generate odd numbers with +2, and accumulate sum.\n• Formula logic: n² gives instant O(1) result."
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the time complexity of the iterative method vs. the formula method?",
+        "answer": "The iterative method has a time complexity of O(n) because it loops n times. The formula method has a time complexity of O(1) because it performs a single multiplication (constant-time operation)."
+      },
+      {
+        "question": "How do you derive the formula n^2 for the sum of first n odd numbers?",
+        "answer": "The first n odd numbers form an Arithmetic Progression (AP) with first term a = 1 and common difference d = 2. The sum of first n terms of an AP is Sn = n/2 * [2a + (n-1)d]. Substituting a=1 and d=2 gives Sn = n/2 * [2(1) + (n-1)2] = n/2 * [2 + 2n - 2] = n/2 * [2n] = n^2."
+      },
+      {
+        "question": "What is the space complexity of both approaches?",
+        "answer": "Both approaches have a space complexity of O(1) since they only use a few constant variables to store the inputs and calculated sums."
+      }
+    ]
+  },
+  {
+    "id": "positive-negative-check",
+    "title": "Positive, Negative, or Zero Check",
+    "category": "Basic Algorithms",
+    "definition": "Determining the state of a number involves comparing it against zero to categorize it as positive, negative, or zero.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Check Number State:\n1. Use an 'if' statement to check if the number is greater than 0.\n2. Use an 'elif' statement to check if the number is less than 0.\n3. Use an 'else' statement to handle the case where the number is exactly 0."
+      },
+      {
+        "type": "code",
+        "value": "def check_number(n):\n    if n > 0:\n        return \"Positive\"\n    elif n < 0:\n        return \"Negative\"\n    else:\n        return \"Zero\"\n\n# Example Usage\nn = -5\nprint(f\"{n} is {check_number(n)}\")"
+      },
+      {
+        "type": "output",
+        "value": "-5 is Negative"
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the importance of zero in this check?",
+        "answer": "Zero acts as the origin point; every other real number is either greater than zero or less than zero."
+      },
+      {
+        "question": "Can this be solved using a ternary operator?",
+        "answer": "Yes, but it would be nested: 'Positive' if n > 0 else ('Negative' if n < 0 else 'Zero')."
+      }
+    ]
+  },
+  {
+    "id": "count-even-odd-digits",
+    "title": "Count Even and Odd Digits",
+    "category": "Basic Algorithms",
+    "definition": "This algorithm iterates through each digit of a number and determines whether it is even or odd, maintaining a count for both categories.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Count Even/Odd Digits:\n1. Extract the last digit of the number using modulo (n % 10).\n2. Check if the extracted digit is divisible by 2 (digit % 2 == 0).\n3. Increment the 'even' counter if divisible; otherwise, increment the 'odd' counter.\n4. Use integer division (n // 10) to remove the last digit.\n5. Repeat the process until all digits are processed (n > 0)."
+      },
+      {
+        "type": "code",
+        "value": "def count_even_odd(n):\n    even = 0\n    odd = 0\n    while n > 0:\n        digit = n % 10\n        if digit % 2 == 0:\n            even += 1\n        else:\n            odd += 1\n        n = n // 10\n    print(\"Even Count:\", even)\n    print(\"Odd Count:\", odd)\n\n# Example Usage\ncount_even_odd(12345)"
+      },
+      {
+        "type": "output",
+        "value": "Even Count: 2\nOdd Count: 3"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Does zero count as an even digit in this logic?",
+        "answer": "Yes, zero is treated as an even digit because 0 % 2 equals 0."
+      },
+      {
+        "question": "Could this be implemented by converting the number to a string?",
+        "answer": "Yes, you could iterate through the string characters, convert each back to an integer, and perform the parity check."
+      }
+    ]
+  },
+  {
+    "id": "krishnamurthy-number",
+    "title": "Krishnamurthy Number",
+    "category": "Basic Algorithms",
+    "definition": "A Krishnamurthy number is a special number whose sum of factorials of its digits is equal to the original number itself (e.g., 145 = 1! + 4! + 5!).",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Check Krishnamurthy Number:\n1. Save the original number in a temporary variable (temp).\n2. Extract digits one by one using modulo 10.\n3. Compute the factorial of each extracted digit.\n4. Add these factorials to a sum variable.\n5. Divide the number by 10 (n // 10) to remove the last digit and repeat.\n6. Compare the sum with the original number stored in temp."
+      },
+      {
+        "type": "code",
+        "value": "num = int(input(\"Enter a number: \"))\ntemp = num\nsum = 0\n\nwhile num > 0:\n    digit = num % 10\n    fact = 1\n    for i in range(1, digit + 1):\n        fact = fact * i\n    sum = sum + fact\n    num = num // 10\n\nif temp == sum:\n    print(\"Krishnamurthy Number\")\nelse:\n    print(\"Not a Krishnamurthy Number\")"
+      },
+      {
+        "type": "output",
+        "value": "Enter a number: 145\nKrishnamurthy Number"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Digit",
+          "Factorial",
+          "Calculation",
+          "Running Sum"
+        ],
+        "rows": [
+          [
+            "5",
+            "120",
+            "5 * 4 * 3 * 2 * 1",
+            "120"
+          ],
+          [
+            "4",
+            "24",
+            "4 * 3 * 2 * 1",
+            "120 + 24 = 144"
+          ],
+          [
+            "1",
+            "1",
+            "1",
+            "144 + 1 = 145"
+          ]
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Are there many Krishnamurthy numbers?",
+        "answer": "No, Krishnamurthy numbers (also known as Strong Numbers or factorions) are extremely rare. In base 10, the only positive Krishnamurthy numbers are 1, 2, 145, and 40585."
+      },
+      {
+        "question": "What is the difference between Krishnamurthy Number and Strong Number?",
+        "answer": "They are exactly the same number concept, referred to by different names in different programming curricula."
+      }
+    ]
+  },
+  {
+    "id": "perfect-number",
+    "title": "Perfect Number",
+    "category": "Basic Algorithms",
+    "definition": "A perfect number is a positive integer that equals the sum of its proper divisors (excluding the number itself). For example, 6 has divisors 1, 2, and 3, and 1+2+3 = 6.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Check Perfect Number:\n1. Initialize a variable 'sum' to 0.\n2. Loop through all integers from 1 up to (but not including) the number 'n'.\n3. Check if the current integer 'i' is a divisor of 'n' (n % i == 0).\n4. If it is a divisor, add it to 'sum'.\n5. After the loop, compare the final 'sum' with the original number 'n'.\n6. If they are equal, it's a Perfect Number."
+      },
+      {
+        "type": "code",
+        "value": "# Using While Loop\nn = 28\nsum = 0\ni = 1\nwhile i < n:\n    if n % i == 0:\n        sum = sum + i\n    i += 1\nif sum == n:\n    print(\"Perfect Number\")\nelse:\n    print(\"Not Perfect\")\n\n# Using For Loop\nn = 6\nsum = 0\nfor i in range(1, n):\n    if n % i == 0:\n        sum += i\nif sum == n:\n    print(\"Perfect Number\")\nelse:\n    print(\"Not Perfect\")"
+      },
+      {
+        "type": "output",
+        "value": "Perfect Number"
+      }
+    ],
+    "questions": [
+      {
+        "question": "What are some examples of perfect numbers?",
+        "answer": "The first few perfect numbers are 6, 28, 496, and 8128."
+      },
+      {
+        "question": "What is the time complexity of this perfect number check?",
+        "answer": "O(n), as we iterate through every number from 1 to n-1. It can be optimized to O(sqrt(n)) by iterating only up to the square root of n."
+      }
+    ]
+  },
+  {
+    "id": "strong-number",
+    "title": "Strong Number",
+    "category": "Basic Algorithms",
+    "definition": "A strong number is a special number whose sum of factorials of its digits is equal to the original number (e.g., 145 -> 1! + 4! + 5! = 1 + 24 + 120 = 145).",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Check Strong Number:\n1. Store the original number in a temporary variable (temp).\n2. Extract each digit from the number using modulo (n % 10).\n3. Calculate the factorial of each extracted digit.\n4. Add the factorial value to a running 'sum' variable.\n5. Remove the last digit using integer division (n // 10) and repeat.\n6. Finally, if 'sum' equals 'temp', it is a Strong Number."
+      },
+      {
+        "type": "code",
+        "value": "# Method 1: Using While Loops\ndef check_strong(n):\n    temp = n\n    sum = 0\n    while n > 0:\n        digit = n % 10\n        fact = 1\n        i = 1\n        while i <= digit:\n            fact *= i\n            i += 1\n        sum += fact\n        n //= 10\n    return \"Strong Number\" if sum == temp else \"Not Strong\"\n\n# Method 2: Using For Loop for Factorial\nn = 145\ntemp, sum = n, 0\nwhile n > 0:\n    digit = n % 10\n    fact = 1\n    for i in range(1, digit + 1):\n        fact *= i\n    sum += fact\n    n //= 10\nprint(\"Strong Number\" if sum == temp else \"Not Strong\")"
+      },
+      {
+        "type": "output",
+        "value": "Strong Number"
+      }
+    ],
+    "questions": [
+      {
+        "question": "Give examples of Strong Numbers.",
+        "answer": "Common examples include 1, 2, 145, and 40585."
+      },
+      {
+        "question": "How can you optimize the factorial calculation in this algorithm?",
+        "answer": "Since there are only 10 possible digits (0-9), you can pre-calculate their factorials and store them in a list or dictionary to avoid redundant calculations."
+      }
+    ]
+  },
+  {
+    "id": "neon-number",
+    "title": "Neon Number",
+    "category": "Basic Algorithms",
+    "definition": "A neon number is a number where the sum of digits of its square is equal to the original number (e.g., 9^2 = 81, and 8 + 1 = 9).",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Check Neon Number:\n. Calculate the square of the given number (n * n).\n. Initialize a 'sum' variable to 0.\n. Extract each digit from the square using modulo (% 10) and add it to 'sum'.\n. Remove the last digit from the square using integer division (// 10).\n. Repeat until the square is 0.\n. If the 'sum' equals the original number 'n', it is a Neon Number; otherwise, it is not."
+      },
+      {
+        "type": "code",
+        "value": "n = 9\n\nsquare = n * n\nsum = 0\n\nwhile square > 0:\n    digit = square % 10\n    sum += digit\n    square = square // 10\n\nif sum == n:\n    print(\"Neon Number\")\nelse:\n    print(\"Not Neon Number\")"
+      },
+      {
+        "type": "output",
+        "value": "Neon Number"
+      },
+      {
+        "type": "text",
+        "value": "Quick Revision:\n• Definition: Sum of digits of square equals the original number.\n• Process: Square the number, extract digits, sum them up, and compare.\n• Example: 9^2 = 81 -> 8 + 1 = 9 (Neon).\n• Rarity: Extremely rare because squares grow much faster than digit sums."
+      }
+    ],
+    "questions": [
+      {
+        "question": "What are the single-digit neon numbers other than 0 and 1?",
+        "answer": "9 is the only other single-digit Neon Number in base 10 (since 9^2 = 81 and 8 + 1 = 9)."
+      },
+      {
+        "question": "Why are neon numbers extremely rare?",
+        "answer": "As numbers grow larger, their squares grow much faster than the sum of their digits. For example, for a 3-digit number n, its square is a 5 or 6 digit number, and the maximum possible sum of digits for a 6-digit number is 54, which is far less than n."
+      }
+    ]
+  },
+  {
+    "id": "happy-number",
+    "title": "Happy Number",
+    "category": "Basic Algorithms",
+    "definition": "A happy number is a number that eventually becomes 1 when you repeatedly replace it with the sum of the squares of its digits. If the process enters a loop that never reaches 1, the number is unhappy (or sad).",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Check Happy Number:\n1. Repeatedly replace the number with the sum of the squares of its digits.\n2. Continue this process until the number either becomes 1 (Happy Number) or enters a loop that includes 4 (Unhappy Number).\n3. Any unhappy number will eventually enter the cycle: 4 → 16 → 37 → 58 → 89 → 145 → 42 → 20 → 4. Therefore, we can terminate the loop when the number becomes 1 or 4."
+      },
+      {
+        "type": "code",
+        "value": "num = int(input(\"Enter a number: \"))\n\noriginal = num\n\nwhile num != 1 and num != 4:\n    total = 0\n\n    while num > 0:\n        digit = num % 10\n        total = total + (digit * digit)\n        num = num // 10\n\n    num = total\n\nif num == 1:\n    print(original, \"is a Happy Number\")\nelse:\n    print(original, \"is not a Happy Number\")"
+      },
+      {
+        "type": "output",
+        "value": "Enter a number: 19\n19 is a Happy Number"
+      },
+      {
+        "type": "text",
+        "value": "Step-by-Step Execution for 19:\n• First Iteration:\n  1² + 9² = 1 + 81 = 82\n• Second Iteration:\n  8² + 2² = 64 + 4 = 68\n• Third Iteration:\n  6² + 8² = 36 + 64 = 100\n• Fourth Iteration:\n  1² + 0² + 0² = 1\n• Conclusion: Since it reaches 1, 19 is a Happy Number."
+      },
+      {
+        "type": "text",
+        "value": "Quick Revision:\n• Definition: Sum of squares of digits repeatedly eventually reaches 1.\n• Cycle termination: If a number is unhappy, it will always loop back to 4.\n• First few happy numbers: 1, 7, 10, 13, 19, 23, 28, 31, 32, 44, ...\n• Cycle numbers: 4, 16, 37, 58, 89, 145, 42, 20."
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why does the loop terminate when num becomes 4?",
+        "answer": "It is mathematically proven that all unhappy numbers enter an infinite cycle containing the number 4 (specifically: 4 -> 16 -> 37 -> 58 -> 89 -> 145 -> 42 -> 20 -> 4). By checking for 4, we avoid an infinite loop."
+      },
+      {
+        "question": "What is the alternative way to detect cycles in Happy Numbers?",
+        "answer": "You can use Floyd's Cycle-Finding Algorithm (Tortoise and Hare approach) or use a hash set to keep track of already visited numbers. If a number is already in the set, a cycle is detected."
+      },
+      {
+        "question": "What is the time complexity of checking if a number is happy?",
+        "answer": "The time complexity is O(log n). The number of digits in n is log10(n), and the sum of squares of digits reduces the value extremely quickly, leading to a logarithmic number of steps."
+      }
+    ]
+  },
+  {
+    "id": "magic-number",
+    "title": "Magic Number",
+    "category": "Basic Algorithms",
+    "definition": "A magic number is a number in which the eventual sum of digits (calculated recursively until a single digit is obtained) is equal to 1.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Check Magic Number:\n1. While the number has more than one digit (num > 9), sum up its digits.\n2. To sum digits, run an inner loop using modulo (%) and integer division (//).\n3. Reassign the calculated sum as the new number and repeat.\n4. If the final single digit is 1, it is a Magic Number."
+      },
+      {
+        "type": "code",
+        "value": "num = int(input(\"Enter a number: \"))\ntemp = num\n\nwhile num > 9:\n    sum = 0\n    while num > 0:\n        digit = num % 10\n        sum = sum + digit\n        num = num // 10\n    num = sum\n\nif num == 1:\n    print(temp, \"is a Magic Number\")\nelse:\n    print(temp, \"is not a Magic Number\")"
+      },
+      {
+        "type": "output",
+        "value": "Enter a number: 1729\n1729 is a Magic Number"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Number",
+          "Calculation Steps",
+          "Final Sum",
+          "Is Magic?"
+        ],
+        "rows": [
+          [
+            "1729",
+            "1+7+2+9 = 19 -> 1+9 = 10 -> 1+0 = 1",
+            "1",
+            "Yes"
+          ],
+          [
+            "55",
+            "5+5 = 10 -> 1+0 = 1",
+            "1",
+            "Yes"
+          ],
+          [
+            "24",
+            "2+4 = 6",
+            "6",
+            "No"
+          ]
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the digital root of a number?",
+        "answer": "The digital root is the single digit value obtained by an iterative process of summing digits. A magic number is simply a number whose digital root is 1."
+      },
+      {
+        "question": "Is there an O(1) mathematical formula to find the digital root?",
+        "answer": "Yes. The digital root can be calculated as '1 + (num - 1) % 9' for positive integers. If this formula returns 1, the number is a Magic Number."
+      }
+    ]
+  },
+  {
+    "id": "hcf-lcm",
+    "title": "HCF and LCM",
+    "category": "Basic Algorithms",
+    "definition": "HCF (Highest Common Factor / Greatest Common Divisor) is the largest positive integer that divides two or more integers without leaving a remainder. LCM (Least Common Multiple) is the smallest positive integer that is divisible by two or more integers. They are related by the equation: HCF * LCM = Product of the Numbers.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Calculate HCF and LCM:\n1. HCF (Listing Method): Find all factors of both numbers and identify the largest common factor.\n2. HCF (Euclidean Algorithm): An extremely efficient recursive/iterative method. Keep replacing (a, b) with (b, a % b) until b becomes 0. The remaining non-zero value is the HCF.\n3. LCM: Can be computed iteratively by incrementing multiples, or directly using the relationship: LCM = (a * b) // HCF."
+      },
+      {
+        "type": "code",
+        "value": "# 1. HCF and LCM (Euclidean Algorithm - Highly Efficient)\na = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\n\nx, y = a, b\nwhile y != 0:\n    x, y = y, x % y\nhcf = x\nlcm = (a * b) // hcf\n\nprint(\"HCF =\", hcf)\nprint(\"LCM =\", lcm)\n\n# 2. HCF Basic (Listing Method)\n# small = min(a, b)\n# for i in range(small, 0, -1):\n#     if a % i == 0 and b % i == 0:\n#         hcf = i\n#         break\n\n# 3. LCM Basic (Listing Method)\n# large = max(a, b)\n# while True:\n#     if large % a == 0 and large % b == 0:\n#         lcm = large\n#         break\n#     large += 1\n\n# 4. Shortcut using Math module\n# import math\n# hcf = math.gcd(a, b)\n# lcm = (a * b) // math.gcd(a, b)"
+      },
+      {
+        "type": "output",
+        "value": "Enter first number: 12\nEnter second number: 18\nHCF = 6\nLCM = 36"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Concept",
+          "HCF (GCD)",
+          "LCM"
+        ],
+        "rows": [
+          [
+            "Definition",
+            "Biggest common divisor",
+            "Smallest common multiple"
+          ],
+          [
+            "Factor Inclusions",
+            "Common factors only",
+            "All factors with highest power"
+          ],
+          [
+            "Relative Value",
+            "Small value (<= minimum input)",
+            "Large value (>= maximum input)"
+          ],
+          [
+            "Example (12 & 18)",
+            "6",
+            "36"
+          ]
+        ]
+      },
+      {
+        "type": "text",
+        "value": "How Euclidean Algorithm Works (for 18 and 12):\n• Step 1: 18 mod 12 = 6 (Replace inputs with 12 and 6)\n• Step 2: 12 mod 6 = 0 (Replace inputs with 6 and 0)\n• Since the second number becomes 0, the HCF is the last divisor, which is 6.\n• Relation: LCM = (12 * 18) // 6 = 216 // 6 = 36."
+      },
+      {
+        "type": "text",
+        "value": "Quick Revision:\n• HCF/GCD: Largest number that divides all input numbers.\n• LCM: Smallest number that is a multiple of all input numbers.\n• Fundamental Relation: HCF(a, b) * LCM(a, b) = a * b.\n• Optimization: Always compute HCF using the Euclidean Algorithm and LCM using the formula."
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why is the Euclidean Algorithm much faster than the listing/basic method?",
+        "answer": "The basic method iterates linear-time O(min(a, b)) steps in the worst case (e.g., for prime numbers). The Euclidean algorithm reduces the inputs logarithmically using modular division, achieving a time complexity of O(log(min(a, b)))."
+      },
+      {
+        "question": "How do you calculate HCF/LCM for three numbers?",
+        "answer": "For three numbers a, b, and c:\n- HCF(a, b, c) = HCF(HCF(a, b), c)\n- LCM(a, b, c) = LCM(LCM(a, b), c)\nNote: The relation HCF * LCM = Product does NOT hold true for three or more numbers."
+      },
+      {
+        "question": "What are prime factor powers in calculating HCF and LCM?",
+        "answer": "When factorized into primes (e.g., 12 = 2^2 * 3^1, 18 = 2^1 * 3^2):\n- HCF takes the lowest power of all common prime factors: 2^1 * 3^1 = 6.\n- LCM takes the highest power of all prime factors present: 2^2 * 3^2 = 36."
+      }
+    ]
+  },
+  {
+    "id": "coprime-numbers",
+    "title": "Coprime Numbers",
+    "category": "Basic Algorithms",
+    "definition": "Two numbers are coprime (or relatively prime) if their highest common factor (HCF/GCD) is exactly 1. They share no common positive divisors other than 1.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Check Coprime Numbers:\n1. Find the HCF of the two numbers.\n2. Iterate 'i' from 1 up to the smaller of the two numbers.\n3. If both numbers are divisible by 'i', update HCF to 'i'.\n4. After finding HCF, check if HCF == 1. If yes, they are coprime."
+      },
+      {
+        "type": "code",
+        "value": "a = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\n\nhcf = 1\n\nfor i in range(1, min(a, b) + 1):\n    if a % i == 0 and b % i == 0:\n        hcf = i\n\nif hcf == 1:\n    print(\"Coprime Numbers\")\nelse:\n    print(\"Not Coprime Numbers\")"
+      },
+      {
+        "type": "output",
+        "value": "Enter first number: 8\nEnter second number: 15\n\nCoprime Numbers"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Number A",
+          "Number B",
+          "Factors of A",
+          "Factors of B",
+          "Common Factors",
+          "Coprime?"
+        ],
+        "rows": [
+          [
+            "8",
+            "15",
+            "1, 2, 4, 8",
+            "1, 3, 5, 15",
+            "1",
+            "Yes"
+          ],
+          [
+            "12",
+            "18",
+            "1,2,3,4,6,12",
+            "1,2,3,6,9,18",
+            "1, 2, 3, 6",
+            "No"
+          ]
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Do coprime numbers have to be prime numbers themselves?",
+        "answer": "No. Coprime numbers do not need to be prime. For example, 8 and 15 are composite numbers, but they are coprime because they share no factors other than 1."
+      },
+      {
+        "question": "What is the HCF of two consecutive integers?",
+        "answer": "Two consecutive integers (like n and n+1) are always coprime because their HCF is always 1."
+      }
+    ]
+  },
+  {
+    "id": "power-number",
+    "title": "Power of a Number",
+    "category": "Basic Algorithms",
+    "definition": "Calculating the power of a number involves multiplying a base number by itself multiple times, as defined by the exponent or power value (e.g., 2³ = 2 × 2 × 2 = 8).",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic to Calculate Power of a Number:\n1. Initialize a result variable to 1.\n2. Loop 'exponent' times.\n3. In each iteration, multiply the result by the base number (result = result * base)."
+      },
+      {
+        "type": "code",
+        "value": "base = int(input(\"Enter base: \"))\nexponent = int(input(\"Enter exponent: \"))\n\nresult = 1\nfor i in range(exponent):\n    result = result * base\n\nprint(\"Result =\", result)"
+      },
+      {
+        "type": "output",
+        "value": "Enter base: 2\nEnter exponent: 3\n\nResult = 8"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Base",
+          "Exponent",
+          "Calculation",
+          "Result"
+        ],
+        "rows": [
+          [
+            "2",
+            "3",
+            "2 * 2 * 2",
+            "8"
+          ],
+          [
+            "5",
+            "4",
+            "5 * 5 * 5 * 5",
+            "625"
+          ],
+          [
+            "7",
+            "0",
+            "1",
+            "1"
+          ]
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the time complexity of the power algorithm?",
+        "answer": "The iterative loop runs 'exponent' times, so the time complexity is O(p), where p is the exponent."
+      },
+      {
+        "question": "What is the power of a number raised to 0?",
+        "answer": "Any non-zero number raised to the power of 0 is always 1."
+      }
+    ]
+  },
+  {
+    "id": "decimal-binary",
+    "title": "Decimal to Binary",
+    "category": "Basic Algorithms",
+    "definition": "Converting a decimal number (base-10) to a binary number (base-2) involves repeatedly dividing the number by 2 and prepending the remainders to a string.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic for Decimal to Binary Conversion:\n1. Divide the decimal number by 2.\n2. Prepend the remainder (0 or 1) to the binary string.\n3. Update the number to the quotient (num // 2).\n4. Repeat until the number becomes 0."
+      },
+      {
+        "type": "code",
+        "value": "num = int(input(\"Enter decimal number: \"))\ntemp = num\nbinary = \"\"\n\nif num == 0:\n    binary = \"0\"\nelse:\n    while num > 0:\n        remainder = num % 2\n        binary = str(remainder) + binary\n        num = num // 2\n\nprint(\"Binary =\", binary)"
+      },
+      {
+        "type": "output",
+        "value": "Enter decimal number: 10\nBinary = 1010"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Quotient (num)",
+          "Division",
+          "Remainder",
+          "Prepend to Binary"
+        ],
+        "rows": [
+          [
+            "10",
+            "10 // 2",
+            "0",
+            "\"0\""
+          ],
+          [
+            "5",
+            "5 // 2",
+            "1",
+            "\"10\""
+          ],
+          [
+            "2",
+            "2 // 2",
+            "0",
+            "\"010\""
+          ],
+          [
+            "1",
+            "1 // 2",
+            "1",
+            "\"1010\""
+          ]
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why do we prepend the remainder instead of appending it?",
+        "answer": "The remainders are generated from the least significant bit (rightmost digit) to the most significant bit (leftmost digit). Prepending them reverses the order correctly so the MSB is at the start."
+      },
+      {
+        "question": "What is Python's built-in function for decimal to binary?",
+        "answer": "In Python, you can use the built-in bin() function, e.g., bin(10) returns '0b1010'. To get only the binary digits, use slice bin(10)[2:]."
+      }
+    ]
+  },
+  {
+    "id": "binary-decimal",
+    "title": "Binary to Decimal",
+    "category": "Basic Algorithms",
+    "definition": "Converting a binary number (base-2) to a decimal number (base-10) involves multiplying each digit of the binary string by 2 raised to the power of its position (starting from 0 on the right) and summing up the results.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic for Binary to Decimal Conversion:\n1. Loop through each character of the binary string from right to left (reversed order).\n2. Multiply each digit (0 or 1) by 2 raised to the power of its index (starting from 0).\n3. Add these values to a decimal accumulator.\n4. Increment the power by 1 for each step."
+      },
+      {
+        "type": "code",
+        "value": "binary = input(\"Enter binary number: \")\ndecimal = 0\npower = 0\n\nfor digit in reversed(binary):\n    decimal = decimal + int(digit) * (2 ** power)\n    power = power + 1\n\nprint(\"Decimal =\", decimal)"
+      },
+      {
+        "type": "output",
+        "value": "Enter binary number: 1010\nDecimal = 10"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Binary Digit",
+          "Position / Power of 2",
+          "Value",
+          "Sum accumulator"
+        ],
+        "rows": [
+          [
+            "0 (rightmost)",
+            "2⁰ = 1",
+            "0 * 1 = 0",
+            "0"
+          ],
+          [
+            "1",
+            "2¹ = 2",
+            "1 * 2 = 2",
+            "2"
+          ],
+          [
+            "0",
+            "2² = 4",
+            "0 * 4 = 0",
+            "2"
+          ],
+          [
+            "1 (leftmost)",
+            "2³ = 8",
+            "1 * 8 = 8",
+            "10"
+          ]
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why does position start from 0?",
+        "answer": "The place value of any digit in a positional numeral system is base^position, where position starts at 0 for the unit place."
+      },
+      {
+        "question": "What is the Python shortcut for binary to decimal?",
+        "answer": "You can use int(binary_string, 2) which converts the string to an integer in base 10 directly."
+      }
+    ]
+  },
+  {
+    "id": "decimal-octal",
+    "title": "Decimal to Octal",
+    "category": "Basic Algorithms",
+    "definition": "Converting a decimal number (base-10) to an octal number (base-8) involves repeatedly dividing the number by 8 and prepending the remainders to a string.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic for Decimal to Octal Conversion:\n1. Repeatedly divide the decimal number by 8.\n2. Collect the remainder (from 0 to 7) at each division.\n3. Prepend the remainder to the octal string.\n4. Divide the quotient by 8 (num // 8) and repeat until num becomes 0."
+      },
+      {
+        "type": "code",
+        "value": "num = int(input(\"Enter decimal number: \"))\noctal = \"\"\n\nif num == 0:\n    octal = \"0\"\nelse:\n    while num > 0:\n        remainder = num % 8\n        octal = str(remainder) + octal\n        num = num // 8\n\nprint(\"Octal =\", octal)"
+      },
+      {
+        "type": "output",
+        "value": "Enter decimal number: 25\nOctal = 31"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Quotient (num)",
+          "Division",
+          "Remainder",
+          "Prepend to Octal"
+        ],
+        "rows": [
+          [
+            "25",
+            "25 // 8",
+            "1",
+            "\"1\""
+          ],
+          [
+            "3",
+            "3 // 8",
+            "3",
+            "\"31\""
+          ]
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the octal number system?",
+        "answer": "The octal system is a base-8 number system that uses digits 0 through 7."
+      },
+      {
+        "question": "What is the Python built-in function for decimal to octal?",
+        "answer": "You can use oct(num), which returns '0o31' for 25. Use slice oct(num)[2:] to get the raw octal string."
+      }
+    ]
+  },
+  {
+    "id": "octal-decimal",
+    "title": "Octal to Decimal",
+    "category": "Basic Algorithms",
+    "definition": "Converting an octal number (base-8) to a decimal number (base-10) involves multiplying each digit of the octal string by 8 raised to the power of its position (starting from 0 on the right) and summing up the results.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic for Octal to Decimal Conversion:\n1. Loop through each character of the octal string from right to left (reversed order).\n2. Multiply each digit (0 to 7) by 8 raised to the power of its index.\n3. Add these values to a decimal accumulator.\n4. Increment the power by 1 for each step."
+      },
+      {
+        "type": "code",
+        "value": "octal = input(\"Enter octal number: \")\ndecimal = 0\npower = 0\n\nfor digit in reversed(octal):\n    decimal = decimal + int(digit) * (8 ** power)\n    power = power + 1\n\nprint(\"Decimal =\", decimal)"
+      },
+      {
+        "type": "output",
+        "value": "Enter octal number: 31\nDecimal = 25"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Octal Digit",
+          "Position / Power of 8",
+          "Value",
+          "Sum accumulator"
+        ],
+        "rows": [
+          [
+            "1 (rightmost)",
+            "8⁰ = 1",
+            "1 * 1 = 1",
+            "1"
+          ],
+          [
+            "3 (leftmost)",
+            "8¹ = 8",
+            "3 * 8 = 24",
+            "25"
+          ]
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is the Python shortcut for octal to decimal?",
+        "answer": "You can use int(octal_string, 8) which converts the octal string to a base 10 integer directly."
+      },
+      {
+        "question": "What happens if the octal string contains an '8' or '9'?",
+        "answer": "Octal only allows digits 0-7. In standard conversion or using int(string, 8), it will raise a ValueError."
+      }
+    ]
+  },
+  {
+    "id": "decimal-hexadecimal",
+    "title": "Decimal to Hexadecimal",
+    "category": "Basic Algorithms",
+    "definition": "Converting a decimal number (base-10) to a hexadecimal number (base-16) involves repeatedly dividing the number by 16 and mapping remainders 10-15 to letters A-F.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic for Decimal to Hexadecimal Conversion:\n1. Repeatedly divide the decimal number by 16.\n2. Collect the remainder (from 0 to 15) at each step.\n3. Map remainders from 10 to 15 to characters 'A' through 'F'.\n4. Prepend the mapped character to the hexadecimal string.\n5. Divide the quotient by 16 (num // 16) and repeat until num becomes 0."
+      },
+      {
+        "type": "code",
+        "value": "num = int(input(\"Enter decimal number: \"))\ntemp = num\nhex_chars = \"0123456789ABCDEF\"\nhexadecimal = \"\"\n\nif num == 0:\n    hexadecimal = \"0\"\nelse:\n    while num > 0:\n        remainder = num % 16\n        hexadecimal = hex_chars[remainder] + hexadecimal\n        num = num // 16\n\nprint(\"Hexadecimal =\", hexadecimal)"
+      },
+      {
+        "type": "output",
+        "value": "Enter decimal number: 254\nHexadecimal = FE"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Quotient (num)",
+          "Division",
+          "Remainder",
+          "Hex Char",
+          "Prepend to Hex"
+        ],
+        "rows": [
+          [
+            "254",
+            "254 // 16",
+            "14",
+            "E",
+            "\"E\""
+          ],
+          [
+            "15",
+            "15 // 16",
+            "15",
+            "F",
+            "\"FE\""
+          ]
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "What is hexadecimal system?",
+        "answer": "The hexadecimal system is a base-16 number system that uses digits 0-9 and letters A-F (where A=10, B=11, C=12, D=13, E=14, F=15)."
+      },
+      {
+        "question": "What is Python's built-in function for decimal to hex?",
+        "answer": "In Python, you can use hex(num) which returns '0xfe' for 254. Use hex(num)[2:].upper() for a clean uppercase string."
+      }
+    ]
+  },
+  {
+    "id": "hexadecimal-decimal",
+    "title": "Hexadecimal to Decimal",
+    "category": "Basic Algorithms",
+    "definition": "Converting a hexadecimal number (base-16) to a decimal number (base-10) involves multiplying each character of the hex string by 16 raised to the power of its position, mapping A-F to values 10-15.",
+    "sections": [
+      {
+        "type": "text",
+        "value": "Logic for Hexadecimal to Decimal Conversion:\n1. Convert the hexadecimal string to uppercase.\n2. Loop through each character of the hex string from right to left (reversed order).\n3. Find the value of each hex character (0-9 maps to 0-9, A-F maps to 10-15) using a lookup string '0123456789ABCDEF'.\n4. Multiply the value by 16 raised to the power of its position.\n5. Add these values to a decimal accumulator.\n6. Increment the power by 1 for each step."
+      },
+      {
+        "type": "code",
+        "value": "hex_str = input(\"Enter hexadecimal number: \").upper()\nhex_chars = \"0123456789ABCDEF\"\ndecimal = 0\npower = 0\n\nfor char in reversed(hex_str):\n    value = hex_chars.index(char)\n    decimal = decimal + value * (16 ** power)\n    power = power + 1\n\nprint(\"Decimal =\", decimal)"
+      },
+      {
+        "type": "output",
+        "value": "Enter hexadecimal number: FE\nDecimal = 254"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Hex Character",
+          "Decimal Value",
+          "Position / Power of 16",
+          "Value",
+          "Sum accumulator"
+        ],
+        "rows": [
+          [
+            "E (rightmost)",
+            "14",
+            "16⁰ = 1",
+            "14 * 1 = 14",
+            "14"
+          ],
+          [
+            "F (leftmost)",
+            "15",
+            "16¹ = 16",
+            "15 * 16 = 240",
+            "254"
+          ]
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "Why do we use .upper() on the input string?",
+        "answer": "Hexadecimal letters are case-insensitive, so both lowercase 'f' and uppercase 'F' represent 15. Converting the input to uppercase makes lookup easier and prevents case mismatch errors."
+      },
+      {
+        "question": "What is the Python shortcut for hex to decimal?",
+        "answer": "You can use int(hex_string, 16) which converts the hexadecimal string to base-10 integer directly."
+      }
+    ]
+  }
+],
   "ml": [
     {
       "id": "ml-intro",
