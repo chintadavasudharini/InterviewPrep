@@ -25786,6 +25786,48 @@ export const interviewData = {
           "answer": "As numbers grow larger, their squares grow much faster than the sum of their digits. For example, for a 3-digit number n, its square is a 5 or 6 digit number, and the maximum possible sum of digits for a 6-digit number is 54, which is far less than n."
         }
       ]
+    },
+    {
+      "id": "happy-number",
+      "title": "Happy Number",
+      "category": "Basic Algorithms",
+      "definition": "A happy number is a number that eventually becomes 1 when you repeatedly replace it with the sum of the squares of its digits. If the process enters a loop that never reaches 1, the number is unhappy (or sad).",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Check Happy Number:\n1. Repeatedly replace the number with the sum of the squares of its digits.\n2. Continue this process until the number either becomes 1 (Happy Number) or enters a loop that includes 4 (Unhappy Number).\n3. Any unhappy number will eventually enter the cycle: 4 → 16 → 37 → 58 → 89 → 145 → 42 → 20 → 4. Therefore, we can terminate the loop when the number becomes 1 or 4."
+        },
+        {
+          "type": "code",
+          "value": "num = int(input(\"Enter a number: \"))\n\noriginal = num\n\nwhile num != 1 and num != 4:\n    total = 0\n\n    while num > 0:\n        digit = num % 10\n        total = total + (digit * digit)\n        num = num // 10\n\n    num = total\n\nif num == 1:\n    print(original, \"is a Happy Number\")\nelse:\n    print(original, \"is not a Happy Number\")"
+        },
+        {
+          "type": "output",
+          "value": "Enter a number: 19\n19 is a Happy Number"
+        },
+        {
+          "type": "text",
+          "value": "Step-by-Step Execution for 19:\n• First Iteration:\n  1² + 9² = 1 + 81 = 82\n• Second Iteration:\n  8² + 2² = 64 + 4 = 68\n• Third Iteration:\n  6² + 8² = 36 + 64 = 100\n• Fourth Iteration:\n  1² + 0² + 0² = 1\n• Conclusion: Since it reaches 1, 19 is a Happy Number."
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision:\n• Definition: Sum of squares of digits repeatedly eventually reaches 1.\n• Cycle termination: If a number is unhappy, it will always loop back to 4.\n• First few happy numbers: 1, 7, 10, 13, 19, 23, 28, 31, 32, 44, ...\n• Cycle numbers: 4, 16, 37, 58, 89, 145, 42, 20."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why does the loop terminate when num becomes 4?",
+          "answer": "It is mathematically proven that all unhappy numbers enter an infinite cycle containing the number 4 (specifically: 4 -> 16 -> 37 -> 58 -> 89 -> 145 -> 42 -> 20 -> 4). By checking for 4, we avoid an infinite loop."
+        },
+        {
+          "question": "What is the alternative way to detect cycles in Happy Numbers?",
+          "answer": "You can use Floyd's Cycle-Finding Algorithm (Tortoise and Hare approach) or use a hash set to keep track of already visited numbers. If a number is already in the set, a cycle is detected."
+        },
+        {
+          "question": "What is the time complexity of checking if a number is happy?",
+          "answer": "The time complexity is O(log n). The number of digits in n is log10(n), and the sum of squares of digits reduces the value extremely quickly, leading to a logarithmic number of steps."
+        }
+      ]
     }
   ],
   "ml": [
