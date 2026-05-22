@@ -25982,6 +25982,78 @@ export const interviewData = {
           "answer": "Both approaches have a space complexity of O(1) since they only use a few constant variables to store the inputs and calculated sums."
         }
       ]
+    },
+    {
+      "id": "hcf-lcm",
+      "title": "HCF and LCM",
+      "category": "Basic Algorithms",
+      "definition": "HCF (Highest Common Factor / Greatest Common Divisor) is the largest positive integer that divides two or more integers without leaving a remainder. LCM (Least Common Multiple) is the smallest positive integer that is divisible by two or more integers. They are related by the equation: HCF * LCM = Product of the Numbers.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Calculate HCF and LCM:\n1. HCF (Listing Method): Find all factors of both numbers and identify the largest common factor.\n2. HCF (Euclidean Algorithm): An extremely efficient recursive/iterative method. Keep replacing (a, b) with (b, a % b) until b becomes 0. The remaining non-zero value is the HCF.\n3. LCM: Can be computed iteratively by incrementing multiples, or directly using the relationship: LCM = (a * b) // HCF."
+        },
+        {
+          "type": "code",
+          "value": "# 1. HCF and LCM (Euclidean Algorithm - Highly Efficient)\na = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\n\nx, y = a, b\nwhile y != 0:\n    x, y = y, x % y\nhcf = x\nlcm = (a * b) // hcf\n\nprint(\"HCF =\", hcf)\nprint(\"LCM =\", lcm)\n\n# 2. HCF Basic (Listing Method)\n# small = min(a, b)\n# for i in range(small, 0, -1):\n#     if a % i == 0 and b % i == 0:\n#         hcf = i\n#         break\n\n# 3. LCM Basic (Listing Method)\n# large = max(a, b)\n# while True:\n#     if large % a == 0 and large % b == 0:\n#         lcm = large\n#         break\n#     large += 1\n\n# 4. Shortcut using Math module\n# import math\n# hcf = math.gcd(a, b)\n# lcm = (a * b) // math.gcd(a, b)"
+        },
+        {
+          "type": "output",
+          "value": "Enter first number: 12\nEnter second number: 18\nHCF = 6\nLCM = 36"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Concept",
+            "HCF (GCD)",
+            "LCM"
+          ],
+          "rows": [
+            [
+              "Definition",
+              "Biggest common divisor",
+              "Smallest common multiple"
+            ],
+            [
+              "Factor Inclusions",
+              "Common factors only",
+              "All factors with highest power"
+            ],
+            [
+              "Relative Value",
+              "Small value (<= minimum input)",
+              "Large value (>= maximum input)"
+            ],
+            [
+              "Example (12 & 18)",
+              "6",
+              "36"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "How Euclidean Algorithm Works (for 18 and 12):\n• Step 1: 18 mod 12 = 6 (Replace inputs with 12 and 6)\n• Step 2: 12 mod 6 = 0 (Replace inputs with 6 and 0)\n• Since the second number becomes 0, the HCF is the last divisor, which is 6.\n• Relation: LCM = (12 * 18) // 6 = 216 // 6 = 36."
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision:\n• HCF/GCD: Largest number that divides all input numbers.\n• LCM: Smallest number that is a multiple of all input numbers.\n• Fundamental Relation: HCF(a, b) * LCM(a, b) = a * b.\n• Optimization: Always compute HCF using the Euclidean Algorithm and LCM using the formula."
+        }
+      ],
+      "questions": [
+        {
+          "question": "Why is the Euclidean Algorithm much faster than the listing/basic method?",
+          "answer": "The basic method iterates linear-time O(min(a, b)) steps in the worst case (e.g., for prime numbers). The Euclidean algorithm reduces the inputs logarithmically using modular division, achieving a time complexity of O(log(min(a, b)))."
+        },
+        {
+          "question": "How do you calculate HCF/LCM for three numbers?",
+          "answer": "For three numbers a, b, and c:\n- HCF(a, b, c) = HCF(HCF(a, b), c)\n- LCM(a, b, c) = LCM(LCM(a, b), c)\nNote: The relation HCF * LCM = Product does NOT hold true for three or more numbers."
+        },
+        {
+          "question": "What are prime factor powers in calculating HCF and LCM?",
+          "answer": "When factorized into primes (e.g., 12 = 2^2 * 3^1, 18 = 2^1 * 3^2):\n- HCF takes the lowest power of all common prime factors: 2^1 * 3^1 = 6.\n- LCM takes the highest power of all prime factors present: 2^2 * 3^2 = 36."
+        }
+      ]
     }
   ],
   "ml": [
