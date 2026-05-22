@@ -25828,6 +25828,83 @@ export const interviewData = {
           "answer": "The time complexity is O(log n). The number of digits in n is log10(n), and the sum of squares of digits reduces the value extremely quickly, leading to a logarithmic number of steps."
         }
       ]
+    },
+    {
+      "id": "sum-first-n-even",
+      "title": "Sum of First N Even Numbers",
+      "category": "Basic Algorithms",
+      "definition": "Calculating the sum of the first N even numbers (2, 4, 6, 8, ...) can be achieved either using a loop to generate and add each even number or via a mathematical formula n * (n + 1) for constant-time complexity.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Calculate Sum of First N Even Numbers:\n1. Accept the count of even numbers to sum up (n).\n2. Method 1 (Iterative): Initialize a running sum to 0 and start with the first even number (2). Loop n times, adding the even number to the sum and incrementing the even number by 2 in each step.\n3. Method 2 (Formula): Utilize the arithmetic progression sum formula, which simplifies to n * (n + 1) to find the sum in O(1) time."
+        },
+        {
+          "type": "code",
+          "value": "# Method 1: Iterative Approach\nn = int(input(\"Enter n: \"))\nsum = 0\neven = 2\nfor i in range(n):\n    sum = sum + even\n    even = even + 2\nprint(\"Sum =\", sum)\n\n# Method 2: Formula Method (O(1) Time)\n# sum = n * (n + 1)"
+        },
+        {
+          "type": "output",
+          "value": "Enter n: 5\nSum = 30"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Step",
+            "Even Number",
+            "Sum"
+          ],
+          "rows": [
+            [
+              "1",
+              "2",
+              "2"
+            ],
+            [
+              "2",
+              "4",
+              "6"
+            ],
+            [
+              "3",
+              "6",
+              "12"
+            ],
+            [
+              "4",
+              "8",
+              "20"
+            ],
+            [
+              "5",
+              "10",
+              "30"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Formula Method:\n• The mathematical formula to find the sum of the first n even numbers is:\n  Sum = n * (n + 1)\n• For example, when n = 5:\n  5 * (5 + 1) = 5 * 6 = 30."
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision:\n• Even series: 2, 4, 6, 8, 10, ...\n• Iterative logic: Loop n times, generate even numbers with +2, and accumulate sum.\n• Formula logic: n * (n + 1) gives instant O(1) result."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the time complexity of the iterative method vs. the formula method?",
+          "answer": "The iterative method has a time complexity of O(n) because it loops n times. The formula method has a time complexity of O(1) because it performs constant-time arithmetic operations."
+        },
+        {
+          "question": "How do you derive the formula n * (n + 1) for the sum of first n even numbers?",
+          "answer": "The first n even numbers form an Arithmetic Progression (AP) with first term a = 2 and common difference d = 2. The sum of first n terms of an AP is given by Sn = n/2 * [2a + (n-1)d]. Substituting a=2 and d=2 gives Sn = n/2 * [4 + (n-1)2] = n/2 * [2n + 2] = n * (n + 1)."
+        },
+        {
+          "question": "What is the space complexity of both approaches?",
+          "answer": "Both approaches have a space complexity of O(1) since they only use a few constant variables to store the inputs and calculated sums."
+        }
+      ]
     }
   ],
   "ml": [
