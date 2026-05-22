@@ -25905,6 +25905,83 @@ export const interviewData = {
           "answer": "Both approaches have a space complexity of O(1) since they only use a few constant variables to store the inputs and calculated sums."
         }
       ]
+    },
+    {
+      "id": "sum-first-n-odd",
+      "title": "Sum of First N Odd Numbers",
+      "category": "Basic Algorithms",
+      "definition": "Calculating the sum of the first N odd numbers (1, 3, 5, 7, ...) can be achieved either using a loop to generate and add each odd number or via a mathematical formula n^2 for constant-time complexity.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Logic to Calculate Sum of First N Odd Numbers:\n1. Accept the count of odd numbers to sum up (n).\n2. Method 1 (Iterative): Initialize a running sum to 0 and start with the first odd number (1). Loop n times, adding the odd number to the sum and incrementing the odd number by 2 in each step.\n3. Method 2 (Formula): Utilize the arithmetic progression sum formula, which simplifies beautifully to n² to find the sum in O(1) time."
+        },
+        {
+          "type": "code",
+          "value": "# Method 1: Iterative Approach\nn = int(input(\"Enter n: \"))\nsum = 0\nodd = 1\nfor i in range(n):\n    sum = sum + odd\n    odd = odd + 2\nprint(\"Sum =\", sum)\n\n# Method 2: Formula Method (O(1) Time)\n# sum = n ** 2"
+        },
+        {
+          "type": "output",
+          "value": "Enter n: 5\nSum = 25"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Step",
+            "Odd Number",
+            "Sum"
+          ],
+          "rows": [
+            [
+              "1",
+              "1",
+              "1"
+            ],
+            [
+              "2",
+              "3",
+              "4"
+            ],
+            [
+              "3",
+              "5",
+              "9"
+            ],
+            [
+              "4",
+              "7",
+              "16"
+            ],
+            [
+              "5",
+              "9",
+              "25"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Formula Method:\n• The mathematical formula to find the sum of the first n odd numbers is:\n  Sum = n² (n raised to the power of 2)\n• For example, when n = 5:\n  5² = 5 * 5 = 25."
+        },
+        {
+          "type": "text",
+          "value": "Quick Revision:\n• Odd series: 1, 3, 5, 7, 9, ...\n• Iterative logic: Loop n times, generate odd numbers with +2, and accumulate sum.\n• Formula logic: n² gives instant O(1) result."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the time complexity of the iterative method vs. the formula method?",
+          "answer": "The iterative method has a time complexity of O(n) because it loops n times. The formula method has a time complexity of O(1) because it performs a single multiplication (constant-time operation)."
+        },
+        {
+          "question": "How do you derive the formula n^2 for the sum of first n odd numbers?",
+          "answer": "The first n odd numbers form an Arithmetic Progression (AP) with first term a = 1 and common difference d = 2. The sum of first n terms of an AP is Sn = n/2 * [2a + (n-1)d]. Substituting a=1 and d=2 gives Sn = n/2 * [2(1) + (n-1)2] = n/2 * [2 + 2n - 2] = n/2 * [2n] = n^2."
+        },
+        {
+          "question": "What is the space complexity of both approaches?",
+          "answer": "Both approaches have a space complexity of O(1) since they only use a few constant variables to store the inputs and calculated sums."
+        }
+      ]
     }
   ],
   "ml": [
