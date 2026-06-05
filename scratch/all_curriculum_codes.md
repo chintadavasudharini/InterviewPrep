@@ -384,9 +384,15 @@ def check_even_odd(num):
     else:
         return "Odd"
 
+n = int(input("Enter a number: "))
+result = check_even_odd(n)
+print(f"The number {n} is {result}")
+
+print("-------------------------------------------")
+
 # Example Usage
-n = 10
-print(f"{n} is {check_even_odd(n)}")
+x = 10
+print(f"{x} is {check_even_odd(x)}")
 ```
 
 ---

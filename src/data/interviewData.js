@@ -25865,11 +25865,11 @@ export const interviewData = {
       },
       {
         "type": "code",
-        "value": "def check_even_odd(num):\n    if num % 2 == 0:\n        return \"Even\"\n    else:\n        return \"Odd\"\n\n# Example Usage\nn = 10\nprint(f\"{n} is {check_even_odd(n)}\")"
+        "value": "def check_even_odd(num):\n    if num % 2 == 0:\n        return \"Even\"\n    else:\n        return \"Odd\"\n\nn = int(input(\"Enter a number: \"))\nresult = check_even_odd(n)\nprint(f\"The number {n} is {result}\")\n\nprint(\"-------------------------------------------\")\n\n# Example Usage\nx = 10\nprint(f\"{x} is {check_even_odd(x)}\")"
       },
       {
         "type": "output",
-        "value": "10 is Even"
+        "value": "Enter a number: 15\nThe number 15 is Odd\n-------------------------------------------\n10 is Even"
       }
     ],
     "questions": [
