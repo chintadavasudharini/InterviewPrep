@@ -23887,7 +23887,7 @@ export const interviewData = {
         },
         {
           "type": "text",
-          "value": "Quick Memory Trick\n\n• INNER → Common data\n• LEFT → All left + matched right\n• RIGHT → All right + matched left\n• FULL → Everything\n• CROSS → Multiplication\n• SELF → Same table join"
+          "value": "Quick Memory Trick\n\nINNER JOIN  = Common data\nLEFT JOIN   = All Left + Common\nRIGHT JOIN  = All Right + Common\nFULL JOIN   = All Left + All Right\nCROSS JOIN  = Every combination\nSELF JOIN   = Same table joined with itself"
         }
       ],
       "questions": []
@@ -24929,6 +24929,114 @@ export const interviewData = {
         {
           "question": "How does the EXISTS operator work?",
           "answer": "EXISTS checks for the existence of any record in the subquery result. It returns TRUE if the subquery returns one or more rows, and FALSE if no rows are returned."
+        }
+      ]
+    }
+  ,
+    {
+      "id": "mysql-set-operators",
+      "title": "SQL Set Operators",
+      "category": "Queries",
+      "definition": "SQL Set Operators are used to combine the results of two or more SELECT statements into a single result set.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "These are called SQL Set Operators. They are used to combine the results of two or more SELECT statements."
+        },
+        {
+          "type": "text",
+          "value": "1. UNION\nCombines results of two queries.\nRemoves duplicate rows.\nReturns only unique records.\n\nExample:\nSELECT name FROM students\nUNION\nSELECT name FROM employees;\n\nTable 1 (students)\nname\nRam\nRavi\nSita\n\nTable 2 (employees)\nname\nRavi\nJohn"
+        },
+        {
+          "type": "output",
+          "value": "Output:\nname\n-----\nRam\nRavi\nSita\nJohn\n\n👉 Duplicate Ravi appears only once."
+        },
+        {
+          "type": "text",
+          "value": "2. UNION ALL\nCombines results of two queries.\nDoes not remove duplicates.\nFaster than UNION because no duplicate checking.\n\nExample:\nSELECT name FROM students\nUNION ALL\nSELECT name FROM employees;"
+        },
+        {
+          "type": "output",
+          "value": "Output:\nname\n-----\nRam\nRavi\nSita\nRavi\nJohn\n\n👉 Duplicate Ravi appears twice."
+        },
+        {
+          "type": "text",
+          "value": "3. INTERSECT\nReturns only common rows present in both queries.\n\nExample:\nSELECT name FROM students\nINTERSECT\nSELECT name FROM employees;"
+        },
+        {
+          "type": "output",
+          "value": "Output:\nname\n-----\nRavi\n\n👉 Only the common value is returned."
+        },
+        {
+          "type": "text",
+          "value": "4. EXCEPT (MINUS in Oracle)\nReturns rows from the first query that are not present in the second query.\n\nExample:\nSELECT name FROM students\nEXCEPT\nSELECT name FROM employees;"
+        },
+        {
+          "type": "output",
+          "value": "Output:\nname\n-----\nRam\nSita\n\n👉 Ravi is removed because it exists in both tables."
+        },
+        {
+          "type": "text",
+          "value": "Easy Memory Trick"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Operator",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "UNION",
+              "Combine + Remove Duplicates"
+            ],
+            [
+              "UNION ALL",
+              "Combine + Keep Duplicates"
+            ],
+            [
+              "INTERSECT",
+              "Common Records"
+            ],
+            [
+              "EXCEPT / MINUS",
+              "First Table − Second Table"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Visual Understanding:\nA = {Ram, Ravi, Sita}\nB = {Ravi, John}\n\n• UNION      = {Ram, Ravi, Sita, John}\n• UNION ALL  = {Ram, Ravi, Sita, Ravi, John}\n• INTERSECT  = {Ravi}\n• EXCEPT     = {Ram, Sita}"
+        },
+        {
+          "type": "text",
+          "value": "Important Rules:\n• Number of columns must be the same.\n• Data types should be compatible.\n• Column names are taken from the first SELECT."
+        },
+        {
+          "type": "text",
+          "value": "Valid Example:"
+        },
+        {
+          "type": "code",
+          "value": "SELECT id, name FROM table1\nUNION\nSELECT id, name FROM table2;"
+        },
+        {
+          "type": "text",
+          "value": "Invalid Example (different number of columns):"
+        },
+        {
+          "type": "code",
+          "value": "SELECT id, name FROM table1\nUNION\nSELECT id FROM table2;"
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the difference between UNION and UNION ALL?",
+          "answer": "UNION removes duplicates, whereas UNION ALL includes all rows including duplicates and is generally faster because it has no duplicate check."
+        },
+        {
+          "question": "What are the rules for using Set Operators in SQL?",
+          "answer": "The SELECT statements must have the same number of columns, the corresponding columns must have compatible data types, and the column names are taken from the first SELECT query."
         }
       ]
     }
