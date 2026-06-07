@@ -5061,7 +5061,6 @@ export const interviewData = {
           "value": "[[1, 2], [3, 4]]\n[[100, 2], [3, 4]]"
         },
         {
-          "type": "difference",
           "type": "text",
           "value": "Difference Between Shallow Copy and Deep Copy"
         },
@@ -25191,6 +25190,289 @@ export const interviewData = {
     }
   ],
   "api": [
+    {
+      "id": "api-introduction",
+      "title": "API Introduction",
+      "category": "Basic",
+      "definition": "API (Application Programming Interface) is a set of rules and protocols that enables communication and data exchange between different software applications.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "What is an API?\n\nAn API (Application Programming Interface) is a set of rules that allows one software application to communicate with another software application. It acts as an intermediary, delivering your request to the provider and then returning the response back to you."
+        },
+        {
+          "type": "text",
+          "value": "Simple Example: The Waiter Analogy\n\nThink of an API as a waiter in a restaurant:\n• Customer → You (Client)\n• Waiter → API\n• Kitchen → Server/Database\n\nYou place an order through the waiter (API), the waiter takes it to the kitchen (server), and brings back the food (response)."
+        },
+        {
+          "type": "text",
+          "value": "Real-Life Example: Google Maps\n\nWhen you use the Google Maps app:\n1. You search for a location in the search bar.\n2. The app sends a request to the Google Maps API.\n3. The API fetches the location data from the database.\n4. The API returns the result to your app.\n5. The app displays the map and your search result."
+        },
+        {
+          "type": "text",
+          "value": "Types of APIs\n\n• REST API (Most Common): Uses standard HTTP methods (GET, POST, etc.) and typically returns JSON data.\n• SOAP API: Uses XML for communication. It is highly structured and secure but more complex to implement.\n• GraphQL API: A query language that lets clients request only the specific data they need, reducing over-fetching."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "GET",
+              "Retrieve data"
+            ],
+            [
+              "POST",
+              "Insert data"
+            ],
+            [
+              "PUT",
+              "Update entire data"
+            ],
+            [
+              "PATCH",
+              "Update partial data"
+            ],
+            [
+              "DELETE",
+              "Remove data"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Example REST API Request & Response\n\nRequest:\nGET /users/1"
+        },
+        {
+          "type": "output",
+          "value": "{\n  \"id\": 1,\n  \"name\": \"Dhanalakshmi\",\n  \"email\": \"dhana@example.com\"\n}"
+        },
+        {
+          "type": "text",
+          "value": "Python Example (using the 'requests' library)\n\nTo fetch data from an API in Python, you can use the requests module as shown below:"
+        },
+        {
+          "type": "code",
+          "value": "import requests\n\ncall = requests.get(\"https://jsonplaceholder.typicode.com/users/1\")\n# In Python requests response.json() extracts the JSON\nprint(call.json())"
+        },
+        {
+          "type": "output",
+          "value": "{\n  \"id\": 1,\n  \"name\": \"Dhanalakshmi\",\n  \"email\": \"dhana@example.com\"\n}"
+        },
+        {
+          "type": "text",
+          "value": "API in Web Development (MERN Stack)\n\nIn MERN (MongoDB, Express, React, Node.js) development, APIs act as the bridge connecting the client and the database:\n\n• Frontend (React) → Sends API Request\n• Backend (Node.js/Express) → Processes Request\n• MongoDB → Stores Data\n• API → Connects Frontend and Backend\n\nHere is a simple Node.js/Express API endpoint:"
+        },
+        {
+          "type": "code",
+          "value": "app.get(\"/users\", (req, res) => {\n    res.json(users);\n});"
+        },
+        {
+          "type": "text",
+          "value": "Here, '/users' is the API endpoint. When the React frontend makes a GET request to '/users', this Express route handler executes and returns the list of users in JSON format."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the interview definition of an API?",
+          "answer": "An API (Application Programming Interface) is a set of rules and protocols that enables communication and data exchange between different software applications."
+        },
+        {
+          "question": "Explain the waiter analogy in the context of an API.",
+          "answer": "In this analogy, the customer is the Client, the waiter is the API, and the kitchen is the Server/Database. The customer orders via the waiter, who brings the order to the kitchen, and returns with the food (response)."
+        },
+        {
+          "question": "What is the difference between PUT and PATCH methods?",
+          "answer": "PUT is used to update or replace the entire data resource, whereas PATCH is used to make partial updates to a resource."
+        },
+        {
+          "question": "How does an API connect the frontend and backend in a MERN stack?",
+          "answer": "The React frontend sends HTTP requests to backend (Node.js/Express) API endpoints (e.g., GET /users). The backend processes the request, interacts with MongoDB, and sends a JSON response back to the frontend."
+        }
+      ]
+    },
+    {
+      "id": "api-technical-explanation",
+      "title": "API - Technical Explanation",
+      "category": "Basic",
+      "definition": "An API is a software interface that defines a set of rules, protocols, endpoints, request formats, and response formats that allow different applications or software components to communicate with each other.",
+      "sections": [
+        {
+          "type": "text",
+          "value": "Core Concept:\n\nAn API acts as a contract between a client and a server, specifying how requests should be made and how responses will be returned."
+        },
+        {
+          "type": "text",
+          "value": "How an API Works\n\nStep 1: Client Sends Request\nA client (browser, mobile app, React frontend, etc.) sends a request to an API endpoint.\n\nExample HTTP Request:"
+        },
+        {
+          "type": "code",
+          "value": "GET /users/101 HTTP/1.1\nHost: api.example.com"
+        },
+        {
+          "type": "text",
+          "value": "Step 2: API Receives Request\nThe API endpoint receives the request and processes it. An Express route handler, for instance, handles incoming requests:"
+        },
+        {
+          "type": "code",
+          "value": "app.get('/users/:id', (req, res) => {\n    // process request\n});"
+        },
+        {
+          "type": "text",
+          "value": "Step 3: Business Logic Executes\nThe server performs operations such as:\n• Data validation\n• Authentication\n• Authorization\n• Database queries\n• Calculations\n\nExample:"
+        },
+        {
+          "type": "code",
+          "value": "const user = User.findById(req.params.id);"
+        },
+        {
+          "type": "text",
+          "value": "Step 4: Database Interaction\nAPI communicates with the database using query languages like SQL or Mongoose commands:"
+        },
+        {
+          "type": "code",
+          "value": "SELECT * FROM users WHERE id = 101;"
+        },
+        {
+          "type": "text",
+          "value": "Step 5: Response Returned\nThe API sends a response back to the client, typically as JSON data:"
+        },
+        {
+          "type": "output",
+          "value": "{\n    \"id\": 101,\n    \"name\": \"Dhanalakshmi\",\n    \"email\": \"dhana@example.com\"\n}"
+        },
+        {
+          "type": "text",
+          "value": "API Architecture Diagram:\n\nClient\n   │\n   ▼\nAPI Endpoint\n   │\n   ▼\nBusiness Logic\n   │\n   ▼\nDatabase\n   │\n   ▼\nResponse"
+        },
+        {
+          "type": "text",
+          "value": "REST API Components\n\n1. Endpoint: A URL through which a resource is accessed (e.g., https://api.company.com/users, /products, /orders).\n2. HTTP Methods: Defines the type of database/server operation to perform."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Method",
+            "Operation"
+          ],
+          "rows": [
+            [
+              "GET",
+              "Read Data"
+            ],
+            [
+              "POST",
+              "Create Data"
+            ],
+            [
+              "PUT",
+              "Update Entire Record"
+            ],
+            [
+              "PATCH",
+              "Update Partial Record"
+            ],
+            [
+              "DELETE",
+              "Delete Record"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "3. Headers: Contain metadata about the request/response (e.g., Content-Type, Authorization tokens).\n4. Request Body: Data sent to the server (common in POST/PUT/PATCH).\n5. Response Body: Data returned by the server to the client."
+        },
+        {
+          "type": "text",
+          "value": "HTTP Status Codes\n\nStatus codes inform the client about the result of their API request."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "Code",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "200",
+              "OK"
+            ],
+            [
+              "201",
+              "Created"
+            ],
+            [
+              "400",
+              "Bad Request"
+            ],
+            [
+              "401",
+              "Unauthorized"
+            ],
+            [
+              "403",
+              "Forbidden"
+            ],
+            [
+              "404",
+              "Not Found"
+            ],
+            [
+              "500",
+              "Internal Server Error"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "value": "Example Status Line:"
+        },
+        {
+          "type": "output",
+          "value": "HTTP/1.1 200 OK"
+        },
+        {
+          "type": "text",
+          "value": "Example API Flow in MERN Stack\n\nReact Frontend\n      │\n      ▼\nAxios / Fetch\n      │\n      ▼\nExpress API\n      │\n      ▼\nMongoDB\n      │\n      ▼\nJSON Response\n      │\n      ▼\nReact UI Update\n\nFrontend (React - Axios):"
+        },
+        {
+          "type": "code",
+          "value": "axios.get(\"/api/users\");"
+        },
+        {
+          "type": "text",
+          "value": "Backend (Express API):"
+        },
+        {
+          "type": "code",
+          "value": "app.get(\"/api/users\", async (req, res) => {\n    const users = await User.find();\n    res.json(users);\n});"
+        },
+        {
+          "type": "text",
+          "value": "REST API Principles\n\n• Stateless Communication: Server does not remember previous requests; each request must contain all context.\n• Client-Server Architecture: Separation of frontend and backend layers.\n• Resource-Based URLs: Distinct URLs representing objects (e.g., /users, /products).\n• Standard HTTP Methods: Use of GET, POST, PUT, DELETE.\n• JSON Data Exchange: Structured text exchange format."
+        }
+      ],
+      "questions": [
+        {
+          "question": "What is the technical definition of an API?",
+          "answer": "An API (Application Programming Interface) is a software interface that defines a set of rules, protocols, endpoints, request formats, and response formats that allow different applications or software components to communicate with each other."
+        },
+        {
+          "question": "Can you describe the step-by-step workflow of how an API works?",
+          "answer": "1. Client Sends Request: Sends request to endpoint.\n2. API Receives Request: Maps to handler.\n3. Business Logic Executes: Performs validation/authentication.\n4. Database Interaction: Performs queries.\n5. Response Returned: Sends JSON data back to client."
+        },
+        {
+          "question": "What are the essential components of a REST API?",
+          "answer": "The main components are: Endpoint (URL), HTTP Methods (GET/POST/etc.), Headers (Metadata), Request Body (Data sent), and Response Body (Data returned)."
+        },
+        {
+          "question": "What is the interview answer describing an API in a technical context?",
+          "answer": "API (Application Programming Interface) is a software intermediary that enables communication between different applications using predefined rules and protocols. In web development, APIs typically use HTTP methods such as GET, POST, PUT, and DELETE to exchange data in formats like JSON or XML between clients and servers. APIs provide abstraction, reusability, and secure access to backend resources and services."
+        }
+      ]
+    },
     {
       "id": "api-basics",
       "title": "REST API Fundamentals",
